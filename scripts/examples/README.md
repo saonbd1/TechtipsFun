@@ -29,3 +29,30 @@ Output (`beauty_tips.csv`, UTF-8 with BOM so Excel shows Bengali correctly):
 ```bash
 python -m unittest discover -s scripts/tests -v
 ```
+
+## Social-media cards from the same CSV
+
+`scripts/generate-tip-cards.mjs` is a fork of the OG image generator
+(`scripts/generate-social-assets.mjs`). Same rendering pipeline, but the text
+comes from the CSV rows instead of blog frontmatter.
+
+```bash
+# 17 square photo cards + captions.txt in public/social-cards/
+npm run cards:tips
+
+# explicit paths, a background photo and a 4:5 crop
+node scripts/generate-tip-cards.mjs \
+    --csv scripts/examples/beauty_tips.csv \
+    --out-dir public/social-cards \
+    --photo public/portrait.webp \
+    --size 1080x1350 \
+    --captions
+
+# the classic 1200x630 OG layout instead of the square photo card
+node scripts/generate-tip-cards.mjs --template og --limit 3
+```
+
+Each card shows the category chip, the row's `title` as the headline and the
+row's `tip` as the body. Bengali renders because Noto Sans Bengali (plus Noto
+Sans for latin text) ships in `scripts/assets/fonts/` and is registered with
+fontconfig at runtime — no system font installation needed.

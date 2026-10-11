@@ -1,0 +1,20 @@
+{
+  "name": "bengali-tip-cards",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Turn messy scraped text (Bengali or any language) into a clean CSV, then render social-media photo cards from each row.",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "clean": "python3 scripts/clean_text_to_csv.py",
+    "cards": "node scripts/generate-tip-cards.mjs",
+    "cards:tips": "node scripts/generate-tip-cards.mjs",
+    "test": "python3 -m unittest discover -s scripts/tests -v"
+  },
+  "dependencies": {
+    "sharp": "^0.35.5"
+  }
+}

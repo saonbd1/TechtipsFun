@@ -12,7 +12,7 @@ tags: ["Astro", "Blog", "Responsive", "SEO"]
 
 A website header identifies the site branding and a head menu helps readers move between pages. The footer section contains secondary links without distracting from the article. Both components need to work on narrow screens, support keyboard users, and remain easy to reuse.
 
-This guide follows the structure of the astro-blog-starter-template repository. The project keeps the header and footer in separate `Header.astro` and `Footer.astro` components, then imports them into the shared article layout. Astro layouts support this pattern by providing common page elements and a `<slot />` for each page’s content.
+This guide follows the structure of the astro-blog-starter-template repository. The project keeps the header and footer in separate `Header.astro` and `Footer.astro` components, then imports them into the shared article layout. Astro layouts support this pattern by providing common page elements and a `<slot />` for each page’s content. You can also add reader navigation inside long posts with this guide to an [accessible Astro table of contents](/blog/astro-table-of-contents-component-guide/).
 
 > **This guide covers:** a centered brand site, primary navigation,  a three-column footer desktop version, and a one-column mobile version footer implimentation.  
 

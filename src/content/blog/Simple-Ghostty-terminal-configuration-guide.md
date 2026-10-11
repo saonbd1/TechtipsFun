@@ -11,7 +11,7 @@ tags: ["Ghostty", "Terminal", "Configuration", "Developer Tools"]
 
 If you spend hours in the terminal, your setup matters. A fast, readable terminal can make a big difference in focus, speed, and comfort. Ghostty is a modern terminal emulator that gives you a clean, lightweight experience without a lot of extra clutter.
 
-This guide shows how to configure Ghostty for a better developer workflow. You will learn how to set the theme, tune the font, customize the cursor, and build a setup that feels natural for daily work.
+This guide shows how to configure Ghostty for a better developer workflow. You will learn how to set the theme, tune the font, customize the cursor, and build a setup that feels natural for daily work. For useful shell commands to run in your terminal, see [10 Linux terminal commands I use every day](/blog/10-linux-terminal-commands-i-use-every/).
 
 ## Why developers choose Ghostty
 

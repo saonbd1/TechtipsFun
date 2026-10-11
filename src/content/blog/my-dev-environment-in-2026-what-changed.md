@@ -22,7 +22,7 @@ I do this annual audit of my dev setup. What tools did I keep? What did I finall
 ## What’s new
 
 -  **Zellij**  — I’m testing it as a tmux replacement. The UI is friendlier.
--  **Ghostty**  — fastest terminal I’ve used. GPU-rendered, minimal.
+-  **Ghostty**  — fastest terminal I’ve used. GPU-rendered, minimal. See my [Ghostty configuration guide](/blog/simple-ghostty-terminal-configuration-guide/) for setup details.
 -  **Yazi**  — a terminal file manager that just works.
 
 ## What I dropped

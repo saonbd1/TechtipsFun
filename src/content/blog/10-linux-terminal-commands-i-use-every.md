@@ -10,7 +10,7 @@ tags: ["Linux", "Terminal", "Command Line", "Developer Tools"]
 
 ![Linux terminal and server management](/linux-server.webp)
 
-I’ve been using Linux as my daily driver for over five years. In that time, I’ve collected dozens of commands — but the ones below are the ones that actually stuck. These aren’t the flashy ones from “top 100 Linux commands” listicles. These are the quiet workhorses.
+I’ve been using Linux as my daily driver for over five years. In that time, I’ve collected dozens of commands — but the ones below are the ones that actually stuck. These aren’t the flashy ones from “top 100 Linux commands” listicles. These are the quiet workhorses. For a comfortable terminal to run them in, see our [Ghostty terminal configuration guide](/blog/simple-ghostty-terminal-configuration-guide/).
 
 ## 1. tldr — man pages for humans
 

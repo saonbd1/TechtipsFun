@@ -13,7 +13,7 @@ Search "blog to video" and you get the same twenty products. Vidup, Revid, Fliki
 
 That is a fine trade for a marketer. It is a bad trade if you write a technical blog, because the thing that makes your posts worth reading is the thing those tools cannot render: **code**. Stock footage with an AI voiceover does not explain a `docker run` flag.
 
-So I built the self-hosted version instead. My articles already live as Markdown in a git repo, which means a video can be *derived* from them the same way the HTML is. This post is the full pipeline, start to finish, with the numbers and the failures included, because the failures are the part nobody writes down.
+So I built the self-hosted version instead. My articles already live as Markdown in a git repo, which means a video can be *derived* from them the same way the HTML is. This post is the full pipeline, start to finish, with the numbers and the failures included, because the failures are the part nobody writes down. If you are new to running an app on your own server, start with our [self-hosting guide for a first web app](/blog/self-hosting-your-first-web-app-no/).
 
 ## What you end up with
 

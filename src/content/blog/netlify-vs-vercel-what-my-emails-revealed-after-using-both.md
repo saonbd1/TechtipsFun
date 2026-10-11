@@ -175,7 +175,7 @@ Not necessarily. I did not see those subjects in the supplied screenshots from m
 
 ### Can a beginner start a small business with no hosting budget?
 
-A beginner can often launch an initial version with free tools, but a business may eventually need paid hosting, domains, email, databases, payments, analytics, or support. Plan for those costs before the project becomes difficult to move.
+A beginner can often launch an initial version with free tools, but a business may eventually need paid hosting, domains, email, databases, payments, analytics, or support. Plan for those costs before the project becomes difficult to move. If you prefer to manage the server yourself, see our [guide to self-hosting a first web app](/blog/self-hosting-your-first-web-app-no/); that route trades platform management for server maintenance.
 
 ### Should I choose Netlify or Vercel?
 

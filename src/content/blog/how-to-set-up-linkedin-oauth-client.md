@@ -9,7 +9,7 @@ tags: ["LinkedIn", "OAuth", "API", "Developer Guide"]
 
 <!-- SEO: title 51/60 chars, description 128/160 chars. Focus keyword: how to setup a linkedin oauth client -->
 
-I needed a LinkedIn OAuth client to automate cross-posting from my blog, the same way I had earlier set up Google OAuth credentials for [Blogger automation](/blog/setting-up-google-oauth-credentials-for-blogger/). This is the setup I actually used, step by step, including the trap that broke my first requests.
+I needed a LinkedIn OAuth client to automate cross-posting from my blog, the same way I had earlier set up Google OAuth credentials for [Blogger automation](/blog/setting-up-google-oauth-credentials-for-blogger/). This is the setup I actually used, step by step, including the trap that broke my first requests. To see how it fits into an end-to-end workflow, read our guide to [automating LinkedIn posts with GitHub Actions](/blog/automate-linkedin-posts-github-actions/).
 
 ## Before you begin
 

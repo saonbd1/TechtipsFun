@@ -60,7 +60,7 @@ DISM.exe /Online /Cleanup-Image /RestoreHealth
 
 DISM may use Windows Update to obtain the files it needs for repair. The process can take several minutes. Wait for a successful completion message before moving to the next command.
 
-If DISM finishes successfully, continue with SFC. If it returns an error, record the error code and message instead of repeatedly running random commands. A damaged Windows Update client, insufficient free space, a disconnected repair source, or a deeper system problem may require additional troubleshooting.
+If DISM finishes successfully, continue with SFC. If it returns an error, record the error code and message instead of repeatedly running random commands. A damaged Windows Update client, insufficient free space, a disconnected repair source, or a deeper system problem may require additional troubleshooting. If Windows remains stuck while applying updates, follow our guide to [fixing the Windows 11 update loop](/blog/how-to-fix-windows-11-stuck-on-getting-updates-loop/).
 
 ### 3. Run SFC /SCANNOW
 

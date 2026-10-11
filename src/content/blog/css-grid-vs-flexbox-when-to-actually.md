@@ -57,7 +57,7 @@ If you have a defined grid and you’re placing items into it — use CSS Grid. 
 
 > In practice, you’ll use both on the same page — Grid for the macro layout, Flexbox for the micro components.
 
-The moment I stopped treating them as competitors and started seeing them as different tools for different jobs, my CSS got dramatically cleaner.
+The moment I stopped treating them as competitors and started seeing them as different tools for different jobs, my CSS got dramatically cleaner. For a practical example in a responsive blog, see [how to build an Astro site layout](/blog/create-astro-site-responsive-layout/).
 
 Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.
 

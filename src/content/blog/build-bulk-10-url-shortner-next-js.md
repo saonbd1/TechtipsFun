@@ -152,7 +152,7 @@ The project writes to `.data/links.json`. This method is suitable for a local pr
 
 Many serverless environments do not provide durable local files. Next.js describes database or key-value storage for larger redirect maps. [1]
 
-Move the `readLinks` and `writeLinks` operations to a durable database before production use.
+Move the `readLinks` and `writeLinks` operations to a durable database before production use. For a basic server deployment path after you make that change, see our [guide to self-hosting a web app](/blog/self-hosting-your-first-web-app-no/).
 
 ### The API accepts an unsafe or unusable destination
 

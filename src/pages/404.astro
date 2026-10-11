@@ -1,0 +1,43 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_TITLE } from '../consts';
+import { getCollection } from 'astro:content';
+
+const recentPosts = (await getCollection('blog'))
+	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+	.slice(0, 6);
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={`Page not found | ${SITE_TITLE}`} description="The page you were looking for doesn't exist. Browse the latest guides on Tech Tips in Fun instead." noindex />
+		<style>
+			main { max-width: 760px; margin: 0 auto; padding: 3rem 1rem; }
+			.actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 1.5rem 0 2.5rem; }
+			.actions a { border: 1px solid rgb(var(--gray-light)); border-radius: 999px; padding: 0.5rem 1rem; text-decoration: none; }
+			ul { padding-left: 1.2rem; }
+			li { margin-bottom: 0.5rem; }
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>Page not found</h1>
+			<p>That link may be old or mistyped. Try one of these instead:</p>
+			<nav class="actions" aria-label="Helpful links">
+				<a href="/">Home</a>
+				<a href="/blog/">All articles</a>
+				<a href="/categories/">Categories</a>
+				<a href="/tags/">Tags</a>
+			</nav>
+			<h2>Latest articles</h2>
+			<ul>
+				{recentPosts.map((post) => <li><a href={`/blog/${post.id}/`}>{post.data.title}</a></li>)}
+			</ul>
+		</main>
+		<Footer />
+	</body>
+</html>

@@ -1,0 +1,28 @@
+# Link checker
+
+#Runs `scripts/check-links.mjs` on every push and PR to `main` so no post
+#ships with an unreachable reference. Fails the build on dead/broken links
+#(DNS/timeout/TLS failures and 404/410). Benign redirects, WAF blocks
+#(401/403 — often datacenter false positives) and login-walled links
+#(e.g. Google Console) are reported but do not fail the build.
+
+name: Check links
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: "0 6 * * 1"   # Mondays 06:00 UTC - weekly link-rot sweep
+
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Check all blog links
+        run: node scripts/check-links.mjs --fail-on=dead

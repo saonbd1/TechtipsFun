@@ -13,6 +13,9 @@
  * (e.g. www.w3.org) answer 403 to non-browser fingerprints even though
  * real readers get 200 — those are reported as `blocked`, not `broken`.
  *
+ * Rate limits (429) and server timeouts (408) are reported as `rate_limited`:
+ * the server refused this request, but the link itself is fine.
+ *
  * Auth-walled links (Google Console, sign-in portals) either 302 to a
  * sign-in page or 302-loop to themselves; they are reported as
  * `login_wall` — expected for signed-in readers, never a broken link.
@@ -29,7 +32,7 @@
  *   --fail-on=dead|redirect|all|none  what makes the exit code non-zero
  *                                      dead     = unreachable (DNS/timeout/TLS) or 404/410 (default)
  *                                      redirect = also fail on any 3xx redirect chain
- *                                      all      = also fail on blocked + login_wall
+ *                                      all      = also fail on blocked + rate_limited + login_wall
  *                                      none     = report only
  *   --timeout=ms      per-request timeout (default 15000)
  *   --max-redirects=n max hops followed (default 10)
@@ -254,6 +257,12 @@ async function main() {
     else if (r.final === 0) r.severity = 'dead';
     else if (r.final === 404 || r.final === 410) r.severity = 'broken';
     else if (r.final === 401 || r.final === 403) r.severity = 'blocked';
+    // 429 Too Many Requests / 408 Request Timeout mean the server refused
+    // *this request* - usually a rate limit aimed at the runner's datacenter
+    // IP - not that the link is gone. Treating 429 as `broken` made live links
+    // fail the build: Google answers 429 to GitHub's runners for blogspot URLs
+    // that return 200 to everyone else.
+    else if (r.final === 429 || r.final === 408) r.severity = 'rate_limited';
     else if (r.final >= 400 && r.final < 500) r.severity = 'broken';
     else if (r.final >= 500) r.severity = 'server_error';
     else if (r.final >= 300) r.severity = 'redirect_loop';
@@ -261,7 +270,7 @@ async function main() {
     else r.severity = 'ok';
   }
 
-  const counts = { ok: 0, redirect: 0, login_wall: 0, blocked: 0, dead: 0, broken: 0, server_error: 0, redirect_loop: 0 };
+  const counts = { ok: 0, redirect: 0, login_wall: 0, blocked: 0, rate_limited: 0, dead: 0, broken: 0, server_error: 0, redirect_loop: 0 };
   for (const r of results) counts[r.severity] = (counts[r.severity] || 0) + 1;
   const internalProblems = internalResults.filter((r) => r.problems.length);
 
@@ -271,7 +280,7 @@ async function main() {
     );
   } else {
     console.log(`\nScanned ${mdFiles.length} markdown files — ${externalUrls.length} unique external links, ${internalAll.length} internal links.\n`);
-    const order = { dead: 0, broken: 0, redirect_loop: 0, server_error: 0, blocked: 1, login_wall: 2, redirect: 3, ok: 4 };
+    const order = { dead: 0, broken: 0, redirect_loop: 0, server_error: 0, blocked: 1, rate_limited: 1, login_wall: 2, redirect: 3, ok: 4 };
     const sorted = [...results].sort((a, b) => order[a.severity] - order[b.severity]);
     for (const r of sorted) {
       if (r.severity === 'ok' && r.redirects === 0) continue;
@@ -286,13 +295,13 @@ async function main() {
         console.log(`[INTERNAL] ${p.raw}  (${p.file}:${p.line})  ${p.problems.join(', ')}`);
       }
     }
-    console.log(`\nTotals: ok=${counts.ok} redirect=${counts.redirect} login_wall=${counts.login_wall} blocked=${counts.blocked} dead=${counts.dead} broken=${counts.broken} server_error=${counts.server_error} redirect_loop=${counts.redirect_loop} internal_problems=${internalProblems.length}`);
+    console.log(`\nTotals: ok=${counts.ok} redirect=${counts.redirect} login_wall=${counts.login_wall} blocked=${counts.blocked} rate_limited=${counts.rate_limited} dead=${counts.dead} broken=${counts.broken} server_error=${counts.server_error} redirect_loop=${counts.redirect_loop} internal_problems=${internalProblems.length}`);
   }
 
   const failLevels = {
     dead: ['dead', 'broken'],
     redirect: ['dead', 'broken', 'redirect', 'redirect_loop'],
-    all: ['dead', 'broken', 'redirect', 'redirect_loop', 'blocked', 'login_wall'],
+    all: ['dead', 'broken', 'redirect', 'redirect_loop', 'blocked', 'rate_limited', 'login_wall'],
   };
   const failing = failLevels[flags.failOn] || failLevels.dead;
   if (results.some((r) => failing.includes(r.severity))) process.exit(1);

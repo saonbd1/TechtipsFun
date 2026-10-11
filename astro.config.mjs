@@ -13,6 +13,7 @@ function readPostDates() {
 	const dates = new Map();
 	for (const file of fs.readdirSync(blogDir).filter((f) => /\.mdx?$/.test(f))) {
 		const frontmatter = fs.readFileSync(path.join(blogDir, file), "utf8").match(/^---\s*\n([\s\S]*?)\n---/)?.[1] ?? "";
+		/** @param {string} key */
 		const field = (key) => frontmatter.match(new RegExp(`^${key}:\\s*["']?([^"'\\n]+)`, "m"))?.[1];
 		const date = new Date(field("updatedDate") ?? field("pubDate") ?? "");
 		if (Number.isNaN(date.valueOf())) continue;

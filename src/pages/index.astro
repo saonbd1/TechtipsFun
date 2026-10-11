@@ -1,4 +1,5 @@
 ---
+import ResponsiveImg from '../components/ResponsiveImg.astro';
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
@@ -152,8 +153,8 @@ const homepageSchema = {
 						<a href="/blog/">View all posts</a>
 					</div>
 					<article class="featured">
-						<a class="featured-image" href={`/blog/${featuredPost.id}/`} aria-label={`Read ${featuredPost.data.title}`}>
-							<img src={featuredPost.data.heroImage} alt={featuredPost.data.title} width="960" height="540" />
+						<a class="featured-image" href={`/blog/${featuredPost.id}/`}>
+							<ResponsiveImg src={featuredPost.data.heroImage ?? '/blog-placeholder-1.webp'} alt={featuredPost.data.title} width="960" height="540" sizes="(max-width: 720px) 100vw, 560px" priority />
 						</a>
 						<div class="featured-content">
 							<a class="category" href={`/categories/${toTaxonomySlug(featuredPost.data.category)}/`}>{featuredPost.data.category}</a>
@@ -176,8 +177,8 @@ const homepageSchema = {
 						{recentPosts.map((post) => (
 							<li>
 								<article class="post-card">
-									<a class="post-card-image" href={`/blog/${post.id}/`} aria-label={`Read ${post.data.title}`}>
-										<img src={post.data.heroImage} alt={post.data.title} width="640" height="360" />
+									<a class="post-card-image" href={`/blog/${post.id}/`}>
+										<ResponsiveImg src={post.data.heroImage ?? '/blog-placeholder-1.webp'} alt={post.data.title} width="640" height="360" sizes="(max-width: 430px) 100vw, (max-width: 900px) 50vw, 300px" />
 									</a>
 										<div class="post-card-body">
 											<div class="post-card-meta">
@@ -207,8 +208,8 @@ const homepageSchema = {
 							{popularPosts.map((post, index) => (
 								<li>
 									<article class="popular-card">
-										<a class="popular-card-image" href={`/blog/${post.id}/`} aria-label={`Read ${post.data.title}`}>
-											<img src={post.data.heroImage} alt={post.data.title} width="640" height="348" />
+										<a class="popular-card-image" href={`/blog/${post.id}/`}>
+											<ResponsiveImg src={post.data.heroImage ?? '/blog-placeholder-1.webp'} alt={post.data.title} width="640" height="348" sizes="(max-width: 720px) 100vw, 380px" />
 											<span class="popular-rank" aria-label={`Popular post number ${index + 1}`}>{String(index + 1).padStart(2, '0')}</span>
 										</a>
 											<div class="popular-card-body">

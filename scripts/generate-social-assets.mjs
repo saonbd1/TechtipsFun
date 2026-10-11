@@ -202,7 +202,10 @@ async function readPosts() {
 }
 
 const publicFiles = await walk(publicDir);
-const sourceImages = publicFiles.filter((file) => !file.startsWith(`${socialDir}${path.sep}`));
+const generatedDir = path.join(publicDir, '_img');
+const sourceImages = publicFiles.filter(
+  (file) => !file.startsWith(`${socialDir}${path.sep}`) && !file.startsWith(`${generatedDir}${path.sep}`),
+);
 const results = [];
 for (const file of sourceImages) {
   const result = await optimizeRaster(file);

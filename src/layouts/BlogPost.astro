@@ -1,4 +1,5 @@
 ---
+import ResponsiveImg from '../components/ResponsiveImg.astro';
 import type { CollectionEntry } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
@@ -175,7 +176,7 @@ const modifiedTime = updatedDate instanceof Date ? updatedDate.toISOString() : u
 		<main>
 			<article>
 				<div class="hero-image">
-					{heroImage && <img width={1020} height={510} src={heroImage} alt={title} />}
+					{heroImage && <ResponsiveImg width={1020} height={510} src={heroImage} alt={title} sizes="(max-width: 840px) 100vw, 800px" priority />}
 				</div>
 				<div class="prose">
 					<div class="title">

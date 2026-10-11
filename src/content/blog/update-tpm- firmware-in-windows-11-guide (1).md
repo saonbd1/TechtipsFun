@@ -3,7 +3,7 @@ title: "Update TPM firmware in Windows 11: A safe step-by-step guide"
 description: "Learn how to update TPM firmware in Windows 11, clear TPM safely, protect BitLocker data, and fix TPM detection and initialization errors."
 pubDate: "Sep 28 2026"
 heroImage: "/windows_wifi_cover.webp"
-category: "PC Troubleshoot"
+category: "PC Troubleshooting"
 tags: ["Windows", "Open Source", "Free Tools", "How to"]
 
 ---

@@ -1,7 +1,7 @@
 ---
 layout: "../layouts/BlogPost.astro"
 title: "Cookie Policy"
-description: "How Tech Tips in fun uses cookies and similar technologies."
+description: "How Tech Tips in Fun uses cookies and similar technologies for analytics and site functionality, and how you can manage or opt out of them."
 pubDate: "Aug 13 2026"
 ---
 

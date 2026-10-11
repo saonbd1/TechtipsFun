@@ -1,7 +1,7 @@
 ---
 layout: "../layouts/BlogPost.astro"
-title: "PRIVACY POLICY"
-description: "PRIVACY POLICY"
+title: "Privacy Policy"
+description: "How Tech Tips in Fun collects, uses, and protects visitor data, including analytics, cookies, contact form messages, and your privacy rights."
 pubDate: "Aug 06 2026"
 ---
 

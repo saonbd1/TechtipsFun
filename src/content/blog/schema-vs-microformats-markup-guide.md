@@ -1,5 +1,5 @@
 ---
-title: "Schema Markup vs. Microformats: Differences, Benefits, and Which to Use"
+title: "Schema Markup vs Microformats: Differences and Which to Use"
 description: "Learn how Schema.org markup and microformats differ, how JSON-LD and HTML classes work, and which approach is best for SEO, rich results, and IndieWeb projects."
 heroImage: "/article-media/schema-microformats-cover.png"
 pubDate: "Aug 23 2026"

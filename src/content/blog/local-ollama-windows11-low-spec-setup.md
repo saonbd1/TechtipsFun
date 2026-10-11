@@ -1,6 +1,6 @@
 ---
 title: "How to Run Ollama Locally on a Low-Spec Windows 11 PC"
-description: "With a small model and a few tweaks, a 4 GB RAM laptop can serve text generation in under a second. This guide shows the minimum setup that works on weak hardware"
+description: "With a small model and a few tweaks, a 4 GB RAM laptop can generate text in under a second. Here is the minimum setup that works on weak hardware."
 pubDate: "Sep 03 2026"
 heroImage: "/ollama-windows-cover-option-2.png"
 category: "AI Tools"

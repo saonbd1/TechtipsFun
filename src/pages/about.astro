@@ -9,7 +9,7 @@ const aboutSchema = {
       '@type': 'AboutPage',
       '@id': `${siteUrl.href}about/#webpage`,
       url: `${siteUrl.href}about/`,
-      name: 'About SaonBD | Tech Tips in fun',
+      name: 'About SaonBD | Tech Tips in Fun',
       description: 'Meet SaonBD, the creator of TechTips.fun and a longtime explorer of SEO, AI, open source, privacy, and Web3.',
       isPartOf: { '@id': `${siteUrl.href}#website` },
       mainEntity: { '@id': `${siteUrl.href}about/#person` },
@@ -19,7 +19,7 @@ const aboutSchema = {
       '@id': `${siteUrl.href}about/#person`,
       name: 'SaonBD',
       url: `${siteUrl.href}about/`,
-      description: 'SEO, AI, open source, privacy, and Web3 writer and creator of Tech Tips in fun.',
+      description: 'SEO, AI, open source, privacy, and Web3 writer and creator of Tech Tips in Fun.',
       image: new URL('/portrait.webp', Astro.site).href,
       sameAs: ['https://x.com/ayenaldewan/', 'https://github.com/saonbd1/'],
       worksFor: { '@id': `${siteUrl.href}#organization` },
@@ -29,8 +29,8 @@ const aboutSchema = {
 ---
 
 <Layout
-  title="About SaonBD | Tech Tips in fun"
-  description="Meet SaonBD, the creator of Tech Tips in fun and a longtime explorer of SEO, AI, open source, privacy, and Web3."
+  title="About SaonBD | Tech Tips in Fun"
+  description="Meet SaonBD, the creator of Tech Tips in Fun and a longtime explorer of SEO, AI, open source, privacy, and Web3."
   pubDate={new Date()}
   heroImage="/portrait.webp"
   schema={aboutSchema}
@@ -40,7 +40,7 @@ const aboutSchema = {
       <div class="intro-copy">
         <p class="eyebrow">ABOUT THE CREATOR</p>
         <h2 id="about-heading">Turning complex technology into useful next steps.</h2>
-        <p class="lead">I’m SaonBD, the person behind Tech Tips in fun —a practical corner of the web for people who like to understand how their tools really work.</p>
+        <p class="lead">I’m SaonBD, the person behind Tech Tips in Fun — a practical corner of the web for people who like to understand how their tools really work.</p>
         <div class="quick-links" aria-label="Quick links">
           <a href="https://x.com/ayenaldewan/">Follow on X <span aria-hidden="true">↗</span></a>
           <a href="https://github.com/saonbd1/">View my GitHub <span aria-hidden="true">↗</span></a>

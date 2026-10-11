@@ -28,7 +28,11 @@ const {
 	noindex = false,
 	schema,
 } = Astro.props;
-const imageURL = new URL(socialImage ?? image, Astro.site ?? Astro.url);
+const DEFAULT_SOCIAL_IMAGE = '/og/default.png';
+const IMAGE_TYPES: Record<string, string> = { png: 'image/png', jpg: 'image/jpeg', jpeg: 'image/jpeg', webp: 'image/webp' };
+const imageURL = new URL(socialImage ?? (Astro.props.image ? image : DEFAULT_SOCIAL_IMAGE), Astro.site ?? Astro.url);
+const imageType = IMAGE_TYPES[imageURL.pathname.split('.').pop()?.toLowerCase() ?? ''] ?? 'image/png';
+const usesCardSize = imageURL.pathname.startsWith('/og/');
 const articleImageURL = new URL(image, Astro.site ?? Astro.url);
 const siteURL = new URL('/', Astro.site ?? Astro.url);
 const authorURL = new URL('/about/', Astro.site ?? Astro.url);
@@ -85,7 +89,7 @@ const articleSchema =
 
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
-<link rel="alternate" type="application/rss+xml" title="Tech tips in fun RSS Feed" href="/rss.xml" />
+<link rel="alternate" type="application/rss+xml" title="Tech Tips in Fun RSS Feed" href="/rss.xml" />
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>
@@ -94,16 +98,16 @@ const articleSchema =
 {noindex && <meta name="robots" content="noindex,follow" />}
 
 <!-- Open Graph / Facebook -->
-<meta property="og:site_name" content="Tech tips in fun" />
+<meta property="og:site_name" content="Tech Tips in Fun" />
 <meta property="og:type" content={type} />
 <meta property="og:url" content={canonicalURL} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={imageURL} />
 <meta property="og:image:secure_url" content={imageURL} />
-<meta property="og:image:type" content="image/png" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
+<meta property="og:image:type" content={imageType} />
+{usesCardSize && <meta property="og:image:width" content="1200" />}
+{usesCardSize && <meta property="og:image:height" content="630" />}
 <meta property="og:image:alt" content={`${title} social sharing card`} />
 {type === 'article' && publishedTime && <meta property="article:published_time" content={publishedTime} />}
 {type === 'article' && modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}

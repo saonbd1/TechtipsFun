@@ -1,5 +1,5 @@
 ---
-title: "AI Tools Hunt: The Best AI Tools for Researchers and Students in 2026"
+title: "Best AI Tools for Researchers and Students in 2026"
 description: "Discover the best AI tools for researchers and students in 2026. Compare top discovery, literature review, and synthesis platforms tailored for beginners."
 pubDate: "Aug 06 2026"
 heroImage: "/minimal-desk.webp"

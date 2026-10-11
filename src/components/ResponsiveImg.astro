@@ -1,0 +1,27 @@
+---
+import { getResponsiveImage } from '../utils/responsive-image.mjs';
+
+interface Props {
+	src: string;
+	alt: string;
+	width: number | string;
+	height: number | string;
+	sizes: string;
+	priority?: boolean;
+}
+
+const { src, alt, width, height, sizes, priority = false } = Astro.props;
+const image = getResponsiveImage(src);
+---
+
+<img
+	src={image.src}
+	srcset={image.srcset}
+	sizes={image.srcset ? sizes : undefined}
+	alt={alt}
+	width={image.width ?? width}
+	height={image.height ?? height}
+	loading={priority ? 'eager' : 'lazy'}
+	decoding={priority ? 'sync' : 'async'}
+	fetchpriority={priority ? 'high' : undefined}
+/>

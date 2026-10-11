@@ -1,5 +1,5 @@
 ---
-title: "Facebook's Meta Reveals Muse Glimmer AI: What's it and How to Run It Locally"
+title: "Meta's Muse Glimmer AI: What It Is and How to Run It Locally"
 description: "Learn what Muse Glimmer AI is, what hardware it needs, how to run it locally, and where it fits among open-weight agent models."
 pubDate: "Aug 11 2026"
 heroImage: "/muse-glimmer-ai-feature-image.webp"

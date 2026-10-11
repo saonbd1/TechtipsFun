@@ -1,6 +1,6 @@
 ---
-title: "How to Migrate a Static HTML Site to Astro Using Content Collections"
-description: "A step-by-step walkthrough of migrating a 35-page static HTML site to Astro content collections, layouts, and dynamic routes — including the verification checks run before cutover."
+title: "Migrate a Static HTML Site to Astro with Content Collections"
+description: "A step-by-step walkthrough of migrating a 35-page static HTML site to Astro content collections, layouts, and dynamic routes, plus the checks to run before cutover."
 heroImage: "/migrate-static-html-site-to-astro-hero.webp"
 pubDate: "Oct 02 2026"
 category: "Web Development"

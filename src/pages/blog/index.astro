@@ -1,4 +1,5 @@
 ---
+import ResponsiveImg from '../../components/ResponsiveImg.astro';
 import BaseHead from '../../components/BaseHead.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
@@ -77,10 +78,10 @@ const blogSchema = {
 				</nav>
 			<section>
 				<ul class="post-grid">
-					{posts.map((post) => (
+					{posts.map((post, index) => (
 						<li>
 							<a class="post-card" href={`/blog/${post.id}/`}>
-								<img width={960} height={480} src={post.data.heroImage ?? '/blog-placeholder-1.webp'} alt={post.data.title} />
+								<ResponsiveImg width={960} height={480} src={post.data.heroImage ?? '/blog-placeholder-1.webp'} alt={post.data.title} sizes={index === 0 ? '(max-width: 720px) 100vw, 960px' : '(max-width: 720px) 100vw, 480px'} priority={index === 0} />
 								<h2 class="title">{post.data.title}</h2>
 								<p class="date"><FormattedDate date={post.data.pubDate} /></p>
 							</a>

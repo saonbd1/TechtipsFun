@@ -185,6 +185,15 @@ async function generateSocialCards(posts) {
     const outputPath = path.join(socialDir, `${post.slug}.png`);
     await sharp(Buffer.from(svg)).png({ compressionLevel: 9 }).toFile(outputPath);
   }
+
+  // Site-wide fallback card for the homepage, listings, and static pages.
+  const defaultHero = await sharp(path.join(publicDir, 'blog-placeholder-1.webp')).resize(330, 330, { fit: 'cover', position: 'attention' }).png().toBuffer();
+  const defaultSvg = buildCardSvg({
+    title: 'Tech Tips in Fun: honest guides on Windows, AI, and web development',
+    featuredImageUri: imageDataUri(defaultHero),
+    authorImageUri,
+  });
+  await sharp(Buffer.from(defaultSvg)).png({ compressionLevel: 9 }).toFile(path.join(socialDir, 'default.png'));
 }
 
 async function readPosts() {
@@ -202,7 +211,10 @@ async function readPosts() {
 }
 
 const publicFiles = await walk(publicDir);
-const sourceImages = publicFiles.filter((file) => !file.startsWith(`${socialDir}${path.sep}`));
+const generatedDir = path.join(publicDir, '_img');
+const sourceImages = publicFiles.filter(
+  (file) => !file.startsWith(`${socialDir}${path.sep}`) && !file.startsWith(`${generatedDir}${path.sep}`),
+);
 const results = [];
 for (const file of sourceImages) {
   const result = await optimizeRaster(file);

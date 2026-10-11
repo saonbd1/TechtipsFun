@@ -1,7 +1,7 @@
 ---
 layout: "../layouts/BlogPost.astro"
 title: "Terms of Service"
-description: "Terms governing use of the TechTips.fun website and its content."
+description: "The terms that govern use of the TechTips.fun website and its articles, including acceptable use, intellectual property, and disclaimers."
 pubDate: "Aug 13 2026"
 ---
 

@@ -81,7 +81,7 @@ Use the exact file names from the model page. Keep `--jinja` enabled for the cha
 
 ### Option 3: Use Ollama or vLLM
 
-Ollama is a convenient choice for a local command-line workflow. The GGUF model page lists an Ollama path for the model. vLLM is a better fit for a service that needs an OpenAI-compatible API and concurrent requests.
+Ollama is a convenient choice for a local command-line workflow. If you are setting it up on a modest Windows PC, follow our [low-spec Ollama setup guide](/blog/local-ollama-windows11-low-spec-setup/). The GGUF model page lists an Ollama path for the model. vLLM is a better fit for a service that needs an OpenAI-compatible API and concurrent requests.
 
 Check that the runtime supports the model format and the quantization before you download several gigabytes of files. Runtime support can change quickly after a new model release, and quantization reduces the precision of model weights and lowers memory use. It can also enhance the quality. A higher-bit format usually needs more memory but can preserve more quality.
 

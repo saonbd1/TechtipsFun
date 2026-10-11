@@ -128,7 +128,7 @@ Start-Service -Name "Ollama"
 
 ### The AI model is running slow
 
-Close every other program that uses RAM. A guide on how to [Cleanup your windows 11 pc and make it faster](https://www.techtips.fun/blog/how-to-repair-corrupted-windows-11-system-files-sfc-dism/)
+Close every other program that uses RAM. For more model choices, see our guide to [free AI models you can run right now](https://www.techtips.fun/blog/top-free-ai-models-you-can-use-right/).
 
 ### PowerShell reports `ollama` is not recognized
 

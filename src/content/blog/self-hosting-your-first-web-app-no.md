@@ -45,4 +45,4 @@ location / {
 
 > The hardest part isn’t the setup — it’s convincing yourself you can do it.
 
-That’s genuinely it. You now have a live app with HTTPS, served from your own server, at a fraction of what AWS or Vercel would cost at scale.
+That’s genuinely it. You now have a live app with HTTPS, served from your own server, at a fraction of what AWS or Vercel would cost at scale. If you are comparing managed hosting instead, see our [Netlify vs Vercel comparison](/blog/netlify-vs-vercel-what-my-emails-revealed-after-using-both/).

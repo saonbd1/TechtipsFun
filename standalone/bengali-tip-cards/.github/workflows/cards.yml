@@ -1,0 +1,72 @@
+name: Generate cards
+
+# Manual runs only: Actions -> "Generate cards" -> Run workflow.
+# Produces the PNG cards (plus captions.txt) as a downloadable artifact.
+on:
+  workflow_dispatch:
+    inputs:
+      csv:
+        description: CSV to read
+        required: true
+        default: scripts/examples/beauty_tips.csv
+      template:
+        description: Card template
+        type: choice
+        options: [photo, og]
+        default: photo
+      size:
+        description: Card size, e.g. 1080x1080 (blank = template default)
+        required: false
+        default: ""
+      limit:
+        description: Only the first N rows (blank = all)
+        required: false
+        default: ""
+      captions:
+        description: Also write captions.txt
+        type: boolean
+        default: true
+
+jobs:
+  cards:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      # sharp ships a prebuilt binary for linux-x64, so this is fast and needs
+      # no system libraries. Bengali text works because the Noto fonts in
+      # scripts/assets/fonts are registered at runtime - no apt-get fonts needed.
+      - run: npm ci
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Unit tests
+        run: python -m unittest discover -s scripts/tests -v
+
+      - name: Render cards
+        env:
+          CSV: ${{ inputs.csv }}
+          TEMPLATE: ${{ inputs.template }}
+          SIZE: ${{ inputs.size }}
+          LIMIT: ${{ inputs.limit }}
+          CAPTIONS: ${{ inputs.captions }}
+        run: |
+          args=(--csv "$CSV" --template "$TEMPLATE" --out-dir cards)
+          if [ -n "$SIZE" ]; then args+=(--size "$SIZE"); fi
+          if [ -n "$LIMIT" ]; then args+=(--limit "$LIMIT"); fi
+          if [ "$CAPTIONS" = "true" ]; then args+=(--captions); fi
+          node scripts/generate-tip-cards.mjs "${args[@]}"
+          ls -la cards
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cards
+          path: cards/
+          if-no-files-found: error

@@ -102,6 +102,30 @@ node scripts/generate-tip-cards.mjs --template og --limit 3
 node scripts/generate-tip-cards.mjs --brand MYBRAND --handle @myhandle
 ```
 
+## Run in a Codespace (or any dev container)
+
+The repo ships a `.devcontainer/` config, so:
+
+1. Open the repo on GitHub → **Code** → **Codespaces** → **Create codespace on main**
+2. Wait for `npm install` to finish (it runs automatically via `postCreateCommand`)
+3. In the terminal:
+
+```bash
+npm test                                        # 12 tests, no setup needed
+npm run cards -- --captions                     # 17 cards in ./cards
+python3 scripts/clean_text_to_csv.py your.txt -o tips.csv && npm run cards -- --csv tips.csv
+```
+
+Then right-click a PNG in the Explorer → **Download**. Everything runs offline
+once `npm install` is done — no `apt-get install fonts-*` step, because the
+Bengali fonts are bundled and registered at runtime.
+
+### Or let Actions build them
+
+`.github/workflows/cards.yml` is a manual workflow: **Actions → Generate cards →
+Run workflow**, pick the CSV/template/size/limit, and download the `cards`
+artifact when it finishes. Nothing is committed back to the repo.
+
 ## CSV format
 
 Any CSV with a `category,title,tip` header works — the cleaner's output, or
@@ -143,6 +167,8 @@ scripts/
   tests/                      # unit tests for the cleaner
 assets/portrait.webp          # default author portrait
 cards/                        # generated output (git-ignored)
+.devcontainer/                # Codespaces / dev container config
+.github/workflows/cards.yml   # manual workflow that renders + uploads cards
 ```
 
 ## License

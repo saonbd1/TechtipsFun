@@ -2,6 +2,11 @@
 
 Custom features and changes on top of the upstream `astro-blog-starter-template`.
 
+## [Unreleased]
+### Added
+- **Bengali text cleaner** — `scripts/clean_text_to_csv.py` strips scraped-page noise (inline `[1] (https://…)` citations, bare URLs, bullet glyphs, BOM/zero-width characters, dangling separators) from a text file and writes the surviving bullet tips to CSV (`category,title,tip`). Bengali-only by default, `--all-lines` / `--no-bengali-filter` to widen. 12 unit tests in `scripts/tests/`.
+- **Tip card generator** — `scripts/generate-tip-cards.mjs` (`npm run cards:tips`) reuses the OG image pipeline (SVG → sharp → PNG) from `generate-social-assets.mjs`, but reads its text from the cleaned CSV rows instead of post frontmatter. Two templates: `photo` (1080x1080, full-bleed photo background with a brand scrim, category chip, headline and tip) and `og` (the classic 1200x630 grid card). Bundled Noto Sans Bengali + Noto Sans in `scripts/assets/fonts/` are registered through a generated fontconfig file, so Bengali glyphs render on machines with no Bengali font installed. `--photo` / `--photo-dir` set the imagery, `--limit` / `--filter` select rows, `--captions` writes ready-to-post captions alongside the PNGs.
+
 ## [2026-10-04]
 ### Added
 - **Link checker** — `scripts/check-links.mjs` (`npm run check:links`) extracts every external and internal link from `src/content/blog/` and `pending-posts/`, follows external redirect chains hop by hop (301/302/303/307/308) so the *reason* for each redirect is visible, and validates internal `/blog/<slug>/` links against the real post files (warning when the trailing slash is missing). Requests mimic a browser (User-Agent + `Accept-Language`) so locale hops and WAF blocks don't false-positive. Severities: `ok`, `redirect` (benign chain), `login_wall` (auth-gated, e.g. Google Console), `blocked` (401/403 WAF — needs human review), `dead` (DNS/timeout/TLS), `broken` (404/410), `server_error`, `redirect_loop`. `--fail-on=dead|redirect|all|none`, `--json` for machine-readable reports, transient-error retries built in.

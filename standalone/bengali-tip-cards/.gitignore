@@ -1,0 +1,11 @@
+node_modules/
+
+# generated output
+cards/
+
+# python
+__pycache__/
+*.py[cod]
+
+# os
+.DS_Store

@@ -30,6 +30,7 @@
 	"scripts": {
 		"astro": "astro",
 		"generate:assets": "node scripts/generate-social-assets.mjs",
+		"cards:tips": "node scripts/generate-tip-cards.mjs",
 		"optimize:images": "node scripts/optimize-images.mjs",
 		"check:links": "node scripts/check-links.mjs",
 		"share:linkedin": "node scripts/share-to-linkedin.mjs",

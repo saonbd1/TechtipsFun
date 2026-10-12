@@ -437,7 +437,7 @@ Usage: node scripts/generate-tip-cards.mjs [options]
 Options:
   --csv <file>        CSV with category,title,tip columns
                       (default: scripts/examples/beauty_tips.csv)
-  --out-dir <dir>     where PNGs are written (default: public/social-cards)
+  --out-dir <dir>     where PNGs are written (default: cards)
   --template <name>   photo (default) | og
   --size <WxH>        card size (default: 1080x1080 photo, 1200x630 og)
   --photo <file>      background/featured photo

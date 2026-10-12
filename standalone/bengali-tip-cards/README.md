@@ -13,7 +13,7 @@ Bengali text renders correctly out of the box: the repo ships **Noto Sans
 Bengali** (plus Noto Sans for the latin fallback) and registers it with
 fontconfig at runtime, so no system font installation is needed.
 
-![Sample card](examples/preview/01-skincare.png)
+![Sample card](scripts/examples/preview/01-skincare.png)
 
 ## Quick start
 

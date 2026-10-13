@@ -30,6 +30,8 @@ Windows can select the wrong output device after an update. Windows can also set
 - Select Volume mixer. If an app volume is low, move its slider up.
 - Test the sound.
 
+![Select the output device and volume in Windows 11 Sound settings](/article-media/windows-11-no-sound-fix1-output-device.png)
+
 ## Fix 2: Run the Audio Troubleshooter
 
 Windows has a troubleshooter that repairs common sound errors. The Get Help app contains the same troubleshooter.
@@ -39,6 +41,8 @@ Windows has a troubleshooter that repairs common sound errors. The Get Help app 
 - Select Run for Audio Playback.
 - Wait for the troubleshooter to finish.
 - Test the sound after the troubleshooter closes.
+
+![Run the Audio Playback troubleshooter in Windows 11](/article-media/windows-11-no-sound-fix2-troubleshooter.png)
 
 ## Fix 3: Restart the Audio Services
 
@@ -51,6 +55,8 @@ Every sound on Windows runs through two services: Windows Audio and Windows Audi
 - Right-click Windows Audio and select Restart.
 - Repeat these steps for Windows Audio Endpoint Builder.
 - Test the sound.
+
+![Restart Windows Audio services in services.msc](/article-media/windows-11-no-sound-fix3-audio-services.png)
 
 ## Fix 4: Turn Off Audio Enhancements and Spatial Sound
 
@@ -75,6 +81,8 @@ The update can install a faulty driver. Windows stores the earlier driver on the
 - Select Roll Back Driver.
 - Follow the instructions. Then restart the computer.
 - If the Roll Back Driver button is gray, Windows does not have an earlier driver. Continue with Fix 6.
+
+![Roll back or reinstall the audio driver in Device Manager](/article-media/windows-11-no-sound-fix5-device-manager.png)
 
 ## Fix 6: Reinstall the Audio Driver
 
@@ -102,6 +110,8 @@ CAUTION: Windows can install the update again later. A repair update from Micros
 - Select the last update and select Uninstall.
 - Restart the computer.
 - If the sound works, pause the updates until Microsoft sends a repair.
+
+![Uninstall the last Windows update from Update history](/article-media/windows-11-no-sound-fix7-update-history.png)
 
 ## Frequently Asked Questions
 

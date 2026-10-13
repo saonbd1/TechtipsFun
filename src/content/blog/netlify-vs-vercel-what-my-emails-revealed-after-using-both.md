@@ -22,17 +22,36 @@ I have used both platforms for similar projects. I still have projects on both. 
 
 ## Netlify vs Vercel at a glance
 
-| Comparison point | Netlify | Vercel |
-|---|---|---|
-| Entry plan listed by the vendor | Free plan: $0 forever | Hobby: free for personal, non-commercial use |
-| Free-plan usage model | Netlify lists a 300-credit monthly limit on its pricing page | Vercel Hobby uses plan-specific usage caps; paid Pro includes a $20 monthly usage credit |
-| Deployment workflow | Git, AI, or API deployments; deploy previews and custom domains are listed on the Free plan | Git-based deployments, preview deployments, environment variables, and automatic CI/CD are listed in the platform offering |
-| Framework position | Broad modern-framework support and built-in services | Especially closely integrated with Next.js, alongside support for other frameworks |
-| What my supplied emails showed | Credit-use warnings and a project-suspension message were visible | Deployment, domain, import, verification, and sign-in messages were visible; no credit or invoice message was visible in the supplied screenshots |
-| Personal evidence | Four credit/suspension-related subject lines were visible in the supplied Netlify screenshots | Zero credit/suspension-related subject lines were visible in the supplied Vercel screenshots |
-| Fair interpretation | This was my account experience during the period shown | This was my account experience during the period shown |
 
-> **Important:** The email row is personal evidence, not a controlled test. Your messages may be different because usage, plan, team settings, project configuration, dates, and account history may differ.
+- **Entry plan**
+  - **Netlify:** Free plan at **$0 forever**.
+  - **Vercel:** Hobby plan is free for **personal, non-commercial use**.
+
+- **Free-plan usage model**
+  - **Netlify:** Pricing page lists a **300-credit monthly limit**.
+  - **Vercel:** Hobby plan uses plan-specific usage caps. The paid Pro plan includes a **$20 monthly usage credit**.
+
+- **Deployment workflow**
+  - **Netlify:** Supports Git, AI, and API deployments. The Free plan lists deploy previews and custom domains.
+  - **Vercel:** Supports Git-based deployments, preview deployments, environment variables, and automatic CI/CD.
+
+- **Framework positioning**
+  - **Netlify:** Supports a broad range of modern frameworks and includes built-in services.
+  - **Vercel:** Has especially close integration with **Next.js**, while also supporting other frameworks.
+
+- **What the supplied emails showed**
+  - **Netlify:** Credit-use warnings and a project-suspension message were visible.
+  - **Vercel:** Deployment, domain, import, verification, and sign-in messages were visible. No credit or invoice message appeared in the supplied screenshots.
+
+- **Personal evidence**
+  - **Netlify:** Four credit- or suspension-related subject lines were visible in the supplied screenshots.
+  - **Vercel:** No credit- or suspension-related subject lines were visible in the supplied screenshots.
+
+- **Fair interpretation**
+  - These findings reflect the account experience shown during the period covered by the supplied emails.
+  - They should not be treated as a controlled comparison or universal product experience.
+
+> **Important:** Email evidence is personal and account-specific. Your messages may differ based on usage, plan, team settings, project configuration, dates, and account history.
 
 ## What I actually tested
 

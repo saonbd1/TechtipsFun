@@ -32,6 +32,17 @@ const GENERATED_DIR = path.resolve(REELS_ROOT, "src", "generated");
 const SITE_URL = "https://www.techtips.fun";
 const OUTRO_URL = "techtips.fun";
 
+/**
+ * Bump this whenever a change should flow into reels that already exist
+ * (new look, new pacing, ...). The scheduled workflow re-renders a couple of
+ * outdated reels per day until every reel is on the current version - see
+ * scripts/list-missing-reels.mjs and article-reels/.reel-versions.json.
+ *
+ *   1 - original fixed-length scenes
+ *   2 - reading-speed pacing + article images/screenshots
+ */
+export const REEL_VERSION = 2;
+
 const FPS = 30;
 const MAX_SECTIONS = 9;
 // Reels used to be ~30s; with reading-speed pacing a typical post lands

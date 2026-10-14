@@ -212,6 +212,7 @@ jobs:
           list=$(git diff --cached --name-only -- "$OUTPUT_DIR/*.mp4" | sed -E 's#.*/##; s/\.mp4$//' | paste -sd, -)
           git commit -m "Add article reel(s): $list"
           # main may have moved while rendering (e.g. a post was published).
-          git pull --rebase origin main
+          # --autostash: rendering leaves regenerated props in the working tree.
+          git pull --rebase --autostash origin main
           git push origin HEAD:main
           echo "Committed: $list"

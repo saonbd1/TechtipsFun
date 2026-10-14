@@ -1,155 +1,91 @@
 {
-  "slug": "blog-to-video-self-hosted-pipeline",
-  "title": "Blog post to reel video, self-hosted: render a reel for every article",
-  "description": "Every blog-to-video tool ask you subscription. Here is the self-hosted alternative: Markdown becomes animated code and captions, rendered on publish. And it is free",
-  "category": "Automation",
+  "slug": "setting-up-google-oauth-credentials-for-blogger",
+  "title": "Setting Up Google OAuth Credentials for Blogger Automation",
+  "description": "In this post I explained how to create a secure admin dashboard by Google OAuth credentials for an application.",
+  "category": "Web Development",
   "tags": [
-    "Remotion",
-    "Video Automation",
-    "GitHub Actions",
-    "React",
-    "Content Repurposing"
+    "Web Apps",
+    "Deployment",
+    "Beginner Guide",
+    "Frontend"
   ],
-  "url": "https://www.techtips.fun/blog/blog-to-video-self-hosted-pipeline/",
+  "url": "https://www.techtips.fun/blog/setting-up-google-oauth-credentials-for-blogger/",
   "scenes": [
     {
       "type": "title",
-      "kicker": "Automation",
-      "title": "Blog post to reel video, self-hosted: render a reel for every article",
-      "subtitle": "Every blog-to-video tool ask you subscription. Here is the self-hosted alternative:…",
+      "kicker": "Web Development",
+      "title": "Setting Up Google OAuth Credentials for Blogger Automation",
+      "subtitle": "In this post I explained how to create a secure admin dashboard by Google OAuth…",
       "image": {
-        "src": "post-media/blog-to-video-self-hosted-pipeline/01-blog-to-video-pipeline.webp",
-        "width": 1280,
-        "height": 720
+        "src": "post-media/setting-up-google-oauth-credentials-for-blogger/01-google-auth-blogger-automation.webp",
+        "width": 1344,
+        "height": 768
       },
       "durationInFrames": 183
     },
     {
+      "type": "point",
+      "kicker": "Web Development",
+      "heading": "Before you begin make sure you have",
+      "body": "A Google Account. A Google Cloud project. The web address of your application. The OAuth callback URL for your application.",
+      "durationInFrames": 330
+    },
+    {
+      "type": "point",
+      "kicker": "Web Development",
+      "heading": "Step 1: Create or select a Google Cloud project",
+      "body": "Open the Google Cloud Console. Select the project menu at the top of the page. Select an existing project.",
+      "durationInFrames": 330
+    },
+    {
+      "type": "point",
+      "kicker": "Web Development",
+      "heading": "Step 2: Enable the Blogger API",
+      "body": "Open the API Library. Search for Blogger API v3. Select Blogger API v3 from the search results. Select Enable.",
+      "durationInFrames": 330
+    },
+    {
+      "type": "point",
+      "kicker": "Web Development",
+      "heading": "Step 3: Configure the OAuth consent screen",
+      "body": "The OAuth consent screen tells users which application requests access to their Google Account.",
+      "durationInFrames": 284
+    },
+    {
+      "type": "point",
+      "kicker": "Web Development",
+      "heading": "Configure the audience",
+      "body": "Open the Audience page. Select External if people outside your Google Workspace organization will use the application.",
+      "durationInFrames": 273
+    },
+    {
+      "type": "point",
+      "kicker": "Web Development",
+      "heading": "Add the Blogger scope",
+      "body": "Open the Data Access page. Select Add or Remove Scopes. Search for the Blogger API scope. Select https://www.googleapis.com/auth/blogger.",
+      "durationInFrames": 296
+    },
+    {
+      "type": "point",
+      "kicker": "Web Development",
+      "heading": "Step 4: Create the OAuth client ID",
+      "body": "Choose the client type that matches the application.",
+      "durationInFrames": 215
+    },
+    {
       "type": "code",
       "kicker": "Code",
-      "heading": "What you end up with",
+      "heading": "For a server-side web application",
       "steps": [
         {
           "lang": "text",
           "meta": "",
-          "value": "src/content/blog/<slug>.md\n        |\n        |  1. article -> props        (Node, ~200ms)\n        |     - parse frontmatter, ## sections, fenced code\n        |     - plan scenes + durations\n        |     - syntax-highlight the code\n        |     - synthesise a word-level caption track\n        v\nsrc/generated/<slug>.json            (fully-baked props)",
-          "code": "src/content/blog/<slug>.md\n        |\n        |  1. article -> props        (Node, ~200ms)\n        |     - parse frontmatter, ## sections, fenced code\n        |     - plan scenes + durations\n        |     - syntax-highlight the code\n        |     - synthesise a word-level caption track\n        v\nsrc/generated/<slug>.json            (fully-baked props)",
+          "value": "https://watchnowcricket.blogspot.com/oauth2/callback",
+          "code": "https://watchnowcricket.blogspot.com/oauth2/callback",
           "tokens": [
             [
-              "src/content/blog/<slug>.md",
+              "https://watchnowcricket.blogspot.com/oauth2/callback",
               null
-            ],
-            "\n        ",
-            [
-              "|",
-              null
-            ],
-            "\n        ",
-            [
-              "|  1. article -> props        (Node, ~200ms)",
-              null
-            ],
-            "\n        ",
-            [
-              "|     - parse frontmatter, ## sections, fenced code",
-              null
-            ],
-            "\n        ",
-            [
-              "|     - plan scenes + durations",
-              null
-            ],
-            "\n        ",
-            [
-              "|     - syntax-highlight the code",
-              null
-            ],
-            "\n        ",
-            [
-              "|     - synthesise a word-level caption track",
-              null
-            ],
-            "\n        ",
-            [
-              "v",
-              null
-            ],
-            "\n",
-            [
-              "src/generated/<slug>.json            (fully-baked props)",
-              null
-            ]
-          ],
-          "annotations": [],
-          "themeName": "github-dark",
-          "style": {
-            "color": "#c9d1d9",
-            "background": "#0d1117",
-            "colorScheme": "dark"
-          }
-        }
-      ],
-      "stepDurations": [
-        182
-      ],
-      "durationInFrames": 182
-    },
-    {
-      "type": "point",
-      "kicker": "Automation",
-      "heading": "Prerequisites",
-      "body": "Node 22+ (the CLI wrapper uses fs.statfsSync, which landed in Node 18.15) A repo with Markdown posts.",
-      "durationInFrames": 250
-    },
-    {
-      "type": "code",
-      "kicker": "Code",
-      "heading": "Step 1 - Scaffold the Remotion project",
-      "steps": [
-        {
-          "lang": "shellscript",
-          "meta": "bash",
-          "value": "npx create-video@latest --blank reels\ncd reels\nnpm install codehike @code-hike/lighter @remotion/captions @remotion/google-fonts @remotion/layout-utils @remotion/animation-utils",
-          "code": "npx create-video@latest --blank reels\ncd reels\nnpm install codehike @code-hike/lighter @remotion/captions @remotion/google-fonts @remotion/layout-utils @remotion/animation-utils",
-          "tokens": [
-            [
-              "npx",
-              "#FFA657"
-            ],
-            " ",
-            [
-              "create-video@latest",
-              "#A5D6FF"
-            ],
-            " ",
-            [
-              "--blank",
-              "#79C0FF"
-            ],
-            " ",
-            [
-              "reels",
-              "#A5D6FF"
-            ],
-            "\n",
-            [
-              "cd",
-              "#79C0FF"
-            ],
-            " ",
-            [
-              "reels",
-              "#A5D6FF"
-            ],
-            "\n",
-            [
-              "npm",
-              "#FFA657"
-            ],
-            " ",
-            [
-              "install codehike @code-hike/lighter @remotion/captions @remotion/google-fonts @remotion/layout-utils @remotion/animation-utils",
-              "#A5D6FF"
             ]
           ],
           "annotations": [],
@@ -161,49 +97,14 @@
           }
         },
         {
-          "lang": "shellscript",
-          "meta": "bash",
-          "value": "npx create-video@latest --code-hike   # animated code snippets\nnpx create-video@latest --tiktok      # word-by-word captions",
-          "code": "npx create-video@latest --code-hike   # animated code snippets\nnpx create-video@latest --tiktok      # word-by-word captions",
+          "lang": "text",
+          "meta": "",
+          "value": "http://localhost:3000/oauth2/callback",
+          "code": "http://localhost:3000/oauth2/callback",
           "tokens": [
             [
-              "npx",
-              "#FFA657"
-            ],
-            " ",
-            [
-              "create-video@latest",
-              "#A5D6FF"
-            ],
-            " ",
-            [
-              "--code-hike",
-              "#79C0FF"
-            ],
-            "   ",
-            [
-              "# animated code snippets",
-              "#8B949E"
-            ],
-            "\n",
-            [
-              "npx",
-              "#FFA657"
-            ],
-            " ",
-            [
-              "create-video@latest",
-              "#A5D6FF"
-            ],
-            " ",
-            [
-              "--tiktok",
-              "#79C0FF"
-            ],
-            "      ",
-            [
-              "# word-by-word captions",
-              "#8B949E"
+              "http://localhost:3000/oauth2/callback",
+              null
             ]
           ],
           "annotations": [],
@@ -222,1112 +123,6 @@
       "durationInFrames": 270
     },
     {
-      "type": "code",
-      "kicker": "Code",
-      "heading": "Step 2 - Turn an article into props",
-      "steps": [
-        {
-          "lang": "javascript",
-          "meta": "js",
-          "value": "// four scene types, that is the whole vocabulary\n{ type: \"title\", kicker, title, subtitle, durationInFrames }\n{ type: \"point\", kicker, heading, body,  durationInFrames }\n{ type: \"code\",  kicker, heading, steps, durationInFrames }\n{ type: \"outro\", heading, body, url,     durationInFrames }",
-          "code": "// four scene types, that is the whole vocabulary\n{ type: \"title\", kicker, title, subtitle, durationInFrames }\n{ type: \"point\", kicker, heading, body,  durationInFrames }\n{ type: \"code\",  kicker, heading, steps, durationInFrames }\n{ type: \"outro\", heading, body, url,     durationInFrames }",
-          "tokens": [
-            [
-              "// four scene types, that is the whole vocabulary",
-              "#8B949E"
-            ],
-            "\n",
-            [
-              "{",
-              "#C9D1D9"
-            ],
-            " ",
-            [
-              "type",
-              "#FFA657"
-            ],
-            [
-              ":",
-              "#C9D1D9"
-            ],
-            " ",
-            [
-              "\"title\"",
-              "#A5D6FF"
-            ],
-            [
-              ", kicker, title, subtitle, durationInFrames }",
-              "#C9D1D9"
-            ],
-            "\n",
-            [
-              "{",
-              "#C9D1D9"
-            ],
-            " ",
-            [
-              "type",
-              "#FFA657"
-            ],
-            [
-              ":",
-              "#C9D1D9"
-            ],
-            " ",
-            [
-              "\"point\"",
-              "#A5D6FF"
-            ],
-            [
-              ", kicker, heading, body,  durationInFrames }",
-              "#C9D1D9"
-            ],
-            "\n",
-            [
-              "{",
-              "#C9D1D9"
-            ],
-            " ",
-            [
-              "type",
-              "#FFA657"
-            ],
-            [
-              ":",
-              "#C9D1D9"
-            ],
-            " ",
-            [
-              "\"code\"",
-              "#A5D6FF"
-            ],
-            [
-              ",  kicker, heading, steps, durationInFrames }",
-              "#C9D1D9"
-            ],
-            "\n",
-            [
-              "{",
-              "#C9D1D9"
-            ],
-            " ",
-            [
-              "type",
-              "#FFA657"
-            ],
-            [
-              ":",
-              "#C9D1D9"
-            ],
-            " ",
-            [
-              "\"outro\"",
-              "#A5D6FF"
-            ],
-            [
-              ", heading, body, url,     durationInFrames }",
-              "#C9D1D9"
-            ]
-          ],
-          "annotations": [],
-          "themeName": "github-dark",
-          "style": {
-            "color": "#c9d1d9",
-            "background": "#0d1117",
-            "colorScheme": "dark"
-          }
-        },
-        {
-          "lang": "javascript",
-          "meta": "js",
-          "value": "for (const section of sections) {\n  if (section.code.length) {\n    scenes.push({ type: \"code\", heading: section.heading, steps: section.code, duration });\n  } else {\n    scenes.push({ type: \"point\", heading: section.heading, body: firstSentence(section.prose) });\n  }\n}",
-          "code": "for (const section of sections) {\n  if (section.code.length) {\n    scenes.push({ type: \"code\", heading: section.heading, steps: section.code, duration });\n  } else {\n    scenes.push({ type: \"point\", heading: section.heading, body: firstSentence(section.prose) });\n  }\n}",
-          "tokens": [
-            [
-              "for",
-              "#FF7B72"
-            ],
-            " ",
-            [
-              "(",
-              "#C9D1D9"
-            ],
-            [
-              "const",
-              "#FF7B72"
-            ],
-            " ",
-            [
-              "section",
-              "#79C0FF"
-            ],
-            " ",
-            [
-              "of",
-              "#FF7B72"
-            ],
-            " ",
-            [
-              "sections) {",
-              "#C9D1D9"
-            ],
-            "\n  ",
-            [
-              "if",
-              "#FF7B72"
-            ],
-            " ",
-            [
-              "(section.code.",
-              "#C9D1D9"
-            ],
-            [
-              "length",
-              "#79C0FF"
-            ],
-            [
-              ") {",
-              "#C9D1D9"
-            ],
-            "\n    ",
-            [
-              "scenes.",
-              "#C9D1D9"
-            ],
-            [
-              "push",
-              "#D2A8FF"
-            ],
-            [
-              "({ type:",
-              "#C9D1D9"
-            ],
-            " ",
-            [
-              "\"code\"",
-              "#A5D6FF"
-            ],
-            [
-              ", heading: section.heading, steps: section.code, duration });",
-              "#C9D1D9"
-            ],
-            "\n  ",
-            [
-              "}",
-              "#C9D1D9"
-            ],
-            " ",
-            [
-              "else",
-              "#FF7B72"
-            ],
-            " ",
-            [
-              "{",
-              "#C9D1D9"
-            ],
-            "\n    ",
-            [
-              "scenes.",
-              "#C9D1D9"
-            ],
-            [
-              "push",
-              "#D2A8FF"
-            ],
-            [
-              "({ type:",
-              "#C9D1D9"
-            ],
-            " ",
-            [
-              "\"point\"",
-              "#A5D6FF"
-            ],
-            [
-              ", heading: section.heading, body:",
-              "#C9D1D9"
-            ],
-            " ",
-            [
-              "firstSentence",
-              "#D2A8FF"
-            ],
-            [
-              "(section.prose) });",
-              "#C9D1D9"
-            ],
-            "\n  ",
-            [
-              "}",
-              "#C9D1D9"
-            ],
-            "\n",
-            [
-              "}",
-              "#C9D1D9"
-            ]
-          ],
-          "annotations": [],
-          "themeName": "github-dark",
-          "style": {
-            "color": "#c9d1d9",
-            "background": "#0d1117",
-            "colorScheme": "dark"
-          }
-        }
-      ],
-      "stepDurations": [
-        135,
-        155
-      ],
-      "durationInFrames": 290
-    },
-    {
-      "type": "code",
-      "kicker": "Code",
-      "heading": "Highlight once, in Node",
-      "steps": [
-        {
-          "lang": "javascript",
-          "meta": "js",
-          "value": "import { highlight } from \"codehike/code\";\nimport { getThemeColors } from \"@code-hike/lighter\";\n\nconst highlighted = await highlight({ lang, meta, value: code }, theme);\nconst themeColors = await getThemeColors(theme);",
-          "code": "import { highlight } from \"codehike/code\";\nimport { getThemeColors } from \"@code-hike/lighter\";\n\nconst highlighted = await highlight({ lang, meta, value: code }, theme);\nconst themeColors = await getThemeColors(theme);",
-          "tokens": [
-            [
-              "import",
-              "#FF7B72"
-            ],
-            " ",
-            [
-              "{ highlight }",
-              "#C9D1D9"
-            ],
-            " ",
-            [
-              "from",
-              "#FF7B72"
-            ],
-            " ",
-            [
-              "\"codehike/code\"",
-              "#A5D6FF"
-            ],
-            [
-              ";",
-              "#C9D1D9"
-            ],
-            "\n",
-            [
-              "import",
-              "#FF7B72"
-            ],
-            " ",
-            [
-              "{ getThemeColors }",
-              "#C9D1D9"
-            ],
-            " ",
-            [
-              "from",
-              "#FF7B72"
-            ],
-            " ",
-            [
-              "\"@code-hike/lighter\"",
-              "#A5D6FF"
-            ],
-            [
-              ";",
-              "#C9D1D9"
-            ],
-            "\n\n",
-            [
-              "const",
-              "#FF7B72"
-            ],
-            " ",
-            [
-              "highlighted",
-              "#79C0FF"
-            ],
-            " ",
-            [
-              "= await",
-              "#FF7B72"
-            ],
-            " ",
-            [
-              "highlight",
-              "#D2A8FF"
-            ],
-            [
-              "({ lang, meta, value: code }, theme);",
-              "#C9D1D9"
-            ],
-            "\n",
-            [
-              "const",
-              "#FF7B72"
-            ],
-            " ",
-            [
-              "themeColors",
-              "#79C0FF"
-            ],
-            " ",
-            [
-              "= await",
-              "#FF7B72"
-            ],
-            " ",
-            [
-              "getThemeColors",
-              "#D2A8FF"
-            ],
-            [
-              "(theme);",
-              "#C9D1D9"
-            ]
-          ],
-          "annotations": [],
-          "themeName": "github-dark",
-          "style": {
-            "color": "#c9d1d9",
-            "background": "#0d1117",
-            "colorScheme": "dark"
-          }
-        }
-      ],
-      "stepDurations": [
-        135
-      ],
-      "durationInFrames": 135
-    },
-    {
-      "type": "code",
-      "kicker": "Code",
-      "heading": "The caption track",
-      "steps": [
-        {
-          "lang": "javascript",
-          "meta": "js",
-          "value": "const weights = words.map((w) => w.length + 3);\nconst totalWeight = weights.reduce((a, b) => a + b, 0);\n// each word gets (weight / totalWeight) * sceneDurationMs",
-          "code": "const weights = words.map((w) => w.length + 3);\nconst totalWeight = weights.reduce((a, b) => a + b, 0);\n// each word gets (weight / totalWeight) * sceneDurationMs",
-          "tokens": [
-            [
-              "const",
-              "#FF7B72"
-            ],
-            " ",
-            [
-              "weights",
-              "#79C0FF"
-            ],
-            " ",
-            [
-              "=",
-              "#FF7B72"
-            ],
-            " ",
-            [
-              "words.",
-              "#C9D1D9"
-            ],
-            [
-              "map",
-              "#D2A8FF"
-            ],
-            [
-              "((",
-              "#C9D1D9"
-            ],
-            [
-              "w",
-              "#FFA657"
-            ],
-            [
-              ")",
-              "#C9D1D9"
-            ],
-            " ",
-            [
-              "=>",
-              "#FF7B72"
-            ],
-            " ",
-            [
-              "w.",
-              "#C9D1D9"
-            ],
-            [
-              "length",
-              "#79C0FF"
-            ],
-            " ",
-            [
-              "+",
-              "#FF7B72"
-            ],
-            " ",
-            [
-              "3",
-              "#79C0FF"
-            ],
-            [
-              ");",
-              "#C9D1D9"
-            ],
-            "\n",
-            [
-              "const",
-              "#FF7B72"
-            ],
-            " ",
-            [
-              "totalWeight",
-              "#79C0FF"
-            ],
-            " ",
-            [
-              "=",
-              "#FF7B72"
-            ],
-            " ",
-            [
-              "weights.",
-              "#C9D1D9"
-            ],
-            [
-              "reduce",
-              "#D2A8FF"
-            ],
-            [
-              "((",
-              "#C9D1D9"
-            ],
-            [
-              "a",
-              "#FFA657"
-            ],
-            [
-              ",",
-              "#C9D1D9"
-            ],
-            " ",
-            [
-              "b",
-              "#FFA657"
-            ],
-            [
-              ")",
-              "#C9D1D9"
-            ],
-            " ",
-            [
-              "=>",
-              "#FF7B72"
-            ],
-            " ",
-            [
-              "a",
-              "#C9D1D9"
-            ],
-            " ",
-            [
-              "+",
-              "#FF7B72"
-            ],
-            " ",
-            [
-              "b,",
-              "#C9D1D9"
-            ],
-            " ",
-            [
-              "0",
-              "#79C0FF"
-            ],
-            [
-              ");",
-              "#C9D1D9"
-            ],
-            "\n",
-            [
-              "// each word gets (weight / totalWeight) * sceneDurationMs",
-              "#8B949E"
-            ]
-          ],
-          "annotations": [],
-          "themeName": "github-dark",
-          "style": {
-            "color": "#c9d1d9",
-            "background": "#0d1117",
-            "colorScheme": "dark"
-          }
-        }
-      ],
-      "stepDurations": [
-        135
-      ],
-      "durationInFrames": 135
-    },
-    {
-      "type": "code",
-      "kicker": "Code",
-      "heading": "Step 3 - Build the vertical composition",
-      "steps": [
-        {
-          "lang": "tsx",
-          "meta": "tsx",
-          "value": "<Series>\n  {scenes.map((scene, i) => (\n    <Series.Sequence key={i} durationInFrames={scene.durationInFrames}>\n      <SceneRenderer scene={scene} />\n    </Series.Sequence>\n  ))}\n</Series>",
-          "code": "<Series>\n  {scenes.map((scene, i) => (\n    <Series.Sequence key={i} durationInFrames={scene.durationInFrames}>\n      <SceneRenderer scene={scene} />\n    </Series.Sequence>\n  ))}\n</Series>",
-          "tokens": [
-            [
-              "<",
-              "#C9D1D9"
-            ],
-            [
-              "Series",
-              "#7EE787"
-            ],
-            [
-              ">",
-              "#C9D1D9"
-            ],
-            "\n  ",
-            [
-              "{",
-              "#FF7B72"
-            ],
-            [
-              "scenes.",
-              "#C9D1D9"
-            ],
-            [
-              "map",
-              "#D2A8FF"
-            ],
-            [
-              "((",
-              "#C9D1D9"
-            ],
-            [
-              "scene",
-              "#FFA657"
-            ],
-            [
-              ",",
-              "#C9D1D9"
-            ],
-            " ",
-            [
-              "i",
-              "#FFA657"
-            ],
-            [
-              ")",
-              "#C9D1D9"
-            ],
-            " ",
-            [
-              "=>",
-              "#FF7B72"
-            ],
-            " ",
-            [
-              "(",
-              "#C9D1D9"
-            ],
-            "\n    ",
-            [
-              "<",
-              "#C9D1D9"
-            ],
-            [
-              "Series.Sequence",
-              "#7EE787"
-            ],
-            " ",
-            [
-              "key",
-              "#79C0FF"
-            ],
-            [
-              "={",
-              "#FF7B72"
-            ],
-            [
-              "i",
-              "#C9D1D9"
-            ],
-            [
-              "}",
-              "#FF7B72"
-            ],
-            " ",
-            [
-              "durationInFrames",
-              "#79C0FF"
-            ],
-            [
-              "={",
-              "#FF7B72"
-            ],
-            [
-              "scene.durationInFrames",
-              "#C9D1D9"
-            ],
-            [
-              "}",
-              "#FF7B72"
-            ],
-            [
-              ">",
-              "#C9D1D9"
-            ],
-            "\n      ",
-            [
-              "<",
-              "#C9D1D9"
-            ],
-            [
-              "SceneRenderer",
-              "#7EE787"
-            ],
-            " ",
-            [
-              "scene",
-              "#79C0FF"
-            ],
-            [
-              "={",
-              "#FF7B72"
-            ],
-            [
-              "scene",
-              "#C9D1D9"
-            ],
-            [
-              "}",
-              "#FF7B72"
-            ],
-            " ",
-            [
-              "/>",
-              "#C9D1D9"
-            ],
-            "\n    ",
-            [
-              "</",
-              "#C9D1D9"
-            ],
-            [
-              "Series.Sequence",
-              "#7EE787"
-            ],
-            [
-              ">",
-              "#C9D1D9"
-            ],
-            "\n  ",
-            [
-              "))",
-              "#C9D1D9"
-            ],
-            [
-              "}",
-              "#FF7B72"
-            ],
-            "\n",
-            [
-              "</",
-              "#C9D1D9"
-            ],
-            [
-              "Series",
-              "#7EE787"
-            ],
-            [
-              ">",
-              "#C9D1D9"
-            ]
-          ],
-          "annotations": [],
-          "themeName": "github-dark",
-          "style": {
-            "color": "#c9d1d9",
-            "background": "#0d1117",
-            "colorScheme": "dark"
-          }
-        }
-      ],
-      "stepDurations": [
-        155
-      ],
-      "durationInFrames": 155
-    },
-    {
-      "type": "code",
-      "kicker": "Code",
-      "heading": "Animated code, not a screenshot of code",
-      "steps": [
-        {
-          "lang": "tsx",
-          "meta": "tsx",
-          "value": "const transitions = calculateTransitions(ref.current!, oldSnapshot);\ntransitions.forEach(({ element, keyframes, options }) => {\n  const progress = interpolate(frame, [delay, delay + duration], [0, 1], { easing });\n  applyStyle({ element, keyframes, progress, linearProgress });\n});",
-          "code": "const transitions = calculateTransitions(ref.current!, oldSnapshot);\ntransitions.forEach(({ element, keyframes, options }) => {\n  const progress = interpolate(frame, [delay, delay + duration], [0, 1], { easing });\n  applyStyle({ element, keyframes, progress, linearProgress });\n});",
-          "tokens": [
-            [
-              "const",
-              "#FF7B72"
-            ],
-            " ",
-            [
-              "transitions",
-              "#79C0FF"
-            ],
-            " ",
-            [
-              "=",
-              "#FF7B72"
-            ],
-            " ",
-            [
-              "calculateTransitions",
-              "#D2A8FF"
-            ],
-            [
-              "(ref.current",
-              "#C9D1D9"
-            ],
-            [
-              "!",
-              "#FF7B72"
-            ],
-            [
-              ", oldSnapshot);",
-              "#C9D1D9"
-            ],
-            "\n",
-            [
-              "transitions.",
-              "#C9D1D9"
-            ],
-            [
-              "forEach",
-              "#D2A8FF"
-            ],
-            [
-              "(({",
-              "#C9D1D9"
-            ],
-            " ",
-            [
-              "element",
-              "#FFA657"
-            ],
-            [
-              ",",
-              "#C9D1D9"
-            ],
-            " ",
-            [
-              "keyframes",
-              "#FFA657"
-            ],
-            [
-              ",",
-              "#C9D1D9"
-            ],
-            " ",
-            [
-              "options",
-              "#FFA657"
-            ],
-            " ",
-            [
-              "})",
-              "#C9D1D9"
-            ],
-            " ",
-            [
-              "=>",
-              "#FF7B72"
-            ],
-            " ",
-            [
-              "{",
-              "#C9D1D9"
-            ],
-            "\n  ",
-            [
-              "const",
-              "#FF7B72"
-            ],
-            " ",
-            [
-              "progress",
-              "#79C0FF"
-            ],
-            " ",
-            [
-              "=",
-              "#FF7B72"
-            ],
-            " ",
-            [
-              "interpolate",
-              "#D2A8FF"
-            ],
-            [
-              "(frame, [delay, delay",
-              "#C9D1D9"
-            ],
-            " ",
-            [
-              "+",
-              "#FF7B72"
-            ],
-            " ",
-            [
-              "duration], [",
-              "#C9D1D9"
-            ],
-            [
-              "0",
-              "#79C0FF"
-            ],
-            [
-              ",",
-              "#C9D1D9"
-            ],
-            " ",
-            [
-              "1",
-              "#79C0FF"
-            ],
-            [
-              "], { easing });",
-              "#C9D1D9"
-            ],
-            "\n  ",
-            [
-              "applyStyle",
-              "#D2A8FF"
-            ],
-            [
-              "({ element, keyframes, progress, linearProgress });",
-              "#C9D1D9"
-            ],
-            "\n",
-            [
-              "});",
-              "#C9D1D9"
-            ]
-          ],
-          "annotations": [],
-          "themeName": "github-dark",
-          "style": {
-            "color": "#c9d1d9",
-            "background": "#0d1117",
-            "colorScheme": "dark"
-          }
-        }
-      ],
-      "stepDurations": [
-        135
-      ],
-      "durationInFrames": 135
-    },
-    {
-      "type": "code",
-      "kicker": "Code",
-      "heading": "Captions that highlight the word being read",
-      "steps": [
-        {
-          "lang": "tsx",
-          "meta": "tsx",
-          "value": "const startRelativeToPage = token.fromMs - page.startMs;\nconst active = startRelativeToPage <= timeInMs && token.toMs > timeInMs;\n<span style={{ color: active ? BRAND.lime : BRAND.white }}>{token.text}</span>",
-          "code": "const startRelativeToPage = token.fromMs - page.startMs;\nconst active = startRelativeToPage <= timeInMs && token.toMs > timeInMs;\n<span style={{ color: active ? BRAND.lime : BRAND.white }}>{token.text}</span>",
-          "tokens": [
-            [
-              "const",
-              "#FF7B72"
-            ],
-            " ",
-            [
-              "startRelativeToPage",
-              "#79C0FF"
-            ],
-            " ",
-            [
-              "=",
-              "#FF7B72"
-            ],
-            " ",
-            [
-              "token.fromMs",
-              "#C9D1D9"
-            ],
-            " ",
-            [
-              "-",
-              "#FF7B72"
-            ],
-            " ",
-            [
-              "page.startMs;",
-              "#C9D1D9"
-            ],
-            "\n",
-            [
-              "const",
-              "#FF7B72"
-            ],
-            " ",
-            [
-              "active",
-              "#79C0FF"
-            ],
-            " ",
-            [
-              "=",
-              "#FF7B72"
-            ],
-            " ",
-            [
-              "startRelativeToPage",
-              "#C9D1D9"
-            ],
-            " ",
-            [
-              "<=",
-              "#FF7B72"
-            ],
-            " ",
-            [
-              "timeInMs",
-              "#C9D1D9"
-            ],
-            " ",
-            [
-              "&&",
-              "#FF7B72"
-            ],
-            " ",
-            [
-              "token.toMs",
-              "#C9D1D9"
-            ],
-            " ",
-            [
-              ">",
-              "#FF7B72"
-            ],
-            " ",
-            [
-              "timeInMs;",
-              "#C9D1D9"
-            ],
-            "\n",
-            [
-              "<",
-              "#C9D1D9"
-            ],
-            [
-              "span",
-              "#7EE787"
-            ],
-            " ",
-            [
-              "style",
-              "#79C0FF"
-            ],
-            [
-              "={",
-              "#FF7B72"
-            ],
-            [
-              "{ color: active",
-              "#C9D1D9"
-            ],
-            " ",
-            [
-              "?",
-              "#FF7B72"
-            ],
-            " ",
-            [
-              "BRAND",
-              "#79C0FF"
-            ],
-            [
-              ".lime",
-              "#C9D1D9"
-            ],
-            " ",
-            [
-              ":",
-              "#FF7B72"
-            ],
-            " ",
-            [
-              "BRAND",
-              "#79C0FF"
-            ],
-            [
-              ".white }",
-              "#C9D1D9"
-            ],
-            [
-              "}",
-              "#FF7B72"
-            ],
-            [
-              ">",
-              "#C9D1D9"
-            ],
-            [
-              "{",
-              "#FF7B72"
-            ],
-            [
-              "token.text",
-              "#C9D1D9"
-            ],
-            [
-              "}",
-              "#FF7B72"
-            ],
-            [
-              "</",
-              "#C9D1D9"
-            ],
-            [
-              "span",
-              "#7EE787"
-            ],
-            [
-              ">",
-              "#C9D1D9"
-            ]
-          ],
-          "annotations": [],
-          "themeName": "github-dark",
-          "style": {
-            "color": "#c9d1d9",
-            "background": "#0d1117",
-            "colorScheme": "dark"
-          }
-        }
-      ],
-      "stepDurations": [
-        135
-      ],
-      "durationInFrames": 135
-    },
-    {
       "type": "outro",
       "heading": "Read the full article",
       "body": "New posts every week on the blog.",
@@ -1336,726 +131,1033 @@
     }
   ],
   "theme": "github-dark",
-  "durationInFrames": 2035,
+  "durationInFrames": 2676,
   "captions": [
     {
-      "text": " Every",
+      "text": " In",
       "startMs": 500,
-      "endMs": 855
+      "endMs": 714
     },
     {
-      "text": " blog-to-video",
-      "startMs": 855,
-      "endMs": 1564
+      "text": " this",
+      "startMs": 714,
+      "endMs": 1013
     },
     {
-      "text": " tool",
-      "startMs": 1564,
-      "endMs": 1875
+      "text": " post",
+      "startMs": 1013,
+      "endMs": 1312
     },
     {
-      "text": " ask",
-      "startMs": 1875,
-      "endMs": 2141,
+      "text": " I",
+      "startMs": 1312,
+      "endMs": 1483,
       "pageBreakAfter": true
     },
     {
-      "text": " you",
-      "startMs": 2141,
-      "endMs": 2407
+      "text": " explained",
+      "startMs": 1483,
+      "endMs": 1995
     },
     {
-      "text": " subscription.",
-      "startMs": 2407,
-      "endMs": 3116
+      "text": " how",
+      "startMs": 1995,
+      "endMs": 2252
     },
     {
-      "text": " Here",
-      "startMs": 3116,
-      "endMs": 3426
+      "text": " to",
+      "startMs": 2252,
+      "endMs": 2465
     },
     {
-      "text": " is",
-      "startMs": 3426,
-      "endMs": 3648,
+      "text": " create",
+      "startMs": 2465,
+      "endMs": 2850,
       "pageBreakAfter": true
     },
     {
-      "text": " the",
-      "startMs": 3648,
-      "endMs": 3914
+      "text": " a",
+      "startMs": 2850,
+      "endMs": 3021
     },
     {
-      "text": " self-hosted",
-      "startMs": 3914,
-      "endMs": 4535
+      "text": " secure",
+      "startMs": 3021,
+      "endMs": 3405
     },
     {
-      "text": " alternative:",
-      "startMs": 4535,
+      "text": " admin",
+      "startMs": 3405,
+      "endMs": 3747
+    },
+    {
+      "text": " dashboard",
+      "startMs": 3747,
+      "endMs": 4260,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " by",
+      "startMs": 4260,
+      "endMs": 4474
+    },
+    {
+      "text": " Google",
+      "startMs": 4474,
+      "endMs": 4858
+    },
+    {
+      "text": " OAuth",
+      "startMs": 4858,
       "endMs": 6067,
       "pageBreakAfter": true
     },
     {
-      "text": " What",
+      "text": " Before",
       "startMs": 6600,
-      "endMs": 7073
+      "endMs": 7002
     },
     {
       "text": " you",
-      "startMs": 7073,
-      "endMs": 7479
+      "startMs": 7002,
+      "endMs": 7270
     },
     {
-      "text": " end",
-      "startMs": 7479,
-      "endMs": 7885
+      "text": " begin",
+      "startMs": 7270,
+      "endMs": 7627
     },
     {
-      "text": " up",
-      "startMs": 7885,
-      "endMs": 8223,
+      "text": " make",
+      "startMs": 7627,
+      "endMs": 7940,
       "pageBreakAfter": true
     },
     {
-      "text": " with.",
-      "startMs": 8223,
-      "endMs": 8764
+      "text": " sure",
+      "startMs": 7940,
+      "endMs": 8252
     },
     {
-      "text": " Let",
-      "startMs": 8764,
-      "endMs": 9170
+      "text": " you",
+      "startMs": 8252,
+      "endMs": 8520
     },
     {
-      "text": " us",
-      "startMs": 9170,
-      "endMs": 9508
-    },
-    {
-      "text": " look",
-      "startMs": 9508,
-      "endMs": 9982,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " at",
-      "startMs": 9982,
-      "endMs": 10320
-    },
-    {
-      "text": " the",
-      "startMs": 10320,
-      "endMs": 10726
-    },
-    {
-      "text": " code.",
-      "startMs": 10726,
-      "endMs": 12133,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " Prerequisites.",
-      "startMs": 12667,
-      "endMs": 13437
-    },
-    {
-      "text": " Node",
-      "startMs": 13437,
-      "endMs": 13754
-    },
-    {
-      "text": " 22+",
-      "startMs": 13754,
-      "endMs": 14026
-    },
-    {
-      "text": " (the",
-      "startMs": 14026,
-      "endMs": 14343,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " CLI",
-      "startMs": 14343,
-      "endMs": 14615
-    },
-    {
-      "text": " wrapper",
-      "startMs": 14615,
-      "endMs": 15068
-    },
-    {
-      "text": " uses",
-      "startMs": 15068,
-      "endMs": 15386
-    },
-    {
-      "text": " fs.statfsSync,",
-      "startMs": 15386,
-      "endMs": 16156,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " which",
-      "startMs": 16156,
-      "endMs": 16519
-    },
-    {
-      "text": " landed",
-      "startMs": 16519,
-      "endMs": 16926
-    },
-    {
-      "text": " in",
-      "startMs": 16926,
-      "endMs": 17153
-    },
-    {
-      "text": " Node",
-      "startMs": 17153,
-      "endMs": 17470,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " 18.15)",
-      "startMs": 17470,
-      "endMs": 17878
+      "text": " have.",
+      "startMs": 8520,
+      "endMs": 8877
     },
     {
       "text": " A",
-      "startMs": 17878,
-      "endMs": 18059
-    },
-    {
-      "text": " repo",
-      "startMs": 18059,
-      "endMs": 18376
-    },
-    {
-      "text": " with",
-      "startMs": 18376,
-      "endMs": 18694,
+      "startMs": 8877,
+      "endMs": 9056,
       "pageBreakAfter": true
     },
     {
-      "text": " Markdown",
-      "startMs": 18694,
-      "endMs": 19192
+      "text": " Google",
+      "startMs": 9056,
+      "endMs": 9458
     },
     {
-      "text": " posts.",
-      "startMs": 19192,
-      "endMs": 20467,
+      "text": " Account.",
+      "startMs": 9458,
+      "endMs": 9949
+    },
+    {
+      "text": " A",
+      "startMs": 9949,
+      "endMs": 10127
+    },
+    {
+      "text": " Google",
+      "startMs": 10127,
+      "endMs": 10529,
       "pageBreakAfter": true
     },
     {
-      "text": " Step",
-      "startMs": 21000,
-      "endMs": 21500
-    },
-    {
-      "text": " 1",
-      "startMs": 21500,
-      "endMs": 21786
-    },
-    {
-      "text": " -",
-      "startMs": 21786,
-      "endMs": 22071
-    },
-    {
-      "text": " Scaffold",
-      "startMs": 22071,
-      "endMs": 22857,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " the",
-      "startMs": 22857,
-      "endMs": 23286
-    },
-    {
-      "text": " Remotion",
-      "startMs": 23286,
-      "endMs": 24071
+      "text": " Cloud",
+      "startMs": 10529,
+      "endMs": 10887
     },
     {
       "text": " project.",
-      "startMs": 24071,
-      "endMs": 24857
+      "startMs": 10887,
+      "endMs": 11378
     },
     {
-      "text": " Let",
-      "startMs": 24857,
-      "endMs": 25286,
+      "text": " The",
+      "startMs": 11378,
+      "endMs": 11646
+    },
+    {
+      "text": " web",
+      "startMs": 11646,
+      "endMs": 11913,
       "pageBreakAfter": true
     },
     {
-      "text": " us",
-      "startMs": 25286,
-      "endMs": 25643
+      "text": " address",
+      "startMs": 11913,
+      "endMs": 12360
     },
     {
-      "text": " look",
-      "startMs": 25643,
-      "endMs": 26143
+      "text": " of",
+      "startMs": 12360,
+      "endMs": 12583
     },
     {
-      "text": " at",
-      "startMs": 26143,
-      "endMs": 26500
+      "text": " your",
+      "startMs": 12583,
+      "endMs": 12896
     },
     {
-      "text": " the",
-      "startMs": 26500,
-      "endMs": 26929,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " code.",
-      "startMs": 26929,
-      "endMs": 29467,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " Step",
-      "startMs": 30000,
-      "endMs": 30544
-    },
-    {
-      "text": " 2",
-      "startMs": 30544,
-      "endMs": 30856
-    },
-    {
-      "text": " -",
-      "startMs": 30856,
-      "endMs": 31167
-    },
-    {
-      "text": " Turn",
-      "startMs": 31167,
-      "endMs": 31711,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " an",
-      "startMs": 31711,
-      "endMs": 32100
-    },
-    {
-      "text": " article",
-      "startMs": 32100,
-      "endMs": 32878
-    },
-    {
-      "text": " into",
-      "startMs": 32878,
-      "endMs": 33422
-    },
-    {
-      "text": " props.",
-      "startMs": 33422,
-      "endMs": 34122,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " Let",
-      "startMs": 34122,
-      "endMs": 34589
-    },
-    {
-      "text": " us",
-      "startMs": 34589,
-      "endMs": 34978
-    },
-    {
-      "text": " look",
-      "startMs": 34978,
-      "endMs": 35522
-    },
-    {
-      "text": " at",
-      "startMs": 35522,
-      "endMs": 35911,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " the",
-      "startMs": 35911,
-      "endMs": 36378
-    },
-    {
-      "text": " code.",
-      "startMs": 36378,
-      "endMs": 39133,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " Highlight",
-      "startMs": 39667,
-      "endMs": 40237
-    },
-    {
-      "text": " once,",
-      "startMs": 40237,
-      "endMs": 40617
-    },
-    {
-      "text": " in",
-      "startMs": 40617,
-      "endMs": 40854
-    },
-    {
-      "text": " Node.",
-      "startMs": 40854,
-      "endMs": 41234,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " Let",
-      "startMs": 41234,
-      "endMs": 41519
-    },
-    {
-      "text": " us",
-      "startMs": 41519,
-      "endMs": 41757
-    },
-    {
-      "text": " look",
-      "startMs": 41757,
-      "endMs": 42089
-    },
-    {
-      "text": " at",
-      "startMs": 42089,
-      "endMs": 42327,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " the",
-      "startMs": 42327,
-      "endMs": 42612
-    },
-    {
-      "text": " code.",
-      "startMs": 42612,
-      "endMs": 43633,
+      "text": " application.",
+      "startMs": 12896,
+      "endMs": 13566,
       "pageBreakAfter": true
     },
     {
       "text": " The",
-      "startMs": 44167,
-      "endMs": 44488
+      "startMs": 13566,
+      "endMs": 13833
     },
     {
-      "text": " caption",
-      "startMs": 44488,
-      "endMs": 45025
+      "text": " OAuth",
+      "startMs": 13833,
+      "endMs": 14191
     },
     {
-      "text": " track.",
-      "startMs": 45025,
-      "endMs": 45507
+      "text": " callback",
+      "startMs": 14191,
+      "endMs": 14682
     },
     {
-      "text": " Let",
-      "startMs": 45507,
-      "endMs": 45829,
+      "text": " URL",
+      "startMs": 14682,
+      "endMs": 14950,
       "pageBreakAfter": true
     },
     {
-      "text": " us",
-      "startMs": 45829,
-      "endMs": 46097
+      "text": " for",
+      "startMs": 14950,
+      "endMs": 15218
     },
     {
-      "text": " look",
-      "startMs": 46097,
-      "endMs": 46473
+      "text": " your",
+      "startMs": 15218,
+      "endMs": 15530
     },
     {
-      "text": " at",
-      "startMs": 46473,
-      "endMs": 46741
-    },
-    {
-      "text": " the",
-      "startMs": 46741,
-      "endMs": 47063,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " code.",
-      "startMs": 47063,
-      "endMs": 48133,
+      "text": " application.",
+      "startMs": 15530,
+      "endMs": 17067,
       "pageBreakAfter": true
     },
     {
       "text": " Step",
-      "startMs": 48667,
-      "endMs": 48963
+      "startMs": 17600,
+      "endMs": 17917
     },
     {
-      "text": " 3",
-      "startMs": 48963,
-      "endMs": 49132
+      "text": " 1:",
+      "startMs": 17917,
+      "endMs": 18143
     },
     {
-      "text": " -",
-      "startMs": 49132,
-      "endMs": 49301
+      "text": " Create",
+      "startMs": 18143,
+      "endMs": 18551
     },
     {
-      "text": " Build",
-      "startMs": 49301,
-      "endMs": 49640,
+      "text": " or",
+      "startMs": 18551,
+      "endMs": 18777,
       "pageBreakAfter": true
     },
     {
-      "text": " the",
-      "startMs": 49640,
-      "endMs": 49893
-    },
-    {
-      "text": " vertical",
-      "startMs": 49893,
-      "endMs": 50359
-    },
-    {
-      "text": " composition.",
-      "startMs": 50359,
-      "endMs": 50993
-    },
-    {
-      "text": " Let",
-      "startMs": 50993,
-      "endMs": 51247,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " us",
-      "startMs": 51247,
-      "endMs": 51459
-    },
-    {
-      "text": " look",
-      "startMs": 51459,
-      "endMs": 51755
-    },
-    {
-      "text": " at",
-      "startMs": 51755,
-      "endMs": 51966
-    },
-    {
-      "text": " the",
-      "startMs": 51966,
-      "endMs": 52220,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " code.",
-      "startMs": 52220,
-      "endMs": 53300,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " Animated",
-      "startMs": 53833,
-      "endMs": 54231
-    },
-    {
-      "text": " code,",
-      "startMs": 54231,
-      "endMs": 54520
-    },
-    {
-      "text": " not",
-      "startMs": 54520,
-      "endMs": 54737
+      "text": " select",
+      "startMs": 18777,
+      "endMs": 19185
     },
     {
       "text": " a",
-      "startMs": 54737,
-      "endMs": 54881,
+      "startMs": 19185,
+      "endMs": 19366
+    },
+    {
+      "text": " Google",
+      "startMs": 19366,
+      "endMs": 19774
+    },
+    {
+      "text": " Cloud",
+      "startMs": 19774,
+      "endMs": 20136,
       "pageBreakAfter": true
     },
     {
-      "text": " screenshot",
-      "startMs": 54881,
-      "endMs": 55351
+      "text": " project.",
+      "startMs": 20136,
+      "endMs": 20634
+    },
+    {
+      "text": " Open",
+      "startMs": 20634,
+      "endMs": 20951
+    },
+    {
+      "text": " the",
+      "startMs": 20951,
+      "endMs": 21223
+    },
+    {
+      "text": " Google",
+      "startMs": 21223,
+      "endMs": 21630,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Cloud",
+      "startMs": 21630,
+      "endMs": 21992
+    },
+    {
+      "text": " Console.",
+      "startMs": 21992,
+      "endMs": 22491
+    },
+    {
+      "text": " Select",
+      "startMs": 22491,
+      "endMs": 22898
+    },
+    {
+      "text": " the",
+      "startMs": 22898,
+      "endMs": 23170,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " project",
+      "startMs": 23170,
+      "endMs": 23623
+    },
+    {
+      "text": " menu",
+      "startMs": 23623,
+      "endMs": 23940
+    },
+    {
+      "text": " at",
+      "startMs": 23940,
+      "endMs": 24166
+    },
+    {
+      "text": " the",
+      "startMs": 24166,
+      "endMs": 24438,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " top",
+      "startMs": 24438,
+      "endMs": 24709
     },
     {
       "text": " of",
-      "startMs": 55351,
-      "endMs": 55532
-    },
-    {
-      "text": " code.",
-      "startMs": 55532,
-      "endMs": 55821
-    },
-    {
-      "text": " Let",
-      "startMs": 55821,
-      "endMs": 56038,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " us",
-      "startMs": 56038,
-      "endMs": 56219
-    },
-    {
-      "text": " look",
-      "startMs": 56219,
-      "endMs": 56472
-    },
-    {
-      "text": " at",
-      "startMs": 56472,
-      "endMs": 56652
+      "startMs": 24709,
+      "endMs": 24936
     },
     {
       "text": " the",
-      "startMs": 56652,
-      "endMs": 56869,
+      "startMs": 24936,
+      "endMs": 25208
+    },
+    {
+      "text": " page.",
+      "startMs": 25208,
+      "endMs": 25570,
       "pageBreakAfter": true
     },
     {
-      "text": " code.",
-      "startMs": 56869,
-      "endMs": 57800,
+      "text": " Select",
+      "startMs": 25570,
+      "endMs": 25977
+    },
+    {
+      "text": " an",
+      "startMs": 25977,
+      "endMs": 26204
+    },
+    {
+      "text": " existing",
+      "startMs": 26204,
+      "endMs": 26702
+    },
+    {
+      "text": " project.",
+      "startMs": 26702,
+      "endMs": 28067,
       "pageBreakAfter": true
     },
     {
-      "text": " Captions",
-      "startMs": 58333,
-      "endMs": 58714
+      "text": " Step",
+      "startMs": 28600,
+      "endMs": 28948
+    },
+    {
+      "text": " 2:",
+      "startMs": 28948,
+      "endMs": 29197
+    },
+    {
+      "text": " Enable",
+      "startMs": 29197,
+      "endMs": 29645
+    },
+    {
+      "text": " the",
+      "startMs": 29645,
+      "endMs": 29943,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Blogger",
+      "startMs": 29943,
+      "endMs": 30440
+    },
+    {
+      "text": " API.",
+      "startMs": 30440,
+      "endMs": 30789
+    },
+    {
+      "text": " Open",
+      "startMs": 30789,
+      "endMs": 31137
+    },
+    {
+      "text": " the",
+      "startMs": 31137,
+      "endMs": 31435,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " API",
+      "startMs": 31435,
+      "endMs": 31734
+    },
+    {
+      "text": " Library.",
+      "startMs": 31734,
+      "endMs": 32281
+    },
+    {
+      "text": " Search",
+      "startMs": 32281,
+      "endMs": 32728
+    },
+    {
+      "text": " for",
+      "startMs": 32728,
+      "endMs": 33027,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Blogger",
+      "startMs": 33027,
+      "endMs": 33524
+    },
+    {
+      "text": " API",
+      "startMs": 33524,
+      "endMs": 33823
+    },
+    {
+      "text": " v3.",
+      "startMs": 33823,
+      "endMs": 34121
+    },
+    {
+      "text": " Select",
+      "startMs": 34121,
+      "endMs": 34569,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Blogger",
+      "startMs": 34569,
+      "endMs": 35066
+    },
+    {
+      "text": " API",
+      "startMs": 35066,
+      "endMs": 35365
+    },
+    {
+      "text": " v3",
+      "startMs": 35365,
+      "endMs": 35613
+    },
+    {
+      "text": " from",
+      "startMs": 35613,
+      "endMs": 35962,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " the",
+      "startMs": 35962,
+      "endMs": 36260
+    },
+    {
+      "text": " search",
+      "startMs": 36260,
+      "endMs": 36708
+    },
+    {
+      "text": " results.",
+      "startMs": 36708,
+      "endMs": 37255
+    },
+    {
+      "text": " Select",
+      "startMs": 37255,
+      "endMs": 37703,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Enable.",
+      "startMs": 37703,
+      "endMs": 39067,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Step",
+      "startMs": 39600,
+      "endMs": 39910
+    },
+    {
+      "text": " 3:",
+      "startMs": 39910,
+      "endMs": 40132
+    },
+    {
+      "text": " Configure",
+      "startMs": 40132,
+      "endMs": 40664
+    },
+    {
+      "text": " the",
+      "startMs": 40664,
+      "endMs": 40930,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " OAuth",
+      "startMs": 40930,
+      "endMs": 41284
+    },
+    {
+      "text": " consent",
+      "startMs": 41284,
+      "endMs": 41727
+    },
+    {
+      "text": " screen.",
+      "startMs": 41727,
+      "endMs": 42171
+    },
+    {
+      "text": " The",
+      "startMs": 42171,
+      "endMs": 42437,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " OAuth",
+      "startMs": 42437,
+      "endMs": 42791
+    },
+    {
+      "text": " consent",
+      "startMs": 42791,
+      "endMs": 43234
+    },
+    {
+      "text": " screen",
+      "startMs": 43234,
+      "endMs": 43633
+    },
+    {
+      "text": " tells",
+      "startMs": 43633,
+      "endMs": 43988,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " users",
+      "startMs": 43988,
+      "endMs": 44342
+    },
+    {
+      "text": " which",
+      "startMs": 44342,
+      "endMs": 44697
+    },
+    {
+      "text": " application",
+      "startMs": 44697,
+      "endMs": 45318
+    },
+    {
+      "text": " requests",
+      "startMs": 45318,
+      "endMs": 45805,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " access",
+      "startMs": 45805,
+      "endMs": 46204
+    },
+    {
+      "text": " to",
+      "startMs": 46204,
+      "endMs": 46426
+    },
+    {
+      "text": " their",
+      "startMs": 46426,
+      "endMs": 46780
+    },
+    {
+      "text": " Google",
+      "startMs": 46780,
+      "endMs": 47179,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Account.",
+      "startMs": 47179,
+      "endMs": 48533,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Configure",
+      "startMs": 49067,
+      "endMs": 49572
+    },
+    {
+      "text": " the",
+      "startMs": 49572,
+      "endMs": 49824
+    },
+    {
+      "text": " audience.",
+      "startMs": 49824,
+      "endMs": 50329
+    },
+    {
+      "text": " Open",
+      "startMs": 50329,
+      "endMs": 50623,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " the",
+      "startMs": 50623,
+      "endMs": 50876
+    },
+    {
+      "text": " Audience",
+      "startMs": 50876,
+      "endMs": 51339
+    },
+    {
+      "text": " page.",
+      "startMs": 51339,
+      "endMs": 51675
+    },
+    {
+      "text": " Select",
+      "startMs": 51675,
+      "endMs": 52054,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " External",
+      "startMs": 52054,
+      "endMs": 52517
+    },
+    {
+      "text": " if",
+      "startMs": 52517,
+      "endMs": 52727
+    },
+    {
+      "text": " people",
+      "startMs": 52727,
+      "endMs": 53106
+    },
+    {
+      "text": " outside",
+      "startMs": 53106,
+      "endMs": 53527,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " your",
+      "startMs": 53527,
+      "endMs": 53821
+    },
+    {
+      "text": " Google",
+      "startMs": 53821,
+      "endMs": 54200
+    },
+    {
+      "text": " Workspace",
+      "startMs": 54200,
+      "endMs": 54705
+    },
+    {
+      "text": " organization",
+      "startMs": 54705,
+      "endMs": 55336,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " will",
+      "startMs": 55336,
+      "endMs": 55631
+    },
+    {
+      "text": " use",
+      "startMs": 55631,
+      "endMs": 55883
+    },
+    {
+      "text": " the",
+      "startMs": 55883,
+      "endMs": 56136
+    },
+    {
+      "text": " application.",
+      "startMs": 56136,
+      "endMs": 57633,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Add",
+      "startMs": 58167,
+      "endMs": 58414
+    },
+    {
+      "text": " the",
+      "startMs": 58414,
+      "endMs": 58662
+    },
+    {
+      "text": " Blogger",
+      "startMs": 58662,
+      "endMs": 59075
+    },
+    {
+      "text": " scope.",
+      "startMs": 59075,
+      "endMs": 59447,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Open",
+      "startMs": 59447,
+      "endMs": 59736
+    },
+    {
+      "text": " the",
+      "startMs": 59736,
+      "endMs": 59984
+    },
+    {
+      "text": " Data",
+      "startMs": 59984,
+      "endMs": 60273
+    },
+    {
+      "text": " Access",
+      "startMs": 60273,
+      "endMs": 60645,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " page.",
+      "startMs": 60645,
+      "endMs": 60975
+    },
+    {
+      "text": " Select",
+      "startMs": 60975,
+      "endMs": 61347
+    },
+    {
+      "text": " Add",
+      "startMs": 61347,
+      "endMs": 61595
+    },
+    {
+      "text": " or",
+      "startMs": 61595,
+      "endMs": 61801,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Remove",
+      "startMs": 61801,
+      "endMs": 62173
+    },
+    {
+      "text": " Scopes.",
+      "startMs": 62173,
+      "endMs": 62586
+    },
+    {
+      "text": " Search",
+      "startMs": 62586,
+      "endMs": 62958
+    },
+    {
+      "text": " for",
+      "startMs": 62958,
+      "endMs": 63205,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " the",
+      "startMs": 63205,
+      "endMs": 63453
+    },
+    {
+      "text": " Blogger",
+      "startMs": 63453,
+      "endMs": 63866
+    },
+    {
+      "text": " API",
+      "startMs": 63866,
+      "endMs": 64114
+    },
+    {
+      "text": " scope.",
+      "startMs": 64114,
+      "endMs": 64486,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Select",
+      "startMs": 64486,
+      "endMs": 64857
+    },
+    {
+      "text": " https://www.googleapis.com/auth/blogger.",
+      "startMs": 64857,
+      "endMs": 67500,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Step",
+      "startMs": 68033,
+      "endMs": 68373
+    },
+    {
+      "text": " 4:",
+      "startMs": 68373,
+      "endMs": 68615
+    },
+    {
+      "text": " Create",
+      "startMs": 68615,
+      "endMs": 69051
+    },
+    {
+      "text": " the",
+      "startMs": 69051,
+      "endMs": 69342,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " OAuth",
+      "startMs": 69342,
+      "endMs": 69729
+    },
+    {
+      "text": " client",
+      "startMs": 69729,
+      "endMs": 70166
+    },
+    {
+      "text": " ID.",
+      "startMs": 70166,
+      "endMs": 70456
+    },
+    {
+      "text": " Choose",
+      "startMs": 70456,
+      "endMs": 70892,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " the",
+      "startMs": 70892,
+      "endMs": 71183
+    },
+    {
+      "text": " client",
+      "startMs": 71183,
+      "endMs": 71619
+    },
+    {
+      "text": " type",
+      "startMs": 71619,
+      "endMs": 71959
     },
     {
       "text": " that",
-      "startMs": 58714,
-      "endMs": 58957
-    },
-    {
-      "text": " highlight",
-      "startMs": 58957,
-      "endMs": 59372
-    },
-    {
-      "text": " the",
-      "startMs": 59372,
-      "endMs": 59580,
+      "startMs": 71959,
+      "endMs": 72298,
       "pageBreakAfter": true
     },
     {
-      "text": " word",
-      "startMs": 59580,
-      "endMs": 59823
+      "text": " matches",
+      "startMs": 72298,
+      "endMs": 72782
     },
     {
-      "text": " being",
-      "startMs": 59823,
-      "endMs": 60100
+      "text": " the",
+      "startMs": 72782,
+      "endMs": 73073
     },
     {
-      "text": " read.",
-      "startMs": 60100,
-      "endMs": 60377
+      "text": " application.",
+      "startMs": 73073,
+      "endMs": 74667,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " For",
+      "startMs": 75200,
+      "endMs": 75602
+    },
+    {
+      "text": " a",
+      "startMs": 75602,
+      "endMs": 75871
+    },
+    {
+      "text": " server-side",
+      "startMs": 75871,
+      "endMs": 76810
+    },
+    {
+      "text": " web",
+      "startMs": 76810,
+      "endMs": 77212,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " application.",
+      "startMs": 77212,
+      "endMs": 78218
     },
     {
       "text": " Let",
-      "startMs": 60377,
-      "endMs": 60585,
-      "pageBreakAfter": true
+      "startMs": 78218,
+      "endMs": 78621
     },
     {
       "text": " us",
-      "startMs": 60585,
-      "endMs": 60758
+      "startMs": 78621,
+      "endMs": 78956
     },
     {
       "text": " look",
-      "startMs": 60758,
-      "endMs": 61000
-    },
-    {
-      "text": " at",
-      "startMs": 61000,
-      "endMs": 61173
-    },
-    {
-      "text": " the",
-      "startMs": 61173,
-      "endMs": 61381,
+      "startMs": 78956,
+      "endMs": 79426,
       "pageBreakAfter": true
     },
     {
+      "text": " at",
+      "startMs": 79426,
+      "endMs": 79761
+    },
+    {
+      "text": " the",
+      "startMs": 79761,
+      "endMs": 80163
+    },
+    {
       "text": " code.",
-      "startMs": 61381,
-      "endMs": 62300,
+      "startMs": 80163,
+      "endMs": 83667,
       "pageBreakAfter": true
     },
     {
       "text": " Read",
-      "startMs": 62833,
-      "endMs": 63203
+      "startMs": 84200,
+      "endMs": 84570
     },
     {
       "text": " the",
-      "startMs": 63203,
-      "endMs": 63520
+      "startMs": 84570,
+      "endMs": 84887
     },
     {
       "text": " full",
-      "startMs": 63520,
-      "endMs": 63890
+      "startMs": 84887,
+      "endMs": 85257
     },
     {
       "text": " article.",
-      "startMs": 63890,
-      "endMs": 64472,
+      "startMs": 85257,
+      "endMs": 85838,
       "pageBreakAfter": true
     },
     {
       "text": " New",
-      "startMs": 64472,
-      "endMs": 64789
+      "startMs": 85838,
+      "endMs": 86155
     },
     {
       "text": " posts",
-      "startMs": 64789,
-      "endMs": 65211
+      "startMs": 86155,
+      "endMs": 86578
     },
     {
       "text": " every",
-      "startMs": 65211,
-      "endMs": 65634
+      "startMs": 86578,
+      "endMs": 87001
     },
     {
       "text": " week",
-      "startMs": 65634,
-      "endMs": 66004,
+      "startMs": 87001,
+      "endMs": 87371,
       "pageBreakAfter": true
     },
     {
       "text": " on",
-      "startMs": 66004,
-      "endMs": 66268
+      "startMs": 87371,
+      "endMs": 87635
     },
     {
       "text": " the",
-      "startMs": 66268,
-      "endMs": 66586
+      "startMs": 87635,
+      "endMs": 87952
     },
     {
       "text": " blog.",
-      "startMs": 66586,
-      "endMs": 67800,
+      "startMs": 87952,
+      "endMs": 89167,
       "pageBreakAfter": true
     }
   ],

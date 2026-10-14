@@ -117,12 +117,19 @@ const parseFrontmatter = (rawSource) => {
     let raw = line.slice(separator + 1).trim();
     if (!raw) continue;
 
-    if (raw.startsWith("[")) {
+    if (raw.startsWith("[") && raw.endsWith("]")) {
+      // YAML flow lists are looser than JSON: trailing commas, single quotes
+      // and bare words are all valid (and Astro accepts them).
       try {
-        data[key] = JSON.parse(raw);
+        data[key] = JSON.parse(raw.replace(/,\s*\]$/, "]"));
         continue;
       } catch {
-        /* fall through */
+        data[key] = raw
+          .slice(1, -1)
+          .split(",")
+          .map((item) => item.trim().replace(/^(["'])(.*)\1$/, "$2"))
+          .filter(Boolean);
+        continue;
       }
     }
 

@@ -38,6 +38,7 @@ const {
 } = props;
 const publishedTime = pubDate instanceof Date ? pubDate.toISOString() : undefined;
 const modifiedTime = updatedDate instanceof Date ? updatedDate.toISOString() : undefined;
+const showTocNav = Boolean(showToc && headings.length > 0);
 ---
 
 <html lang="en">
@@ -55,7 +56,7 @@ const modifiedTime = updatedDate instanceof Date ? updatedDate.toISOString() : u
 		<style>
 			main {
 				width: 100%;
-				max-width: 800px;
+				max-width: 1140px;
 				margin: 0 auto;
 			}
 			article {
@@ -167,14 +168,48 @@ const modifiedTime = updatedDate instanceof Date ? updatedDate.toISOString() : u
 			.post-content :is(h2, h3) {
 				scroll-margin-top: 5.5rem;
 			}
-			/* Keep the table of contents above the article at every viewport size. */
+			/* Wide screens: the table of contents lives in a sticky left rail next to the
+			   article. Narrow screens keep it stacked above the article body. */
+			@media (min-width: 1120px) {
+				article.has-toc {
+					display: grid;
+					width: 100%;
+					grid-template-columns: 17rem minmax(0, 47.5rem);
+					column-gap: 2.5rem;
+					justify-content: center;
+				}
+				article.has-toc > .hero-image {
+					grid-column: 2;
+					grid-row: 1;
+				}
+				article.has-toc > .prose {
+					grid-column: 2;
+					grid-row: 2;
+				}
+				article.has-toc > .toc-rail {
+					grid-column: 1;
+					grid-row: 3;
+					align-self: start;
+					position: sticky;
+					top: 2rem;
+					max-height: calc(100vh - 4rem);
+					margin-bottom: 0;
+					overflow-y: auto;
+					overscroll-behavior: contain;
+				}
+				article.has-toc > .post-main {
+					grid-column: 2;
+					grid-row: 3;
+					min-width: 0;
+				}
+			}
 		</style>
 	</head>
 
 	<body>
 		<Header />
 		<main>
-			<article>
+			<article class:list={[{ 'has-toc': showTocNav }]}>
 				<div class="hero-image">
 					{heroImage && <ResponsiveImg width={1020} height={510} src={heroImage} alt={title} sizes="(max-width: 840px) 100vw, 800px" priority />}
 				</div>
@@ -201,25 +236,26 @@ const modifiedTime = updatedDate instanceof Date ? updatedDate.toISOString() : u
 						<hr />
 					</div>
 				</div>
-				<div class="post-content">
-					{showToc && headings.length > 0 && (
-						<nav class="toc" aria-labelledby="toc-heading">
-							<h2 class="toc-title" id="toc-heading">On this page</h2>
-							<ol class="toc-list">
-								{headings.map((heading) => (
-									<li class={heading.depth > 2 ? 'toc-item toc-subitem' : 'toc-item'}>
-										<a href={`#${heading.slug}`}>{heading.text}</a>
-									</li>
-								))}
-							</ol>
-						</nav>
-					)}
-					<slot />
-				</div>
+				{showTocNav && (
+					<nav class="toc toc-rail" aria-labelledby="toc-heading">
+						<h2 class="toc-title" id="toc-heading">On this page</h2>
+						<ol class="toc-list">
+							{headings.map((heading) => (
+								<li class={heading.depth > 2 ? 'toc-item toc-subitem' : 'toc-item'}>
+									<a href={`#${heading.slug}`}>{heading.text}</a>
+								</li>
+							))}
+						</ol>
+					</nav>
+				)}
+				<div class="post-main">
+					<div class="post-content">
+						<slot />
+					</div>
 					<PostShare />
 					<PostAuthor />
-
-				</article>
+				</div>
+			</article>
 		</main>
 		<Footer />
 	</body>

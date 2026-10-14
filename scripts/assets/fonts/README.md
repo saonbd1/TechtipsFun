@@ -3,7 +3,7 @@
 These fonts are used only at build/generation time by
 `scripts/generate-tip-cards.mjs` (via fontconfig) so Bengali text renders on
 machines with no Bengali font installed. They are not served to the browser —
-the site loads Atkinson Hyperlegible from `public/fonts/`.
+the site self-hosts Inter, Space Grotesk, and JetBrains Mono from `public/fonts/`.
 
 | File | Family | Source |
 | --- | --- | --- |

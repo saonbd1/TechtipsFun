@@ -393,7 +393,7 @@ exactly the cases where a generic tool falls over.
 
 **Can I avoid committing the MP4s?** Yes. Drop the commit step and keep only `actions/upload-artifact`. You lose the convenience of `article-reels/<slug>.mp4` living in the repo, and you keep the repo small.
 
-**Is Remotion free?** [Remotion is free](https://www.remotion.dev/pricing) for individuals and companies of up to three people. Beyond that it needs a Company License, and cloud rendering has its own terms. If you are deploying this at work, read that page first. It is a real constraint, not a footnote.
+**Is Remotion free?** Remotion is free for individuals and companies of up to three people. Beyond that it needs a Company License, and cloud rendering has its own terms. If you are deploying this at work, read that page first. It is a real constraint, not a footnote.
 
 **Do I have to run it in CI?** No. `--latest` on a cron or a git hook does the same job. CI is attractive because the runner already has a clean Linux box with fonts and libraries, which - as the section above shows - is not a given in a container.
 
@@ -403,4 +403,4 @@ A generic blog-to-video tool will produce something passable in a minute. This p
 
 The trade is honest though: it is a weekend of work, and you own the failures. When a render dies at frame 604, nobody is going to fix it for you.
 
-Start smaller than I did. Clone the [Code Hike](https://www.remotion.dev/templates/code-hike) and [TikTok](https://www.remotion.dev/templates/tiktok) templates, get one article rendering locally with `npm run dev`, and only then add the automation. The GitHub Actions half is thirty lines, but it is thirty lines that will happily do nothing at all if you get the trigger wrong.
+Start smaller than I did. Clone the Code Hike and TikTok templates, get one article rendering locally with `npm run dev`, and only then add the automation. The GitHub Actions half is thirty lines, but it is thirty lines that will happily do nothing at all if you get the trigger wrong.

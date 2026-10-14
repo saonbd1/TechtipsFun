@@ -1,6 +1,6 @@
 {
   "slug": "muse-glimmer-ai-local-guide",
-  "title": "Facebook's Meta Reveals Muse Glimmer AI: What's it and How to Run It Locally",
+  "title": "Meta's Muse Glimmer AI: What It Is and How to Run It Locally",
   "description": "Learn what Muse Glimmer AI is, what hardware it needs, how to run it locally, and where it fits among open-weight agent models.",
   "category": "AI Tools",
   "tags": [
@@ -9,1019 +9,1285 @@
     "Open Source"
   ],
   "url": "https://www.techtips.fun/blog/muse-glimmer-ai-local-guide/",
-  "theme": "github-dark",
-  "durationInFrames": 930,
   "scenes": [
     {
       "type": "title",
       "kicker": "AI Tools",
-      "title": "Facebook's Meta Reveals Muse Glimmer AI: What's it and How to Run It Locally",
+      "title": "Meta's Muse Glimmer AI: What It Is and How to Run It Locally",
       "subtitle": "Learn what Muse Glimmer AI is, what hardware it needs, how to run it locally, and where…",
-      "durationInFrames": 105
+      "image": {
+        "src": "post-media/muse-glimmer-ai-local-guide/01-muse-glimmer-ai-feature-image.webp",
+        "width": 1600,
+        "height": 900
+      },
+      "durationInFrames": 183
     },
     {
       "type": "point",
       "kicker": "AI Tools",
       "heading": "What is Muse Glimmer AI?",
       "body": "Muse Glimmer is a dense causal language model with a dedicated perception encoder.",
-      "durationInFrames": 120
+      "durationInFrames": 250
     },
     {
       "type": "point",
       "kicker": "AI Tools",
       "heading": "Features of Muse Glimmer 30B in nutshell:",
       "body": "This model size is about 29.6 billion parameters Model type is Dense causal transformer with a perception encoder Context size 131,072 tokens or…",
-      "durationInFrames": 120
+      "durationInFrames": 330
     },
     {
       "type": "point",
       "kicker": "AI Tools",
       "heading": "What can Muse Glimmer do?",
       "body": "Muse Glimmer targets several tasks that need more than a single answer. It can write and debug code, call tools, inspect images, and continue a long…",
-      "durationInFrames": 120
+      "durationInFrames": 330
     },
     {
       "type": "point",
       "kicker": "AI Tools",
       "heading": "What hardware does Muse Glimmer need?",
       "body": "Hardware depends on the model format. Full-precision BF16 weights need much more memory than a quantized build.",
-      "durationInFrames": 120
+      "durationInFrames": 307
     },
     {
       "type": "point",
       "kicker": "AI Tools",
       "heading": "How to run Muse Glimmer locally",
       "body": "The simplest setup depends on your operating system and your goal. A desktop app is useful for a first test.",
-      "durationInFrames": 120
+      "durationInFrames": 330
     },
     {
       "type": "point",
       "kicker": "AI Tools",
       "heading": "Option 1: Use a desktop app",
       "body": "LM Studio and Unsloth provide desktop paths for local model use. Search for Muse Glimmer in the model section.",
-      "durationInFrames": 120
+      "durationInFrames": 330
+    },
+    {
+      "type": "code",
+      "kicker": "Code",
+      "heading": "Option 2: Use llama.cpp",
+      "steps": [
+        {
+          "lang": "shellscript",
+          "meta": "bash",
+          "value": "./build/bin/llama-server \\\\\n  -m Muse-Glimmer-30B-GGUF/muse-glimmer-30B-kquant-17gb.gguf \\\\\n  --mmproj Muse-Glimmer-30B-GGUF/mmproj-kquant.gguf \\\\\n  -ngl 99 \\\\\n  --jinja \\\\\n  --temp 1.0 \\\\\n  --top-p 0.95 \\\\\n  --top-k 64",
+          "code": "./build/bin/llama-server \\\\\n  -m Muse-Glimmer-30B-GGUF/muse-glimmer-30B-kquant-17gb.gguf \\\\\n  --mmproj Muse-Glimmer-30B-GGUF/mmproj-kquant.gguf \\\\\n  -ngl 99 \\\\\n  --jinja \\\\\n  --temp 1.0 \\\\\n  --top-p 0.95 \\\\\n  --top-k 64",
+          "tokens": [
+            [
+              "./build/bin/llama-server",
+              "#FFA657"
+            ],
+            " ",
+            [
+              "\\\\",
+              "#79C0FF"
+            ],
+            "\n  ",
+            [
+              "-m",
+              "#79C0FF"
+            ],
+            " ",
+            [
+              "Muse-Glimmer-30B-GGUF/muse-glimmer-30B-kquant-17gb.gguf",
+              "#A5D6FF"
+            ],
+            " ",
+            [
+              "\\\\",
+              "#79C0FF"
+            ],
+            "\n  ",
+            [
+              "--mmproj",
+              "#79C0FF"
+            ],
+            " ",
+            [
+              "Muse-Glimmer-30B-GGUF/mmproj-kquant.gguf",
+              "#A5D6FF"
+            ],
+            " ",
+            [
+              "\\\\",
+              "#79C0FF"
+            ],
+            "\n  ",
+            [
+              "-ngl 99 \\\\",
+              "#79C0FF"
+            ],
+            "\n  ",
+            [
+              "--jinja \\\\",
+              "#79C0FF"
+            ],
+            "\n  ",
+            [
+              "--temp 1.0 \\\\",
+              "#79C0FF"
+            ],
+            "\n  ",
+            [
+              "--top-p 0.95 \\\\",
+              "#79C0FF"
+            ],
+            "\n  ",
+            [
+              "--top-k 64",
+              "#79C0FF"
+            ]
+          ],
+          "annotations": [],
+          "themeName": "github-dark",
+          "style": {
+            "color": "#c9d1d9",
+            "background": "#0d1117",
+            "colorScheme": "dark"
+          }
+        }
+      ],
+      "stepDurations": [
+        168
+      ],
+      "durationInFrames": 168
+    },
+    {
+      "type": "point",
+      "kicker": "AI Tools",
+      "heading": "How good is Muse Glimmer for coding and agents?",
+      "body": "Meta reports strong results for Muse Glimmer in agentic and coding benchmarks.",
+      "durationInFrames": 284
     },
     {
       "type": "outro",
       "heading": "Read the full article",
       "body": "New posts every week on the blog.",
       "url": "techtips.fun",
-      "durationInFrames": 105
+      "durationInFrames": 165
     }
   ],
+  "theme": "github-dark",
+  "durationInFrames": 2677,
   "captions": [
     {
       "text": " Learn",
-      "startMs": 0,
-      "endMs": 211
+      "startMs": 500,
+      "endMs": 808
     },
     {
       "text": " what",
-      "startMs": 211,
-      "endMs": 396
+      "startMs": 808,
+      "endMs": 1078
     },
     {
       "text": " Muse",
-      "startMs": 396,
-      "endMs": 581
+      "startMs": 1078,
+      "endMs": 1348
     },
     {
       "text": " Glimmer",
-      "startMs": 581,
-      "endMs": 845,
+      "startMs": 1348,
+      "endMs": 1733,
       "pageBreakAfter": true
     },
     {
       "text": " AI",
-      "startMs": 845,
-      "endMs": 977
+      "startMs": 1733,
+      "endMs": 1925
     },
     {
       "text": " is,",
-      "startMs": 977,
-      "endMs": 1135
+      "startMs": 1925,
+      "endMs": 2157
     },
     {
       "text": " what",
-      "startMs": 1135,
-      "endMs": 1320
+      "startMs": 2157,
+      "endMs": 2426
     },
     {
       "text": " hardware",
-      "startMs": 1320,
-      "endMs": 1610,
+      "startMs": 2426,
+      "endMs": 2850,
       "pageBreakAfter": true
     },
     {
       "text": " it",
-      "startMs": 1610,
-      "endMs": 1742
+      "startMs": 2850,
+      "endMs": 3043
     },
     {
       "text": " needs,",
-      "startMs": 1742,
-      "endMs": 1980
+      "startMs": 3043,
+      "endMs": 3389
     },
     {
       "text": " how",
-      "startMs": 1980,
-      "endMs": 2138
+      "startMs": 3389,
+      "endMs": 3620
     },
     {
       "text": " to",
-      "startMs": 2138,
-      "endMs": 2270,
+      "startMs": 3620,
+      "endMs": 3813,
       "pageBreakAfter": true
     },
     {
       "text": " run",
-      "startMs": 2270,
-      "endMs": 2428
+      "startMs": 3813,
+      "endMs": 4044
     },
     {
       "text": " it",
-      "startMs": 2428,
-      "endMs": 2560
+      "startMs": 4044,
+      "endMs": 4237
     },
     {
       "text": " locally,",
-      "startMs": 2560,
-      "endMs": 2850
+      "startMs": 4237,
+      "endMs": 4661
     },
     {
       "text": " and",
-      "startMs": 2850,
-      "endMs": 3009,
+      "startMs": 4661,
+      "endMs": 4892,
       "pageBreakAfter": true
     },
     {
       "text": " where",
-      "startMs": 3009,
-      "endMs": 3220,
+      "startMs": 4892,
+      "endMs": 6067,
       "pageBreakAfter": true
     },
     {
       "text": " What",
-      "startMs": 3500,
-      "endMs": 3678
+      "startMs": 6600,
+      "endMs": 6935
     },
     {
       "text": " is",
-      "startMs": 3678,
-      "endMs": 3805
+      "startMs": 6935,
+      "endMs": 7174
     },
     {
       "text": " Muse",
-      "startMs": 3805,
-      "endMs": 3982
+      "startMs": 7174,
+      "endMs": 7509
     },
     {
       "text": " Glimmer",
-      "startMs": 3982,
-      "endMs": 4236,
+      "startMs": 7509,
+      "endMs": 7987,
       "pageBreakAfter": true
     },
     {
       "text": " AI?.",
-      "startMs": 4236,
-      "endMs": 4414
+      "startMs": 7987,
+      "endMs": 8321
     },
     {
       "text": " Muse",
-      "startMs": 4414,
-      "endMs": 4591
+      "startMs": 8321,
+      "endMs": 8656
     },
     {
       "text": " Glimmer",
-      "startMs": 4591,
-      "endMs": 4845
+      "startMs": 8656,
+      "endMs": 9134
     },
     {
       "text": " is",
-      "startMs": 4845,
-      "endMs": 4972,
+      "startMs": 9134,
+      "endMs": 9373,
       "pageBreakAfter": true
     },
     {
       "text": " a",
-      "startMs": 4972,
-      "endMs": 5074
+      "startMs": 9373,
+      "endMs": 9565
     },
     {
       "text": " dense",
-      "startMs": 5074,
-      "endMs": 5277
+      "startMs": 9565,
+      "endMs": 9947
     },
     {
       "text": " causal",
-      "startMs": 5277,
-      "endMs": 5505
+      "startMs": 9947,
+      "endMs": 10377
     },
     {
       "text": " language",
-      "startMs": 5505,
-      "endMs": 5784,
+      "startMs": 10377,
+      "endMs": 10903,
       "pageBreakAfter": true
     },
     {
       "text": " model",
-      "startMs": 5784,
-      "endMs": 5987
+      "startMs": 10903,
+      "endMs": 11286
     },
     {
       "text": " with",
-      "startMs": 5987,
-      "endMs": 6165
+      "startMs": 11286,
+      "endMs": 11621
     },
     {
       "text": " a",
-      "startMs": 6165,
-      "endMs": 6266
+      "startMs": 11621,
+      "endMs": 11812
     },
     {
       "text": " dedicated",
-      "startMs": 6266,
-      "endMs": 6571,
+      "startMs": 11812,
+      "endMs": 12386,
       "pageBreakAfter": true
     },
     {
       "text": " perception",
-      "startMs": 6571,
-      "endMs": 6901
+      "startMs": 12386,
+      "endMs": 13007
     },
     {
       "text": " encoder.",
-      "startMs": 6901,
-      "endMs": 7180,
+      "startMs": 13007,
+      "endMs": 14400,
       "pageBreakAfter": true
     },
     {
       "text": " Features",
-      "startMs": 7500,
-      "endMs": 7663
+      "startMs": 14933,
+      "endMs": 15357
     },
     {
       "text": " of",
-      "startMs": 7663,
-      "endMs": 7736
+      "startMs": 15357,
+      "endMs": 15550
     },
     {
       "text": " Muse",
-      "startMs": 7736,
-      "endMs": 7840
+      "startMs": 15550,
+      "endMs": 15820
     },
     {
       "text": " Glimmer",
-      "startMs": 7840,
-      "endMs": 7988,
+      "startMs": 15820,
+      "endMs": 16206,
       "pageBreakAfter": true
     },
     {
       "text": " 30B",
-      "startMs": 7988,
-      "endMs": 8076
+      "startMs": 16206,
+      "endMs": 16437
     },
     {
       "text": " in",
-      "startMs": 8076,
-      "endMs": 8150
+      "startMs": 16437,
+      "endMs": 16630
     },
     {
       "text": " nutshell:.",
-      "startMs": 8150,
-      "endMs": 8342
+      "startMs": 16630,
+      "endMs": 17131
     },
     {
       "text": " This",
-      "startMs": 8342,
-      "endMs": 8446,
+      "startMs": 17131,
+      "endMs": 17401,
       "pageBreakAfter": true
     },
     {
       "text": " model",
-      "startMs": 8446,
-      "endMs": 8564
+      "startMs": 17401,
+      "endMs": 17709
     },
     {
       "text": " size",
-      "startMs": 8564,
-      "endMs": 8668
+      "startMs": 17709,
+      "endMs": 17979
     },
     {
       "text": " is",
-      "startMs": 8668,
-      "endMs": 8741
+      "startMs": 17979,
+      "endMs": 18172
     },
     {
       "text": " about",
-      "startMs": 8741,
-      "endMs": 8860,
+      "startMs": 18172,
+      "endMs": 18480,
       "pageBreakAfter": true
     },
     {
       "text": " 29.6",
-      "startMs": 8860,
-      "endMs": 8963
+      "startMs": 18480,
+      "endMs": 18750
     },
     {
       "text": " billion",
-      "startMs": 8963,
-      "endMs": 9111
+      "startMs": 18750,
+      "endMs": 19136
     },
     {
       "text": " parameters",
-      "startMs": 9111,
-      "endMs": 9303
+      "startMs": 19136,
+      "endMs": 19637
     },
     {
       "text": " Model",
-      "startMs": 9303,
-      "endMs": 9421,
+      "startMs": 19637,
+      "endMs": 19945,
       "pageBreakAfter": true
     },
     {
       "text": " type",
-      "startMs": 9421,
-      "endMs": 9525
+      "startMs": 19945,
+      "endMs": 20215
     },
     {
       "text": " is",
-      "startMs": 9525,
-      "endMs": 9599
+      "startMs": 20215,
+      "endMs": 20408
     },
     {
       "text": " Dense",
-      "startMs": 9599,
-      "endMs": 9717
+      "startMs": 20408,
+      "endMs": 20716
     },
     {
       "text": " causal",
-      "startMs": 9717,
-      "endMs": 9850,
+      "startMs": 20716,
+      "endMs": 21063,
       "pageBreakAfter": true
     },
     {
       "text": " transformer",
-      "startMs": 9850,
-      "endMs": 10057
+      "startMs": 21063,
+      "endMs": 21603
     },
     {
       "text": " with",
-      "startMs": 10057,
-      "endMs": 10160
+      "startMs": 21603,
+      "endMs": 21873
     },
     {
       "text": " a",
-      "startMs": 10160,
-      "endMs": 10219
+      "startMs": 21873,
+      "endMs": 22027
     },
     {
       "text": " perception",
-      "startMs": 10219,
-      "endMs": 10411,
+      "startMs": 22027,
+      "endMs": 22529,
       "pageBreakAfter": true
     },
     {
       "text": " encoder",
-      "startMs": 10411,
-      "endMs": 10559
+      "startMs": 22529,
+      "endMs": 22914
     },
     {
       "text": " Context",
-      "startMs": 10559,
-      "endMs": 10707
+      "startMs": 22914,
+      "endMs": 23300
     },
     {
       "text": " size",
-      "startMs": 10707,
-      "endMs": 10811
+      "startMs": 23300,
+      "endMs": 23569
     },
     {
       "text": " 131,072",
-      "startMs": 10811,
-      "endMs": 10958,
+      "startMs": 23569,
+      "endMs": 23955,
       "pageBreakAfter": true
     },
     {
       "text": " tokens",
-      "startMs": 10958,
-      "endMs": 11091
+      "startMs": 23955,
+      "endMs": 24302
     },
     {
       "text": " or…",
-      "startMs": 11091,
-      "endMs": 11180,
+      "startMs": 24302,
+      "endMs": 25400,
       "pageBreakAfter": true
     },
     {
       "text": " What",
-      "startMs": 11500,
-      "endMs": 11608
+      "startMs": 25933,
+      "endMs": 26215
     },
     {
       "text": " can",
-      "startMs": 11608,
-      "endMs": 11700
+      "startMs": 26215,
+      "endMs": 26456
     },
     {
       "text": " Muse",
-      "startMs": 11700,
-      "endMs": 11808
+      "startMs": 26456,
+      "endMs": 26737
     },
     {
       "text": " Glimmer",
-      "startMs": 11808,
-      "endMs": 11962,
+      "startMs": 26737,
+      "endMs": 27138,
       "pageBreakAfter": true
     },
     {
       "text": " do?.",
-      "startMs": 11962,
-      "endMs": 12070
+      "startMs": 27138,
+      "endMs": 27420
     },
     {
       "text": " Muse",
-      "startMs": 12070,
-      "endMs": 12177
+      "startMs": 27420,
+      "endMs": 27701
     },
     {
       "text": " Glimmer",
-      "startMs": 12177,
-      "endMs": 12331
+      "startMs": 27701,
+      "endMs": 28102
     },
     {
       "text": " targets",
-      "startMs": 12331,
-      "endMs": 12485,
+      "startMs": 28102,
+      "endMs": 28504,
       "pageBreakAfter": true
     },
     {
       "text": " several",
-      "startMs": 12485,
-      "endMs": 12639
+      "startMs": 28504,
+      "endMs": 28906
     },
     {
       "text": " tasks",
-      "startMs": 12639,
-      "endMs": 12763
+      "startMs": 28906,
+      "endMs": 29227
     },
     {
       "text": " that",
-      "startMs": 12763,
-      "endMs": 12870
+      "startMs": 29227,
+      "endMs": 29508
     },
     {
       "text": " need",
-      "startMs": 12870,
-      "endMs": 12978,
+      "startMs": 29508,
+      "endMs": 29789,
       "pageBreakAfter": true
     },
     {
       "text": " more",
-      "startMs": 12978,
-      "endMs": 13086
+      "startMs": 29789,
+      "endMs": 30071
     },
     {
       "text": " than",
-      "startMs": 13086,
-      "endMs": 13194
+      "startMs": 30071,
+      "endMs": 30352
     },
     {
       "text": " a",
-      "startMs": 13194,
-      "endMs": 13255
+      "startMs": 30352,
+      "endMs": 30512
     },
     {
       "text": " single",
-      "startMs": 13255,
-      "endMs": 13394,
+      "startMs": 30512,
+      "endMs": 30874,
       "pageBreakAfter": true
     },
     {
       "text": " answer.",
-      "startMs": 13394,
-      "endMs": 13548
+      "startMs": 30874,
+      "endMs": 31276
     },
     {
       "text": " It",
-      "startMs": 13548,
-      "endMs": 13625
+      "startMs": 31276,
+      "endMs": 31476
     },
     {
       "text": " can",
-      "startMs": 13625,
-      "endMs": 13717
+      "startMs": 31476,
+      "endMs": 31717
     },
     {
       "text": " write",
-      "startMs": 13717,
-      "endMs": 13840,
+      "startMs": 31717,
+      "endMs": 32039,
       "pageBreakAfter": true
     },
     {
       "text": " and",
-      "startMs": 13840,
-      "endMs": 13933
+      "startMs": 32039,
+      "endMs": 32280
     },
     {
       "text": " debug",
-      "startMs": 13933,
-      "endMs": 14056
+      "startMs": 32280,
+      "endMs": 32601
     },
     {
       "text": " code,",
-      "startMs": 14056,
-      "endMs": 14179
+      "startMs": 32601,
+      "endMs": 32922
     },
     {
       "text": " call",
-      "startMs": 14179,
-      "endMs": 14287,
+      "startMs": 32922,
+      "endMs": 33204,
       "pageBreakAfter": true
     },
     {
       "text": " tools,",
-      "startMs": 14287,
-      "endMs": 14426
+      "startMs": 33204,
+      "endMs": 33565
     },
     {
       "text": " inspect",
-      "startMs": 14426,
-      "endMs": 14579
+      "startMs": 33565,
+      "endMs": 33967
     },
     {
       "text": " images,",
-      "startMs": 14579,
-      "endMs": 14733
+      "startMs": 33967,
+      "endMs": 34368
     },
     {
       "text": " and",
-      "startMs": 14733,
-      "endMs": 14826,
+      "startMs": 34368,
+      "endMs": 34609,
       "pageBreakAfter": true
     },
     {
       "text": " continue",
-      "startMs": 14826,
-      "endMs": 14995
+      "startMs": 34609,
+      "endMs": 35051
     },
     {
       "text": " a",
-      "startMs": 14995,
-      "endMs": 15057
+      "startMs": 35051,
+      "endMs": 35212
     },
     {
       "text": " long…",
-      "startMs": 15057,
-      "endMs": 15180,
+      "startMs": 35212,
+      "endMs": 36400,
       "pageBreakAfter": true
     },
     {
       "text": " What",
-      "startMs": 15500,
-      "endMs": 15631
+      "startMs": 36933,
+      "endMs": 37247
     },
     {
       "text": " hardware",
-      "startMs": 15631,
-      "endMs": 15836
+      "startMs": 37247,
+      "endMs": 37740
     },
     {
       "text": " does",
-      "startMs": 15836,
-      "endMs": 15967
+      "startMs": 37740,
+      "endMs": 38054
     },
     {
       "text": " Muse",
-      "startMs": 15967,
-      "endMs": 16098,
+      "startMs": 38054,
+      "endMs": 38368,
       "pageBreakAfter": true
     },
     {
       "text": " Glimmer",
-      "startMs": 16098,
-      "endMs": 16285
+      "startMs": 38368,
+      "endMs": 38817
     },
     {
       "text": " need?.",
-      "startMs": 16285,
-      "endMs": 16453
+      "startMs": 38817,
+      "endMs": 39220
     },
     {
       "text": " Hardware",
-      "startMs": 16453,
-      "endMs": 16658
+      "startMs": 39220,
+      "endMs": 39713
     },
     {
       "text": " depends",
-      "startMs": 16658,
-      "endMs": 16845,
+      "startMs": 39713,
+      "endMs": 40162,
       "pageBreakAfter": true
     },
     {
       "text": " on",
-      "startMs": 16845,
-      "endMs": 16938
+      "startMs": 40162,
+      "endMs": 40386
     },
     {
       "text": " the",
-      "startMs": 16938,
-      "endMs": 17050
+      "startMs": 40386,
+      "endMs": 40655
     },
     {
       "text": " model",
-      "startMs": 17050,
-      "endMs": 17200
+      "startMs": 40655,
+      "endMs": 41014
     },
     {
       "text": " format.",
-      "startMs": 17200,
-      "endMs": 17387,
+      "startMs": 41014,
+      "endMs": 41462,
       "pageBreakAfter": true
     },
     {
       "text": " Full-precision",
-      "startMs": 17387,
-      "endMs": 17704
+      "startMs": 41462,
+      "endMs": 42224
     },
     {
       "text": " BF16",
-      "startMs": 17704,
-      "endMs": 17835
+      "startMs": 42224,
+      "endMs": 42538
     },
     {
       "text": " weights",
-      "startMs": 17835,
-      "endMs": 18022
+      "startMs": 42538,
+      "endMs": 42987
     },
     {
       "text": " need",
-      "startMs": 18022,
-      "endMs": 18153,
+      "startMs": 42987,
+      "endMs": 43301,
       "pageBreakAfter": true
     },
     {
       "text": " much",
-      "startMs": 18153,
-      "endMs": 18283
+      "startMs": 43301,
+      "endMs": 43614
     },
     {
       "text": " more",
-      "startMs": 18283,
-      "endMs": 18414
+      "startMs": 43614,
+      "endMs": 43928
     },
     {
       "text": " memory",
-      "startMs": 18414,
-      "endMs": 18582
+      "startMs": 43928,
+      "endMs": 44332
     },
     {
       "text": " than",
-      "startMs": 18582,
-      "endMs": 18713,
+      "startMs": 44332,
+      "endMs": 44646,
       "pageBreakAfter": true
     },
     {
       "text": " a",
-      "startMs": 18713,
-      "endMs": 18788
+      "startMs": 44646,
+      "endMs": 44825
     },
     {
       "text": " quantized",
-      "startMs": 18788,
-      "endMs": 19012
+      "startMs": 44825,
+      "endMs": 45363
     },
     {
       "text": " build.",
-      "startMs": 19012,
-      "endMs": 19180,
+      "startMs": 45363,
+      "endMs": 46633,
       "pageBreakAfter": true
     },
     {
       "text": " How",
-      "startMs": 19500,
-      "endMs": 19614
+      "startMs": 47167,
+      "endMs": 47464
     },
     {
       "text": " to",
-      "startMs": 19614,
-      "endMs": 19709
+      "startMs": 47464,
+      "endMs": 47711
     },
     {
       "text": " run",
-      "startMs": 19709,
-      "endMs": 19822
+      "startMs": 47711,
+      "endMs": 48008
     },
     {
       "text": " Muse",
-      "startMs": 19822,
-      "endMs": 19955,
+      "startMs": 48008,
+      "endMs": 48354,
       "pageBreakAfter": true
     },
     {
       "text": " Glimmer",
-      "startMs": 19955,
-      "endMs": 20145
+      "startMs": 48354,
+      "endMs": 48849
     },
     {
       "text": " locally.",
-      "startMs": 20145,
-      "endMs": 20354
+      "startMs": 48849,
+      "endMs": 49393
     },
     {
       "text": " The",
-      "startMs": 20354,
-      "endMs": 20467
+      "startMs": 49393,
+      "endMs": 49690
     },
     {
       "text": " simplest",
-      "startMs": 20467,
-      "endMs": 20676,
+      "startMs": 49690,
+      "endMs": 50235,
       "pageBreakAfter": true
     },
     {
       "text": " setup",
-      "startMs": 20676,
-      "endMs": 20828
+      "startMs": 50235,
+      "endMs": 50631
     },
     {
       "text": " depends",
-      "startMs": 20828,
-      "endMs": 21018
+      "startMs": 50631,
+      "endMs": 51125
     },
     {
       "text": " on",
-      "startMs": 21018,
-      "endMs": 21112
+      "startMs": 51125,
+      "endMs": 51373
     },
     {
       "text": " your",
-      "startMs": 21112,
-      "endMs": 21245,
+      "startMs": 51373,
+      "endMs": 51719,
       "pageBreakAfter": true
     },
     {
       "text": " operating",
-      "startMs": 21245,
-      "endMs": 21473
+      "startMs": 51719,
+      "endMs": 52313
     },
     {
       "text": " system",
-      "startMs": 21473,
-      "endMs": 21644
+      "startMs": 52313,
+      "endMs": 52758
     },
     {
       "text": " and",
-      "startMs": 21644,
-      "endMs": 21757
+      "startMs": 52758,
+      "endMs": 53055
     },
     {
       "text": " your",
-      "startMs": 21757,
-      "endMs": 21890,
+      "startMs": 53055,
+      "endMs": 53402,
       "pageBreakAfter": true
     },
     {
       "text": " goal.",
-      "startMs": 21890,
-      "endMs": 22042
+      "startMs": 53402,
+      "endMs": 53798
     },
     {
       "text": " A",
-      "startMs": 22042,
-      "endMs": 22118
+      "startMs": 53798,
+      "endMs": 53996
     },
     {
       "text": " desktop",
-      "startMs": 22118,
-      "endMs": 22307
+      "startMs": 53996,
+      "endMs": 54490
     },
     {
       "text": " app",
-      "startMs": 22307,
-      "endMs": 22421,
+      "startMs": 54490,
+      "endMs": 54787,
       "pageBreakAfter": true
     },
     {
       "text": " is",
-      "startMs": 22421,
-      "endMs": 22516
+      "startMs": 54787,
+      "endMs": 55035
     },
     {
       "text": " useful",
-      "startMs": 22516,
-      "endMs": 22687
+      "startMs": 55035,
+      "endMs": 55480
     },
     {
       "text": " for",
-      "startMs": 22687,
-      "endMs": 22801
+      "startMs": 55480,
+      "endMs": 55777
     },
     {
       "text": " a",
-      "startMs": 22801,
-      "endMs": 22876,
+      "startMs": 55777,
+      "endMs": 55975,
       "pageBreakAfter": true
     },
     {
       "text": " first",
-      "startMs": 22876,
-      "endMs": 23028
+      "startMs": 55975,
+      "endMs": 56371
     },
     {
       "text": " test.",
-      "startMs": 23028,
-      "endMs": 23180,
+      "startMs": 56371,
+      "endMs": 57633,
       "pageBreakAfter": true
     },
     {
       "text": " Option",
-      "startMs": 23500,
-      "endMs": 23674
+      "startMs": 58167,
+      "endMs": 58621
     },
     {
       "text": " 1:",
-      "startMs": 23674,
-      "endMs": 23771
+      "startMs": 58621,
+      "endMs": 58874
     },
     {
       "text": " Use",
-      "startMs": 23771,
-      "endMs": 23887
+      "startMs": 58874,
+      "endMs": 59177
     },
     {
       "text": " a",
-      "startMs": 23887,
-      "endMs": 23965,
+      "startMs": 59177,
+      "endMs": 59379,
       "pageBreakAfter": true
     },
     {
       "text": " desktop",
-      "startMs": 23965,
-      "endMs": 24159
+      "startMs": 59379,
+      "endMs": 59885
     },
     {
       "text": " app.",
-      "startMs": 24159,
-      "endMs": 24294
+      "startMs": 59885,
+      "endMs": 60238
     },
     {
       "text": " LM",
-      "startMs": 24294,
-      "endMs": 24391
+      "startMs": 60238,
+      "endMs": 60491
     },
     {
       "text": " Studio",
-      "startMs": 24391,
-      "endMs": 24565,
+      "startMs": 60491,
+      "endMs": 60946,
       "pageBreakAfter": true
     },
     {
       "text": " and",
-      "startMs": 24565,
-      "endMs": 24681
+      "startMs": 60946,
+      "endMs": 61249
     },
     {
       "text": " Unsloth",
-      "startMs": 24681,
-      "endMs": 24875
+      "startMs": 61249,
+      "endMs": 61754
     },
     {
       "text": " provide",
-      "startMs": 24875,
-      "endMs": 25069
+      "startMs": 61754,
+      "endMs": 62259
     },
     {
       "text": " desktop",
-      "startMs": 25069,
-      "endMs": 25263,
+      "startMs": 62259,
+      "endMs": 62765,
       "pageBreakAfter": true
     },
     {
       "text": " paths",
-      "startMs": 25263,
-      "endMs": 25417
+      "startMs": 62765,
+      "endMs": 63169
     },
     {
       "text": " for",
-      "startMs": 25417,
-      "endMs": 25534
+      "startMs": 63169,
+      "endMs": 63472
     },
     {
       "text": " local",
-      "startMs": 25534,
-      "endMs": 25689
+      "startMs": 63472,
+      "endMs": 63876
     },
     {
       "text": " model",
-      "startMs": 25689,
-      "endMs": 25844,
+      "startMs": 63876,
+      "endMs": 64280,
       "pageBreakAfter": true
     },
     {
       "text": " use.",
-      "startMs": 25844,
-      "endMs": 25979
+      "startMs": 64280,
+      "endMs": 64634
     },
     {
       "text": " Search",
-      "startMs": 25979,
-      "endMs": 26153
+      "startMs": 64634,
+      "endMs": 65089
     },
     {
       "text": " for",
-      "startMs": 26153,
-      "endMs": 26270
+      "startMs": 65089,
+      "endMs": 65392
     },
     {
       "text": " Muse",
-      "startMs": 26270,
-      "endMs": 26405,
+      "startMs": 65392,
+      "endMs": 65746,
       "pageBreakAfter": true
     },
     {
       "text": " Glimmer",
-      "startMs": 26405,
-      "endMs": 26599
+      "startMs": 65746,
+      "endMs": 66251
     },
     {
       "text": " in",
-      "startMs": 26599,
-      "endMs": 26696
+      "startMs": 66251,
+      "endMs": 66504
     },
     {
       "text": " the",
-      "startMs": 26696,
-      "endMs": 26812
+      "startMs": 66504,
+      "endMs": 66807
     },
     {
       "text": " model",
-      "startMs": 26812,
-      "endMs": 26967,
+      "startMs": 66807,
+      "endMs": 67211,
       "pageBreakAfter": true
     },
     {
       "text": " section.",
-      "startMs": 26967,
-      "endMs": 27180,
+      "startMs": 67211,
+      "endMs": 68633,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Option",
+      "startMs": 69167,
+      "endMs": 69714
+    },
+    {
+      "text": " 2:",
+      "startMs": 69714,
+      "endMs": 70019
+    },
+    {
+      "text": " Use",
+      "startMs": 70019,
+      "endMs": 70384
+    },
+    {
+      "text": " llama.cpp.",
+      "startMs": 70384,
+      "endMs": 71175,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Let",
+      "startMs": 71175,
+      "endMs": 71540
+    },
+    {
+      "text": " us",
+      "startMs": 71540,
+      "endMs": 71844
+    },
+    {
+      "text": " look",
+      "startMs": 71844,
+      "endMs": 72270
+    },
+    {
+      "text": " at",
+      "startMs": 72270,
+      "endMs": 72575,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " the",
+      "startMs": 72575,
+      "endMs": 72940
+    },
+    {
+      "text": " code.",
+      "startMs": 72940,
+      "endMs": 74233,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " How",
+      "startMs": 74767,
+      "endMs": 75051
+    },
+    {
+      "text": " good",
+      "startMs": 75051,
+      "endMs": 75384
+    },
+    {
+      "text": " is",
+      "startMs": 75384,
+      "endMs": 75621
+    },
+    {
+      "text": " Muse",
+      "startMs": 75621,
+      "endMs": 75953,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Glimmer",
+      "startMs": 75953,
+      "endMs": 76427
+    },
+    {
+      "text": " for",
+      "startMs": 76427,
+      "endMs": 76712
+    },
+    {
+      "text": " coding",
+      "startMs": 76712,
+      "endMs": 77139
+    },
+    {
+      "text": " and",
+      "startMs": 77139,
+      "endMs": 77424,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " agents?.",
+      "startMs": 77424,
+      "endMs": 77946
+    },
+    {
+      "text": " Meta",
+      "startMs": 77946,
+      "endMs": 78278
+    },
+    {
+      "text": " reports",
+      "startMs": 78278,
+      "endMs": 78753
+    },
+    {
+      "text": " strong",
+      "startMs": 78753,
+      "endMs": 79180,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " results",
+      "startMs": 79180,
+      "endMs": 79654
+    },
+    {
+      "text": " for",
+      "startMs": 79654,
+      "endMs": 79939
+    },
+    {
+      "text": " Muse",
+      "startMs": 79939,
+      "endMs": 80271
+    },
+    {
+      "text": " Glimmer",
+      "startMs": 80271,
+      "endMs": 80745,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " in",
+      "startMs": 80745,
+      "endMs": 80983
+    },
+    {
+      "text": " agentic",
+      "startMs": 80983,
+      "endMs": 81457
+    },
+    {
+      "text": " and",
+      "startMs": 81457,
+      "endMs": 81742
+    },
+    {
+      "text": " coding",
+      "startMs": 81742,
+      "endMs": 82169,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " benchmarks.",
+      "startMs": 82169,
+      "endMs": 83700,
       "pageBreakAfter": true
     },
     {
       "text": " Read",
-      "startMs": 27500,
-      "endMs": 27785
+      "startMs": 84233,
+      "endMs": 84603
     },
     {
       "text": " the",
-      "startMs": 27785,
-      "endMs": 28030
+      "startMs": 84603,
+      "endMs": 84920
     },
     {
       "text": " full",
-      "startMs": 28030,
-      "endMs": 28315
+      "startMs": 84920,
+      "endMs": 85290
     },
     {
       "text": " article.",
-      "startMs": 28315,
-      "endMs": 28764,
+      "startMs": 85290,
+      "endMs": 85872,
       "pageBreakAfter": true
     },
     {
       "text": " New",
-      "startMs": 28764,
-      "endMs": 29008
+      "startMs": 85872,
+      "endMs": 86189
     },
     {
       "text": " posts",
-      "startMs": 29008,
-      "endMs": 29334
+      "startMs": 86189,
+      "endMs": 86611
     },
     {
       "text": " every",
-      "startMs": 29334,
-      "endMs": 29660
+      "startMs": 86611,
+      "endMs": 87034
     },
     {
       "text": " week",
-      "startMs": 29660,
-      "endMs": 29946,
+      "startMs": 87034,
+      "endMs": 87404,
       "pageBreakAfter": true
     },
     {
       "text": " on",
-      "startMs": 29946,
-      "endMs": 30149
+      "startMs": 87404,
+      "endMs": 87668
     },
     {
       "text": " the",
-      "startMs": 30149,
-      "endMs": 30394
+      "startMs": 87668,
+      "endMs": 87986
     },
     {
       "text": " blog.",
-      "startMs": 30394,
-      "endMs": 30720,
+      "startMs": 87986,
+      "endMs": 89200,
       "pageBreakAfter": true
     }
   ],

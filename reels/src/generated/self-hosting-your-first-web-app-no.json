@@ -10,29 +10,32 @@
     "Beginner Guide"
   ],
   "url": "https://www.techtips.fun/blog/self-hosting-your-first-web-app-no/",
-  "theme": "github-dark",
-  "durationInFrames": 640,
   "scenes": [
     {
       "type": "title",
       "kicker": "Self-Hosting",
       "title": "Self-hosting your first web app — the no-nonsense guide",
       "subtitle": "I spent way too long being intimidated by self-hosting. It seemed like something only…",
-      "durationInFrames": 105
+      "image": {
+        "src": "post-media/self-hosting-your-first-web-app-no/01-self-hosting.webp",
+        "width": 960,
+        "height": 480
+      },
+      "durationInFrames": 183
     },
     {
       "type": "point",
       "kicker": "Self-Hosting",
       "heading": "What you need",
       "body": "A cheap VPS (I use Hetzner — €4/month for a 2-core, 4GB RAM instance) A domain name (~$10/year) Basic comfort with the terminal",
-      "durationInFrames": 120
+      "durationInFrames": 330
     },
     {
       "type": "point",
       "kicker": "Self-Hosting",
       "heading": "Step 1 — Point your domain",
       "body": "Add an A record in your DNS provider pointing to your VPS IP. Propagation usually takes under 5 minutes with Cloudflare.",
-      "durationInFrames": 120
+      "durationInFrames": 330
     },
     {
       "type": "code",
@@ -64,7 +67,10 @@
           }
         }
       ],
-      "durationInFrames": 95
+      "stepDurations": [
+        135
+      ],
+      "durationInFrames": 135
     },
     {
       "type": "code",
@@ -121,558 +127,563 @@
           }
         }
       ],
-      "durationInFrames": 95
+      "stepDurations": [
+        155
+      ],
+      "durationInFrames": 155
     },
     {
       "type": "outro",
       "heading": "Read the full article",
       "body": "New posts every week on the blog.",
       "url": "techtips.fun",
-      "durationInFrames": 105
+      "durationInFrames": 165
     }
   ],
+  "theme": "github-dark",
+  "durationInFrames": 1298,
   "captions": [
     {
       "text": " I",
-      "startMs": 0,
-      "endMs": 113
+      "startMs": 500,
+      "endMs": 665
     },
     {
       "text": " spent",
-      "startMs": 113,
-      "endMs": 339
+      "startMs": 665,
+      "endMs": 995
     },
     {
       "text": " way",
-      "startMs": 339,
-      "endMs": 508
+      "startMs": 995,
+      "endMs": 1242
     },
     {
       "text": " too",
-      "startMs": 508,
-      "endMs": 678,
+      "startMs": 1242,
+      "endMs": 1489,
       "pageBreakAfter": true
     },
     {
       "text": " long",
-      "startMs": 678,
-      "endMs": 876
+      "startMs": 1489,
+      "endMs": 1778
     },
     {
       "text": " being",
-      "startMs": 876,
-      "endMs": 1102
+      "startMs": 1778,
+      "endMs": 2108
     },
     {
       "text": " intimidated",
-      "startMs": 1102,
-      "endMs": 1497
+      "startMs": 2108,
+      "endMs": 2685
     },
     {
       "text": " by",
-      "startMs": 1497,
-      "endMs": 1638,
+      "startMs": 2685,
+      "endMs": 2891,
       "pageBreakAfter": true
     },
     {
       "text": " self-hosting.",
-      "startMs": 1638,
-      "endMs": 2090
+      "startMs": 2891,
+      "endMs": 3551
     },
     {
       "text": " It",
-      "startMs": 2090,
-      "endMs": 2231
+      "startMs": 3551,
+      "endMs": 3757
     },
     {
       "text": " seemed",
-      "startMs": 2231,
-      "endMs": 2486
+      "startMs": 3757,
+      "endMs": 4128
     },
     {
       "text": " like",
-      "startMs": 2486,
-      "endMs": 2683,
+      "startMs": 4128,
+      "endMs": 4417,
       "pageBreakAfter": true
     },
     {
       "text": " something",
-      "startMs": 2683,
-      "endMs": 3022
+      "startMs": 4417,
+      "endMs": 4911
     },
     {
       "text": " only",
-      "startMs": 3022,
-      "endMs": 3220,
+      "startMs": 4911,
+      "endMs": 6067,
       "pageBreakAfter": true
     },
     {
       "text": " What",
-      "startMs": 3500,
-      "endMs": 3632
+      "startMs": 6600,
+      "endMs": 6945
     },
     {
       "text": " you",
-      "startMs": 3632,
-      "endMs": 3745
+      "startMs": 6945,
+      "endMs": 7240
     },
     {
       "text": " need.",
-      "startMs": 3745,
-      "endMs": 3896
+      "startMs": 7240,
+      "endMs": 7634
     },
     {
       "text": " A",
-      "startMs": 3896,
-      "endMs": 3972,
+      "startMs": 7634,
+      "endMs": 7831,
       "pageBreakAfter": true
     },
     {
       "text": " cheap",
-      "startMs": 3972,
-      "endMs": 4123
+      "startMs": 7831,
+      "endMs": 8225
     },
     {
       "text": " VPS",
-      "startMs": 4123,
-      "endMs": 4236
+      "startMs": 8225,
+      "endMs": 8520
     },
     {
       "text": " (I",
-      "startMs": 4236,
-      "endMs": 4330
+      "startMs": 8520,
+      "endMs": 8766
     },
     {
       "text": " use",
-      "startMs": 4330,
-      "endMs": 4444,
+      "startMs": 8766,
+      "endMs": 9062,
       "pageBreakAfter": true
     },
     {
       "text": " Hetzner",
-      "startMs": 4444,
-      "endMs": 4632
+      "startMs": 9062,
+      "endMs": 9554
     },
     {
       "text": " —",
-      "startMs": 4632,
-      "endMs": 4708
+      "startMs": 9554,
+      "endMs": 9751
     },
     {
       "text": " €4/month",
-      "startMs": 4708,
-      "endMs": 4915
+      "startMs": 9751,
+      "endMs": 10292
     },
     {
       "text": " for",
-      "startMs": 4915,
-      "endMs": 5029,
+      "startMs": 10292,
+      "endMs": 10588,
       "pageBreakAfter": true
     },
     {
       "text": " a",
-      "startMs": 5029,
-      "endMs": 5104
+      "startMs": 10588,
+      "endMs": 10785
     },
     {
       "text": " 2-core,",
-      "startMs": 5104,
-      "endMs": 5293
+      "startMs": 10785,
+      "endMs": 11277
     },
     {
       "text": " 4GB",
-      "startMs": 5293,
-      "endMs": 5406
+      "startMs": 11277,
+      "endMs": 11572
     },
     {
       "text": " RAM",
-      "startMs": 5406,
-      "endMs": 5519,
+      "startMs": 11572,
+      "endMs": 11868,
       "pageBreakAfter": true
     },
     {
       "text": " instance)",
-      "startMs": 5519,
-      "endMs": 5746
+      "startMs": 11868,
+      "endMs": 12458
     },
     {
       "text": " A",
-      "startMs": 5746,
-      "endMs": 5821
+      "startMs": 12458,
+      "endMs": 12655
     },
     {
       "text": " domain",
-      "startMs": 5821,
-      "endMs": 5991
+      "startMs": 12655,
+      "endMs": 13098
     },
     {
       "text": " name",
-      "startMs": 5991,
-      "endMs": 6123,
+      "startMs": 13098,
+      "endMs": 13443,
       "pageBreakAfter": true
     },
     {
       "text": " (~$10/year)",
-      "startMs": 6123,
-      "endMs": 6387
+      "startMs": 13443,
+      "endMs": 14132
     },
     {
       "text": " Basic",
-      "startMs": 6387,
-      "endMs": 6538
+      "startMs": 14132,
+      "endMs": 14526
     },
     {
       "text": " comfort",
-      "startMs": 6538,
-      "endMs": 6727
+      "startMs": 14526,
+      "endMs": 15018
     },
     {
       "text": " with",
-      "startMs": 6727,
-      "endMs": 6859,
+      "startMs": 15018,
+      "endMs": 15363,
       "pageBreakAfter": true
     },
     {
       "text": " the",
-      "startMs": 6859,
-      "endMs": 6972
+      "startMs": 15363,
+      "endMs": 15658
     },
     {
       "text": " terminal",
-      "startMs": 6972,
-      "endMs": 7180,
+      "startMs": 15658,
+      "endMs": 17067,
       "pageBreakAfter": true
     },
     {
       "text": " Step",
-      "startMs": 7500,
-      "endMs": 7627
+      "startMs": 17600,
+      "endMs": 17931
     },
     {
       "text": " 1",
-      "startMs": 7627,
-      "endMs": 7699
+      "startMs": 17931,
+      "endMs": 18120
     },
     {
       "text": " —",
-      "startMs": 7699,
-      "endMs": 7772
+      "startMs": 18120,
+      "endMs": 18309
     },
     {
       "text": " Point",
-      "startMs": 7772,
-      "endMs": 7917,
+      "startMs": 18309,
+      "endMs": 18688,
       "pageBreakAfter": true
     },
     {
       "text": " your",
-      "startMs": 7917,
-      "endMs": 8044
+      "startMs": 18688,
+      "endMs": 19019
     },
     {
       "text": " domain.",
-      "startMs": 8044,
-      "endMs": 8225
+      "startMs": 19019,
+      "endMs": 19492
     },
     {
       "text": " Add",
-      "startMs": 8225,
-      "endMs": 8334
+      "startMs": 19492,
+      "endMs": 19775
     },
     {
       "text": " an",
-      "startMs": 8334,
-      "endMs": 8425,
+      "startMs": 19775,
+      "endMs": 20012,
       "pageBreakAfter": true
     },
     {
       "text": " A",
-      "startMs": 8425,
-      "endMs": 8497
+      "startMs": 20012,
+      "endMs": 20201
     },
     {
       "text": " record",
-      "startMs": 8497,
-      "endMs": 8660
+      "startMs": 20201,
+      "endMs": 20627
     },
     {
       "text": " in",
-      "startMs": 8660,
-      "endMs": 8751
+      "startMs": 20627,
+      "endMs": 20863
     },
     {
       "text": " your",
-      "startMs": 8751,
-      "endMs": 8878,
+      "startMs": 20863,
+      "endMs": 21194,
       "pageBreakAfter": true
     },
     {
       "text": " DNS",
-      "startMs": 8878,
-      "endMs": 8987
+      "startMs": 21194,
+      "endMs": 21478
     },
     {
       "text": " provider",
-      "startMs": 8987,
-      "endMs": 9186
+      "startMs": 21478,
+      "endMs": 21998
     },
     {
       "text": " pointing",
-      "startMs": 9186,
-      "endMs": 9385
+      "startMs": 21998,
+      "endMs": 22518
     },
     {
       "text": " to",
-      "startMs": 9385,
-      "endMs": 9476,
+      "startMs": 22518,
+      "endMs": 22755,
       "pageBreakAfter": true
     },
     {
       "text": " your",
-      "startMs": 9476,
-      "endMs": 9603
+      "startMs": 22755,
+      "endMs": 23086
     },
     {
       "text": " VPS",
-      "startMs": 9603,
-      "endMs": 9712
+      "startMs": 23086,
+      "endMs": 23369
     },
     {
       "text": " IP.",
-      "startMs": 9712,
-      "endMs": 9820
+      "startMs": 23369,
+      "endMs": 23653
     },
     {
       "text": " Propagation",
-      "startMs": 9820,
-      "endMs": 10074,
+      "startMs": 23653,
+      "endMs": 24315,
       "pageBreakAfter": true
     },
     {
       "text": " usually",
-      "startMs": 10074,
-      "endMs": 10255
+      "startMs": 24315,
+      "endMs": 24788
     },
     {
       "text": " takes",
-      "startMs": 10255,
-      "endMs": 10400
+      "startMs": 24788,
+      "endMs": 25167
     },
     {
       "text": " under",
-      "startMs": 10400,
-      "endMs": 10546
+      "startMs": 25167,
+      "endMs": 25545
     },
     {
       "text": " 5",
-      "startMs": 10546,
-      "endMs": 10618,
+      "startMs": 25545,
+      "endMs": 25734,
       "pageBreakAfter": true
     },
     {
       "text": " minutes",
-      "startMs": 10618,
-      "endMs": 10799
+      "startMs": 25734,
+      "endMs": 26207
     },
     {
       "text": " with",
-      "startMs": 10799,
-      "endMs": 10926
+      "startMs": 26207,
+      "endMs": 26538
     },
     {
       "text": " Cloudflare.",
-      "startMs": 10926,
-      "endMs": 11180,
+      "startMs": 26538,
+      "endMs": 28067,
       "pageBreakAfter": true
     },
     {
       "text": " Step",
-      "startMs": 11500,
-      "endMs": 11734
+      "startMs": 28600,
+      "endMs": 28868
     },
     {
       "text": " 2",
-      "startMs": 11734,
-      "endMs": 11868
+      "startMs": 28868,
+      "endMs": 29020
     },
     {
       "text": " —",
-      "startMs": 11868,
-      "endMs": 12002
+      "startMs": 29020,
+      "endMs": 29173
     },
     {
       "text": " Install",
-      "startMs": 12002,
-      "endMs": 12337,
+      "startMs": 29173,
+      "endMs": 29555,
       "pageBreakAfter": true
     },
     {
       "text": " Nginx",
-      "startMs": 12337,
-      "endMs": 12605
+      "startMs": 29555,
+      "endMs": 29861
     },
     {
       "text": " and",
-      "startMs": 12605,
-      "endMs": 12806
+      "startMs": 29861,
+      "endMs": 30091
     },
     {
       "text": " Certbot.",
-      "startMs": 12806,
-      "endMs": 13174
+      "startMs": 30091,
+      "endMs": 30511
     },
     {
       "text": " Let",
-      "startMs": 13174,
-      "endMs": 13375,
+      "startMs": 30511,
+      "endMs": 30740,
       "pageBreakAfter": true
     },
     {
       "text": " us",
-      "startMs": 13375,
-      "endMs": 13543
+      "startMs": 30740,
+      "endMs": 30931
     },
     {
       "text": " look",
-      "startMs": 13543,
-      "endMs": 13777
+      "startMs": 30931,
+      "endMs": 31199
     },
     {
       "text": " at",
-      "startMs": 13777,
-      "endMs": 13945
+      "startMs": 31199,
+      "endMs": 31390
     },
     {
       "text": " the",
-      "startMs": 13945,
-      "endMs": 14145,
+      "startMs": 31390,
+      "endMs": 31619,
       "pageBreakAfter": true
     },
     {
       "text": " code.",
-      "startMs": 14145,
-      "endMs": 14413,
+      "startMs": 31619,
+      "endMs": 32567,
       "pageBreakAfter": true
     },
     {
       "text": " Step",
-      "startMs": 14667,
-      "endMs": 14939
+      "startMs": 33100,
+      "endMs": 33463
     },
     {
       "text": " 3",
-      "startMs": 14939,
-      "endMs": 15094
+      "startMs": 33463,
+      "endMs": 33671
     },
     {
       "text": " —",
-      "startMs": 15094,
-      "endMs": 15249
+      "startMs": 33671,
+      "endMs": 33878
     },
     {
       "text": " Deploy",
-      "startMs": 15249,
-      "endMs": 15599,
+      "startMs": 33878,
+      "endMs": 34345,
       "pageBreakAfter": true
     },
     {
       "text": " your",
-      "startMs": 15599,
-      "endMs": 15871
+      "startMs": 34345,
+      "endMs": 34709
     },
     {
       "text": " app.",
-      "startMs": 15871,
-      "endMs": 16143
+      "startMs": 34709,
+      "endMs": 35072
     },
     {
       "text": " Let",
-      "startMs": 16143,
-      "endMs": 16376
+      "startMs": 35072,
+      "endMs": 35383
     },
     {
       "text": " us",
-      "startMs": 16376,
-      "endMs": 16570,
+      "startMs": 35383,
+      "endMs": 35643,
       "pageBreakAfter": true
     },
     {
       "text": " look",
-      "startMs": 16570,
-      "endMs": 16842
+      "startMs": 35643,
+      "endMs": 36006
     },
     {
       "text": " at",
-      "startMs": 16842,
-      "endMs": 17036
+      "startMs": 36006,
+      "endMs": 36265
     },
     {
       "text": " the",
-      "startMs": 17036,
-      "endMs": 17269
+      "startMs": 36265,
+      "endMs": 36577
     },
     {
       "text": " code.",
-      "startMs": 17269,
-      "endMs": 17580,
+      "startMs": 36577,
+      "endMs": 37733,
       "pageBreakAfter": true
     },
     {
       "text": " Read",
-      "startMs": 17833,
-      "endMs": 18119
+      "startMs": 38267,
+      "endMs": 38637
     },
     {
       "text": " the",
-      "startMs": 18119,
-      "endMs": 18363
+      "startMs": 38637,
+      "endMs": 38954
     },
     {
       "text": " full",
-      "startMs": 18363,
-      "endMs": 18649
+      "startMs": 38954,
+      "endMs": 39324
     },
     {
       "text": " article.",
-      "startMs": 18649,
-      "endMs": 19097,
+      "startMs": 39324,
+      "endMs": 39905,
       "pageBreakAfter": true
     },
     {
       "text": " New",
-      "startMs": 19097,
-      "endMs": 19341
+      "startMs": 39905,
+      "endMs": 40222
     },
     {
       "text": " posts",
-      "startMs": 19341,
-      "endMs": 19668
+      "startMs": 40222,
+      "endMs": 40645
     },
     {
       "text": " every",
-      "startMs": 19668,
-      "endMs": 19994
+      "startMs": 40645,
+      "endMs": 41068
     },
     {
       "text": " week",
-      "startMs": 19994,
-      "endMs": 20279,
+      "startMs": 41068,
+      "endMs": 41438,
       "pageBreakAfter": true
     },
     {
       "text": " on",
-      "startMs": 20279,
-      "endMs": 20483
+      "startMs": 41438,
+      "endMs": 41702
     },
     {
       "text": " the",
-      "startMs": 20483,
-      "endMs": 20727
+      "startMs": 41702,
+      "endMs": 42019
     },
     {
       "text": " blog.",
-      "startMs": 20727,
-      "endMs": 21053,
+      "startMs": 42019,
+      "endMs": 43233,
       "pageBreakAfter": true
     }
   ],

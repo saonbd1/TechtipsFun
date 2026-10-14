@@ -1,6 +1,6 @@
 {
   "slug": "best-ai-tools-for-researchers-students",
-  "title": "AI Tools Hunt: The Best AI Tools for Researchers and Students in 2026",
+  "title": "Best AI Tools for Researchers and Students in 2026",
   "description": "Discover the best AI tools for researchers and students in 2026. Compare top discovery, literature review, and synthesis platforms tailored for beginners.",
   "category": "AI Tools",
   "tags": [
@@ -10,982 +10,1152 @@
     "Productivity"
   ],
   "url": "https://www.techtips.fun/blog/best-ai-tools-for-researchers-students/",
-  "theme": "github-dark",
-  "durationInFrames": 930,
   "scenes": [
     {
       "type": "title",
       "kicker": "AI Tools",
-      "title": "AI Tools Hunt: The Best AI Tools for Researchers and Students in 2026",
+      "title": "Best AI Tools for Researchers and Students in 2026",
       "subtitle": "Discover the best AI tools for researchers and students in 2026. Compare top discovery,…",
-      "durationInFrames": 105
+      "image": {
+        "src": "post-media/best-ai-tools-for-researchers-students/01-minimal-desk.webp",
+        "width": 960,
+        "height": 480
+      },
+      "durationInFrames": 183
     },
     {
       "type": "point",
       "kicker": "AI Tools",
       "heading": "Consensus: Best for Evidence-Based Answers",
       "body": "Price: Free (Pro starts at $15/month or $120/year; Deep plan at $65/month) Consensus is an AI-powered academic search engine built on top of a…",
-      "durationInFrames": 120
+      "durationInFrames": 330
     },
     {
       "type": "point",
       "kicker": "AI Tools",
       "heading": "Why Primary-Level Users Love It",
       "body": "When you type a question into Consensus, it evaluates the underlying studies and provides the Consensus Meter, which visually indicates whether the…",
-      "durationInFrames": 120
+      "durationInFrames": 330
     },
     {
       "type": "point",
       "kicker": "AI Tools",
       "heading": "Limitations to Keep in Mind",
       "body": "The free tier is helpful for exploratory searches, but it is capped at 3 Deep Searches per month and 15 Pro Analyses.",
-      "durationInFrames": 120
+      "durationInFrames": 330
     },
     {
       "type": "point",
       "kicker": "AI Tools",
       "heading": "Elicit: Best for Automated Literature Reviews",
       "body": "Price: Free Basic Plan (Pro is $49/user/month billed annually) Elicit is designed to streamline literature reviews by extracting key data points—such…",
-      "durationInFrames": 120
+      "durationInFrames": 330
     },
     {
       "type": "point",
       "kicker": "AI Tools",
       "heading": "Why Primary-Level Users Love It",
       "body": "Manually creating a matrix in Excel to compare 20 research papers is exhausting.",
-      "durationInFrames": 120
+      "durationInFrames": 250
     },
     {
       "type": "point",
       "kicker": "AI Tools",
       "heading": "Limitations to Keep in Mind",
       "body": "The free Basic plan is relatively restricted, offering limited automated reports and table columns per month.",
-      "durationInFrames": 120
+      "durationInFrames": 284
+    },
+    {
+      "type": "point",
+      "kicker": "AI Tools",
+      "heading": "Semantic Scholar: Best 100% Free Discovery Engine",
+      "body": "Price: 100% Free Maintained by the Allen Institute for AI, Semantic Scholar indexes over 200 million academic articles across all fields of science…",
+      "durationInFrames": 330
     },
     {
       "type": "outro",
       "heading": "Read the full article",
       "body": "New posts every week on the blog.",
       "url": "techtips.fun",
-      "durationInFrames": 105
+      "durationInFrames": 165
     }
   ],
+  "theme": "github-dark",
+  "durationInFrames": 2532,
   "captions": [
     {
       "text": " Discover",
-      "startMs": 0,
-      "endMs": 305
+      "startMs": 500,
+      "endMs": 946
     },
     {
       "text": " the",
-      "startMs": 305,
-      "endMs": 472
+      "startMs": 946,
+      "endMs": 1189
     },
     {
       "text": " best",
-      "startMs": 472,
-      "endMs": 666
+      "startMs": 1189,
+      "endMs": 1472
     },
     {
       "text": " AI",
-      "startMs": 666,
-      "endMs": 805,
+      "startMs": 1472,
+      "endMs": 1675,
       "pageBreakAfter": true
     },
     {
       "text": " tools",
-      "startMs": 805,
-      "endMs": 1027
+      "startMs": 1675,
+      "endMs": 1999
     },
     {
       "text": " for",
-      "startMs": 1027,
-      "endMs": 1194
+      "startMs": 1999,
+      "endMs": 2242
     },
     {
       "text": " researchers",
-      "startMs": 1194,
-      "endMs": 1582
+      "startMs": 2242,
+      "endMs": 2809
     },
     {
       "text": " and",
-      "startMs": 1582,
-      "endMs": 1749,
+      "startMs": 2809,
+      "endMs": 3053,
       "pageBreakAfter": true
     },
     {
       "text": " students",
-      "startMs": 1749,
-      "endMs": 2054
+      "startMs": 3053,
+      "endMs": 3498
     },
     {
       "text": " in",
-      "startMs": 2054,
-      "endMs": 2193
+      "startMs": 3498,
+      "endMs": 3701
     },
     {
       "text": " 2026.",
-      "startMs": 2193,
-      "endMs": 2415
+      "startMs": 3701,
+      "endMs": 4025
     },
     {
       "text": " Compare",
-      "startMs": 2415,
-      "endMs": 2693,
+      "startMs": 4025,
+      "endMs": 4430,
       "pageBreakAfter": true
     },
     {
       "text": " top",
-      "startMs": 2693,
-      "endMs": 2859
+      "startMs": 4430,
+      "endMs": 4673
     },
     {
       "text": " discovery,",
-      "startMs": 2859,
-      "endMs": 3220,
+      "startMs": 4673,
+      "endMs": 6067,
       "pageBreakAfter": true
     },
     {
       "text": " Consensus:",
-      "startMs": 3500,
-      "endMs": 3694
+      "startMs": 6600,
+      "endMs": 7107
     },
     {
       "text": " Best",
-      "startMs": 3694,
-      "endMs": 3799
+      "startMs": 7107,
+      "endMs": 7380
     },
     {
       "text": " for",
-      "startMs": 3799,
-      "endMs": 3889
+      "startMs": 7380,
+      "endMs": 7615
     },
     {
       "text": " Evidence-Based",
-      "startMs": 3889,
-      "endMs": 4143,
+      "startMs": 7615,
+      "endMs": 8278,
       "pageBreakAfter": true
     },
     {
       "text": " Answers.",
-      "startMs": 4143,
-      "endMs": 4308
+      "startMs": 8278,
+      "endMs": 8707
     },
     {
       "text": " Price:",
-      "startMs": 4308,
-      "endMs": 4442
+      "startMs": 8707,
+      "endMs": 9059
     },
     {
       "text": " Free",
-      "startMs": 4442,
-      "endMs": 4547
+      "startMs": 9059,
+      "endMs": 9332
     },
     {
       "text": " (Pro",
-      "startMs": 4547,
-      "endMs": 4652,
+      "startMs": 9332,
+      "endMs": 9605,
       "pageBreakAfter": true
     },
     {
       "text": " starts",
-      "startMs": 4652,
-      "endMs": 4787
+      "startMs": 9605,
+      "endMs": 9956
     },
     {
       "text": " at",
-      "startMs": 4787,
-      "endMs": 4861
+      "startMs": 9956,
+      "endMs": 10151
     },
     {
       "text": " $15/month",
-      "startMs": 4861,
-      "endMs": 5041
+      "startMs": 10151,
+      "endMs": 10620
     },
     {
       "text": " or",
-      "startMs": 5041,
-      "endMs": 5116,
+      "startMs": 10620,
+      "endMs": 10815,
       "pageBreakAfter": true
     },
     {
       "text": " $120/year;",
-      "startMs": 5116,
-      "endMs": 5310
+      "startMs": 10815,
+      "endMs": 11322
     },
     {
       "text": " Deep",
-      "startMs": 5310,
-      "endMs": 5415
+      "startMs": 11322,
+      "endMs": 11595
     },
     {
       "text": " plan",
-      "startMs": 5415,
-      "endMs": 5520
+      "startMs": 11595,
+      "endMs": 11868
     },
     {
       "text": " at",
-      "startMs": 5520,
-      "endMs": 5594,
+      "startMs": 11868,
+      "endMs": 12063,
       "pageBreakAfter": true
     },
     {
       "text": " $65/month)",
-      "startMs": 5594,
-      "endMs": 5789
+      "startMs": 12063,
+      "endMs": 12571
     },
     {
       "text": " Consensus",
-      "startMs": 5789,
-      "endMs": 5968
+      "startMs": 12571,
+      "endMs": 13039
     },
     {
       "text": " is",
-      "startMs": 5968,
-      "endMs": 6043
+      "startMs": 13039,
+      "endMs": 13234
     },
     {
       "text": " an",
-      "startMs": 6043,
-      "endMs": 6118,
+      "startMs": 13234,
+      "endMs": 13429,
       "pageBreakAfter": true
     },
     {
       "text": " AI-powered",
-      "startMs": 6118,
-      "endMs": 6312
+      "startMs": 13429,
+      "endMs": 13937
     },
     {
       "text": " academic",
-      "startMs": 6312,
-      "endMs": 6477
+      "startMs": 13937,
+      "endMs": 14366
     },
     {
       "text": " search",
-      "startMs": 6477,
-      "endMs": 6612
+      "startMs": 14366,
+      "endMs": 14717
     },
     {
       "text": " engine",
-      "startMs": 6612,
-      "endMs": 6746,
+      "startMs": 14717,
+      "endMs": 15068,
       "pageBreakAfter": true
     },
     {
       "text": " built",
-      "startMs": 6746,
-      "endMs": 6866
+      "startMs": 15068,
+      "endMs": 15380
     },
     {
       "text": " on",
-      "startMs": 6866,
-      "endMs": 6941
+      "startMs": 15380,
+      "endMs": 15576
     },
     {
       "text": " top",
-      "startMs": 6941,
-      "endMs": 7030
+      "startMs": 15576,
+      "endMs": 15810
     },
     {
       "text": " of",
-      "startMs": 7030,
-      "endMs": 7105,
+      "startMs": 15810,
+      "endMs": 16005,
       "pageBreakAfter": true
     },
     {
       "text": " a…",
-      "startMs": 7105,
-      "endMs": 7180,
+      "startMs": 16005,
+      "endMs": 17067,
       "pageBreakAfter": true
     },
     {
       "text": " Why",
-      "startMs": 7500,
-      "endMs": 7594
+      "startMs": 17600,
+      "endMs": 17844
     },
     {
       "text": " Primary-Level",
-      "startMs": 7594,
-      "endMs": 7843
+      "startMs": 17844,
+      "endMs": 18495
     },
     {
       "text": " Users",
-      "startMs": 7843,
-      "endMs": 7968
+      "startMs": 18495,
+      "endMs": 18820
     },
     {
       "text": " Love",
-      "startMs": 7968,
-      "endMs": 8077,
+      "startMs": 18820,
+      "endMs": 19105,
       "pageBreakAfter": true
     },
     {
       "text": " It.",
-      "startMs": 8077,
-      "endMs": 8171
+      "startMs": 19105,
+      "endMs": 19349
     },
     {
       "text": " When",
-      "startMs": 8171,
-      "endMs": 8280
+      "startMs": 19349,
+      "endMs": 19634
     },
     {
       "text": " you",
-      "startMs": 8280,
-      "endMs": 8373
+      "startMs": 19634,
+      "endMs": 19878
     },
     {
       "text": " type",
-      "startMs": 8373,
-      "endMs": 8482,
+      "startMs": 19878,
+      "endMs": 20163,
       "pageBreakAfter": true
     },
     {
       "text": " a",
-      "startMs": 8482,
-      "endMs": 8545
+      "startMs": 20163,
+      "endMs": 20325
     },
     {
       "text": " question",
-      "startMs": 8545,
-      "endMs": 8716
+      "startMs": 20325,
+      "endMs": 20773
     },
     {
       "text": " into",
-      "startMs": 8716,
-      "endMs": 8825
+      "startMs": 20773,
+      "endMs": 21058
     },
     {
       "text": " Consensus,",
-      "startMs": 8825,
-      "endMs": 9028,
+      "startMs": 21058,
+      "endMs": 21586,
       "pageBreakAfter": true
     },
     {
       "text": " it",
-      "startMs": 9028,
-      "endMs": 9106
+      "startMs": 21586,
+      "endMs": 21790
     },
     {
       "text": " evaluates",
-      "startMs": 9106,
-      "endMs": 9293
+      "startMs": 21790,
+      "endMs": 22278
     },
     {
       "text": " the",
-      "startMs": 9293,
-      "endMs": 9387
+      "startMs": 22278,
+      "endMs": 22522
     },
     {
       "text": " underlying",
-      "startMs": 9387,
-      "endMs": 9589,
+      "startMs": 22522,
+      "endMs": 23051,
       "pageBreakAfter": true
     },
     {
       "text": " studies",
-      "startMs": 9589,
-      "endMs": 9745
+      "startMs": 23051,
+      "endMs": 23458
     },
     {
       "text": " and",
-      "startMs": 9745,
-      "endMs": 9839
+      "startMs": 23458,
+      "endMs": 23702
     },
     {
       "text": " provides",
-      "startMs": 9839,
-      "endMs": 10011
+      "startMs": 23702,
+      "endMs": 24149
     },
     {
       "text": " the",
-      "startMs": 10011,
-      "endMs": 10104,
+      "startMs": 24149,
+      "endMs": 24393,
       "pageBreakAfter": true
     },
     {
       "text": " Consensus",
-      "startMs": 10104,
-      "endMs": 10291
+      "startMs": 24393,
+      "endMs": 24881
     },
     {
       "text": " Meter,",
-      "startMs": 10291,
-      "endMs": 10432
+      "startMs": 24881,
+      "endMs": 25247
     },
     {
       "text": " which",
-      "startMs": 10432,
-      "endMs": 10556
+      "startMs": 25247,
+      "endMs": 25573
     },
     {
       "text": " visually",
-      "startMs": 10556,
-      "endMs": 10728,
+      "startMs": 25573,
+      "endMs": 26020,
       "pageBreakAfter": true
     },
     {
       "text": " indicates",
-      "startMs": 10728,
-      "endMs": 10915
+      "startMs": 26020,
+      "endMs": 26508
     },
     {
       "text": " whether",
-      "startMs": 10915,
-      "endMs": 11071
+      "startMs": 26508,
+      "endMs": 26915
     },
     {
       "text": " the…",
-      "startMs": 11071,
-      "endMs": 11180,
+      "startMs": 26915,
+      "endMs": 28067,
       "pageBreakAfter": true
     },
     {
       "text": " Limitations",
-      "startMs": 11500,
-      "endMs": 11756
+      "startMs": 28600,
+      "endMs": 29269
     },
     {
       "text": " to",
-      "startMs": 11756,
-      "endMs": 11848
+      "startMs": 29269,
+      "endMs": 29507
     },
     {
       "text": " Keep",
-      "startMs": 11848,
-      "endMs": 11976
+      "startMs": 29507,
+      "endMs": 29842
     },
     {
       "text": " in",
-      "startMs": 11976,
-      "endMs": 12068,
+      "startMs": 29842,
+      "endMs": 30081,
       "pageBreakAfter": true
     },
     {
       "text": " Mind.",
-      "startMs": 12068,
-      "endMs": 12214
+      "startMs": 30081,
+      "endMs": 30463
     },
     {
       "text": " The",
-      "startMs": 12214,
-      "endMs": 12324
+      "startMs": 30463,
+      "endMs": 30749
     },
     {
       "text": " free",
-      "startMs": 12324,
-      "endMs": 12452
+      "startMs": 30749,
+      "endMs": 31084
     },
     {
       "text": " tier",
-      "startMs": 12452,
-      "endMs": 12580,
+      "startMs": 31084,
+      "endMs": 31418,
       "pageBreakAfter": true
     },
     {
       "text": " is",
-      "startMs": 12580,
-      "endMs": 12672
+      "startMs": 31418,
+      "endMs": 31657
     },
     {
       "text": " helpful",
-      "startMs": 12672,
-      "endMs": 12855
+      "startMs": 31657,
+      "endMs": 32134
     },
     {
       "text": " for",
-      "startMs": 12855,
-      "endMs": 12965
+      "startMs": 32134,
+      "endMs": 32421
     },
     {
       "text": " exploratory",
-      "startMs": 12965,
-      "endMs": 13221,
+      "startMs": 32421,
+      "endMs": 33090,
       "pageBreakAfter": true
     },
     {
       "text": " searches,",
-      "startMs": 13221,
-      "endMs": 13441
+      "startMs": 33090,
+      "endMs": 33663
     },
     {
       "text": " but",
-      "startMs": 13441,
-      "endMs": 13551
+      "startMs": 33663,
+      "endMs": 33949
     },
     {
       "text": " it",
-      "startMs": 13551,
-      "endMs": 13642
+      "startMs": 33949,
+      "endMs": 34188
     },
     {
       "text": " is",
-      "startMs": 13642,
-      "endMs": 13734,
+      "startMs": 34188,
+      "endMs": 34427,
       "pageBreakAfter": true
     },
     {
       "text": " capped",
-      "startMs": 13734,
-      "endMs": 13898
+      "startMs": 34427,
+      "endMs": 34857
     },
     {
       "text": " at",
-      "startMs": 13898,
-      "endMs": 13990
+      "startMs": 34857,
+      "endMs": 35096
     },
     {
       "text": " 3",
-      "startMs": 13990,
-      "endMs": 14063
+      "startMs": 35096,
+      "endMs": 35287
     },
     {
       "text": " Deep",
-      "startMs": 14063,
-      "endMs": 14191,
+      "startMs": 35287,
+      "endMs": 35621,
       "pageBreakAfter": true
     },
     {
       "text": " Searches",
-      "startMs": 14191,
-      "endMs": 14393
+      "startMs": 35621,
+      "endMs": 36146
     },
     {
       "text": " per",
-      "startMs": 14393,
-      "endMs": 14503
+      "startMs": 36146,
+      "endMs": 36433
     },
     {
       "text": " month",
-      "startMs": 14503,
-      "endMs": 14649
+      "startMs": 36433,
+      "endMs": 36815
     },
     {
       "text": " and",
-      "startMs": 14649,
-      "endMs": 14759,
+      "startMs": 36815,
+      "endMs": 37101,
       "pageBreakAfter": true
     },
     {
       "text": " 15",
-      "startMs": 14759,
-      "endMs": 14850
+      "startMs": 37101,
+      "endMs": 37340
     },
     {
       "text": " Pro",
-      "startMs": 14850,
-      "endMs": 14960
+      "startMs": 37340,
+      "endMs": 37627
     },
     {
       "text": " Analyses.",
-      "startMs": 14960,
-      "endMs": 15180,
+      "startMs": 37627,
+      "endMs": 39067,
       "pageBreakAfter": true
     },
     {
       "text": " Elicit:",
-      "startMs": 15500,
-      "endMs": 15646
+      "startMs": 39600,
+      "endMs": 39981
     },
     {
       "text": " Best",
-      "startMs": 15646,
-      "endMs": 15748
+      "startMs": 39981,
+      "endMs": 40248
     },
     {
       "text": " for",
-      "startMs": 15748,
-      "endMs": 15836
+      "startMs": 40248,
+      "endMs": 40476
     },
     {
       "text": " Automated",
-      "startMs": 15836,
-      "endMs": 16011,
+      "startMs": 40476,
+      "endMs": 40933,
       "pageBreakAfter": true
     },
     {
       "text": " Literature",
-      "startMs": 16011,
-      "endMs": 16201
+      "startMs": 40933,
+      "endMs": 41429
     },
     {
       "text": " Reviews.",
-      "startMs": 16201,
-      "endMs": 16362
+      "startMs": 41429,
+      "endMs": 41848
     },
     {
       "text": " Price:",
-      "startMs": 16362,
-      "endMs": 16493
+      "startMs": 41848,
+      "endMs": 42190
     },
     {
       "text": " Free",
-      "startMs": 16493,
-      "endMs": 16595,
+      "startMs": 42190,
+      "endMs": 42457,
       "pageBreakAfter": true
     },
     {
       "text": " Basic",
-      "startMs": 16595,
-      "endMs": 16712
+      "startMs": 42457,
+      "endMs": 42762
     },
     {
       "text": " Plan",
-      "startMs": 16712,
-      "endMs": 16814
+      "startMs": 42762,
+      "endMs": 43029
     },
     {
       "text": " (Pro",
-      "startMs": 16814,
-      "endMs": 16917
+      "startMs": 43029,
+      "endMs": 43295
     },
     {
       "text": " is",
-      "startMs": 16917,
-      "endMs": 16990,
+      "startMs": 43295,
+      "endMs": 43486,
       "pageBreakAfter": true
     },
     {
       "text": " $49/user/month",
-      "startMs": 16990,
-      "endMs": 17238
+      "startMs": 43486,
+      "endMs": 44133
     },
     {
       "text": " billed",
-      "startMs": 17238,
-      "endMs": 17369
+      "startMs": 44133,
+      "endMs": 44476
     },
     {
       "text": " annually)",
-      "startMs": 17369,
-      "endMs": 17544
+      "startMs": 44476,
+      "endMs": 44933
     },
     {
       "text": " Elicit",
-      "startMs": 17544,
-      "endMs": 17676,
+      "startMs": 44933,
+      "endMs": 45276,
       "pageBreakAfter": true
     },
     {
       "text": " is",
-      "startMs": 17676,
-      "endMs": 17749
+      "startMs": 45276,
+      "endMs": 45467
     },
     {
       "text": " designed",
-      "startMs": 17749,
-      "endMs": 17910
+      "startMs": 45467,
+      "endMs": 45886
     },
     {
       "text": " to",
-      "startMs": 17910,
-      "endMs": 17983
+      "startMs": 45886,
+      "endMs": 46076
     },
     {
       "text": " streamline",
-      "startMs": 17983,
-      "endMs": 18172,
+      "startMs": 46076,
+      "endMs": 46571,
       "pageBreakAfter": true
     },
     {
       "text": " literature",
-      "startMs": 18172,
-      "endMs": 18362
+      "startMs": 46571,
+      "endMs": 47067
     },
     {
       "text": " reviews",
-      "startMs": 18362,
-      "endMs": 18508
+      "startMs": 47067,
+      "endMs": 47448
     },
     {
       "text": " by",
-      "startMs": 18508,
-      "endMs": 18581
+      "startMs": 47448,
+      "endMs": 47638
     },
     {
       "text": " extracting",
-      "startMs": 18581,
-      "endMs": 18771,
+      "startMs": 47638,
+      "endMs": 48133,
       "pageBreakAfter": true
     },
     {
       "text": " key",
-      "startMs": 18771,
-      "endMs": 18859
+      "startMs": 48133,
+      "endMs": 48362
     },
     {
       "text": " data",
-      "startMs": 18859,
-      "endMs": 18961
+      "startMs": 48362,
+      "endMs": 48629
     },
     {
       "text": " points—such…",
-      "startMs": 18961,
-      "endMs": 19180,
+      "startMs": 48629,
+      "endMs": 50067,
       "pageBreakAfter": true
     },
     {
       "text": " Why",
-      "startMs": 19500,
-      "endMs": 19647
+      "startMs": 50600,
+      "endMs": 50877
     },
     {
       "text": " Primary-Level",
-      "startMs": 19647,
-      "endMs": 20040
+      "startMs": 50877,
+      "endMs": 51617
     },
     {
       "text": " Users",
-      "startMs": 20040,
-      "endMs": 20236
+      "startMs": 51617,
+      "endMs": 51987
     },
     {
       "text": " Love",
-      "startMs": 20236,
-      "endMs": 20408,
+      "startMs": 51987,
+      "endMs": 52310,
       "pageBreakAfter": true
     },
     {
       "text": " It.",
-      "startMs": 20408,
-      "endMs": 20555
+      "startMs": 52310,
+      "endMs": 52588
     },
     {
       "text": " Manually",
-      "startMs": 20555,
-      "endMs": 20825
+      "startMs": 52588,
+      "endMs": 53096
     },
     {
       "text": " creating",
-      "startMs": 20825,
-      "endMs": 21095
+      "startMs": 53096,
+      "endMs": 53604
     },
     {
       "text": " a",
-      "startMs": 21095,
-      "endMs": 21193,
+      "startMs": 53604,
+      "endMs": 53789,
       "pageBreakAfter": true
     },
     {
       "text": " matrix",
-      "startMs": 21193,
-      "endMs": 21414
+      "startMs": 53789,
+      "endMs": 54205
     },
     {
       "text": " in",
-      "startMs": 21414,
-      "endMs": 21536
+      "startMs": 54205,
+      "endMs": 54436
     },
     {
       "text": " Excel",
-      "startMs": 21536,
-      "endMs": 21733
+      "startMs": 54436,
+      "endMs": 54806
     },
     {
       "text": " to",
-      "startMs": 21733,
-      "endMs": 21855,
+      "startMs": 54806,
+      "endMs": 55037,
       "pageBreakAfter": true
     },
     {
       "text": " compare",
-      "startMs": 21855,
-      "endMs": 22101
+      "startMs": 55037,
+      "endMs": 55500
     },
     {
       "text": " 20",
-      "startMs": 22101,
-      "endMs": 22223
+      "startMs": 55500,
+      "endMs": 55731
     },
     {
       "text": " research",
-      "startMs": 22223,
-      "endMs": 22493
+      "startMs": 55731,
+      "endMs": 56239
     },
     {
       "text": " papers",
-      "startMs": 22493,
-      "endMs": 22714,
+      "startMs": 56239,
+      "endMs": 56655,
       "pageBreakAfter": true
     },
     {
       "text": " is",
-      "startMs": 22714,
-      "endMs": 22837
+      "startMs": 56655,
+      "endMs": 56886
     },
     {
       "text": " exhausting.",
-      "startMs": 22837,
-      "endMs": 23180,
+      "startMs": 56886,
+      "endMs": 58400,
       "pageBreakAfter": true
     },
     {
       "text": " Limitations",
-      "startMs": 23500,
-      "endMs": 23785
+      "startMs": 58933,
+      "endMs": 59557
     },
     {
       "text": " to",
-      "startMs": 23785,
-      "endMs": 23886
+      "startMs": 59557,
+      "endMs": 59780
     },
     {
       "text": " Keep",
-      "startMs": 23886,
-      "endMs": 24029
+      "startMs": 59780,
+      "endMs": 60092
     },
     {
       "text": " in",
-      "startMs": 24029,
-      "endMs": 24130,
+      "startMs": 60092,
+      "endMs": 60315,
       "pageBreakAfter": true
     },
     {
       "text": " Mind.",
-      "startMs": 24130,
-      "endMs": 24293
+      "startMs": 60315,
+      "endMs": 60671
     },
     {
       "text": " The",
-      "startMs": 24293,
-      "endMs": 24415
+      "startMs": 60671,
+      "endMs": 60939
     },
     {
       "text": " free",
-      "startMs": 24415,
-      "endMs": 24557
+      "startMs": 60939,
+      "endMs": 61251
     },
     {
       "text": " Basic",
-      "startMs": 24557,
-      "endMs": 24720,
+      "startMs": 61251,
+      "endMs": 61607,
       "pageBreakAfter": true
     },
     {
       "text": " plan",
-      "startMs": 24720,
-      "endMs": 24862
+      "startMs": 61607,
+      "endMs": 61919
     },
     {
       "text": " is",
-      "startMs": 24862,
-      "endMs": 24964
+      "startMs": 61919,
+      "endMs": 62142
     },
     {
       "text": " relatively",
-      "startMs": 24964,
-      "endMs": 25228
+      "startMs": 62142,
+      "endMs": 62722
     },
     {
       "text": " restricted,",
-      "startMs": 25228,
-      "endMs": 25513,
+      "startMs": 62722,
+      "endMs": 63345,
       "pageBreakAfter": true
     },
     {
       "text": " offering",
-      "startMs": 25513,
-      "endMs": 25736
+      "startMs": 63345,
+      "endMs": 63836
     },
     {
       "text": " limited",
-      "startMs": 25736,
-      "endMs": 25940
+      "startMs": 63836,
+      "endMs": 64281
     },
     {
       "text": " automated",
-      "startMs": 25940,
-      "endMs": 26184
+      "startMs": 64281,
+      "endMs": 64816
     },
     {
       "text": " reports",
-      "startMs": 26184,
-      "endMs": 26387,
+      "startMs": 64816,
+      "endMs": 65262,
       "pageBreakAfter": true
     },
     {
       "text": " and",
-      "startMs": 26387,
-      "endMs": 26509
+      "startMs": 65262,
+      "endMs": 65529
     },
     {
       "text": " table",
-      "startMs": 26509,
-      "endMs": 26672
+      "startMs": 65529,
+      "endMs": 65886
     },
     {
       "text": " columns",
-      "startMs": 26672,
-      "endMs": 26875
+      "startMs": 65886,
+      "endMs": 66331
     },
     {
       "text": " per",
-      "startMs": 26875,
-      "endMs": 26997,
+      "startMs": 66331,
+      "endMs": 66599,
       "pageBreakAfter": true
     },
     {
       "text": " month.",
-      "startMs": 26997,
-      "endMs": 27180,
+      "startMs": 66599,
+      "endMs": 67867,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Semantic",
+      "startMs": 68400,
+      "endMs": 68806
+    },
+    {
+      "text": " Scholar:",
+      "startMs": 68806,
+      "endMs": 69212
+    },
+    {
+      "text": " Best",
+      "startMs": 69212,
+      "endMs": 69471
+    },
+    {
+      "text": " 100%",
+      "startMs": 69471,
+      "endMs": 69729,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Free",
+      "startMs": 69729,
+      "endMs": 69988
+    },
+    {
+      "text": " Discovery",
+      "startMs": 69988,
+      "endMs": 70431
+    },
+    {
+      "text": " Engine.",
+      "startMs": 70431,
+      "endMs": 70800
+    },
+    {
+      "text": " Price:",
+      "startMs": 70800,
+      "endMs": 71132,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " 100%",
+      "startMs": 71132,
+      "endMs": 71391
+    },
+    {
+      "text": " Free",
+      "startMs": 71391,
+      "endMs": 71649
+    },
+    {
+      "text": " Maintained",
+      "startMs": 71649,
+      "endMs": 72129
+    },
+    {
+      "text": " by",
+      "startMs": 72129,
+      "endMs": 72314,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " the",
+      "startMs": 72314,
+      "endMs": 72535
+    },
+    {
+      "text": " Allen",
+      "startMs": 72535,
+      "endMs": 72831
+    },
+    {
+      "text": " Institute",
+      "startMs": 72831,
+      "endMs": 73274
+    },
+    {
+      "text": " for",
+      "startMs": 73274,
+      "endMs": 73495,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " AI,",
+      "startMs": 73495,
+      "endMs": 73717
+    },
+    {
+      "text": " Semantic",
+      "startMs": 73717,
+      "endMs": 74123
+    },
+    {
+      "text": " Scholar",
+      "startMs": 74123,
+      "endMs": 74492
+    },
+    {
+      "text": " indexes",
+      "startMs": 74492,
+      "endMs": 74862,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " over",
+      "startMs": 74862,
+      "endMs": 75120
+    },
+    {
+      "text": " 200",
+      "startMs": 75120,
+      "endMs": 75342
+    },
+    {
+      "text": " million",
+      "startMs": 75342,
+      "endMs": 75711
+    },
+    {
+      "text": " academic",
+      "startMs": 75711,
+      "endMs": 76117,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " articles",
+      "startMs": 76117,
+      "endMs": 76523
+    },
+    {
+      "text": " across",
+      "startMs": 76523,
+      "endMs": 76855
+    },
+    {
+      "text": " all",
+      "startMs": 76855,
+      "endMs": 77077
+    },
+    {
+      "text": " fields",
+      "startMs": 77077,
+      "endMs": 77409,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " of",
+      "startMs": 77409,
+      "endMs": 77594
+    },
+    {
+      "text": " science…",
+      "startMs": 77594,
+      "endMs": 78867,
       "pageBreakAfter": true
     },
     {
       "text": " Read",
-      "startMs": 27500,
-      "endMs": 27785
+      "startMs": 79400,
+      "endMs": 79770
     },
     {
       "text": " the",
-      "startMs": 27785,
-      "endMs": 28030
+      "startMs": 79770,
+      "endMs": 80087
     },
     {
       "text": " full",
-      "startMs": 28030,
-      "endMs": 28315
+      "startMs": 80087,
+      "endMs": 80457
     },
     {
       "text": " article.",
-      "startMs": 28315,
-      "endMs": 28764,
+      "startMs": 80457,
+      "endMs": 81038,
       "pageBreakAfter": true
     },
     {
       "text": " New",
-      "startMs": 28764,
-      "endMs": 29008
+      "startMs": 81038,
+      "endMs": 81355
     },
     {
       "text": " posts",
-      "startMs": 29008,
-      "endMs": 29334
+      "startMs": 81355,
+      "endMs": 81778
     },
     {
       "text": " every",
-      "startMs": 29334,
-      "endMs": 29660
+      "startMs": 81778,
+      "endMs": 82201
     },
     {
       "text": " week",
-      "startMs": 29660,
-      "endMs": 29946,
+      "startMs": 82201,
+      "endMs": 82571,
       "pageBreakAfter": true
     },
     {
       "text": " on",
-      "startMs": 29946,
-      "endMs": 30149
+      "startMs": 82571,
+      "endMs": 82835
     },
     {
       "text": " the",
-      "startMs": 30149,
-      "endMs": 30394
+      "startMs": 82835,
+      "endMs": 83152
     },
     {
       "text": " blog.",
-      "startMs": 30394,
-      "endMs": 30720,
+      "startMs": 83152,
+      "endMs": 84367,
       "pageBreakAfter": true
     }
   ],

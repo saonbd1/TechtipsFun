@@ -9,29 +9,37 @@
     "Frontend"
   ],
   "url": "https://www.techtips.fun/blog/build-bulk-10-url-shortner-next-js/",
-  "theme": "github-dark",
-  "durationInFrames": 830,
   "scenes": [
     {
       "type": "title",
       "kicker": "Web Development",
       "title": "Build a Bulk 10 URL Shortener Platform Using Next.JS",
       "subtitle": "Follow Easy Steps on Next.js for URL redirect route; Learn more about URL shortener API…",
-      "durationInFrames": 105
+      "image": {
+        "src": "post-media/build-bulk-10-url-shortner-next-js/01-bulk-url-shortner.webp",
+        "width": 960,
+        "height": 504
+      },
+      "durationInFrames": 183
     },
     {
       "type": "point",
       "kicker": "Web Development",
       "heading": "Introduction",
       "body": "A URL shortener accepts a long URL and returns a shorter URL. The short URL must still point to the original destination.",
-      "durationInFrames": 120
+      "durationInFrames": 307
     },
     {
       "type": "point",
       "kicker": "Web Development",
       "heading": "What the project builds",
       "body": "The user submits a URL such as www-ton/asd. The browser sends the URL to POST /api/shorten.",
-      "durationInFrames": 120
+      "image": {
+        "src": "post-media/build-bulk-10-url-shortner-next-js/02-link-shortner2.webp",
+        "width": 540,
+        "height": 204
+      },
+      "durationInFrames": 309
     },
     {
       "type": "code",
@@ -88,7 +96,10 @@
           }
         }
       ],
-      "durationInFrames": 95
+      "stepDurations": [
+        182
+      ],
+      "durationInFrames": 182
     },
     {
       "type": "code",
@@ -130,7 +141,10 @@
           }
         }
       ],
-      "durationInFrames": 95
+      "stepDurations": [
+        135
+      ],
+      "durationInFrames": 135
     },
     {
       "type": "code",
@@ -182,7 +196,10 @@
           }
         }
       ],
-      "durationInFrames": 95
+      "stepDurations": [
+        141
+      ],
+      "durationInFrames": 141
     },
     {
       "type": "code",
@@ -234,641 +251,1130 @@
           }
         }
       ],
-      "durationInFrames": 95
+      "stepDurations": [
+        168
+      ],
+      "durationInFrames": 168
+    },
+    {
+      "type": "point",
+      "kicker": "Web Development",
+      "heading": "Step 5: Connect the form to the API",
+      "body": "The client form sends the submitted value to the API. It reads the returned shortUrl and displays it to the user.",
+      "durationInFrames": 330
+    },
+    {
+      "type": "point",
+      "kicker": "Web Development",
+      "heading": "The project deployment is Okay, but the short link does not redirect",
+      "body": "A successful build shows that the application compiles. It does not show that the dynamic route finds a stored record. Run the complete flow.",
+      "durationInFrames": 330
+    },
+    {
+      "type": "point",
+      "kicker": "Web Development",
+      "heading": "Repeated submissions create many records",
+      "body": "Normalize the destination before you compare it. Then find an existing record before you create a new code.",
+      "durationInFrames": 307
     },
     {
       "type": "outro",
       "heading": "Read the full article",
       "body": "New posts every week on the blog.",
       "url": "techtips.fun",
-      "durationInFrames": 105
+      "durationInFrames": 165
     }
   ],
+  "theme": "github-dark",
+  "durationInFrames": 2557,
   "captions": [
     {
       "text": " Follow",
-      "startMs": 0,
-      "endMs": 246
+      "startMs": 500,
+      "endMs": 858
     },
     {
       "text": " Easy",
-      "startMs": 246,
-      "endMs": 437
+      "startMs": 858,
+      "endMs": 1137
     },
     {
       "text": " Steps",
-      "startMs": 437,
-      "endMs": 655
+      "startMs": 1137,
+      "endMs": 1456
     },
     {
       "text": " on",
-      "startMs": 655,
-      "endMs": 791,
+      "startMs": 1456,
+      "endMs": 1655,
       "pageBreakAfter": true
     },
     {
       "text": " Next.js",
-      "startMs": 791,
-      "endMs": 1064
+      "startMs": 1655,
+      "endMs": 2053
     },
     {
       "text": " for",
-      "startMs": 1064,
-      "endMs": 1228
+      "startMs": 2053,
+      "endMs": 2292
     },
     {
       "text": " URL",
-      "startMs": 1228,
-      "endMs": 1392
+      "startMs": 2292,
+      "endMs": 2531
     },
     {
       "text": " redirect",
-      "startMs": 1392,
-      "endMs": 1692,
+      "startMs": 2531,
+      "endMs": 2969,
       "pageBreakAfter": true
     },
     {
       "text": " route;",
-      "startMs": 1692,
-      "endMs": 1937
+      "startMs": 2969,
+      "endMs": 3328
     },
     {
       "text": " Learn",
-      "startMs": 1937,
-      "endMs": 2156
+      "startMs": 3328,
+      "endMs": 3647
     },
     {
       "text": " more",
-      "startMs": 2156,
-      "endMs": 2347
+      "startMs": 3647,
+      "endMs": 3925
     },
     {
       "text": " about",
-      "startMs": 2347,
-      "endMs": 2565,
+      "startMs": 3925,
+      "endMs": 4244,
       "pageBreakAfter": true
     },
     {
       "text": " URL",
-      "startMs": 2565,
-      "endMs": 2729
+      "startMs": 4244,
+      "endMs": 4483
     },
     {
       "text": " shortener",
-      "startMs": 2729,
-      "endMs": 3056
+      "startMs": 4483,
+      "endMs": 4961
     },
     {
       "text": " API",
-      "startMs": 3056,
-      "endMs": 3220,
+      "startMs": 4961,
+      "endMs": 6067,
       "pageBreakAfter": true
     },
     {
       "text": " Introduction.",
-      "startMs": 3500,
-      "endMs": 3824
+      "startMs": 6600,
+      "endMs": 7377
     },
     {
       "text": " A",
-      "startMs": 3824,
-      "endMs": 3904
+      "startMs": 7377,
+      "endMs": 7571
     },
     {
       "text": " URL",
-      "startMs": 3904,
-      "endMs": 4026
+      "startMs": 7571,
+      "endMs": 7862
     },
     {
       "text": " shortener",
-      "startMs": 4026,
-      "endMs": 4268,
+      "startMs": 7862,
+      "endMs": 8444,
       "pageBreakAfter": true
     },
     {
       "text": " accepts",
-      "startMs": 4268,
-      "endMs": 4471
+      "startMs": 8444,
+      "endMs": 8930
     },
     {
       "text": " a",
-      "startMs": 4471,
-      "endMs": 4551
+      "startMs": 8930,
+      "endMs": 9124
     },
     {
       "text": " long",
-      "startMs": 4551,
-      "endMs": 4693
+      "startMs": 9124,
+      "endMs": 9464
     },
     {
       "text": " URL",
-      "startMs": 4693,
-      "endMs": 4814,
+      "startMs": 9464,
+      "endMs": 9755,
       "pageBreakAfter": true
     },
     {
       "text": " and",
-      "startMs": 4814,
-      "endMs": 4936
+      "startMs": 9755,
+      "endMs": 10046
     },
     {
       "text": " returns",
-      "startMs": 4936,
-      "endMs": 5138
+      "startMs": 10046,
+      "endMs": 10531
     },
     {
       "text": " a",
-      "startMs": 5138,
-      "endMs": 5219
+      "startMs": 10531,
+      "endMs": 10725
     },
     {
       "text": " shorter",
-      "startMs": 5219,
-      "endMs": 5421,
+      "startMs": 10725,
+      "endMs": 11211,
       "pageBreakAfter": true
     },
     {
       "text": " URL.",
-      "startMs": 5421,
-      "endMs": 5562
+      "startMs": 11211,
+      "endMs": 11551
     },
     {
       "text": " The",
-      "startMs": 5562,
-      "endMs": 5684
+      "startMs": 11551,
+      "endMs": 11842
     },
     {
       "text": " short",
-      "startMs": 5684,
-      "endMs": 5845
+      "startMs": 11842,
+      "endMs": 12230
     },
     {
       "text": " URL",
-      "startMs": 5845,
-      "endMs": 5967,
+      "startMs": 12230,
+      "endMs": 12521,
       "pageBreakAfter": true
     },
     {
       "text": " must",
-      "startMs": 5967,
-      "endMs": 6108
+      "startMs": 12521,
+      "endMs": 12861
     },
     {
       "text": " still",
-      "startMs": 6108,
-      "endMs": 6270
+      "startMs": 12861,
+      "endMs": 13249
     },
     {
       "text": " point",
-      "startMs": 6270,
-      "endMs": 6432
+      "startMs": 13249,
+      "endMs": 13638
     },
     {
       "text": " to",
-      "startMs": 6432,
-      "endMs": 6533,
+      "startMs": 13638,
+      "endMs": 13880,
       "pageBreakAfter": true
     },
     {
       "text": " the",
-      "startMs": 6533,
-      "endMs": 6654
+      "startMs": 13880,
+      "endMs": 14171
     },
     {
       "text": " original",
-      "startMs": 6654,
-      "endMs": 6877
+      "startMs": 14171,
+      "endMs": 14705
     },
     {
       "text": " destination.",
-      "startMs": 6877,
-      "endMs": 7180,
+      "startMs": 14705,
+      "endMs": 16300,
       "pageBreakAfter": true
     },
     {
       "text": " What",
-      "startMs": 7500,
-      "endMs": 7664
+      "startMs": 16833,
+      "endMs": 17230
     },
     {
       "text": " the",
-      "startMs": 7664,
-      "endMs": 7805
+      "startMs": 17230,
+      "endMs": 17570
     },
     {
       "text": " project",
-      "startMs": 7805,
-      "endMs": 8039
+      "startMs": 17570,
+      "endMs": 18137
     },
     {
       "text": " builds.",
-      "startMs": 8039,
-      "endMs": 8274,
+      "startMs": 18137,
+      "endMs": 18704,
       "pageBreakAfter": true
     },
     {
       "text": " The",
-      "startMs": 8274,
-      "endMs": 8414
+      "startMs": 18704,
+      "endMs": 19044
     },
     {
       "text": " user",
-      "startMs": 8414,
-      "endMs": 8578
+      "startMs": 19044,
+      "endMs": 19441
     },
     {
       "text": " submits",
-      "startMs": 8578,
-      "endMs": 8813
+      "startMs": 19441,
+      "endMs": 20008
     },
     {
       "text": " a",
-      "startMs": 8813,
-      "endMs": 8906,
+      "startMs": 20008,
+      "endMs": 20235,
       "pageBreakAfter": true
     },
     {
       "text": " URL",
-      "startMs": 8906,
-      "endMs": 9047
+      "startMs": 20235,
+      "endMs": 20575
     },
     {
       "text": " such",
-      "startMs": 9047,
-      "endMs": 9211
+      "startMs": 20575,
+      "endMs": 20972
     },
     {
       "text": " as",
-      "startMs": 9211,
-      "endMs": 9328
+      "startMs": 20972,
+      "endMs": 21255
     },
     {
       "text": " www-ton/asd.",
-      "startMs": 9328,
-      "endMs": 9680,
+      "startMs": 21255,
+      "endMs": 22105,
       "pageBreakAfter": true
     },
     {
       "text": " The",
-      "startMs": 9680,
-      "endMs": 9821
+      "startMs": 22105,
+      "endMs": 22445
     },
     {
       "text": " browser",
-      "startMs": 9821,
-      "endMs": 10055
+      "startMs": 22445,
+      "endMs": 23012
     },
     {
       "text": " sends",
-      "startMs": 10055,
-      "endMs": 10242
+      "startMs": 23012,
+      "endMs": 23466
     },
     {
       "text": " the",
-      "startMs": 10242,
-      "endMs": 10383,
+      "startMs": 23466,
+      "endMs": 23806,
       "pageBreakAfter": true
     },
     {
       "text": " URL",
-      "startMs": 10383,
-      "endMs": 10524
+      "startMs": 23806,
+      "endMs": 24146
     },
     {
       "text": " to",
-      "startMs": 10524,
-      "endMs": 10641
+      "startMs": 24146,
+      "endMs": 24430
     },
     {
       "text": " POST",
-      "startMs": 10641,
-      "endMs": 10805
+      "startMs": 24430,
+      "endMs": 24826
     },
     {
       "text": " /api/shorten.",
-      "startMs": 10805,
-      "endMs": 11180,
+      "startMs": 24826,
+      "endMs": 26600,
       "pageBreakAfter": true
     },
     {
       "text": " Step",
-      "startMs": 11500,
-      "endMs": 11734
+      "startMs": 27133,
+      "endMs": 27509
     },
     {
       "text": " 1:",
-      "startMs": 11734,
-      "endMs": 11902
+      "startMs": 27509,
+      "endMs": 27777
     },
     {
       "text": " Validate",
-      "startMs": 11902,
-      "endMs": 12270
+      "startMs": 27777,
+      "endMs": 28367
     },
     {
       "text": " the",
-      "startMs": 12270,
-      "endMs": 12471,
+      "startMs": 28367,
+      "endMs": 28689,
       "pageBreakAfter": true
     },
     {
       "text": " destination",
-      "startMs": 12471,
-      "endMs": 12940
+      "startMs": 28689,
+      "endMs": 29440
     },
     {
       "text": " URL.",
-      "startMs": 12940,
-      "endMs": 13174
+      "startMs": 29440,
+      "endMs": 29815
     },
     {
       "text": " Let",
-      "startMs": 13174,
-      "endMs": 13375
+      "startMs": 29815,
+      "endMs": 30137
     },
     {
       "text": " us",
-      "startMs": 13375,
-      "endMs": 13543,
+      "startMs": 30137,
+      "endMs": 30405,
       "pageBreakAfter": true
     },
     {
       "text": " look",
-      "startMs": 13543,
-      "endMs": 13777
+      "startMs": 30405,
+      "endMs": 30781
     },
     {
       "text": " at",
-      "startMs": 13777,
-      "endMs": 13945
+      "startMs": 30781,
+      "endMs": 31049
     },
     {
       "text": " the",
-      "startMs": 13945,
-      "endMs": 14145
+      "startMs": 31049,
+      "endMs": 31371
     },
     {
       "text": " code.",
-      "startMs": 14145,
-      "endMs": 14413,
+      "startMs": 31371,
+      "endMs": 32667,
       "pageBreakAfter": true
     },
     {
       "text": " Step",
-      "startMs": 14667,
-      "endMs": 14884
+      "startMs": 33200,
+      "endMs": 33448
     },
     {
       "text": " 2:",
-      "startMs": 14884,
-      "endMs": 15039
+      "startMs": 33448,
+      "endMs": 33624
     },
     {
       "text": " Generate",
-      "startMs": 15039,
-      "endMs": 15380
+      "startMs": 33624,
+      "endMs": 34014
     },
     {
       "text": " and",
-      "startMs": 15380,
-      "endMs": 15565,
+      "startMs": 34014,
+      "endMs": 34226,
       "pageBreakAfter": true
     },
     {
       "text": " store",
-      "startMs": 15565,
-      "endMs": 15813
+      "startMs": 34226,
+      "endMs": 34509
     },
     {
       "text": " a",
-      "startMs": 15813,
-      "endMs": 15937
+      "startMs": 34509,
+      "endMs": 34650
     },
     {
       "text": " short",
-      "startMs": 15937,
-      "endMs": 16185
+      "startMs": 34650,
+      "endMs": 34933
     },
     {
       "text": " code.",
-      "startMs": 16185,
-      "endMs": 16433,
+      "startMs": 34933,
+      "endMs": 35216,
       "pageBreakAfter": true
     },
     {
       "text": " Let",
-      "startMs": 16433,
-      "endMs": 16619
+      "startMs": 35216,
+      "endMs": 35428
     },
     {
       "text": " us",
-      "startMs": 16619,
-      "endMs": 16774
+      "startMs": 35428,
+      "endMs": 35605
     },
     {
       "text": " look",
-      "startMs": 16774,
-      "endMs": 16991
+      "startMs": 35605,
+      "endMs": 35853
     },
     {
       "text": " at",
-      "startMs": 16991,
-      "endMs": 17146,
+      "startMs": 35853,
+      "endMs": 36030,
       "pageBreakAfter": true
     },
     {
       "text": " the",
-      "startMs": 17146,
-      "endMs": 17332
+      "startMs": 36030,
+      "endMs": 36242
     },
     {
       "text": " code.",
-      "startMs": 17332,
-      "endMs": 17580,
+      "startMs": 36242,
+      "endMs": 37167,
       "pageBreakAfter": true
     },
     {
       "text": " Step",
-      "startMs": 17833,
-      "endMs": 18088
+      "startMs": 37700,
+      "endMs": 38006
     },
     {
       "text": " 3:",
-      "startMs": 18088,
-      "endMs": 18270
+      "startMs": 38006,
+      "endMs": 38224
     },
     {
       "text": " Deliver",
-      "startMs": 18270,
-      "endMs": 18635
+      "startMs": 38224,
+      "endMs": 38661
     },
     {
       "text": " the",
-      "startMs": 18635,
-      "endMs": 18853,
+      "startMs": 38661,
+      "endMs": 38923,
       "pageBreakAfter": true
     },
     {
       "text": " short",
-      "startMs": 18853,
-      "endMs": 19144
+      "startMs": 38923,
+      "endMs": 39273
     },
     {
       "text": " URL.",
-      "startMs": 19144,
-      "endMs": 19399
+      "startMs": 39273,
+      "endMs": 39579
     },
     {
       "text": " Let",
-      "startMs": 19399,
-      "endMs": 19618
+      "startMs": 39579,
+      "endMs": 39841
     },
     {
       "text": " us",
-      "startMs": 19618,
-      "endMs": 19800,
+      "startMs": 39841,
+      "endMs": 40059,
       "pageBreakAfter": true
     },
     {
       "text": " look",
-      "startMs": 19800,
-      "endMs": 20055
+      "startMs": 40059,
+      "endMs": 40365
     },
     {
       "text": " at",
-      "startMs": 20055,
-      "endMs": 20237
+      "startMs": 40365,
+      "endMs": 40583
     },
     {
       "text": " the",
-      "startMs": 20237,
-      "endMs": 20455
+      "startMs": 40583,
+      "endMs": 40846
     },
     {
       "text": " code.",
-      "startMs": 20455,
-      "endMs": 20747,
+      "startMs": 40846,
+      "endMs": 41867,
       "pageBreakAfter": true
     },
     {
       "text": " Step",
-      "startMs": 21000,
-      "endMs": 21243
+      "startMs": 42400,
+      "endMs": 42755
     },
     {
       "text": " 4:",
-      "startMs": 21243,
-      "endMs": 21416
+      "startMs": 42755,
+      "endMs": 43009
     },
     {
       "text": " Resolve",
-      "startMs": 21416,
-      "endMs": 21763
+      "startMs": 43009,
+      "endMs": 43516
     },
     {
       "text": " the",
-      "startMs": 21763,
-      "endMs": 21971,
+      "startMs": 43516,
+      "endMs": 43820,
       "pageBreakAfter": true
     },
     {
       "text": " dynamic",
-      "startMs": 21971,
-      "endMs": 22318
+      "startMs": 43820,
+      "endMs": 44327
     },
     {
       "text": " route.",
-      "startMs": 22318,
-      "endMs": 22630
+      "startMs": 44327,
+      "endMs": 44784
     },
     {
       "text": " Let",
-      "startMs": 22630,
-      "endMs": 22838
+      "startMs": 44784,
+      "endMs": 45088
     },
     {
       "text": " us",
-      "startMs": 22838,
-      "endMs": 23012,
+      "startMs": 45088,
+      "endMs": 45341,
       "pageBreakAfter": true
     },
     {
       "text": " look",
-      "startMs": 23012,
-      "endMs": 23254
+      "startMs": 45341,
+      "endMs": 45696
     },
     {
       "text": " at",
-      "startMs": 23254,
-      "endMs": 23428
+      "startMs": 45696,
+      "endMs": 45950
     },
     {
       "text": " the",
-      "startMs": 23428,
-      "endMs": 23636
+      "startMs": 45950,
+      "endMs": 46254
     },
     {
       "text": " code.",
-      "startMs": 23636,
-      "endMs": 23913,
+      "startMs": 46254,
+      "endMs": 47467,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Step",
+      "startMs": 48000,
+      "endMs": 48322
+    },
+    {
+      "text": " 5:",
+      "startMs": 48322,
+      "endMs": 48551
+    },
+    {
+      "text": " Connect",
+      "startMs": 48551,
+      "endMs": 49011
+    },
+    {
+      "text": " the",
+      "startMs": 49011,
+      "endMs": 49286,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " form",
+      "startMs": 49286,
+      "endMs": 49608
+    },
+    {
+      "text": " to",
+      "startMs": 49608,
+      "endMs": 49837
+    },
+    {
+      "text": " the",
+      "startMs": 49837,
+      "endMs": 50113
+    },
+    {
+      "text": " API.",
+      "startMs": 50113,
+      "endMs": 50434,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " The",
+      "startMs": 50434,
+      "endMs": 50710
+    },
+    {
+      "text": " client",
+      "startMs": 50710,
+      "endMs": 51123
+    },
+    {
+      "text": " form",
+      "startMs": 51123,
+      "endMs": 51445
+    },
+    {
+      "text": " sends",
+      "startMs": 51445,
+      "endMs": 51812,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " the",
+      "startMs": 51812,
+      "endMs": 52088
+    },
+    {
+      "text": " submitted",
+      "startMs": 52088,
+      "endMs": 52639
+    },
+    {
+      "text": " value",
+      "startMs": 52639,
+      "endMs": 53007
+    },
+    {
+      "text": " to",
+      "startMs": 53007,
+      "endMs": 53236,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " the",
+      "startMs": 53236,
+      "endMs": 53512
+    },
+    {
+      "text": " API.",
+      "startMs": 53512,
+      "endMs": 53833
+    },
+    {
+      "text": " It",
+      "startMs": 53833,
+      "endMs": 54063
+    },
+    {
+      "text": " reads",
+      "startMs": 54063,
+      "endMs": 54431,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " the",
+      "startMs": 54431,
+      "endMs": 54706
+    },
+    {
+      "text": " returned",
+      "startMs": 54706,
+      "endMs": 55211
+    },
+    {
+      "text": " shortUrl",
+      "startMs": 55211,
+      "endMs": 55717
+    },
+    {
+      "text": " and",
+      "startMs": 55717,
+      "endMs": 55992,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " displays",
+      "startMs": 55992,
+      "endMs": 56498
+    },
+    {
+      "text": " it",
+      "startMs": 56498,
+      "endMs": 56727
+    },
+    {
+      "text": " to",
+      "startMs": 56727,
+      "endMs": 56957
+    },
+    {
+      "text": " the",
+      "startMs": 56957,
+      "endMs": 57233,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " user.",
+      "startMs": 57233,
+      "endMs": 58467,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " The",
+      "startMs": 59000,
+      "endMs": 59203
+    },
+    {
+      "text": " project",
+      "startMs": 59203,
+      "endMs": 59541
+    },
+    {
+      "text": " deployment",
+      "startMs": 59541,
+      "endMs": 59980
+    },
+    {
+      "text": " is",
+      "startMs": 59980,
+      "endMs": 60149,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Okay,",
+      "startMs": 60149,
+      "endMs": 60420
+    },
+    {
+      "text": " but",
+      "startMs": 60420,
+      "endMs": 60623
+    },
+    {
+      "text": " the",
+      "startMs": 60623,
+      "endMs": 60825
+    },
+    {
+      "text": " short",
+      "startMs": 60825,
+      "endMs": 61096,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " link",
+      "startMs": 61096,
+      "endMs": 61332
+    },
+    {
+      "text": " does",
+      "startMs": 61332,
+      "endMs": 61569
+    },
+    {
+      "text": " not",
+      "startMs": 61569,
+      "endMs": 61772
+    },
+    {
+      "text": " redirect.",
+      "startMs": 61772,
+      "endMs": 62177,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " A",
+      "startMs": 62177,
+      "endMs": 62313
+    },
+    {
+      "text": " successful",
+      "startMs": 62313,
+      "endMs": 62752
+    },
+    {
+      "text": " build",
+      "startMs": 62752,
+      "endMs": 63023
+    },
+    {
+      "text": " shows",
+      "startMs": 63023,
+      "endMs": 63293,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " that",
+      "startMs": 63293,
+      "endMs": 63530
+    },
+    {
+      "text": " the",
+      "startMs": 63530,
+      "endMs": 63732
+    },
+    {
+      "text": " application",
+      "startMs": 63732,
+      "endMs": 64206
+    },
+    {
+      "text": " compiles.",
+      "startMs": 64206,
+      "endMs": 64611,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " It",
+      "startMs": 64611,
+      "endMs": 64780
+    },
+    {
+      "text": " does",
+      "startMs": 64780,
+      "endMs": 65017
+    },
+    {
+      "text": " not",
+      "startMs": 65017,
+      "endMs": 65220
+    },
+    {
+      "text": " show",
+      "startMs": 65220,
+      "endMs": 65456,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " that",
+      "startMs": 65456,
+      "endMs": 65693
+    },
+    {
+      "text": " the",
+      "startMs": 65693,
+      "endMs": 65896
+    },
+    {
+      "text": " dynamic",
+      "startMs": 65896,
+      "endMs": 66234
+    },
+    {
+      "text": " route",
+      "startMs": 66234,
+      "endMs": 66504,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " finds",
+      "startMs": 66504,
+      "endMs": 66775
+    },
+    {
+      "text": " a",
+      "startMs": 66775,
+      "endMs": 66910
+    },
+    {
+      "text": " stored",
+      "startMs": 66910,
+      "endMs": 67214
+    },
+    {
+      "text": " record.",
+      "startMs": 67214,
+      "endMs": 67552,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Run",
+      "startMs": 67552,
+      "endMs": 67755
+    },
+    {
+      "text": " the",
+      "startMs": 67755,
+      "endMs": 67958
+    },
+    {
+      "text": " complete",
+      "startMs": 67958,
+      "endMs": 68330
+    },
+    {
+      "text": " flow.",
+      "startMs": 68330,
+      "endMs": 69467,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Repeated",
+      "startMs": 70000,
+      "endMs": 70496
+    },
+    {
+      "text": " submissions",
+      "startMs": 70496,
+      "endMs": 71127
+    },
+    {
+      "text": " create",
+      "startMs": 71127,
+      "endMs": 71532
+    },
+    {
+      "text": " many",
+      "startMs": 71532,
+      "endMs": 71848,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " records.",
+      "startMs": 71848,
+      "endMs": 72344
+    },
+    {
+      "text": " Normalize",
+      "startMs": 72344,
+      "endMs": 72884
+    },
+    {
+      "text": " the",
+      "startMs": 72884,
+      "endMs": 73155
+    },
+    {
+      "text": " destination",
+      "startMs": 73155,
+      "endMs": 73786,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " before",
+      "startMs": 73786,
+      "endMs": 74191
+    },
+    {
+      "text": " you",
+      "startMs": 74191,
+      "endMs": 74462
+    },
+    {
+      "text": " compare",
+      "startMs": 74462,
+      "endMs": 74912
+    },
+    {
+      "text": " it.",
+      "startMs": 74912,
+      "endMs": 75183,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Then",
+      "startMs": 75183,
+      "endMs": 75498
+    },
+    {
+      "text": " find",
+      "startMs": 75498,
+      "endMs": 75814
+    },
+    {
+      "text": " an",
+      "startMs": 75814,
+      "endMs": 76039
+    },
+    {
+      "text": " existing",
+      "startMs": 76039,
+      "endMs": 76535,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " record",
+      "startMs": 76535,
+      "endMs": 76940
+    },
+    {
+      "text": " before",
+      "startMs": 76940,
+      "endMs": 77346
+    },
+    {
+      "text": " you",
+      "startMs": 77346,
+      "endMs": 77616
+    },
+    {
+      "text": " create",
+      "startMs": 77616,
+      "endMs": 78022,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " a",
+      "startMs": 78022,
+      "endMs": 78202
+    },
+    {
+      "text": " new",
+      "startMs": 78202,
+      "endMs": 78473
+    },
+    {
+      "text": " code.",
+      "startMs": 78473,
+      "endMs": 79700,
       "pageBreakAfter": true
     },
     {
       "text": " Read",
-      "startMs": 24167,
-      "endMs": 24452
+      "startMs": 80233,
+      "endMs": 80603
     },
     {
       "text": " the",
-      "startMs": 24452,
-      "endMs": 24697
+      "startMs": 80603,
+      "endMs": 80920
     },
     {
       "text": " full",
-      "startMs": 24697,
-      "endMs": 24982
+      "startMs": 80920,
+      "endMs": 81290
     },
     {
       "text": " article.",
-      "startMs": 24982,
-      "endMs": 25430,
+      "startMs": 81290,
+      "endMs": 81872,
       "pageBreakAfter": true
     },
     {
       "text": " New",
-      "startMs": 25430,
-      "endMs": 25675
+      "startMs": 81872,
+      "endMs": 82189
     },
     {
       "text": " posts",
-      "startMs": 25675,
-      "endMs": 26001
+      "startMs": 82189,
+      "endMs": 82611
     },
     {
       "text": " every",
-      "startMs": 26001,
-      "endMs": 26327
+      "startMs": 82611,
+      "endMs": 83034
     },
     {
       "text": " week",
-      "startMs": 26327,
-      "endMs": 26612,
+      "startMs": 83034,
+      "endMs": 83404,
       "pageBreakAfter": true
     },
     {
       "text": " on",
-      "startMs": 26612,
-      "endMs": 26816
+      "startMs": 83404,
+      "endMs": 83668
     },
     {
       "text": " the",
-      "startMs": 26816,
-      "endMs": 27061
+      "startMs": 83668,
+      "endMs": 83986
     },
     {
       "text": " blog.",
-      "startMs": 27061,
-      "endMs": 27387,
+      "startMs": 83986,
+      "endMs": 85200,
       "pageBreakAfter": true
     }
   ],

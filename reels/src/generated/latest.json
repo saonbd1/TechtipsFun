@@ -1,7 +1,7 @@
 {
   "slug": "blog-to-video-self-hosted-pipeline",
-  "title": "Blog to video, self-hosted: render a reel for every post",
-  "description": "Every blog-to-video tool is a subscription. Here is the self-hosted alternative: Markdown becomes animated code and captions, rendered on publish.",
+  "title": "Blog post to reel video, self-hosted: render a reel for every article",
+  "description": "Every blog-to-video tool ask you subscription. Here is the self-hosted alternative: Markdown becomes animated code and captions, rendered on publish. And it is free",
   "category": "Automation",
   "tags": [
     "Remotion",
@@ -15,9 +15,14 @@
     {
       "type": "title",
       "kicker": "Automation",
-      "title": "Blog to video, self-hosted: render a reel for every post",
-      "subtitle": "Every blog-to-video tool is a subscription. Here is the self-hosted alternative: Markdown…",
-      "durationInFrames": 105
+      "title": "Blog post to reel video, self-hosted: render a reel for every article",
+      "subtitle": "Every blog-to-video tool ask you subscription. Here is the self-hosted alternative:…",
+      "image": {
+        "src": "post-media/blog-to-video-self-hosted-pipeline/01-blog-to-video-pipeline.webp",
+        "width": 1280,
+        "height": 720
+      },
+      "durationInFrames": 183
     },
     {
       "type": "code",
@@ -84,14 +89,17 @@
           }
         }
       ],
-      "durationInFrames": 95
+      "stepDurations": [
+        182
+      ],
+      "durationInFrames": 182
     },
     {
       "type": "point",
       "kicker": "Automation",
       "heading": "Prerequisites",
       "body": "Node 22+ (the CLI wrapper uses fs.statfsSync, which landed in Node 18.15) A repo with Markdown posts.",
-      "durationInFrames": 120
+      "durationInFrames": 250
     },
     {
       "type": "code",
@@ -207,7 +215,11 @@
           }
         }
       ],
-      "durationInFrames": 190
+      "stepDurations": [
+        135,
+        135
+      ],
+      "durationInFrames": 270
     },
     {
       "type": "code",
@@ -465,7 +477,11 @@
           }
         }
       ],
-      "durationInFrames": 190
+      "stepDurations": [
+        135,
+        155
+      ],
+      "durationInFrames": 290
     },
     {
       "type": "code",
@@ -583,7 +599,10 @@
           }
         }
       ],
-      "durationInFrames": 95
+      "stepDurations": [
+        135
+      ],
+      "durationInFrames": 135
     },
     {
       "type": "code",
@@ -748,535 +767,1295 @@
           }
         }
       ],
-      "durationInFrames": 95
+      "stepDurations": [
+        135
+      ],
+      "durationInFrames": 135
+    },
+    {
+      "type": "code",
+      "kicker": "Code",
+      "heading": "Step 3 - Build the vertical composition",
+      "steps": [
+        {
+          "lang": "tsx",
+          "meta": "tsx",
+          "value": "<Series>\n  {scenes.map((scene, i) => (\n    <Series.Sequence key={i} durationInFrames={scene.durationInFrames}>\n      <SceneRenderer scene={scene} />\n    </Series.Sequence>\n  ))}\n</Series>",
+          "code": "<Series>\n  {scenes.map((scene, i) => (\n    <Series.Sequence key={i} durationInFrames={scene.durationInFrames}>\n      <SceneRenderer scene={scene} />\n    </Series.Sequence>\n  ))}\n</Series>",
+          "tokens": [
+            [
+              "<",
+              "#C9D1D9"
+            ],
+            [
+              "Series",
+              "#7EE787"
+            ],
+            [
+              ">",
+              "#C9D1D9"
+            ],
+            "\n  ",
+            [
+              "{",
+              "#FF7B72"
+            ],
+            [
+              "scenes.",
+              "#C9D1D9"
+            ],
+            [
+              "map",
+              "#D2A8FF"
+            ],
+            [
+              "((",
+              "#C9D1D9"
+            ],
+            [
+              "scene",
+              "#FFA657"
+            ],
+            [
+              ",",
+              "#C9D1D9"
+            ],
+            " ",
+            [
+              "i",
+              "#FFA657"
+            ],
+            [
+              ")",
+              "#C9D1D9"
+            ],
+            " ",
+            [
+              "=>",
+              "#FF7B72"
+            ],
+            " ",
+            [
+              "(",
+              "#C9D1D9"
+            ],
+            "\n    ",
+            [
+              "<",
+              "#C9D1D9"
+            ],
+            [
+              "Series.Sequence",
+              "#7EE787"
+            ],
+            " ",
+            [
+              "key",
+              "#79C0FF"
+            ],
+            [
+              "={",
+              "#FF7B72"
+            ],
+            [
+              "i",
+              "#C9D1D9"
+            ],
+            [
+              "}",
+              "#FF7B72"
+            ],
+            " ",
+            [
+              "durationInFrames",
+              "#79C0FF"
+            ],
+            [
+              "={",
+              "#FF7B72"
+            ],
+            [
+              "scene.durationInFrames",
+              "#C9D1D9"
+            ],
+            [
+              "}",
+              "#FF7B72"
+            ],
+            [
+              ">",
+              "#C9D1D9"
+            ],
+            "\n      ",
+            [
+              "<",
+              "#C9D1D9"
+            ],
+            [
+              "SceneRenderer",
+              "#7EE787"
+            ],
+            " ",
+            [
+              "scene",
+              "#79C0FF"
+            ],
+            [
+              "={",
+              "#FF7B72"
+            ],
+            [
+              "scene",
+              "#C9D1D9"
+            ],
+            [
+              "}",
+              "#FF7B72"
+            ],
+            " ",
+            [
+              "/>",
+              "#C9D1D9"
+            ],
+            "\n    ",
+            [
+              "</",
+              "#C9D1D9"
+            ],
+            [
+              "Series.Sequence",
+              "#7EE787"
+            ],
+            [
+              ">",
+              "#C9D1D9"
+            ],
+            "\n  ",
+            [
+              "))",
+              "#C9D1D9"
+            ],
+            [
+              "}",
+              "#FF7B72"
+            ],
+            "\n",
+            [
+              "</",
+              "#C9D1D9"
+            ],
+            [
+              "Series",
+              "#7EE787"
+            ],
+            [
+              ">",
+              "#C9D1D9"
+            ]
+          ],
+          "annotations": [],
+          "themeName": "github-dark",
+          "style": {
+            "color": "#c9d1d9",
+            "background": "#0d1117",
+            "colorScheme": "dark"
+          }
+        }
+      ],
+      "stepDurations": [
+        155
+      ],
+      "durationInFrames": 155
+    },
+    {
+      "type": "code",
+      "kicker": "Code",
+      "heading": "Animated code, not a screenshot of code",
+      "steps": [
+        {
+          "lang": "tsx",
+          "meta": "tsx",
+          "value": "const transitions = calculateTransitions(ref.current!, oldSnapshot);\ntransitions.forEach(({ element, keyframes, options }) => {\n  const progress = interpolate(frame, [delay, delay + duration], [0, 1], { easing });\n  applyStyle({ element, keyframes, progress, linearProgress });\n});",
+          "code": "const transitions = calculateTransitions(ref.current!, oldSnapshot);\ntransitions.forEach(({ element, keyframes, options }) => {\n  const progress = interpolate(frame, [delay, delay + duration], [0, 1], { easing });\n  applyStyle({ element, keyframes, progress, linearProgress });\n});",
+          "tokens": [
+            [
+              "const",
+              "#FF7B72"
+            ],
+            " ",
+            [
+              "transitions",
+              "#79C0FF"
+            ],
+            " ",
+            [
+              "=",
+              "#FF7B72"
+            ],
+            " ",
+            [
+              "calculateTransitions",
+              "#D2A8FF"
+            ],
+            [
+              "(ref.current",
+              "#C9D1D9"
+            ],
+            [
+              "!",
+              "#FF7B72"
+            ],
+            [
+              ", oldSnapshot);",
+              "#C9D1D9"
+            ],
+            "\n",
+            [
+              "transitions.",
+              "#C9D1D9"
+            ],
+            [
+              "forEach",
+              "#D2A8FF"
+            ],
+            [
+              "(({",
+              "#C9D1D9"
+            ],
+            " ",
+            [
+              "element",
+              "#FFA657"
+            ],
+            [
+              ",",
+              "#C9D1D9"
+            ],
+            " ",
+            [
+              "keyframes",
+              "#FFA657"
+            ],
+            [
+              ",",
+              "#C9D1D9"
+            ],
+            " ",
+            [
+              "options",
+              "#FFA657"
+            ],
+            " ",
+            [
+              "})",
+              "#C9D1D9"
+            ],
+            " ",
+            [
+              "=>",
+              "#FF7B72"
+            ],
+            " ",
+            [
+              "{",
+              "#C9D1D9"
+            ],
+            "\n  ",
+            [
+              "const",
+              "#FF7B72"
+            ],
+            " ",
+            [
+              "progress",
+              "#79C0FF"
+            ],
+            " ",
+            [
+              "=",
+              "#FF7B72"
+            ],
+            " ",
+            [
+              "interpolate",
+              "#D2A8FF"
+            ],
+            [
+              "(frame, [delay, delay",
+              "#C9D1D9"
+            ],
+            " ",
+            [
+              "+",
+              "#FF7B72"
+            ],
+            " ",
+            [
+              "duration], [",
+              "#C9D1D9"
+            ],
+            [
+              "0",
+              "#79C0FF"
+            ],
+            [
+              ",",
+              "#C9D1D9"
+            ],
+            " ",
+            [
+              "1",
+              "#79C0FF"
+            ],
+            [
+              "], { easing });",
+              "#C9D1D9"
+            ],
+            "\n  ",
+            [
+              "applyStyle",
+              "#D2A8FF"
+            ],
+            [
+              "({ element, keyframes, progress, linearProgress });",
+              "#C9D1D9"
+            ],
+            "\n",
+            [
+              "});",
+              "#C9D1D9"
+            ]
+          ],
+          "annotations": [],
+          "themeName": "github-dark",
+          "style": {
+            "color": "#c9d1d9",
+            "background": "#0d1117",
+            "colorScheme": "dark"
+          }
+        }
+      ],
+      "stepDurations": [
+        135
+      ],
+      "durationInFrames": 135
+    },
+    {
+      "type": "code",
+      "kicker": "Code",
+      "heading": "Captions that highlight the word being read",
+      "steps": [
+        {
+          "lang": "tsx",
+          "meta": "tsx",
+          "value": "const startRelativeToPage = token.fromMs - page.startMs;\nconst active = startRelativeToPage <= timeInMs && token.toMs > timeInMs;\n<span style={{ color: active ? BRAND.lime : BRAND.white }}>{token.text}</span>",
+          "code": "const startRelativeToPage = token.fromMs - page.startMs;\nconst active = startRelativeToPage <= timeInMs && token.toMs > timeInMs;\n<span style={{ color: active ? BRAND.lime : BRAND.white }}>{token.text}</span>",
+          "tokens": [
+            [
+              "const",
+              "#FF7B72"
+            ],
+            " ",
+            [
+              "startRelativeToPage",
+              "#79C0FF"
+            ],
+            " ",
+            [
+              "=",
+              "#FF7B72"
+            ],
+            " ",
+            [
+              "token.fromMs",
+              "#C9D1D9"
+            ],
+            " ",
+            [
+              "-",
+              "#FF7B72"
+            ],
+            " ",
+            [
+              "page.startMs;",
+              "#C9D1D9"
+            ],
+            "\n",
+            [
+              "const",
+              "#FF7B72"
+            ],
+            " ",
+            [
+              "active",
+              "#79C0FF"
+            ],
+            " ",
+            [
+              "=",
+              "#FF7B72"
+            ],
+            " ",
+            [
+              "startRelativeToPage",
+              "#C9D1D9"
+            ],
+            " ",
+            [
+              "<=",
+              "#FF7B72"
+            ],
+            " ",
+            [
+              "timeInMs",
+              "#C9D1D9"
+            ],
+            " ",
+            [
+              "&&",
+              "#FF7B72"
+            ],
+            " ",
+            [
+              "token.toMs",
+              "#C9D1D9"
+            ],
+            " ",
+            [
+              ">",
+              "#FF7B72"
+            ],
+            " ",
+            [
+              "timeInMs;",
+              "#C9D1D9"
+            ],
+            "\n",
+            [
+              "<",
+              "#C9D1D9"
+            ],
+            [
+              "span",
+              "#7EE787"
+            ],
+            " ",
+            [
+              "style",
+              "#79C0FF"
+            ],
+            [
+              "={",
+              "#FF7B72"
+            ],
+            [
+              "{ color: active",
+              "#C9D1D9"
+            ],
+            " ",
+            [
+              "?",
+              "#FF7B72"
+            ],
+            " ",
+            [
+              "BRAND",
+              "#79C0FF"
+            ],
+            [
+              ".lime",
+              "#C9D1D9"
+            ],
+            " ",
+            [
+              ":",
+              "#FF7B72"
+            ],
+            " ",
+            [
+              "BRAND",
+              "#79C0FF"
+            ],
+            [
+              ".white }",
+              "#C9D1D9"
+            ],
+            [
+              "}",
+              "#FF7B72"
+            ],
+            [
+              ">",
+              "#C9D1D9"
+            ],
+            [
+              "{",
+              "#FF7B72"
+            ],
+            [
+              "token.text",
+              "#C9D1D9"
+            ],
+            [
+              "}",
+              "#FF7B72"
+            ],
+            [
+              "</",
+              "#C9D1D9"
+            ],
+            [
+              "span",
+              "#7EE787"
+            ],
+            [
+              ">",
+              "#C9D1D9"
+            ]
+          ],
+          "annotations": [],
+          "themeName": "github-dark",
+          "style": {
+            "color": "#c9d1d9",
+            "background": "#0d1117",
+            "colorScheme": "dark"
+          }
+        }
+      ],
+      "stepDurations": [
+        135
+      ],
+      "durationInFrames": 135
     },
     {
       "type": "outro",
       "heading": "Read the full article",
       "body": "New posts every week on the blog.",
       "url": "techtips.fun",
-      "durationInFrames": 105
+      "durationInFrames": 165
     }
   ],
   "theme": "github-dark",
-  "durationInFrames": 995,
+  "durationInFrames": 2035,
   "captions": [
     {
       "text": " Every",
-      "startMs": 0,
-      "endMs": 226
+      "startMs": 500,
+      "endMs": 855
     },
     {
       "text": " blog-to-video",
-      "startMs": 226,
-      "endMs": 678
+      "startMs": 855,
+      "endMs": 1564
     },
     {
       "text": " tool",
-      "startMs": 678,
-      "endMs": 876
+      "startMs": 1564,
+      "endMs": 1875
     },
     {
-      "text": " is",
-      "startMs": 876,
-      "endMs": 1017,
+      "text": " ask",
+      "startMs": 1875,
+      "endMs": 2141,
       "pageBreakAfter": true
     },
     {
-      "text": " a",
-      "startMs": 1017,
-      "endMs": 1130
+      "text": " you",
+      "startMs": 2141,
+      "endMs": 2407
     },
     {
       "text": " subscription.",
-      "startMs": 1130,
-      "endMs": 1582
+      "startMs": 2407,
+      "endMs": 3116
     },
     {
       "text": " Here",
-      "startMs": 1582,
-      "endMs": 1779
+      "startMs": 3116,
+      "endMs": 3426
     },
     {
       "text": " is",
-      "startMs": 1779,
-      "endMs": 1921,
+      "startMs": 3426,
+      "endMs": 3648,
       "pageBreakAfter": true
     },
     {
       "text": " the",
-      "startMs": 1921,
-      "endMs": 2090
+      "startMs": 3648,
+      "endMs": 3914
     },
     {
       "text": " self-hosted",
-      "startMs": 2090,
-      "endMs": 2486
+      "startMs": 3914,
+      "endMs": 4535
     },
     {
       "text": " alternative:",
-      "startMs": 2486,
-      "endMs": 2909
-    },
-    {
-      "text": " Markdown",
-      "startMs": 2909,
-      "endMs": 3220,
+      "startMs": 4535,
+      "endMs": 6067,
       "pageBreakAfter": true
     },
     {
       "text": " What",
-      "startMs": 3500,
-      "endMs": 3796
+      "startMs": 6600,
+      "endMs": 7073
     },
     {
       "text": " you",
-      "startMs": 3796,
-      "endMs": 4049
+      "startMs": 7073,
+      "endMs": 7479
     },
     {
       "text": " end",
-      "startMs": 4049,
-      "endMs": 4302
+      "startMs": 7479,
+      "endMs": 7885
     },
     {
       "text": " up",
-      "startMs": 4302,
-      "endMs": 4513,
+      "startMs": 7885,
+      "endMs": 8223,
       "pageBreakAfter": true
     },
     {
       "text": " with.",
-      "startMs": 4513,
-      "endMs": 4851
+      "startMs": 8223,
+      "endMs": 8764
     },
     {
       "text": " Let",
-      "startMs": 4851,
-      "endMs": 5104
+      "startMs": 8764,
+      "endMs": 9170
     },
     {
       "text": " us",
-      "startMs": 5104,
-      "endMs": 5316
+      "startMs": 9170,
+      "endMs": 9508
     },
     {
       "text": " look",
-      "startMs": 5316,
-      "endMs": 5611,
+      "startMs": 9508,
+      "endMs": 9982,
       "pageBreakAfter": true
     },
     {
       "text": " at",
-      "startMs": 5611,
-      "endMs": 5822
+      "startMs": 9982,
+      "endMs": 10320
     },
     {
       "text": " the",
-      "startMs": 5822,
-      "endMs": 6076
+      "startMs": 10320,
+      "endMs": 10726
     },
     {
       "text": " code.",
-      "startMs": 6076,
-      "endMs": 6413,
+      "startMs": 10726,
+      "endMs": 12133,
       "pageBreakAfter": true
     },
     {
       "text": " Prerequisites.",
-      "startMs": 6667,
-      "endMs": 7076
+      "startMs": 12667,
+      "endMs": 13437
     },
     {
       "text": " Node",
-      "startMs": 7076,
-      "endMs": 7244
+      "startMs": 13437,
+      "endMs": 13754
     },
     {
       "text": " 22+",
-      "startMs": 7244,
-      "endMs": 7388
+      "startMs": 13754,
+      "endMs": 14026
     },
     {
       "text": " (the",
-      "startMs": 7388,
-      "endMs": 7557,
+      "startMs": 14026,
+      "endMs": 14343,
       "pageBreakAfter": true
     },
     {
       "text": " CLI",
-      "startMs": 7557,
-      "endMs": 7701
+      "startMs": 14343,
+      "endMs": 14615
     },
     {
       "text": " wrapper",
-      "startMs": 7701,
-      "endMs": 7941
+      "startMs": 14615,
+      "endMs": 15068
     },
     {
       "text": " uses",
-      "startMs": 7941,
-      "endMs": 8110
+      "startMs": 15068,
+      "endMs": 15386
     },
     {
       "text": " fs.statfsSync,",
-      "startMs": 8110,
-      "endMs": 8519,
+      "startMs": 15386,
+      "endMs": 16156,
       "pageBreakAfter": true
     },
     {
       "text": " which",
-      "startMs": 8519,
-      "endMs": 8711
+      "startMs": 16156,
+      "endMs": 16519
     },
     {
       "text": " landed",
-      "startMs": 8711,
-      "endMs": 8928
+      "startMs": 16519,
+      "endMs": 16926
     },
     {
       "text": " in",
-      "startMs": 8928,
-      "endMs": 9048
+      "startMs": 16926,
+      "endMs": 17153
     },
     {
       "text": " Node",
-      "startMs": 9048,
-      "endMs": 9216,
+      "startMs": 17153,
+      "endMs": 17470,
       "pageBreakAfter": true
     },
     {
       "text": " 18.15)",
-      "startMs": 9216,
-      "endMs": 9433
+      "startMs": 17470,
+      "endMs": 17878
     },
     {
       "text": " A",
-      "startMs": 9433,
-      "endMs": 9529
+      "startMs": 17878,
+      "endMs": 18059
     },
     {
       "text": " repo",
-      "startMs": 9529,
-      "endMs": 9697
+      "startMs": 18059,
+      "endMs": 18376
     },
     {
       "text": " with",
-      "startMs": 9697,
-      "endMs": 9866,
+      "startMs": 18376,
+      "endMs": 18694,
       "pageBreakAfter": true
     },
     {
       "text": " Markdown",
-      "startMs": 9866,
-      "endMs": 10130
+      "startMs": 18694,
+      "endMs": 19192
     },
     {
       "text": " posts.",
-      "startMs": 10130,
-      "endMs": 10347,
+      "startMs": 19192,
+      "endMs": 20467,
       "pageBreakAfter": true
     },
     {
       "text": " Step",
-      "startMs": 10667,
-      "endMs": 11115
+      "startMs": 21000,
+      "endMs": 21500
     },
     {
       "text": " 1",
-      "startMs": 11115,
-      "endMs": 11371
+      "startMs": 21500,
+      "endMs": 21786
     },
     {
       "text": " -",
-      "startMs": 11371,
-      "endMs": 11627
+      "startMs": 21786,
+      "endMs": 22071
     },
     {
       "text": " Scaffold",
-      "startMs": 11627,
-      "endMs": 12331,
+      "startMs": 22071,
+      "endMs": 22857,
       "pageBreakAfter": true
     },
     {
       "text": " the",
-      "startMs": 12331,
-      "endMs": 12716
+      "startMs": 22857,
+      "endMs": 23286
     },
     {
       "text": " Remotion",
-      "startMs": 12716,
-      "endMs": 13420
+      "startMs": 23286,
+      "endMs": 24071
     },
     {
       "text": " project.",
-      "startMs": 13420,
-      "endMs": 14124
+      "startMs": 24071,
+      "endMs": 24857
     },
     {
       "text": " Let",
-      "startMs": 14124,
-      "endMs": 14508,
+      "startMs": 24857,
+      "endMs": 25286,
       "pageBreakAfter": true
     },
     {
       "text": " us",
-      "startMs": 14508,
-      "endMs": 14829
+      "startMs": 25286,
+      "endMs": 25643
     },
     {
       "text": " look",
-      "startMs": 14829,
-      "endMs": 15277
+      "startMs": 25643,
+      "endMs": 26143
     },
     {
       "text": " at",
-      "startMs": 15277,
-      "endMs": 15597
+      "startMs": 26143,
+      "endMs": 26500
     },
     {
       "text": " the",
-      "startMs": 15597,
-      "endMs": 15981,
+      "startMs": 26500,
+      "endMs": 26929,
       "pageBreakAfter": true
     },
     {
       "text": " code.",
-      "startMs": 15981,
-      "endMs": 16493,
+      "startMs": 26929,
+      "endMs": 29467,
       "pageBreakAfter": true
     },
     {
       "text": " Step",
-      "startMs": 17000,
-      "endMs": 17453
+      "startMs": 30000,
+      "endMs": 30544
     },
     {
       "text": " 2",
-      "startMs": 17453,
-      "endMs": 17712
+      "startMs": 30544,
+      "endMs": 30856
     },
     {
       "text": " -",
-      "startMs": 17712,
-      "endMs": 17971
+      "startMs": 30856,
+      "endMs": 31167
     },
     {
       "text": " Turn",
-      "startMs": 17971,
-      "endMs": 18424,
+      "startMs": 31167,
+      "endMs": 31711,
       "pageBreakAfter": true
     },
     {
       "text": " an",
-      "startMs": 18424,
-      "endMs": 18748
+      "startMs": 31711,
+      "endMs": 32100
     },
     {
       "text": " article",
-      "startMs": 18748,
-      "endMs": 19395
+      "startMs": 32100,
+      "endMs": 32878
     },
     {
       "text": " into",
-      "startMs": 19395,
-      "endMs": 19849
+      "startMs": 32878,
+      "endMs": 33422
     },
     {
       "text": " props.",
-      "startMs": 19849,
-      "endMs": 20431,
+      "startMs": 33422,
+      "endMs": 34122,
       "pageBreakAfter": true
     },
     {
       "text": " Let",
-      "startMs": 20431,
-      "endMs": 20820
+      "startMs": 34122,
+      "endMs": 34589
     },
     {
       "text": " us",
-      "startMs": 20820,
-      "endMs": 21143
+      "startMs": 34589,
+      "endMs": 34978
     },
     {
       "text": " look",
-      "startMs": 21143,
-      "endMs": 21597
+      "startMs": 34978,
+      "endMs": 35522
     },
     {
       "text": " at",
-      "startMs": 21597,
-      "endMs": 21920,
+      "startMs": 35522,
+      "endMs": 35911,
       "pageBreakAfter": true
     },
     {
       "text": " the",
-      "startMs": 21920,
-      "endMs": 22309
+      "startMs": 35911,
+      "endMs": 36378
     },
     {
       "text": " code.",
-      "startMs": 22309,
-      "endMs": 22827,
+      "startMs": 36378,
+      "endMs": 39133,
       "pageBreakAfter": true
     },
     {
       "text": " Highlight",
-      "startMs": 23333,
-      "endMs": 23833
+      "startMs": 39667,
+      "endMs": 40237
     },
     {
       "text": " once,",
-      "startMs": 23833,
-      "endMs": 24166
+      "startMs": 40237,
+      "endMs": 40617
     },
     {
       "text": " in",
-      "startMs": 24166,
-      "endMs": 24374
+      "startMs": 40617,
+      "endMs": 40854
     },
     {
       "text": " Node.",
-      "startMs": 24374,
-      "endMs": 24707,
+      "startMs": 40854,
+      "endMs": 41234,
       "pageBreakAfter": true
     },
     {
       "text": " Let",
-      "startMs": 24707,
-      "endMs": 24956
+      "startMs": 41234,
+      "endMs": 41519
     },
     {
       "text": " us",
-      "startMs": 24956,
-      "endMs": 25165
+      "startMs": 41519,
+      "endMs": 41757
     },
     {
       "text": " look",
-      "startMs": 25165,
-      "endMs": 25456
+      "startMs": 41757,
+      "endMs": 42089
     },
     {
       "text": " at",
-      "startMs": 25456,
-      "endMs": 25664,
+      "startMs": 42089,
+      "endMs": 42327,
       "pageBreakAfter": true
     },
     {
       "text": " the",
-      "startMs": 25664,
-      "endMs": 25914
+      "startMs": 42327,
+      "endMs": 42612
     },
     {
       "text": " code.",
-      "startMs": 25914,
-      "endMs": 26247,
+      "startMs": 42612,
+      "endMs": 43633,
       "pageBreakAfter": true
     },
     {
       "text": " The",
-      "startMs": 26500,
-      "endMs": 26782
+      "startMs": 44167,
+      "endMs": 44488
     },
     {
       "text": " caption",
-      "startMs": 26782,
-      "endMs": 27252
+      "startMs": 44488,
+      "endMs": 45025
     },
     {
       "text": " track.",
-      "startMs": 27252,
-      "endMs": 27675
+      "startMs": 45025,
+      "endMs": 45507
     },
     {
       "text": " Let",
-      "startMs": 27675,
-      "endMs": 27957,
+      "startMs": 45507,
+      "endMs": 45829,
       "pageBreakAfter": true
     },
     {
       "text": " us",
-      "startMs": 27957,
-      "endMs": 28192
+      "startMs": 45829,
+      "endMs": 46097
     },
     {
       "text": " look",
-      "startMs": 28192,
-      "endMs": 28521
+      "startMs": 46097,
+      "endMs": 46473
     },
     {
       "text": " at",
-      "startMs": 28521,
-      "endMs": 28755
+      "startMs": 46473,
+      "endMs": 46741
     },
     {
       "text": " the",
-      "startMs": 28755,
-      "endMs": 29037,
+      "startMs": 46741,
+      "endMs": 47063,
       "pageBreakAfter": true
     },
     {
       "text": " code.",
-      "startMs": 29037,
-      "endMs": 29413,
+      "startMs": 47063,
+      "endMs": 48133,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Step",
+      "startMs": 48667,
+      "endMs": 48963
+    },
+    {
+      "text": " 3",
+      "startMs": 48963,
+      "endMs": 49132
+    },
+    {
+      "text": " -",
+      "startMs": 49132,
+      "endMs": 49301
+    },
+    {
+      "text": " Build",
+      "startMs": 49301,
+      "endMs": 49640,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " the",
+      "startMs": 49640,
+      "endMs": 49893
+    },
+    {
+      "text": " vertical",
+      "startMs": 49893,
+      "endMs": 50359
+    },
+    {
+      "text": " composition.",
+      "startMs": 50359,
+      "endMs": 50993
+    },
+    {
+      "text": " Let",
+      "startMs": 50993,
+      "endMs": 51247,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " us",
+      "startMs": 51247,
+      "endMs": 51459
+    },
+    {
+      "text": " look",
+      "startMs": 51459,
+      "endMs": 51755
+    },
+    {
+      "text": " at",
+      "startMs": 51755,
+      "endMs": 51966
+    },
+    {
+      "text": " the",
+      "startMs": 51966,
+      "endMs": 52220,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " code.",
+      "startMs": 52220,
+      "endMs": 53300,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Animated",
+      "startMs": 53833,
+      "endMs": 54231
+    },
+    {
+      "text": " code,",
+      "startMs": 54231,
+      "endMs": 54520
+    },
+    {
+      "text": " not",
+      "startMs": 54520,
+      "endMs": 54737
+    },
+    {
+      "text": " a",
+      "startMs": 54737,
+      "endMs": 54881,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " screenshot",
+      "startMs": 54881,
+      "endMs": 55351
+    },
+    {
+      "text": " of",
+      "startMs": 55351,
+      "endMs": 55532
+    },
+    {
+      "text": " code.",
+      "startMs": 55532,
+      "endMs": 55821
+    },
+    {
+      "text": " Let",
+      "startMs": 55821,
+      "endMs": 56038,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " us",
+      "startMs": 56038,
+      "endMs": 56219
+    },
+    {
+      "text": " look",
+      "startMs": 56219,
+      "endMs": 56472
+    },
+    {
+      "text": " at",
+      "startMs": 56472,
+      "endMs": 56652
+    },
+    {
+      "text": " the",
+      "startMs": 56652,
+      "endMs": 56869,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " code.",
+      "startMs": 56869,
+      "endMs": 57800,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Captions",
+      "startMs": 58333,
+      "endMs": 58714
+    },
+    {
+      "text": " that",
+      "startMs": 58714,
+      "endMs": 58957
+    },
+    {
+      "text": " highlight",
+      "startMs": 58957,
+      "endMs": 59372
+    },
+    {
+      "text": " the",
+      "startMs": 59372,
+      "endMs": 59580,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " word",
+      "startMs": 59580,
+      "endMs": 59823
+    },
+    {
+      "text": " being",
+      "startMs": 59823,
+      "endMs": 60100
+    },
+    {
+      "text": " read.",
+      "startMs": 60100,
+      "endMs": 60377
+    },
+    {
+      "text": " Let",
+      "startMs": 60377,
+      "endMs": 60585,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " us",
+      "startMs": 60585,
+      "endMs": 60758
+    },
+    {
+      "text": " look",
+      "startMs": 60758,
+      "endMs": 61000
+    },
+    {
+      "text": " at",
+      "startMs": 61000,
+      "endMs": 61173
+    },
+    {
+      "text": " the",
+      "startMs": 61173,
+      "endMs": 61381,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " code.",
+      "startMs": 61381,
+      "endMs": 62300,
       "pageBreakAfter": true
     },
     {
       "text": " Read",
-      "startMs": 29667,
-      "endMs": 29952
+      "startMs": 62833,
+      "endMs": 63203
     },
     {
       "text": " the",
-      "startMs": 29952,
-      "endMs": 30197
+      "startMs": 63203,
+      "endMs": 63520
     },
     {
       "text": " full",
-      "startMs": 30197,
-      "endMs": 30482
+      "startMs": 63520,
+      "endMs": 63890
     },
     {
       "text": " article.",
-      "startMs": 30482,
-      "endMs": 30930,
+      "startMs": 63890,
+      "endMs": 64472,
       "pageBreakAfter": true
     },
     {
       "text": " New",
-      "startMs": 30930,
-      "endMs": 31175
+      "startMs": 64472,
+      "endMs": 64789
     },
     {
       "text": " posts",
-      "startMs": 31175,
-      "endMs": 31501
+      "startMs": 64789,
+      "endMs": 65211
     },
     {
       "text": " every",
-      "startMs": 31501,
-      "endMs": 31827
+      "startMs": 65211,
+      "endMs": 65634
     },
     {
       "text": " week",
-      "startMs": 31827,
-      "endMs": 32112,
+      "startMs": 65634,
+      "endMs": 66004,
       "pageBreakAfter": true
     },
     {
       "text": " on",
-      "startMs": 32112,
-      "endMs": 32316
+      "startMs": 66004,
+      "endMs": 66268
     },
     {
       "text": " the",
-      "startMs": 32316,
-      "endMs": 32561
+      "startMs": 66268,
+      "endMs": 66586
     },
     {
       "text": " blog.",
-      "startMs": 32561,
-      "endMs": 32887,
+      "startMs": 66586,
+      "endMs": 67800,
       "pageBreakAfter": true
     }
   ],

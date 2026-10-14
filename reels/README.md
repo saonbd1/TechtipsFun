@@ -7,6 +7,11 @@ reel** (MP4) built with [Remotion](https://www.remotion.dev/):
   with real token transitions, syntax-highlighted from the article's fenced blocks.
 - **TikTok-style captions** — 3-4 words at a time, with the current word highlighted
   in brand lime.
+- **The article's own images** — the cover (`heroImage`) opens the reel and each
+  section's first screenshot (`![alt](src)` or `<img>`) is shown in a window card
+  next to its heading. Tall screenshots scroll top-to-bottom instead of shrinking.
+- **Reading-speed pacing** — every scene lasts as long as its captions take to
+  read (~155 words per minute), so typical reels run 60-90 seconds.
 - **Branded scenes** — title hook → key points → code → outro CTA, styled with the
   same palette as the site's OG cards.
 
@@ -32,7 +37,7 @@ npm run reel  -- --latest                     # render out/<slug>.mp4
 npm run reel  -- --slug 10-linux-terminal-commands-i-use-every
 npm run reel:all                              # render every article
 npm run still -- --slug <slug> --frame 210    # a single PNG poster
-npm run dev                                   # Remotion Studio (live preview)
+npm run dev                                   # Remotion Studio (run `npm run props -- --latest` first so its images are staged)
 ```
 
 `npm run reel` always rebuilds the props from Markdown first, so one command is
@@ -111,8 +116,9 @@ Notes:
 src/content/blog/<slug>.md
         |
         |  scripts/build-reel-props.mjs   (Node)
-        |    - parse frontmatter + ## sections + fenced code
-        |    - plan scenes and their durations
+        |    - parse frontmatter + ## sections + fenced code + images
+        |    - stage images into public/post-media/<slug>/ (scripts/lib/post-media.mjs)
+        |    - plan scenes; durations come from reading speed
         |    - highlight code with Code Hike (@code-hike/lighter)
         |    - synthesise a word-level caption track
         v
@@ -133,6 +139,8 @@ same props file always produces the same video.
 | --- | --- |
 | `scripts/build-reel-props.mjs` | Article → props (parsing, scenes, captions, highlighting) |
 | `scripts/render-reel.mjs` | Build props + call the Remotion CLI |
+| `scripts/lib/post-media.mjs` | Finds the post's images, trims/resizes them into `public/post-media/` |
+| `src/components/ScreenshotCard.tsx` | Window-style card for article images (fit or scroll) |
 | `scripts/glyph-audit.mjs` | Warns about glyphs that can crash the renderer |
 | `src/Root.tsx` | Registers the `Reel` composition |
 | `src/Reel.tsx` | Scene timeline, background, top bar, captions, progress bar |
@@ -148,11 +156,18 @@ same props file always produces the same video.
 ## Customising
 
 - **Brand / sizes** — `src/brand.ts` (`BRAND`, `REEL`, `SAFE_AREA`).
-- **Pacing** — the `*_FRAMES` constants at the top of `build-reel-props.mjs`
-  (`TITLE_FRAMES`, `POINT_FRAMES`, `CODE_STEP_FRAMES`, `OUTRO_FRAMES`), plus
-  `MAX_SECTIONS` / `MAX_TOTAL_FRAMES` to cap reel length.
-- **Caption cadence** — `COMBINE_TOKENS_WITHIN_MS` in `src/captions/CaptionOverlay.tsx`
-  (lower = fewer words on screen at once).
+- **Pacing** — the `PACE` object at the top of `build-reel-props.mjs`.
+  `WORDS_PER_SECOND` is the main dial (2.6 ≈ 155 wpm; lower = slower reel).
+  Each scene type has a `min`/`max` length in seconds, `IMAGE_BONUS` adds time
+  to look at a screenshot, and `codeStep` sets time per code line. Overall
+  length is capped by `DEFAULT_MAX_SECONDS` (90, or `--max-seconds`) and
+  `MAX_SECTIONS`.
+- **Caption cadence** — `MAX_WORDS_PER_CAPTION_PAGE` (4) in the builder decides how
+  many words are on screen at once.
+- **Images** — `scripts/lib/post-media.mjs`. Placeholders (`blog-placeholder*`)
+  and images smaller than 320px are skipped; a missing or broken image is
+  skipped with a warning, never failing the render. Only one image per section
+  is used, and sections with code show the code instead.
 - **Code look** — `src/fonts.ts` (`codeFontSize`, `codeTabSize`) and the theme
   passed to the builder. The font size auto-shrinks to fit the longest line.
 - **Scene selection** — `buildScenes()` decides which sections become code scenes

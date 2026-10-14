@@ -12,3 +12,6 @@ out/
 
 # Reel Studio render scratch space
 server/work/
+
+# Article images staged for rendering (rebuilt by scripts/lib/post-media.mjs)
+public/post-media/

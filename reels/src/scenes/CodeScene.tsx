@@ -42,10 +42,17 @@ export const CodeScene: React.FC<{ readonly scene: CodeSceneData }> = ({
     min: 48,
   });
 
-  const stepFrames = useMemo(
-    () => distributeFrames(scene.durationInFrames, steps.length),
-    [scene.durationInFrames, steps.length],
-  );
+  const stepFrames = useMemo(() => {
+    const custom = scene.stepDurations;
+    if (
+      custom &&
+      custom.length === steps.length &&
+      custom.reduce((sum, frames) => sum + frames, 0) === scene.durationInFrames
+    ) {
+      return custom;
+    }
+    return distributeFrames(scene.durationInFrames, steps.length);
+  }, [scene.durationInFrames, scene.stepDurations, steps.length]);
 
   const transitionDuration = Math.min(
     30,

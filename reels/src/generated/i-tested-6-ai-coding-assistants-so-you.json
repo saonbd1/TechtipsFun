@@ -1,628 +1,1228 @@
 {
   "slug": "i-tested-6-ai-coding-assistants-so-you",
-  "title": "I tested 6 AI coding assistants so you don’t have to",
-  "description": "I spent two weeks throwing real tasks at six different AI coding assistants. Not toy examples — actual refactors, bug fixes, and new feature work. He",
+  "title": "[Updated] I tested the best AI coding assistants in 2026",
+  "description": "A practical 2026 comparison of GitHub Copilot, Cursor, Claude Code, Manus, v0, Aider, Continue, and more, with clear picks for everyday coding, terminal work, GitHub workflows, and fast app prototypes.",
   "category": "AI Tools",
   "tags": [
     "AI",
     "Coding Assistants",
     "Developer Tools",
-    "Productivity"
+    "Productivity",
+    "Claude Code",
+    "GitHub Copilot",
+    "Manus",
+    "v0"
   ],
   "url": "https://www.techtips.fun/blog/i-tested-6-ai-coding-assistants-so-you/",
-  "theme": "github-dark",
-  "durationInFrames": 570,
   "scenes": [
     {
       "type": "title",
       "kicker": "AI Tools",
-      "title": "I tested 6 AI coding assistants so you don’t have to",
-      "subtitle": "I spent two weeks throwing real tasks at six different AI coding assistants.",
-      "durationInFrames": 105
+      "title": " [Updated] I tested the best AI coding assistants in 2026",
+      "subtitle": "A practical 2026 comparison of GitHub Copilot, Cursor, Claude Code, Manus, v0, Aider,…",
+      "image": {
+        "src": "post-media/i-tested-6-ai-coding-assistants-so-you/01-ai-coding-assistants-cover.webp",
+        "width": 1600,
+        "height": 900
+      },
+      "durationInFrames": 183
     },
     {
       "type": "point",
       "kicker": "AI Tools",
-      "heading": "The contenders",
-      "body": "GitHub Copilot — the OG, deeply integrated into VS Code Cursor — VS Code fork with AI at the core Supermaven — insanely fast completions Codeium —…",
-      "durationInFrames": 120
+      "heading": "The contenders in 2026",
+      "body": "The original list still includes Cursor, Aider, and Continue. Codeium is no longer the clearest name for the product many developers remember, so I…",
+      "durationInFrames": 330
     },
     {
       "type": "point",
       "kicker": "AI Tools",
       "heading": "Winner for daily use: Cursor",
-      "body": "It’s not even close for complex tasks. The ability to open a codebase and ask “what does this function do?” or “refactor this to use async/await…",
-      "durationInFrames": 120
+      "body": "Cursor is still the easiest recommendation for a developer who wants one editor for exploration, inline edits, and larger changes.",
+      "durationInFrames": 330
     },
     {
       "type": "point",
       "kicker": "AI Tools",
-      "heading": "Best free option: Codeium",
-      "body": "If you don’t want to pay, Codeium is the answer. The completions are fast, context-aware, and available in basically every editor.",
-      "durationInFrames": 120
+      "heading": "Best terminal-first option: Claude Code",
+      "body": "Claude Code is the clearest choice for developers who would rather stay in a terminal than move to a new editor.",
+      "durationInFrames": 330
+    },
+    {
+      "type": "point",
+      "kicker": "AI Tools",
+      "heading": "Best for GitHub-native development: GitHub Copilot",
+      "body": "GitHub Copilot has moved well beyond autocomplete. In an IDE, agent mode can take a high-level task, choose which files to change, run commands, and…",
+      "durationInFrames": 330
+    },
+    {
+      "type": "point",
+      "kicker": "AI Tools",
+      "heading": "Best for building and publishing an app: Manus",
+      "body": "Manus is not just another autocomplete tool. It is a general-purpose agent for tasks that can include research, browser operations, automation,…",
+      "durationInFrames": 330
+    },
+    {
+      "type": "point",
+      "kicker": "AI Tools",
+      "heading": "Best for rapid web UI and full-stack prototypes: v0",
+      "body": "v0 is the fastest option here for turning an idea, wireframe, or screenshot into a polished web interface.",
+      "durationInFrames": 330
+    },
+    {
+      "type": "point",
+      "kicker": "AI Tools",
+      "heading": "The specialists still worth keeping",
+      "body": "Aider remains a good choice for a terminal-based workflow where you want a transparent Git loop and control over the model.",
+      "durationInFrames": 330
     },
     {
       "type": "outro",
       "heading": "Read the full article",
       "body": "New posts every week on the blog.",
       "url": "techtips.fun",
-      "durationInFrames": 105
+      "durationInFrames": 165
     }
   ],
+  "theme": "github-dark",
+  "durationInFrames": 2658,
   "captions": [
     {
-      "text": " I",
-      "startMs": 0,
-      "endMs": 125
+      "text": " A",
+      "startMs": 500,
+      "endMs": 668
     },
     {
-      "text": " spent",
-      "startMs": 125,
-      "endMs": 375
+      "text": " practical",
+      "startMs": 668,
+      "endMs": 1171
     },
     {
-      "text": " two",
-      "startMs": 375,
-      "endMs": 563
+      "text": " 2026",
+      "startMs": 1171,
+      "endMs": 1465
     },
     {
-      "text": " weeks",
-      "startMs": 563,
-      "endMs": 813,
+      "text": " comparison",
+      "startMs": 1465,
+      "endMs": 2011,
       "pageBreakAfter": true
     },
     {
-      "text": " throwing",
-      "startMs": 813,
-      "endMs": 1157
+      "text": " of",
+      "startMs": 2011,
+      "endMs": 2221
     },
     {
-      "text": " real",
-      "startMs": 1157,
-      "endMs": 1376
+      "text": " GitHub",
+      "startMs": 2221,
+      "endMs": 2598
     },
     {
-      "text": " tasks",
-      "startMs": 1376,
-      "endMs": 1626
+      "text": " Copilot,",
+      "startMs": 2598,
+      "endMs": 3060
     },
     {
-      "text": " at",
-      "startMs": 1626,
-      "endMs": 1782,
+      "text": " Cursor,",
+      "startMs": 3060,
+      "endMs": 3479,
       "pageBreakAfter": true
     },
     {
-      "text": " six",
-      "startMs": 1782,
-      "endMs": 1970
+      "text": " Claude",
+      "startMs": 3479,
+      "endMs": 3857
     },
     {
-      "text": " different",
-      "startMs": 1970,
-      "endMs": 2345
+      "text": " Code,",
+      "startMs": 3857,
+      "endMs": 4193
     },
     {
-      "text": " AI",
-      "startMs": 2345,
-      "endMs": 2501
+      "text": " Manus,",
+      "startMs": 4193,
+      "endMs": 4571
     },
     {
-      "text": " coding",
-      "startMs": 2501,
-      "endMs": 2782,
+      "text": " v0,",
+      "startMs": 4571,
+      "endMs": 4822,
       "pageBreakAfter": true
     },
     {
-      "text": " assistants.",
-      "startMs": 2782,
-      "endMs": 3220,
+      "text": " Aider,",
+      "startMs": 4822,
+      "endMs": 6067,
       "pageBreakAfter": true
     },
     {
       "text": " The",
-      "startMs": 3500,
-      "endMs": 3599
+      "startMs": 6600,
+      "endMs": 6852
     },
     {
-      "text": " contenders.",
-      "startMs": 3599,
-      "endMs": 3832
+      "text": " contenders",
+      "startMs": 6852,
+      "endMs": 7397
     },
     {
-      "text": " GitHub",
-      "startMs": 3832,
-      "endMs": 3981
+      "text": " in",
+      "startMs": 7397,
+      "endMs": 7606
     },
     {
-      "text": " Copilot",
-      "startMs": 3981,
-      "endMs": 4146,
+      "text": " 2026.",
+      "startMs": 7606,
+      "endMs": 7941,
       "pageBreakAfter": true
     },
     {
-      "text": " —",
-      "startMs": 4146,
-      "endMs": 4213
+      "text": " The",
+      "startMs": 7941,
+      "endMs": 8193
     },
     {
-      "text": " the",
-      "startMs": 4213,
-      "endMs": 4312
+      "text": " original",
+      "startMs": 8193,
+      "endMs": 8654
     },
     {
-      "text": " OG,",
-      "startMs": 4312,
-      "endMs": 4412
+      "text": " list",
+      "startMs": 8654,
+      "endMs": 8948
     },
     {
-      "text": " deeply",
-      "startMs": 4412,
-      "endMs": 4561,
+      "text": " still",
+      "startMs": 8948,
+      "endMs": 9283,
       "pageBreakAfter": true
     },
     {
-      "text": " integrated",
-      "startMs": 4561,
-      "endMs": 4776
+      "text": " includes",
+      "startMs": 9283,
+      "endMs": 9744
     },
     {
-      "text": " into",
-      "startMs": 4776,
-      "endMs": 4892
+      "text": " Cursor,",
+      "startMs": 9744,
+      "endMs": 10163
     },
     {
-      "text": " VS",
-      "startMs": 4892,
-      "endMs": 4975
+      "text": " Aider,",
+      "startMs": 10163,
+      "endMs": 10541
     },
     {
-      "text": " Code",
-      "startMs": 4975,
-      "endMs": 5091,
+      "text": " and",
+      "startMs": 10541,
+      "endMs": 10792,
       "pageBreakAfter": true
     },
     {
-      "text": " Cursor",
-      "startMs": 5091,
-      "endMs": 5241
-    },
-    {
-      "text": " —",
-      "startMs": 5241,
-      "endMs": 5307
-    },
-    {
-      "text": " VS",
-      "startMs": 5307,
-      "endMs": 5390
-    },
-    {
-      "text": " Code",
-      "startMs": 5390,
-      "endMs": 5506,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " fork",
-      "startMs": 5506,
-      "endMs": 5622
-    },
-    {
-      "text": " with",
-      "startMs": 5622,
-      "endMs": 5738
-    },
-    {
-      "text": " AI",
-      "startMs": 5738,
-      "endMs": 5821
-    },
-    {
-      "text": " at",
-      "startMs": 5821,
-      "endMs": 5904,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " the",
-      "startMs": 5904,
-      "endMs": 6003
-    },
-    {
-      "text": " core",
-      "startMs": 6003,
-      "endMs": 6119
-    },
-    {
-      "text": " Supermaven",
-      "startMs": 6119,
-      "endMs": 6335
-    },
-    {
-      "text": " —",
-      "startMs": 6335,
-      "endMs": 6401,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " insanely",
-      "startMs": 6401,
-      "endMs": 6583
-    },
-    {
-      "text": " fast",
-      "startMs": 6583,
-      "endMs": 6699
-    },
-    {
-      "text": " completions",
-      "startMs": 6699,
-      "endMs": 6931
+      "text": " Continue.",
+      "startMs": 10792,
+      "endMs": 11295
     },
     {
       "text": " Codeium",
-      "startMs": 6931,
-      "endMs": 7097,
+      "startMs": 11295,
+      "endMs": 11714
+    },
+    {
+      "text": " is",
+      "startMs": 11714,
+      "endMs": 11924
+    },
+    {
+      "text": " no",
+      "startMs": 11924,
+      "endMs": 12134,
       "pageBreakAfter": true
     },
     {
-      "text": " —…",
-      "startMs": 7097,
-      "endMs": 7180,
+      "text": " longer",
+      "startMs": 12134,
+      "endMs": 12511
+    },
+    {
+      "text": " the",
+      "startMs": 12511,
+      "endMs": 12762
+    },
+    {
+      "text": " clearest",
+      "startMs": 12762,
+      "endMs": 13224
+    },
+    {
+      "text": " name",
+      "startMs": 13224,
+      "endMs": 13517,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " for",
+      "startMs": 13517,
+      "endMs": 13769
+    },
+    {
+      "text": " the",
+      "startMs": 13769,
+      "endMs": 14020
+    },
+    {
+      "text": " product",
+      "startMs": 14020,
+      "endMs": 14439
+    },
+    {
+      "text": " many",
+      "startMs": 14439,
+      "endMs": 14733,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " developers",
+      "startMs": 14733,
+      "endMs": 15278
+    },
+    {
+      "text": " remember,",
+      "startMs": 15278,
+      "endMs": 15781
+    },
+    {
+      "text": " so",
+      "startMs": 15781,
+      "endMs": 15990
+    },
+    {
+      "text": " I…",
+      "startMs": 15990,
+      "endMs": 17067,
       "pageBreakAfter": true
     },
     {
       "text": " Winner",
-      "startMs": 7500,
-      "endMs": 7639
+      "startMs": 17600,
+      "endMs": 18009
     },
     {
       "text": " for",
-      "startMs": 7639,
-      "endMs": 7732
+      "startMs": 18009,
+      "endMs": 18282
     },
     {
       "text": " daily",
-      "startMs": 7732,
-      "endMs": 7856
+      "startMs": 18282,
+      "endMs": 18646
     },
     {
       "text": " use:",
-      "startMs": 7856,
-      "endMs": 7964,
+      "startMs": 18646,
+      "endMs": 18965,
       "pageBreakAfter": true
     },
     {
       "text": " Cursor.",
-      "startMs": 7964,
-      "endMs": 8118
+      "startMs": 18965,
+      "endMs": 19420
     },
     {
-      "text": " It’s",
-      "startMs": 8118,
-      "endMs": 8227
+      "text": " Cursor",
+      "startMs": 19420,
+      "endMs": 19829
     },
     {
-      "text": " not",
-      "startMs": 8227,
-      "endMs": 8319
+      "text": " is",
+      "startMs": 19829,
+      "endMs": 20057
     },
     {
-      "text": " even",
-      "startMs": 8319,
-      "endMs": 8428,
+      "text": " still",
+      "startMs": 20057,
+      "endMs": 20421,
       "pageBreakAfter": true
     },
     {
-      "text": " close",
-      "startMs": 8428,
-      "endMs": 8551
+      "text": " the",
+      "startMs": 20421,
+      "endMs": 20694
+    },
+    {
+      "text": " easiest",
+      "startMs": 20694,
+      "endMs": 21149
+    },
+    {
+      "text": " recommendation",
+      "startMs": 21149,
+      "endMs": 21922
     },
     {
       "text": " for",
-      "startMs": 8551,
-      "endMs": 8644
-    },
-    {
-      "text": " complex",
-      "startMs": 8644,
-      "endMs": 8799
-    },
-    {
-      "text": " tasks.",
-      "startMs": 8799,
-      "endMs": 8938,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " The",
-      "startMs": 8938,
-      "endMs": 9031
-    },
-    {
-      "text": " ability",
-      "startMs": 9031,
-      "endMs": 9185
-    },
-    {
-      "text": " to",
-      "startMs": 9185,
-      "endMs": 9263
-    },
-    {
-      "text": " open",
-      "startMs": 9263,
-      "endMs": 9371,
+      "startMs": 21922,
+      "endMs": 22195,
       "pageBreakAfter": true
     },
     {
       "text": " a",
-      "startMs": 9371,
-      "endMs": 9433
+      "startMs": 22195,
+      "endMs": 22377
     },
     {
-      "text": " codebase",
-      "startMs": 9433,
-      "endMs": 9603
+      "text": " developer",
+      "startMs": 22377,
+      "endMs": 22923
+    },
+    {
+      "text": " who",
+      "startMs": 22923,
+      "endMs": 23196
+    },
+    {
+      "text": " wants",
+      "startMs": 23196,
+      "endMs": 23560,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " one",
+      "startMs": 23560,
+      "endMs": 23833
+    },
+    {
+      "text": " editor",
+      "startMs": 23833,
+      "endMs": 24243
+    },
+    {
+      "text": " for",
+      "startMs": 24243,
+      "endMs": 24516
+    },
+    {
+      "text": " exploration,",
+      "startMs": 24516,
+      "endMs": 25198,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " inline",
+      "startMs": 25198,
+      "endMs": 25608
+    },
+    {
+      "text": " edits,",
+      "startMs": 25608,
+      "endMs": 26017
     },
     {
       "text": " and",
-      "startMs": 9603,
-      "endMs": 9696
+      "startMs": 26017,
+      "endMs": 26290
     },
     {
-      "text": " ask",
-      "startMs": 9696,
-      "endMs": 9788,
+      "text": " larger",
+      "startMs": 26290,
+      "endMs": 26700,
       "pageBreakAfter": true
     },
     {
-      "text": " “what",
-      "startMs": 9788,
-      "endMs": 9912
-    },
-    {
-      "text": " does",
-      "startMs": 9912,
-      "endMs": 10020
-    },
-    {
-      "text": " this",
-      "startMs": 10020,
-      "endMs": 10129
-    },
-    {
-      "text": " function",
-      "startMs": 10129,
-      "endMs": 10299,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " do?”",
-      "startMs": 10299,
-      "endMs": 10407
-    },
-    {
-      "text": " or",
-      "startMs": 10407,
-      "endMs": 10484
-    },
-    {
-      "text": " “refactor",
-      "startMs": 10484,
-      "endMs": 10670
-    },
-    {
-      "text": " this",
-      "startMs": 10670,
-      "endMs": 10778,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " to",
-      "startMs": 10778,
-      "endMs": 10855
-    },
-    {
-      "text": " use",
-      "startMs": 10855,
-      "endMs": 10948
-    },
-    {
-      "text": " async/await…",
-      "startMs": 10948,
-      "endMs": 11180,
+      "text": " changes.",
+      "startMs": 26700,
+      "endMs": 28067,
       "pageBreakAfter": true
     },
     {
       "text": " Best",
-      "startMs": 11500,
-      "endMs": 11624
+      "startMs": 28600,
+      "endMs": 28926
     },
     {
-      "text": " free",
-      "startMs": 11624,
-      "endMs": 11748
+      "text": " terminal-first",
+      "startMs": 28926,
+      "endMs": 29718
     },
     {
       "text": " option:",
-      "startMs": 11748,
-      "endMs": 11925
+      "startMs": 29718,
+      "endMs": 30184
     },
     {
-      "text": " Codeium.",
-      "startMs": 11925,
-      "endMs": 12119,
+      "text": " Claude",
+      "startMs": 30184,
+      "endMs": 30604,
       "pageBreakAfter": true
     },
     {
-      "text": " If",
-      "startMs": 12119,
-      "endMs": 12208
+      "text": " Code.",
+      "startMs": 30604,
+      "endMs": 30977
     },
     {
-      "text": " you",
-      "startMs": 12208,
-      "endMs": 12314
+      "text": " Claude",
+      "startMs": 30977,
+      "endMs": 31396
     },
     {
-      "text": " don’t",
-      "startMs": 12314,
-      "endMs": 12455
-    },
-    {
-      "text": " want",
-      "startMs": 12455,
-      "endMs": 12579,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " to",
-      "startMs": 12579,
-      "endMs": 12668
-    },
-    {
-      "text": " pay,",
-      "startMs": 12668,
-      "endMs": 12792
-    },
-    {
-      "text": " Codeium",
-      "startMs": 12792,
-      "endMs": 12968
+      "text": " Code",
+      "startMs": 31396,
+      "endMs": 31722
     },
     {
       "text": " is",
-      "startMs": 12968,
-      "endMs": 13057,
+      "startMs": 31722,
+      "endMs": 31955,
       "pageBreakAfter": true
     },
     {
       "text": " the",
-      "startMs": 13057,
-      "endMs": 13163
+      "startMs": 31955,
+      "endMs": 32235
     },
     {
-      "text": " answer.",
-      "startMs": 13163,
-      "endMs": 13340
+      "text": " clearest",
+      "startMs": 32235,
+      "endMs": 32748
     },
     {
-      "text": " The",
-      "startMs": 13340,
-      "endMs": 13446
+      "text": " choice",
+      "startMs": 32748,
+      "endMs": 33167
     },
     {
-      "text": " completions",
-      "startMs": 13446,
-      "endMs": 13694,
+      "text": " for",
+      "startMs": 33167,
+      "endMs": 33447,
       "pageBreakAfter": true
     },
     {
-      "text": " are",
-      "startMs": 13694,
-      "endMs": 13800
+      "text": " developers",
+      "startMs": 33447,
+      "endMs": 34052
     },
     {
-      "text": " fast,",
-      "startMs": 13800,
-      "endMs": 13942
+      "text": " who",
+      "startMs": 34052,
+      "endMs": 34332
     },
     {
-      "text": " context-aware,",
-      "startMs": 13942,
-      "endMs": 14242
+      "text": " would",
+      "startMs": 34332,
+      "endMs": 34705
     },
     {
-      "text": " and",
-      "startMs": 14242,
-      "endMs": 14348,
+      "text": " rather",
+      "startMs": 34705,
+      "endMs": 35124,
       "pageBreakAfter": true
     },
     {
-      "text": " available",
-      "startMs": 14348,
-      "endMs": 14561
+      "text": " stay",
+      "startMs": 35124,
+      "endMs": 35450
     },
     {
       "text": " in",
-      "startMs": 14561,
-      "endMs": 14649
+      "startMs": 35450,
+      "endMs": 35683
     },
     {
-      "text": " basically",
-      "startMs": 14649,
-      "endMs": 14862
+      "text": " a",
+      "startMs": 35683,
+      "endMs": 35870
     },
     {
-      "text": " every",
-      "startMs": 14862,
-      "endMs": 15003,
+      "text": " terminal",
+      "startMs": 35870,
+      "endMs": 36383,
       "pageBreakAfter": true
     },
     {
+      "text": " than",
+      "startMs": 36383,
+      "endMs": 36709
+    },
+    {
+      "text": " move",
+      "startMs": 36709,
+      "endMs": 37035
+    },
+    {
+      "text": " to",
+      "startMs": 37035,
+      "endMs": 37268
+    },
+    {
+      "text": " a",
+      "startMs": 37268,
+      "endMs": 37454,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " new",
+      "startMs": 37454,
+      "endMs": 37734
+    },
+    {
       "text": " editor.",
-      "startMs": 15003,
-      "endMs": 15180,
+      "startMs": 37734,
+      "endMs": 39067,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Best",
+      "startMs": 39600,
+      "endMs": 39855
+    },
+    {
+      "text": " for",
+      "startMs": 39855,
+      "endMs": 40073
+    },
+    {
+      "text": " GitHub-native",
+      "startMs": 40073,
+      "endMs": 40655
+    },
+    {
+      "text": " development:",
+      "startMs": 40655,
+      "endMs": 41200,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " GitHub",
+      "startMs": 41200,
+      "endMs": 41527
+    },
+    {
+      "text": " Copilot.",
+      "startMs": 41527,
+      "endMs": 41927
+    },
+    {
+      "text": " GitHub",
+      "startMs": 41927,
+      "endMs": 42255
+    },
+    {
+      "text": " Copilot",
+      "startMs": 42255,
+      "endMs": 42618,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " has",
+      "startMs": 42618,
+      "endMs": 42836
+    },
+    {
+      "text": " moved",
+      "startMs": 42836,
+      "endMs": 43127
+    },
+    {
+      "text": " well",
+      "startMs": 43127,
+      "endMs": 43382
+    },
+    {
+      "text": " beyond",
+      "startMs": 43382,
+      "endMs": 43709,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " autocomplete.",
+      "startMs": 43709,
+      "endMs": 44291
+    },
+    {
+      "text": " In",
+      "startMs": 44291,
+      "endMs": 44473
+    },
+    {
+      "text": " an",
+      "startMs": 44473,
+      "endMs": 44655
+    },
+    {
+      "text": " IDE,",
+      "startMs": 44655,
+      "endMs": 44909,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " agent",
+      "startMs": 44909,
+      "endMs": 45200
+    },
+    {
+      "text": " mode",
+      "startMs": 45200,
+      "endMs": 45455
+    },
+    {
+      "text": " can",
+      "startMs": 45455,
+      "endMs": 45673
+    },
+    {
+      "text": " take",
+      "startMs": 45673,
+      "endMs": 45927,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " a",
+      "startMs": 45927,
+      "endMs": 46073
+    },
+    {
+      "text": " high-level",
+      "startMs": 46073,
+      "endMs": 46545
+    },
+    {
+      "text": " task,",
+      "startMs": 46545,
+      "endMs": 46836
+    },
+    {
+      "text": " choose",
+      "startMs": 46836,
+      "endMs": 47164,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " which",
+      "startMs": 47164,
+      "endMs": 47455
+    },
+    {
+      "text": " files",
+      "startMs": 47455,
+      "endMs": 47745
+    },
+    {
+      "text": " to",
+      "startMs": 47745,
+      "endMs": 47927
+    },
+    {
+      "text": " change,",
+      "startMs": 47927,
+      "endMs": 48291,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " run",
+      "startMs": 48291,
+      "endMs": 48509
+    },
+    {
+      "text": " commands,",
+      "startMs": 48509,
+      "endMs": 48945
+    },
+    {
+      "text": " and…",
+      "startMs": 48945,
+      "endMs": 50067,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Best",
+      "startMs": 50600,
+      "endMs": 50868
+    },
+    {
+      "text": " for",
+      "startMs": 50868,
+      "endMs": 51097
+    },
+    {
+      "text": " building",
+      "startMs": 51097,
+      "endMs": 51518
+    },
+    {
+      "text": " and",
+      "startMs": 51518,
+      "endMs": 51747,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " publishing",
+      "startMs": 51747,
+      "endMs": 52245
+    },
+    {
+      "text": " an",
+      "startMs": 52245,
+      "endMs": 52436
+    },
+    {
+      "text": " app:",
+      "startMs": 52436,
+      "endMs": 52704
+    },
+    {
+      "text": " Manus.",
+      "startMs": 52704,
+      "endMs": 53048,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Manus",
+      "startMs": 53048,
+      "endMs": 53354
+    },
+    {
+      "text": " is",
+      "startMs": 53354,
+      "endMs": 53545
+    },
+    {
+      "text": " not",
+      "startMs": 53545,
+      "endMs": 53775
+    },
+    {
+      "text": " just",
+      "startMs": 53775,
+      "endMs": 54042,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " another",
+      "startMs": 54042,
+      "endMs": 54425
+    },
+    {
+      "text": " autocomplete",
+      "startMs": 54425,
+      "endMs": 54998
+    },
+    {
+      "text": " tool.",
+      "startMs": 54998,
+      "endMs": 55304
+    },
+    {
+      "text": " It",
+      "startMs": 55304,
+      "endMs": 55496,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " is",
+      "startMs": 55496,
+      "endMs": 55687
+    },
+    {
+      "text": " a",
+      "startMs": 55687,
+      "endMs": 55840
+    },
+    {
+      "text": " general-purpose",
+      "startMs": 55840,
+      "endMs": 56528
+    },
+    {
+      "text": " agent",
+      "startMs": 56528,
+      "endMs": 56834,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " for",
+      "startMs": 56834,
+      "endMs": 57064
+    },
+    {
+      "text": " tasks",
+      "startMs": 57064,
+      "endMs": 57370
+    },
+    {
+      "text": " that",
+      "startMs": 57370,
+      "endMs": 57637
+    },
+    {
+      "text": " can",
+      "startMs": 57637,
+      "endMs": 57867,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " include",
+      "startMs": 57867,
+      "endMs": 58249
+    },
+    {
+      "text": " research,",
+      "startMs": 58249,
+      "endMs": 58708
+    },
+    {
+      "text": " browser",
+      "startMs": 58708,
+      "endMs": 59091
+    },
+    {
+      "text": " operations,",
+      "startMs": 59091,
+      "endMs": 59626,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " automation,…",
+      "startMs": 59626,
+      "endMs": 61067,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Best",
+      "startMs": 61600,
+      "endMs": 61914
+    },
+    {
+      "text": " for",
+      "startMs": 61914,
+      "endMs": 62183
+    },
+    {
+      "text": " rapid",
+      "startMs": 62183,
+      "endMs": 62542
+    },
+    {
+      "text": " web",
+      "startMs": 62542,
+      "endMs": 62811,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " UI",
+      "startMs": 62811,
+      "endMs": 63036
+    },
+    {
+      "text": " and",
+      "startMs": 63036,
+      "endMs": 63305
+    },
+    {
+      "text": " full-stack",
+      "startMs": 63305,
+      "endMs": 63888
+    },
+    {
+      "text": " prototypes:",
+      "startMs": 63888,
+      "endMs": 64516,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " v0.",
+      "startMs": 64516,
+      "endMs": 64785
+    },
+    {
+      "text": " v0",
+      "startMs": 64785,
+      "endMs": 65009
+    },
+    {
+      "text": " is",
+      "startMs": 65009,
+      "endMs": 65234
+    },
+    {
+      "text": " the",
+      "startMs": 65234,
+      "endMs": 65503,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " fastest",
+      "startMs": 65503,
+      "endMs": 65951
+    },
+    {
+      "text": " option",
+      "startMs": 65951,
+      "endMs": 66355
+    },
+    {
+      "text": " here",
+      "startMs": 66355,
+      "endMs": 66669
+    },
+    {
+      "text": " for",
+      "startMs": 66669,
+      "endMs": 66938,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " turning",
+      "startMs": 66938,
+      "endMs": 67387
+    },
+    {
+      "text": " an",
+      "startMs": 67387,
+      "endMs": 67611
+    },
+    {
+      "text": " idea,",
+      "startMs": 67611,
+      "endMs": 67970
+    },
+    {
+      "text": " wireframe,",
+      "startMs": 67970,
+      "endMs": 68553,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " or",
+      "startMs": 68553,
+      "endMs": 68778
+    },
+    {
+      "text": " screenshot",
+      "startMs": 68778,
+      "endMs": 69361
+    },
+    {
+      "text": " into",
+      "startMs": 69361,
+      "endMs": 69675
+    },
+    {
+      "text": " a",
+      "startMs": 69675,
+      "endMs": 69854,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " polished",
+      "startMs": 69854,
+      "endMs": 70348
+    },
+    {
+      "text": " web",
+      "startMs": 70348,
+      "endMs": 70617
+    },
+    {
+      "text": " interface.",
+      "startMs": 70617,
+      "endMs": 72067,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " The",
+      "startMs": 72600,
+      "endMs": 72870
+    },
+    {
+      "text": " specialists",
+      "startMs": 72870,
+      "endMs": 73501
+    },
+    {
+      "text": " still",
+      "startMs": 73501,
+      "endMs": 73862
+    },
+    {
+      "text": " worth",
+      "startMs": 73862,
+      "endMs": 74223,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " keeping.",
+      "startMs": 74223,
+      "endMs": 74718
+    },
+    {
+      "text": " Aider",
+      "startMs": 74718,
+      "endMs": 75079
+    },
+    {
+      "text": " remains",
+      "startMs": 75079,
+      "endMs": 75530
+    },
+    {
+      "text": " a",
+      "startMs": 75530,
+      "endMs": 75710,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " good",
+      "startMs": 75710,
+      "endMs": 76025
+    },
+    {
+      "text": " choice",
+      "startMs": 76025,
+      "endMs": 76431
+    },
+    {
+      "text": " for",
+      "startMs": 76431,
+      "endMs": 76701
+    },
+    {
+      "text": " a",
+      "startMs": 76701,
+      "endMs": 76882,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " terminal-based",
+      "startMs": 76882,
+      "endMs": 77648
+    },
+    {
+      "text": " workflow",
+      "startMs": 77648,
+      "endMs": 78144
+    },
+    {
+      "text": " where",
+      "startMs": 78144,
+      "endMs": 78504
+    },
+    {
+      "text": " you",
+      "startMs": 78504,
+      "endMs": 78775,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " want",
+      "startMs": 78775,
+      "endMs": 79090
+    },
+    {
+      "text": " a",
+      "startMs": 79090,
+      "endMs": 79270
+    },
+    {
+      "text": " transparent",
+      "startMs": 79270,
+      "endMs": 79901
+    },
+    {
+      "text": " Git",
+      "startMs": 79901,
+      "endMs": 80172,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " loop",
+      "startMs": 80172,
+      "endMs": 80487
+    },
+    {
+      "text": " and",
+      "startMs": 80487,
+      "endMs": 80758
+    },
+    {
+      "text": " control",
+      "startMs": 80758,
+      "endMs": 81208
+    },
+    {
+      "text": " over",
+      "startMs": 81208,
+      "endMs": 81524,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " the",
+      "startMs": 81524,
+      "endMs": 81794
+    },
+    {
+      "text": " model.",
+      "startMs": 81794,
+      "endMs": 83067,
       "pageBreakAfter": true
     },
     {
       "text": " Read",
-      "startMs": 15500,
-      "endMs": 15785
+      "startMs": 83600,
+      "endMs": 83970
     },
     {
       "text": " the",
-      "startMs": 15785,
-      "endMs": 16030
+      "startMs": 83970,
+      "endMs": 84287
     },
     {
       "text": " full",
-      "startMs": 16030,
-      "endMs": 16315
+      "startMs": 84287,
+      "endMs": 84657
     },
     {
       "text": " article.",
-      "startMs": 16315,
-      "endMs": 16764,
+      "startMs": 84657,
+      "endMs": 85238,
       "pageBreakAfter": true
     },
     {
       "text": " New",
-      "startMs": 16764,
-      "endMs": 17008
+      "startMs": 85238,
+      "endMs": 85555
     },
     {
       "text": " posts",
-      "startMs": 17008,
-      "endMs": 17334
+      "startMs": 85555,
+      "endMs": 85978
     },
     {
       "text": " every",
-      "startMs": 17334,
-      "endMs": 17660
+      "startMs": 85978,
+      "endMs": 86401
     },
     {
       "text": " week",
-      "startMs": 17660,
-      "endMs": 17946,
+      "startMs": 86401,
+      "endMs": 86771,
       "pageBreakAfter": true
     },
     {
       "text": " on",
-      "startMs": 17946,
-      "endMs": 18149
+      "startMs": 86771,
+      "endMs": 87035
     },
     {
       "text": " the",
-      "startMs": 18149,
-      "endMs": 18394
+      "startMs": 87035,
+      "endMs": 87352
     },
     {
       "text": " blog.",
-      "startMs": 18394,
-      "endMs": 18720,
+      "startMs": 87352,
+      "endMs": 88567,
       "pageBreakAfter": true
     }
   ],

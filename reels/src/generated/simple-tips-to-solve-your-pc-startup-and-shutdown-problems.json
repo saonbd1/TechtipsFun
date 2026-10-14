@@ -10,1171 +10,1240 @@
     "Beginner Guide"
   ],
   "url": "https://www.techtips.fun/blog/simple-tips-to-solve-your-pc-startup-and-shutdown-problems/",
-  "theme": "github-dark",
-  "durationInFrames": 930,
   "scenes": [
     {
       "type": "title",
       "kicker": "PC Troubleshooting",
       "title": "Simple Tips to Solve Your PC Startup and Shutdown Problems",
       "subtitle": "In this article, we will look at steps to resolve one of the most common Windows PC…",
-      "durationInFrames": 105
+      "image": {
+        "src": "post-media/simple-tips-to-solve-your-pc-startup-and-shutdown-problems/01-pc-startup-shutdown-issue.webp",
+        "width": 1600,
+        "height": 893
+      },
+      "durationInFrames": 183
     },
     {
       "type": "point",
       "kicker": "PC Troubleshooting",
       "heading": "Clean Temporary Folder Regularly",
-      "body": "Cleaning the temporary folder regularly can speed up your pc. Press Windows + R on the keyboard to start the Run command app.",
-      "durationInFrames": 120
+      "body": "Cleaning the temporary folder regularly can speed up your pc. Press Windows + R on the keyboard to start the…",
+      "image": {
+        "src": "post-media/simple-tips-to-solve-your-pc-startup-and-shutdown-problems/02-temp-file-cleaner.webp",
+        "width": 422,
+        "height": 254
+      },
+      "durationInFrames": 355
     },
     {
       "type": "point",
       "kicker": "PC Troubleshooting",
       "heading": "Disable Unnecessary Startup Apps:",
-      "body": "Apps can be configured to start when you log in. Normally, these apps start silently and perform background tasks.",
-      "durationInFrames": 120
+      "body": "Apps can be configured to start when you log in. Normally, these apps start silently and perform background…",
+      "image": {
+        "src": "post-media/simple-tips-to-solve-your-pc-startup-and-shutdown-problems/03-startup-apps-windows.webp",
+        "width": 1047,
+        "height": 619
+      },
+      "durationInFrames": 332
     },
     {
       "type": "point",
       "kicker": "PC Troubleshooting",
       "heading": "Extract the DLL file from your Windows installation disc",
       "body": "Some third-party software programs are known to replace Windows files, such as the comdlg32.dll file, with their own DLL files.",
-      "durationInFrames": 120
+      "durationInFrames": 330
     },
     {
       "type": "point",
       "kicker": "PC Troubleshooting",
       "heading": "Download the missing DLL file from the Internet",
       "body": "If the DLL file mentioned in the error message is not a Windows file, then you can repair the missing DLL error by downloading a fresh copy of the…",
-      "durationInFrames": 120
+      "durationInFrames": 330
     },
     {
       "type": "point",
       "kicker": "PC Troubleshooting",
       "heading": "Complete a malware scan",
-      "body": "If you find that the DLL file reported in the error message is present on your computer, then chances are high that the DLL file might be corrupt.",
-      "durationInFrames": 120
+      "body": "If you find that the DLL file reported in the error message is present on your computer, then chances are…",
+      "image": {
+        "src": "post-media/simple-tips-to-solve-your-pc-startup-and-shutdown-problems/04-windows-defender-malware-scanner.webp",
+        "width": 546,
+        "height": 499
+      },
+      "durationInFrames": 355
     },
     {
       "type": "point",
       "kicker": "PC Troubleshooting",
       "heading": "Reinstall any program that is causing the error",
       "body": "If a thorough malware scan does not detect any suspicious malware programs, then one or more files of the program that is generating the DLL error…",
-      "durationInFrames": 120
+      "durationInFrames": 330
+    },
+    {
+      "type": "point",
+      "kicker": "PC Troubleshooting",
+      "heading": "Always up to date the latest drivers",
+      "body": "The use of outdated drivers also causes DLL errors due to compatibility issues.",
+      "durationInFrames": 273
     },
     {
       "type": "outro",
       "heading": "Read the full article",
       "body": "New posts every week on the blog.",
       "url": "techtips.fun",
-      "durationInFrames": 105
+      "durationInFrames": 165
     }
   ],
+  "theme": "github-dark",
+  "durationInFrames": 2653,
   "captions": [
     {
       "text": " In",
-      "startMs": 0,
-      "endMs": 136
+      "startMs": 500,
+      "endMs": 699
     },
     {
       "text": " this",
-      "startMs": 136,
-      "endMs": 327
+      "startMs": 699,
+      "endMs": 978
     },
     {
       "text": " article,",
-      "startMs": 327,
-      "endMs": 628
+      "startMs": 978,
+      "endMs": 1416
     },
     {
       "text": " we",
-      "startMs": 628,
-      "endMs": 764,
+      "startMs": 1416,
+      "endMs": 1615,
       "pageBreakAfter": true
     },
     {
       "text": " will",
-      "startMs": 764,
-      "endMs": 955
+      "startMs": 1615,
+      "endMs": 1894
     },
     {
       "text": " look",
-      "startMs": 955,
-      "endMs": 1146
+      "startMs": 1894,
+      "endMs": 2173
     },
     {
       "text": " at",
-      "startMs": 1146,
-      "endMs": 1283
+      "startMs": 2173,
+      "endMs": 2372
     },
     {
       "text": " steps",
-      "startMs": 1283,
-      "endMs": 1501,
+      "startMs": 2372,
+      "endMs": 2691,
       "pageBreakAfter": true
     },
     {
       "text": " to",
-      "startMs": 1501,
-      "endMs": 1637
+      "startMs": 2691,
+      "endMs": 2890
     },
     {
       "text": " resolve",
-      "startMs": 1637,
-      "endMs": 1910
+      "startMs": 2890,
+      "endMs": 3288
     },
     {
       "text": " one",
-      "startMs": 1910,
-      "endMs": 2074
+      "startMs": 3288,
+      "endMs": 3527
     },
     {
       "text": " of",
-      "startMs": 2074,
-      "endMs": 2210,
+      "startMs": 3527,
+      "endMs": 3726,
       "pageBreakAfter": true
     },
     {
       "text": " the",
-      "startMs": 2210,
-      "endMs": 2374
+      "startMs": 3726,
+      "endMs": 3965
     },
     {
       "text": " most",
-      "startMs": 2374,
-      "endMs": 2565
+      "startMs": 3965,
+      "endMs": 4244
     },
     {
       "text": " common",
-      "startMs": 2565,
-      "endMs": 2811
+      "startMs": 4244,
+      "endMs": 4603
     },
     {
       "text": " Windows",
-      "startMs": 2811,
-      "endMs": 3084,
+      "startMs": 4603,
+      "endMs": 5001,
       "pageBreakAfter": true
     },
     {
       "text": " PC",
-      "startMs": 3084,
-      "endMs": 3220,
+      "startMs": 5001,
+      "endMs": 6067,
       "pageBreakAfter": true
     },
     {
       "text": " Clean",
-      "startMs": 3500,
-      "endMs": 3638
+      "startMs": 6600,
+      "endMs": 7035
     },
     {
       "text": " Temporary",
-      "startMs": 3638,
-      "endMs": 3844
+      "startMs": 7035,
+      "endMs": 7687
     },
     {
       "text": " Folder",
-      "startMs": 3844,
-      "endMs": 3999
+      "startMs": 7687,
+      "endMs": 8176
     },
     {
       "text": " Regularly.",
-      "startMs": 3999,
-      "endMs": 4222,
+      "startMs": 8176,
+      "endMs": 8882,
       "pageBreakAfter": true
     },
     {
       "text": " Cleaning",
-      "startMs": 4222,
-      "endMs": 4411
+      "startMs": 8882,
+      "endMs": 9480
     },
     {
       "text": " the",
-      "startMs": 4411,
-      "endMs": 4515
+      "startMs": 9480,
+      "endMs": 9806
     },
     {
       "text": " temporary",
-      "startMs": 4515,
-      "endMs": 4721
+      "startMs": 9806,
+      "endMs": 10458
     },
     {
       "text": " folder",
-      "startMs": 4721,
-      "endMs": 4876,
+      "startMs": 10458,
+      "endMs": 10947,
       "pageBreakAfter": true
     },
     {
       "text": " regularly",
-      "startMs": 4876,
-      "endMs": 5082
+      "startMs": 10947,
+      "endMs": 11599
     },
     {
       "text": " can",
-      "startMs": 5082,
-      "endMs": 5185
+      "startMs": 11599,
+      "endMs": 11925
     },
     {
       "text": " speed",
-      "startMs": 5185,
-      "endMs": 5323
+      "startMs": 11925,
+      "endMs": 12360
     },
     {
       "text": " up",
-      "startMs": 5323,
-      "endMs": 5409,
+      "startMs": 12360,
+      "endMs": 12632,
       "pageBreakAfter": true
     },
     {
       "text": " your",
-      "startMs": 5409,
-      "endMs": 5529
+      "startMs": 12632,
+      "endMs": 13012
     },
     {
       "text": " pc.",
-      "startMs": 5529,
-      "endMs": 5632
+      "startMs": 13012,
+      "endMs": 13338
     },
     {
       "text": " Press",
-      "startMs": 5632,
-      "endMs": 5770
+      "startMs": 13338,
+      "endMs": 13773
     },
     {
       "text": " Windows",
-      "startMs": 5770,
-      "endMs": 5942,
+      "startMs": 13773,
+      "endMs": 14316,
       "pageBreakAfter": true
     },
     {
       "text": " +",
-      "startMs": 5942,
-      "endMs": 6011
+      "startMs": 14316,
+      "endMs": 14534
     },
     {
       "text": " R",
-      "startMs": 6011,
-      "endMs": 6079
+      "startMs": 14534,
+      "endMs": 14751
     },
     {
       "text": " on",
-      "startMs": 6079,
-      "endMs": 6165
+      "startMs": 14751,
+      "endMs": 15023
     },
     {
       "text": " the",
-      "startMs": 6165,
-      "endMs": 6269,
+      "startMs": 15023,
+      "endMs": 15349,
       "pageBreakAfter": true
     },
     {
       "text": " keyboard",
-      "startMs": 6269,
-      "endMs": 6458
+      "startMs": 15349,
+      "endMs": 15947
     },
     {
       "text": " to",
-      "startMs": 6458,
-      "endMs": 6544
+      "startMs": 15947,
+      "endMs": 16218
     },
     {
       "text": " start",
-      "startMs": 6544,
-      "endMs": 6681
+      "startMs": 16218,
+      "endMs": 16653
     },
     {
-      "text": " the",
-      "startMs": 6681,
-      "endMs": 6784,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " Run",
-      "startMs": 6784,
-      "endMs": 6888
-    },
-    {
-      "text": " command",
-      "startMs": 6888,
-      "endMs": 7060
-    },
-    {
-      "text": " app.",
-      "startMs": 7060,
-      "endMs": 7180,
+      "text": " the…",
+      "startMs": 16653,
+      "endMs": 17900,
       "pageBreakAfter": true
     },
     {
       "text": " Disable",
-      "startMs": 7500,
-      "endMs": 7688
+      "startMs": 18433,
+      "endMs": 18948
     },
     {
       "text": " Unnecessary",
-      "startMs": 7688,
-      "endMs": 7951
+      "startMs": 18948,
+      "endMs": 19667
     },
     {
       "text": " Startup",
-      "startMs": 7951,
-      "endMs": 8138
+      "startMs": 19667,
+      "endMs": 20182
     },
     {
       "text": " Apps:.",
-      "startMs": 8138,
-      "endMs": 8307,
+      "startMs": 20182,
+      "endMs": 20644,
       "pageBreakAfter": true
     },
     {
       "text": " Apps",
-      "startMs": 8307,
-      "endMs": 8439
+      "startMs": 20644,
+      "endMs": 21004
     },
     {
       "text": " can",
-      "startMs": 8439,
-      "endMs": 8551
+      "startMs": 21004,
+      "endMs": 21313
     },
     {
       "text": " be",
-      "startMs": 8551,
-      "endMs": 8645
+      "startMs": 21313,
+      "endMs": 21570
     },
     {
       "text": " configured",
-      "startMs": 8645,
-      "endMs": 8889,
+      "startMs": 21570,
+      "endMs": 22238,
       "pageBreakAfter": true
     },
     {
       "text": " to",
-      "startMs": 8889,
-      "endMs": 8983
+      "startMs": 22238,
+      "endMs": 22495
     },
     {
       "text": " start",
-      "startMs": 8983,
-      "endMs": 9133
+      "startMs": 22495,
+      "endMs": 22907
     },
     {
       "text": " when",
-      "startMs": 9133,
-      "endMs": 9265
+      "startMs": 22907,
+      "endMs": 23267
     },
     {
       "text": " you",
-      "startMs": 9265,
-      "endMs": 9378,
+      "startMs": 23267,
+      "endMs": 23575,
       "pageBreakAfter": true
     },
     {
       "text": " log",
-      "startMs": 9378,
-      "endMs": 9490
+      "startMs": 23575,
+      "endMs": 23884
     },
     {
       "text": " in.",
-      "startMs": 9490,
-      "endMs": 9603
+      "startMs": 23884,
+      "endMs": 24192
     },
     {
       "text": " Normally,",
-      "startMs": 9603,
-      "endMs": 9828
+      "startMs": 24192,
+      "endMs": 24809
     },
     {
       "text": " these",
-      "startMs": 9828,
-      "endMs": 9978,
+      "startMs": 24809,
+      "endMs": 25221,
       "pageBreakAfter": true
     },
     {
       "text": " apps",
-      "startMs": 9978,
-      "endMs": 10110
+      "startMs": 25221,
+      "endMs": 25580
     },
     {
       "text": " start",
-      "startMs": 10110,
-      "endMs": 10260
+      "startMs": 25580,
+      "endMs": 25992
     },
     {
       "text": " silently",
-      "startMs": 10260,
-      "endMs": 10467
+      "startMs": 25992,
+      "endMs": 26557
     },
     {
       "text": " and",
-      "startMs": 10467,
-      "endMs": 10579,
+      "startMs": 26557,
+      "endMs": 26866,
       "pageBreakAfter": true
     },
     {
       "text": " perform",
-      "startMs": 10579,
-      "endMs": 10767
+      "startMs": 26866,
+      "endMs": 27380
     },
     {
-      "text": " background",
-      "startMs": 10767,
-      "endMs": 11011
-    },
-    {
-      "text": " tasks.",
-      "startMs": 11011,
-      "endMs": 11180,
+      "text": " background…",
+      "startMs": 27380,
+      "endMs": 28967,
       "pageBreakAfter": true
     },
     {
       "text": " Extract",
-      "startMs": 11500,
-      "endMs": 11651
+      "startMs": 29500,
+      "endMs": 29893
     },
     {
       "text": " the",
-      "startMs": 11651,
-      "endMs": 11741
+      "startMs": 29893,
+      "endMs": 30130
     },
     {
       "text": " DLL",
-      "startMs": 11741,
-      "endMs": 11832
+      "startMs": 30130,
+      "endMs": 30366
     },
     {
       "text": " file",
-      "startMs": 11832,
-      "endMs": 11937,
+      "startMs": 30366,
+      "endMs": 30641,
       "pageBreakAfter": true
     },
     {
       "text": " from",
-      "startMs": 11937,
-      "endMs": 12043
+      "startMs": 30641,
+      "endMs": 30916
     },
     {
       "text": " your",
-      "startMs": 12043,
-      "endMs": 12149
+      "startMs": 30916,
+      "endMs": 31192
     },
     {
       "text": " Windows",
-      "startMs": 12149,
-      "endMs": 12299
+      "startMs": 31192,
+      "endMs": 31585
     },
     {
       "text": " installation",
-      "startMs": 12299,
-      "endMs": 12526,
+      "startMs": 31585,
+      "endMs": 32175,
       "pageBreakAfter": true
     },
     {
       "text": " disc.",
-      "startMs": 12526,
-      "endMs": 12646
+      "startMs": 32175,
+      "endMs": 32490
     },
     {
       "text": " Some",
-      "startMs": 12646,
-      "endMs": 12752
+      "startMs": 32490,
+      "endMs": 32766
     },
     {
       "text": " third-party",
-      "startMs": 12752,
-      "endMs": 12963
+      "startMs": 32766,
+      "endMs": 33316
     },
     {
       "text": " software",
-      "startMs": 12963,
-      "endMs": 13129,
+      "startMs": 33316,
+      "endMs": 33749,
       "pageBreakAfter": true
     },
     {
       "text": " programs",
-      "startMs": 13129,
-      "endMs": 13295
+      "startMs": 33749,
+      "endMs": 34182
     },
     {
       "text": " are",
-      "startMs": 13295,
-      "endMs": 13385
+      "startMs": 34182,
+      "endMs": 34418
     },
     {
       "text": " known",
-      "startMs": 13385,
-      "endMs": 13506
+      "startMs": 34418,
+      "endMs": 34733
     },
     {
       "text": " to",
-      "startMs": 13506,
-      "endMs": 13581,
+      "startMs": 34733,
+      "endMs": 34930,
       "pageBreakAfter": true
     },
     {
       "text": " replace",
-      "startMs": 13581,
-      "endMs": 13732
+      "startMs": 34930,
+      "endMs": 35323
     },
     {
       "text": " Windows",
-      "startMs": 13732,
-      "endMs": 13883
+      "startMs": 35323,
+      "endMs": 35716
     },
     {
       "text": " files,",
-      "startMs": 13883,
-      "endMs": 14019
+      "startMs": 35716,
+      "endMs": 36070
     },
     {
       "text": " such",
-      "startMs": 14019,
-      "endMs": 14124,
+      "startMs": 36070,
+      "endMs": 36346,
       "pageBreakAfter": true
     },
     {
       "text": " as",
-      "startMs": 14124,
-      "endMs": 14200
+      "startMs": 36346,
+      "endMs": 36543
     },
     {
       "text": " the",
-      "startMs": 14200,
-      "endMs": 14290
+      "startMs": 36543,
+      "endMs": 36779
     },
     {
       "text": " comdlg32.dll",
-      "startMs": 14290,
-      "endMs": 14516
+      "startMs": 36779,
+      "endMs": 37369
     },
     {
       "text": " file,",
-      "startMs": 14516,
-      "endMs": 14637,
+      "startMs": 37369,
+      "endMs": 37684,
       "pageBreakAfter": true
     },
     {
       "text": " with",
-      "startMs": 14637,
-      "endMs": 14743
+      "startMs": 37684,
+      "endMs": 37959
     },
     {
       "text": " their",
-      "startMs": 14743,
-      "endMs": 14863
+      "startMs": 37959,
+      "endMs": 38274
     },
     {
       "text": " own",
-      "startMs": 14863,
-      "endMs": 14954
+      "startMs": 38274,
+      "endMs": 38510
     },
     {
       "text": " DLL",
-      "startMs": 14954,
-      "endMs": 15044,
+      "startMs": 38510,
+      "endMs": 38746,
       "pageBreakAfter": true
     },
     {
       "text": " files.",
-      "startMs": 15044,
-      "endMs": 15180,
+      "startMs": 38746,
+      "endMs": 39967,
       "pageBreakAfter": true
     },
     {
       "text": " Download",
-      "startMs": 15500,
-      "endMs": 15649
+      "startMs": 40500,
+      "endMs": 40890
     },
     {
       "text": " the",
-      "startMs": 15649,
-      "endMs": 15731
+      "startMs": 40890,
+      "endMs": 41102
     },
     {
       "text": " missing",
-      "startMs": 15731,
-      "endMs": 15867
+      "startMs": 41102,
+      "endMs": 41456
     },
     {
       "text": " DLL",
-      "startMs": 15867,
-      "endMs": 15948,
+      "startMs": 41456,
+      "endMs": 41669,
       "pageBreakAfter": true
     },
     {
       "text": " file",
-      "startMs": 15948,
-      "endMs": 16043
+      "startMs": 41669,
+      "endMs": 41917
     },
     {
       "text": " from",
-      "startMs": 16043,
-      "endMs": 16138
+      "startMs": 41917,
+      "endMs": 42165
     },
     {
       "text": " the",
-      "startMs": 16138,
-      "endMs": 16220
+      "startMs": 42165,
+      "endMs": 42377
     },
     {
       "text": " Internet.",
-      "startMs": 16220,
-      "endMs": 16383,
+      "startMs": 42377,
+      "endMs": 42803,
       "pageBreakAfter": true
     },
     {
       "text": " If",
-      "startMs": 16383,
-      "endMs": 16451
+      "startMs": 42803,
+      "endMs": 42980
     },
     {
       "text": " the",
-      "startMs": 16451,
-      "endMs": 16532
+      "startMs": 42980,
+      "endMs": 43192
     },
     {
       "text": " DLL",
-      "startMs": 16532,
-      "endMs": 16614
+      "startMs": 43192,
+      "endMs": 43405
     },
     {
       "text": " file",
-      "startMs": 16614,
-      "endMs": 16709,
+      "startMs": 43405,
+      "endMs": 43653,
       "pageBreakAfter": true
     },
     {
       "text": " mentioned",
-      "startMs": 16709,
-      "endMs": 16872
+      "startMs": 43653,
+      "endMs": 44078
     },
     {
       "text": " in",
-      "startMs": 16872,
-      "endMs": 16939
+      "startMs": 44078,
+      "endMs": 44255
     },
     {
       "text": " the",
-      "startMs": 16939,
-      "endMs": 17021
+      "startMs": 44255,
+      "endMs": 44468
     },
     {
       "text": " error",
-      "startMs": 17021,
-      "endMs": 17130,
+      "startMs": 44468,
+      "endMs": 44751,
       "pageBreakAfter": true
     },
     {
       "text": " message",
-      "startMs": 17130,
-      "endMs": 17265
+      "startMs": 44751,
+      "endMs": 45105
     },
     {
       "text": " is",
-      "startMs": 17265,
-      "endMs": 17333
+      "startMs": 45105,
+      "endMs": 45282
     },
     {
       "text": " not",
-      "startMs": 17333,
-      "endMs": 17415
+      "startMs": 45282,
+      "endMs": 45495
     },
     {
       "text": " a",
-      "startMs": 17415,
-      "endMs": 17469,
+      "startMs": 45495,
+      "endMs": 45637,
       "pageBreakAfter": true
     },
     {
       "text": " Windows",
-      "startMs": 17469,
-      "endMs": 17605
+      "startMs": 45637,
+      "endMs": 45991
     },
     {
       "text": " file,",
-      "startMs": 17605,
-      "endMs": 17713
+      "startMs": 45991,
+      "endMs": 46274
     },
     {
       "text": " then",
-      "startMs": 17713,
-      "endMs": 17808
+      "startMs": 46274,
+      "endMs": 46522
     },
     {
       "text": " you",
-      "startMs": 17808,
-      "endMs": 17890,
+      "startMs": 46522,
+      "endMs": 46735,
       "pageBreakAfter": true
     },
     {
       "text": " can",
-      "startMs": 17890,
-      "endMs": 17971
+      "startMs": 46735,
+      "endMs": 46947
     },
     {
       "text": " repair",
-      "startMs": 17971,
-      "endMs": 18094
+      "startMs": 46947,
+      "endMs": 47266
     },
     {
       "text": " the",
-      "startMs": 18094,
-      "endMs": 18175
+      "startMs": 47266,
+      "endMs": 47479
     },
     {
       "text": " missing",
-      "startMs": 18175,
-      "endMs": 18311,
+      "startMs": 47479,
+      "endMs": 47833,
       "pageBreakAfter": true
     },
     {
       "text": " DLL",
-      "startMs": 18311,
-      "endMs": 18392
+      "startMs": 47833,
+      "endMs": 48045
     },
     {
       "text": " error",
-      "startMs": 18392,
-      "endMs": 18501
+      "startMs": 48045,
+      "endMs": 48329
     },
     {
       "text": " by",
-      "startMs": 18501,
-      "endMs": 18569
+      "startMs": 48329,
+      "endMs": 48506
     },
     {
       "text": " downloading",
-      "startMs": 18569,
-      "endMs": 18759,
+      "startMs": 48506,
+      "endMs": 49002,
       "pageBreakAfter": true
     },
     {
       "text": " a",
-      "startMs": 18759,
-      "endMs": 18813
+      "startMs": 49002,
+      "endMs": 49144
     },
     {
       "text": " fresh",
-      "startMs": 18813,
-      "endMs": 18922
+      "startMs": 49144,
+      "endMs": 49427
     },
     {
       "text": " copy",
-      "startMs": 18922,
-      "endMs": 19017
+      "startMs": 49427,
+      "endMs": 49675
     },
     {
       "text": " of",
-      "startMs": 19017,
-      "endMs": 19085,
+      "startMs": 49675,
+      "endMs": 49852,
       "pageBreakAfter": true
     },
     {
       "text": " the…",
-      "startMs": 19085,
-      "endMs": 19180,
+      "startMs": 49852,
+      "endMs": 50967,
       "pageBreakAfter": true
     },
     {
       "text": " Complete",
-      "startMs": 19500,
-      "endMs": 19672
+      "startMs": 51500,
+      "endMs": 52138
     },
     {
       "text": " a",
-      "startMs": 19672,
-      "endMs": 19734
+      "startMs": 52138,
+      "endMs": 52369
     },
     {
       "text": " malware",
-      "startMs": 19734,
-      "endMs": 19890
+      "startMs": 52369,
+      "endMs": 52949
     },
     {
       "text": " scan.",
-      "startMs": 19890,
-      "endMs": 20015,
+      "startMs": 52949,
+      "endMs": 53413,
       "pageBreakAfter": true
     },
     {
       "text": " If",
-      "startMs": 20015,
-      "endMs": 20093
+      "startMs": 53413,
+      "endMs": 53703
     },
     {
       "text": " you",
-      "startMs": 20093,
-      "endMs": 20186
+      "startMs": 53703,
+      "endMs": 54050
     },
     {
       "text": " find",
-      "startMs": 20186,
-      "endMs": 20295
+      "startMs": 54050,
+      "endMs": 54456
     },
     {
       "text": " that",
-      "startMs": 20295,
-      "endMs": 20404,
+      "startMs": 54456,
+      "endMs": 54862,
       "pageBreakAfter": true
     },
     {
       "text": " the",
-      "startMs": 20404,
-      "endMs": 20498
+      "startMs": 54862,
+      "endMs": 55210
     },
     {
       "text": " DLL",
-      "startMs": 20498,
-      "endMs": 20592
+      "startMs": 55210,
+      "endMs": 55557
     },
     {
       "text": " file",
-      "startMs": 20592,
-      "endMs": 20701
+      "startMs": 55557,
+      "endMs": 55963
     },
     {
       "text": " reported",
-      "startMs": 20701,
-      "endMs": 20872,
+      "startMs": 55963,
+      "endMs": 56601,
       "pageBreakAfter": true
     },
     {
       "text": " in",
-      "startMs": 20872,
-      "endMs": 20950
+      "startMs": 56601,
+      "endMs": 56891
     },
     {
       "text": " the",
-      "startMs": 20950,
-      "endMs": 21044
+      "startMs": 56891,
+      "endMs": 57238
     },
     {
       "text": " error",
-      "startMs": 21044,
-      "endMs": 21168
+      "startMs": 57238,
+      "endMs": 57702
     },
     {
       "text": " message",
-      "startMs": 21168,
-      "endMs": 21324,
+      "startMs": 57702,
+      "endMs": 58282,
       "pageBreakAfter": true
     },
     {
       "text": " is",
-      "startMs": 21324,
-      "endMs": 21402
+      "startMs": 58282,
+      "endMs": 58571
     },
     {
       "text": " present",
-      "startMs": 21402,
-      "endMs": 21558
+      "startMs": 58571,
+      "endMs": 59151
     },
     {
       "text": " on",
-      "startMs": 21558,
-      "endMs": 21636
+      "startMs": 59151,
+      "endMs": 59441
     },
     {
       "text": " your",
-      "startMs": 21636,
-      "endMs": 21745,
+      "startMs": 59441,
+      "endMs": 59847,
       "pageBreakAfter": true
     },
     {
       "text": " computer,",
-      "startMs": 21745,
-      "endMs": 21933
+      "startMs": 59847,
+      "endMs": 60542
     },
     {
       "text": " then",
-      "startMs": 21933,
-      "endMs": 22042
+      "startMs": 60542,
+      "endMs": 60948
     },
     {
       "text": " chances",
-      "startMs": 22042,
-      "endMs": 22198
+      "startMs": 60948,
+      "endMs": 61528
     },
     {
-      "text": " are",
-      "startMs": 22198,
-      "endMs": 22291,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " high",
-      "startMs": 22291,
-      "endMs": 22400
-    },
-    {
-      "text": " that",
-      "startMs": 22400,
-      "endMs": 22509
-    },
-    {
-      "text": " the",
-      "startMs": 22509,
-      "endMs": 22603
-    },
-    {
-      "text": " DLL",
-      "startMs": 22603,
-      "endMs": 22697,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " file",
-      "startMs": 22697,
-      "endMs": 22806
-    },
-    {
-      "text": " might",
-      "startMs": 22806,
-      "endMs": 22931
-    },
-    {
-      "text": " be",
-      "startMs": 22931,
-      "endMs": 23008
-    },
-    {
-      "text": " corrupt.",
-      "startMs": 23008,
-      "endMs": 23180,
+      "text": " are…",
+      "startMs": 61528,
+      "endMs": 62800,
       "pageBreakAfter": true
     },
     {
       "text": " Reinstall",
-      "startMs": 23500,
-      "endMs": 23667
+      "startMs": 63333,
+      "endMs": 63768
     },
     {
       "text": " any",
-      "startMs": 23667,
-      "endMs": 23750
+      "startMs": 63768,
+      "endMs": 63985
     },
     {
       "text": " program",
-      "startMs": 23750,
-      "endMs": 23889
+      "startMs": 63985,
+      "endMs": 64348
     },
     {
       "text": " that",
-      "startMs": 23889,
-      "endMs": 23986,
+      "startMs": 64348,
+      "endMs": 64601,
       "pageBreakAfter": true
     },
     {
       "text": " is",
-      "startMs": 23986,
-      "endMs": 24055
+      "startMs": 64601,
+      "endMs": 64782
     },
     {
       "text": " causing",
-      "startMs": 24055,
-      "endMs": 24194
+      "startMs": 64782,
+      "endMs": 65145
     },
     {
       "text": " the",
-      "startMs": 24194,
-      "endMs": 24278
+      "startMs": 65145,
+      "endMs": 65362
     },
     {
       "text": " error.",
-      "startMs": 24278,
-      "endMs": 24403,
+      "startMs": 65362,
+      "endMs": 65688,
       "pageBreakAfter": true
     },
     {
       "text": " If",
-      "startMs": 24403,
-      "endMs": 24472
+      "startMs": 65688,
+      "endMs": 65869
     },
     {
       "text": " a",
-      "startMs": 24472,
-      "endMs": 24528
+      "startMs": 65869,
+      "endMs": 66014
     },
     {
       "text": " thorough",
-      "startMs": 24528,
-      "endMs": 24680
+      "startMs": 66014,
+      "endMs": 66413
     },
     {
       "text": " malware",
-      "startMs": 24680,
-      "endMs": 24819,
+      "startMs": 66413,
+      "endMs": 66775,
       "pageBreakAfter": true
     },
     {
       "text": " scan",
-      "startMs": 24819,
-      "endMs": 24916
+      "startMs": 66775,
+      "endMs": 67028
     },
     {
       "text": " does",
-      "startMs": 24916,
-      "endMs": 25014
+      "startMs": 67028,
+      "endMs": 67282
     },
     {
       "text": " not",
-      "startMs": 25014,
-      "endMs": 25097
+      "startMs": 67282,
+      "endMs": 67499
     },
     {
       "text": " detect",
-      "startMs": 25097,
-      "endMs": 25222,
+      "startMs": 67499,
+      "endMs": 67825,
       "pageBreakAfter": true
     },
     {
       "text": " any",
-      "startMs": 25222,
-      "endMs": 25305
+      "startMs": 67825,
+      "endMs": 68043
     },
     {
       "text": " suspicious",
-      "startMs": 25305,
-      "endMs": 25486
+      "startMs": 68043,
+      "endMs": 68514
     },
     {
       "text": " malware",
-      "startMs": 25486,
-      "endMs": 25625
+      "startMs": 68514,
+      "endMs": 68876
     },
     {
       "text": " programs,",
-      "startMs": 25625,
-      "endMs": 25791,
+      "startMs": 68876,
+      "endMs": 69311,
       "pageBreakAfter": true
     },
     {
       "text": " then",
-      "startMs": 25791,
-      "endMs": 25889
+      "startMs": 69311,
+      "endMs": 69564
     },
     {
       "text": " one",
-      "startMs": 25889,
-      "endMs": 25972
+      "startMs": 69564,
+      "endMs": 69782
     },
     {
       "text": " or",
-      "startMs": 25972,
-      "endMs": 26041
+      "startMs": 69782,
+      "endMs": 69963
     },
     {
       "text": " more",
-      "startMs": 26041,
-      "endMs": 26138,
+      "startMs": 69963,
+      "endMs": 70216,
       "pageBreakAfter": true
     },
     {
       "text": " files",
-      "startMs": 26138,
-      "endMs": 26250
+      "startMs": 70216,
+      "endMs": 70506
     },
     {
       "text": " of",
-      "startMs": 26250,
-      "endMs": 26319
+      "startMs": 70506,
+      "endMs": 70687
     },
     {
       "text": " the",
-      "startMs": 26319,
-      "endMs": 26402
+      "startMs": 70687,
+      "endMs": 70905
     },
     {
       "text": " program",
-      "startMs": 26402,
-      "endMs": 26541,
+      "startMs": 70905,
+      "endMs": 71267,
       "pageBreakAfter": true
     },
     {
       "text": " that",
-      "startMs": 26541,
-      "endMs": 26638
+      "startMs": 71267,
+      "endMs": 71521
     },
     {
       "text": " is",
-      "startMs": 26638,
-      "endMs": 26708
+      "startMs": 71521,
+      "endMs": 71702
     },
     {
       "text": " generating",
-      "startMs": 26708,
-      "endMs": 26888
+      "startMs": 71702,
+      "endMs": 72173
     },
     {
       "text": " the",
-      "startMs": 26888,
-      "endMs": 26972,
+      "startMs": 72173,
+      "endMs": 72390,
       "pageBreakAfter": true
     },
     {
       "text": " DLL",
-      "startMs": 26972,
-      "endMs": 27055
+      "startMs": 72390,
+      "endMs": 72607
     },
     {
       "text": " error…",
-      "startMs": 27055,
-      "endMs": 27180,
+      "startMs": 72607,
+      "endMs": 73800,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Always",
+      "startMs": 74333,
+      "endMs": 74772
+    },
+    {
+      "text": " up",
+      "startMs": 74772,
+      "endMs": 75016
+    },
+    {
+      "text": " to",
+      "startMs": 75016,
+      "endMs": 75259
+    },
+    {
+      "text": " date",
+      "startMs": 75259,
+      "endMs": 75600,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " the",
+      "startMs": 75600,
+      "endMs": 75893
+    },
+    {
+      "text": " latest",
+      "startMs": 75893,
+      "endMs": 76331
+    },
+    {
+      "text": " drivers.",
+      "startMs": 76331,
+      "endMs": 76868
+    },
+    {
+      "text": " The",
+      "startMs": 76868,
+      "endMs": 77160,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " use",
+      "startMs": 77160,
+      "endMs": 77452
+    },
+    {
+      "text": " of",
+      "startMs": 77452,
+      "endMs": 77696
+    },
+    {
+      "text": " outdated",
+      "startMs": 77696,
+      "endMs": 78232
+    },
+    {
+      "text": " drivers",
+      "startMs": 78232,
+      "endMs": 78719,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " also",
+      "startMs": 78719,
+      "endMs": 79061
+    },
+    {
+      "text": " causes",
+      "startMs": 79061,
+      "endMs": 79499
+    },
+    {
+      "text": " DLL",
+      "startMs": 79499,
+      "endMs": 79792
+    },
+    {
+      "text": " errors",
+      "startMs": 79792,
+      "endMs": 80230,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " due",
+      "startMs": 80230,
+      "endMs": 80523
+    },
+    {
+      "text": " to",
+      "startMs": 80523,
+      "endMs": 80766
+    },
+    {
+      "text": " compatibility",
+      "startMs": 80766,
+      "endMs": 81546
+    },
+    {
+      "text": " issues.",
+      "startMs": 81546,
+      "endMs": 82900,
       "pageBreakAfter": true
     },
     {
       "text": " Read",
-      "startMs": 27500,
-      "endMs": 27785
+      "startMs": 83433,
+      "endMs": 83803
     },
     {
       "text": " the",
-      "startMs": 27785,
-      "endMs": 28030
+      "startMs": 83803,
+      "endMs": 84120
     },
     {
       "text": " full",
-      "startMs": 28030,
-      "endMs": 28315
+      "startMs": 84120,
+      "endMs": 84490
     },
     {
       "text": " article.",
-      "startMs": 28315,
-      "endMs": 28764,
+      "startMs": 84490,
+      "endMs": 85072,
       "pageBreakAfter": true
     },
     {
       "text": " New",
-      "startMs": 28764,
-      "endMs": 29008
+      "startMs": 85072,
+      "endMs": 85389
     },
     {
       "text": " posts",
-      "startMs": 29008,
-      "endMs": 29334
+      "startMs": 85389,
+      "endMs": 85811
     },
     {
       "text": " every",
-      "startMs": 29334,
-      "endMs": 29660
+      "startMs": 85811,
+      "endMs": 86234
     },
     {
       "text": " week",
-      "startMs": 29660,
-      "endMs": 29946,
+      "startMs": 86234,
+      "endMs": 86604,
       "pageBreakAfter": true
     },
     {
       "text": " on",
-      "startMs": 29946,
-      "endMs": 30149
+      "startMs": 86604,
+      "endMs": 86868
     },
     {
       "text": " the",
-      "startMs": 30149,
-      "endMs": 30394
+      "startMs": 86868,
+      "endMs": 87186
     },
     {
       "text": " blog.",
-      "startMs": 30394,
-      "endMs": 30720,
+      "startMs": 87186,
+      "endMs": 88400,
       "pageBreakAfter": true
     }
   ],

@@ -28,4 +28,7 @@ export const SAFE_AREA = {
   paddingX: 72,
   paddingTop: 210,
   paddingBottom: 760,
+  // Scenes that show a screenshot use more of the frame; this still stops
+  // well above the caption band (captions sit ~300px from the bottom).
+  paddingBottomWithImage: 600,
 } as const;

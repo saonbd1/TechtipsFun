@@ -10,29 +10,32 @@
     "Developer Tools"
   ],
   "url": "https://www.techtips.fun/blog/Simple-Ghostty-terminal-configuration-guide/",
-  "theme": "github-dark",
-  "durationInFrames": 950,
   "scenes": [
     {
       "type": "title",
       "kicker": "Linux & Terminal",
       "title": "Ghostty Terminal Configuration Guide",
       "subtitle": "A practical guide to configuring Ghostty for a cleaner, faster, and more comfortable…",
-      "durationInFrames": 105
+      "image": {
+        "src": "post-media/Simple-Ghostty-terminal-configuration-guide/01-ghostty-hero.webp",
+        "width": 1600,
+        "height": 900
+      },
+      "durationInFrames": 183
     },
     {
       "type": "point",
       "kicker": "Linux & Terminal",
       "heading": "Why developers choose Ghostty",
       "body": "Many terminal apps follow older patterns. Ghostty takes a different path. It is designed to be fast, minimal, and easy to customize.",
-      "durationInFrames": 120
+      "durationInFrames": 330
     },
     {
       "type": "point",
       "kicker": "Linux & Terminal",
       "heading": "Getting started",
       "body": "The first step is to install Ghostty and open it. After installation, create or edit your configuration file.",
-      "durationInFrames": 120
+      "durationInFrames": 273
     },
     {
       "type": "code",
@@ -74,7 +77,10 @@
           }
         }
       ],
-      "durationInFrames": 95
+      "stepDurations": [
+        135
+      ],
+      "durationInFrames": 135
     },
     {
       "type": "code",
@@ -146,7 +152,10 @@
           }
         }
       ],
-      "durationInFrames": 95
+      "stepDurations": [
+        135
+      ],
+      "durationInFrames": 135
     },
     {
       "type": "code",
@@ -212,640 +221,1078 @@
           }
         }
       ],
-      "durationInFrames": 190
+      "stepDurations": [
+        135,
+        135
+      ],
+      "durationInFrames": 270
     },
     {
       "type": "point",
       "kicker": "Linux & Terminal",
       "heading": "Improving readability",
       "body": "Good terminal readability is not only about theme. You should also control text rendering and spacing.",
-      "durationInFrames": 120
+      "durationInFrames": 250
+    },
+    {
+      "type": "point",
+      "kicker": "Linux & Terminal",
+      "heading": "Keyboard shortcuts",
+      "body": "A terminal should be easy to drive without a mouse. Ghostty supports keyboard-first workflows that make daily use smoother.",
+      "durationInFrames": 284
+    },
+    {
+      "type": "point",
+      "kicker": "Linux & Terminal",
+      "heading": "Using tabs and panes",
+      "body": "A modern terminal is not only a single command line. It is a workspace. Ghostty supports tabs and panes that help you manage long development…",
+      "durationInFrames": 330
+    },
+    {
+      "type": "point",
+      "kicker": "Linux & Terminal",
+      "heading": "Shell integration",
+      "body": "Ghostty works well with shells such as zsh, bash, and fish. You can pair it with a prompt theme, command auto-completion, and a shell config that…",
+      "durationInFrames": 330
     },
     {
       "type": "outro",
       "heading": "Read the full article",
       "body": "New posts every week on the blog.",
       "url": "techtips.fun",
-      "durationInFrames": 105
+      "durationInFrames": 165
     }
   ],
+  "theme": "github-dark",
+  "durationInFrames": 2685,
   "captions": [
     {
       "text": " A",
-      "startMs": 0,
-      "endMs": 116
+      "startMs": 500,
+      "endMs": 669
     },
     {
       "text": " practical",
-      "startMs": 116,
-      "endMs": 464
+      "startMs": 669,
+      "endMs": 1177
     },
     {
       "text": " guide",
-      "startMs": 464,
-      "endMs": 696
+      "startMs": 1177,
+      "endMs": 1516
     },
     {
       "text": " to",
-      "startMs": 696,
-      "endMs": 841,
+      "startMs": 1516,
+      "endMs": 1728,
       "pageBreakAfter": true
     },
     {
       "text": " configuring",
-      "startMs": 841,
-      "endMs": 1247
+      "startMs": 1728,
+      "endMs": 2321
     },
     {
       "text": " Ghostty",
-      "startMs": 1247,
-      "endMs": 1537
+      "startMs": 2321,
+      "endMs": 2744
     },
     {
       "text": " for",
-      "startMs": 1537,
-      "endMs": 1712
+      "startMs": 2744,
+      "endMs": 2998
     },
     {
       "text": " a",
-      "startMs": 1712,
-      "endMs": 1828,
+      "startMs": 2998,
+      "endMs": 3168,
       "pageBreakAfter": true
     },
     {
       "text": " cleaner,",
-      "startMs": 1828,
-      "endMs": 2147
+      "startMs": 3168,
+      "endMs": 3633
     },
     {
       "text": " faster,",
-      "startMs": 2147,
-      "endMs": 2437
+      "startMs": 3633,
+      "endMs": 4057
     },
     {
       "text": " and",
-      "startMs": 2437,
-      "endMs": 2611
+      "startMs": 4057,
+      "endMs": 4311
     },
     {
       "text": " more",
-      "startMs": 2611,
-      "endMs": 2814,
+      "startMs": 4311,
+      "endMs": 4607,
       "pageBreakAfter": true
     },
     {
       "text": " comfortable",
-      "startMs": 2814,
-      "endMs": 3220,
+      "startMs": 4607,
+      "endMs": 6067,
       "pageBreakAfter": true
     },
     {
       "text": " Why",
-      "startMs": 3500,
-      "endMs": 3602
+      "startMs": 6600,
+      "endMs": 6867
     },
     {
       "text": " developers",
-      "startMs": 3602,
-      "endMs": 3824
+      "startMs": 6867,
+      "endMs": 7444
     },
     {
       "text": " choose",
-      "startMs": 3824,
-      "endMs": 3977
+      "startMs": 7444,
+      "endMs": 7844
     },
     {
       "text": " Ghostty.",
-      "startMs": 3977,
-      "endMs": 4164,
+      "startMs": 7844,
+      "endMs": 8333,
       "pageBreakAfter": true
     },
     {
       "text": " Many",
-      "startMs": 4164,
-      "endMs": 4284
+      "startMs": 8333,
+      "endMs": 8644
     },
     {
       "text": " terminal",
-      "startMs": 4284,
-      "endMs": 4471
+      "startMs": 8644,
+      "endMs": 9133
     },
     {
       "text": " apps",
-      "startMs": 4471,
-      "endMs": 4590
+      "startMs": 9133,
+      "endMs": 9444
     },
     {
       "text": " follow",
-      "startMs": 4590,
-      "endMs": 4744,
+      "startMs": 9444,
+      "endMs": 9844,
       "pageBreakAfter": true
     },
     {
       "text": " older",
-      "startMs": 4744,
-      "endMs": 4880
+      "startMs": 9844,
+      "endMs": 10200
     },
     {
       "text": " patterns.",
-      "startMs": 4880,
-      "endMs": 5084
+      "startMs": 10200,
+      "endMs": 10733
     },
     {
       "text": " Ghostty",
-      "startMs": 5084,
-      "endMs": 5255
+      "startMs": 10733,
+      "endMs": 11178
     },
     {
       "text": " takes",
-      "startMs": 5255,
-      "endMs": 5391,
+      "startMs": 11178,
+      "endMs": 11533,
       "pageBreakAfter": true
     },
     {
       "text": " a",
-      "startMs": 5391,
-      "endMs": 5459
+      "startMs": 11533,
+      "endMs": 11711
     },
     {
       "text": " different",
-      "startMs": 5459,
-      "endMs": 5664
+      "startMs": 11711,
+      "endMs": 12244
     },
     {
       "text": " path.",
-      "startMs": 5664,
-      "endMs": 5800
+      "startMs": 12244,
+      "endMs": 12600
     },
     {
       "text": " It",
-      "startMs": 5800,
-      "endMs": 5885,
+      "startMs": 12600,
+      "endMs": 12822,
       "pageBreakAfter": true
     },
     {
       "text": " is",
-      "startMs": 5885,
-      "endMs": 5970
+      "startMs": 12822,
+      "endMs": 13044
     },
     {
       "text": " designed",
-      "startMs": 5970,
-      "endMs": 6158
+      "startMs": 13044,
+      "endMs": 13533
     },
     {
       "text": " to",
-      "startMs": 6158,
-      "endMs": 6243
+      "startMs": 13533,
+      "endMs": 13756
     },
     {
       "text": " be",
-      "startMs": 6243,
-      "endMs": 6328,
+      "startMs": 13756,
+      "endMs": 13978,
       "pageBreakAfter": true
     },
     {
       "text": " fast,",
-      "startMs": 6328,
-      "endMs": 6464
+      "startMs": 13978,
+      "endMs": 14333
     },
     {
       "text": " minimal,",
-      "startMs": 6464,
-      "endMs": 6652
+      "startMs": 14333,
+      "endMs": 14822
     },
     {
       "text": " and",
-      "startMs": 6652,
-      "endMs": 6754
+      "startMs": 14822,
+      "endMs": 15089
     },
     {
       "text": " easy",
-      "startMs": 6754,
-      "endMs": 6873,
+      "startMs": 15089,
+      "endMs": 15400,
       "pageBreakAfter": true
     },
     {
       "text": " to",
-      "startMs": 6873,
-      "endMs": 6959
+      "startMs": 15400,
+      "endMs": 15622
     },
     {
       "text": " customize.",
-      "startMs": 6959,
-      "endMs": 7180,
+      "startMs": 15622,
+      "endMs": 17067,
       "pageBreakAfter": true
     },
     {
       "text": " Getting",
-      "startMs": 7500,
-      "endMs": 7720
+      "startMs": 17600,
+      "endMs": 18061
     },
     {
       "text": " started.",
-      "startMs": 7720,
-      "endMs": 7963
+      "startMs": 18061,
+      "endMs": 18568
     },
     {
       "text": " The",
-      "startMs": 7963,
-      "endMs": 8095
+      "startMs": 18568,
+      "endMs": 18845
     },
     {
       "text": " first",
-      "startMs": 8095,
-      "endMs": 8271,
+      "startMs": 18845,
+      "endMs": 19214,
       "pageBreakAfter": true
     },
     {
       "text": " step",
-      "startMs": 8271,
-      "endMs": 8426
+      "startMs": 19214,
+      "endMs": 19537
     },
     {
       "text": " is",
-      "startMs": 8426,
-      "endMs": 8536
+      "startMs": 19537,
+      "endMs": 19767
     },
     {
       "text": " to",
-      "startMs": 8536,
-      "endMs": 8646
+      "startMs": 19767,
+      "endMs": 19998
     },
     {
       "text": " install",
-      "startMs": 8646,
-      "endMs": 8866,
+      "startMs": 19998,
+      "endMs": 20459,
       "pageBreakAfter": true
     },
     {
       "text": " Ghostty",
-      "startMs": 8866,
-      "endMs": 9087
+      "startMs": 20459,
+      "endMs": 20920
     },
     {
       "text": " and",
-      "startMs": 9087,
-      "endMs": 9219
+      "startMs": 20920,
+      "endMs": 21196
     },
     {
       "text": " open",
-      "startMs": 9219,
-      "endMs": 9373
+      "startMs": 21196,
+      "endMs": 21519
     },
     {
       "text": " it.",
-      "startMs": 9373,
-      "endMs": 9505,
+      "startMs": 21519,
+      "endMs": 21796,
       "pageBreakAfter": true
     },
     {
       "text": " After",
-      "startMs": 9505,
-      "endMs": 9682
+      "startMs": 21796,
+      "endMs": 22165
     },
     {
       "text": " installation,",
-      "startMs": 9682,
-      "endMs": 10034
+      "startMs": 22165,
+      "endMs": 22902
     },
     {
       "text": " create",
-      "startMs": 10034,
-      "endMs": 10232
+      "startMs": 22902,
+      "endMs": 23317
     },
     {
       "text": " or",
-      "startMs": 10232,
-      "endMs": 10343,
+      "startMs": 23317,
+      "endMs": 23548,
       "pageBreakAfter": true
     },
     {
       "text": " edit",
-      "startMs": 10343,
-      "endMs": 10497
+      "startMs": 23548,
+      "endMs": 23871
     },
     {
       "text": " your",
-      "startMs": 10497,
-      "endMs": 10651
+      "startMs": 23871,
+      "endMs": 24193
     },
     {
       "text": " configuration",
-      "startMs": 10651,
-      "endMs": 11004
+      "startMs": 24193,
+      "endMs": 24931
     },
     {
       "text": " file.",
-      "startMs": 11004,
-      "endMs": 11180,
+      "startMs": 24931,
+      "endMs": 26167,
       "pageBreakAfter": true
     },
     {
       "text": " Choosing",
-      "startMs": 11500,
-      "endMs": 12034
+      "startMs": 26700,
+      "endMs": 27310
     },
     {
       "text": " a",
-      "startMs": 12034,
-      "endMs": 12228
+      "startMs": 27310,
+      "endMs": 27531
     },
     {
       "text": " font.",
-      "startMs": 12228,
-      "endMs": 12617
+      "startMs": 27531,
+      "endMs": 27975
     },
     {
       "text": " Let",
-      "startMs": 12617,
-      "endMs": 12908,
+      "startMs": 27975,
+      "endMs": 28307,
       "pageBreakAfter": true
     },
     {
       "text": " us",
-      "startMs": 12908,
-      "endMs": 13151
+      "startMs": 28307,
+      "endMs": 28584
     },
     {
       "text": " look",
-      "startMs": 13151,
-      "endMs": 13491
+      "startMs": 28584,
+      "endMs": 28972
     },
     {
       "text": " at",
-      "startMs": 13491,
-      "endMs": 13734
+      "startMs": 28972,
+      "endMs": 29249
     },
     {
       "text": " the",
-      "startMs": 13734,
-      "endMs": 14025,
+      "startMs": 29249,
+      "endMs": 29582,
       "pageBreakAfter": true
     },
     {
       "text": " code.",
-      "startMs": 14025,
-      "endMs": 14413,
+      "startMs": 29582,
+      "endMs": 30667,
       "pageBreakAfter": true
     },
     {
       "text": " Setting",
-      "startMs": 14667,
-      "endMs": 15152
+      "startMs": 31200,
+      "endMs": 31754
     },
     {
       "text": " a",
-      "startMs": 15152,
-      "endMs": 15346
+      "startMs": 31754,
+      "endMs": 31976
     },
     {
       "text": " theme.",
-      "startMs": 15346,
-      "endMs": 15783
+      "startMs": 31976,
+      "endMs": 32475
     },
     {
       "text": " Let",
-      "startMs": 15783,
-      "endMs": 16075,
+      "startMs": 32475,
+      "endMs": 32807,
       "pageBreakAfter": true
     },
     {
       "text": " us",
-      "startMs": 16075,
-      "endMs": 16318
+      "startMs": 32807,
+      "endMs": 33084
     },
     {
       "text": " look",
-      "startMs": 16318,
-      "endMs": 16657
+      "startMs": 33084,
+      "endMs": 33472
     },
     {
       "text": " at",
-      "startMs": 16657,
-      "endMs": 16900
+      "startMs": 33472,
+      "endMs": 33749
     },
     {
       "text": " the",
-      "startMs": 16900,
-      "endMs": 17192,
+      "startMs": 33749,
+      "endMs": 34082,
       "pageBreakAfter": true
     },
     {
       "text": " code.",
-      "startMs": 17192,
-      "endMs": 17580,
+      "startMs": 34082,
+      "endMs": 35167,
       "pageBreakAfter": true
     },
     {
       "text": " Customizing",
-      "startMs": 17833,
-      "endMs": 18828
+      "startMs": 35700,
+      "endMs": 36639
     },
     {
       "text": " the",
-      "startMs": 18828,
-      "endMs": 19254
+      "startMs": 36639,
+      "endMs": 37041
     },
     {
       "text": " cursor",
-      "startMs": 19254,
-      "endMs": 19894
+      "startMs": 37041,
+      "endMs": 37645
     },
     {
       "text": " and",
-      "startMs": 19894,
-      "endMs": 20320,
+      "startMs": 37645,
+      "endMs": 38048,
       "pageBreakAfter": true
     },
     {
       "text": " window.",
-      "startMs": 20320,
-      "endMs": 21031
+      "startMs": 38048,
+      "endMs": 38718
     },
     {
       "text": " Let",
-      "startMs": 21031,
-      "endMs": 21457
+      "startMs": 38718,
+      "endMs": 39121
     },
     {
       "text": " us",
-      "startMs": 21457,
-      "endMs": 21813
+      "startMs": 39121,
+      "endMs": 39456
     },
     {
       "text": " look",
-      "startMs": 21813,
-      "endMs": 22310,
+      "startMs": 39456,
+      "endMs": 39926,
       "pageBreakAfter": true
     },
     {
       "text": " at",
-      "startMs": 22310,
-      "endMs": 22665
+      "startMs": 39926,
+      "endMs": 40261
     },
     {
       "text": " the",
-      "startMs": 22665,
-      "endMs": 23092
+      "startMs": 40261,
+      "endMs": 40663
     },
     {
       "text": " code.",
-      "startMs": 23092,
-      "endMs": 23660,
+      "startMs": 40663,
+      "endMs": 44167,
       "pageBreakAfter": true
     },
     {
       "text": " Improving",
-      "startMs": 24167,
-      "endMs": 24439
+      "startMs": 44700,
+      "endMs": 45214
     },
     {
       "text": " readability.",
-      "startMs": 24439,
-      "endMs": 24780
+      "startMs": 45214,
+      "endMs": 45856
     },
     {
       "text": " Good",
-      "startMs": 24780,
-      "endMs": 24939
+      "startMs": 45856,
+      "endMs": 46155
     },
     {
       "text": " terminal",
-      "startMs": 24939,
-      "endMs": 25189,
+      "startMs": 46155,
+      "endMs": 46626,
       "pageBreakAfter": true
     },
     {
       "text": " readability",
-      "startMs": 25189,
-      "endMs": 25507
+      "startMs": 46626,
+      "endMs": 47225
     },
     {
       "text": " is",
-      "startMs": 25507,
-      "endMs": 25620
+      "startMs": 47225,
+      "endMs": 47439
     },
     {
       "text": " not",
-      "startMs": 25620,
-      "endMs": 25757
+      "startMs": 47439,
+      "endMs": 47696
     },
     {
       "text": " only",
-      "startMs": 25757,
-      "endMs": 25916,
+      "startMs": 47696,
+      "endMs": 47995,
       "pageBreakAfter": true
     },
     {
       "text": " about",
-      "startMs": 25916,
-      "endMs": 26098
+      "startMs": 47995,
+      "endMs": 48338
     },
     {
       "text": " theme.",
-      "startMs": 26098,
-      "endMs": 26302
+      "startMs": 48338,
+      "endMs": 48723
     },
     {
       "text": " You",
-      "startMs": 26302,
-      "endMs": 26438
+      "startMs": 48723,
+      "endMs": 48980
     },
     {
       "text": " should",
-      "startMs": 26438,
-      "endMs": 26643,
+      "startMs": 48980,
+      "endMs": 49365,
       "pageBreakAfter": true
     },
     {
       "text": " also",
-      "startMs": 26643,
-      "endMs": 26802
+      "startMs": 49365,
+      "endMs": 49665
     },
     {
       "text": " control",
-      "startMs": 26802,
-      "endMs": 27029
+      "startMs": 49665,
+      "endMs": 50093
     },
     {
       "text": " text",
-      "startMs": 27029,
-      "endMs": 27188
+      "startMs": 50093,
+      "endMs": 50392
     },
     {
       "text": " rendering",
-      "startMs": 27188,
-      "endMs": 27460,
+      "startMs": 50392,
+      "endMs": 50906,
       "pageBreakAfter": true
     },
     {
       "text": " and",
-      "startMs": 27460,
-      "endMs": 27597
+      "startMs": 50906,
+      "endMs": 51163
     },
     {
       "text": " spacing.",
-      "startMs": 27597,
-      "endMs": 27847,
+      "startMs": 51163,
+      "endMs": 52500,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Keyboard",
+      "startMs": 53033,
+      "endMs": 53510
+    },
+    {
+      "text": " shortcuts.",
+      "startMs": 53510,
+      "endMs": 54074
+    },
+    {
+      "text": " A",
+      "startMs": 54074,
+      "endMs": 54248
+    },
+    {
+      "text": " terminal",
+      "startMs": 54248,
+      "endMs": 54725,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " should",
+      "startMs": 54725,
+      "endMs": 55115
+    },
+    {
+      "text": " be",
+      "startMs": 55115,
+      "endMs": 55332
+    },
+    {
+      "text": " easy",
+      "startMs": 55332,
+      "endMs": 55635
+    },
+    {
+      "text": " to",
+      "startMs": 55635,
+      "endMs": 55852,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " drive",
+      "startMs": 55852,
+      "endMs": 56199
+    },
+    {
+      "text": " without",
+      "startMs": 56199,
+      "endMs": 56633
+    },
+    {
+      "text": " a",
+      "startMs": 56633,
+      "endMs": 56806
+    },
+    {
+      "text": " mouse.",
+      "startMs": 56806,
+      "endMs": 57197,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Ghostty",
+      "startMs": 57197,
+      "endMs": 57630
+    },
+    {
+      "text": " supports",
+      "startMs": 57630,
+      "endMs": 58108
+    },
+    {
+      "text": " keyboard-first",
+      "startMs": 58108,
+      "endMs": 58845
+    },
+    {
+      "text": " workflows",
+      "startMs": 58845,
+      "endMs": 59365,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " that",
+      "startMs": 59365,
+      "endMs": 59669
+    },
+    {
+      "text": " make",
+      "startMs": 59669,
+      "endMs": 59972
+    },
+    {
+      "text": " daily",
+      "startMs": 59972,
+      "endMs": 60319
+    },
+    {
+      "text": " use",
+      "startMs": 60319,
+      "endMs": 60580,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " smoother.",
+      "startMs": 60580,
+      "endMs": 61967,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Using",
+      "startMs": 62500,
+      "endMs": 62844
+    },
+    {
+      "text": " tabs",
+      "startMs": 62844,
+      "endMs": 63146
+    },
+    {
+      "text": " and",
+      "startMs": 63146,
+      "endMs": 63404
+    },
+    {
+      "text": " panes.",
+      "startMs": 63404,
+      "endMs": 63791,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " A",
+      "startMs": 63791,
+      "endMs": 63964
+    },
+    {
+      "text": " modern",
+      "startMs": 63964,
+      "endMs": 64351
+    },
+    {
+      "text": " terminal",
+      "startMs": 64351,
+      "endMs": 64825
+    },
+    {
+      "text": " is",
+      "startMs": 64825,
+      "endMs": 65040,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " not",
+      "startMs": 65040,
+      "endMs": 65298
+    },
+    {
+      "text": " only",
+      "startMs": 65298,
+      "endMs": 65600
+    },
+    {
+      "text": " a",
+      "startMs": 65600,
+      "endMs": 65772
+    },
+    {
+      "text": " single",
+      "startMs": 65772,
+      "endMs": 66159,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " command",
+      "startMs": 66159,
+      "endMs": 66590
+    },
+    {
+      "text": " line.",
+      "startMs": 66590,
+      "endMs": 66934
+    },
+    {
+      "text": " It",
+      "startMs": 66934,
+      "endMs": 67149
+    },
+    {
+      "text": " is",
+      "startMs": 67149,
+      "endMs": 67365,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " a",
+      "startMs": 67365,
+      "endMs": 67537
+    },
+    {
+      "text": " workspace.",
+      "startMs": 67537,
+      "endMs": 68096
+    },
+    {
+      "text": " Ghostty",
+      "startMs": 68096,
+      "endMs": 68527
+    },
+    {
+      "text": " supports",
+      "startMs": 68527,
+      "endMs": 69000,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " tabs",
+      "startMs": 69000,
+      "endMs": 69302
+    },
+    {
+      "text": " and",
+      "startMs": 69302,
+      "endMs": 69560
+    },
+    {
+      "text": " panes",
+      "startMs": 69560,
+      "endMs": 69904
+    },
+    {
+      "text": " that",
+      "startMs": 69904,
+      "endMs": 70206,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " help",
+      "startMs": 70206,
+      "endMs": 70507
+    },
+    {
+      "text": " you",
+      "startMs": 70507,
+      "endMs": 70765
+    },
+    {
+      "text": " manage",
+      "startMs": 70765,
+      "endMs": 71153
+    },
+    {
+      "text": " long",
+      "startMs": 71153,
+      "endMs": 71454,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " development…",
+      "startMs": 71454,
+      "endMs": 72967,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Shell",
+      "startMs": 73500,
+      "endMs": 73846
+    },
+    {
+      "text": " integration.",
+      "startMs": 73846,
+      "endMs": 74495
+    },
+    {
+      "text": " Ghostty",
+      "startMs": 74495,
+      "endMs": 74927
+    },
+    {
+      "text": " works",
+      "startMs": 74927,
+      "endMs": 75273,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " well",
+      "startMs": 75273,
+      "endMs": 75576
+    },
+    {
+      "text": " with",
+      "startMs": 75576,
+      "endMs": 75878
+    },
+    {
+      "text": " shells",
+      "startMs": 75878,
+      "endMs": 76268
+    },
+    {
+      "text": " such",
+      "startMs": 76268,
+      "endMs": 76570,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " as",
+      "startMs": 76570,
+      "endMs": 76786
+    },
+    {
+      "text": " zsh,",
+      "startMs": 76786,
+      "endMs": 77089
+    },
+    {
+      "text": " bash,",
+      "startMs": 77089,
+      "endMs": 77435
+    },
+    {
+      "text": " and",
+      "startMs": 77435,
+      "endMs": 77695,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " fish.",
+      "startMs": 77695,
+      "endMs": 78041
+    },
+    {
+      "text": " You",
+      "startMs": 78041,
+      "endMs": 78300
+    },
+    {
+      "text": " can",
+      "startMs": 78300,
+      "endMs": 78559
+    },
+    {
+      "text": " pair",
+      "startMs": 78559,
+      "endMs": 78862,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " it",
+      "startMs": 78862,
+      "endMs": 79078
+    },
+    {
+      "text": " with",
+      "startMs": 79078,
+      "endMs": 79381
+    },
+    {
+      "text": " a",
+      "startMs": 79381,
+      "endMs": 79554
+    },
+    {
+      "text": " prompt",
+      "startMs": 79554,
+      "endMs": 79943,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " theme,",
+      "startMs": 79943,
+      "endMs": 80332
+    },
+    {
+      "text": " command",
+      "startMs": 80332,
+      "endMs": 80765
+    },
+    {
+      "text": " auto-completion,",
+      "startMs": 80765,
+      "endMs": 81586
+    },
+    {
+      "text": " and",
+      "startMs": 81586,
+      "endMs": 81846,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " a",
+      "startMs": 81846,
+      "endMs": 82019
+    },
+    {
+      "text": " shell",
+      "startMs": 82019,
+      "endMs": 82365
+    },
+    {
+      "text": " config",
+      "startMs": 82365,
+      "endMs": 82754
+    },
+    {
+      "text": " that…",
+      "startMs": 82754,
+      "endMs": 83967,
       "pageBreakAfter": true
     },
     {
       "text": " Read",
-      "startMs": 28167,
-      "endMs": 28452
+      "startMs": 84500,
+      "endMs": 84870
     },
     {
       "text": " the",
-      "startMs": 28452,
-      "endMs": 28697
+      "startMs": 84870,
+      "endMs": 85187
     },
     {
       "text": " full",
-      "startMs": 28697,
-      "endMs": 28982
+      "startMs": 85187,
+      "endMs": 85557
     },
     {
       "text": " article.",
-      "startMs": 28982,
-      "endMs": 29430,
+      "startMs": 85557,
+      "endMs": 86138,
       "pageBreakAfter": true
     },
     {
       "text": " New",
-      "startMs": 29430,
-      "endMs": 29675
+      "startMs": 86138,
+      "endMs": 86455
     },
     {
       "text": " posts",
-      "startMs": 29675,
-      "endMs": 30001
+      "startMs": 86455,
+      "endMs": 86878
     },
     {
       "text": " every",
-      "startMs": 30001,
-      "endMs": 30327
+      "startMs": 86878,
+      "endMs": 87301
     },
     {
       "text": " week",
-      "startMs": 30327,
-      "endMs": 30612,
+      "startMs": 87301,
+      "endMs": 87671,
       "pageBreakAfter": true
     },
     {
       "text": " on",
-      "startMs": 30612,
-      "endMs": 30816
+      "startMs": 87671,
+      "endMs": 87935
     },
     {
       "text": " the",
-      "startMs": 30816,
-      "endMs": 31061
+      "startMs": 87935,
+      "endMs": 88252
     },
     {
       "text": " blog.",
-      "startMs": 31061,
-      "endMs": 31387,
+      "startMs": 88252,
+      "endMs": 89467,
       "pageBreakAfter": true
     }
   ],

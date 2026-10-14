@@ -1,7 +1,7 @@
 {
   "slug": "top-free-ai-models-you-can-use-right",
-  "title": "Top free AI models you can use right now in 2026",
-  "description": "You no longer need a $200/month API subscription to access state-of-the-art language models. In 2026, the best free and open-source AI models rival",
+  "title": "Top Free AI Tools and Models You Can Use in 2026",
+  "description": "Explore free AI tools and open models in 2026, including Manus, GitHub Copilot, Llama, DeepSeek, Qwen, Gemma, Mistral, and Phi-4.",
   "category": "AI Tools",
   "tags": [
     "AI",
@@ -10,42 +10,59 @@
     "Local AI"
   ],
   "url": "https://www.techtips.fun/blog/top-free-ai-models-you-can-use-right/",
-  "theme": "github-dark",
-  "durationInFrames": 880,
   "scenes": [
     {
       "type": "title",
       "kicker": "AI Tools",
-      "title": "Top free AI models you can use right now in 2026",
-      "subtitle": "You no longer need a $200/month API subscription to access state-of-the-art language…",
-      "durationInFrames": 105
+      "title": "Top Free AI Tools and Models You Can Use in 2026",
+      "subtitle": "Explore free AI tools and open models in 2026, including Manus, GitHub Copilot, Llama,…",
+      "image": {
+        "src": "post-media/top-free-ai-models-you-can-use-right/01-minimal-desk.webp",
+        "width": 960,
+        "height": 480
+      },
+      "durationInFrames": 183
     },
     {
       "type": "point",
       "kicker": "AI Tools",
-      "heading": "Meta's premium open model, the Llama 4",
-      "body": "The most popular open-source LLM in the world is Meta's Llama 4 family. An entire codebase or a full-length novel can potentially be fed into the…",
-      "durationInFrames": 120
+      "heading": "Manus: An AI Agent for Multi-Step Work",
+      "body": "Manus is designed for tasks that require more than a single question and answer.",
+      "durationInFrames": 284
+    },
+    {
+      "type": "point",
+      "kicker": "AI Tools",
+      "heading": "GitHub Copilot: An AI Assistant for Developers",
+      "body": "GitHub Copilot provides coding suggestions inside supported development environments.",
+      "durationInFrames": 227
+    },
+    {
+      "type": "point",
+      "kicker": "AI Tools",
+      "heading": "Meta's Llama Family: Flexible Open Models",
+      "body": "Meta's Llama family remains a popular choice for developers who want to experiment with open-weight models.",
+      "durationInFrames": 296
     },
     {
       "type": "code",
       "kicker": "Code",
-      "heading": "DeepSeek-R1, the master in reasoning",
+      "heading": "DeepSeek-R1: A Reasoning-Focused Model",
       "steps": [
         {
-          "lang": "text",
-          "meta": "",
-          "value": "# Run DeepSeek-R1 distilled model locally with Ollama\nollama run deepseek-r1:8b",
-          "code": "# Run DeepSeek-R1 distilled model locally with Ollama\nollama run deepseek-r1:8b",
+          "lang": "shellscript",
+          "meta": "bash",
+          "value": "ollama run deepseek-r1:8b",
+          "code": "ollama run deepseek-r1:8b",
           "tokens": [
             [
-              "# Run DeepSeek-R1 distilled model locally with Ollama",
-              null
+              "ollama",
+              "#FFA657"
             ],
-            "\n",
+            " ",
             [
-              "ollama run deepseek-r1:8b",
-              null
+              "run deepseek-r1:8b",
+              "#A5D6FF"
             ]
           ],
           "annotations": [],
@@ -57,34 +74,37 @@
           }
         }
       ],
-      "durationInFrames": 95
+      "stepDurations": [
+        135
+      ],
+      "durationInFrames": 135
     },
     {
       "type": "point",
       "kicker": "AI Tools",
-      "heading": "Qwen 3.5: A surprising competitor",
-      "body": "Qwen has quietly become one of the best open model families. Despite its large size, the Qwen 3.5 122B's Mixture-of-Experts architecture enables fast…",
-      "durationInFrames": 120
+      "heading": "Qwen: A Strong Multilingual Option",
+      "body": "Qwen has become a competitive family of open models for multilingual work, coding, creative writing, and general-purpose tasks.",
+      "durationInFrames": 307
     },
     {
       "type": "code",
       "kicker": "Code",
-      "heading": "Google's Gemma 4",
+      "heading": "Google's Gemma: Lightweight Models for Local Use",
       "steps": [
         {
-          "lang": "text",
-          "meta": "",
-          "value": "# Run Gemma 4 locally\nollama run gemma4:e4b",
-          "code": "# Run Gemma 4 locally\nollama run gemma4:e4b",
+          "lang": "shellscript",
+          "meta": "bash",
+          "value": "ollama run gemma:4b",
+          "code": "ollama run gemma:4b",
           "tokens": [
             [
-              "# Run Gemma 4 locally",
-              null
+              "ollama",
+              "#FFA657"
             ],
-            "\n",
+            " ",
             [
-              "ollama run gemma4:e4b",
-              null
+              "run gemma:4b",
+              "#A5D6FF"
             ]
           ],
           "annotations": [],
@@ -96,777 +116,1045 @@
           }
         }
       ],
-      "durationInFrames": 95
+      "stepDurations": [
+        135
+      ],
+      "durationInFrames": 135
     },
     {
       "type": "point",
       "kicker": "AI Tools",
-      "heading": "Mistral Large 2 — Europe’s contender",
-      "body": "Europe's competitor, Mistral Large 2. From the beginning, Mistral has been outperforming its competitors.",
-      "durationInFrames": 120
+      "heading": "Mistral: Efficient Models from Europe",
+      "body": "Mistral offers models for general-purpose use, coding, multilingual work, function calling, and structured output.",
+      "durationInFrames": 261
     },
     {
       "type": "point",
       "kicker": "AI Tools",
-      "heading": "Phi-4 — Microsoft’s small-but-mighty model",
-      "body": "Microsoft's tiny but powerful Phi-4 model. Size isn't everything, as Microsoft's Phi-4 demonstrates.",
-      "durationInFrames": 120
+      "heading": "Phi: Small Models with Strong Capabilities",
+      "body": "Microsoft's Phi family shows that useful AI performance does not always require a very large model.",
+      "durationInFrames": 296
+    },
+    {
+      "type": "code",
+      "kicker": "Code",
+      "heading": "How to Use These AI Tools for Free",
+      "steps": [
+        {
+          "lang": "shellscript",
+          "meta": "bash",
+          "value": "ollama run llama3.2:8b",
+          "code": "ollama run llama3.2:8b",
+          "tokens": [
+            [
+              "ollama",
+              "#FFA657"
+            ],
+            " ",
+            [
+              "run llama3.2:8b",
+              "#A5D6FF"
+            ]
+          ],
+          "annotations": [],
+          "themeName": "github-dark",
+          "style": {
+            "color": "#c9d1d9",
+            "background": "#0d1117",
+            "colorScheme": "dark"
+          }
+        }
+      ],
+      "stepDurations": [
+        135
+      ],
+      "durationInFrames": 135
     },
     {
       "type": "outro",
       "heading": "Read the full article",
       "body": "New posts every week on the blog.",
       "url": "techtips.fun",
-      "durationInFrames": 105
+      "durationInFrames": 165
     }
   ],
+  "theme": "github-dark",
+  "durationInFrames": 2424,
   "captions": [
     {
-      "text": " You",
-      "startMs": 0,
-      "endMs": 177
+      "text": " Explore",
+      "startMs": 500,
+      "endMs": 909
     },
     {
-      "text": " no",
-      "startMs": 177,
-      "endMs": 325
+      "text": " free",
+      "startMs": 909,
+      "endMs": 1195
     },
     {
-      "text": " longer",
-      "startMs": 325,
-      "endMs": 591
+      "text": " AI",
+      "startMs": 1195,
+      "endMs": 1399
     },
     {
-      "text": " need",
-      "startMs": 591,
-      "endMs": 798,
+      "text": " tools",
+      "startMs": 1399,
+      "endMs": 1726,
       "pageBreakAfter": true
     },
     {
-      "text": " a",
-      "startMs": 798,
-      "endMs": 916
-    },
-    {
-      "text": " $200/month",
-      "startMs": 916,
-      "endMs": 1300
-    },
-    {
-      "text": " API",
-      "startMs": 1300,
-      "endMs": 1477
-    },
-    {
-      "text": " subscription",
-      "startMs": 1477,
-      "endMs": 1920,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " to",
-      "startMs": 1920,
-      "endMs": 2068
-    },
-    {
-      "text": " access",
-      "startMs": 2068,
-      "endMs": 2334
-    },
-    {
-      "text": " state-of-the-art",
-      "startMs": 2334,
-      "endMs": 2895
-    },
-    {
-      "text": " language",
-      "startMs": 2895,
-      "endMs": 3220,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " Meta's",
-      "startMs": 3500,
-      "endMs": 3631
-    },
-    {
-      "text": " premium",
-      "startMs": 3631,
-      "endMs": 3776
+      "text": " and",
+      "startMs": 1726,
+      "endMs": 1971
     },
     {
       "text": " open",
-      "startMs": 3776,
-      "endMs": 3878
+      "startMs": 1971,
+      "endMs": 2257
     },
     {
-      "text": " model,",
-      "startMs": 3878,
-      "endMs": 4009,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " the",
-      "startMs": 4009,
-      "endMs": 4096
-    },
-    {
-      "text": " Llama",
-      "startMs": 4096,
-      "endMs": 4213
-    },
-    {
-      "text": " 4.",
-      "startMs": 4213,
-      "endMs": 4285
-    },
-    {
-      "text": " The",
-      "startMs": 4285,
-      "endMs": 4373,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " most",
-      "startMs": 4373,
-      "endMs": 4475
-    },
-    {
-      "text": " popular",
-      "startMs": 4475,
-      "endMs": 4620
-    },
-    {
-      "text": " open-source",
-      "startMs": 4620,
-      "endMs": 4824
-    },
-    {
-      "text": " LLM",
-      "startMs": 4824,
-      "endMs": 4911,
-      "pageBreakAfter": true
+      "text": " models",
+      "startMs": 2257,
+      "endMs": 2625
     },
     {
       "text": " in",
-      "startMs": 4911,
-      "endMs": 4984
-    },
-    {
-      "text": " the",
-      "startMs": 4984,
-      "endMs": 5071
-    },
-    {
-      "text": " world",
-      "startMs": 5071,
-      "endMs": 5187
-    },
-    {
-      "text": " is",
-      "startMs": 5187,
-      "endMs": 5260,
+      "startMs": 2625,
+      "endMs": 2830,
       "pageBreakAfter": true
     },
     {
-      "text": " Meta's",
-      "startMs": 5260,
-      "endMs": 5391
+      "text": " 2026,",
+      "startMs": 2830,
+      "endMs": 3157
     },
     {
-      "text": " Llama",
-      "startMs": 5391,
-      "endMs": 5507
+      "text": " including",
+      "startMs": 3157,
+      "endMs": 3647
     },
     {
-      "text": " 4",
-      "startMs": 5507,
-      "endMs": 5565
+      "text": " Manus,",
+      "startMs": 3647,
+      "endMs": 4015
     },
     {
-      "text": " family.",
-      "startMs": 5565,
-      "endMs": 5711,
+      "text": " GitHub",
+      "startMs": 4015,
+      "endMs": 4383,
       "pageBreakAfter": true
+    },
+    {
+      "text": " Copilot,",
+      "startMs": 4383,
+      "endMs": 4832
+    },
+    {
+      "text": " Llama,",
+      "startMs": 4832,
+      "endMs": 6067,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Manus:",
+      "startMs": 6600,
+      "endMs": 7045
     },
     {
       "text": " An",
-      "startMs": 5711,
-      "endMs": 5784
+      "startMs": 7045,
+      "endMs": 7293
     },
     {
-      "text": " entire",
-      "startMs": 5784,
-      "endMs": 5915
+      "text": " AI",
+      "startMs": 7293,
+      "endMs": 7540
     },
     {
-      "text": " codebase",
-      "startMs": 5915,
-      "endMs": 6075
+      "text": " Agent",
+      "startMs": 7540,
+      "endMs": 7936,
+      "pageBreakAfter": true
     },
     {
-      "text": " or",
-      "startMs": 6075,
-      "endMs": 6147,
+      "text": " for",
+      "startMs": 7936,
+      "endMs": 8233
+    },
+    {
+      "text": " Multi-Step",
+      "startMs": 8233,
+      "endMs": 8876
+    },
+    {
+      "text": " Work.",
+      "startMs": 8876,
+      "endMs": 9272
+    },
+    {
+      "text": " Manus",
+      "startMs": 9272,
+      "endMs": 9668,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " is",
+      "startMs": 9668,
+      "endMs": 9916
+    },
+    {
+      "text": " designed",
+      "startMs": 9916,
+      "endMs": 10460
+    },
+    {
+      "text": " for",
+      "startMs": 10460,
+      "endMs": 10757
+    },
+    {
+      "text": " tasks",
+      "startMs": 10757,
+      "endMs": 11153,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " that",
+      "startMs": 11153,
+      "endMs": 11499
+    },
+    {
+      "text": " require",
+      "startMs": 11499,
+      "endMs": 11994
+    },
+    {
+      "text": " more",
+      "startMs": 11994,
+      "endMs": 12341
+    },
+    {
+      "text": " than",
+      "startMs": 12341,
+      "endMs": 12687,
       "pageBreakAfter": true
     },
     {
       "text": " a",
-      "startMs": 6147,
-      "endMs": 6205
+      "startMs": 12687,
+      "endMs": 12885
     },
     {
-      "text": " full-length",
-      "startMs": 6205,
-      "endMs": 6409
+      "text": " single",
+      "startMs": 12885,
+      "endMs": 13330
     },
     {
-      "text": " novel",
-      "startMs": 6409,
-      "endMs": 6525
+      "text": " question",
+      "startMs": 13330,
+      "endMs": 13875
     },
     {
-      "text": " can",
-      "startMs": 6525,
-      "endMs": 6613,
+      "text": " and",
+      "startMs": 13875,
+      "endMs": 14172,
       "pageBreakAfter": true
     },
     {
-      "text": " potentially",
-      "startMs": 6613,
-      "endMs": 6816
-    },
-    {
-      "text": " be",
-      "startMs": 6816,
-      "endMs": 6889
-    },
-    {
-      "text": " fed",
-      "startMs": 6889,
-      "endMs": 6976
-    },
-    {
-      "text": " into",
-      "startMs": 6976,
-      "endMs": 7078,
+      "text": " answer.",
+      "startMs": 14172,
+      "endMs": 15533,
       "pageBreakAfter": true
     },
     {
-      "text": " the…",
-      "startMs": 7078,
-      "endMs": 7180,
+      "text": " GitHub",
+      "startMs": 16067,
+      "endMs": 16401
+    },
+    {
+      "text": " Copilot:",
+      "startMs": 16401,
+      "endMs": 16810
+    },
+    {
+      "text": " An",
+      "startMs": 16810,
+      "endMs": 16995
+    },
+    {
+      "text": " AI",
+      "startMs": 16995,
+      "endMs": 17181,
       "pageBreakAfter": true
     },
     {
-      "text": " DeepSeek-R1,",
-      "startMs": 7500,
-      "endMs": 8014
+      "text": " Assistant",
+      "startMs": 17181,
+      "endMs": 17627
     },
     {
-      "text": " the",
-      "startMs": 8014,
-      "endMs": 8220
+      "text": " for",
+      "startMs": 17627,
+      "endMs": 17850
     },
     {
-      "text": " master",
-      "startMs": 8220,
-      "endMs": 8528
+      "text": " Developers.",
+      "startMs": 17850,
+      "endMs": 18370
     },
     {
-      "text": " in",
-      "startMs": 8528,
-      "endMs": 8700,
+      "text": " GitHub",
+      "startMs": 18370,
+      "endMs": 18704,
       "pageBreakAfter": true
     },
     {
-      "text": " reasoning.",
-      "startMs": 8700,
-      "endMs": 9145
+      "text": " Copilot",
+      "startMs": 18704,
+      "endMs": 19076
     },
     {
-      "text": " Let",
-      "startMs": 9145,
-      "endMs": 9351
+      "text": " provides",
+      "startMs": 19076,
+      "endMs": 19484
     },
     {
-      "text": " us",
-      "startMs": 9351,
-      "endMs": 9522
+      "text": " coding",
+      "startMs": 19484,
+      "endMs": 19819
     },
     {
-      "text": " look",
-      "startMs": 9522,
-      "endMs": 9762,
+      "text": " suggestions",
+      "startMs": 19819,
+      "endMs": 20339,
       "pageBreakAfter": true
     },
     {
-      "text": " at",
-      "startMs": 9762,
-      "endMs": 9933
+      "text": " inside",
+      "startMs": 20339,
+      "endMs": 20673
     },
     {
-      "text": " the",
-      "startMs": 9933,
-      "endMs": 10139
+      "text": " supported",
+      "startMs": 20673,
+      "endMs": 21119
     },
     {
-      "text": " code.",
-      "startMs": 10139,
-      "endMs": 10413,
+      "text": " development",
+      "startMs": 21119,
+      "endMs": 21639
+    },
+    {
+      "text": " environments.",
+      "startMs": 21639,
+      "endMs": 23100,
       "pageBreakAfter": true
     },
     {
-      "text": " Qwen",
-      "startMs": 10667,
-      "endMs": 10773
+      "text": " Meta's",
+      "startMs": 23633,
+      "endMs": 24024
     },
     {
-      "text": " 3.5:",
-      "startMs": 10773,
-      "endMs": 10880
+      "text": " Llama",
+      "startMs": 24024,
+      "endMs": 24371
+    },
+    {
+      "text": " Family:",
+      "startMs": 24371,
+      "endMs": 24806
+    },
+    {
+      "text": " Flexible",
+      "startMs": 24806,
+      "endMs": 25283,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Open",
+      "startMs": 25283,
+      "endMs": 25587
+    },
+    {
+      "text": " Models.",
+      "startMs": 25587,
+      "endMs": 26021
+    },
+    {
+      "text": " Meta's",
+      "startMs": 26021,
+      "endMs": 26412
+    },
+    {
+      "text": " Llama",
+      "startMs": 26412,
+      "endMs": 26759,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " family",
+      "startMs": 26759,
+      "endMs": 27150
+    },
+    {
+      "text": " remains",
+      "startMs": 27150,
+      "endMs": 27584
+    },
+    {
+      "text": " a",
+      "startMs": 27584,
+      "endMs": 27758
+    },
+    {
+      "text": " popular",
+      "startMs": 27758,
+      "endMs": 28192,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " choice",
+      "startMs": 28192,
+      "endMs": 28583
+    },
+    {
+      "text": " for",
+      "startMs": 28583,
+      "endMs": 28844
+    },
+    {
+      "text": " developers",
+      "startMs": 28844,
+      "endMs": 29408
+    },
+    {
+      "text": " who",
+      "startMs": 29408,
+      "endMs": 29669,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " want",
+      "startMs": 29669,
+      "endMs": 29972
+    },
+    {
+      "text": " to",
+      "startMs": 29972,
+      "endMs": 30190
+    },
+    {
+      "text": " experiment",
+      "startMs": 30190,
+      "endMs": 30754
+    },
+    {
+      "text": " with",
+      "startMs": 30754,
+      "endMs": 31058,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " open-weight",
+      "startMs": 31058,
+      "endMs": 31666
+    },
+    {
+      "text": " models.",
+      "startMs": 31666,
+      "endMs": 32967,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " DeepSeek-R1:",
+      "startMs": 33500,
+      "endMs": 34087
     },
     {
       "text": " A",
-      "startMs": 10880,
-      "endMs": 10940
+      "startMs": 34087,
+      "endMs": 34243
     },
     {
-      "text": " surprising",
-      "startMs": 10940,
-      "endMs": 11138,
+      "text": " Reasoning-Focused",
+      "startMs": 34243,
+      "endMs": 35026
+    },
+    {
+      "text": " Model.",
+      "startMs": 35026,
+      "endMs": 35378,
       "pageBreakAfter": true
     },
     {
-      "text": " competitor.",
-      "startMs": 11138,
-      "endMs": 11351
+      "text": " Let",
+      "startMs": 35378,
+      "endMs": 35612
+    },
+    {
+      "text": " us",
+      "startMs": 35612,
+      "endMs": 35808
+    },
+    {
+      "text": " look",
+      "startMs": 35808,
+      "endMs": 36082
+    },
+    {
+      "text": " at",
+      "startMs": 36082,
+      "endMs": 36277,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " the",
+      "startMs": 36277,
+      "endMs": 36512
+    },
+    {
+      "text": " code.",
+      "startMs": 36512,
+      "endMs": 37467,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Qwen:",
+      "startMs": 38000,
+      "endMs": 38337
+    },
+    {
+      "text": " A",
+      "startMs": 38337,
+      "endMs": 38505
+    },
+    {
+      "text": " Strong",
+      "startMs": 38505,
+      "endMs": 38883
+    },
+    {
+      "text": " Multilingual",
+      "startMs": 38883,
+      "endMs": 39514,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Option.",
+      "startMs": 39514,
+      "endMs": 39935
     },
     {
       "text": " Qwen",
-      "startMs": 11351,
-      "endMs": 11457
+      "startMs": 39935,
+      "endMs": 40229
     },
     {
       "text": " has",
-      "startMs": 11457,
-      "endMs": 11549
-    },
-    {
-      "text": " quietly",
-      "startMs": 11549,
-      "endMs": 11701,
-      "pageBreakAfter": true
+      "startMs": 40229,
+      "endMs": 40482
     },
     {
       "text": " become",
-      "startMs": 11701,
-      "endMs": 11838
+      "startMs": 40482,
+      "endMs": 40860,
+      "pageBreakAfter": true
     },
     {
-      "text": " one",
-      "startMs": 11838,
-      "endMs": 11929
+      "text": " a",
+      "startMs": 40860,
+      "endMs": 41029
+    },
+    {
+      "text": " competitive",
+      "startMs": 41029,
+      "endMs": 41617
+    },
+    {
+      "text": " family",
+      "startMs": 41617,
+      "endMs": 41996
     },
     {
       "text": " of",
-      "startMs": 11929,
-      "endMs": 12005
-    },
-    {
-      "text": " the",
-      "startMs": 12005,
-      "endMs": 12096,
+      "startMs": 41996,
+      "endMs": 42206,
       "pageBreakAfter": true
-    },
-    {
-      "text": " best",
-      "startMs": 12096,
-      "endMs": 12203
     },
     {
       "text": " open",
-      "startMs": 12203,
-      "endMs": 12309
+      "startMs": 42206,
+      "endMs": 42501
     },
     {
-      "text": " model",
-      "startMs": 12309,
-      "endMs": 12431
+      "text": " models",
+      "startMs": 42501,
+      "endMs": 42879
     },
     {
-      "text": " families.",
-      "startMs": 12431,
-      "endMs": 12613,
+      "text": " for",
+      "startMs": 42879,
+      "endMs": 43132
+    },
+    {
+      "text": " multilingual",
+      "startMs": 43132,
+      "endMs": 43763,
       "pageBreakAfter": true
     },
     {
-      "text": " Despite",
-      "startMs": 12613,
-      "endMs": 12765
+      "text": " work,",
+      "startMs": 43763,
+      "endMs": 44099
     },
     {
-      "text": " its",
-      "startMs": 12765,
-      "endMs": 12856
+      "text": " coding,",
+      "startMs": 44099,
+      "endMs": 44520
     },
     {
-      "text": " large",
-      "startMs": 12856,
-      "endMs": 12978
+      "text": " creative",
+      "startMs": 44520,
+      "endMs": 44983
     },
     {
-      "text": " size,",
-      "startMs": 12978,
-      "endMs": 13100,
+      "text": " writing,",
+      "startMs": 44983,
+      "endMs": 45445,
       "pageBreakAfter": true
     },
     {
-      "text": " the",
-      "startMs": 13100,
-      "endMs": 13191
+      "text": " and",
+      "startMs": 45445,
+      "endMs": 45698
     },
     {
-      "text": " Qwen",
-      "startMs": 13191,
-      "endMs": 13297
+      "text": " general-purpose",
+      "startMs": 45698,
+      "endMs": 46455
     },
     {
-      "text": " 3.5",
-      "startMs": 13297,
-      "endMs": 13389
-    },
-    {
-      "text": " 122B's",
-      "startMs": 13389,
-      "endMs": 13526,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " Mixture-of-Experts",
-      "startMs": 13526,
-      "endMs": 13845
-    },
-    {
-      "text": " architecture",
-      "startMs": 13845,
-      "endMs": 14073
-    },
-    {
-      "text": " enables",
-      "startMs": 14073,
-      "endMs": 14225
-    },
-    {
-      "text": " fast…",
-      "startMs": 14225,
-      "endMs": 14347,
+      "text": " tasks.",
+      "startMs": 46455,
+      "endMs": 47700,
       "pageBreakAfter": true
     },
     {
       "text": " Google's",
-      "startMs": 14667,
-      "endMs": 15192
+      "startMs": 48233,
+      "endMs": 48595
     },
     {
-      "text": " Gemma",
-      "startMs": 15192,
-      "endMs": 15574
+      "text": " Gemma:",
+      "startMs": 48595,
+      "endMs": 48892
     },
     {
-      "text": " 4.",
-      "startMs": 15574,
-      "endMs": 15813
+      "text": " Lightweight",
+      "startMs": 48892,
+      "endMs": 49353
+    },
+    {
+      "text": " Models",
+      "startMs": 49353,
+      "endMs": 49649,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " for",
+      "startMs": 49649,
+      "endMs": 49846
+    },
+    {
+      "text": " Local",
+      "startMs": 49846,
+      "endMs": 50110
+    },
+    {
+      "text": " Use.",
+      "startMs": 50110,
+      "endMs": 50340
     },
     {
       "text": " Let",
-      "startMs": 15813,
-      "endMs": 16099,
+      "startMs": 50340,
+      "endMs": 50538,
       "pageBreakAfter": true
     },
     {
       "text": " us",
-      "startMs": 16099,
-      "endMs": 16338
+      "startMs": 50538,
+      "endMs": 50702
     },
     {
       "text": " look",
-      "startMs": 16338,
-      "endMs": 16673
+      "startMs": 50702,
+      "endMs": 50933
     },
     {
       "text": " at",
-      "startMs": 16673,
-      "endMs": 16911
+      "startMs": 50933,
+      "endMs": 51097
     },
     {
       "text": " the",
-      "startMs": 16911,
-      "endMs": 17198,
+      "startMs": 51097,
+      "endMs": 51295,
       "pageBreakAfter": true
     },
     {
       "text": " code.",
-      "startMs": 17198,
-      "endMs": 17580,
+      "startMs": 51295,
+      "endMs": 52200,
       "pageBreakAfter": true
+    },
+    {
+      "text": " Mistral:",
+      "startMs": 52733,
+      "endMs": 53152
+    },
+    {
+      "text": " Efficient",
+      "startMs": 53152,
+      "endMs": 53608
+    },
+    {
+      "text": " Models",
+      "startMs": 53608,
+      "endMs": 53950
+    },
+    {
+      "text": " from",
+      "startMs": 53950,
+      "endMs": 54216,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Europe.",
+      "startMs": 54216,
+      "endMs": 54596
     },
     {
       "text": " Mistral",
-      "startMs": 17833,
-      "endMs": 18033
+      "startMs": 54596,
+      "endMs": 54977
     },
     {
-      "text": " Large",
-      "startMs": 18033,
-      "endMs": 18193
+      "text": " offers",
+      "startMs": 54977,
+      "endMs": 55319
     },
     {
-      "text": " 2",
-      "startMs": 18193,
-      "endMs": 18273
-    },
-    {
-      "text": " —",
-      "startMs": 18273,
-      "endMs": 18353,
+      "text": " models",
+      "startMs": 55319,
+      "endMs": 55661,
       "pageBreakAfter": true
     },
     {
-      "text": " Europe’s",
-      "startMs": 18353,
-      "endMs": 18573
+      "text": " for",
+      "startMs": 55661,
+      "endMs": 55889
     },
     {
-      "text": " contender.",
-      "startMs": 18573,
-      "endMs": 18833
+      "text": " general-purpose",
+      "startMs": 55889,
+      "endMs": 56573
     },
     {
-      "text": " Europe's",
-      "startMs": 18833,
-      "endMs": 19053
+      "text": " use,",
+      "startMs": 56573,
+      "endMs": 56840
     },
     {
-      "text": " competitor,",
-      "startMs": 19053,
-      "endMs": 19333,
+      "text": " coding,",
+      "startMs": 56840,
+      "endMs": 57220,
       "pageBreakAfter": true
     },
     {
-      "text": " Mistral",
-      "startMs": 19333,
-      "endMs": 19533
+      "text": " multilingual",
+      "startMs": 57220,
+      "endMs": 57790
     },
     {
-      "text": " Large",
-      "startMs": 19533,
-      "endMs": 19693
+      "text": " work,",
+      "startMs": 57790,
+      "endMs": 58094
     },
     {
-      "text": " 2.",
-      "startMs": 19693,
-      "endMs": 19793
+      "text": " function",
+      "startMs": 58094,
+      "endMs": 58513
     },
     {
-      "text": " From",
-      "startMs": 19793,
-      "endMs": 19933,
+      "text": " calling,",
+      "startMs": 58513,
+      "endMs": 58931,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " and",
+      "startMs": 58931,
+      "endMs": 59159
+    },
+    {
+      "text": " structured",
+      "startMs": 59159,
+      "endMs": 59653
+    },
+    {
+      "text": " output.",
+      "startMs": 59653,
+      "endMs": 60900,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Phi:",
+      "startMs": 61433,
+      "endMs": 61749
+    },
+    {
+      "text": " Small",
+      "startMs": 61749,
+      "endMs": 62109
+    },
+    {
+      "text": " Models",
+      "startMs": 62109,
+      "endMs": 62514
+    },
+    {
+      "text": " with",
+      "startMs": 62514,
+      "endMs": 62829,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Strong",
+      "startMs": 62829,
+      "endMs": 63235
+    },
+    {
+      "text": " Capabilities.",
+      "startMs": 63235,
+      "endMs": 63955
+    },
+    {
+      "text": " Microsoft's",
+      "startMs": 63955,
+      "endMs": 64586
+    },
+    {
+      "text": " Phi",
+      "startMs": 64586,
+      "endMs": 64856,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " family",
+      "startMs": 64856,
+      "endMs": 65261
+    },
+    {
+      "text": " shows",
+      "startMs": 65261,
+      "endMs": 65622
+    },
+    {
+      "text": " that",
+      "startMs": 65622,
+      "endMs": 65937
+    },
+    {
+      "text": " useful",
+      "startMs": 65937,
+      "endMs": 66342,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " AI",
+      "startMs": 66342,
+      "endMs": 66567
+    },
+    {
+      "text": " performance",
+      "startMs": 66567,
+      "endMs": 67198
+    },
+    {
+      "text": " does",
+      "startMs": 67198,
+      "endMs": 67513
+    },
+    {
+      "text": " not",
+      "startMs": 67513,
+      "endMs": 67783,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " always",
+      "startMs": 67783,
+      "endMs": 68189
+    },
+    {
+      "text": " require",
+      "startMs": 68189,
+      "endMs": 68639
+    },
+    {
+      "text": " a",
+      "startMs": 68639,
+      "endMs": 68819
+    },
+    {
+      "text": " very",
+      "startMs": 68819,
+      "endMs": 69134,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " large",
+      "startMs": 69134,
+      "endMs": 69495
+    },
+    {
+      "text": " model.",
+      "startMs": 69495,
+      "endMs": 70767,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " How",
+      "startMs": 71300,
+      "endMs": 71524
+    },
+    {
+      "text": " to",
+      "startMs": 71524,
+      "endMs": 71711
+    },
+    {
+      "text": " Use",
+      "startMs": 71711,
+      "endMs": 71935
+    },
+    {
+      "text": " These",
+      "startMs": 71935,
+      "endMs": 72234,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " AI",
+      "startMs": 72234,
+      "endMs": 72421
+    },
+    {
+      "text": " Tools",
+      "startMs": 72421,
+      "endMs": 72720
+    },
+    {
+      "text": " for",
+      "startMs": 72720,
+      "endMs": 72944
+    },
+    {
+      "text": " Free.",
+      "startMs": 72944,
+      "endMs": 73243,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Let",
+      "startMs": 73243,
+      "endMs": 73467
+    },
+    {
+      "text": " us",
+      "startMs": 73467,
+      "endMs": 73654
+    },
+    {
+      "text": " look",
+      "startMs": 73654,
+      "endMs": 73915
+    },
+    {
+      "text": " at",
+      "startMs": 73915,
+      "endMs": 74102,
       "pageBreakAfter": true
     },
     {
       "text": " the",
-      "startMs": 19933,
-      "endMs": 20053
+      "startMs": 74102,
+      "endMs": 74326
     },
     {
-      "text": " beginning,",
-      "startMs": 20053,
-      "endMs": 20313
-    },
-    {
-      "text": " Mistral",
-      "startMs": 20313,
-      "endMs": 20513
-    },
-    {
-      "text": " has",
-      "startMs": 20513,
-      "endMs": 20633,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " been",
-      "startMs": 20633,
-      "endMs": 20773
-    },
-    {
-      "text": " outperforming",
-      "startMs": 20773,
-      "endMs": 21093
-    },
-    {
-      "text": " its",
-      "startMs": 21093,
-      "endMs": 21213
-    },
-    {
-      "text": " competitors.",
-      "startMs": 21213,
-      "endMs": 21513,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " Phi-4",
-      "startMs": 21833,
-      "endMs": 21996
-    },
-    {
-      "text": " —",
-      "startMs": 21996,
-      "endMs": 22077
-    },
-    {
-      "text": " Microsoft’s",
-      "startMs": 22077,
-      "endMs": 22362
-    },
-    {
-      "text": " small-but-mighty",
-      "startMs": 22362,
-      "endMs": 22748,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " model.",
-      "startMs": 22748,
-      "endMs": 22931
-    },
-    {
-      "text": " Microsoft's",
-      "startMs": 22931,
-      "endMs": 23216
-    },
-    {
-      "text": " tiny",
-      "startMs": 23216,
-      "endMs": 23358
-    },
-    {
-      "text": " but",
-      "startMs": 23358,
-      "endMs": 23480,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " powerful",
-      "startMs": 23480,
-      "endMs": 23704
-    },
-    {
-      "text": " Phi-4",
-      "startMs": 23704,
-      "endMs": 23866
-    },
-    {
-      "text": " model.",
-      "startMs": 23866,
-      "endMs": 24049
-    },
-    {
-      "text": " Size",
-      "startMs": 24049,
-      "endMs": 24192,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " isn't",
-      "startMs": 24192,
-      "endMs": 24354
-    },
-    {
-      "text": " everything,",
-      "startMs": 24354,
-      "endMs": 24639
-    },
-    {
-      "text": " as",
-      "startMs": 24639,
-      "endMs": 24741
-    },
-    {
-      "text": " Microsoft's",
-      "startMs": 24741,
-      "endMs": 25025,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " Phi-4",
-      "startMs": 25025,
-      "endMs": 25188
-    },
-    {
-      "text": " demonstrates.",
-      "startMs": 25188,
-      "endMs": 25513,
+      "text": " code.",
+      "startMs": 74326,
+      "endMs": 75267,
       "pageBreakAfter": true
     },
     {
       "text": " Read",
-      "startMs": 25833,
-      "endMs": 26119
+      "startMs": 75800,
+      "endMs": 76170
     },
     {
       "text": " the",
-      "startMs": 26119,
-      "endMs": 26363
+      "startMs": 76170,
+      "endMs": 76487
     },
     {
       "text": " full",
-      "startMs": 26363,
-      "endMs": 26649
+      "startMs": 76487,
+      "endMs": 76857
     },
     {
       "text": " article.",
-      "startMs": 26649,
-      "endMs": 27097,
+      "startMs": 76857,
+      "endMs": 77438,
       "pageBreakAfter": true
     },
     {
       "text": " New",
-      "startMs": 27097,
-      "endMs": 27341
+      "startMs": 77438,
+      "endMs": 77755
     },
     {
       "text": " posts",
-      "startMs": 27341,
-      "endMs": 27668
+      "startMs": 77755,
+      "endMs": 78178
     },
     {
       "text": " every",
-      "startMs": 27668,
-      "endMs": 27994
+      "startMs": 78178,
+      "endMs": 78601
     },
     {
       "text": " week",
-      "startMs": 27994,
-      "endMs": 28279,
+      "startMs": 78601,
+      "endMs": 78971,
       "pageBreakAfter": true
     },
     {
       "text": " on",
-      "startMs": 28279,
-      "endMs": 28483
+      "startMs": 78971,
+      "endMs": 79235
     },
     {
       "text": " the",
-      "startMs": 28483,
-      "endMs": 28727
+      "startMs": 79235,
+      "endMs": 79552
     },
     {
       "text": " blog.",
-      "startMs": 28727,
-      "endMs": 29053,
+      "startMs": 79552,
+      "endMs": 80767,
       "pageBreakAfter": true
     }
   ],

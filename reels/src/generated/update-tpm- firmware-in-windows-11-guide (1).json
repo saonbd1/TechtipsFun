@@ -2,7 +2,7 @@
   "slug": "update-tpm- firmware-in-windows-11-guide (1)",
   "title": "Update TPM firmware in Windows 11: A safe step-by-step guide",
   "description": "Learn how to update TPM firmware in Windows 11, clear TPM safely, protect BitLocker data, and fix TPM detection and initialization errors.",
-  "category": "PC Troubleshoot",
+  "category": "PC Troubleshooting",
   "tags": [
     "Windows",
     "Open Source",
@@ -10,908 +10,1126 @@
     "How to"
   ],
   "url": "https://www.techtips.fun/blog/update-tpm- firmware-in-windows-11-guide (1)/",
-  "theme": "github-dark",
-  "durationInFrames": 930,
   "scenes": [
     {
       "type": "title",
-      "kicker": "PC Troubleshoot",
+      "kicker": "PC Troubleshooting",
       "title": "Update TPM firmware in Windows 11: A safe step-by-step guide",
       "subtitle": "Learn how to update TPM firmware in Windows 11, clear TPM safely, protect BitLocker data,…",
-      "durationInFrames": 105
+      "image": {
+        "src": "post-media/update-tpm- firmware-in-windows-11-guide (1)/01-windows-wifi-cover.webp",
+        "width": 1376,
+        "height": 768
+      },
+      "durationInFrames": 183
     },
     {
       "type": "point",
-      "kicker": "PC Troubleshoot",
+      "kicker": "PC Troubleshooting",
       "heading": "Check the TPM status before making changes",
       "body": "Start by confirming that Windows can see the TPM and checking its specification version.",
-      "durationInFrames": 120
+      "durationInFrames": 284
     },
     {
       "type": "point",
-      "kicker": "PC Troubleshoot",
+      "kicker": "PC Troubleshooting",
       "heading": "Use Windows Security",
-      "body": "Open Settings. Select Privacy & security. Select Windows Security. Select Device security. Select Security processor details.",
-      "durationInFrames": 120
+      "body": "Open Settings. Select Privacy & security. Select Windows Security. Select Device security.",
+      "image": {
+        "src": "post-media/update-tpm- firmware-in-windows-11-guide (1)/02-security-processor-details.webp",
+        "width": 1293,
+        "height": 565
+      },
+      "durationInFrames": 251
     },
     {
       "type": "point",
-      "kicker": "PC Troubleshoot",
+      "kicker": "PC Troubleshooting",
       "heading": "Use TPM Management",
       "body": "Press Windows + R. Type tpm.msc. Select OK. Read the status message in the TPM Management window.",
-      "durationInFrames": 120
+      "durationInFrames": 273
     },
     {
       "type": "point",
-      "kicker": "PC Troubleshoot",
+      "kicker": "PC Troubleshooting",
       "heading": "Prepare for a TPM firmware update",
       "body": "A TPM firmware update can change the TPM's state. A BIOS or UEFI update can also cause BitLocker to request its recovery key.",
-      "durationInFrames": 120
+      "durationInFrames": 330
     },
     {
       "type": "point",
-      "kicker": "PC Troubleshoot",
+      "kicker": "PC Troubleshooting",
       "heading": "How to update TPM firmware in Windows 11",
       "body": "TPM firmware usually comes from the computer or motherboard manufacturer.",
-      "durationInFrames": 120
+      "durationInFrames": 250
     },
     {
       "type": "point",
-      "kicker": "PC Troubleshoot",
+      "kicker": "PC Troubleshooting",
       "heading": "Step 1: Install Windows updates first",
-      "body": "Open Settings. Select Windows Update. Select Check for updates. Install all applicable updates. Restart the computer when Windows asks you to.",
-      "durationInFrames": 120
+      "body": "Open Settings. Select Windows Update. Select Check for updates. Install all applicable updates.",
+      "image": {
+        "src": "post-media/update-tpm- firmware-in-windows-11-guide (1)/03-windows-update.webp",
+        "width": 1332,
+        "height": 659
+      },
+      "durationInFrames": 297
+    },
+    {
+      "type": "point",
+      "kicker": "PC Troubleshooting",
+      "heading": "Step 2: Find the correct firmware package",
+      "body": "Go to your computer manufacturer's support page and search by the exact model name or service tag.",
+      "durationInFrames": 319
+    },
+    {
+      "type": "point",
+      "kicker": "PC Troubleshooting",
+      "heading": "Step 3: Install the firmware update",
+      "body": "Close open applications. Connect the computer to AC power. Suspend BitLocker protection if the manufacturer's instructions require it.",
+      "durationInFrames": 319
     },
     {
       "type": "outro",
       "heading": "Read the full article",
       "body": "New posts every week on the blog.",
       "url": "techtips.fun",
-      "durationInFrames": 105
+      "durationInFrames": 165
     }
   ],
+  "theme": "github-dark",
+  "durationInFrames": 2671,
   "captions": [
     {
       "text": " Learn",
-      "startMs": 0,
-      "endMs": 215
+      "startMs": 500,
+      "endMs": 813
     },
     {
       "text": " how",
-      "startMs": 215,
-      "endMs": 376
+      "startMs": 813,
+      "endMs": 1048
     },
     {
       "text": " to",
-      "startMs": 376,
-      "endMs": 510
+      "startMs": 1048,
+      "endMs": 1244
     },
     {
       "text": " update",
-      "startMs": 510,
-      "endMs": 751,
+      "startMs": 1244,
+      "endMs": 1597,
       "pageBreakAfter": true
     },
     {
       "text": " TPM",
-      "startMs": 751,
-      "endMs": 912
+      "startMs": 1597,
+      "endMs": 1832
     },
     {
       "text": " firmware",
-      "startMs": 912,
-      "endMs": 1208
+      "startMs": 1832,
+      "endMs": 2263
     },
     {
       "text": " in",
-      "startMs": 1208,
-      "endMs": 1342
+      "startMs": 2263,
+      "endMs": 2458
     },
     {
       "text": " Windows",
-      "startMs": 1342,
-      "endMs": 1610,
+      "startMs": 2458,
+      "endMs": 2850,
       "pageBreakAfter": true
     },
     {
       "text": " 11,",
-      "startMs": 1610,
-      "endMs": 1771
+      "startMs": 2850,
+      "endMs": 3085
     },
     {
       "text": " clear",
-      "startMs": 1771,
-      "endMs": 1986
+      "startMs": 3085,
+      "endMs": 3398
     },
     {
       "text": " TPM",
-      "startMs": 1986,
-      "endMs": 2147
+      "startMs": 3398,
+      "endMs": 3633
     },
     {
       "text": " safely,",
-      "startMs": 2147,
-      "endMs": 2415,
+      "startMs": 3633,
+      "endMs": 4025,
       "pageBreakAfter": true
     },
     {
       "text": " protect",
-      "startMs": 2415,
-      "endMs": 2683
+      "startMs": 4025,
+      "endMs": 4417
     },
     {
       "text": " BitLocker",
-      "startMs": 2683,
-      "endMs": 3005
+      "startMs": 4417,
+      "endMs": 4887
     },
     {
       "text": " data,",
-      "startMs": 3005,
-      "endMs": 3220,
+      "startMs": 4887,
+      "endMs": 6067,
       "pageBreakAfter": true
     },
     {
       "text": " Check",
-      "startMs": 3500,
-      "endMs": 3668
+      "startMs": 6600,
+      "endMs": 6969
     },
     {
       "text": " the",
-      "startMs": 3668,
-      "endMs": 3794
+      "startMs": 6969,
+      "endMs": 7245
     },
     {
       "text": " TPM",
-      "startMs": 3794,
-      "endMs": 3921
+      "startMs": 7245,
+      "endMs": 7522
     },
     {
       "text": " status",
-      "startMs": 3921,
-      "endMs": 4110,
+      "startMs": 7522,
+      "endMs": 7937,
       "pageBreakAfter": true
     },
     {
       "text": " before",
-      "startMs": 4110,
-      "endMs": 4299
+      "startMs": 7937,
+      "endMs": 8352
     },
     {
       "text": " making",
-      "startMs": 4299,
-      "endMs": 4488
+      "startMs": 8352,
+      "endMs": 8766
     },
     {
       "text": " changes.",
-      "startMs": 4488,
-      "endMs": 4720
+      "startMs": 8766,
+      "endMs": 9274
     },
     {
       "text": " Start",
-      "startMs": 4720,
-      "endMs": 4888,
+      "startMs": 9274,
+      "endMs": 9642,
       "pageBreakAfter": true
     },
     {
       "text": " by",
-      "startMs": 4888,
-      "endMs": 4993
+      "startMs": 9642,
+      "endMs": 9873
     },
     {
       "text": " confirming",
-      "startMs": 4993,
-      "endMs": 5266
+      "startMs": 9873,
+      "endMs": 10472
     },
     {
       "text": " that",
-      "startMs": 5266,
-      "endMs": 5414
+      "startMs": 10472,
+      "endMs": 10795
     },
     {
       "text": " Windows",
-      "startMs": 5414,
-      "endMs": 5624,
+      "startMs": 10795,
+      "endMs": 11256,
       "pageBreakAfter": true
     },
     {
       "text": " can",
-      "startMs": 5624,
-      "endMs": 5750
+      "startMs": 11256,
+      "endMs": 11532
     },
     {
       "text": " see",
-      "startMs": 5750,
-      "endMs": 5876
+      "startMs": 11532,
+      "endMs": 11809
     },
     {
       "text": " the",
-      "startMs": 5876,
-      "endMs": 6002
+      "startMs": 11809,
+      "endMs": 12085
     },
     {
       "text": " TPM",
-      "startMs": 6002,
-      "endMs": 6129,
+      "startMs": 12085,
+      "endMs": 12362,
       "pageBreakAfter": true
     },
     {
       "text": " and",
-      "startMs": 6129,
-      "endMs": 6255
+      "startMs": 12362,
+      "endMs": 12638
     },
     {
       "text": " checking",
-      "startMs": 6255,
-      "endMs": 6486
+      "startMs": 12638,
+      "endMs": 13146
     },
     {
       "text": " its",
-      "startMs": 6486,
-      "endMs": 6612
+      "startMs": 13146,
+      "endMs": 13422
     },
     {
       "text": " specification",
-      "startMs": 6612,
-      "endMs": 6949,
+      "startMs": 13422,
+      "endMs": 14160,
       "pageBreakAfter": true
     },
     {
       "text": " version.",
-      "startMs": 6949,
-      "endMs": 7180,
+      "startMs": 14160,
+      "endMs": 15533,
       "pageBreakAfter": true
     },
     {
       "text": " Use",
-      "startMs": 7500,
-      "endMs": 7619
+      "startMs": 16067,
+      "endMs": 16359
     },
     {
       "text": " Windows",
-      "startMs": 7619,
-      "endMs": 7817
+      "startMs": 16359,
+      "endMs": 16846
     },
     {
       "text": " Security.",
-      "startMs": 7817,
-      "endMs": 8054
+      "startMs": 16846,
+      "endMs": 17431
     },
     {
       "text": " Open",
-      "startMs": 8054,
-      "endMs": 8192,
+      "startMs": 17431,
+      "endMs": 17772,
       "pageBreakAfter": true
     },
     {
       "text": " Settings.",
-      "startMs": 8192,
-      "endMs": 8430
+      "startMs": 17772,
+      "endMs": 18356
     },
     {
       "text": " Select",
-      "startMs": 8430,
-      "endMs": 8608
+      "startMs": 18356,
+      "endMs": 18795
     },
     {
       "text": " Privacy",
-      "startMs": 8608,
-      "endMs": 8806
+      "startMs": 18795,
+      "endMs": 19282
     },
     {
       "text": " &",
-      "startMs": 8806,
-      "endMs": 8885,
+      "startMs": 19282,
+      "endMs": 19477,
       "pageBreakAfter": true
     },
     {
       "text": " security.",
-      "startMs": 8885,
-      "endMs": 9122
+      "startMs": 19477,
+      "endMs": 20062
     },
     {
       "text": " Select",
-      "startMs": 9122,
-      "endMs": 9300
+      "startMs": 20062,
+      "endMs": 20500
     },
     {
       "text": " Windows",
-      "startMs": 9300,
-      "endMs": 9498
+      "startMs": 20500,
+      "endMs": 20987
     },
     {
       "text": " Security.",
-      "startMs": 9498,
-      "endMs": 9736,
+      "startMs": 20987,
+      "endMs": 21572,
       "pageBreakAfter": true
     },
     {
       "text": " Select",
-      "startMs": 9736,
-      "endMs": 9914
+      "startMs": 21572,
+      "endMs": 22010
     },
     {
       "text": " Device",
-      "startMs": 9914,
-      "endMs": 10092
+      "startMs": 22010,
+      "endMs": 22449
     },
     {
       "text": " security.",
-      "startMs": 10092,
-      "endMs": 10329
-    },
-    {
-      "text": " Select",
-      "startMs": 10329,
-      "endMs": 10507,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " Security",
-      "startMs": 10507,
-      "endMs": 10725
-    },
-    {
-      "text": " processor",
-      "startMs": 10725,
-      "endMs": 10962
-    },
-    {
-      "text": " details.",
-      "startMs": 10962,
-      "endMs": 11180,
+      "startMs": 22449,
+      "endMs": 23900,
       "pageBreakAfter": true
     },
     {
       "text": " Use",
-      "startMs": 11500,
-      "endMs": 11640
+      "startMs": 24433,
+      "endMs": 24726
     },
     {
       "text": " TPM",
-      "startMs": 11640,
-      "endMs": 11779
+      "startMs": 24726,
+      "endMs": 25018
     },
     {
       "text": " Management.",
-      "startMs": 11779,
-      "endMs": 12106
+      "startMs": 25018,
+      "endMs": 25700
     },
     {
       "text": " Press",
-      "startMs": 12106,
-      "endMs": 12292,
+      "startMs": 25700,
+      "endMs": 26090,
       "pageBreakAfter": true
     },
     {
       "text": " Windows",
-      "startMs": 12292,
-      "endMs": 12525
+      "startMs": 26090,
+      "endMs": 26578
     },
     {
       "text": " +",
-      "startMs": 12525,
-      "endMs": 12618
+      "startMs": 26578,
+      "endMs": 26773
     },
     {
       "text": " R.",
-      "startMs": 12618,
-      "endMs": 12734
+      "startMs": 26773,
+      "endMs": 27016
     },
     {
       "text": " Type",
-      "startMs": 12734,
-      "endMs": 12897,
+      "startMs": 27016,
+      "endMs": 27357,
       "pageBreakAfter": true
     },
     {
       "text": " tpm.msc.",
-      "startMs": 12897,
-      "endMs": 13154
+      "startMs": 27357,
+      "endMs": 27893
     },
     {
       "text": " Select",
-      "startMs": 13154,
-      "endMs": 13363
+      "startMs": 27893,
+      "endMs": 28332
     },
     {
       "text": " OK.",
-      "startMs": 13363,
-      "endMs": 13503
+      "startMs": 28332,
+      "endMs": 28624
     },
     {
       "text": " Read",
-      "startMs": 13503,
-      "endMs": 13666,
+      "startMs": 28624,
+      "endMs": 28966,
       "pageBreakAfter": true
     },
     {
       "text": " the",
-      "startMs": 13666,
-      "endMs": 13806
+      "startMs": 28966,
+      "endMs": 29258
     },
     {
       "text": " status",
-      "startMs": 13806,
-      "endMs": 14015
+      "startMs": 29258,
+      "endMs": 29697
     },
     {
       "text": " message",
-      "startMs": 14015,
-      "endMs": 14248
+      "startMs": 29697,
+      "endMs": 30184
     },
     {
       "text": " in",
-      "startMs": 14248,
-      "endMs": 14365,
+      "startMs": 30184,
+      "endMs": 30428,
       "pageBreakAfter": true
     },
     {
       "text": " the",
-      "startMs": 14365,
-      "endMs": 14505
+      "startMs": 30428,
+      "endMs": 30720
     },
     {
       "text": " TPM",
-      "startMs": 14505,
-      "endMs": 14644
+      "startMs": 30720,
+      "endMs": 31012
     },
     {
       "text": " Management",
-      "startMs": 14644,
-      "endMs": 14947
+      "startMs": 31012,
+      "endMs": 31646
     },
     {
       "text": " window.",
-      "startMs": 14947,
-      "endMs": 15180,
+      "startMs": 31646,
+      "endMs": 33000,
       "pageBreakAfter": true
     },
     {
       "text": " Prepare",
-      "startMs": 15500,
-      "endMs": 15668
+      "startMs": 33533,
+      "endMs": 33972
     },
     {
       "text": " for",
-      "startMs": 15668,
-      "endMs": 15769
+      "startMs": 33972,
+      "endMs": 34235
     },
     {
       "text": " a",
-      "startMs": 15769,
-      "endMs": 15836
+      "startMs": 34235,
+      "endMs": 34410
     },
     {
       "text": " TPM",
-      "startMs": 15836,
-      "endMs": 15937,
+      "startMs": 34410,
+      "endMs": 34673,
       "pageBreakAfter": true
     },
     {
       "text": " firmware",
-      "startMs": 15937,
-      "endMs": 16122
+      "startMs": 34673,
+      "endMs": 35155
     },
     {
       "text": " update.",
-      "startMs": 16122,
-      "endMs": 16290
+      "startMs": 35155,
+      "endMs": 35594
     },
     {
       "text": " A",
-      "startMs": 16290,
-      "endMs": 16357
+      "startMs": 35594,
+      "endMs": 35769
     },
     {
       "text": " TPM",
-      "startMs": 16357,
-      "endMs": 16458,
+      "startMs": 35769,
+      "endMs": 36032,
       "pageBreakAfter": true
     },
     {
       "text": " firmware",
-      "startMs": 16458,
-      "endMs": 16643
+      "startMs": 36032,
+      "endMs": 36514
     },
     {
       "text": " update",
-      "startMs": 16643,
-      "endMs": 16794
+      "startMs": 36514,
+      "endMs": 36909
     },
     {
       "text": " can",
-      "startMs": 16794,
-      "endMs": 16895
+      "startMs": 36909,
+      "endMs": 37172
     },
     {
       "text": " change",
-      "startMs": 16895,
-      "endMs": 17046,
+      "startMs": 37172,
+      "endMs": 37566,
       "pageBreakAfter": true
     },
     {
       "text": " the",
-      "startMs": 17046,
-      "endMs": 17147
+      "startMs": 37566,
+      "endMs": 37829
     },
     {
       "text": " TPM's",
-      "startMs": 17147,
-      "endMs": 17281
+      "startMs": 37829,
+      "endMs": 38180
     },
     {
       "text": " state.",
-      "startMs": 17281,
-      "endMs": 17432
+      "startMs": 38180,
+      "endMs": 38574
     },
     {
       "text": " A",
-      "startMs": 17432,
-      "endMs": 17500,
+      "startMs": 38574,
+      "endMs": 38750,
       "pageBreakAfter": true
     },
     {
       "text": " BIOS",
-      "startMs": 17500,
-      "endMs": 17617
+      "startMs": 38750,
+      "endMs": 39057
     },
     {
       "text": " or",
-      "startMs": 17617,
-      "endMs": 17701
+      "startMs": 39057,
+      "endMs": 39276
     },
     {
       "text": " UEFI",
-      "startMs": 17701,
-      "endMs": 17819
+      "startMs": 39276,
+      "endMs": 39583
     },
     {
       "text": " update",
-      "startMs": 17819,
-      "endMs": 17970,
+      "startMs": 39583,
+      "endMs": 39977,
       "pageBreakAfter": true
     },
     {
       "text": " can",
-      "startMs": 17970,
-      "endMs": 18071
+      "startMs": 39977,
+      "endMs": 40240
     },
     {
       "text": " also",
-      "startMs": 18071,
-      "endMs": 18189
+      "startMs": 40240,
+      "endMs": 40547
     },
     {
       "text": " cause",
-      "startMs": 18189,
-      "endMs": 18323
+      "startMs": 40547,
+      "endMs": 40898
     },
     {
       "text": " BitLocker",
-      "startMs": 18323,
-      "endMs": 18525,
+      "startMs": 40898,
+      "endMs": 41424,
       "pageBreakAfter": true
     },
     {
       "text": " to",
-      "startMs": 18525,
-      "endMs": 18609
+      "startMs": 41424,
+      "endMs": 41643
     },
     {
       "text": " request",
-      "startMs": 18609,
-      "endMs": 18777
+      "startMs": 41643,
+      "endMs": 42081
     },
     {
       "text": " its",
-      "startMs": 18777,
-      "endMs": 18878
+      "startMs": 42081,
+      "endMs": 42344
     },
     {
       "text": " recovery",
-      "startMs": 18878,
-      "endMs": 19062,
+      "startMs": 42344,
+      "endMs": 42826,
       "pageBreakAfter": true
     },
     {
       "text": " key.",
-      "startMs": 19062,
-      "endMs": 19180,
+      "startMs": 42826,
+      "endMs": 44000,
       "pageBreakAfter": true
     },
     {
       "text": " How",
-      "startMs": 19500,
-      "endMs": 19645
+      "startMs": 44533,
+      "endMs": 44807
     },
     {
       "text": " to",
-      "startMs": 19645,
-      "endMs": 19766
+      "startMs": 44807,
+      "endMs": 45035
     },
     {
       "text": " update",
-      "startMs": 19766,
-      "endMs": 19984
+      "startMs": 45035,
+      "endMs": 45446
     },
     {
       "text": " TPM",
-      "startMs": 19984,
-      "endMs": 20129,
+      "startMs": 45446,
+      "endMs": 45719,
       "pageBreakAfter": true
     },
     {
       "text": " firmware",
-      "startMs": 20129,
-      "endMs": 20396
+      "startMs": 45719,
+      "endMs": 46221
     },
     {
       "text": " in",
-      "startMs": 20396,
-      "endMs": 20517
+      "startMs": 46221,
+      "endMs": 46449
     },
     {
       "text": " Windows",
-      "startMs": 20517,
-      "endMs": 20759
+      "startMs": 46449,
+      "endMs": 46905
     },
     {
       "text": " 11.",
-      "startMs": 20759,
-      "endMs": 20904,
+      "startMs": 46905,
+      "endMs": 47179,
       "pageBreakAfter": true
     },
     {
       "text": " TPM",
-      "startMs": 20904,
-      "endMs": 21049
+      "startMs": 47179,
+      "endMs": 47453
     },
     {
       "text": " firmware",
-      "startMs": 21049,
-      "endMs": 21316
+      "startMs": 47453,
+      "endMs": 47954
     },
     {
       "text": " usually",
-      "startMs": 21316,
-      "endMs": 21558
+      "startMs": 47954,
+      "endMs": 48411
     },
     {
       "text": " comes",
-      "startMs": 21558,
-      "endMs": 21752,
+      "startMs": 48411,
+      "endMs": 48775,
       "pageBreakAfter": true
     },
     {
       "text": " from",
-      "startMs": 21752,
-      "endMs": 21921
+      "startMs": 48775,
+      "endMs": 49095
     },
     {
       "text": " the",
-      "startMs": 21921,
-      "endMs": 22066
+      "startMs": 49095,
+      "endMs": 49368
     },
     {
       "text": " computer",
-      "startMs": 22066,
-      "endMs": 22333
+      "startMs": 49368,
+      "endMs": 49870
     },
     {
       "text": " or",
-      "startMs": 22333,
-      "endMs": 22454,
+      "startMs": 49870,
+      "endMs": 50098,
       "pageBreakAfter": true
     },
     {
       "text": " motherboard",
-      "startMs": 22454,
-      "endMs": 22793
+      "startMs": 50098,
+      "endMs": 50737
     },
     {
       "text": " manufacturer.",
-      "startMs": 22793,
-      "endMs": 23180,
+      "startMs": 50737,
+      "endMs": 52333,
       "pageBreakAfter": true
     },
     {
       "text": " Step",
-      "startMs": 23500,
-      "endMs": 23609
+      "startMs": 52867,
+      "endMs": 53211
     },
     {
       "text": " 1:",
-      "startMs": 23609,
-      "endMs": 23687
+      "startMs": 53211,
+      "endMs": 53456
     },
     {
       "text": " Install",
-      "startMs": 23687,
-      "endMs": 23843
+      "startMs": 53456,
+      "endMs": 53948
     },
     {
       "text": " Windows",
-      "startMs": 23843,
-      "endMs": 23999,
+      "startMs": 53948,
+      "endMs": 54439,
       "pageBreakAfter": true
     },
     {
       "text": " updates",
-      "startMs": 23999,
-      "endMs": 24155
+      "startMs": 54439,
+      "endMs": 54930
     },
     {
       "text": " first.",
-      "startMs": 24155,
-      "endMs": 24295
+      "startMs": 54930,
+      "endMs": 55372
     },
     {
       "text": " Open",
-      "startMs": 24295,
-      "endMs": 24404
+      "startMs": 55372,
+      "endMs": 55716
     },
     {
       "text": " Settings.",
-      "startMs": 24404,
-      "endMs": 24592,
+      "startMs": 55716,
+      "endMs": 56306,
       "pageBreakAfter": true
     },
     {
       "text": " Select",
-      "startMs": 24592,
-      "endMs": 24732
+      "startMs": 56306,
+      "endMs": 56748
     },
     {
       "text": " Windows",
-      "startMs": 24732,
-      "endMs": 24888
+      "startMs": 56748,
+      "endMs": 57239
     },
     {
       "text": " Update.",
-      "startMs": 24888,
-      "endMs": 25044
+      "startMs": 57239,
+      "endMs": 57731
     },
     {
       "text": " Select",
-      "startMs": 25044,
-      "endMs": 25184,
+      "startMs": 57731,
+      "endMs": 58173,
       "pageBreakAfter": true
     },
     {
       "text": " Check",
-      "startMs": 25184,
-      "endMs": 25309
+      "startMs": 58173,
+      "endMs": 58566
     },
     {
       "text": " for",
-      "startMs": 25309,
-      "endMs": 25402
+      "startMs": 58566,
+      "endMs": 58861
     },
     {
       "text": " updates.",
-      "startMs": 25402,
-      "endMs": 25574
+      "startMs": 58861,
+      "endMs": 59401
     },
     {
       "text": " Install",
-      "startMs": 25574,
-      "endMs": 25730,
+      "startMs": 59401,
+      "endMs": 59893,
       "pageBreakAfter": true
     },
     {
       "text": " all",
-      "startMs": 25730,
-      "endMs": 25823
+      "startMs": 59893,
+      "endMs": 60187
     },
     {
       "text": " applicable",
-      "startMs": 25823,
-      "endMs": 26026
+      "startMs": 60187,
+      "endMs": 60826
     },
     {
       "text": " updates.",
-      "startMs": 26026,
-      "endMs": 26198
+      "startMs": 60826,
+      "endMs": 62233,
+      "pageBreakAfter": true
     },
     {
-      "text": " Restart",
-      "startMs": 26198,
-      "endMs": 26354,
-      "pageBreakAfter": true
+      "text": " Step",
+      "startMs": 62767,
+      "endMs": 63107
+    },
+    {
+      "text": " 2:",
+      "startMs": 63107,
+      "endMs": 63350
+    },
+    {
+      "text": " Find",
+      "startMs": 63350,
+      "endMs": 63690
     },
     {
       "text": " the",
-      "startMs": 26354,
-      "endMs": 26447
-    },
-    {
-      "text": " computer",
-      "startMs": 26447,
-      "endMs": 26619
-    },
-    {
-      "text": " when",
-      "startMs": 26619,
-      "endMs": 26728
-    },
-    {
-      "text": " Windows",
-      "startMs": 26728,
-      "endMs": 26884,
+      "startMs": 63690,
+      "endMs": 63982,
       "pageBreakAfter": true
     },
     {
-      "text": " asks",
-      "startMs": 26884,
-      "endMs": 26993
+      "text": " correct",
+      "startMs": 63982,
+      "endMs": 64468
     },
     {
-      "text": " you",
-      "startMs": 26993,
-      "endMs": 27086
+      "text": " firmware",
+      "startMs": 64468,
+      "endMs": 65002
     },
     {
-      "text": " to.",
-      "startMs": 27086,
-      "endMs": 27180,
+      "text": " package.",
+      "startMs": 65002,
+      "endMs": 65537
+    },
+    {
+      "text": " Go",
+      "startMs": 65537,
+      "endMs": 65780,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " to",
+      "startMs": 65780,
+      "endMs": 66023
+    },
+    {
+      "text": " your",
+      "startMs": 66023,
+      "endMs": 66363
+    },
+    {
+      "text": " computer",
+      "startMs": 66363,
+      "endMs": 66897
+    },
+    {
+      "text": " manufacturer's",
+      "startMs": 66897,
+      "endMs": 67724,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " support",
+      "startMs": 67724,
+      "endMs": 68209
+    },
+    {
+      "text": " page",
+      "startMs": 68209,
+      "endMs": 68550
+    },
+    {
+      "text": " and",
+      "startMs": 68550,
+      "endMs": 68841
+    },
+    {
+      "text": " search",
+      "startMs": 68841,
+      "endMs": 69279,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " by",
+      "startMs": 69279,
+      "endMs": 69522
+    },
+    {
+      "text": " the",
+      "startMs": 69522,
+      "endMs": 69813
+    },
+    {
+      "text": " exact",
+      "startMs": 69813,
+      "endMs": 70202
+    },
+    {
+      "text": " model",
+      "startMs": 70202,
+      "endMs": 70591,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " name",
+      "startMs": 70591,
+      "endMs": 70931
+    },
+    {
+      "text": " or",
+      "startMs": 70931,
+      "endMs": 71174
+    },
+    {
+      "text": " service",
+      "startMs": 71174,
+      "endMs": 71660
+    },
+    {
+      "text": " tag.",
+      "startMs": 71660,
+      "endMs": 72867,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Step",
+      "startMs": 73400,
+      "endMs": 73694
+    },
+    {
+      "text": " 3:",
+      "startMs": 73694,
+      "endMs": 73904
+    },
+    {
+      "text": " Install",
+      "startMs": 73904,
+      "endMs": 74323
+    },
+    {
+      "text": " the",
+      "startMs": 74323,
+      "endMs": 74575,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " firmware",
+      "startMs": 74575,
+      "endMs": 75037
+    },
+    {
+      "text": " update.",
+      "startMs": 75037,
+      "endMs": 75457
+    },
+    {
+      "text": " Close",
+      "startMs": 75457,
+      "endMs": 75792
+    },
+    {
+      "text": " open",
+      "startMs": 75792,
+      "endMs": 76086,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " applications.",
+      "startMs": 76086,
+      "endMs": 76758
+    },
+    {
+      "text": " Connect",
+      "startMs": 76758,
+      "endMs": 77177
+    },
+    {
+      "text": " the",
+      "startMs": 77177,
+      "endMs": 77429
+    },
+    {
+      "text": " computer",
+      "startMs": 77429,
+      "endMs": 77891,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " to",
+      "startMs": 77891,
+      "endMs": 78101
+    },
+    {
+      "text": " AC",
+      "startMs": 78101,
+      "endMs": 78310
+    },
+    {
+      "text": " power.",
+      "startMs": 78310,
+      "endMs": 78688
+    },
+    {
+      "text": " Suspend",
+      "startMs": 78688,
+      "endMs": 79108,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " BitLocker",
+      "startMs": 79108,
+      "endMs": 79612
+    },
+    {
+      "text": " protection",
+      "startMs": 79612,
+      "endMs": 80157
+    },
+    {
+      "text": " if",
+      "startMs": 80157,
+      "endMs": 80367
+    },
+    {
+      "text": " the",
+      "startMs": 80367,
+      "endMs": 80619,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " manufacturer's",
+      "startMs": 80619,
+      "endMs": 81332
+    },
+    {
+      "text": " instructions",
+      "startMs": 81332,
+      "endMs": 81962
+    },
+    {
+      "text": " require",
+      "startMs": 81962,
+      "endMs": 82382
+    },
+    {
+      "text": " it.",
+      "startMs": 82382,
+      "endMs": 83500,
       "pageBreakAfter": true
     },
     {
       "text": " Read",
-      "startMs": 27500,
-      "endMs": 27785
+      "startMs": 84033,
+      "endMs": 84403
     },
     {
       "text": " the",
-      "startMs": 27785,
-      "endMs": 28030
+      "startMs": 84403,
+      "endMs": 84720
     },
     {
       "text": " full",
-      "startMs": 28030,
-      "endMs": 28315
+      "startMs": 84720,
+      "endMs": 85090
     },
     {
       "text": " article.",
-      "startMs": 28315,
-      "endMs": 28764,
+      "startMs": 85090,
+      "endMs": 85672,
       "pageBreakAfter": true
     },
     {
       "text": " New",
-      "startMs": 28764,
-      "endMs": 29008
+      "startMs": 85672,
+      "endMs": 85989
     },
     {
       "text": " posts",
-      "startMs": 29008,
-      "endMs": 29334
+      "startMs": 85989,
+      "endMs": 86411
     },
     {
       "text": " every",
-      "startMs": 29334,
-      "endMs": 29660
+      "startMs": 86411,
+      "endMs": 86834
     },
     {
       "text": " week",
-      "startMs": 29660,
-      "endMs": 29946,
+      "startMs": 86834,
+      "endMs": 87204,
       "pageBreakAfter": true
     },
     {
       "text": " on",
-      "startMs": 29946,
-      "endMs": 30149
+      "startMs": 87204,
+      "endMs": 87468
     },
     {
       "text": " the",
-      "startMs": 30149,
-      "endMs": 30394
+      "startMs": 87468,
+      "endMs": 87786
     },
     {
       "text": " blog.",
-      "startMs": 30394,
-      "endMs": 30720,
+      "startMs": 87786,
+      "endMs": 89000,
       "pageBreakAfter": true
     }
   ],

@@ -10,36 +10,39 @@
     "Beginner Guide"
   ],
   "url": "https://www.techtips.fun/blog/windows-11-taskbar-start-menu-not-showing/",
-  "theme": "github-dark",
-  "durationInFrames": 1000,
   "scenes": [
     {
       "type": "title",
       "kicker": "PC Troubleshooting",
       "title": "7 Fixes for a Windows 11 Taskbar and Start Menu Missing",
       "subtitle": "Windows 11 taskbar or Start menu not showing? Restart Explorer, repair system files, and…",
-      "durationInFrames": 105
+      "image": {
+        "src": "post-media/windows-11-taskbar-start-menu-not-showing/01-7-fix-windows-taskbar.webp",
+        "width": 461,
+        "height": 241
+      },
+      "durationInFrames": 183
     },
     {
       "type": "point",
       "kicker": "PC Troubleshooting",
       "heading": "Before You Start",
       "body": "Save your open work with the keyboard. The taskbar does not respond. Press Windows + D to show the desktop.",
-      "durationInFrames": 120
+      "durationInFrames": 307
     },
     {
       "type": "point",
       "kicker": "PC Troubleshooting",
       "heading": "Fix 1: Restart Windows Explorer",
       "body": "Windows Explorer draws the taskbar and the Start menu. Without this process, the shell does not run. Press Ctrl + Shift + Escape.",
-      "durationInFrames": 120
+      "durationInFrames": 330
     },
     {
       "type": "point",
       "kicker": "PC Troubleshooting",
       "heading": "Fix 2: Restart with the Keyboard",
       "body": "The Start menu does not work for this restart. The keyboard menu works. Press Windows + X. Select Shut down or sign out. Select Restart.",
-      "durationInFrames": 120
+      "durationInFrames": 330
     },
     {
       "type": "code",
@@ -85,940 +88,1116 @@
           }
         }
       ],
-      "durationInFrames": 190
+      "stepDurations": [
+        135,
+        135
+      ],
+      "durationInFrames": 270
     },
     {
       "type": "point",
       "kicker": "PC Troubleshooting",
       "heading": "Fix 4: Repair the System Files",
       "body": "Damaged system files can break the taskbar. Windows includes two repair tools: DISM and System File Checker. Open Command Prompt as administrator.",
-      "durationInFrames": 120
+      "durationInFrames": 330
     },
     {
       "type": "point",
       "kicker": "PC Troubleshooting",
       "heading": "Fix 5: Install the Pending Updates",
       "body": "Microsoft repairs the shell in some updates. A pending update can fix the taskbar. Open Settings. Select Windows Update.",
-      "durationInFrames": 120
+      "durationInFrames": 330
+    },
+    {
+      "type": "point",
+      "kicker": "PC Troubleshooting",
+      "heading": "Fix 6: Start Windows in Safe Mode",
+      "body": "Safe mode starts Windows without the third-party software. Press Windows + R. Type msconfig and select OK. Select the Boot tab. Select Safe boot.",
+      "durationInFrames": 330
     },
     {
       "type": "outro",
       "heading": "Read the full article",
       "body": "New posts every week on the blog.",
       "url": "techtips.fun",
-      "durationInFrames": 105
+      "durationInFrames": 165
     }
   ],
+  "theme": "github-dark",
+  "durationInFrames": 2575,
   "captions": [
     {
       "text": " Windows",
-      "startMs": 0,
-      "endMs": 275
+      "startMs": 500,
+      "endMs": 902
     },
     {
       "text": " 11",
-      "startMs": 275,
-      "endMs": 413
+      "startMs": 902,
+      "endMs": 1103
     },
     {
       "text": " taskbar",
-      "startMs": 413,
-      "endMs": 688
+      "startMs": 1103,
+      "endMs": 1504
     },
     {
       "text": " or",
-      "startMs": 688,
-      "endMs": 826,
+      "startMs": 1504,
+      "endMs": 1705,
       "pageBreakAfter": true
     },
     {
       "text": " Start",
-      "startMs": 826,
-      "endMs": 1046
+      "startMs": 1705,
+      "endMs": 2026
     },
     {
       "text": " menu",
-      "startMs": 1046,
-      "endMs": 1238
+      "startMs": 2026,
+      "endMs": 2308
     },
     {
       "text": " not",
-      "startMs": 1238,
-      "endMs": 1404
+      "startMs": 2308,
+      "endMs": 2549
     },
     {
       "text": " showing?",
-      "startMs": 1404,
-      "endMs": 1706,
+      "startMs": 2549,
+      "endMs": 2991,
       "pageBreakAfter": true
     },
     {
       "text": " Restart",
-      "startMs": 1706,
-      "endMs": 1982
+      "startMs": 2991,
+      "endMs": 3392
     },
     {
       "text": " Explorer,",
-      "startMs": 1982,
-      "endMs": 2312
+      "startMs": 3392,
+      "endMs": 3874
     },
     {
       "text": " repair",
-      "startMs": 2312,
-      "endMs": 2559
+      "startMs": 3874,
+      "endMs": 4236
     },
     {
       "text": " system",
-      "startMs": 2559,
-      "endMs": 2807,
+      "startMs": 4236,
+      "endMs": 4597,
       "pageBreakAfter": true
     },
     {
       "text": " files,",
-      "startMs": 2807,
-      "endMs": 3055
+      "startMs": 4597,
+      "endMs": 4959
     },
     {
       "text": " and",
-      "startMs": 3055,
-      "endMs": 3220,
+      "startMs": 4959,
+      "endMs": 6067,
       "pageBreakAfter": true
     },
     {
       "text": " Before",
-      "startMs": 3500,
-      "endMs": 3693
+      "startMs": 6600,
+      "endMs": 7062
     },
     {
       "text": " You",
-      "startMs": 3693,
-      "endMs": 3821
+      "startMs": 7062,
+      "endMs": 7370
     },
     {
       "text": " Start.",
-      "startMs": 3821,
-      "endMs": 4013
+      "startMs": 7370,
+      "endMs": 7833
     },
     {
       "text": " Save",
-      "startMs": 4013,
-      "endMs": 4163,
+      "startMs": 7833,
+      "endMs": 8192,
       "pageBreakAfter": true
     },
     {
       "text": " your",
-      "startMs": 4163,
-      "endMs": 4313
+      "startMs": 8192,
+      "endMs": 8552
     },
     {
       "text": " open",
-      "startMs": 4313,
-      "endMs": 4463
+      "startMs": 8552,
+      "endMs": 8911
     },
     {
       "text": " work",
-      "startMs": 4463,
-      "endMs": 4613
+      "startMs": 8911,
+      "endMs": 9271
     },
     {
       "text": " with",
-      "startMs": 4613,
-      "endMs": 4762,
+      "startMs": 9271,
+      "endMs": 9630,
       "pageBreakAfter": true
     },
     {
       "text": " the",
-      "startMs": 4762,
-      "endMs": 4891
+      "startMs": 9630,
+      "endMs": 9938
     },
     {
       "text": " keyboard.",
-      "startMs": 4891,
-      "endMs": 5147
+      "startMs": 9938,
+      "endMs": 10554
     },
     {
       "text": " The",
-      "startMs": 5147,
-      "endMs": 5276
+      "startMs": 10554,
+      "endMs": 10863
     },
     {
       "text": " taskbar",
-      "startMs": 5276,
-      "endMs": 5490,
+      "startMs": 10863,
+      "endMs": 11376,
       "pageBreakAfter": true
     },
     {
       "text": " does",
-      "startMs": 5490,
-      "endMs": 5640
+      "startMs": 11376,
+      "endMs": 11736
     },
     {
       "text": " not",
-      "startMs": 5640,
-      "endMs": 5768
+      "startMs": 11736,
+      "endMs": 12044
     },
     {
       "text": " respond.",
-      "startMs": 5768,
-      "endMs": 6003
+      "startMs": 12044,
+      "endMs": 12609
     },
     {
       "text": " Press",
-      "startMs": 6003,
-      "endMs": 6174,
+      "startMs": 12609,
+      "endMs": 13020,
       "pageBreakAfter": true
     },
     {
       "text": " Windows",
-      "startMs": 6174,
-      "endMs": 6388
+      "startMs": 13020,
+      "endMs": 13533
     },
     {
       "text": " +",
-      "startMs": 6388,
-      "endMs": 6474
+      "startMs": 13533,
+      "endMs": 13739
     },
     {
       "text": " D",
-      "startMs": 6474,
-      "endMs": 6560
+      "startMs": 13739,
+      "endMs": 13944
     },
     {
       "text": " to",
-      "startMs": 6560,
-      "endMs": 6667,
+      "startMs": 13944,
+      "endMs": 14201,
       "pageBreakAfter": true
     },
     {
       "text": " show",
-      "startMs": 6667,
-      "endMs": 6816
+      "startMs": 14201,
+      "endMs": 14560
     },
     {
       "text": " the",
-      "startMs": 6816,
-      "endMs": 6945
+      "startMs": 14560,
+      "endMs": 14868
     },
     {
       "text": " desktop.",
-      "startMs": 6945,
-      "endMs": 7180,
+      "startMs": 14868,
+      "endMs": 16300,
       "pageBreakAfter": true
     },
     {
       "text": " Fix",
-      "startMs": 7500,
-      "endMs": 7601
+      "startMs": 16833,
+      "endMs": 17096
     },
     {
       "text": " 1:",
-      "startMs": 7601,
-      "endMs": 7685
+      "startMs": 17096,
+      "endMs": 17316
     },
     {
       "text": " Restart",
-      "startMs": 7685,
-      "endMs": 7853
+      "startMs": 17316,
+      "endMs": 17754
     },
     {
       "text": " Windows",
-      "startMs": 7853,
-      "endMs": 8021,
+      "startMs": 17754,
+      "endMs": 18192,
       "pageBreakAfter": true
     },
     {
       "text": " Explorer.",
-      "startMs": 8021,
-      "endMs": 8223
+      "startMs": 18192,
+      "endMs": 18718
     },
     {
       "text": " Windows",
-      "startMs": 8223,
-      "endMs": 8391
+      "startMs": 18718,
+      "endMs": 19157
     },
     {
       "text": " Explorer",
-      "startMs": 8391,
-      "endMs": 8575
+      "startMs": 19157,
+      "endMs": 19639
     },
     {
       "text": " draws",
-      "startMs": 8575,
-      "endMs": 8710,
+      "startMs": 19639,
+      "endMs": 19989,
       "pageBreakAfter": true
     },
     {
       "text": " the",
-      "startMs": 8710,
-      "endMs": 8811
+      "startMs": 19989,
+      "endMs": 20253
     },
     {
       "text": " taskbar",
-      "startMs": 8811,
-      "endMs": 8979
+      "startMs": 20253,
+      "endMs": 20691
     },
     {
       "text": " and",
-      "startMs": 8979,
-      "endMs": 9080
+      "startMs": 20691,
+      "endMs": 20954
     },
     {
       "text": " the",
-      "startMs": 9080,
-      "endMs": 9180,
+      "startMs": 20954,
+      "endMs": 21217,
       "pageBreakAfter": true
     },
     {
       "text": " Start",
-      "startMs": 9180,
-      "endMs": 9315
+      "startMs": 21217,
+      "endMs": 21568
     },
     {
       "text": " menu.",
-      "startMs": 9315,
-      "endMs": 9449
+      "startMs": 21568,
+      "endMs": 21918
     },
     {
       "text": " Without",
-      "startMs": 9449,
-      "endMs": 9617
+      "startMs": 21918,
+      "endMs": 22357
     },
     {
       "text": " this",
-      "startMs": 9617,
-      "endMs": 9735,
+      "startMs": 22357,
+      "endMs": 22663,
       "pageBreakAfter": true
     },
     {
       "text": " process,",
-      "startMs": 9735,
-      "endMs": 9920
+      "startMs": 22663,
+      "endMs": 23146
     },
     {
       "text": " the",
-      "startMs": 9920,
-      "endMs": 10021
+      "startMs": 23146,
+      "endMs": 23409
     },
     {
       "text": " shell",
-      "startMs": 10021,
-      "endMs": 10155
+      "startMs": 23409,
+      "endMs": 23759
     },
     {
       "text": " does",
-      "startMs": 10155,
-      "endMs": 10273,
+      "startMs": 23759,
+      "endMs": 24066,
       "pageBreakAfter": true
     },
     {
       "text": " not",
-      "startMs": 10273,
-      "endMs": 10373
+      "startMs": 24066,
+      "endMs": 24329
     },
     {
       "text": " run.",
-      "startMs": 10373,
-      "endMs": 10491
+      "startMs": 24329,
+      "endMs": 24636
     },
     {
       "text": " Press",
-      "startMs": 10491,
-      "endMs": 10625
+      "startMs": 24636,
+      "endMs": 24987
     },
     {
       "text": " Ctrl",
-      "startMs": 10625,
-      "endMs": 10743,
+      "startMs": 24987,
+      "endMs": 25294,
       "pageBreakAfter": true
     },
     {
       "text": " +",
-      "startMs": 10743,
-      "endMs": 10810
+      "startMs": 25294,
+      "endMs": 25469
     },
     {
       "text": " Shift",
-      "startMs": 10810,
-      "endMs": 10945
+      "startMs": 25469,
+      "endMs": 25820
     },
     {
       "text": " +",
-      "startMs": 10945,
-      "endMs": 11012
+      "startMs": 25820,
+      "endMs": 25995
     },
     {
       "text": " Escape.",
-      "startMs": 11012,
-      "endMs": 11180,
+      "startMs": 25995,
+      "endMs": 27300,
       "pageBreakAfter": true
     },
     {
       "text": " Fix",
-      "startMs": 11500,
-      "endMs": 11595
+      "startMs": 27833,
+      "endMs": 28081
     },
     {
       "text": " 2:",
-      "startMs": 11595,
-      "endMs": 11674
+      "startMs": 28081,
+      "endMs": 28287
     },
     {
       "text": " Restart",
-      "startMs": 11674,
-      "endMs": 11832
+      "startMs": 28287,
+      "endMs": 28699
     },
     {
       "text": " with",
-      "startMs": 11832,
-      "endMs": 11942,
+      "startMs": 28699,
+      "endMs": 28987,
       "pageBreakAfter": true
     },
     {
       "text": " the",
-      "startMs": 11942,
-      "endMs": 12037
+      "startMs": 28987,
+      "endMs": 29234
     },
     {
       "text": " Keyboard.",
-      "startMs": 12037,
-      "endMs": 12227
+      "startMs": 29234,
+      "endMs": 29729
     },
     {
       "text": " The",
-      "startMs": 12227,
-      "endMs": 12321
+      "startMs": 29729,
+      "endMs": 29976
     },
     {
       "text": " Start",
-      "startMs": 12321,
-      "endMs": 12448,
+      "startMs": 29976,
+      "endMs": 30305,
       "pageBreakAfter": true
     },
     {
       "text": " menu",
-      "startMs": 12448,
-      "endMs": 12558
+      "startMs": 30305,
+      "endMs": 30594
     },
     {
       "text": " does",
-      "startMs": 12558,
-      "endMs": 12669
+      "startMs": 30594,
+      "endMs": 30882
     },
     {
       "text": " not",
-      "startMs": 12669,
-      "endMs": 12764
+      "startMs": 30882,
+      "endMs": 31129
     },
     {
       "text": " work",
-      "startMs": 12764,
-      "endMs": 12874,
+      "startMs": 31129,
+      "endMs": 31418,
       "pageBreakAfter": true
     },
     {
       "text": " for",
-      "startMs": 12874,
-      "endMs": 12969
+      "startMs": 31418,
+      "endMs": 31665
     },
     {
       "text": " this",
-      "startMs": 12969,
-      "endMs": 13079
+      "startMs": 31665,
+      "endMs": 31954
     },
     {
       "text": " restart.",
-      "startMs": 13079,
-      "endMs": 13253
+      "startMs": 31954,
+      "endMs": 32407
     },
     {
       "text": " The",
-      "startMs": 13253,
-      "endMs": 13348,
+      "startMs": 32407,
+      "endMs": 32654,
       "pageBreakAfter": true
     },
     {
       "text": " keyboard",
-      "startMs": 13348,
-      "endMs": 13522
+      "startMs": 32654,
+      "endMs": 33107
     },
     {
       "text": " menu",
-      "startMs": 13522,
-      "endMs": 13632
+      "startMs": 33107,
+      "endMs": 33396
     },
     {
       "text": " works.",
-      "startMs": 13632,
-      "endMs": 13774
+      "startMs": 33396,
+      "endMs": 33766
     },
     {
       "text": " Press",
-      "startMs": 13774,
-      "endMs": 13901,
+      "startMs": 33766,
+      "endMs": 34096,
       "pageBreakAfter": true
     },
     {
       "text": " Windows",
-      "startMs": 13901,
-      "endMs": 14059
+      "startMs": 34096,
+      "endMs": 34508
     },
     {
       "text": " +",
-      "startMs": 14059,
-      "endMs": 14122
+      "startMs": 34508,
+      "endMs": 34673
     },
     {
       "text": " X.",
-      "startMs": 14122,
-      "endMs": 14201
+      "startMs": 34673,
+      "endMs": 34879
     },
     {
       "text": " Select",
-      "startMs": 14201,
-      "endMs": 14343,
+      "startMs": 34879,
+      "endMs": 35250,
       "pageBreakAfter": true
     },
     {
       "text": " Shut",
-      "startMs": 14343,
-      "endMs": 14453
+      "startMs": 35250,
+      "endMs": 35538
     },
     {
       "text": " down",
-      "startMs": 14453,
-      "endMs": 14564
+      "startMs": 35538,
+      "endMs": 35826
     },
     {
       "text": " or",
-      "startMs": 14564,
-      "endMs": 14643
+      "startMs": 35826,
+      "endMs": 36032
     },
     {
       "text": " sign",
-      "startMs": 14643,
-      "endMs": 14754,
+      "startMs": 36032,
+      "endMs": 36321,
       "pageBreakAfter": true
     },
     {
       "text": " out.",
-      "startMs": 14754,
-      "endMs": 14864
+      "startMs": 36321,
+      "endMs": 36609
     },
     {
       "text": " Select",
-      "startMs": 14864,
-      "endMs": 15006
+      "startMs": 36609,
+      "endMs": 36980
     },
     {
       "text": " Restart.",
-      "startMs": 15006,
-      "endMs": 15180,
+      "startMs": 36980,
+      "endMs": 38300,
       "pageBreakAfter": true
     },
     {
       "text": " Fix",
-      "startMs": 15500,
-      "endMs": 15860
+      "startMs": 38833,
+      "endMs": 39235
     },
     {
       "text": " 3:",
-      "startMs": 15860,
-      "endMs": 16161
+      "startMs": 39235,
+      "endMs": 39570
     },
     {
       "text": " Re-register",
-      "startMs": 16161,
-      "endMs": 17002
+      "startMs": 39570,
+      "endMs": 40509
     },
     {
       "text": " the",
-      "startMs": 17002,
-      "endMs": 17362,
+      "startMs": 40509,
+      "endMs": 40911,
       "pageBreakAfter": true
     },
     {
       "text": " Start",
-      "startMs": 17362,
-      "endMs": 17843
+      "startMs": 40911,
+      "endMs": 41447
     },
     {
       "text": " Menu",
-      "startMs": 17843,
-      "endMs": 18263
+      "startMs": 41447,
+      "endMs": 41916
     },
     {
       "text": " Components.",
-      "startMs": 18263,
-      "endMs": 19104
+      "startMs": 41916,
+      "endMs": 42854
     },
     {
       "text": " Let",
-      "startMs": 19104,
-      "endMs": 19465,
+      "startMs": 42854,
+      "endMs": 43256,
       "pageBreakAfter": true
     },
     {
       "text": " us",
-      "startMs": 19465,
-      "endMs": 19765
+      "startMs": 43256,
+      "endMs": 43591
     },
     {
       "text": " look",
-      "startMs": 19765,
-      "endMs": 20185
+      "startMs": 43591,
+      "endMs": 44060
     },
     {
       "text": " at",
-      "startMs": 20185,
-      "endMs": 20486
+      "startMs": 44060,
+      "endMs": 44395
     },
     {
       "text": " the",
-      "startMs": 20486,
-      "endMs": 20846,
+      "startMs": 44395,
+      "endMs": 44797,
       "pageBreakAfter": true
     },
     {
       "text": " code.",
-      "startMs": 20846,
-      "endMs": 21327,
+      "startMs": 44797,
+      "endMs": 47300,
       "pageBreakAfter": true
     },
     {
       "text": " Fix",
-      "startMs": 21833,
-      "endMs": 21927
+      "startMs": 47833,
+      "endMs": 48078
     },
     {
       "text": " 4:",
-      "startMs": 21927,
-      "endMs": 22006
+      "startMs": 48078,
+      "endMs": 48283
     },
     {
       "text": " Repair",
-      "startMs": 22006,
-      "endMs": 22147
+      "startMs": 48283,
+      "endMs": 48650
     },
     {
       "text": " the",
-      "startMs": 22147,
-      "endMs": 22240,
+      "startMs": 48650,
+      "endMs": 48895,
       "pageBreakAfter": true
     },
     {
       "text": " System",
-      "startMs": 22240,
-      "endMs": 22381
+      "startMs": 48895,
+      "endMs": 49263
     },
     {
       "text": " Files.",
-      "startMs": 22381,
-      "endMs": 22522
+      "startMs": 49263,
+      "endMs": 49631
     },
     {
       "text": " Damaged",
-      "startMs": 22522,
-      "endMs": 22679
+      "startMs": 49631,
+      "endMs": 50039
     },
     {
       "text": " system",
-      "startMs": 22679,
-      "endMs": 22820,
+      "startMs": 50039,
+      "endMs": 50407,
       "pageBreakAfter": true
     },
     {
       "text": " files",
-      "startMs": 22820,
-      "endMs": 22945
+      "startMs": 50407,
+      "endMs": 50734
     },
     {
       "text": " can",
-      "startMs": 22945,
-      "endMs": 23039
+      "startMs": 50734,
+      "endMs": 50979
     },
     {
       "text": " break",
-      "startMs": 23039,
-      "endMs": 23164
+      "startMs": 50979,
+      "endMs": 51306
     },
     {
       "text": " the",
-      "startMs": 23164,
-      "endMs": 23258,
+      "startMs": 51306,
+      "endMs": 51551,
       "pageBreakAfter": true
     },
     {
       "text": " taskbar.",
-      "startMs": 23258,
-      "endMs": 23431
+      "startMs": 51551,
+      "endMs": 52000
     },
     {
       "text": " Windows",
-      "startMs": 23431,
-      "endMs": 23587
+      "startMs": 52000,
+      "endMs": 52409
     },
     {
       "text": " includes",
-      "startMs": 23587,
-      "endMs": 23759
+      "startMs": 52409,
+      "endMs": 52858
     },
     {
       "text": " two",
-      "startMs": 23759,
-      "endMs": 23853,
+      "startMs": 52858,
+      "endMs": 53103,
       "pageBreakAfter": true
     },
     {
       "text": " repair",
-      "startMs": 23853,
-      "endMs": 23994
+      "startMs": 53103,
+      "endMs": 53471
     },
     {
       "text": " tools:",
-      "startMs": 23994,
-      "endMs": 24135
+      "startMs": 53471,
+      "endMs": 53838
     },
     {
       "text": " DISM",
-      "startMs": 24135,
-      "endMs": 24245
+      "startMs": 53838,
+      "endMs": 54124
     },
     {
       "text": " and",
-      "startMs": 24245,
-      "endMs": 24339,
+      "startMs": 54124,
+      "endMs": 54370,
       "pageBreakAfter": true
     },
     {
       "text": " System",
-      "startMs": 24339,
-      "endMs": 24480
+      "startMs": 54370,
+      "endMs": 54737
     },
     {
       "text": " File",
-      "startMs": 24480,
-      "endMs": 24589
+      "startMs": 54737,
+      "endMs": 55023
     },
     {
       "text": " Checker.",
-      "startMs": 24589,
-      "endMs": 24762
+      "startMs": 55023,
+      "endMs": 55472
     },
     {
       "text": " Open",
-      "startMs": 24762,
-      "endMs": 24871,
+      "startMs": 55472,
+      "endMs": 55758,
       "pageBreakAfter": true
     },
     {
       "text": " Command",
-      "startMs": 24871,
-      "endMs": 25028
+      "startMs": 55758,
+      "endMs": 56167
     },
     {
       "text": " Prompt",
-      "startMs": 25028,
-      "endMs": 25169
+      "startMs": 56167,
+      "endMs": 56535
     },
     {
       "text": " as",
-      "startMs": 25169,
-      "endMs": 25247
+      "startMs": 56535,
+      "endMs": 56739
     },
     {
       "text": " administrator.",
-      "startMs": 25247,
-      "endMs": 25513,
+      "startMs": 56739,
+      "endMs": 58300,
       "pageBreakAfter": true
     },
     {
       "text": " Fix",
-      "startMs": 25833,
-      "endMs": 25940
+      "startMs": 58833,
+      "endMs": 59112
     },
     {
       "text": " 5:",
-      "startMs": 25940,
-      "endMs": 26029
+      "startMs": 59112,
+      "endMs": 59343
     },
     {
       "text": " Install",
-      "startMs": 26029,
-      "endMs": 26207
+      "startMs": 59343,
+      "endMs": 59807
     },
     {
       "text": " the",
-      "startMs": 26207,
-      "endMs": 26313,
+      "startMs": 59807,
+      "endMs": 60086,
       "pageBreakAfter": true
     },
     {
       "text": " Pending",
-      "startMs": 26313,
-      "endMs": 26491
+      "startMs": 60086,
+      "endMs": 60549
     },
     {
       "text": " Updates.",
-      "startMs": 26491,
-      "endMs": 26687
+      "startMs": 60549,
+      "endMs": 61059
     },
     {
       "text": " Microsoft",
-      "startMs": 26687,
-      "endMs": 26900
+      "startMs": 61059,
+      "endMs": 61616
     },
     {
       "text": " repairs",
-      "startMs": 26900,
-      "endMs": 27078,
+      "startMs": 61616,
+      "endMs": 62080,
       "pageBreakAfter": true
     },
     {
       "text": " the",
-      "startMs": 27078,
-      "endMs": 27184
+      "startMs": 62080,
+      "endMs": 62358
     },
     {
       "text": " shell",
-      "startMs": 27184,
-      "endMs": 27327
+      "startMs": 62358,
+      "endMs": 62729
     },
     {
       "text": " in",
-      "startMs": 27327,
-      "endMs": 27416
+      "startMs": 62729,
+      "endMs": 62961
     },
     {
       "text": " some",
-      "startMs": 27416,
-      "endMs": 27540,
+      "startMs": 62961,
+      "endMs": 63286,
       "pageBreakAfter": true
     },
     {
       "text": " updates.",
-      "startMs": 27540,
-      "endMs": 27736
+      "startMs": 63286,
+      "endMs": 63796
     },
     {
       "text": " A",
-      "startMs": 27736,
-      "endMs": 27807
+      "startMs": 63796,
+      "endMs": 63981
     },
     {
       "text": " pending",
-      "startMs": 27807,
-      "endMs": 27984
+      "startMs": 63981,
+      "endMs": 64445
     },
     {
       "text": " update",
-      "startMs": 27984,
-      "endMs": 28144,
+      "startMs": 64445,
+      "endMs": 64862,
       "pageBreakAfter": true
     },
     {
       "text": " can",
-      "startMs": 28144,
-      "endMs": 28251
+      "startMs": 64862,
+      "endMs": 65141
     },
     {
       "text": " fix",
-      "startMs": 28251,
-      "endMs": 28358
+      "startMs": 65141,
+      "endMs": 65419
     },
     {
       "text": " the",
-      "startMs": 28358,
-      "endMs": 28464
+      "startMs": 65419,
+      "endMs": 65697
     },
     {
       "text": " taskbar.",
-      "startMs": 28464,
-      "endMs": 28660,
+      "startMs": 65697,
+      "endMs": 66207,
       "pageBreakAfter": true
     },
     {
       "text": " Open",
-      "startMs": 28660,
-      "endMs": 28784
+      "startMs": 66207,
+      "endMs": 66532
     },
     {
       "text": " Settings.",
-      "startMs": 28784,
-      "endMs": 28998
+      "startMs": 66532,
+      "endMs": 67088
     },
     {
       "text": " Select",
-      "startMs": 28998,
-      "endMs": 29158
+      "startMs": 67088,
+      "endMs": 67506
     },
     {
       "text": " Windows",
-      "startMs": 29158,
-      "endMs": 29336,
+      "startMs": 67506,
+      "endMs": 67970,
       "pageBreakAfter": true
     },
     {
       "text": " Update.",
-      "startMs": 29336,
-      "endMs": 29513,
+      "startMs": 67970,
+      "endMs": 69300,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Fix",
+      "startMs": 69833,
+      "endMs": 70070
+    },
+    {
+      "text": " 6:",
+      "startMs": 70070,
+      "endMs": 70268
+    },
+    {
+      "text": " Start",
+      "startMs": 70268,
+      "endMs": 70584
+    },
+    {
+      "text": " Windows",
+      "startMs": 70584,
+      "endMs": 70979,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " in",
+      "startMs": 70979,
+      "endMs": 71177
+    },
+    {
+      "text": " Safe",
+      "startMs": 71177,
+      "endMs": 71453
+    },
+    {
+      "text": " Mode.",
+      "startMs": 71453,
+      "endMs": 71769
+    },
+    {
+      "text": " Safe",
+      "startMs": 71769,
+      "endMs": 72046,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " mode",
+      "startMs": 72046,
+      "endMs": 72322
+    },
+    {
+      "text": " starts",
+      "startMs": 72322,
+      "endMs": 72678
+    },
+    {
+      "text": " Windows",
+      "startMs": 72678,
+      "endMs": 73073
+    },
+    {
+      "text": " without",
+      "startMs": 73073,
+      "endMs": 73468,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " the",
+      "startMs": 73468,
+      "endMs": 73705
+    },
+    {
+      "text": " third-party",
+      "startMs": 73705,
+      "endMs": 74258
+    },
+    {
+      "text": " software.",
+      "startMs": 74258,
+      "endMs": 74732
+    },
+    {
+      "text": " Press",
+      "startMs": 74732,
+      "endMs": 75048,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Windows",
+      "startMs": 75048,
+      "endMs": 75443
+    },
+    {
+      "text": " +",
+      "startMs": 75443,
+      "endMs": 75601
+    },
+    {
+      "text": " R.",
+      "startMs": 75601,
+      "endMs": 75799
+    },
+    {
+      "text": " Type",
+      "startMs": 75799,
+      "endMs": 76075,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " msconfig",
+      "startMs": 76075,
+      "endMs": 76510
+    },
+    {
+      "text": " and",
+      "startMs": 76510,
+      "endMs": 76747
+    },
+    {
+      "text": " select",
+      "startMs": 76747,
+      "endMs": 77102
+    },
+    {
+      "text": " OK.",
+      "startMs": 77102,
+      "endMs": 77340,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Select",
+      "startMs": 77340,
+      "endMs": 77695
+    },
+    {
+      "text": " the",
+      "startMs": 77695,
+      "endMs": 77932
+    },
+    {
+      "text": " Boot",
+      "startMs": 77932,
+      "endMs": 78209
+    },
+    {
+      "text": " tab.",
+      "startMs": 78209,
+      "endMs": 78485,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Select",
+      "startMs": 78485,
+      "endMs": 78841
+    },
+    {
+      "text": " Safe",
+      "startMs": 78841,
+      "endMs": 79117
+    },
+    {
+      "text": " boot.",
+      "startMs": 79117,
+      "endMs": 80300,
       "pageBreakAfter": true
     },
     {
       "text": " Read",
-      "startMs": 29833,
-      "endMs": 30119
+      "startMs": 80833,
+      "endMs": 81203
     },
     {
       "text": " the",
-      "startMs": 30119,
-      "endMs": 30363
+      "startMs": 81203,
+      "endMs": 81520
     },
     {
       "text": " full",
-      "startMs": 30363,
-      "endMs": 30649
+      "startMs": 81520,
+      "endMs": 81890
     },
     {
       "text": " article.",
-      "startMs": 30649,
-      "endMs": 31097,
+      "startMs": 81890,
+      "endMs": 82472,
       "pageBreakAfter": true
     },
     {
       "text": " New",
-      "startMs": 31097,
-      "endMs": 31341
+      "startMs": 82472,
+      "endMs": 82789
     },
     {
       "text": " posts",
-      "startMs": 31341,
-      "endMs": 31668
+      "startMs": 82789,
+      "endMs": 83211
     },
     {
       "text": " every",
-      "startMs": 31668,
-      "endMs": 31994
+      "startMs": 83211,
+      "endMs": 83634
     },
     {
       "text": " week",
-      "startMs": 31994,
-      "endMs": 32279,
+      "startMs": 83634,
+      "endMs": 84004,
       "pageBreakAfter": true
     },
     {
       "text": " on",
-      "startMs": 32279,
-      "endMs": 32483
+      "startMs": 84004,
+      "endMs": 84268
     },
     {
       "text": " the",
-      "startMs": 32483,
-      "endMs": 32727
+      "startMs": 84268,
+      "endMs": 84586
     },
     {
       "text": " blog.",
-      "startMs": 32727,
-      "endMs": 33053,
+      "startMs": 84586,
+      "endMs": 85800,
       "pageBreakAfter": true
     }
   ],

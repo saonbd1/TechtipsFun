@@ -10,29 +10,32 @@
     "SEO"
   ],
   "url": "https://www.techtips.fun/blog/create-astro-site-responsive-layout/",
-  "theme": "github-dark",
-  "durationInFrames": 925,
   "scenes": [
     {
       "type": "title",
       "kicker": "Web Development",
       "title": "Create an Astro Site Layout Responsive & Mobile Friendly",
       "subtitle": "Build an Astro blog/site template fully responsive. Implement the header, footer and…",
-      "durationInFrames": 105
+      "image": {
+        "src": "post-media/create-astro-site-responsive-layout/01-responsive-astro-site.webp",
+        "width": 1152,
+        "height": 768
+      },
+      "durationInFrames": 183
     },
     {
       "type": "point",
       "kicker": "Web Development",
       "heading": "How to Build a Responsive Astro Blog Header, Footer & Nav",
       "body": "A website header identifies the site branding and a head menu helps readers move between pages.",
-      "durationInFrames": 120
+      "durationInFrames": 330
     },
     {
       "type": "point",
       "kicker": "Web Development",
       "heading": "Plan the template layout design",
       "body": "Plan the components before you start the work. Keep the site shell out of individual pages.",
-      "durationInFrames": 120
+      "durationInFrames": 284
     },
     {
       "type": "code",
@@ -187,7 +190,10 @@
           }
         }
       ],
-      "durationInFrames": 95
+      "stepDurations": [
+        182
+      ],
+      "durationInFrames": 182
     },
     {
       "type": "code",
@@ -439,7 +445,10 @@
           }
         }
       ],
-      "durationInFrames": 95
+      "stepDurations": [
+        182
+      ],
+      "durationInFrames": 182
     },
     {
       "type": "code",
@@ -625,7 +634,11 @@
           }
         }
       ],
-      "durationInFrames": 190
+      "stepDurations": [
+        135,
+        182
+      ],
+      "durationInFrames": 317
     },
     {
       "type": "code",
@@ -777,616 +790,1635 @@
           }
         }
       ],
-      "durationInFrames": 95
+      "stepDurations": [
+        141
+      ],
+      "durationInFrames": 141
+    },
+    {
+      "type": "code",
+      "kicker": "Code",
+      "heading": "Make the header responsive with CSS",
+      "steps": [
+        {
+          "lang": "css",
+          "meta": "css",
+          "value": ".site-header {\n  padding: 0 1rem;\n  background: linear-gradient(115deg, #101421, #1b2040);\n}\n\n.site-header nav {\n  display: grid;\n  grid-template-columns: 1fr auto 1fr;\n  align-items: center;",
+          "code": ".site-header {\n  padding: 0 1rem;\n  background: linear-gradient(115deg, #101421, #1b2040);\n}\n\n.site-header nav {\n  display: grid;\n  grid-template-columns: 1fr auto 1fr;\n  align-items: center;",
+          "tokens": [
+            [
+              ".site-header",
+              "#79C0FF"
+            ],
+            " ",
+            [
+              "{",
+              "#C9D1D9"
+            ],
+            "\n  ",
+            [
+              "padding",
+              "#79C0FF"
+            ],
+            [
+              ":",
+              "#C9D1D9"
+            ],
+            " ",
+            [
+              "0 1",
+              "#79C0FF"
+            ],
+            [
+              "rem",
+              "#FF7B72"
+            ],
+            [
+              ";",
+              "#C9D1D9"
+            ],
+            "\n  ",
+            [
+              "background",
+              "#79C0FF"
+            ],
+            [
+              ":",
+              "#C9D1D9"
+            ],
+            " ",
+            [
+              "linear-gradient",
+              "#79C0FF"
+            ],
+            [
+              "(",
+              "#C9D1D9"
+            ],
+            [
+              "115",
+              "#79C0FF"
+            ],
+            [
+              "deg",
+              "#FF7B72"
+            ],
+            [
+              ",",
+              "#C9D1D9"
+            ],
+            " ",
+            [
+              "#101421",
+              "#79C0FF"
+            ],
+            [
+              ",",
+              "#C9D1D9"
+            ],
+            " ",
+            [
+              "#1b2040",
+              "#79C0FF"
+            ],
+            [
+              ");",
+              "#C9D1D9"
+            ],
+            "\n",
+            [
+              "}",
+              "#C9D1D9"
+            ],
+            "\n\n",
+            [
+              ".site-header",
+              "#79C0FF"
+            ],
+            " ",
+            [
+              "nav",
+              "#7EE787"
+            ],
+            " ",
+            [
+              "{",
+              "#C9D1D9"
+            ],
+            "\n  ",
+            [
+              "display",
+              "#79C0FF"
+            ],
+            [
+              ":",
+              "#C9D1D9"
+            ],
+            " ",
+            [
+              "grid",
+              "#79C0FF"
+            ],
+            [
+              ";",
+              "#C9D1D9"
+            ],
+            "\n  ",
+            [
+              "grid-template-columns",
+              "#79C0FF"
+            ],
+            [
+              ":",
+              "#C9D1D9"
+            ],
+            " ",
+            [
+              "1",
+              "#79C0FF"
+            ],
+            [
+              "fr",
+              "#FF7B72"
+            ],
+            " ",
+            [
+              "auto 1",
+              "#79C0FF"
+            ],
+            [
+              "fr",
+              "#FF7B72"
+            ],
+            [
+              ";",
+              "#C9D1D9"
+            ],
+            "\n  ",
+            [
+              "align-items",
+              "#79C0FF"
+            ],
+            [
+              ":",
+              "#C9D1D9"
+            ],
+            " ",
+            [
+              "center",
+              "#79C0FF"
+            ],
+            [
+              ";",
+              "#C9D1D9"
+            ]
+          ],
+          "annotations": [],
+          "themeName": "github-dark",
+          "style": {
+            "color": "#c9d1d9",
+            "background": "#0d1117",
+            "colorScheme": "dark"
+          }
+        },
+        {
+          "lang": "css",
+          "meta": "css",
+          "value": "@media (max-width: 720px) {\n  .site-header {\n    padding: 0 0.75rem;\n  }\n\n  .site-header nav {\n    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);\n    min-height: 3.75rem;\n    gap: 0;",
+          "code": "@media (max-width: 720px) {\n  .site-header {\n    padding: 0 0.75rem;\n  }\n\n  .site-header nav {\n    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);\n    min-height: 3.75rem;\n    gap: 0;",
+          "tokens": [
+            [
+              "@media",
+              "#FF7B72"
+            ],
+            " ",
+            [
+              "(",
+              "#C9D1D9"
+            ],
+            [
+              "max-width",
+              "#79C0FF"
+            ],
+            [
+              ":",
+              "#C9D1D9"
+            ],
+            " ",
+            [
+              "720",
+              "#79C0FF"
+            ],
+            [
+              "px",
+              "#FF7B72"
+            ],
+            [
+              ") {",
+              "#C9D1D9"
+            ],
+            "\n  ",
+            [
+              ".site-header",
+              "#79C0FF"
+            ],
+            " ",
+            [
+              "{",
+              "#C9D1D9"
+            ],
+            "\n    ",
+            [
+              "padding",
+              "#79C0FF"
+            ],
+            [
+              ":",
+              "#C9D1D9"
+            ],
+            " ",
+            [
+              "0 0.75",
+              "#79C0FF"
+            ],
+            [
+              "rem",
+              "#FF7B72"
+            ],
+            [
+              ";",
+              "#C9D1D9"
+            ],
+            "\n  ",
+            [
+              "}",
+              "#C9D1D9"
+            ],
+            "\n\n  ",
+            [
+              ".site-header",
+              "#79C0FF"
+            ],
+            " ",
+            [
+              "nav",
+              "#7EE787"
+            ],
+            " ",
+            [
+              "{",
+              "#C9D1D9"
+            ],
+            "\n    ",
+            [
+              "grid-template-columns",
+              "#79C0FF"
+            ],
+            [
+              ":",
+              "#C9D1D9"
+            ],
+            " ",
+            [
+              "minmax",
+              "#79C0FF"
+            ],
+            [
+              "(",
+              "#C9D1D9"
+            ],
+            [
+              "0",
+              "#79C0FF"
+            ],
+            [
+              ",",
+              "#C9D1D9"
+            ],
+            " ",
+            [
+              "1",
+              "#79C0FF"
+            ],
+            [
+              "fr",
+              "#FF7B72"
+            ],
+            [
+              ")",
+              "#C9D1D9"
+            ],
+            " ",
+            [
+              "auto minmax",
+              "#79C0FF"
+            ],
+            [
+              "(",
+              "#C9D1D9"
+            ],
+            [
+              "0",
+              "#79C0FF"
+            ],
+            [
+              ",",
+              "#C9D1D9"
+            ],
+            " ",
+            [
+              "1",
+              "#79C0FF"
+            ],
+            [
+              "fr",
+              "#FF7B72"
+            ],
+            [
+              ");",
+              "#C9D1D9"
+            ],
+            "\n    ",
+            [
+              "min-height",
+              "#79C0FF"
+            ],
+            [
+              ":",
+              "#C9D1D9"
+            ],
+            " ",
+            [
+              "3.75",
+              "#79C0FF"
+            ],
+            [
+              "rem",
+              "#FF7B72"
+            ],
+            [
+              ";",
+              "#C9D1D9"
+            ],
+            "\n    ",
+            [
+              "gap",
+              "#79C0FF"
+            ],
+            [
+              ":",
+              "#C9D1D9"
+            ],
+            " ",
+            [
+              "0",
+              "#79C0FF"
+            ],
+            [
+              ";",
+              "#C9D1D9"
+            ]
+          ],
+          "annotations": [],
+          "themeName": "github-dark",
+          "style": {
+            "color": "#c9d1d9",
+            "background": "#0d1117",
+            "colorScheme": "dark"
+          }
+        }
+      ],
+      "stepDurations": [
+        182,
+        182
+      ],
+      "durationInFrames": 364
+    },
+    {
+      "type": "code",
+      "kicker": "Code",
+      "heading": "Add a visible focus state",
+      "steps": [
+        {
+          "lang": "css",
+          "meta": "css",
+          "value": "a:focus-visible,\nsummary:focus-visible {\n  outline: 3px solid #bfc4ff;\n  outline-offset: 3px;\n}",
+          "code": "a:focus-visible,\nsummary:focus-visible {\n  outline: 3px solid #bfc4ff;\n  outline-offset: 3px;\n}",
+          "tokens": [
+            [
+              "a",
+              "#7EE787"
+            ],
+            [
+              ":focus-visible",
+              "#79C0FF"
+            ],
+            [
+              ",",
+              "#C9D1D9"
+            ],
+            "\n",
+            [
+              "summary",
+              "#7EE787"
+            ],
+            [
+              ":focus-visible",
+              "#79C0FF"
+            ],
+            " ",
+            [
+              "{",
+              "#C9D1D9"
+            ],
+            "\n  ",
+            [
+              "outline",
+              "#79C0FF"
+            ],
+            [
+              ":",
+              "#C9D1D9"
+            ],
+            " ",
+            [
+              "3",
+              "#79C0FF"
+            ],
+            [
+              "px",
+              "#FF7B72"
+            ],
+            " ",
+            [
+              "solid #bfc4ff",
+              "#79C0FF"
+            ],
+            [
+              ";",
+              "#C9D1D9"
+            ],
+            "\n  ",
+            [
+              "outline-offset",
+              "#79C0FF"
+            ],
+            [
+              ":",
+              "#C9D1D9"
+            ],
+            " ",
+            [
+              "3",
+              "#79C0FF"
+            ],
+            [
+              "px",
+              "#FF7B72"
+            ],
+            [
+              ";",
+              "#C9D1D9"
+            ],
+            "\n",
+            [
+              "}",
+              "#C9D1D9"
+            ]
+          ],
+          "annotations": [],
+          "themeName": "github-dark",
+          "style": {
+            "color": "#c9d1d9",
+            "background": "#0d1117",
+            "colorScheme": "dark"
+          }
+        },
+        {
+          "lang": "html",
+          "meta": "html",
+          "value": "<button\n  type=\"button\"\n  aria-expanded=\"false\"\n  aria-controls=\"blog-links\"\n>\n  Blog\n</button>\n\n<div id=\"blog-links\" hidden>",
+          "code": "<button\n  type=\"button\"\n  aria-expanded=\"false\"\n  aria-controls=\"blog-links\"\n>\n  Blog\n</button>\n\n<div id=\"blog-links\" hidden>",
+          "tokens": [
+            [
+              "<",
+              "#C9D1D9"
+            ],
+            [
+              "button",
+              "#7EE787"
+            ],
+            "\n  ",
+            [
+              "type",
+              "#79C0FF"
+            ],
+            [
+              "=",
+              "#C9D1D9"
+            ],
+            [
+              "\"button\"",
+              "#A5D6FF"
+            ],
+            "\n  ",
+            [
+              "aria-expanded",
+              "#79C0FF"
+            ],
+            [
+              "=",
+              "#C9D1D9"
+            ],
+            [
+              "\"false\"",
+              "#A5D6FF"
+            ],
+            "\n  ",
+            [
+              "aria-controls",
+              "#79C0FF"
+            ],
+            [
+              "=",
+              "#C9D1D9"
+            ],
+            [
+              "\"blog-links\"",
+              "#A5D6FF"
+            ],
+            "\n",
+            [
+              ">",
+              "#C9D1D9"
+            ],
+            "\n  ",
+            [
+              "Blog",
+              "#C9D1D9"
+            ],
+            "\n",
+            [
+              "</",
+              "#C9D1D9"
+            ],
+            [
+              "button",
+              "#7EE787"
+            ],
+            [
+              ">",
+              "#C9D1D9"
+            ],
+            "\n\n",
+            [
+              "<",
+              "#C9D1D9"
+            ],
+            [
+              "div",
+              "#7EE787"
+            ],
+            " ",
+            [
+              "id",
+              "#79C0FF"
+            ],
+            [
+              "=",
+              "#C9D1D9"
+            ],
+            [
+              "\"blog-links\"",
+              "#A5D6FF"
+            ],
+            " ",
+            [
+              "hidden",
+              "#79C0FF"
+            ],
+            [
+              ">",
+              "#C9D1D9"
+            ]
+          ],
+          "annotations": [],
+          "themeName": "github-dark",
+          "style": {
+            "color": "#c9d1d9",
+            "background": "#0d1117",
+            "colorScheme": "dark"
+          }
+        }
+      ],
+      "stepDurations": [
+        135,
+        182
+      ],
+      "durationInFrames": 317
+    },
+    {
+      "type": "code",
+      "kicker": "Code",
+      "heading": "Build a footer that supports the next action",
+      "steps": [
+        {
+          "lang": "astro",
+          "meta": "astro",
+          "value": "---\nconst today = new Date();\n---\n\n<footer>\n  <nav class=\"footer-sections\" aria-label=\"Footer navigation\">\n    <section aria-labelledby=\"footer-explore\">\n      <p id=\"footer-explore\" class=\"footer-label\">Explore</p>\n      <ul>",
+          "code": "---\nconst today = new Date();\n---\n\n<footer>\n  <nav class=\"footer-sections\" aria-label=\"Footer navigation\">\n    <section aria-labelledby=\"footer-explore\">\n      <p id=\"footer-explore\" class=\"footer-label\">Explore</p>\n      <ul>",
+          "tokens": [
+            [
+              "---",
+              "#8B949E"
+            ],
+            "\n",
+            [
+              "const",
+              "#FF7B72"
+            ],
+            " ",
+            [
+              "today",
+              "#79C0FF"
+            ],
+            " ",
+            [
+              "= new",
+              "#FF7B72"
+            ],
+            " ",
+            [
+              "Date",
+              "#D2A8FF"
+            ],
+            [
+              "();",
+              "#C9D1D9"
+            ],
+            "\n",
+            [
+              "---",
+              "#8B949E"
+            ],
+            "\n\n",
+            [
+              "<",
+              "#C9D1D9"
+            ],
+            [
+              "footer",
+              "#7EE787"
+            ],
+            [
+              ">",
+              "#C9D1D9"
+            ],
+            "\n  ",
+            [
+              "<",
+              "#C9D1D9"
+            ],
+            [
+              "nav",
+              "#7EE787"
+            ],
+            " ",
+            [
+              "class",
+              "#79C0FF"
+            ],
+            [
+              "=",
+              "#C9D1D9"
+            ],
+            [
+              "\"footer-sections\"",
+              "#A5D6FF"
+            ],
+            " ",
+            [
+              "aria-label",
+              "#79C0FF"
+            ],
+            [
+              "=",
+              "#C9D1D9"
+            ],
+            [
+              "\"Footer navigation\"",
+              "#A5D6FF"
+            ],
+            [
+              ">",
+              "#C9D1D9"
+            ],
+            "\n    ",
+            [
+              "<",
+              "#C9D1D9"
+            ],
+            [
+              "section",
+              "#7EE787"
+            ],
+            " ",
+            [
+              "aria-labelledby",
+              "#79C0FF"
+            ],
+            [
+              "=",
+              "#C9D1D9"
+            ],
+            [
+              "\"footer-explore\"",
+              "#A5D6FF"
+            ],
+            [
+              ">",
+              "#C9D1D9"
+            ],
+            "\n      ",
+            [
+              "<",
+              "#C9D1D9"
+            ],
+            [
+              "p",
+              "#7EE787"
+            ],
+            " ",
+            [
+              "id",
+              "#79C0FF"
+            ],
+            [
+              "=",
+              "#C9D1D9"
+            ],
+            [
+              "\"footer-explore\"",
+              "#A5D6FF"
+            ],
+            " ",
+            [
+              "class",
+              "#79C0FF"
+            ],
+            [
+              "=",
+              "#C9D1D9"
+            ],
+            [
+              "\"footer-label\"",
+              "#A5D6FF"
+            ],
+            [
+              ">Explore</",
+              "#C9D1D9"
+            ],
+            [
+              "p",
+              "#7EE787"
+            ],
+            [
+              ">",
+              "#C9D1D9"
+            ],
+            "\n      ",
+            [
+              "<",
+              "#C9D1D9"
+            ],
+            [
+              "ul",
+              "#7EE787"
+            ],
+            [
+              ">",
+              "#C9D1D9"
+            ]
+          ],
+          "annotations": [],
+          "themeName": "github-dark",
+          "style": {
+            "color": "#c9d1d9",
+            "background": "#0d1117",
+            "colorScheme": "dark"
+          }
+        }
+      ],
+      "stepDurations": [
+        182
+      ],
+      "durationInFrames": 182
     },
     {
       "type": "outro",
       "heading": "Read the full article",
       "body": "New posts every week on the blog.",
       "url": "techtips.fun",
-      "durationInFrames": 105
+      "durationInFrames": 165
     }
   ],
+  "theme": "github-dark",
+  "durationInFrames": 2647,
   "captions": [
     {
       "text": " Build",
-      "startMs": 0,
-      "endMs": 236
+      "startMs": 500,
+      "endMs": 845
     },
     {
       "text": " an",
-      "startMs": 236,
-      "endMs": 384
+      "startMs": 845,
+      "endMs": 1061
     },
     {
       "text": " Astro",
-      "startMs": 384,
-      "endMs": 620
+      "startMs": 1061,
+      "endMs": 1406
     },
     {
       "text": " blog/site",
-      "startMs": 620,
-      "endMs": 975,
+      "startMs": 1406,
+      "endMs": 1923,
       "pageBreakAfter": true
     },
     {
       "text": " template",
-      "startMs": 975,
-      "endMs": 1300
+      "startMs": 1923,
+      "endMs": 2397
     },
     {
       "text": " fully",
-      "startMs": 1300,
-      "endMs": 1536
+      "startMs": 2397,
+      "endMs": 2742
     },
     {
       "text": " responsive.",
-      "startMs": 1536,
-      "endMs": 1950
+      "startMs": 2742,
+      "endMs": 3346
     },
     {
       "text": " Implement",
-      "startMs": 1950,
-      "endMs": 2304,
+      "startMs": 3346,
+      "endMs": 3863,
       "pageBreakAfter": true
     },
     {
       "text": " the",
-      "startMs": 2304,
-      "endMs": 2481
+      "startMs": 3863,
+      "endMs": 4122
     },
     {
       "text": " header,",
-      "startMs": 2481,
-      "endMs": 2777
+      "startMs": 4122,
+      "endMs": 4553
     },
     {
       "text": " footer",
-      "startMs": 2777,
-      "endMs": 3043
+      "startMs": 4553,
+      "endMs": 4941
     },
     {
       "text": " and",
-      "startMs": 3043,
-      "endMs": 3220,
+      "startMs": 4941,
+      "endMs": 6067,
       "pageBreakAfter": true
     },
     {
       "text": " How",
-      "startMs": 3500,
-      "endMs": 3606
+      "startMs": 6600,
+      "endMs": 6876
     },
     {
       "text": " to",
-      "startMs": 3606,
-      "endMs": 3694
+      "startMs": 6876,
+      "endMs": 7105
     },
     {
       "text": " Build",
-      "startMs": 3694,
-      "endMs": 3835
+      "startMs": 7105,
+      "endMs": 7473
     },
     {
       "text": " a",
-      "startMs": 3835,
-      "endMs": 3905,
+      "startMs": 7473,
+      "endMs": 7656,
       "pageBreakAfter": true
     },
     {
       "text": " Responsive",
-      "startMs": 3905,
-      "endMs": 4134
+      "startMs": 7656,
+      "endMs": 8254
     },
     {
       "text": " Astro",
-      "startMs": 4134,
-      "endMs": 4275
+      "startMs": 8254,
+      "endMs": 8621
     },
     {
       "text": " Blog",
-      "startMs": 4275,
-      "endMs": 4398
+      "startMs": 8621,
+      "endMs": 8943
     },
     {
       "text": " Header,",
-      "startMs": 4398,
-      "endMs": 4574,
+      "startMs": 8943,
+      "endMs": 9402,
       "pageBreakAfter": true
     },
     {
       "text": " Footer",
-      "startMs": 4574,
-      "endMs": 4733
+      "startMs": 9402,
+      "endMs": 9815
     },
     {
       "text": " &",
-      "startMs": 4733,
-      "endMs": 4803
+      "startMs": 9815,
+      "endMs": 9999
     },
     {
       "text": " Nav.",
-      "startMs": 4803,
-      "endMs": 4926
+      "startMs": 9999,
+      "endMs": 10321
     },
     {
       "text": " A",
-      "startMs": 4926,
-      "endMs": 4997,
+      "startMs": 10321,
+      "endMs": 10504,
       "pageBreakAfter": true
     },
     {
       "text": " website",
-      "startMs": 4997,
-      "endMs": 5173
+      "startMs": 10504,
+      "endMs": 10964
     },
     {
       "text": " header",
-      "startMs": 5173,
-      "endMs": 5331
+      "startMs": 10964,
+      "endMs": 11377
     },
     {
       "text": " identifies",
-      "startMs": 5331,
-      "endMs": 5560
+      "startMs": 11377,
+      "endMs": 11974
     },
     {
       "text": " the",
-      "startMs": 5560,
-      "endMs": 5666,
+      "startMs": 11974,
+      "endMs": 12250,
       "pageBreakAfter": true
     },
     {
       "text": " site",
-      "startMs": 5666,
-      "endMs": 5789
+      "startMs": 12250,
+      "endMs": 12571
     },
     {
       "text": " branding",
-      "startMs": 5789,
-      "endMs": 5983
+      "startMs": 12571,
+      "endMs": 13077
     },
     {
       "text": " and",
-      "startMs": 5983,
-      "endMs": 6088
+      "startMs": 13077,
+      "endMs": 13352
     },
     {
       "text": " a",
-      "startMs": 6088,
-      "endMs": 6159,
+      "startMs": 13352,
+      "endMs": 13536,
       "pageBreakAfter": true
     },
     {
       "text": " head",
-      "startMs": 6159,
-      "endMs": 6282
+      "startMs": 13536,
+      "endMs": 13857
     },
     {
       "text": " menu",
-      "startMs": 6282,
-      "endMs": 6405
+      "startMs": 13857,
+      "endMs": 14179
     },
     {
       "text": " helps",
-      "startMs": 6405,
-      "endMs": 6546
+      "startMs": 14179,
+      "endMs": 14546
     },
     {
       "text": " readers",
-      "startMs": 6546,
-      "endMs": 6722,
+      "startMs": 14546,
+      "endMs": 15006,
       "pageBreakAfter": true
     },
     {
       "text": " move",
-      "startMs": 6722,
-      "endMs": 6845
+      "startMs": 15006,
+      "endMs": 15327
     },
     {
       "text": " between",
-      "startMs": 6845,
-      "endMs": 7022
+      "startMs": 15327,
+      "endMs": 15787
     },
     {
       "text": " pages.",
-      "startMs": 7022,
-      "endMs": 7180,
+      "startMs": 15787,
+      "endMs": 17067,
       "pageBreakAfter": true
     },
     {
       "text": " Plan",
-      "startMs": 7500,
-      "endMs": 7654
+      "startMs": 17600,
+      "endMs": 17938
     },
     {
       "text": " the",
-      "startMs": 7654,
-      "endMs": 7786
+      "startMs": 17938,
+      "endMs": 18228
     },
     {
       "text": " template",
-      "startMs": 7786,
-      "endMs": 8029
+      "startMs": 18228,
+      "endMs": 18759
     },
     {
       "text": " layout",
-      "startMs": 8029,
-      "endMs": 8227,
+      "startMs": 18759,
+      "endMs": 19194,
       "pageBreakAfter": true
     },
     {
       "text": " design.",
-      "startMs": 8227,
-      "endMs": 8448
+      "startMs": 19194,
+      "endMs": 19677
     },
     {
       "text": " Plan",
-      "startMs": 8448,
-      "endMs": 8602
+      "startMs": 19677,
+      "endMs": 20015
     },
     {
       "text": " the",
-      "startMs": 8602,
-      "endMs": 8734
+      "startMs": 20015,
+      "endMs": 20305
     },
     {
       "text": " components",
-      "startMs": 8734,
-      "endMs": 9020,
+      "startMs": 20305,
+      "endMs": 20933,
       "pageBreakAfter": true
     },
     {
       "text": " before",
-      "startMs": 9020,
-      "endMs": 9219
+      "startMs": 20933,
+      "endMs": 21368
     },
     {
       "text": " you",
-      "startMs": 9219,
-      "endMs": 9351
+      "startMs": 21368,
+      "endMs": 21657
     },
     {
       "text": " start",
-      "startMs": 9351,
-      "endMs": 9527
+      "startMs": 21657,
+      "endMs": 22044
     },
     {
       "text": " the",
-      "startMs": 9527,
-      "endMs": 9660,
+      "startMs": 22044,
+      "endMs": 22334,
       "pageBreakAfter": true
     },
     {
       "text": " work.",
-      "startMs": 9660,
-      "endMs": 9836
+      "startMs": 22334,
+      "endMs": 22720
     },
     {
       "text": " Keep",
-      "startMs": 9836,
-      "endMs": 9990
+      "startMs": 22720,
+      "endMs": 23058
     },
     {
       "text": " the",
-      "startMs": 9990,
-      "endMs": 10122
+      "startMs": 23058,
+      "endMs": 23348
     },
     {
       "text": " site",
-      "startMs": 10122,
-      "endMs": 10277,
+      "startMs": 23348,
+      "endMs": 23686,
       "pageBreakAfter": true
     },
     {
       "text": " shell",
-      "startMs": 10277,
-      "endMs": 10453
+      "startMs": 23686,
+      "endMs": 24073
     },
     {
       "text": " out",
-      "startMs": 10453,
-      "endMs": 10585
+      "startMs": 24073,
+      "endMs": 24362
     },
     {
       "text": " of",
-      "startMs": 10585,
-      "endMs": 10695
+      "startMs": 24362,
+      "endMs": 24604
     },
     {
       "text": " individual",
-      "startMs": 10695,
-      "endMs": 10982,
+      "startMs": 24604,
+      "endMs": 25232,
       "pageBreakAfter": true
     },
     {
       "text": " pages.",
-      "startMs": 10982,
-      "endMs": 11180,
+      "startMs": 25232,
+      "endMs": 26533,
       "pageBreakAfter": true
     },
     {
       "text": " Create",
-      "startMs": 11500,
-      "endMs": 11812
+      "startMs": 27067,
+      "endMs": 27567
     },
     {
       "text": " the",
-      "startMs": 11812,
-      "endMs": 12020
+      "startMs": 27567,
+      "endMs": 27900
     },
     {
       "text": " shared",
-      "startMs": 12020,
-      "endMs": 12332
+      "startMs": 27900,
+      "endMs": 28400
     },
     {
       "text": " layout",
-      "startMs": 12332,
-      "endMs": 12645,
+      "startMs": 28400,
+      "endMs": 28900,
       "pageBreakAfter": true
     },
     {
       "text": " Components.",
-      "startMs": 12645,
-      "endMs": 13130
+      "startMs": 28900,
+      "endMs": 29678
     },
     {
       "text": " Let",
-      "startMs": 13130,
-      "endMs": 13338
+      "startMs": 29678,
+      "endMs": 30011
     },
     {
       "text": " us",
-      "startMs": 13338,
-      "endMs": 13512
+      "startMs": 30011,
+      "endMs": 30289
     },
     {
       "text": " look",
-      "startMs": 13512,
-      "endMs": 13754,
+      "startMs": 30289,
+      "endMs": 30678,
       "pageBreakAfter": true
     },
     {
       "text": " at",
-      "startMs": 13754,
-      "endMs": 13928
+      "startMs": 30678,
+      "endMs": 30956
     },
     {
       "text": " the",
-      "startMs": 13928,
-      "endMs": 14136
+      "startMs": 30956,
+      "endMs": 31289
     },
     {
       "text": " code.",
-      "startMs": 14136,
-      "endMs": 14413,
+      "startMs": 31289,
+      "endMs": 32600,
       "pageBreakAfter": true
     },
     {
       "text": " Build",
-      "startMs": 14667,
-      "endMs": 14938
+      "startMs": 33133,
+      "endMs": 33567
     },
     {
       "text": " the",
-      "startMs": 14938,
-      "endMs": 15141
+      "startMs": 33567,
+      "endMs": 33893
     },
     {
       "text": " header",
-      "startMs": 15141,
-      "endMs": 15446
+      "startMs": 33893,
+      "endMs": 34381
     },
     {
       "text": " with",
-      "startMs": 15446,
-      "endMs": 15683,
+      "startMs": 34381,
+      "endMs": 34761,
       "pageBreakAfter": true
     },
     {
       "text": " semantic",
-      "startMs": 15683,
-      "endMs": 16056
+      "startMs": 34761,
+      "endMs": 35358
     },
     {
       "text": " HTML.",
-      "startMs": 16056,
-      "endMs": 16327
+      "startMs": 35358,
+      "endMs": 35792
     },
     {
       "text": " Let",
-      "startMs": 16327,
-      "endMs": 16530
+      "startMs": 35792,
+      "endMs": 36118
     },
     {
       "text": " us",
-      "startMs": 16530,
-      "endMs": 16699,
+      "startMs": 36118,
+      "endMs": 36389,
       "pageBreakAfter": true
     },
     {
       "text": " look",
-      "startMs": 16699,
-      "endMs": 16936
+      "startMs": 36389,
+      "endMs": 36769
     },
     {
       "text": " at",
-      "startMs": 16936,
-      "endMs": 17106
+      "startMs": 36769,
+      "endMs": 37040
     },
     {
       "text": " the",
-      "startMs": 17106,
-      "endMs": 17309
+      "startMs": 37040,
+      "endMs": 37366
     },
     {
       "text": " code.",
-      "startMs": 17309,
-      "endMs": 17580,
+      "startMs": 37366,
+      "endMs": 38667,
       "pageBreakAfter": true
     },
     {
       "text": " Mark",
-      "startMs": 17833,
-      "endMs": 18416
+      "startMs": 39200,
+      "endMs": 39700
     },
     {
       "text": " the",
-      "startMs": 18416,
-      "endMs": 18915
+      "startMs": 39700,
+      "endMs": 40129
     },
     {
       "text": " active",
-      "startMs": 18915,
-      "endMs": 19665
+      "startMs": 40129,
+      "endMs": 40771
     },
     {
       "text": " section.",
-      "startMs": 19665,
-      "endMs": 20580,
+      "startMs": 40771,
+      "endMs": 41557,
       "pageBreakAfter": true
     },
     {
       "text": " Let",
-      "startMs": 20580,
-      "endMs": 21080
+      "startMs": 41557,
+      "endMs": 41986
     },
     {
       "text": " us",
-      "startMs": 21080,
-      "endMs": 21496
+      "startMs": 41986,
+      "endMs": 42343
     },
     {
       "text": " look",
-      "startMs": 21496,
-      "endMs": 22078
+      "startMs": 42343,
+      "endMs": 42843
     },
     {
       "text": " at",
-      "startMs": 22078,
-      "endMs": 22495,
+      "startMs": 42843,
+      "endMs": 43200,
       "pageBreakAfter": true
     },
     {
       "text": " the",
-      "startMs": 22495,
-      "endMs": 22994
+      "startMs": 43200,
+      "endMs": 43629
     },
     {
       "text": " code.",
-      "startMs": 22994,
-      "endMs": 23660,
+      "startMs": 43629,
+      "endMs": 49233,
       "pageBreakAfter": true
     },
     {
       "text": " Keep",
-      "startMs": 24167,
-      "endMs": 24439
+      "startMs": 49767,
+      "endMs": 50093
     },
     {
       "text": " navigation",
-      "startMs": 24439,
-      "endMs": 24944
+      "startMs": 50093,
+      "endMs": 50699
     },
     {
       "text": " labels",
-      "startMs": 24944,
-      "endMs": 25293
+      "startMs": 50699,
+      "endMs": 51118
     },
     {
       "text": " clear.",
-      "startMs": 25293,
-      "endMs": 25643,
+      "startMs": 51118,
+      "endMs": 51537,
       "pageBreakAfter": true
     },
     {
       "text": " Let",
-      "startMs": 25643,
-      "endMs": 25876
+      "startMs": 51537,
+      "endMs": 51817
     },
     {
       "text": " us",
-      "startMs": 25876,
-      "endMs": 26070
+      "startMs": 51817,
+      "endMs": 52050
     },
     {
       "text": " look",
-      "startMs": 26070,
-      "endMs": 26342
+      "startMs": 52050,
+      "endMs": 52376
     },
     {
       "text": " at",
-      "startMs": 26342,
-      "endMs": 26536,
+      "startMs": 52376,
+      "endMs": 52609,
       "pageBreakAfter": true
     },
     {
       "text": " the",
-      "startMs": 26536,
-      "endMs": 26769
+      "startMs": 52609,
+      "endMs": 52889
     },
     {
       "text": " code.",
-      "startMs": 26769,
-      "endMs": 27080,
+      "startMs": 52889,
+      "endMs": 53933,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Make",
+      "startMs": 54467,
+      "endMs": 54955
+    },
+    {
+      "text": " the",
+      "startMs": 54955,
+      "endMs": 55374
+    },
+    {
+      "text": " header",
+      "startMs": 55374,
+      "endMs": 56002
+    },
+    {
+      "text": " responsive",
+      "startMs": 56002,
+      "endMs": 56909,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " with",
+      "startMs": 56909,
+      "endMs": 57397
+    },
+    {
+      "text": " CSS.",
+      "startMs": 57397,
+      "endMs": 57885
+    },
+    {
+      "text": " Let",
+      "startMs": 57885,
+      "endMs": 58304
+    },
+    {
+      "text": " us",
+      "startMs": 58304,
+      "endMs": 58653,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " look",
+      "startMs": 58653,
+      "endMs": 59141
+    },
+    {
+      "text": " at",
+      "startMs": 59141,
+      "endMs": 59490
+    },
+    {
+      "text": " the",
+      "startMs": 59490,
+      "endMs": 59909
+    },
+    {
+      "text": " code.",
+      "startMs": 59909,
+      "endMs": 66067,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Add",
+      "startMs": 66600,
+      "endMs": 67046
+    },
+    {
+      "text": " a",
+      "startMs": 67046,
+      "endMs": 67343
+    },
+    {
+      "text": " visible",
+      "startMs": 67343,
+      "endMs": 68086
+    },
+    {
+      "text": " focus",
+      "startMs": 68086,
+      "endMs": 68681,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " state.",
+      "startMs": 68681,
+      "endMs": 69350
+    },
+    {
+      "text": " Let",
+      "startMs": 69350,
+      "endMs": 69796
+    },
+    {
+      "text": " us",
+      "startMs": 69796,
+      "endMs": 70168
+    },
+    {
+      "text": " look",
+      "startMs": 70168,
+      "endMs": 70688,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " at",
+      "startMs": 70688,
+      "endMs": 71059
+    },
+    {
+      "text": " the",
+      "startMs": 71059,
+      "endMs": 71505
+    },
+    {
+      "text": " code.",
+      "startMs": 71505,
+      "endMs": 76633,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Build",
+      "startMs": 77167,
+      "endMs": 77544
+    },
+    {
+      "text": " a",
+      "startMs": 77544,
+      "endMs": 77732
+    },
+    {
+      "text": " footer",
+      "startMs": 77732,
+      "endMs": 78157
+    },
+    {
+      "text": " that",
+      "startMs": 78157,
+      "endMs": 78487,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " supports",
+      "startMs": 78487,
+      "endMs": 79005
+    },
+    {
+      "text": " the",
+      "startMs": 79005,
+      "endMs": 79288
+    },
+    {
+      "text": " next",
+      "startMs": 79288,
+      "endMs": 79618
+    },
+    {
+      "text": " action.",
+      "startMs": 79618,
+      "endMs": 80089,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Let",
+      "startMs": 80089,
+      "endMs": 80372
+    },
+    {
+      "text": " us",
+      "startMs": 80372,
+      "endMs": 80608
+    },
+    {
+      "text": " look",
+      "startMs": 80608,
+      "endMs": 80938
+    },
+    {
+      "text": " at",
+      "startMs": 80938,
+      "endMs": 81173,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " the",
+      "startMs": 81173,
+      "endMs": 81456
+    },
+    {
+      "text": " code.",
+      "startMs": 81456,
+      "endMs": 82700,
       "pageBreakAfter": true
     },
     {
       "text": " Read",
-      "startMs": 27333,
-      "endMs": 27619
+      "startMs": 83233,
+      "endMs": 83603
     },
     {
       "text": " the",
-      "startMs": 27619,
-      "endMs": 27863
+      "startMs": 83603,
+      "endMs": 83920
     },
     {
       "text": " full",
-      "startMs": 27863,
-      "endMs": 28149
+      "startMs": 83920,
+      "endMs": 84290
     },
     {
       "text": " article.",
-      "startMs": 28149,
-      "endMs": 28597,
+      "startMs": 84290,
+      "endMs": 84872,
       "pageBreakAfter": true
     },
     {
       "text": " New",
-      "startMs": 28597,
-      "endMs": 28841
+      "startMs": 84872,
+      "endMs": 85189
     },
     {
       "text": " posts",
-      "startMs": 28841,
-      "endMs": 29168
+      "startMs": 85189,
+      "endMs": 85611
     },
     {
       "text": " every",
-      "startMs": 29168,
-      "endMs": 29494
+      "startMs": 85611,
+      "endMs": 86034
     },
     {
       "text": " week",
-      "startMs": 29494,
-      "endMs": 29779,
+      "startMs": 86034,
+      "endMs": 86404,
       "pageBreakAfter": true
     },
     {
       "text": " on",
-      "startMs": 29779,
-      "endMs": 29983
+      "startMs": 86404,
+      "endMs": 86668
     },
     {
       "text": " the",
-      "startMs": 29983,
-      "endMs": 30227
+      "startMs": 86668,
+      "endMs": 86986
     },
     {
       "text": " blog.",
-      "startMs": 30227,
-      "endMs": 30553,
+      "startMs": 86986,
+      "endMs": 88200,
       "pageBreakAfter": true
     }
   ],

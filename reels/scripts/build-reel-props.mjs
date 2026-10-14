@@ -22,6 +22,7 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 import { getThemeColors } from "@code-hike/lighter";
 import { highlight } from "codehike/code";
 import { sanitizeReelProps } from "./glyph-audit.mjs";
+import { collectPostMedia } from "./lib/post-media.mjs";
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const REELS_ROOT = path.resolve(HERE, "..");
@@ -32,19 +33,67 @@ const SITE_URL = "https://www.techtips.fun";
 const OUTRO_URL = "techtips.fun";
 
 const FPS = 30;
-const TITLE_FRAMES = 105;
-const POINT_FRAMES = 120;
-const CODE_STEP_FRAMES = 95;
-const OUTRO_FRAMES = 105;
-const MAX_SECTIONS = 6;
-const DEFAULT_MAX_SECONDS = 58;
+const MAX_SECTIONS = 9;
+// Reels used to be ~30s; with reading-speed pacing a typical post lands
+// between 60 and 90 seconds.
+const DEFAULT_MAX_SECONDS = 90;
 const MAX_CODE_BLOCKS_PER_SECTION = 2;
 const MAX_CODE_LINES = 9;
 const MAX_WORDS_PER_CAPTION_PAGE = 4;
 
+/*
+ * PACING
+ * ------
+ * Scene length is derived from how much there is to read, instead of a fixed
+ * number of frames per scene. Numbers are in seconds.
+ *
+ *   WORDS_PER_SECOND  comfortable caption reading speed (~155 wpm)
+ *   LEAD_IN           captions wait for the scene's entrance animation
+ *   HOLD              a beat after the last caption before the cut
+ *   IMAGE_BONUS       extra time to actually look at a screenshot
+ */
+const PACE = {
+  WORDS_PER_SECOND: 2.6,
+  // Captions never crawl slower than this, even when a scene is padded out to
+  // its minimum length.
+  MIN_WORDS_PER_SECOND: 2.0,
+  LEAD_IN: 0.5,
+  HOLD: 0.9,
+  IMAGE_BONUS: 1.2,
+  title: { min: 4, max: 5.5 },
+  point: { min: 4.5, max: 11 },
+  outro: { min: 4, max: 5.5 },
+  // Code: a base read time plus time per visible line, per step.
+  codeStep: { base: 2, perLine: 0.45, min: 4.5, max: 8 },
+};
+
+const secondsToFrames = (seconds) => Math.round(seconds * FPS);
+
+const wordCount = (text) => String(text).split(/\s+/).filter(Boolean).length;
+
+/** Frames needed to read `narration` at PACE, clamped to the scene's range. */
+const readingFrames = (narration, range, extraSeconds = 0) => {
+  const seconds =
+    PACE.LEAD_IN +
+    wordCount(narration) / PACE.WORDS_PER_SECOND +
+    PACE.HOLD +
+    extraSeconds;
+  return secondsToFrames(
+    Math.min(range.max + extraSeconds, Math.max(range.min, seconds)),
+  );
+};
+
+const codeStepFrames = (code) => {
+  const lines = code.split("\n").length;
+  const { base, perLine, min, max } = PACE.codeStep;
+  return secondsToFrames(Math.min(max, Math.max(min, base + lines * perLine)));
+};
+
 const DEFAULT_THEME = "github-dark";
 
-const parseFrontmatter = (source) => {
+const parseFrontmatter = (rawSource) => {
+  // Some posts are saved with a UTF-8 BOM, which would hide the frontmatter.
+  const source = rawSource.replace(/^\uFEFF/, "");
   const match = source.match(/^---\s*\r?\n([\s\S]*?)\r?\n---/);
   if (!match) return { data: {}, body: source };
 
@@ -88,10 +137,30 @@ const stripInlineMarkdown = (value) =>
 const stripListBullet = (value) => value.replace(/^([-*+]|\d+[.)])\s+/, "");
 const stripHeadingNumber = (value) => value.replace(/^\d+[.)]\s*/, "");
 
+/**
+ * Markdown `![alt](src "title")`, `![alt](<path with spaces.png>)` and HTML
+ * `<img src="..." alt="...">` on a line.
+ */
+const imagesInLine = (line) => {
+  const found = [];
+  const markdown = /!\[([^\]]*)\]\(\s*(<[^>]+>|[^)\s]+)(?:\s+["'][^"']*["'])?\s*\)/g;
+  for (const match of line.matchAll(markdown)) {
+    found.push({ alt: match[1].trim(), src: match[2].replace(/^<|>$/g, "") });
+  }
+  const html = /<img\b[^>]*>/gi;
+  for (const match of line.matchAll(html)) {
+    const tag = match[0];
+    const src = tag.match(/\ssrc\s*=\s*["']([^"']+)["']/i)?.[1];
+    const alt = tag.match(/\salt\s*=\s*["']([^"']*)["']/i)?.[1] ?? "";
+    if (src) found.push({ alt: alt.trim(), src });
+  }
+  return found;
+};
+
 /** Break the body into `##`/`###` sections, each with prose + fenced code. */
 const parseSections = (body) => {
   const sections = [];
-  let current = { heading: null, prose: [], code: [] };
+  let current = { heading: null, prose: [], code: [], images: [] };
   sections.push(current);
 
   let inFence = false;
@@ -124,6 +193,7 @@ const parseSections = (body) => {
         heading: stripHeadingNumber(heading[2].trim()),
         prose: [],
         code: [],
+        images: [],
       };
       sections.push(current);
       continue;
@@ -132,6 +202,11 @@ const parseSections = (body) => {
     const trimmed = line.trim();
     if (!trimmed) continue;
     if (/^#\s/.test(trimmed)) continue;
+    const images = imagesInLine(trimmed);
+    if (images.length > 0) {
+      current.images.push(...images);
+      continue;
+    }
     if (trimmed.startsWith("![") || trimmed.startsWith("<")) continue;
     if (trimmed.startsWith("|")) continue;
 
@@ -178,7 +253,7 @@ const narrationFor = (scene) => {
       // repeating it.
       return scene.subtitle.replace(/\u2026$/, "");
     case "point":
-      return `${scene.heading}. ${scene.body}`;
+      return scene.body ? `${scene.heading}. ${scene.body}` : scene.heading;
     case "code":
       return `${scene.heading}. Let us look at the code.`;
     case "outro":
@@ -189,8 +264,9 @@ const narrationFor = (scene) => {
 };
 
 /**
- * Word-level captions with timings proportional to the scene durations, so the
- * highlight tracks what is on screen without needing an audio track.
+ * Word-level captions. Words start after the scene's entrance animation and
+ * are spread at (close to) reading speed, leaving a short hold before the cut,
+ * so the highlight tracks what is on screen without needing an audio track.
  */
 const buildCaptions = (scenes, wordsPerPage = MAX_WORDS_PER_CAPTION_PAGE) => {
   const captions = [];
@@ -205,25 +281,36 @@ const buildCaptions = (scenes, wordsPerPage = MAX_WORDS_PER_CAPTION_PAGE) => {
       continue;
     }
 
+    const leadMs = Math.min(PACE.LEAD_IN * 1000, durationMs * 0.15);
+    const holdMs = Math.min(PACE.HOLD * 1000, durationMs * 0.15);
+    const availableMs = Math.max(500, durationMs - leadMs - holdMs);
+    // Do not stretch a short line across a long (e.g. screenshot) scene.
+    const slowestMs = (words.length / PACE.MIN_WORDS_PER_SECOND) * 1000;
+    const usable = Math.min(availableMs, slowestMs);
+
     const weights = words.map((word) => word.length + 3);
     const totalWeight = weights.reduce((sum, weight) => sum + weight, 0);
-    const usable = durationMs * 0.92;
 
-    let cursor = cursorMs;
+    let cursor = cursorMs + leadMs;
     words.forEach((word, index) => {
       const share = (weights[index] / totalWeight) * usable;
       const isLastWordOfScene = index === words.length - 1;
       const pageIsFull = (index + 1) % wordsPerPage === 0;
+      // The last word stays up through the hold so the screen never goes
+      // caption-less mid-scene.
+      const endMs = isLastWordOfScene
+        ? cursorMs + durationMs - 1000 / FPS
+        : cursor + share;
       captions.push({
         // Whisper-style leading space: createTikTokStyleCaptions only starts a
         // new caption page when the incoming token begins with a space.
         text: ` ${word}`,
         startMs: Math.round(cursor),
-        endMs: Math.round(cursor + share),
+        endMs: Math.round(endMs),
         // Force a page flush every few words (so text-heavy scenes don't produce
         // one giant line) and never let a page bleed into the next scene.
         ...(isLastWordOfScene || pageIsFull ? { pageBreakAfter: true } : {}),
-  });
+      });
       cursor += share;
     });
 
@@ -238,20 +325,36 @@ const buildCaptions = (scenes, wordsPerPage = MAX_WORDS_PER_CAPTION_PAGE) => {
 const buildScenes = (frontmatter, sections, options) => {
   const scenes = [];
   const category = frontmatter.category || "Tech";
+  const media = options.media ?? {};
 
-  scenes.push({
+  const titleScene = {
     type: "title",
     kicker: category,
     title: frontmatter.title || "Untitled",
     subtitle: firstSentenceOf(frontmatter.description || "", 90) || "TechTips.fun",
-    durationInFrames: TITLE_FRAMES,
-  });
+    ...(media.hero ? { image: media.hero } : {}),
+  };
+  titleScene.durationInFrames = readingFrames(
+    narrationFor(titleScene),
+    PACE.title,
+    media.hero ? PACE.IMAGE_BONUS * 0.5 : 0,
+  );
+  scenes.push(titleScene);
 
-  let total = TITLE_FRAMES;
+  const outroScene = {
+    type: "outro",
+    heading: "Read the full article",
+    body: "New posts every week on the blog.",
+    url: options.outroUrl,
+  };
+  outroScene.durationInFrames = readingFrames(narrationFor(outroScene), PACE.outro);
+
+  let total = titleScene.durationInFrames;
+  const fits = (frames) =>
+    total + frames + outroScene.durationInFrames <= options.maxTotalFrames;
 
   for (const section of sections) {
     if (scenes.length - 1 >= options.maxSections) break;
-    if (total + CODE_STEP_FRAMES + OUTRO_FRAMES > options.maxTotalFrames) break;
     if (!section.heading) continue;
 
     const codeBlocks = section.code
@@ -260,7 +363,9 @@ const buildScenes = (frontmatter, sections, options) => {
       .slice(0, MAX_CODE_BLOCKS_PER_SECTION);
 
     if (codeBlocks.length > 0) {
-      const duration = codeBlocks.length * CODE_STEP_FRAMES;
+      const stepDurations = codeBlocks.map((block) => codeStepFrames(block.code));
+      const duration = stepDurations.reduce((sum, frames) => sum + frames, 0);
+      if (!fits(duration)) continue;
       scenes.push({
         type: "code",
         kicker: "Code",
@@ -270,33 +375,40 @@ const buildScenes = (frontmatter, sections, options) => {
           code: block.code,
           ...(block.lang && block.lang !== "text" ? { label: block.lang } : {}),
         })),
+        stepDurations,
         durationInFrames: duration,
-  });
+      });
       total += duration;
       continue;
     }
 
-    const prose = firstSentenceOf(section.prose.join(" "), 150);
-    if (prose.length < 40) continue;
+    const image = (media.sections ?? new Map()).get(section) ?? null;
+    // With a screenshot on screen there is less room for text, so keep the
+    // line short; the screenshot carries the detail.
+    const prose = firstSentenceOf(section.prose.join(" "), image ? 110 : 150);
+    if (!image && prose.length < 40) continue;
 
-    scenes.push({
+    const scene = {
       type: "point",
       kicker: category,
       heading: section.heading,
-      body: prose,
-      durationInFrames: POINT_FRAMES,
-    });
-    total += POINT_FRAMES;
+      body: prose.length >= 20 ? prose : image?.alt ?? "",
+      ...(image
+        ? { image: { src: image.src, width: image.width, height: image.height } }
+        : {}),
+    };
+    scene.durationInFrames = readingFrames(
+      narrationFor(scene),
+      PACE.point,
+      image ? PACE.IMAGE_BONUS : 0,
+    );
+    if (!fits(scene.durationInFrames)) continue;
+
+    scenes.push(scene);
+    total += scene.durationInFrames;
   }
 
-  scenes.push({
-    type: "outro",
-    heading: "Read the full article",
-    body: "New posts every week on the blog.",
-    url: options.outroUrl,
-    durationInFrames: OUTRO_FRAMES,
-  });
-
+  scenes.push(outroScene);
   return scenes;
 };
 
@@ -385,6 +497,7 @@ export const buildReelPropsFromMarkdown = async ({
   maxSeconds = DEFAULT_MAX_SECONDS,
   url,
   wordsPerPage = MAX_WORDS_PER_CAPTION_PAGE,
+  articleDir,
 }) => {
   const parsed = parseFrontmatter(markdown);
   const derived = deriveFrontmatter(parsed.body, slug);
@@ -402,13 +515,17 @@ export const buildReelPropsFromMarkdown = async ({
 
   const resolvedSlug = slug || slugify(frontmatter.title);
   const sections = parseSections(parsed.body);
+  const media = await collectPostMedia({
+    slug: resolvedSlug,
+    heroImage: frontmatter.heroImage,
+    sections,
+    articleDir: articleDir ?? BLOG_DIR,
+  });
   const rawScenes = buildScenes(frontmatter, sections, {
     maxSections: MAX_SECTIONS,
-    maxTotalFrames: Math.max(
-      TITLE_FRAMES + OUTRO_FRAMES,
-      Math.round(maxSeconds * FPS),
-    ),
+    maxTotalFrames: Math.max(secondsToFrames(10), secondsToFrames(maxSeconds)),
     outroUrl: OUTRO_URL,
+    media,
   });
 
   const { props: safe, removed } = sanitizeReelProps({

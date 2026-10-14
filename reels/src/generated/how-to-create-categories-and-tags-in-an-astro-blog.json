@@ -11,22 +11,25 @@
     "Frontend"
   ],
   "url": "https://www.techtips.fun/blog/how-to-create-categories-and-tags-in-an-astro-blog/",
-  "theme": "github-dark",
-  "durationInFrames": 900,
   "scenes": [
     {
       "type": "title",
       "kicker": "Web Development",
       "title": "How to Create Categories and Tags in an Astro Blog",
       "subtitle": "Create clear categories and useful tags in an Astro blog, generate archive pages at build…",
-      "durationInFrames": 105
+      "image": {
+        "src": "post-media/how-to-create-categories-and-tags-in-an-astro-blog/01-astro-categories-tags-hero.webp",
+        "width": 1600,
+        "height": 900
+      },
+      "durationInFrames": 183
     },
     {
       "type": "point",
       "kicker": "Web Development",
       "heading": "Choose the option that fits your blog",
       "body": "You can start small and add discovery features only when readers need them. The table below shows the three practical options this guide covers.",
-      "durationInFrames": 120
+      "durationInFrames": 330
     },
     {
       "type": "code",
@@ -88,7 +91,10 @@
           }
         }
       ],
-      "durationInFrames": 95
+      "stepDurations": [
+        182
+      ],
+      "durationInFrames": 182
     },
     {
       "type": "code",
@@ -150,7 +156,10 @@
           }
         }
       ],
-      "durationInFrames": 95
+      "stepDurations": [
+        168
+      ],
+      "durationInFrames": 168
     },
     {
       "type": "code",
@@ -192,7 +201,10 @@
           }
         }
       ],
-      "durationInFrames": 95
+      "stepDurations": [
+        135
+      ],
+      "durationInFrames": 135
     },
     {
       "type": "code",
@@ -298,7 +310,11 @@
           }
         }
       ],
-      "durationInFrames": 190
+      "stepDurations": [
+        182,
+        182
+      ],
+      "durationInFrames": 364
     },
     {
       "type": "code",
@@ -360,653 +376,1070 @@
           }
         }
       ],
-      "durationInFrames": 95
+      "stepDurations": [
+        168
+      ],
+      "durationInFrames": 168
+    },
+    {
+      "type": "code",
+      "kicker": "Code",
+      "heading": "Option 3: Add discovery navigation and index pages",
+      "steps": [
+        {
+          "lang": "text",
+          "meta": "",
+          "value": "---\nimport { getCollection } from 'astro:content';\nimport { toTaxonomySlug } from '../utils/taxonomy';\n\nconst posts = await getCollection('blog');\nconst categories = [...new Set(posts.map((post) => post.data.category))]\n  .sort((a, b) => a.localeCompare(b));\n---\n",
+          "code": "---\nimport { getCollection } from 'astro:content';\nimport { toTaxonomySlug } from '../utils/taxonomy';\n\nconst posts = await getCollection('blog');\nconst categories = [...new Set(posts.map((post) => post.data.category))]\n  .sort((a, b) => a.localeCompare(b));\n---\n",
+          "tokens": [
+            [
+              "---",
+              null
+            ],
+            "\n",
+            [
+              "import { getCollection } from 'astro:content';",
+              null
+            ],
+            "\n",
+            [
+              "import { toTaxonomySlug } from '../utils/taxonomy';",
+              null
+            ],
+            "\n\n",
+            [
+              "const posts = await getCollection('blog');",
+              null
+            ],
+            "\n",
+            [
+              "const categories = [...new Set(posts.map((post) => post.data.category))]",
+              null
+            ],
+            "\n  ",
+            [
+              ".sort((a, b) => a.localeCompare(b));",
+              null
+            ],
+            "\n",
+            [
+              "---",
+              null
+            ],
+            "\n"
+          ],
+          "annotations": [],
+          "themeName": "github-dark",
+          "style": {
+            "color": "#c9d1d9",
+            "background": "#0d1117",
+            "colorScheme": "dark"
+          }
+        }
+      ],
+      "stepDurations": [
+        182
+      ],
+      "durationInFrames": 182
+    },
+    {
+      "type": "point",
+      "kicker": "Web Development",
+      "heading": "Keep taxonomy useful for readers and search engines",
+      "body": "Taxonomy helps only when it stays intentional. Use categories for your long-term editorial pillars, and merge tags that mean the same thing.",
+      "durationInFrames": 330
+    },
+    {
+      "type": "point",
+      "kicker": "Web Development",
+      "heading": "Decide whether taxonomy pages should be indexed",
+      "body": "Taxonomy pages can be valuable for readers without being valuable search landing pages.",
+      "durationInFrames": 273
     },
     {
       "type": "outro",
       "heading": "Read the full article",
       "body": "New posts every week on the blog.",
       "url": "techtips.fun",
-      "durationInFrames": 105
+      "durationInFrames": 165
     }
   ],
+  "theme": "github-dark",
+  "durationInFrames": 2480,
   "captions": [
     {
       "text": " Create",
-      "startMs": 0,
-      "endMs": 242
+      "startMs": 500,
+      "endMs": 853
     },
     {
       "text": " clear",
-      "startMs": 242,
-      "endMs": 456
+      "startMs": 853,
+      "endMs": 1166
     },
     {
       "text": " categories",
-      "startMs": 456,
-      "endMs": 805
+      "startMs": 1166,
+      "endMs": 1675
     },
     {
       "text": " and",
-      "startMs": 805,
-      "endMs": 966,
+      "startMs": 1675,
+      "endMs": 1910,
       "pageBreakAfter": true
     },
     {
       "text": " useful",
-      "startMs": 966,
-      "endMs": 1208
+      "startMs": 1910,
+      "endMs": 2263
     },
     {
       "text": " tags",
-      "startMs": 1208,
-      "endMs": 1395
+      "startMs": 2263,
+      "endMs": 2537
     },
     {
       "text": " in",
-      "startMs": 1395,
-      "endMs": 1530
+      "startMs": 2537,
+      "endMs": 2733
     },
     {
       "text": " an",
-      "startMs": 1530,
-      "endMs": 1664,
+      "startMs": 2733,
+      "endMs": 2928,
       "pageBreakAfter": true
     },
     {
       "text": " Astro",
-      "startMs": 1664,
-      "endMs": 1878
+      "startMs": 2928,
+      "endMs": 3242
     },
     {
       "text": " blog,",
-      "startMs": 1878,
-      "endMs": 2093
+      "startMs": 3242,
+      "endMs": 3555
     },
     {
       "text": " generate",
-      "startMs": 2093,
-      "endMs": 2388
+      "startMs": 3555,
+      "endMs": 3986
     },
     {
       "text": " archive",
-      "startMs": 2388,
-      "endMs": 2657,
+      "startMs": 3986,
+      "endMs": 4378,
       "pageBreakAfter": true
     },
     {
       "text": " pages",
-      "startMs": 2657,
-      "endMs": 2871
+      "startMs": 4378,
+      "endMs": 4691
     },
     {
       "text": " at",
-      "startMs": 2871,
-      "endMs": 3005
+      "startMs": 4691,
+      "endMs": 4887
     },
     {
       "text": " build",
-      "startMs": 3005,
-      "endMs": 3220,
+      "startMs": 4887,
+      "endMs": 6067,
       "pageBreakAfter": true
     },
     {
       "text": " Choose",
-      "startMs": 3500,
-      "endMs": 3635
+      "startMs": 6600,
+      "endMs": 6951
     },
     {
       "text": " the",
-      "startMs": 3635,
-      "endMs": 3724
+      "startMs": 6951,
+      "endMs": 7185
     },
     {
       "text": " option",
-      "startMs": 3724,
-      "endMs": 3859
+      "startMs": 7185,
+      "endMs": 7537
     },
     {
       "text": " that",
-      "startMs": 3859,
-      "endMs": 3964,
+      "startMs": 7537,
+      "endMs": 7810,
       "pageBreakAfter": true
     },
     {
       "text": " fits",
-      "startMs": 3964,
-      "endMs": 4068
+      "startMs": 7810,
+      "endMs": 8083
     },
     {
       "text": " your",
-      "startMs": 4068,
-      "endMs": 4173
+      "startMs": 8083,
+      "endMs": 8356
     },
     {
       "text": " blog.",
-      "startMs": 4173,
-      "endMs": 4293
+      "startMs": 8356,
+      "endMs": 8668
     },
     {
       "text": " You",
-      "startMs": 4293,
-      "endMs": 4383,
+      "startMs": 8668,
+      "endMs": 8902,
       "pageBreakAfter": true
     },
     {
       "text": " can",
-      "startMs": 4383,
-      "endMs": 4472
+      "startMs": 8902,
+      "endMs": 9137
     },
     {
       "text": " start",
-      "startMs": 4472,
-      "endMs": 4592
+      "startMs": 9137,
+      "endMs": 9449
     },
     {
       "text": " small",
-      "startMs": 4592,
-      "endMs": 4712
+      "startMs": 9449,
+      "endMs": 9761
     },
     {
       "text": " and",
-      "startMs": 4712,
-      "endMs": 4801,
+      "startMs": 9761,
+      "endMs": 9995,
       "pageBreakAfter": true
     },
     {
       "text": " add",
-      "startMs": 4801,
-      "endMs": 4891
+      "startMs": 9995,
+      "endMs": 10229
     },
     {
       "text": " discovery",
-      "startMs": 4891,
-      "endMs": 5071
+      "startMs": 10229,
+      "endMs": 10698
     },
     {
       "text": " features",
-      "startMs": 5071,
-      "endMs": 5235
+      "startMs": 10698,
+      "endMs": 11127
     },
     {
       "text": " only",
-      "startMs": 5235,
-      "endMs": 5340,
+      "startMs": 11127,
+      "endMs": 11400,
       "pageBreakAfter": true
     },
     {
       "text": " when",
-      "startMs": 5340,
-      "endMs": 5445
+      "startMs": 11400,
+      "endMs": 11673
     },
     {
       "text": " readers",
-      "startMs": 5445,
-      "endMs": 5594
+      "startMs": 11673,
+      "endMs": 12063
     },
     {
       "text": " need",
-      "startMs": 5594,
-      "endMs": 5699
+      "startMs": 12063,
+      "endMs": 12337
     },
     {
       "text": " them.",
-      "startMs": 5699,
-      "endMs": 5819,
+      "startMs": 12337,
+      "endMs": 12649,
       "pageBreakAfter": true
     },
     {
       "text": " The",
-      "startMs": 5819,
-      "endMs": 5908
+      "startMs": 12649,
+      "endMs": 12883
     },
     {
       "text": " table",
-      "startMs": 5908,
-      "endMs": 6028
+      "startMs": 12883,
+      "endMs": 13195
     },
     {
       "text": " below",
-      "startMs": 6028,
-      "endMs": 6148
+      "startMs": 13195,
+      "endMs": 13507
     },
     {
       "text": " shows",
-      "startMs": 6148,
-      "endMs": 6267,
+      "startMs": 13507,
+      "endMs": 13820,
       "pageBreakAfter": true
     },
     {
       "text": " the",
-      "startMs": 6267,
-      "endMs": 6357
+      "startMs": 13820,
+      "endMs": 14054
     },
     {
       "text": " three",
-      "startMs": 6357,
-      "endMs": 6477
+      "startMs": 14054,
+      "endMs": 14366
     },
     {
       "text": " practical",
-      "startMs": 6477,
-      "endMs": 6656
+      "startMs": 14366,
+      "endMs": 14834
     },
     {
       "text": " options",
-      "startMs": 6656,
-      "endMs": 6806,
+      "startMs": 14834,
+      "endMs": 15224,
       "pageBreakAfter": true
     },
     {
       "text": " this",
-      "startMs": 6806,
-      "endMs": 6911
+      "startMs": 15224,
+      "endMs": 15498
     },
     {
       "text": " guide",
-      "startMs": 6911,
-      "endMs": 7030
+      "startMs": 15498,
+      "endMs": 15810
     },
     {
       "text": " covers.",
-      "startMs": 7030,
-      "endMs": 7180,
+      "startMs": 15810,
+      "endMs": 17067,
       "pageBreakAfter": true
     },
     {
       "text": " Add",
-      "startMs": 7500,
-      "endMs": 7673
+      "startMs": 17600,
+      "endMs": 17877
     },
     {
       "text": " categories",
-      "startMs": 7673,
-      "endMs": 8048
+      "startMs": 17877,
+      "endMs": 18478
     },
     {
       "text": " and",
-      "startMs": 8048,
-      "endMs": 8221
+      "startMs": 18478,
+      "endMs": 18755
     },
     {
       "text": " tags",
-      "startMs": 8221,
-      "endMs": 8423,
+      "startMs": 18755,
+      "endMs": 19079,
       "pageBreakAfter": true
     },
     {
       "text": " to",
-      "startMs": 8423,
-      "endMs": 8567
+      "startMs": 19079,
+      "endMs": 19310
     },
     {
       "text": " your",
-      "startMs": 8567,
-      "endMs": 8769
+      "startMs": 19310,
+      "endMs": 19633
     },
     {
       "text": " content",
-      "startMs": 8769,
-      "endMs": 9058
+      "startMs": 19633,
+      "endMs": 20095
     },
     {
       "text": " schema.",
-      "startMs": 9058,
-      "endMs": 9346,
+      "startMs": 20095,
+      "endMs": 20557,
       "pageBreakAfter": true
     },
     {
       "text": " Let",
-      "startMs": 9346,
-      "endMs": 9519
+      "startMs": 20557,
+      "endMs": 20834
     },
     {
       "text": " us",
-      "startMs": 9519,
-      "endMs": 9663
+      "startMs": 20834,
+      "endMs": 21065
     },
     {
       "text": " look",
-      "startMs": 9663,
-      "endMs": 9865
+      "startMs": 21065,
+      "endMs": 21389
     },
     {
       "text": " at",
-      "startMs": 9865,
-      "endMs": 10010,
+      "startMs": 21389,
+      "endMs": 21620,
       "pageBreakAfter": true
     },
     {
       "text": " the",
-      "startMs": 10010,
-      "endMs": 10183
+      "startMs": 21620,
+      "endMs": 21897
     },
     {
       "text": " code.",
-      "startMs": 10183,
-      "endMs": 10413,
+      "startMs": 21897,
+      "endMs": 23133,
       "pageBreakAfter": true
     },
     {
       "text": " Add",
-      "startMs": 10667,
-      "endMs": 10872
+      "startMs": 23667,
+      "endMs": 23967
     },
     {
       "text": " taxonomy",
-      "startMs": 10872,
-      "endMs": 11249
+      "startMs": 23967,
+      "endMs": 24519
     },
     {
       "text": " to",
-      "startMs": 11249,
-      "endMs": 11421
+      "startMs": 24519,
+      "endMs": 24769
     },
     {
       "text": " each",
-      "startMs": 11421,
-      "endMs": 11661,
+      "startMs": 24769,
+      "endMs": 25120,
       "pageBreakAfter": true
     },
     {
       "text": " Markdown",
-      "startMs": 11661,
-      "endMs": 12038
+      "startMs": 25120,
+      "endMs": 25671
     },
     {
       "text": " post.",
-      "startMs": 12038,
-      "endMs": 12312
+      "startMs": 25671,
+      "endMs": 26072
     },
     {
       "text": " Let",
-      "startMs": 12312,
-      "endMs": 12517
+      "startMs": 26072,
+      "endMs": 26373
     },
     {
       "text": " us",
-      "startMs": 12517,
-      "endMs": 12689,
+      "startMs": 26373,
+      "endMs": 26624,
       "pageBreakAfter": true
     },
     {
       "text": " look",
-      "startMs": 12689,
-      "endMs": 12929
+      "startMs": 26624,
+      "endMs": 26974
     },
     {
       "text": " at",
-      "startMs": 12929,
-      "endMs": 13100
+      "startMs": 26974,
+      "endMs": 27225
     },
     {
       "text": " the",
-      "startMs": 13100,
-      "endMs": 13306
+      "startMs": 27225,
+      "endMs": 27526
     },
     {
       "text": " code.",
-      "startMs": 13306,
-      "endMs": 13580,
+      "startMs": 27526,
+      "endMs": 28733,
       "pageBreakAfter": true
     },
     {
       "text": " Option",
-      "startMs": 13833,
-      "endMs": 14106
+      "startMs": 29267,
+      "endMs": 29578
     },
     {
       "text": " 1:",
-      "startMs": 14106,
-      "endMs": 14258
+      "startMs": 29578,
+      "endMs": 29752
     },
     {
       "text": " Display",
-      "startMs": 14258,
-      "endMs": 14562
+      "startMs": 29752,
+      "endMs": 30098
     },
     {
       "text": " labels",
-      "startMs": 14562,
-      "endMs": 14835,
+      "startMs": 30098,
+      "endMs": 30410,
       "pageBreakAfter": true
     },
     {
       "text": " on",
-      "startMs": 14835,
-      "endMs": 14987
+      "startMs": 30410,
+      "endMs": 30583
     },
     {
       "text": " the",
-      "startMs": 14987,
-      "endMs": 15169
+      "startMs": 30583,
+      "endMs": 30791
     },
     {
       "text": " post",
-      "startMs": 15169,
-      "endMs": 15381
+      "startMs": 30791,
+      "endMs": 31033
     },
     {
       "text": " only.",
-      "startMs": 15381,
-      "endMs": 15624,
+      "startMs": 31033,
+      "endMs": 31310,
       "pageBreakAfter": true
     },
     {
       "text": " Let",
-      "startMs": 15624,
-      "endMs": 15806
+      "startMs": 31310,
+      "endMs": 31518
     },
     {
       "text": " us",
-      "startMs": 15806,
-      "endMs": 15958
+      "startMs": 31518,
+      "endMs": 31691
     },
     {
       "text": " look",
-      "startMs": 15958,
-      "endMs": 16170
+      "startMs": 31691,
+      "endMs": 31934
     },
     {
       "text": " at",
-      "startMs": 16170,
-      "endMs": 16322,
+      "startMs": 31934,
+      "endMs": 32107,
       "pageBreakAfter": true
     },
     {
       "text": " the",
-      "startMs": 16322,
-      "endMs": 16504
+      "startMs": 32107,
+      "endMs": 32315
     },
     {
       "text": " code.",
-      "startMs": 16504,
-      "endMs": 16747,
+      "startMs": 32315,
+      "endMs": 33233,
       "pageBreakAfter": true
     },
     {
       "text": " Option",
-      "startMs": 17000,
-      "endMs": 17504
+      "startMs": 33767,
+      "endMs": 34372
     },
     {
       "text": " 2:",
-      "startMs": 17504,
-      "endMs": 17784
+      "startMs": 34372,
+      "endMs": 34709
     },
     {
       "text": " Generate",
-      "startMs": 17784,
-      "endMs": 18401
+      "startMs": 34709,
+      "endMs": 35449
     },
     {
       "text": " category",
-      "startMs": 18401,
-      "endMs": 19017,
+      "startMs": 35449,
+      "endMs": 36190,
       "pageBreakAfter": true
     },
     {
       "text": " and",
-      "startMs": 19017,
-      "endMs": 19353
+      "startMs": 36190,
+      "endMs": 36594
     },
     {
       "text": " tag",
-      "startMs": 19353,
-      "endMs": 19689
+      "startMs": 36594,
+      "endMs": 36997
     },
     {
       "text": " archive",
-      "startMs": 19689,
-      "endMs": 20249
+      "startMs": 36997,
+      "endMs": 37671
     },
     {
       "text": " pages.",
-      "startMs": 20249,
-      "endMs": 20754,
+      "startMs": 37671,
+      "endMs": 38276,
       "pageBreakAfter": true
     },
     {
       "text": " Let",
-      "startMs": 20754,
-      "endMs": 21090
+      "startMs": 38276,
+      "endMs": 38680
     },
     {
       "text": " us",
-      "startMs": 21090,
-      "endMs": 21370
+      "startMs": 38680,
+      "endMs": 39017
     },
     {
       "text": " look",
-      "startMs": 21370,
-      "endMs": 21762
+      "startMs": 39017,
+      "endMs": 39488
     },
     {
       "text": " at",
-      "startMs": 21762,
-      "endMs": 22042,
+      "startMs": 39488,
+      "endMs": 39824,
       "pageBreakAfter": true
     },
     {
       "text": " the",
-      "startMs": 22042,
-      "endMs": 22378
+      "startMs": 39824,
+      "endMs": 40228
     },
     {
       "text": " code.",
-      "startMs": 22378,
-      "endMs": 22827,
+      "startMs": 40228,
+      "endMs": 45367,
       "pageBreakAfter": true
     },
     {
       "text": " Create",
-      "startMs": 23333,
-      "endMs": 23674
+      "startMs": 45900,
+      "endMs": 46398
     },
     {
       "text": " URL-safe",
-      "startMs": 23674,
-      "endMs": 24090
+      "startMs": 46398,
+      "endMs": 47006
     },
     {
       "text": " taxonomy",
-      "startMs": 24090,
-      "endMs": 24506
+      "startMs": 47006,
+      "endMs": 47615
     },
     {
       "text": " slugs.",
-      "startMs": 24506,
-      "endMs": 24847,
+      "startMs": 47615,
+      "endMs": 48113,
       "pageBreakAfter": true
     },
     {
       "text": " Let",
-      "startMs": 24847,
-      "endMs": 25074
+      "startMs": 48113,
+      "endMs": 48445
     },
     {
       "text": " us",
-      "startMs": 25074,
-      "endMs": 25263
+      "startMs": 48445,
+      "endMs": 48722
     },
     {
       "text": " look",
-      "startMs": 25263,
-      "endMs": 25528
+      "startMs": 48722,
+      "endMs": 49109
     },
     {
       "text": " at",
-      "startMs": 25528,
-      "endMs": 25717,
+      "startMs": 49109,
+      "endMs": 49385,
       "pageBreakAfter": true
     },
     {
       "text": " the",
-      "startMs": 25717,
-      "endMs": 25944
+      "startMs": 49385,
+      "endMs": 49717
     },
     {
       "text": " code.",
-      "startMs": 25944,
-      "endMs": 26247,
+      "startMs": 49717,
+      "endMs": 50967,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Option",
+      "startMs": 51500,
+      "endMs": 51900
+    },
+    {
+      "text": " 3:",
+      "startMs": 51900,
+      "endMs": 52122
+    },
+    {
+      "text": " Add",
+      "startMs": 52122,
+      "endMs": 52389
+    },
+    {
+      "text": " discovery",
+      "startMs": 52389,
+      "endMs": 52922,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " navigation",
+      "startMs": 52922,
+      "endMs": 53500
+    },
+    {
+      "text": " and",
+      "startMs": 53500,
+      "endMs": 53767
+    },
+    {
+      "text": " index",
+      "startMs": 53767,
+      "endMs": 54122
+    },
+    {
+      "text": " pages.",
+      "startMs": 54122,
+      "endMs": 54522,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Let",
+      "startMs": 54522,
+      "endMs": 54789
+    },
+    {
+      "text": " us",
+      "startMs": 54789,
+      "endMs": 55011
+    },
+    {
+      "text": " look",
+      "startMs": 55011,
+      "endMs": 55322
+    },
+    {
+      "text": " at",
+      "startMs": 55322,
+      "endMs": 55544,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " the",
+      "startMs": 55544,
+      "endMs": 55811
+    },
+    {
+      "text": " code.",
+      "startMs": 55811,
+      "endMs": 57033,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Keep",
+      "startMs": 57567,
+      "endMs": 57831
+    },
+    {
+      "text": " taxonomy",
+      "startMs": 57831,
+      "endMs": 58247
+    },
+    {
+      "text": " useful",
+      "startMs": 58247,
+      "endMs": 58587
+    },
+    {
+      "text": " for",
+      "startMs": 58587,
+      "endMs": 58814,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " readers",
+      "startMs": 58814,
+      "endMs": 59192
+    },
+    {
+      "text": " and",
+      "startMs": 59192,
+      "endMs": 59419
+    },
+    {
+      "text": " search",
+      "startMs": 59419,
+      "endMs": 59759
+    },
+    {
+      "text": " engines.",
+      "startMs": 59759,
+      "endMs": 60175,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Taxonomy",
+      "startMs": 60175,
+      "endMs": 60590
+    },
+    {
+      "text": " helps",
+      "startMs": 60590,
+      "endMs": 60893
+    },
+    {
+      "text": " only",
+      "startMs": 60893,
+      "endMs": 61157
+    },
+    {
+      "text": " when",
+      "startMs": 61157,
+      "endMs": 61422,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " it",
+      "startMs": 61422,
+      "endMs": 61611
+    },
+    {
+      "text": " stays",
+      "startMs": 61611,
+      "endMs": 61913
+    },
+    {
+      "text": " intentional.",
+      "startMs": 61913,
+      "endMs": 62480
+    },
+    {
+      "text": " Use",
+      "startMs": 62480,
+      "endMs": 62707,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " categories",
+      "startMs": 62707,
+      "endMs": 63198
+    },
+    {
+      "text": " for",
+      "startMs": 63198,
+      "endMs": 63425
+    },
+    {
+      "text": " your",
+      "startMs": 63425,
+      "endMs": 63690
+    },
+    {
+      "text": " long-term",
+      "startMs": 63690,
+      "endMs": 64143,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " editorial",
+      "startMs": 64143,
+      "endMs": 64597
+    },
+    {
+      "text": " pillars,",
+      "startMs": 64597,
+      "endMs": 65012
+    },
+    {
+      "text": " and",
+      "startMs": 65012,
+      "endMs": 65239
+    },
+    {
+      "text": " merge",
+      "startMs": 65239,
+      "endMs": 65541,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " tags",
+      "startMs": 65541,
+      "endMs": 65806
+    },
+    {
+      "text": " that",
+      "startMs": 65806,
+      "endMs": 66071
+    },
+    {
+      "text": " mean",
+      "startMs": 66071,
+      "endMs": 66335
+    },
+    {
+      "text": " the",
+      "startMs": 66335,
+      "endMs": 66562,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " same",
+      "startMs": 66562,
+      "endMs": 66827
+    },
+    {
+      "text": " thing.",
+      "startMs": 66827,
+      "endMs": 68033,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Decide",
+      "startMs": 68567,
+      "endMs": 68958
+    },
+    {
+      "text": " whether",
+      "startMs": 68958,
+      "endMs": 69393
+    },
+    {
+      "text": " taxonomy",
+      "startMs": 69393,
+      "endMs": 69872
+    },
+    {
+      "text": " pages",
+      "startMs": 69872,
+      "endMs": 70220,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " should",
+      "startMs": 70220,
+      "endMs": 70611
+    },
+    {
+      "text": " be",
+      "startMs": 70611,
+      "endMs": 70829
+    },
+    {
+      "text": " indexed.",
+      "startMs": 70829,
+      "endMs": 71307
+    },
+    {
+      "text": " Taxonomy",
+      "startMs": 71307,
+      "endMs": 71786,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " pages",
+      "startMs": 71786,
+      "endMs": 72134
+    },
+    {
+      "text": " can",
+      "startMs": 72134,
+      "endMs": 72395
+    },
+    {
+      "text": " be",
+      "startMs": 72395,
+      "endMs": 72612
+    },
+    {
+      "text": " valuable",
+      "startMs": 72612,
+      "endMs": 73091,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " for",
+      "startMs": 73091,
+      "endMs": 73352
+    },
+    {
+      "text": " readers",
+      "startMs": 73352,
+      "endMs": 73787
+    },
+    {
+      "text": " without",
+      "startMs": 73787,
+      "endMs": 74222
+    },
+    {
+      "text": " being",
+      "startMs": 74222,
+      "endMs": 74570,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " valuable",
+      "startMs": 74570,
+      "endMs": 75049
+    },
+    {
+      "text": " search",
+      "startMs": 75049,
+      "endMs": 75440
+    },
+    {
+      "text": " landing",
+      "startMs": 75440,
+      "endMs": 75875
+    },
+    {
+      "text": " pages.",
+      "startMs": 75875,
+      "endMs": 77133,
       "pageBreakAfter": true
     },
     {
       "text": " Read",
-      "startMs": 26500,
-      "endMs": 26785
+      "startMs": 77667,
+      "endMs": 78037
     },
     {
       "text": " the",
-      "startMs": 26785,
-      "endMs": 27030
+      "startMs": 78037,
+      "endMs": 78354
     },
     {
       "text": " full",
-      "startMs": 27030,
-      "endMs": 27315
+      "startMs": 78354,
+      "endMs": 78724
     },
     {
       "text": " article.",
-      "startMs": 27315,
-      "endMs": 27764,
+      "startMs": 78724,
+      "endMs": 79305,
       "pageBreakAfter": true
     },
     {
       "text": " New",
-      "startMs": 27764,
-      "endMs": 28008
+      "startMs": 79305,
+      "endMs": 79622
     },
     {
       "text": " posts",
-      "startMs": 28008,
-      "endMs": 28334
+      "startMs": 79622,
+      "endMs": 80045
     },
     {
       "text": " every",
-      "startMs": 28334,
-      "endMs": 28660
+      "startMs": 80045,
+      "endMs": 80468
     },
     {
       "text": " week",
-      "startMs": 28660,
-      "endMs": 28946,
+      "startMs": 80468,
+      "endMs": 80838,
       "pageBreakAfter": true
     },
     {
       "text": " on",
-      "startMs": 28946,
-      "endMs": 29149
+      "startMs": 80838,
+      "endMs": 81102
     },
     {
       "text": " the",
-      "startMs": 29149,
-      "endMs": 29394
+      "startMs": 81102,
+      "endMs": 81419
     },
     {
       "text": " blog.",
-      "startMs": 29394,
-      "endMs": 29720,
+      "startMs": 81419,
+      "endMs": 82633,
       "pageBreakAfter": true
     }
   ],

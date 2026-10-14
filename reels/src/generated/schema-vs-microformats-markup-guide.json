@@ -1,6 +1,6 @@
 {
   "slug": "schema-vs-microformats-markup-guide",
-  "title": "Schema Markup vs. Microformats: Differences, Benefits, and Which to Use",
+  "title": "Schema Markup vs Microformats: Differences and Which to Use",
   "description": "Learn how Schema.org markup and microformats differ, how JSON-LD and HTML classes work, and which approach is best for SEO, rich results, and IndieWeb projects.",
   "category": "Web Development",
   "tags": [
@@ -11,29 +11,32 @@
     "Web Development"
   ],
   "url": "https://www.techtips.fun/blog/schema-vs-microformats-markup-guide/",
-  "theme": "github-dark",
-  "durationInFrames": 1070,
   "scenes": [
     {
       "type": "title",
       "kicker": "Web Development",
-      "title": "Schema Markup vs. Microformats: Differences, Benefits, and Which to Use",
+      "title": "Schema Markup vs Microformats: Differences and Which to Use",
       "subtitle": "Learn how Schema.org markup and microformats differ, how JSON-LD and HTML classes work,…",
-      "durationInFrames": 105
+      "image": {
+        "src": "post-media/schema-vs-microformats-markup-guide/01-schema-microformats-cover.webp",
+        "width": 1600,
+        "height": 900
+      },
+      "durationInFrames": 183
     },
     {
       "type": "point",
       "kicker": "Web Development",
       "heading": "Quick answer: Schema.org or microformats?",
       "body": "Choose Schema.org with JSON-LD when your priority is search-engine understanding, supported Google Search features, and a structured format that is…",
-      "durationInFrames": 120
+      "durationInFrames": 330
     },
     {
       "type": "point",
       "kicker": "Web Development",
       "heading": "What is Schema.org markup?",
       "body": "Schema.org is a shared vocabulary for describing things on the web. It defines types such as Article, Person, Product, Organization, and Event,…",
-      "durationInFrames": 120
+      "durationInFrames": 330
     },
     {
       "type": "code",
@@ -258,14 +261,18 @@
           }
         }
       ],
-      "durationInFrames": 190
+      "stepDurations": [
+        182,
+        135
+      ],
+      "durationInFrames": 317
     },
     {
       "type": "point",
       "kicker": "Web Development",
       "heading": "What are microformats?",
       "body": "Microformats are small, established conventions for marking up common content patterns with normal HTML.",
-      "durationInFrames": 120
+      "durationInFrames": 238
     },
     {
       "type": "code",
@@ -587,709 +594,914 @@
           }
         }
       ],
-      "durationInFrames": 190
+      "stepDurations": [
+        135,
+        182
+      ],
+      "durationInFrames": 317
     },
     {
       "type": "point",
       "kicker": "Web Development",
       "heading": "Vocabulary and encoding are different concepts",
       "body": "Schema.org provides a large vocabulary. JSON-LD, Microdata, and RDFa are ways to encode that vocabulary.",
-      "durationInFrames": 120
+      "durationInFrames": 284
+    },
+    {
+      "type": "point",
+      "kicker": "Web Development",
+      "heading": "They target different ecosystems",
+      "body": "Schema.org is widely used by search engines and other systems that consume structured data.",
+      "durationInFrames": 250
+    },
+    {
+      "type": "point",
+      "kicker": "Web Development",
+      "heading": "Use microformats for IndieWeb compatibility",
+      "body": "Use microformats when your project needs h-card, h-entry, h-event, or related conventions.",
+      "durationInFrames": 238
     },
     {
       "type": "outro",
       "heading": "Read the full article",
       "body": "New posts every week on the blog.",
       "url": "techtips.fun",
-      "durationInFrames": 105
+      "durationInFrames": 165
     }
   ],
+  "theme": "github-dark",
+  "durationInFrames": 2652,
   "captions": [
     {
       "text": " Learn",
-      "startMs": 0,
-      "endMs": 226
+      "startMs": 500,
+      "endMs": 830
     },
     {
       "text": " how",
-      "startMs": 226,
-      "endMs": 395
+      "startMs": 830,
+      "endMs": 1077
     },
     {
       "text": " Schema.org",
-      "startMs": 395,
-      "endMs": 763
+      "startMs": 1077,
+      "endMs": 1613
     },
     {
       "text": " markup",
-      "startMs": 763,
-      "endMs": 1017,
+      "startMs": 1613,
+      "endMs": 1984,
       "pageBreakAfter": true
     },
     {
       "text": " and",
-      "startMs": 1017,
-      "endMs": 1186
+      "startMs": 1984,
+      "endMs": 2232
     },
     {
       "text": " microformats",
-      "startMs": 1186,
-      "endMs": 1610
+      "startMs": 2232,
+      "endMs": 2850
     },
     {
       "text": " differ,",
-      "startMs": 1610,
-      "endMs": 1892
+      "startMs": 2850,
+      "endMs": 3262
     },
     {
       "text": " how",
-      "startMs": 1892,
-      "endMs": 2062,
+      "startMs": 3262,
+      "endMs": 3510,
       "pageBreakAfter": true
     },
     {
       "text": " JSON-LD",
-      "startMs": 2062,
-      "endMs": 2344
+      "startMs": 3510,
+      "endMs": 3922
     },
     {
       "text": " and",
-      "startMs": 2344,
-      "endMs": 2514
+      "startMs": 3922,
+      "endMs": 4169
     },
     {
       "text": " HTML",
-      "startMs": 2514,
-      "endMs": 2712
+      "startMs": 4169,
+      "endMs": 4458
     },
     {
       "text": " classes",
-      "startMs": 2712,
-      "endMs": 2994,
+      "startMs": 4458,
+      "endMs": 4870,
       "pageBreakAfter": true
     },
     {
       "text": " work,",
-      "startMs": 2994,
-      "endMs": 3220,
+      "startMs": 4870,
+      "endMs": 6067,
       "pageBreakAfter": true
     },
     {
       "text": " Quick",
-      "startMs": 3500,
-      "endMs": 3622
+      "startMs": 6600,
+      "endMs": 6917
     },
     {
       "text": " answer:",
-      "startMs": 3622,
-      "endMs": 3774
+      "startMs": 6917,
+      "endMs": 7314
     },
     {
       "text": " Schema.org",
-      "startMs": 3774,
-      "endMs": 3971
+      "startMs": 7314,
+      "endMs": 7830
     },
     {
       "text": " or",
-      "startMs": 3971,
-      "endMs": 4047,
+      "startMs": 7830,
+      "endMs": 8028,
       "pageBreakAfter": true
     },
     {
       "text": " microformats?.",
-      "startMs": 4047,
-      "endMs": 4306
+      "startMs": 8028,
+      "endMs": 8702
     },
     {
       "text": " Choose",
-      "startMs": 4306,
-      "endMs": 4443
+      "startMs": 8702,
+      "endMs": 9060
     },
     {
       "text": " Schema.org",
-      "startMs": 4443,
-      "endMs": 4640
+      "startMs": 9060,
+      "endMs": 9575
     },
     {
       "text": " with",
-      "startMs": 4640,
-      "endMs": 4747,
+      "startMs": 9575,
+      "endMs": 9853,
       "pageBreakAfter": true
     },
     {
       "text": " JSON-LD",
-      "startMs": 4747,
-      "endMs": 4899
+      "startMs": 9853,
+      "endMs": 10250
     },
     {
       "text": " when",
-      "startMs": 4899,
-      "endMs": 5005
+      "startMs": 10250,
+      "endMs": 10527
     },
     {
       "text": " your",
-      "startMs": 5005,
-      "endMs": 5112
+      "startMs": 10527,
+      "endMs": 10805
     },
     {
       "text": " priority",
-      "startMs": 5112,
-      "endMs": 5279,
+      "startMs": 10805,
+      "endMs": 11241,
       "pageBreakAfter": true
     },
     {
       "text": " is",
-      "startMs": 5279,
-      "endMs": 5355
+      "startMs": 11241,
+      "endMs": 11440
     },
     {
       "text": " search-engine",
-      "startMs": 5355,
-      "endMs": 5599
+      "startMs": 11440,
+      "endMs": 12074
     },
     {
       "text": " understanding,",
-      "startMs": 5599,
-      "endMs": 5857
+      "startMs": 12074,
+      "endMs": 12749
     },
     {
       "text": " supported",
-      "startMs": 5857,
-      "endMs": 6040,
+      "startMs": 12749,
+      "endMs": 13225,
       "pageBreakAfter": true
     },
     {
       "text": " Google",
-      "startMs": 6040,
-      "endMs": 6176
+      "startMs": 13225,
+      "endMs": 13582
     },
     {
       "text": " Search",
-      "startMs": 6176,
-      "endMs": 6313
+      "startMs": 13582,
+      "endMs": 13939
     },
     {
       "text": " features,",
-      "startMs": 6313,
-      "endMs": 6496
+      "startMs": 13939,
+      "endMs": 14415
     },
     {
       "text": " and",
-      "startMs": 6496,
-      "endMs": 6587,
+      "startMs": 14415,
+      "endMs": 14653,
       "pageBreakAfter": true
     },
     {
       "text": " a",
-      "startMs": 6587,
-      "endMs": 6648
+      "startMs": 14653,
+      "endMs": 14812
     },
     {
       "text": " structured",
-      "startMs": 6648,
-      "endMs": 6845
+      "startMs": 14812,
+      "endMs": 15327
     },
     {
       "text": " format",
-      "startMs": 6845,
-      "endMs": 6982
+      "startMs": 15327,
+      "endMs": 15684
     },
     {
       "text": " that",
-      "startMs": 6982,
-      "endMs": 7089,
+      "startMs": 15684,
+      "endMs": 15962,
       "pageBreakAfter": true
     },
     {
       "text": " is…",
-      "startMs": 7089,
-      "endMs": 7180,
+      "startMs": 15962,
+      "endMs": 17067,
       "pageBreakAfter": true
     },
     {
       "text": " What",
-      "startMs": 7500,
-      "endMs": 7614
+      "startMs": 17600,
+      "endMs": 17899
     },
     {
       "text": " is",
-      "startMs": 7614,
-      "endMs": 7696
+      "startMs": 17899,
+      "endMs": 18112
     },
     {
       "text": " Schema.org",
-      "startMs": 7696,
-      "endMs": 7909
+      "startMs": 18112,
+      "endMs": 18667
     },
     {
       "text": " markup?.",
-      "startMs": 7909,
-      "endMs": 8089,
+      "startMs": 18667,
+      "endMs": 19136,
       "pageBreakAfter": true
     },
     {
       "text": " Schema.org",
-      "startMs": 8089,
-      "endMs": 8301
+      "startMs": 19136,
+      "endMs": 19691
     },
     {
       "text": " is",
-      "startMs": 8301,
-      "endMs": 8383
+      "startMs": 19691,
+      "endMs": 19904
     },
     {
       "text": " a",
-      "startMs": 8383,
-      "endMs": 8449
+      "startMs": 19904,
+      "endMs": 20075
     },
     {
       "text": " shared",
-      "startMs": 8449,
-      "endMs": 8596,
+      "startMs": 20075,
+      "endMs": 20459,
       "pageBreakAfter": true
     },
     {
       "text": " vocabulary",
-      "startMs": 8596,
-      "endMs": 8808
+      "startMs": 20459,
+      "endMs": 21013
     },
     {
       "text": " for",
-      "startMs": 8808,
-      "endMs": 8907
+      "startMs": 21013,
+      "endMs": 21269
     },
     {
       "text": " describing",
-      "startMs": 8907,
-      "endMs": 9119
+      "startMs": 21269,
+      "endMs": 21824
     },
     {
       "text": " things",
-      "startMs": 9119,
-      "endMs": 9266,
+      "startMs": 21824,
+      "endMs": 22208,
       "pageBreakAfter": true
     },
     {
       "text": " on",
-      "startMs": 9266,
-      "endMs": 9348
+      "startMs": 22208,
+      "endMs": 22421
     },
     {
       "text": " the",
-      "startMs": 9348,
-      "endMs": 9446
+      "startMs": 22421,
+      "endMs": 22677
     },
     {
       "text": " web.",
-      "startMs": 9446,
-      "endMs": 9561
+      "startMs": 22677,
+      "endMs": 22976
     },
     {
       "text": " It",
-      "startMs": 9561,
-      "endMs": 9643,
+      "startMs": 22976,
+      "endMs": 23189,
       "pageBreakAfter": true
     },
     {
       "text": " defines",
-      "startMs": 9643,
-      "endMs": 9806
+      "startMs": 23189,
+      "endMs": 23616
     },
     {
       "text": " types",
-      "startMs": 9806,
-      "endMs": 9937
+      "startMs": 23616,
+      "endMs": 23957
     },
     {
       "text": " such",
-      "startMs": 9937,
-      "endMs": 10051
+      "startMs": 23957,
+      "endMs": 24256
     },
     {
       "text": " as",
-      "startMs": 10051,
-      "endMs": 10133,
+      "startMs": 24256,
+      "endMs": 24469,
       "pageBreakAfter": true
     },
     {
       "text": " Article,",
-      "startMs": 10133,
-      "endMs": 10313
+      "startMs": 24469,
+      "endMs": 24939
     },
     {
       "text": " Person,",
-      "startMs": 10313,
-      "endMs": 10477
+      "startMs": 24939,
+      "endMs": 25365
     },
     {
       "text": " Product,",
-      "startMs": 10477,
-      "endMs": 10657
+      "startMs": 25365,
+      "endMs": 25835
     },
     {
       "text": " Organization,",
-      "startMs": 10657,
-      "endMs": 10918,
+      "startMs": 25835,
+      "endMs": 26517,
       "pageBreakAfter": true
     },
     {
       "text": " and",
-      "startMs": 10918,
-      "endMs": 11016
+      "startMs": 26517,
+      "endMs": 26773
     },
     {
       "text": " Event,…",
-      "startMs": 11016,
-      "endMs": 11180,
+      "startMs": 26773,
+      "endMs": 28067,
       "pageBreakAfter": true
     },
     {
       "text": " Schema.org",
-      "startMs": 11500,
-      "endMs": 12614
+      "startMs": 28600,
+      "endMs": 29460
     },
     {
       "text": " with",
-      "startMs": 12614,
-      "endMs": 13214
+      "startMs": 29460,
+      "endMs": 29924
     },
     {
       "text": " JSON-LD.",
-      "startMs": 13214,
-      "endMs": 14156
+      "startMs": 29924,
+      "endMs": 30651
     },
     {
       "text": " Let",
-      "startMs": 14156,
-      "endMs": 14670,
+      "startMs": 30651,
+      "endMs": 31049,
       "pageBreakAfter": true
     },
     {
       "text": " us",
-      "startMs": 14670,
-      "endMs": 15099
+      "startMs": 31049,
+      "endMs": 31379
     },
     {
       "text": " look",
-      "startMs": 15099,
-      "endMs": 15699
+      "startMs": 31379,
+      "endMs": 31843
     },
     {
       "text": " at",
-      "startMs": 15699,
-      "endMs": 16127
+      "startMs": 31843,
+      "endMs": 32174
     },
     {
       "text": " the",
-      "startMs": 16127,
-      "endMs": 16641,
+      "startMs": 32174,
+      "endMs": 32571,
       "pageBreakAfter": true
     },
     {
       "text": " code.",
-      "startMs": 16641,
-      "endMs": 17327,
+      "startMs": 32571,
+      "endMs": 38633,
       "pageBreakAfter": true
     },
     {
       "text": " What",
-      "startMs": 17833,
-      "endMs": 17991
+      "startMs": 39167,
+      "endMs": 39447
     },
     {
       "text": " are",
-      "startMs": 17991,
-      "endMs": 18127
+      "startMs": 39447,
+      "endMs": 39688
     },
     {
       "text": " microformats?.",
-      "startMs": 18127,
-      "endMs": 18511
+      "startMs": 39688,
+      "endMs": 40369
     },
     {
       "text": " Microformats",
-      "startMs": 18511,
-      "endMs": 18849,
+      "startMs": 40369,
+      "endMs": 40970,
       "pageBreakAfter": true
     },
     {
       "text": " are",
-      "startMs": 18849,
-      "endMs": 18985
+      "startMs": 40970,
+      "endMs": 41211
     },
     {
       "text": " small,",
-      "startMs": 18985,
-      "endMs": 19188
+      "startMs": 41211,
+      "endMs": 41572
     },
     {
       "text": " established",
-      "startMs": 19188,
-      "endMs": 19504
+      "startMs": 41572,
+      "endMs": 42133
     },
     {
       "text": " conventions",
-      "startMs": 19504,
-      "endMs": 19820,
+      "startMs": 42133,
+      "endMs": 42694,
       "pageBreakAfter": true
     },
     {
       "text": " for",
-      "startMs": 19820,
-      "endMs": 19956
+      "startMs": 42694,
+      "endMs": 42934
     },
     {
       "text": " marking",
-      "startMs": 19956,
-      "endMs": 20181
+      "startMs": 42934,
+      "endMs": 43335
     },
     {
       "text": " up",
-      "startMs": 20181,
-      "endMs": 20294
+      "startMs": 43335,
+      "endMs": 43536
     },
     {
       "text": " common",
-      "startMs": 20294,
-      "endMs": 20497,
+      "startMs": 43536,
+      "endMs": 43896,
       "pageBreakAfter": true
     },
     {
       "text": " content",
-      "startMs": 20497,
-      "endMs": 20723
+      "startMs": 43896,
+      "endMs": 44297
     },
     {
       "text": " patterns",
-      "startMs": 20723,
-      "endMs": 20971
+      "startMs": 44297,
+      "endMs": 44738
     },
     {
       "text": " with",
-      "startMs": 20971,
-      "endMs": 21130
+      "startMs": 44738,
+      "endMs": 45019
     },
     {
       "text": " normal",
-      "startMs": 21130,
-      "endMs": 21333,
+      "startMs": 45019,
+      "endMs": 45379,
       "pageBreakAfter": true
     },
     {
       "text": " HTML.",
-      "startMs": 21333,
-      "endMs": 21513,
+      "startMs": 45379,
+      "endMs": 46567,
       "pageBreakAfter": true
     },
     {
       "text": " Microformats",
-      "startMs": 21833,
-      "endMs": 23221
+      "startMs": 47100,
+      "endMs": 48052
     },
     {
       "text": " example.",
-      "startMs": 23221,
-      "endMs": 24238
+      "startMs": 48052,
+      "endMs": 48751
     },
     {
       "text": " Let",
-      "startMs": 24238,
-      "endMs": 24793
+      "startMs": 48751,
+      "endMs": 49132
     },
     {
       "text": " us",
-      "startMs": 24793,
-      "endMs": 25255,
+      "startMs": 49132,
+      "endMs": 49449,
       "pageBreakAfter": true
     },
     {
       "text": " look",
-      "startMs": 25255,
-      "endMs": 25903
+      "startMs": 49449,
+      "endMs": 49894
     },
     {
       "text": " at",
-      "startMs": 25903,
-      "endMs": 26365
+      "startMs": 49894,
+      "endMs": 50211
     },
     {
       "text": " the",
-      "startMs": 26365,
-      "endMs": 26920
+      "startMs": 50211,
+      "endMs": 50592
     },
     {
       "text": " code.",
-      "startMs": 26920,
-      "endMs": 27660,
+      "startMs": 50592,
+      "endMs": 57133,
       "pageBreakAfter": true
     },
     {
       "text": " Vocabulary",
-      "startMs": 28167,
-      "endMs": 28412
+      "startMs": 57667,
+      "endMs": 58204
     },
     {
       "text": " and",
-      "startMs": 28412,
-      "endMs": 28525
+      "startMs": 58204,
+      "endMs": 58453
     },
     {
       "text": " encoding",
-      "startMs": 28525,
-      "endMs": 28733
+      "startMs": 58453,
+      "endMs": 58908
     },
     {
       "text": " are",
-      "startMs": 28733,
-      "endMs": 28846,
+      "startMs": 58908,
+      "endMs": 59156,
       "pageBreakAfter": true
     },
     {
       "text": " different",
-      "startMs": 28846,
-      "endMs": 29073
+      "startMs": 59156,
+      "endMs": 59652
     },
     {
       "text": " concepts.",
-      "startMs": 29073,
-      "endMs": 29299
+      "startMs": 59652,
+      "endMs": 60149
     },
     {
       "text": " Schema.org",
-      "startMs": 29299,
-      "endMs": 29544
+      "startMs": 60149,
+      "endMs": 60686
     },
     {
       "text": " provides",
-      "startMs": 29544,
-      "endMs": 29752,
+      "startMs": 60686,
+      "endMs": 61142,
       "pageBreakAfter": true
     },
     {
       "text": " a",
-      "startMs": 29752,
-      "endMs": 29827
+      "startMs": 61142,
+      "endMs": 61307
     },
     {
       "text": " large",
-      "startMs": 29827,
-      "endMs": 29978
+      "startMs": 61307,
+      "endMs": 61638
     },
     {
       "text": " vocabulary.",
-      "startMs": 29978,
-      "endMs": 30243
+      "startMs": 61638,
+      "endMs": 62217
     },
     {
       "text": " JSON-LD,",
-      "startMs": 30243,
-      "endMs": 30450,
+      "startMs": 62217,
+      "endMs": 62672,
       "pageBreakAfter": true
     },
     {
       "text": " Microdata,",
-      "startMs": 30450,
-      "endMs": 30695
+      "startMs": 62672,
+      "endMs": 63210
     },
     {
       "text": " and",
-      "startMs": 30695,
-      "endMs": 30809
+      "startMs": 63210,
+      "endMs": 63458
     },
     {
       "text": " RDFa",
-      "startMs": 30809,
-      "endMs": 30941
+      "startMs": 63458,
+      "endMs": 63748
     },
     {
       "text": " are",
-      "startMs": 30941,
-      "endMs": 31054,
+      "startMs": 63748,
+      "endMs": 63996,
       "pageBreakAfter": true
     },
     {
       "text": " ways",
-      "startMs": 31054,
-      "endMs": 31186
+      "startMs": 63996,
+      "endMs": 64285
     },
     {
       "text": " to",
-      "startMs": 31186,
-      "endMs": 31281
+      "startMs": 64285,
+      "endMs": 64492
     },
     {
       "text": " encode",
-      "startMs": 31281,
-      "endMs": 31450
+      "startMs": 64492,
+      "endMs": 64865
     },
     {
       "text": " that",
-      "startMs": 31450,
-      "endMs": 31582,
+      "startMs": 64865,
+      "endMs": 65154,
       "pageBreakAfter": true
     },
     {
       "text": " vocabulary.",
-      "startMs": 31582,
-      "endMs": 31847,
+      "startMs": 65154,
+      "endMs": 66600,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " They",
+      "startMs": 67133,
+      "endMs": 67433
+    },
+    {
+      "text": " target",
+      "startMs": 67433,
+      "endMs": 67818
+    },
+    {
+      "text": " different",
+      "startMs": 67818,
+      "endMs": 68332
+    },
+    {
+      "text": " ecosystems.",
+      "startMs": 68332,
+      "endMs": 68931,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Schema.org",
+      "startMs": 68931,
+      "endMs": 69487
+    },
+    {
+      "text": " is",
+      "startMs": 69487,
+      "endMs": 69701
+    },
+    {
+      "text": " widely",
+      "startMs": 69701,
+      "endMs": 70086
+    },
+    {
+      "text": " used",
+      "startMs": 70086,
+      "endMs": 70386,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " by",
+      "startMs": 70386,
+      "endMs": 70600
+    },
+    {
+      "text": " search",
+      "startMs": 70600,
+      "endMs": 70985
+    },
+    {
+      "text": " engines",
+      "startMs": 70985,
+      "endMs": 71413
+    },
+    {
+      "text": " and",
+      "startMs": 71413,
+      "endMs": 71670,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " other",
+      "startMs": 71670,
+      "endMs": 72012
+    },
+    {
+      "text": " systems",
+      "startMs": 72012,
+      "endMs": 72440
+    },
+    {
+      "text": " that",
+      "startMs": 72440,
+      "endMs": 72740
+    },
+    {
+      "text": " consume",
+      "startMs": 72740,
+      "endMs": 73168,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " structured",
+      "startMs": 73168,
+      "endMs": 73724
+    },
+    {
+      "text": " data.",
+      "startMs": 73724,
+      "endMs": 74933,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Use",
+      "startMs": 75467,
+      "endMs": 75697
+    },
+    {
+      "text": " microformats",
+      "startMs": 75697,
+      "endMs": 76274
+    },
+    {
+      "text": " for",
+      "startMs": 76274,
+      "endMs": 76504
+    },
+    {
+      "text": " IndieWeb",
+      "startMs": 76504,
+      "endMs": 76927,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " compatibility.",
+      "startMs": 76927,
+      "endMs": 77580
+    },
+    {
+      "text": " Use",
+      "startMs": 77580,
+      "endMs": 77811
+    },
+    {
+      "text": " microformats",
+      "startMs": 77811,
+      "endMs": 78387
+    },
+    {
+      "text": " when",
+      "startMs": 78387,
+      "endMs": 78656,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " your",
+      "startMs": 78656,
+      "endMs": 78925
+    },
+    {
+      "text": " project",
+      "startMs": 78925,
+      "endMs": 79310
+    },
+    {
+      "text": " needs",
+      "startMs": 79310,
+      "endMs": 79617
+    },
+    {
+      "text": " h-card,",
+      "startMs": 79617,
+      "endMs": 80002,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " h-entry,",
+      "startMs": 80002,
+      "endMs": 80424
+    },
+    {
+      "text": " h-event,",
+      "startMs": 80424,
+      "endMs": 80847
+    },
+    {
+      "text": " or",
+      "startMs": 80847,
+      "endMs": 81039
+    },
+    {
+      "text": " related",
+      "startMs": 81039,
+      "endMs": 81424,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " conventions.",
+      "startMs": 81424,
+      "endMs": 82867,
       "pageBreakAfter": true
     },
     {
       "text": " Read",
-      "startMs": 32167,
-      "endMs": 32452
+      "startMs": 83400,
+      "endMs": 83770
     },
     {
       "text": " the",
-      "startMs": 32452,
-      "endMs": 32697
+      "startMs": 83770,
+      "endMs": 84087
     },
     {
       "text": " full",
-      "startMs": 32697,
-      "endMs": 32982
+      "startMs": 84087,
+      "endMs": 84457
     },
     {
       "text": " article.",
-      "startMs": 32982,
-      "endMs": 33430,
+      "startMs": 84457,
+      "endMs": 85038,
       "pageBreakAfter": true
     },
     {
       "text": " New",
-      "startMs": 33430,
-      "endMs": 33675
+      "startMs": 85038,
+      "endMs": 85355
     },
     {
       "text": " posts",
-      "startMs": 33675,
-      "endMs": 34001
+      "startMs": 85355,
+      "endMs": 85778
     },
     {
       "text": " every",
-      "startMs": 34001,
-      "endMs": 34327
+      "startMs": 85778,
+      "endMs": 86201
     },
     {
       "text": " week",
-      "startMs": 34327,
-      "endMs": 34612,
+      "startMs": 86201,
+      "endMs": 86571,
       "pageBreakAfter": true
     },
     {
       "text": " on",
-      "startMs": 34612,
-      "endMs": 34816
+      "startMs": 86571,
+      "endMs": 86835
     },
     {
       "text": " the",
-      "startMs": 34816,
-      "endMs": 35061
+      "startMs": 86835,
+      "endMs": 87152
     },
     {
       "text": " blog.",
-      "startMs": 35061,
-      "endMs": 35387,
+      "startMs": 87152,
+      "endMs": 88367,
       "pageBreakAfter": true
     }
   ],

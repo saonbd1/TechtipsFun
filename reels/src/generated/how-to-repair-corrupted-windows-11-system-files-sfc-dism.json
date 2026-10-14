@@ -11,15 +11,18 @@
     "Beginner Guide"
   ],
   "url": "https://www.techtips.fun/blog/how-to-repair-corrupted-windows-11-system-files-sfc-dism/",
-  "theme": "github-dark",
-  "durationInFrames": 950,
   "scenes": [
     {
       "type": "title",
       "kicker": "PC Troubleshooting",
       "title": "How to Repair Corrupted Windows 11 System Files with SFC and DISM",
       "subtitle": "Learn how to run SFC and DISM in Windows 11, why DISM RestoreHealth should come first,…",
-      "durationInFrames": 105
+      "image": {
+        "src": "post-media/how-to-repair-corrupted-windows-11-system-files-sfc-dism/01-windows11-sfc-dism-cover.webp",
+        "width": 1600,
+        "height": 900
+      },
+      "durationInFrames": 183
     },
     {
       "type": "code",
@@ -65,28 +68,32 @@
           }
         }
       ],
-      "durationInFrames": 190
+      "stepDurations": [
+        135,
+        135
+      ],
+      "durationInFrames": 270
     },
     {
       "type": "point",
       "kicker": "PC Troubleshooting",
       "heading": "What are DISM and SFC?",
       "body": "Although both tools repair Windows, they work at different levels. DISM repairs the Windows image and component store.",
-      "durationInFrames": 120
+      "durationInFrames": 307
     },
     {
       "type": "point",
       "kicker": "PC Troubleshooting",
       "heading": "Before you run the repair commands",
       "body": "Save your open work and connect the computer to reliable power. The scans can take time, and the apparent progress may pause for several minutes.",
-      "durationInFrames": 120
+      "durationInFrames": 330
     },
     {
       "type": "point",
       "kicker": "PC Troubleshooting",
       "heading": "Open an elevated Command Prompt",
       "body": "Select the Search button on the Windows 11 taskbar and type Command Prompt.",
-      "durationInFrames": 120
+      "durationInFrames": 250
     },
     {
       "type": "code",
@@ -113,7 +120,10 @@
           }
         }
       ],
-      "durationInFrames": 95
+      "stepDurations": [
+        135
+      ],
+      "durationInFrames": 135
     },
     {
       "type": "code",
@@ -140,716 +150,1169 @@
           }
         }
       ],
-      "durationInFrames": 95
+      "stepDurations": [
+        135
+      ],
+      "durationInFrames": 135
+    },
+    {
+      "type": "point",
+      "kicker": "PC Troubleshooting",
+      "heading": "Restart Windows",
+      "body": "After the commands finish, restart Windows 11 and check whether the original problem has improved.",
+      "durationInFrames": 238
+    },
+    {
+      "type": "point",
+      "kicker": "PC Troubleshooting",
+      "heading": "What the SFC result means",
+      "body": "SFC provides a useful summary at the end of the scan. The wording may vary slightly by Windows version, but the main outcomes are consistent.",
+      "durationInFrames": 330
+    },
+    {
+      "type": "point",
+      "kicker": "PC Troubleshooting",
+      "heading": "What to do when sfc /scannow cannot fix corrupted files",
+      "body": "The message “Windows Resource Protection found corrupt files but was unable to fix some of them” does not necessarily mean that Windows cannot be…",
+      "durationInFrames": 330
     },
     {
       "type": "outro",
       "heading": "Read the full article",
       "body": "New posts every week on the blog.",
       "url": "techtips.fun",
-      "durationInFrames": 105
+      "durationInFrames": 165
     }
   ],
+  "theme": "github-dark",
+  "durationInFrames": 2673,
   "captions": [
     {
       "text": " Learn",
-      "startMs": 0,
-      "endMs": 216
+      "startMs": 500,
+      "endMs": 816
     },
     {
       "text": " how",
-      "startMs": 216,
-      "endMs": 379
+      "startMs": 816,
+      "endMs": 1053
     },
     {
       "text": " to",
-      "startMs": 379,
-      "endMs": 514
+      "startMs": 1053,
+      "endMs": 1250
     },
     {
       "text": " run",
-      "startMs": 514,
-      "endMs": 676,
+      "startMs": 1250,
+      "endMs": 1487,
       "pageBreakAfter": true
     },
     {
       "text": " SFC",
-      "startMs": 676,
-      "endMs": 839
+      "startMs": 1487,
+      "endMs": 1724
     },
     {
       "text": " and",
-      "startMs": 839,
-      "endMs": 1001
+      "startMs": 1724,
+      "endMs": 1961
     },
     {
       "text": " DISM",
-      "startMs": 1001,
-      "endMs": 1191
+      "startMs": 1961,
+      "endMs": 2238
     },
     {
       "text": " in",
-      "startMs": 1191,
-      "endMs": 1326,
+      "startMs": 2238,
+      "endMs": 2435,
       "pageBreakAfter": true
     },
     {
       "text": " Windows",
-      "startMs": 1326,
-      "endMs": 1596
+      "startMs": 2435,
+      "endMs": 2830
     },
     {
       "text": " 11,",
-      "startMs": 1596,
-      "endMs": 1759
+      "startMs": 2830,
+      "endMs": 3067
     },
     {
       "text": " why",
-      "startMs": 1759,
-      "endMs": 1921
+      "startMs": 3067,
+      "endMs": 3304
     },
     {
       "text": " DISM",
-      "startMs": 1921,
-      "endMs": 2111,
+      "startMs": 3304,
+      "endMs": 3581,
       "pageBreakAfter": true
     },
     {
       "text": " RestoreHealth",
-      "startMs": 2111,
-      "endMs": 2544
+      "startMs": 3581,
+      "endMs": 4213
     },
     {
       "text": " should",
-      "startMs": 2544,
-      "endMs": 2787
+      "startMs": 4213,
+      "endMs": 4568
     },
     {
       "text": " come",
-      "startMs": 2787,
-      "endMs": 2976
+      "startMs": 4568,
+      "endMs": 4845
     },
     {
       "text": " first,",
-      "startMs": 2976,
-      "endMs": 3220,
+      "startMs": 4845,
+      "endMs": 6067,
       "pageBreakAfter": true
     },
     {
       "text": " Quick",
-      "startMs": 3500,
-      "endMs": 3898
+      "startMs": 6600,
+      "endMs": 7120
     },
     {
       "text": " answer:",
-      "startMs": 3898,
-      "endMs": 4396
+      "startMs": 7120,
+      "endMs": 7769
     },
     {
       "text": " the",
-      "startMs": 4396,
-      "endMs": 4695
+      "startMs": 7769,
+      "endMs": 8159
     },
     {
       "text": " correct",
-      "startMs": 4695,
-      "endMs": 5193,
+      "startMs": 8159,
+      "endMs": 8809,
       "pageBreakAfter": true
     },
     {
       "text": " SFC",
-      "startMs": 5193,
-      "endMs": 5492
+      "startMs": 8809,
+      "endMs": 9198
     },
     {
       "text": " and",
-      "startMs": 5492,
-      "endMs": 5791
+      "startMs": 9198,
+      "endMs": 9588
     },
     {
       "text": " DISM",
-      "startMs": 5791,
-      "endMs": 6139
+      "startMs": 9588,
+      "endMs": 10043
     },
     {
       "text": " Windows",
-      "startMs": 6139,
-      "endMs": 6637,
+      "startMs": 10043,
+      "endMs": 10692,
       "pageBreakAfter": true
     },
     {
       "text": " 11",
-      "startMs": 6637,
-      "endMs": 6886
+      "startMs": 10692,
+      "endMs": 11017
     },
     {
       "text": " commands.",
-      "startMs": 6886,
-      "endMs": 7484
+      "startMs": 11017,
+      "endMs": 11797
     },
     {
       "text": " Let",
-      "startMs": 7484,
-      "endMs": 7783
+      "startMs": 11797,
+      "endMs": 12186
     },
     {
       "text": " us",
-      "startMs": 7783,
-      "endMs": 8032,
+      "startMs": 12186,
+      "endMs": 12511,
       "pageBreakAfter": true
     },
     {
       "text": " look",
-      "startMs": 8032,
-      "endMs": 8380
+      "startMs": 12511,
+      "endMs": 12966
     },
     {
       "text": " at",
-      "startMs": 8380,
-      "endMs": 8629
+      "startMs": 12966,
+      "endMs": 13291
     },
     {
       "text": " the",
-      "startMs": 8629,
-      "endMs": 8928
+      "startMs": 13291,
+      "endMs": 13680
     },
     {
       "text": " code.",
-      "startMs": 8928,
-      "endMs": 9327,
+      "startMs": 13680,
+      "endMs": 15067,
       "pageBreakAfter": true
     },
     {
       "text": " What",
-      "startMs": 9833,
-      "endMs": 9970
+      "startMs": 15600,
+      "endMs": 15927
     },
     {
       "text": " are",
-      "startMs": 9970,
-      "endMs": 10086
+      "startMs": 15927,
+      "endMs": 16208
     },
     {
       "text": " DISM",
-      "startMs": 10086,
-      "endMs": 10223
+      "startMs": 16208,
+      "endMs": 16535
     },
     {
       "text": " and",
-      "startMs": 10223,
-      "endMs": 10340,
+      "startMs": 16535,
+      "endMs": 16815,
       "pageBreakAfter": true
     },
     {
       "text": " SFC?.",
-      "startMs": 10340,
-      "endMs": 10495
+      "startMs": 16815,
+      "endMs": 17189
     },
     {
       "text": " Although",
-      "startMs": 10495,
-      "endMs": 10710
+      "startMs": 17189,
+      "endMs": 17703
     },
     {
       "text": " both",
-      "startMs": 10710,
-      "endMs": 10846
+      "startMs": 17703,
+      "endMs": 18030
     },
     {
       "text": " tools",
-      "startMs": 10846,
-      "endMs": 11002,
+      "startMs": 18030,
+      "endMs": 18404,
       "pageBreakAfter": true
     },
     {
       "text": " repair",
-      "startMs": 11002,
-      "endMs": 11177
+      "startMs": 18404,
+      "endMs": 18825
     },
     {
       "text": " Windows,",
-      "startMs": 11177,
-      "endMs": 11391
+      "startMs": 18825,
+      "endMs": 19339
     },
     {
       "text": " they",
-      "startMs": 11391,
-      "endMs": 11527
+      "startMs": 19339,
+      "endMs": 19666
     },
     {
       "text": " work",
-      "startMs": 11527,
-      "endMs": 11664,
+      "startMs": 19666,
+      "endMs": 19993,
       "pageBreakAfter": true
     },
     {
       "text": " at",
-      "startMs": 11664,
-      "endMs": 11761
+      "startMs": 19993,
+      "endMs": 20227
     },
     {
       "text": " different",
-      "startMs": 11761,
-      "endMs": 11995
+      "startMs": 20227,
+      "endMs": 20788
     },
     {
       "text": " levels.",
-      "startMs": 11995,
-      "endMs": 12189
+      "startMs": 20788,
+      "endMs": 21255
     },
     {
       "text": " DISM",
-      "startMs": 12189,
-      "endMs": 12326,
+      "startMs": 21255,
+      "endMs": 21582,
       "pageBreakAfter": true
     },
     {
       "text": " repairs",
-      "startMs": 12326,
-      "endMs": 12520
+      "startMs": 21582,
+      "endMs": 22050
     },
     {
       "text": " the",
-      "startMs": 12520,
-      "endMs": 12637
+      "startMs": 22050,
+      "endMs": 22330
     },
     {
       "text": " Windows",
-      "startMs": 12637,
-      "endMs": 12832
+      "startMs": 22330,
+      "endMs": 22798
     },
     {
       "text": " image",
-      "startMs": 12832,
-      "endMs": 12988,
+      "startMs": 22798,
+      "endMs": 23171,
       "pageBreakAfter": true
     },
     {
       "text": " and",
-      "startMs": 12988,
-      "endMs": 13104
+      "startMs": 23171,
+      "endMs": 23452
     },
     {
       "text": " component",
-      "startMs": 13104,
-      "endMs": 13338
+      "startMs": 23452,
+      "endMs": 24013
     },
     {
       "text": " store.",
-      "startMs": 13338,
-      "endMs": 13513,
+      "startMs": 24013,
+      "endMs": 25300,
       "pageBreakAfter": true
     },
     {
       "text": " Before",
-      "startMs": 13833,
-      "endMs": 13969
+      "startMs": 25833,
+      "endMs": 26187
     },
     {
       "text": " you",
-      "startMs": 13969,
-      "endMs": 14060
+      "startMs": 26187,
+      "endMs": 26423
     },
     {
       "text": " run",
-      "startMs": 14060,
-      "endMs": 14150
+      "startMs": 26423,
+      "endMs": 26660
     },
     {
       "text": " the",
-      "startMs": 14150,
-      "endMs": 14241,
+      "startMs": 26660,
+      "endMs": 26896,
       "pageBreakAfter": true
     },
     {
       "text": " repair",
-      "startMs": 14241,
-      "endMs": 14376
+      "startMs": 26896,
+      "endMs": 27250
     },
     {
       "text": " commands.",
-      "startMs": 14376,
-      "endMs": 14557
+      "startMs": 27250,
+      "endMs": 27722
     },
     {
       "text": " Save",
-      "startMs": 14557,
-      "endMs": 14663
+      "startMs": 27722,
+      "endMs": 27997
     },
     {
       "text": " your",
-      "startMs": 14663,
-      "endMs": 14768,
+      "startMs": 27997,
+      "endMs": 28273,
       "pageBreakAfter": true
     },
     {
       "text": " open",
-      "startMs": 14768,
-      "endMs": 14874
+      "startMs": 28273,
+      "endMs": 28548
     },
     {
       "text": " work",
-      "startMs": 14874,
-      "endMs": 14980
+      "startMs": 28548,
+      "endMs": 28823
     },
     {
       "text": " and",
-      "startMs": 14980,
-      "endMs": 15070
+      "startMs": 28823,
+      "endMs": 29060
     },
     {
       "text": " connect",
-      "startMs": 15070,
-      "endMs": 15221,
+      "startMs": 29060,
+      "endMs": 29453,
       "pageBreakAfter": true
     },
     {
       "text": " the",
-      "startMs": 15221,
-      "endMs": 15311
+      "startMs": 29453,
+      "endMs": 29689
     },
     {
       "text": " computer",
-      "startMs": 15311,
-      "endMs": 15477
+      "startMs": 29689,
+      "endMs": 30122
     },
     {
       "text": " to",
-      "startMs": 15477,
-      "endMs": 15553
+      "startMs": 30122,
+      "endMs": 30319
     },
     {
       "text": " reliable",
-      "startMs": 15553,
-      "endMs": 15719,
+      "startMs": 30319,
+      "endMs": 30751,
       "pageBreakAfter": true
     },
     {
       "text": " power.",
-      "startMs": 15719,
-      "endMs": 15854
+      "startMs": 30751,
+      "endMs": 31105
     },
     {
       "text": " The",
-      "startMs": 15854,
-      "endMs": 15945
+      "startMs": 31105,
+      "endMs": 31342
     },
     {
       "text": " scans",
-      "startMs": 15945,
-      "endMs": 16065
+      "startMs": 31342,
+      "endMs": 31656
     },
     {
       "text": " can",
-      "startMs": 16065,
-      "endMs": 16156,
+      "startMs": 31656,
+      "endMs": 31892,
       "pageBreakAfter": true
     },
     {
       "text": " take",
-      "startMs": 16156,
-      "endMs": 16262
+      "startMs": 31892,
+      "endMs": 32168
     },
     {
       "text": " time,",
-      "startMs": 16262,
-      "endMs": 16382
+      "startMs": 32168,
+      "endMs": 32483
     },
     {
       "text": " and",
-      "startMs": 16382,
-      "endMs": 16473
+      "startMs": 32483,
+      "endMs": 32719
     },
     {
       "text": " the",
-      "startMs": 16473,
-      "endMs": 16563,
+      "startMs": 32719,
+      "endMs": 32955,
       "pageBreakAfter": true
     },
     {
       "text": " apparent",
-      "startMs": 16563,
-      "endMs": 16729
+      "startMs": 32955,
+      "endMs": 33387
     },
     {
       "text": " progress",
-      "startMs": 16729,
-      "endMs": 16895
+      "startMs": 33387,
+      "endMs": 33820
     },
     {
       "text": " may",
-      "startMs": 16895,
-      "endMs": 16985
+      "startMs": 33820,
+      "endMs": 34056
     },
     {
       "text": " pause",
-      "startMs": 16985,
-      "endMs": 17106,
+      "startMs": 34056,
+      "endMs": 34371,
       "pageBreakAfter": true
     },
     {
       "text": " for",
-      "startMs": 17106,
-      "endMs": 17197
+      "startMs": 34371,
+      "endMs": 34607
     },
     {
       "text": " several",
-      "startMs": 17197,
-      "endMs": 17347
+      "startMs": 34607,
+      "endMs": 35001
     },
     {
       "text": " minutes.",
-      "startMs": 17347,
-      "endMs": 17513,
+      "startMs": 35001,
+      "endMs": 36300,
       "pageBreakAfter": true
     },
     {
       "text": " Open",
-      "startMs": 17833,
-      "endMs": 18011
+      "startMs": 36833,
+      "endMs": 37168
     },
     {
       "text": " an",
-      "startMs": 18011,
-      "endMs": 18138
+      "startMs": 37168,
+      "endMs": 37407
     },
     {
       "text": " elevated",
-      "startMs": 18138,
-      "endMs": 18417
+      "startMs": 37407,
+      "endMs": 37933
     },
     {
       "text": " Command",
-      "startMs": 18417,
-      "endMs": 18671,
+      "startMs": 37933,
+      "endMs": 38411,
       "pageBreakAfter": true
     },
     {
       "text": " Prompt.",
-      "startMs": 18671,
-      "endMs": 18925
+      "startMs": 38411,
+      "endMs": 38889
     },
     {
       "text": " Select",
-      "startMs": 18925,
-      "endMs": 19153
+      "startMs": 38889,
+      "endMs": 39320
     },
     {
       "text": " the",
-      "startMs": 19153,
-      "endMs": 19305
+      "startMs": 39320,
+      "endMs": 39607
     },
     {
       "text": " Search",
-      "startMs": 19305,
-      "endMs": 19534,
+      "startMs": 39607,
+      "endMs": 40037,
       "pageBreakAfter": true
     },
     {
       "text": " button",
-      "startMs": 19534,
-      "endMs": 19762
+      "startMs": 40037,
+      "endMs": 40467
     },
     {
       "text": " on",
-      "startMs": 19762,
-      "endMs": 19889
+      "startMs": 40467,
+      "endMs": 40706
     },
     {
       "text": " the",
-      "startMs": 19889,
-      "endMs": 20041
+      "startMs": 40706,
+      "endMs": 40993
     },
     {
       "text": " Windows",
-      "startMs": 20041,
-      "endMs": 20295,
+      "startMs": 40993,
+      "endMs": 41471,
       "pageBreakAfter": true
     },
     {
       "text": " 11",
-      "startMs": 20295,
-      "endMs": 20422
+      "startMs": 41471,
+      "endMs": 41711
     },
     {
       "text": " taskbar",
-      "startMs": 20422,
-      "endMs": 20676
+      "startMs": 41711,
+      "endMs": 42189
     },
     {
       "text": " and",
-      "startMs": 20676,
-      "endMs": 20828
+      "startMs": 42189,
+      "endMs": 42476
     },
     {
       "text": " type",
-      "startMs": 20828,
-      "endMs": 21006,
+      "startMs": 42476,
+      "endMs": 42810,
       "pageBreakAfter": true
     },
     {
       "text": " Command",
-      "startMs": 21006,
-      "endMs": 21260
+      "startMs": 42810,
+      "endMs": 43289
     },
     {
       "text": " Prompt.",
-      "startMs": 21260,
-      "endMs": 21513,
+      "startMs": 43289,
+      "endMs": 44633,
       "pageBreakAfter": true
     },
     {
       "text": " Run",
-      "startMs": 21833,
-      "endMs": 22094
+      "startMs": 45167,
+      "endMs": 45464
     },
     {
       "text": " DISM",
-      "startMs": 22094,
-      "endMs": 22399
+      "startMs": 45464,
+      "endMs": 45812
     },
     {
       "text": " RestoreHealth.",
-      "startMs": 22399,
-      "endMs": 23138
+      "startMs": 45812,
+      "endMs": 46655
     },
     {
       "text": " Let",
-      "startMs": 23138,
-      "endMs": 23399,
+      "startMs": 46655,
+      "endMs": 46953,
       "pageBreakAfter": true
     },
     {
       "text": " us",
-      "startMs": 23399,
-      "endMs": 23616
+      "startMs": 46953,
+      "endMs": 47201
     },
     {
       "text": " look",
-      "startMs": 23616,
-      "endMs": 23920
+      "startMs": 47201,
+      "endMs": 47549
     },
     {
       "text": " at",
-      "startMs": 23920,
-      "endMs": 24138
+      "startMs": 47549,
+      "endMs": 47797
     },
     {
       "text": " the",
-      "startMs": 24138,
-      "endMs": 24399,
+      "startMs": 47797,
+      "endMs": 48095,
       "pageBreakAfter": true
     },
     {
       "text": " code.",
-      "startMs": 24399,
-      "endMs": 24747,
+      "startMs": 48095,
+      "endMs": 49133,
       "pageBreakAfter": true
     },
     {
       "text": " Run",
-      "startMs": 25000,
-      "endMs": 25287
+      "startMs": 49667,
+      "endMs": 49994
     },
     {
       "text": " SFC",
-      "startMs": 25287,
-      "endMs": 25573
+      "startMs": 49994,
+      "endMs": 50321
     },
     {
       "text": " /SCANNOW.",
-      "startMs": 25573,
-      "endMs": 26146
+      "startMs": 50321,
+      "endMs": 50975
     },
     {
       "text": " Let",
-      "startMs": 26146,
-      "endMs": 26433,
+      "startMs": 50975,
+      "endMs": 51302,
       "pageBreakAfter": true
     },
     {
       "text": " us",
-      "startMs": 26433,
-      "endMs": 26672
+      "startMs": 51302,
+      "endMs": 51574
     },
     {
       "text": " look",
-      "startMs": 26672,
-      "endMs": 27006
+      "startMs": 51574,
+      "endMs": 51956
     },
     {
       "text": " at",
-      "startMs": 27006,
-      "endMs": 27245
+      "startMs": 51956,
+      "endMs": 52229
     },
     {
       "text": " the",
-      "startMs": 27245,
-      "endMs": 27531,
+      "startMs": 52229,
+      "endMs": 52556,
       "pageBreakAfter": true
     },
     {
       "text": " code.",
-      "startMs": 27531,
-      "endMs": 27913,
+      "startMs": 52556,
+      "endMs": 53633,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Restart",
+      "startMs": 54167,
+      "endMs": 54602
+    },
+    {
+      "text": " Windows.",
+      "startMs": 54602,
+      "endMs": 55081
+    },
+    {
+      "text": " After",
+      "startMs": 55081,
+      "endMs": 55430
+    },
+    {
+      "text": " the",
+      "startMs": 55430,
+      "endMs": 55691,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " commands",
+      "startMs": 55691,
+      "endMs": 56170
+    },
+    {
+      "text": " finish,",
+      "startMs": 56170,
+      "endMs": 56606
+    },
+    {
+      "text": " restart",
+      "startMs": 56606,
+      "endMs": 57041
+    },
+    {
+      "text": " Windows",
+      "startMs": 57041,
+      "endMs": 57477,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " 11",
+      "startMs": 57477,
+      "endMs": 57695
+    },
+    {
+      "text": " and",
+      "startMs": 57695,
+      "endMs": 57956
+    },
+    {
+      "text": " check",
+      "startMs": 57956,
+      "endMs": 58304
+    },
+    {
+      "text": " whether",
+      "startMs": 58304,
+      "endMs": 58740,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " the",
+      "startMs": 58740,
+      "endMs": 59001
+    },
+    {
+      "text": " original",
+      "startMs": 59001,
+      "endMs": 59480
+    },
+    {
+      "text": " problem",
+      "startMs": 59480,
+      "endMs": 59916
+    },
+    {
+      "text": " has",
+      "startMs": 59916,
+      "endMs": 60177,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " improved.",
+      "startMs": 60177,
+      "endMs": 61567,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " What",
+      "startMs": 62100,
+      "endMs": 62393
+    },
+    {
+      "text": " the",
+      "startMs": 62393,
+      "endMs": 62645
+    },
+    {
+      "text": " SFC",
+      "startMs": 62645,
+      "endMs": 62897
+    },
+    {
+      "text": " result",
+      "startMs": 62897,
+      "endMs": 63274,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " means.",
+      "startMs": 63274,
+      "endMs": 63651
+    },
+    {
+      "text": " SFC",
+      "startMs": 63651,
+      "endMs": 63903
+    },
+    {
+      "text": " provides",
+      "startMs": 63903,
+      "endMs": 64364
+    },
+    {
+      "text": " a",
+      "startMs": 64364,
+      "endMs": 64531,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " useful",
+      "startMs": 64531,
+      "endMs": 64909
+    },
+    {
+      "text": " summary",
+      "startMs": 64909,
+      "endMs": 65328
+    },
+    {
+      "text": " at",
+      "startMs": 65328,
+      "endMs": 65538
+    },
+    {
+      "text": " the",
+      "startMs": 65538,
+      "endMs": 65789,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " end",
+      "startMs": 65789,
+      "endMs": 66041
+    },
+    {
+      "text": " of",
+      "startMs": 66041,
+      "endMs": 66250
+    },
+    {
+      "text": " the",
+      "startMs": 66250,
+      "endMs": 66502
+    },
+    {
+      "text": " scan.",
+      "startMs": 66502,
+      "endMs": 66837,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " The",
+      "startMs": 66837,
+      "endMs": 67089
+    },
+    {
+      "text": " wording",
+      "startMs": 67089,
+      "endMs": 67508
+    },
+    {
+      "text": " may",
+      "startMs": 67508,
+      "endMs": 67759
+    },
+    {
+      "text": " vary",
+      "startMs": 67759,
+      "endMs": 68053,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " slightly",
+      "startMs": 68053,
+      "endMs": 68514
+    },
+    {
+      "text": " by",
+      "startMs": 68514,
+      "endMs": 68724
+    },
+    {
+      "text": " Windows",
+      "startMs": 68724,
+      "endMs": 69143
+    },
+    {
+      "text": " version,",
+      "startMs": 69143,
+      "endMs": 69604,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " but",
+      "startMs": 69604,
+      "endMs": 69855
+    },
+    {
+      "text": " the",
+      "startMs": 69855,
+      "endMs": 70107
+    },
+    {
+      "text": " main",
+      "startMs": 70107,
+      "endMs": 70400
+    },
+    {
+      "text": " outcomes",
+      "startMs": 70400,
+      "endMs": 70862,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " are",
+      "startMs": 70862,
+      "endMs": 71113
+    },
+    {
+      "text": " consistent.",
+      "startMs": 71113,
+      "endMs": 72567,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " What",
+      "startMs": 73100,
+      "endMs": 73347
+    },
+    {
+      "text": " to",
+      "startMs": 73347,
+      "endMs": 73524
+    },
+    {
+      "text": " do",
+      "startMs": 73524,
+      "endMs": 73700
+    },
+    {
+      "text": " when",
+      "startMs": 73700,
+      "endMs": 73947,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " sfc",
+      "startMs": 73947,
+      "endMs": 74159
+    },
+    {
+      "text": " /scannow",
+      "startMs": 74159,
+      "endMs": 74547
+    },
+    {
+      "text": " cannot",
+      "startMs": 74547,
+      "endMs": 74865
+    },
+    {
+      "text": " fix",
+      "startMs": 74865,
+      "endMs": 75076,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " corrupted",
+      "startMs": 75076,
+      "endMs": 75500
+    },
+    {
+      "text": " files.",
+      "startMs": 75500,
+      "endMs": 75818
+    },
+    {
+      "text": " The",
+      "startMs": 75818,
+      "endMs": 76029
+    },
+    {
+      "text": " message",
+      "startMs": 76029,
+      "endMs": 76382,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " “Windows",
+      "startMs": 76382,
+      "endMs": 76771
+    },
+    {
+      "text": " Resource",
+      "startMs": 76771,
+      "endMs": 77159
+    },
+    {
+      "text": " Protection",
+      "startMs": 77159,
+      "endMs": 77618
+    },
+    {
+      "text": " found",
+      "startMs": 77618,
+      "endMs": 77900,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " corrupt",
+      "startMs": 77900,
+      "endMs": 78253
+    },
+    {
+      "text": " files",
+      "startMs": 78253,
+      "endMs": 78535
+    },
+    {
+      "text": " but",
+      "startMs": 78535,
+      "endMs": 78747
+    },
+    {
+      "text": " was",
+      "startMs": 78747,
+      "endMs": 78959,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " unable",
+      "startMs": 78959,
+      "endMs": 79276
+    },
+    {
+      "text": " to",
+      "startMs": 79276,
+      "endMs": 79453
+    },
+    {
+      "text": " fix",
+      "startMs": 79453,
+      "endMs": 79665
+    },
+    {
+      "text": " some",
+      "startMs": 79665,
+      "endMs": 79912,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " of",
+      "startMs": 79912,
+      "endMs": 80088
+    },
+    {
+      "text": " them”",
+      "startMs": 80088,
+      "endMs": 80371
+    },
+    {
+      "text": " does",
+      "startMs": 80371,
+      "endMs": 80618
+    },
+    {
+      "text": " not",
+      "startMs": 80618,
+      "endMs": 80829,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " necessarily",
+      "startMs": 80829,
+      "endMs": 81324
+    },
+    {
+      "text": " mean",
+      "startMs": 81324,
+      "endMs": 81571
+    },
+    {
+      "text": " that",
+      "startMs": 81571,
+      "endMs": 81818
+    },
+    {
+      "text": " Windows",
+      "startMs": 81818,
+      "endMs": 82171,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " cannot",
+      "startMs": 82171,
+      "endMs": 82488
+    },
+    {
+      "text": " be…",
+      "startMs": 82488,
+      "endMs": 83567,
       "pageBreakAfter": true
     },
     {
       "text": " Read",
-      "startMs": 28167,
-      "endMs": 28452
+      "startMs": 84100,
+      "endMs": 84470
     },
     {
       "text": " the",
-      "startMs": 28452,
-      "endMs": 28697
+      "startMs": 84470,
+      "endMs": 84787
     },
     {
       "text": " full",
-      "startMs": 28697,
-      "endMs": 28982
+      "startMs": 84787,
+      "endMs": 85157
     },
     {
       "text": " article.",
-      "startMs": 28982,
-      "endMs": 29430,
+      "startMs": 85157,
+      "endMs": 85738,
       "pageBreakAfter": true
     },
     {
       "text": " New",
-      "startMs": 29430,
-      "endMs": 29675
+      "startMs": 85738,
+      "endMs": 86055
     },
     {
       "text": " posts",
-      "startMs": 29675,
-      "endMs": 30001
+      "startMs": 86055,
+      "endMs": 86478
     },
     {
       "text": " every",
-      "startMs": 30001,
-      "endMs": 30327
+      "startMs": 86478,
+      "endMs": 86901
     },
     {
       "text": " week",
-      "startMs": 30327,
-      "endMs": 30612,
+      "startMs": 86901,
+      "endMs": 87271,
       "pageBreakAfter": true
     },
     {
       "text": " on",
-      "startMs": 30612,
-      "endMs": 30816
+      "startMs": 87271,
+      "endMs": 87535
     },
     {
       "text": " the",
-      "startMs": 30816,
-      "endMs": 31061
+      "startMs": 87535,
+      "endMs": 87852
     },
     {
       "text": " blog.",
-      "startMs": 31061,
-      "endMs": 31387,
+      "startMs": 87852,
+      "endMs": 89067,
       "pageBreakAfter": true
     }
   ],

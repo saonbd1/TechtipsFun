@@ -10,1133 +10,1198 @@
     "Beginner Guide"
   ],
   "url": "https://www.techtips.fun/blog/windows-11-no-sound-after-update/",
-  "theme": "github-dark",
-  "durationInFrames": 930,
   "scenes": [
     {
       "type": "title",
       "kicker": "PC Troubleshooting",
       "title": "Windows 11 No Sound After Update? 7 Ways to Get It Back",
       "subtitle": "Windows 11 has no sound after an update? Run 7 fixes, from the output device to a driver…",
-      "durationInFrames": 105
+      "image": {
+        "src": "post-media/windows-11-no-sound-after-update/01-windows-11-no-sound-after-update.webp",
+        "width": 1536,
+        "height": 1024
+      },
+      "durationInFrames": 183
     },
     {
       "type": "point",
       "kicker": "PC Troubleshooting",
       "heading": "Before You Start",
       "body": "Save your open work. Test your speakers or headphones on another device. If the sound works on the other device, continue with Fix 1.",
-      "durationInFrames": 120
+      "durationInFrames": 330
     },
     {
       "type": "point",
       "kicker": "PC Troubleshooting",
       "heading": "Fix 1: Select the Output Device and the Volume",
-      "body": "Windows can select the wrong output device after an update. Windows can also set the volume of one app to zero. Open Settings. Select System > Sound.",
-      "durationInFrames": 120
+      "body": "Windows can select the wrong output device after an update. Windows can also set the volume of one app to…",
+      "image": {
+        "src": "post-media/windows-11-no-sound-after-update/02-windows-11-no-sound-fix1-output-device.webp",
+        "width": 1332,
+        "height": 756
+      },
+      "durationInFrames": 366
     },
     {
       "type": "point",
       "kicker": "PC Troubleshooting",
       "heading": "Fix 2: Run the Audio Troubleshooter",
-      "body": "Windows has a troubleshooter that repairs common sound errors. The Get Help app contains the same troubleshooter. Open Settings.",
-      "durationInFrames": 120
+      "body": "Windows has a troubleshooter that repairs common sound errors. The Get Help app contains the same…",
+      "image": {
+        "src": "post-media/windows-11-no-sound-after-update/03-windows-11-no-sound-fix2-troubleshooter.webp",
+        "width": 1332,
+        "height": 756
+      },
+      "durationInFrames": 332
     },
     {
       "type": "point",
       "kicker": "PC Troubleshooting",
       "heading": "Fix 3: Restart the Audio Services",
-      "body": "Every sound on Windows runs through two services: Windows Audio and Windows Audio Endpoint Builder. Without these services, the sound stops.",
-      "durationInFrames": 120
+      "body": "Every sound on Windows runs through two services: Windows Audio and Windows Audio Endpoint Builder.",
+      "image": {
+        "src": "post-media/windows-11-no-sound-after-update/04-windows-11-no-sound-fix3-audio-services.webp",
+        "width": 1366,
+        "height": 765
+      },
+      "durationInFrames": 320
     },
     {
       "type": "point",
       "kicker": "PC Troubleshooting",
       "heading": "Fix 4: Turn Off Audio Enhancements and Spatial Sound",
       "body": "Audio enhancements can stop the sound after a driver update. Spatial sound can also block the output. Open Settings. Select System > Sound.",
-      "durationInFrames": 120
+      "durationInFrames": 330
     },
     {
       "type": "point",
       "kicker": "PC Troubleshooting",
       "heading": "Fix 5: Roll Back the Audio Driver",
-      "body": "The update can install a faulty driver. Windows stores the earlier driver on the computer. The rollback restores this driver.",
-      "durationInFrames": 120
+      "body": "The update can install a faulty driver. Windows stores the earlier driver on the computer.",
+      "image": {
+        "src": "post-media/windows-11-no-sound-after-update/05-windows-11-no-sound-fix5-device-manager.webp",
+        "width": 1366,
+        "height": 768
+      },
+      "durationInFrames": 332
+    },
+    {
+      "type": "point",
+      "kicker": "PC Troubleshooting",
+      "heading": "Fix 6: Reinstall the Audio Driver",
+      "body": "Windows installs a new driver after the restart. The driver from the computer manufacturer can work better than the Windows driver.",
+      "durationInFrames": 330
     },
     {
       "type": "outro",
       "heading": "Read the full article",
       "body": "New posts every week on the blog.",
       "url": "techtips.fun",
-      "durationInFrames": 105
+      "durationInFrames": 165
     }
   ],
+  "theme": "github-dark",
+  "durationInFrames": 2688,
   "captions": [
     {
       "text": " Windows",
-      "startMs": 0,
-      "endMs": 258
+      "startMs": 500,
+      "endMs": 876
     },
     {
       "text": " 11",
-      "startMs": 258,
-      "endMs": 386
+      "startMs": 876,
+      "endMs": 1064
     },
     {
       "text": " has",
-      "startMs": 386,
-      "endMs": 541
+      "startMs": 1064,
+      "endMs": 1290
     },
     {
       "text": " no",
-      "startMs": 541,
-      "endMs": 670,
+      "startMs": 1290,
+      "endMs": 1478,
       "pageBreakAfter": true
     },
     {
       "text": " sound",
-      "startMs": 670,
-      "endMs": 876
+      "startMs": 1478,
+      "endMs": 1778
     },
     {
       "text": " after",
-      "startMs": 876,
-      "endMs": 1082
+      "startMs": 1778,
+      "endMs": 2079
     },
     {
       "text": " an",
-      "startMs": 1082,
-      "endMs": 1211
+      "startMs": 2079,
+      "endMs": 2267
     },
     {
       "text": " update?",
-      "startMs": 1211,
-      "endMs": 1468,
+      "startMs": 2267,
+      "endMs": 2643,
       "pageBreakAfter": true
     },
     {
       "text": " Run",
-      "startMs": 1468,
-      "endMs": 1623
+      "startMs": 2643,
+      "endMs": 2869
     },
     {
       "text": " 7",
-      "startMs": 1623,
-      "endMs": 1726
+      "startMs": 2869,
+      "endMs": 3019
     },
     {
       "text": " fixes,",
-      "startMs": 1726,
-      "endMs": 1958
+      "startMs": 3019,
+      "endMs": 3358
     },
     {
       "text": " from",
-      "startMs": 1958,
-      "endMs": 2138,
+      "startMs": 3358,
+      "endMs": 3621,
       "pageBreakAfter": true
     },
     {
       "text": " the",
-      "startMs": 2138,
-      "endMs": 2293
+      "startMs": 3621,
+      "endMs": 3846
     },
     {
       "text": " output",
-      "startMs": 2293,
-      "endMs": 2524
+      "startMs": 3846,
+      "endMs": 4185
     },
     {
       "text": " device",
-      "startMs": 2524,
-      "endMs": 2756
+      "startMs": 4185,
+      "endMs": 4523
     },
     {
       "text": " to",
-      "startMs": 2756,
-      "endMs": 2885,
+      "startMs": 4523,
+      "endMs": 4711,
       "pageBreakAfter": true
     },
     {
       "text": " a",
-      "startMs": 2885,
-      "endMs": 2988
+      "startMs": 4711,
+      "endMs": 4862
     },
     {
       "text": " driver",
-      "startMs": 2988,
-      "endMs": 3220,
+      "startMs": 4862,
+      "endMs": 6067,
       "pageBreakAfter": true
     },
     {
       "text": " Before",
-      "startMs": 3500,
-      "endMs": 3661
+      "startMs": 6600,
+      "endMs": 7019
     },
     {
       "text": " You",
-      "startMs": 3661,
-      "endMs": 3768
+      "startMs": 7019,
+      "endMs": 7299
     },
     {
       "text": " Start.",
-      "startMs": 3768,
-      "endMs": 3929
+      "startMs": 7299,
+      "endMs": 7718
     },
     {
       "text": " Save",
-      "startMs": 3929,
-      "endMs": 4054,
+      "startMs": 7718,
+      "endMs": 8045,
       "pageBreakAfter": true
     },
     {
       "text": " your",
-      "startMs": 4054,
-      "endMs": 4179
+      "startMs": 8045,
+      "endMs": 8371
     },
     {
       "text": " open",
-      "startMs": 4179,
-      "endMs": 4304
+      "startMs": 8371,
+      "endMs": 8697
     },
     {
       "text": " work.",
-      "startMs": 4304,
-      "endMs": 4447
+      "startMs": 8697,
+      "endMs": 9070
     },
     {
       "text": " Test",
-      "startMs": 4447,
-      "endMs": 4572,
+      "startMs": 9070,
+      "endMs": 9396,
       "pageBreakAfter": true
     },
     {
       "text": " your",
-      "startMs": 4572,
-      "endMs": 4697
+      "startMs": 9396,
+      "endMs": 9722
     },
     {
       "text": " speakers",
-      "startMs": 4697,
-      "endMs": 4893
+      "startMs": 9722,
+      "endMs": 10235
     },
     {
       "text": " or",
-      "startMs": 4893,
-      "endMs": 4983
+      "startMs": 10235,
+      "endMs": 10468
     },
     {
       "text": " headphones",
-      "startMs": 4983,
-      "endMs": 5215,
+      "startMs": 10468,
+      "endMs": 11074,
       "pageBreakAfter": true
     },
     {
       "text": " on",
-      "startMs": 5215,
-      "endMs": 5304
+      "startMs": 11074,
+      "endMs": 11307
     },
     {
       "text": " another",
-      "startMs": 5304,
-      "endMs": 5483
+      "startMs": 11307,
+      "endMs": 11773
     },
     {
       "text": " device.",
-      "startMs": 5483,
-      "endMs": 5662
+      "startMs": 11773,
+      "endMs": 12239
     },
     {
       "text": " If",
-      "startMs": 5662,
-      "endMs": 5751,
+      "startMs": 12239,
+      "endMs": 12472,
       "pageBreakAfter": true
     },
     {
       "text": " the",
-      "startMs": 5751,
-      "endMs": 5858
+      "startMs": 12472,
+      "endMs": 12751
     },
     {
       "text": " sound",
-      "startMs": 5858,
-      "endMs": 6001
+      "startMs": 12751,
+      "endMs": 13124
     },
     {
       "text": " works",
-      "startMs": 6001,
-      "endMs": 6144
+      "startMs": 13124,
+      "endMs": 13497
     },
     {
       "text": " on",
-      "startMs": 6144,
-      "endMs": 6233,
+      "startMs": 13497,
+      "endMs": 13730,
       "pageBreakAfter": true
     },
     {
       "text": " the",
-      "startMs": 6233,
-      "endMs": 6340
+      "startMs": 13730,
+      "endMs": 14010
     },
     {
       "text": " other",
-      "startMs": 6340,
-      "endMs": 6483
+      "startMs": 14010,
+      "endMs": 14383
     },
     {
       "text": " device,",
-      "startMs": 6483,
-      "endMs": 6662
+      "startMs": 14383,
+      "endMs": 14849
     },
     {
       "text": " continue",
-      "startMs": 6662,
-      "endMs": 6858,
+      "startMs": 14849,
+      "endMs": 15361,
       "pageBreakAfter": true
     },
     {
       "text": " with",
-      "startMs": 6858,
-      "endMs": 6983
+      "startMs": 15361,
+      "endMs": 15687
     },
     {
       "text": " Fix",
-      "startMs": 6983,
-      "endMs": 7091
+      "startMs": 15687,
+      "endMs": 15967
     },
     {
       "text": " 1.",
-      "startMs": 7091,
-      "endMs": 7180,
+      "startMs": 15967,
+      "endMs": 17067,
       "pageBreakAfter": true
     },
     {
       "text": " Fix",
-      "startMs": 7500,
-      "endMs": 7582
+      "startMs": 17600,
+      "endMs": 17904
     },
     {
       "text": " 1:",
-      "startMs": 7582,
-      "endMs": 7650
+      "startMs": 17904,
+      "endMs": 18158
     },
     {
       "text": " Select",
-      "startMs": 7650,
-      "endMs": 7773
+      "startMs": 18158,
+      "endMs": 18614
     },
     {
       "text": " the",
-      "startMs": 7773,
-      "endMs": 7854,
+      "startMs": 18614,
+      "endMs": 18918,
       "pageBreakAfter": true
     },
     {
       "text": " Output",
-      "startMs": 7854,
-      "endMs": 7977
+      "startMs": 18918,
+      "endMs": 19375
     },
     {
       "text": " Device",
-      "startMs": 7977,
-      "endMs": 8100
+      "startMs": 19375,
+      "endMs": 19831
     },
     {
       "text": " and",
-      "startMs": 8100,
-      "endMs": 8181
+      "startMs": 19831,
+      "endMs": 20135
     },
     {
       "text": " the",
-      "startMs": 8181,
-      "endMs": 8263,
+      "startMs": 20135,
+      "endMs": 20439,
       "pageBreakAfter": true
     },
     {
       "text": " Volume.",
-      "startMs": 8263,
-      "endMs": 8400
+      "startMs": 20439,
+      "endMs": 20946
     },
     {
       "text": " Windows",
-      "startMs": 8400,
-      "endMs": 8536
+      "startMs": 20946,
+      "endMs": 21454
     },
     {
       "text": " can",
-      "startMs": 8536,
-      "endMs": 8618
+      "startMs": 21454,
+      "endMs": 21758
     },
     {
       "text": " select",
-      "startMs": 8618,
-      "endMs": 8740,
+      "startMs": 21758,
+      "endMs": 22214,
       "pageBreakAfter": true
     },
     {
       "text": " the",
-      "startMs": 8740,
-      "endMs": 8822
+      "startMs": 22214,
+      "endMs": 22518
     },
     {
       "text": " wrong",
-      "startMs": 8822,
-      "endMs": 8931
+      "startMs": 22518,
+      "endMs": 22924
     },
     {
       "text": " output",
-      "startMs": 8931,
-      "endMs": 9054
+      "startMs": 22924,
+      "endMs": 23380
     },
     {
       "text": " device",
-      "startMs": 9054,
-      "endMs": 9176,
+      "startMs": 23380,
+      "endMs": 23837,
       "pageBreakAfter": true
     },
     {
       "text": " after",
-      "startMs": 9176,
-      "endMs": 9285
+      "startMs": 23837,
+      "endMs": 24242
     },
     {
       "text": " an",
-      "startMs": 9285,
-      "endMs": 9354
+      "startMs": 24242,
+      "endMs": 24496
     },
     {
       "text": " update.",
-      "startMs": 9354,
-      "endMs": 9490
+      "startMs": 24496,
+      "endMs": 25003
     },
     {
       "text": " Windows",
-      "startMs": 9490,
-      "endMs": 9626,
+      "startMs": 25003,
+      "endMs": 25510,
       "pageBreakAfter": true
     },
     {
       "text": " can",
-      "startMs": 9626,
-      "endMs": 9708
+      "startMs": 25510,
+      "endMs": 25814
     },
     {
       "text": " also",
-      "startMs": 9708,
-      "endMs": 9803
+      "startMs": 25814,
+      "endMs": 26169
     },
     {
       "text": " set",
-      "startMs": 9803,
-      "endMs": 9885
+      "startMs": 26169,
+      "endMs": 26473
     },
     {
       "text": " the",
-      "startMs": 9885,
-      "endMs": 9967,
+      "startMs": 26473,
+      "endMs": 26777,
       "pageBreakAfter": true
     },
     {
       "text": " volume",
-      "startMs": 9967,
-      "endMs": 10090
+      "startMs": 26777,
+      "endMs": 27234
     },
     {
       "text": " of",
-      "startMs": 10090,
-      "endMs": 10158
+      "startMs": 27234,
+      "endMs": 27487
     },
     {
       "text": " one",
-      "startMs": 10158,
-      "endMs": 10240
+      "startMs": 27487,
+      "endMs": 27792
     },
     {
       "text": " app",
-      "startMs": 10240,
-      "endMs": 10321,
+      "startMs": 27792,
+      "endMs": 28096,
       "pageBreakAfter": true
     },
     {
-      "text": " to",
-      "startMs": 10321,
-      "endMs": 10389
-    },
-    {
-      "text": " zero.",
-      "startMs": 10389,
-      "endMs": 10499
-    },
-    {
-      "text": " Open",
-      "startMs": 10499,
-      "endMs": 10594
-    },
-    {
-      "text": " Settings.",
-      "startMs": 10594,
-      "endMs": 10757,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " Select",
-      "startMs": 10757,
-      "endMs": 10880
-    },
-    {
-      "text": " System",
-      "startMs": 10880,
-      "endMs": 11003
-    },
-    {
-      "text": " >",
-      "startMs": 11003,
-      "endMs": 11057
-    },
-    {
-      "text": " Sound.",
-      "startMs": 11057,
-      "endMs": 11180,
+      "text": " to…",
+      "startMs": 28096,
+      "endMs": 29267,
       "pageBreakAfter": true
     },
     {
       "text": " Fix",
-      "startMs": 11500,
-      "endMs": 11602
+      "startMs": 29800,
+      "endMs": 30122
     },
     {
       "text": " 2:",
-      "startMs": 11602,
-      "endMs": 11687
+      "startMs": 30122,
+      "endMs": 30391
     },
     {
       "text": " Run",
-      "startMs": 11687,
-      "endMs": 11790
+      "startMs": 30391,
+      "endMs": 30713
     },
     {
       "text": " the",
-      "startMs": 11790,
-      "endMs": 11892,
+      "startMs": 30713,
+      "endMs": 31035,
       "pageBreakAfter": true
     },
     {
       "text": " Audio",
-      "startMs": 11892,
-      "endMs": 12028
+      "startMs": 31035,
+      "endMs": 31465
     },
     {
       "text": " Troubleshooter.",
-      "startMs": 12028,
-      "endMs": 12335
+      "startMs": 31465,
+      "endMs": 32431
     },
     {
       "text": " Windows",
-      "startMs": 12335,
-      "endMs": 12505
+      "startMs": 32431,
+      "endMs": 32969
     },
     {
       "text": " has",
-      "startMs": 12505,
-      "endMs": 12607,
+      "startMs": 32969,
+      "endMs": 33291,
       "pageBreakAfter": true
     },
     {
       "text": " a",
-      "startMs": 12607,
-      "endMs": 12676
+      "startMs": 33291,
+      "endMs": 33506
     },
     {
       "text": " troubleshooter",
-      "startMs": 12676,
-      "endMs": 12965
+      "startMs": 33506,
+      "endMs": 34419
     },
     {
       "text": " that",
-      "startMs": 12965,
-      "endMs": 13084
+      "startMs": 34419,
+      "endMs": 34794
     },
     {
       "text": " repairs",
-      "startMs": 13084,
-      "endMs": 13255,
+      "startMs": 34794,
+      "endMs": 35331,
       "pageBreakAfter": true
     },
     {
       "text": " common",
-      "startMs": 13255,
-      "endMs": 13408
+      "startMs": 35331,
+      "endMs": 35815
     },
     {
       "text": " sound",
-      "startMs": 13408,
-      "endMs": 13544
+      "startMs": 35815,
+      "endMs": 36244
     },
     {
       "text": " errors.",
-      "startMs": 13544,
-      "endMs": 13715
+      "startMs": 36244,
+      "endMs": 36781
     },
     {
       "text": " The",
-      "startMs": 13715,
-      "endMs": 13817,
+      "startMs": 36781,
+      "endMs": 37104,
       "pageBreakAfter": true
     },
     {
       "text": " Get",
-      "startMs": 13817,
-      "endMs": 13919
+      "startMs": 37104,
+      "endMs": 37426
     },
     {
       "text": " Help",
-      "startMs": 13919,
-      "endMs": 14039
+      "startMs": 37426,
+      "endMs": 37802
     },
     {
       "text": " app",
-      "startMs": 14039,
-      "endMs": 14141
+      "startMs": 37802,
+      "endMs": 38124
     },
     {
       "text": " contains",
-      "startMs": 14141,
-      "endMs": 14328,
+      "startMs": 38124,
+      "endMs": 38715,
       "pageBreakAfter": true
     },
     {
       "text": " the",
-      "startMs": 14328,
-      "endMs": 14430
+      "startMs": 38715,
+      "endMs": 39037
     },
     {
-      "text": " same",
-      "startMs": 14430,
-      "endMs": 14550
-    },
-    {
-      "text": " troubleshooter.",
-      "startMs": 14550,
-      "endMs": 14856
-    },
-    {
-      "text": " Open",
-      "startMs": 14856,
-      "endMs": 14976,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " Settings.",
-      "startMs": 14976,
-      "endMs": 15180,
+      "text": " same…",
+      "startMs": 39037,
+      "endMs": 40333,
       "pageBreakAfter": true
     },
     {
       "text": " Fix",
-      "startMs": 15500,
-      "endMs": 15596
+      "startMs": 40867,
+      "endMs": 41181
     },
     {
       "text": " 3:",
-      "startMs": 15596,
-      "endMs": 15676
+      "startMs": 41181,
+      "endMs": 41443
     },
     {
       "text": " Restart",
-      "startMs": 15676,
-      "endMs": 15836
+      "startMs": 41443,
+      "endMs": 41966
     },
     {
       "text": " the",
-      "startMs": 15836,
-      "endMs": 15932,
+      "startMs": 41966,
+      "endMs": 42280,
       "pageBreakAfter": true
     },
     {
       "text": " Audio",
-      "startMs": 15932,
-      "endMs": 16060
+      "startMs": 42280,
+      "endMs": 42699
     },
     {
       "text": " Services.",
-      "startMs": 16060,
-      "endMs": 16252
+      "startMs": 42699,
+      "endMs": 43327
     },
     {
       "text": " Every",
-      "startMs": 16252,
-      "endMs": 16380
+      "startMs": 43327,
+      "endMs": 43746
     },
     {
       "text": " sound",
-      "startMs": 16380,
-      "endMs": 16508,
+      "startMs": 43746,
+      "endMs": 44165,
       "pageBreakAfter": true
     },
     {
       "text": " on",
-      "startMs": 16508,
-      "endMs": 16588
+      "startMs": 44165,
+      "endMs": 44427
     },
     {
       "text": " Windows",
-      "startMs": 16588,
-      "endMs": 16748
+      "startMs": 44427,
+      "endMs": 44950
     },
     {
       "text": " runs",
-      "startMs": 16748,
-      "endMs": 16860
+      "startMs": 44950,
+      "endMs": 45317
     },
     {
       "text": " through",
-      "startMs": 16860,
-      "endMs": 17020,
+      "startMs": 45317,
+      "endMs": 45840,
       "pageBreakAfter": true
     },
     {
       "text": " two",
-      "startMs": 17020,
-      "endMs": 17116
+      "startMs": 45840,
+      "endMs": 46154
     },
     {
       "text": " services:",
-      "startMs": 17116,
-      "endMs": 17308
+      "startMs": 46154,
+      "endMs": 46783
     },
     {
       "text": " Windows",
-      "startMs": 17308,
-      "endMs": 17468
+      "startMs": 46783,
+      "endMs": 47306
     },
     {
       "text": " Audio",
-      "startMs": 17468,
-      "endMs": 17596,
+      "startMs": 47306,
+      "endMs": 47725,
       "pageBreakAfter": true
     },
     {
       "text": " and",
-      "startMs": 17596,
-      "endMs": 17692
+      "startMs": 47725,
+      "endMs": 48039
     },
     {
       "text": " Windows",
-      "startMs": 17692,
-      "endMs": 17852
+      "startMs": 48039,
+      "endMs": 48563
     },
     {
       "text": " Audio",
-      "startMs": 17852,
-      "endMs": 17980
+      "startMs": 48563,
+      "endMs": 48982
     },
     {
       "text": " Endpoint",
-      "startMs": 17980,
-      "endMs": 18156,
+      "startMs": 48982,
+      "endMs": 49557,
       "pageBreakAfter": true
     },
     {
       "text": " Builder.",
-      "startMs": 18156,
-      "endMs": 18332
-    },
-    {
-      "text": " Without",
-      "startMs": 18332,
-      "endMs": 18492
-    },
-    {
-      "text": " these",
-      "startMs": 18492,
-      "endMs": 18620
-    },
-    {
-      "text": " services,",
-      "startMs": 18620,
-      "endMs": 18812,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " the",
-      "startMs": 18812,
-      "endMs": 18908
-    },
-    {
-      "text": " sound",
-      "startMs": 18908,
-      "endMs": 19036
-    },
-    {
-      "text": " stops.",
-      "startMs": 19036,
-      "endMs": 19180,
+      "startMs": 49557,
+      "endMs": 51000,
       "pageBreakAfter": true
     },
     {
       "text": " Fix",
-      "startMs": 19500,
-      "endMs": 19586
+      "startMs": 51533,
+      "endMs": 51757
     },
     {
       "text": " 4:",
-      "startMs": 19586,
-      "endMs": 19657
+      "startMs": 51757,
+      "endMs": 51943
     },
     {
       "text": " Turn",
-      "startMs": 19657,
-      "endMs": 19757
+      "startMs": 51943,
+      "endMs": 52203
     },
     {
       "text": " Off",
-      "startMs": 19757,
-      "endMs": 19842,
+      "startMs": 52203,
+      "endMs": 52426,
       "pageBreakAfter": true
     },
     {
       "text": " Audio",
-      "startMs": 19842,
-      "endMs": 19956
+      "startMs": 52426,
+      "endMs": 52724
     },
     {
       "text": " Enhancements",
-      "startMs": 19956,
-      "endMs": 20170
+      "startMs": 52724,
+      "endMs": 53282
     },
     {
       "text": " and",
-      "startMs": 20170,
-      "endMs": 20256
+      "startMs": 53282,
+      "endMs": 53505
     },
     {
       "text": " Spatial",
-      "startMs": 20256,
-      "endMs": 20399,
+      "startMs": 53505,
+      "endMs": 53878,
       "pageBreakAfter": true
     },
     {
       "text": " Sound.",
-      "startMs": 20399,
-      "endMs": 20527
+      "startMs": 53878,
+      "endMs": 54212
     },
     {
       "text": " Audio",
-      "startMs": 20527,
-      "endMs": 20641
+      "startMs": 54212,
+      "endMs": 54510
     },
     {
       "text": " enhancements",
-      "startMs": 20641,
-      "endMs": 20855
+      "startMs": 54510,
+      "endMs": 55068
     },
     {
       "text": " can",
-      "startMs": 20855,
-      "endMs": 20941,
+      "startMs": 55068,
+      "endMs": 55291,
       "pageBreakAfter": true
     },
     {
       "text": " stop",
-      "startMs": 20941,
-      "endMs": 21040
+      "startMs": 55291,
+      "endMs": 55552
     },
     {
       "text": " the",
-      "startMs": 21040,
-      "endMs": 21126
+      "startMs": 55552,
+      "endMs": 55775
     },
     {
       "text": " sound",
-      "startMs": 21126,
-      "endMs": 21240
+      "startMs": 55775,
+      "endMs": 56073
     },
     {
       "text": " after",
-      "startMs": 21240,
-      "endMs": 21354,
+      "startMs": 56073,
+      "endMs": 56371,
       "pageBreakAfter": true
     },
     {
       "text": " a",
-      "startMs": 21354,
-      "endMs": 21411
+      "startMs": 56371,
+      "endMs": 56519
     },
     {
       "text": " driver",
-      "startMs": 21411,
-      "endMs": 21540
+      "startMs": 56519,
+      "endMs": 56854
     },
     {
       "text": " update.",
-      "startMs": 21540,
-      "endMs": 21682
+      "startMs": 56854,
+      "endMs": 57226
     },
     {
       "text": " Spatial",
-      "startMs": 21682,
-      "endMs": 21825,
+      "startMs": 57226,
+      "endMs": 57598,
       "pageBreakAfter": true
     },
     {
       "text": " sound",
-      "startMs": 21825,
-      "endMs": 21939
+      "startMs": 57598,
+      "endMs": 57896
     },
     {
       "text": " can",
-      "startMs": 21939,
-      "endMs": 22025
+      "startMs": 57896,
+      "endMs": 58119
     },
     {
       "text": " also",
-      "startMs": 22025,
-      "endMs": 22124
+      "startMs": 58119,
+      "endMs": 58380
     },
     {
       "text": " block",
-      "startMs": 22124,
-      "endMs": 22239,
+      "startMs": 58380,
+      "endMs": 58678,
       "pageBreakAfter": true
     },
     {
       "text": " the",
-      "startMs": 22239,
-      "endMs": 22324
+      "startMs": 58678,
+      "endMs": 58901
     },
     {
       "text": " output.",
-      "startMs": 22324,
-      "endMs": 22467
+      "startMs": 58901,
+      "endMs": 59273
     },
     {
       "text": " Open",
-      "startMs": 22467,
-      "endMs": 22567
+      "startMs": 59273,
+      "endMs": 59533
     },
     {
       "text": " Settings.",
-      "startMs": 22567,
-      "endMs": 22738,
+      "startMs": 59533,
+      "endMs": 59980,
       "pageBreakAfter": true
     },
     {
       "text": " Select",
-      "startMs": 22738,
-      "endMs": 22866
+      "startMs": 59980,
+      "endMs": 60315
     },
     {
       "text": " System",
-      "startMs": 22866,
-      "endMs": 22995
+      "startMs": 60315,
+      "endMs": 60650
     },
     {
       "text": " >",
-      "startMs": 22995,
-      "endMs": 23052
+      "startMs": 60650,
+      "endMs": 60798
     },
     {
       "text": " Sound.",
-      "startMs": 23052,
-      "endMs": 23180,
+      "startMs": 60798,
+      "endMs": 62000,
       "pageBreakAfter": true
     },
     {
       "text": " Fix",
-      "startMs": 23500,
-      "endMs": 23603
+      "startMs": 62533,
+      "endMs": 62875
     },
     {
       "text": " 5:",
-      "startMs": 23603,
-      "endMs": 23688
+      "startMs": 62875,
+      "endMs": 63159
     },
     {
       "text": " Roll",
-      "startMs": 23688,
-      "endMs": 23808
+      "startMs": 63159,
+      "endMs": 63557
     },
     {
       "text": " Back",
-      "startMs": 23808,
-      "endMs": 23928,
+      "startMs": 63557,
+      "endMs": 63955,
       "pageBreakAfter": true
     },
     {
       "text": " the",
-      "startMs": 23928,
-      "endMs": 24031
+      "startMs": 63955,
+      "endMs": 64296
     },
     {
       "text": " Audio",
-      "startMs": 24031,
-      "endMs": 24168
+      "startMs": 64296,
+      "endMs": 64751
     },
     {
       "text": " Driver.",
-      "startMs": 24168,
-      "endMs": 24339
+      "startMs": 64751,
+      "endMs": 65320
     },
     {
       "text": " The",
-      "startMs": 24339,
-      "endMs": 24441,
+      "startMs": 65320,
+      "endMs": 65661,
       "pageBreakAfter": true
     },
     {
       "text": " update",
-      "startMs": 24441,
-      "endMs": 24595
+      "startMs": 65661,
+      "endMs": 66173
     },
     {
       "text": " can",
-      "startMs": 24595,
-      "endMs": 24698
+      "startMs": 66173,
+      "endMs": 66514
     },
     {
       "text": " install",
-      "startMs": 24698,
-      "endMs": 24869
+      "startMs": 66514,
+      "endMs": 67082
     },
     {
       "text": " a",
-      "startMs": 24869,
-      "endMs": 24938,
+      "startMs": 67082,
+      "endMs": 67310,
       "pageBreakAfter": true
     },
     {
       "text": " faulty",
-      "startMs": 24938,
-      "endMs": 25092
+      "startMs": 67310,
+      "endMs": 67822
     },
     {
       "text": " driver.",
-      "startMs": 25092,
-      "endMs": 25263
+      "startMs": 67822,
+      "endMs": 68390
     },
     {
       "text": " Windows",
-      "startMs": 25263,
-      "endMs": 25434
+      "startMs": 68390,
+      "endMs": 68959
     },
     {
       "text": " stores",
-      "startMs": 25434,
-      "endMs": 25588,
+      "startMs": 68959,
+      "endMs": 69471,
       "pageBreakAfter": true
     },
     {
       "text": " the",
-      "startMs": 25588,
-      "endMs": 25691
+      "startMs": 69471,
+      "endMs": 69812
     },
     {
       "text": " earlier",
-      "startMs": 25691,
-      "endMs": 25862
+      "startMs": 69812,
+      "endMs": 70380
     },
     {
       "text": " driver",
-      "startMs": 25862,
-      "endMs": 26016
+      "startMs": 70380,
+      "endMs": 70892
     },
     {
       "text": " on",
-      "startMs": 26016,
-      "endMs": 26102,
+      "startMs": 70892,
+      "endMs": 71176,
       "pageBreakAfter": true
     },
     {
       "text": " the",
-      "startMs": 26102,
-      "endMs": 26204
+      "startMs": 71176,
+      "endMs": 71518
     },
     {
       "text": " computer.",
-      "startMs": 26204,
-      "endMs": 26410
-    },
-    {
-      "text": " The",
-      "startMs": 26410,
-      "endMs": 26512
-    },
-    {
-      "text": " rollback",
-      "startMs": 26512,
-      "endMs": 26701,
+      "startMs": 71518,
+      "endMs": 73067,
       "pageBreakAfter": true
     },
     {
-      "text": " restores",
-      "startMs": 26701,
-      "endMs": 26889
+      "text": " Fix",
+      "startMs": 73600,
+      "endMs": 73861
     },
     {
-      "text": " this",
-      "startMs": 26889,
-      "endMs": 27009
+      "text": " 6:",
+      "startMs": 73861,
+      "endMs": 74078
+    },
+    {
+      "text": " Reinstall",
+      "startMs": 74078,
+      "endMs": 74599
+    },
+    {
+      "text": " the",
+      "startMs": 74599,
+      "endMs": 74860,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Audio",
+      "startMs": 74860,
+      "endMs": 75207
+    },
+    {
+      "text": " Driver.",
+      "startMs": 75207,
+      "endMs": 75642
+    },
+    {
+      "text": " Windows",
+      "startMs": 75642,
+      "endMs": 76076
+    },
+    {
+      "text": " installs",
+      "startMs": 76076,
+      "endMs": 76554,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " a",
+      "startMs": 76554,
+      "endMs": 76728
+    },
+    {
+      "text": " new",
+      "startMs": 76728,
+      "endMs": 76988
+    },
+    {
+      "text": " driver",
+      "startMs": 76988,
+      "endMs": 77379
+    },
+    {
+      "text": " after",
+      "startMs": 77379,
+      "endMs": 77727,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " the",
+      "startMs": 77727,
+      "endMs": 77987
+    },
+    {
+      "text": " restart.",
+      "startMs": 77987,
+      "endMs": 78465
+    },
+    {
+      "text": " The",
+      "startMs": 78465,
+      "endMs": 78726
+    },
+    {
+      "text": " driver",
+      "startMs": 78726,
+      "endMs": 79117,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " from",
+      "startMs": 79117,
+      "endMs": 79421
+    },
+    {
+      "text": " the",
+      "startMs": 79421,
+      "endMs": 79681
+    },
+    {
+      "text": " computer",
+      "startMs": 79681,
+      "endMs": 80159
+    },
+    {
+      "text": " manufacturer",
+      "startMs": 80159,
+      "endMs": 80811,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " can",
+      "startMs": 80811,
+      "endMs": 81071
+    },
+    {
+      "text": " work",
+      "startMs": 81071,
+      "endMs": 81376
+    },
+    {
+      "text": " better",
+      "startMs": 81376,
+      "endMs": 81767
+    },
+    {
+      "text": " than",
+      "startMs": 81767,
+      "endMs": 82071,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " the",
+      "startMs": 82071,
+      "endMs": 82331
+    },
+    {
+      "text": " Windows",
+      "startMs": 82331,
+      "endMs": 82766
     },
     {
       "text": " driver.",
-      "startMs": 27009,
-      "endMs": 27180,
+      "startMs": 82766,
+      "endMs": 84067,
       "pageBreakAfter": true
     },
     {
       "text": " Read",
-      "startMs": 27500,
-      "endMs": 27785
+      "startMs": 84600,
+      "endMs": 84970
     },
     {
       "text": " the",
-      "startMs": 27785,
-      "endMs": 28030
+      "startMs": 84970,
+      "endMs": 85287
     },
     {
       "text": " full",
-      "startMs": 28030,
-      "endMs": 28315
+      "startMs": 85287,
+      "endMs": 85657
     },
     {
       "text": " article.",
-      "startMs": 28315,
-      "endMs": 28764,
+      "startMs": 85657,
+      "endMs": 86238,
       "pageBreakAfter": true
     },
     {
       "text": " New",
-      "startMs": 28764,
-      "endMs": 29008
+      "startMs": 86238,
+      "endMs": 86555
     },
     {
       "text": " posts",
-      "startMs": 29008,
-      "endMs": 29334
+      "startMs": 86555,
+      "endMs": 86978
     },
     {
       "text": " every",
-      "startMs": 29334,
-      "endMs": 29660
+      "startMs": 86978,
+      "endMs": 87401
     },
     {
       "text": " week",
-      "startMs": 29660,
-      "endMs": 29946,
+      "startMs": 87401,
+      "endMs": 87771,
       "pageBreakAfter": true
     },
     {
       "text": " on",
-      "startMs": 29946,
-      "endMs": 30149
+      "startMs": 87771,
+      "endMs": 88035
     },
     {
       "text": " the",
-      "startMs": 30149,
-      "endMs": 30394
+      "startMs": 88035,
+      "endMs": 88352
     },
     {
       "text": " blog.",
-      "startMs": 30394,
-      "endMs": 30720,
+      "startMs": 88352,
+      "endMs": 89567,
       "pageBreakAfter": true
     }
   ],

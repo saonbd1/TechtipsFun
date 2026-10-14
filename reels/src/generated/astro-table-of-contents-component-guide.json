@@ -10,22 +10,25 @@
     "Frontend"
   ],
   "url": "https://www.techtips.fun/blog/astro-table-of-contents-component-guide/",
-  "theme": "github-dark",
-  "durationInFrames": 830,
   "scenes": [
     {
       "type": "title",
       "kicker": "Web Development",
       "title": "How to Add an Accessible Table of Contents to an Astro Blog",
       "subtitle": "Build a reusable Astro table of contents component that creates stable heading links,…",
-      "durationInFrames": 105
+      "image": {
+        "src": "post-media/astro-table-of-contents-component-guide/01-astro-table-of-contents-hero.webp",
+        "width": 1600,
+        "height": 900
+      },
+      "durationInFrames": 183
     },
     {
       "type": "point",
       "kicker": "Web Development",
       "heading": "What you will build",
       "body": "The finished component will do four things: Read h2 and h3 elements inside the article content.",
-      "durationInFrames": 120
+      "durationInFrames": 273
     },
     {
       "type": "code",
@@ -159,7 +162,10 @@
           }
         }
       ],
-      "durationInFrames": 95
+      "stepDurations": [
+        182
+      ],
+      "durationInFrames": 182
     },
     {
       "type": "code",
@@ -314,7 +320,10 @@
           }
         }
       ],
-      "durationInFrames": 95
+      "stepDurations": [
+        182
+      ],
+      "durationInFrames": 182
     },
     {
       "type": "code",
@@ -484,7 +493,10 @@
           }
         }
       ],
-      "durationInFrames": 95
+      "stepDurations": [
+        182
+      ],
+      "durationInFrames": 182
     },
     {
       "type": "code",
@@ -659,707 +671,1138 @@
           }
         }
       ],
-      "durationInFrames": 95
+      "stepDurations": [
+        182
+      ],
+      "durationInFrames": 182
     },
     {
       "type": "point",
       "kicker": "Web Development",
       "heading": "Test your table of contents before publishing",
       "body": "Test at least one short post and one long post. A short post confirms that the component disappears cleanly when there are no h2 or h3 elements.",
-      "durationInFrames": 120
+      "durationInFrames": 330
+    },
+    {
+      "type": "point",
+      "kicker": "Web Development",
+      "heading": "The table of contents is empty",
+      "body": "Check that your content is inside the element marked with data-post-content. Then confirm that the article uses h2 or h3 headings.",
+      "durationInFrames": 330
+    },
+    {
+      "type": "point",
+      "kicker": "Web Development",
+      "heading": "A link opens the wrong section",
+      "body": "This usually happens when two headings get the same ID. Keep the unique-ID loop in place.",
+      "durationInFrames": 296
+    },
+    {
+      "type": "point",
+      "kicker": "Web Development",
+      "heading": "The article jumps behind the header",
+      "body": "Add scroll-margin-top to the target headings. Adjust the value to match the height of your header at the viewport sizes you support.",
+      "durationInFrames": 330
     },
     {
       "type": "outro",
       "heading": "Read the full article",
       "body": "New posts every week on the blog.",
       "url": "techtips.fun",
-      "durationInFrames": 105
+      "durationInFrames": 165
     }
   ],
+  "theme": "github-dark",
+  "durationInFrames": 2635,
   "captions": [
     {
       "text": " Build",
-      "startMs": 0,
-      "endMs": 230
+      "startMs": 500,
+      "endMs": 836
     },
     {
       "text": " a",
-      "startMs": 230,
-      "endMs": 345
+      "startMs": 836,
+      "endMs": 1004
     },
     {
       "text": " reusable",
-      "startMs": 345,
-      "endMs": 661
+      "startMs": 1004,
+      "endMs": 1465
     },
     {
       "text": " Astro",
-      "startMs": 661,
-      "endMs": 891,
+      "startMs": 1465,
+      "endMs": 1801,
       "pageBreakAfter": true
     },
     {
       "text": " table",
-      "startMs": 891,
-      "endMs": 1121
+      "startMs": 1801,
+      "endMs": 2137
     },
     {
       "text": " of",
-      "startMs": 1121,
-      "endMs": 1265
+      "startMs": 2137,
+      "endMs": 2346
     },
     {
       "text": " contents",
-      "startMs": 1265,
-      "endMs": 1581
+      "startMs": 2346,
+      "endMs": 2808
     },
     {
       "text": " component",
-      "startMs": 1581,
-      "endMs": 1926,
+      "startMs": 2808,
+      "endMs": 3312,
       "pageBreakAfter": true
     },
     {
       "text": " that",
-      "startMs": 1926,
-      "endMs": 2128
+      "startMs": 3312,
+      "endMs": 3605
     },
     {
       "text": " creates",
-      "startMs": 2128,
-      "endMs": 2415
+      "startMs": 3605,
+      "endMs": 4025
     },
     {
       "text": " stable",
-      "startMs": 2415,
-      "endMs": 2674
+      "startMs": 4025,
+      "endMs": 4403
     },
     {
       "text": " heading",
-      "startMs": 2674,
-      "endMs": 2961,
+      "startMs": 4403,
+      "endMs": 4822,
       "pageBreakAfter": true
     },
     {
       "text": " links,",
-      "startMs": 2961,
-      "endMs": 3220,
+      "startMs": 4822,
+      "endMs": 6067,
       "pageBreakAfter": true
     },
     {
       "text": " What",
-      "startMs": 3500,
-      "endMs": 3664
+      "startMs": 6600,
+      "endMs": 6943
     },
     {
       "text": " you",
-      "startMs": 3664,
-      "endMs": 3805
+      "startMs": 6943,
+      "endMs": 7238
     },
     {
       "text": " will",
-      "startMs": 3805,
-      "endMs": 3969
+      "startMs": 7238,
+      "endMs": 7581
     },
     {
       "text": " build.",
-      "startMs": 3969,
-      "endMs": 4180,
+      "startMs": 7581,
+      "endMs": 8022,
       "pageBreakAfter": true
     },
     {
       "text": " The",
-      "startMs": 4180,
-      "endMs": 4320
+      "startMs": 8022,
+      "endMs": 8317
     },
     {
       "text": " finished",
-      "startMs": 4320,
-      "endMs": 4578
+      "startMs": 8317,
+      "endMs": 8856
     },
     {
       "text": " component",
-      "startMs": 4578,
-      "endMs": 4859
+      "startMs": 8856,
+      "endMs": 9445
     },
     {
       "text": " will",
-      "startMs": 4859,
-      "endMs": 5024,
+      "startMs": 9445,
+      "endMs": 9788,
       "pageBreakAfter": true
     },
     {
       "text": " do",
-      "startMs": 5024,
-      "endMs": 5141
+      "startMs": 9788,
+      "endMs": 10033
     },
     {
       "text": " four",
-      "startMs": 5141,
-      "endMs": 5305
+      "startMs": 10033,
+      "endMs": 10376
     },
     {
       "text": " things:",
-      "startMs": 5305,
-      "endMs": 5539
+      "startMs": 10376,
+      "endMs": 10867
     },
     {
       "text": " Read",
-      "startMs": 5539,
-      "endMs": 5703,
+      "startMs": 10867,
+      "endMs": 11210,
       "pageBreakAfter": true
     },
     {
       "text": " h2",
-      "startMs": 5703,
-      "endMs": 5821
+      "startMs": 11210,
+      "endMs": 11455
     },
     {
       "text": " and",
-      "startMs": 5821,
-      "endMs": 5961
+      "startMs": 11455,
+      "endMs": 11750
     },
     {
       "text": " h3",
-      "startMs": 5961,
-      "endMs": 6078
+      "startMs": 11750,
+      "endMs": 11995
     },
     {
       "text": " elements",
-      "startMs": 6078,
-      "endMs": 6336,
+      "startMs": 11995,
+      "endMs": 12534,
       "pageBreakAfter": true
     },
     {
       "text": " inside",
-      "startMs": 6336,
-      "endMs": 6547
+      "startMs": 12534,
+      "endMs": 12976
     },
     {
       "text": " the",
-      "startMs": 6547,
-      "endMs": 6688
+      "startMs": 12976,
+      "endMs": 13270
     },
     {
       "text": " article",
-      "startMs": 6688,
-      "endMs": 6922
+      "startMs": 13270,
+      "endMs": 13761
     },
     {
       "text": " content.",
-      "startMs": 6922,
-      "endMs": 7180,
+      "startMs": 13761,
+      "endMs": 15167,
       "pageBreakAfter": true
     },
     {
       "text": " Start",
-      "startMs": 7500,
-      "endMs": 7774
+      "startMs": 15700,
+      "endMs": 16139
     },
     {
       "text": " with",
-      "startMs": 7774,
-      "endMs": 8014
+      "startMs": 16139,
+      "endMs": 16524
     },
     {
       "text": " a",
-      "startMs": 8014,
-      "endMs": 8151
+      "startMs": 16524,
+      "endMs": 16743
     },
     {
       "text": " shared",
-      "startMs": 8151,
-      "endMs": 8460,
+      "startMs": 16743,
+      "endMs": 17237,
       "pageBreakAfter": true
     },
     {
       "text": " article",
-      "startMs": 8460,
-      "endMs": 8802
+      "startMs": 17237,
+      "endMs": 17786
     },
     {
       "text": " layout.",
-      "startMs": 8802,
-      "endMs": 9145
+      "startMs": 17786,
+      "endMs": 18335
     },
     {
       "text": " Let",
-      "startMs": 9145,
-      "endMs": 9351
+      "startMs": 18335,
+      "endMs": 18665
     },
     {
       "text": " us",
-      "startMs": 9351,
-      "endMs": 9522,
+      "startMs": 18665,
+      "endMs": 18939,
       "pageBreakAfter": true
     },
     {
       "text": " look",
-      "startMs": 9522,
-      "endMs": 9762
-    },
-    {
-      "text": " at",
-      "startMs": 9762,
-      "endMs": 9933
-    },
-    {
-      "text": " the",
-      "startMs": 9933,
-      "endMs": 10139
-    },
-    {
-      "text": " code.",
-      "startMs": 10139,
-      "endMs": 10413,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " Add",
-      "startMs": 10667,
-      "endMs": 10880
-    },
-    {
-      "text": " a",
-      "startMs": 10880,
-      "endMs": 11022
-    },
-    {
-      "text": " stable",
-      "startMs": 11022,
-      "endMs": 11342
-    },
-    {
-      "text": " heading-ID",
-      "startMs": 11342,
-      "endMs": 11804,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " generator.",
-      "startMs": 11804,
-      "endMs": 12265
-    },
-    {
-      "text": " Let",
-      "startMs": 12265,
-      "endMs": 12479
-    },
-    {
-      "text": " us",
-      "startMs": 12479,
-      "endMs": 12656
-    },
-    {
-      "text": " look",
-      "startMs": 12656,
-      "endMs": 12905,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " at",
-      "startMs": 12905,
-      "endMs": 13083
-    },
-    {
-      "text": " the",
-      "startMs": 13083,
-      "endMs": 13296
-    },
-    {
-      "text": " code.",
-      "startMs": 13296,
-      "endMs": 13580,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " Style",
-      "startMs": 13833,
-      "endMs": 14036
-    },
-    {
-      "text": " the",
-      "startMs": 14036,
-      "endMs": 14188
-    },
-    {
-      "text": " Astro",
-      "startMs": 14188,
-      "endMs": 14391
-    },
-    {
-      "text": " table",
-      "startMs": 14391,
-      "endMs": 14593,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " of",
-      "startMs": 14593,
-      "endMs": 14720
-    },
-    {
-      "text": " contents",
-      "startMs": 14720,
-      "endMs": 14999
-    },
-    {
-      "text": " for",
-      "startMs": 14999,
-      "endMs": 15151
-    },
-    {
-      "text": " desktop",
-      "startMs": 15151,
-      "endMs": 15404,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " and",
-      "startMs": 15404,
-      "endMs": 15556
-    },
-    {
-      "text": " mobile.",
-      "startMs": 15556,
-      "endMs": 15809
-    },
-    {
-      "text": " Let",
-      "startMs": 15809,
-      "endMs": 15961
-    },
-    {
-      "text": " us",
-      "startMs": 15961,
-      "endMs": 16088,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " look",
-      "startMs": 16088,
-      "endMs": 16265
-    },
-    {
-      "text": " at",
-      "startMs": 16265,
-      "endMs": 16392
-    },
-    {
-      "text": " the",
-      "startMs": 16392,
-      "endMs": 16544
-    },
-    {
-      "text": " code.",
-      "startMs": 16544,
-      "endMs": 16747,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " Enable",
-      "startMs": 17000,
-      "endMs": 17279
-    },
-    {
-      "text": " the",
-      "startMs": 17279,
-      "endMs": 17465
-    },
-    {
-      "text": " component",
-      "startMs": 17465,
-      "endMs": 17837
-    },
-    {
-      "text": " from",
-      "startMs": 17837,
-      "endMs": 18054,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " your",
-      "startMs": 18054,
-      "endMs": 18271
-    },
-    {
-      "text": " blog",
-      "startMs": 18271,
-      "endMs": 18488
-    },
-    {
-      "text": " route.",
-      "startMs": 18488,
-      "endMs": 18767
-    },
-    {
-      "text": " Let",
-      "startMs": 18767,
-      "endMs": 18953,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " us",
-      "startMs": 18953,
-      "endMs": 19108
-    },
-    {
-      "text": " look",
-      "startMs": 19108,
+      "startMs": 18939,
       "endMs": 19324
     },
     {
       "text": " at",
       "startMs": 19324,
-      "endMs": 19479
+      "endMs": 19598
     },
     {
       "text": " the",
-      "startMs": 19479,
-      "endMs": 19665,
-      "pageBreakAfter": true
+      "startMs": 19598,
+      "endMs": 19927
     },
     {
       "text": " code.",
-      "startMs": 19665,
-      "endMs": 19913,
+      "startMs": 19927,
+      "endMs": 21233,
       "pageBreakAfter": true
     },
     {
-      "text": " Test",
-      "startMs": 20167,
-      "endMs": 20266
+      "text": " Add",
+      "startMs": 21767,
+      "endMs": 22108
     },
     {
-      "text": " your",
-      "startMs": 20266,
-      "endMs": 20365
+      "text": " a",
+      "startMs": 22108,
+      "endMs": 22336
     },
     {
-      "text": " table",
-      "startMs": 20365,
-      "endMs": 20478
+      "text": " stable",
+      "startMs": 22336,
+      "endMs": 22848
     },
     {
-      "text": " of",
-      "startMs": 20478,
-      "endMs": 20549,
+      "text": " heading-ID",
+      "startMs": 22848,
+      "endMs": 23588,
       "pageBreakAfter": true
     },
     {
-      "text": " contents",
-      "startMs": 20549,
-      "endMs": 20705
+      "text": " generator.",
+      "startMs": 23588,
+      "endMs": 24328
     },
     {
-      "text": " before",
-      "startMs": 20705,
-      "endMs": 20832
+      "text": " Let",
+      "startMs": 24328,
+      "endMs": 24669
     },
     {
-      "text": " publishing.",
-      "startMs": 20832,
-      "endMs": 21030
+      "text": " us",
+      "startMs": 24669,
+      "endMs": 24954
     },
     {
-      "text": " Test",
-      "startMs": 21030,
-      "endMs": 21129,
+      "text": " look",
+      "startMs": 24954,
+      "endMs": 25352,
       "pageBreakAfter": true
     },
     {
       "text": " at",
-      "startMs": 21129,
-      "endMs": 21200
+      "startMs": 25352,
+      "endMs": 25637
+    },
+    {
+      "text": " the",
+      "startMs": 25637,
+      "endMs": 25978
+    },
+    {
+      "text": " code.",
+      "startMs": 25978,
+      "endMs": 27300,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Style",
+      "startMs": 27833,
+      "endMs": 28158
+    },
+    {
+      "text": " the",
+      "startMs": 28158,
+      "endMs": 28401
+    },
+    {
+      "text": " Astro",
+      "startMs": 28401,
+      "endMs": 28726
+    },
+    {
+      "text": " table",
+      "startMs": 28726,
+      "endMs": 29051,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " of",
+      "startMs": 29051,
+      "endMs": 29254
+    },
+    {
+      "text": " contents",
+      "startMs": 29254,
+      "endMs": 29700
+    },
+    {
+      "text": " for",
+      "startMs": 29700,
+      "endMs": 29943
+    },
+    {
+      "text": " desktop",
+      "startMs": 29943,
+      "endMs": 30349,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " and",
+      "startMs": 30349,
+      "endMs": 30593
+    },
+    {
+      "text": " mobile.",
+      "startMs": 30593,
+      "endMs": 30999
+    },
+    {
+      "text": " Let",
+      "startMs": 30999,
+      "endMs": 31242
+    },
+    {
+      "text": " us",
+      "startMs": 31242,
+      "endMs": 31445,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " look",
+      "startMs": 31445,
+      "endMs": 31729
+    },
+    {
+      "text": " at",
+      "startMs": 31729,
+      "endMs": 31932
+    },
+    {
+      "text": " the",
+      "startMs": 31932,
+      "endMs": 32175
+    },
+    {
+      "text": " code.",
+      "startMs": 32175,
+      "endMs": 33367,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Enable",
+      "startMs": 33900,
+      "endMs": 34347
+    },
+    {
+      "text": " the",
+      "startMs": 34347,
+      "endMs": 34645
+    },
+    {
+      "text": " component",
+      "startMs": 34645,
+      "endMs": 35240
+    },
+    {
+      "text": " from",
+      "startMs": 35240,
+      "endMs": 35588,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " your",
+      "startMs": 35588,
+      "endMs": 35935
+    },
+    {
+      "text": " blog",
+      "startMs": 35935,
+      "endMs": 36283
+    },
+    {
+      "text": " route.",
+      "startMs": 36283,
+      "endMs": 36730
+    },
+    {
+      "text": " Let",
+      "startMs": 36730,
+      "endMs": 37028,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " us",
+      "startMs": 37028,
+      "endMs": 37276
+    },
+    {
+      "text": " look",
+      "startMs": 37276,
+      "endMs": 37623
+    },
+    {
+      "text": " at",
+      "startMs": 37623,
+      "endMs": 37872
+    },
+    {
+      "text": " the",
+      "startMs": 37872,
+      "endMs": 38170,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " code.",
+      "startMs": 38170,
+      "endMs": 39433,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Test",
+      "startMs": 39967,
+      "endMs": 40225
+    },
+    {
+      "text": " your",
+      "startMs": 40225,
+      "endMs": 40484
+    },
+    {
+      "text": " table",
+      "startMs": 40484,
+      "endMs": 40779
+    },
+    {
+      "text": " of",
+      "startMs": 40779,
+      "endMs": 40964,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " contents",
+      "startMs": 40964,
+      "endMs": 41370
+    },
+    {
+      "text": " before",
+      "startMs": 41370,
+      "endMs": 41702
+    },
+    {
+      "text": " publishing.",
+      "startMs": 41702,
+      "endMs": 42219
+    },
+    {
+      "text": " Test",
+      "startMs": 42219,
+      "endMs": 42477,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " at",
+      "startMs": 42477,
+      "endMs": 42662
     },
     {
       "text": " least",
-      "startMs": 21200,
-      "endMs": 21313
+      "startMs": 42662,
+      "endMs": 42957
     },
     {
       "text": " one",
-      "startMs": 21313,
-      "endMs": 21398
+      "startMs": 42957,
+      "endMs": 43179
     },
     {
       "text": " short",
-      "startMs": 21398,
-      "endMs": 21511,
+      "startMs": 43179,
+      "endMs": 43474,
       "pageBreakAfter": true
     },
     {
       "text": " post",
-      "startMs": 21511,
-      "endMs": 21610
+      "startMs": 43474,
+      "endMs": 43733
     },
     {
       "text": " and",
-      "startMs": 21610,
-      "endMs": 21695
+      "startMs": 43733,
+      "endMs": 43954
     },
     {
       "text": " one",
-      "startMs": 21695,
-      "endMs": 21780
+      "startMs": 43954,
+      "endMs": 44176
     },
     {
       "text": " long",
-      "startMs": 21780,
-      "endMs": 21879,
+      "startMs": 44176,
+      "endMs": 44434,
       "pageBreakAfter": true
     },
     {
       "text": " post.",
-      "startMs": 21879,
-      "endMs": 21993
+      "startMs": 44434,
+      "endMs": 44730
     },
     {
       "text": " A",
-      "startMs": 21993,
-      "endMs": 22049
+      "startMs": 44730,
+      "endMs": 44877
     },
     {
       "text": " short",
-      "startMs": 22049,
-      "endMs": 22162
+      "startMs": 44877,
+      "endMs": 45173
     },
     {
       "text": " post",
-      "startMs": 22162,
-      "endMs": 22261,
+      "startMs": 45173,
+      "endMs": 45431,
       "pageBreakAfter": true
     },
     {
       "text": " confirms",
-      "startMs": 22261,
-      "endMs": 22417
+      "startMs": 45431,
+      "endMs": 45837
     },
     {
       "text": " that",
-      "startMs": 22417,
-      "endMs": 22516
+      "startMs": 45837,
+      "endMs": 46096
     },
     {
       "text": " the",
-      "startMs": 22516,
-      "endMs": 22601
+      "startMs": 46096,
+      "endMs": 46317
     },
     {
       "text": " component",
-      "startMs": 22601,
-      "endMs": 22771,
+      "startMs": 46317,
+      "endMs": 46761,
       "pageBreakAfter": true
     },
     {
       "text": " disappears",
-      "startMs": 22771,
-      "endMs": 22955
+      "startMs": 46761,
+      "endMs": 47241
     },
     {
       "text": " cleanly",
-      "startMs": 22955,
-      "endMs": 23097
+      "startMs": 47241,
+      "endMs": 47610
     },
     {
       "text": " when",
-      "startMs": 23097,
-      "endMs": 23196
+      "startMs": 47610,
+      "endMs": 47868
     },
     {
       "text": " there",
-      "startMs": 23196,
-      "endMs": 23309,
+      "startMs": 47868,
+      "endMs": 48164,
       "pageBreakAfter": true
     },
     {
       "text": " are",
-      "startMs": 23309,
-      "endMs": 23394
+      "startMs": 48164,
+      "endMs": 48385
     },
     {
       "text": " no",
-      "startMs": 23394,
-      "endMs": 23465
+      "startMs": 48385,
+      "endMs": 48570
     },
     {
       "text": " h2",
-      "startMs": 23465,
-      "endMs": 23535
+      "startMs": 48570,
+      "endMs": 48754
     },
     {
       "text": " or",
-      "startMs": 23535,
-      "endMs": 23606,
+      "startMs": 48754,
+      "endMs": 48939,
       "pageBreakAfter": true
     },
     {
       "text": " h3",
-      "startMs": 23606,
-      "endMs": 23677
+      "startMs": 48939,
+      "endMs": 49124
     },
     {
       "text": " elements.",
-      "startMs": 23677,
-      "endMs": 23847,
+      "startMs": 49124,
+      "endMs": 50433,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " The",
+      "startMs": 50967,
+      "endMs": 51232
+    },
+    {
+      "text": " table",
+      "startMs": 51232,
+      "endMs": 51586
+    },
+    {
+      "text": " of",
+      "startMs": 51586,
+      "endMs": 51807
+    },
+    {
+      "text": " contents",
+      "startMs": 51807,
+      "endMs": 52294,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " is",
+      "startMs": 52294,
+      "endMs": 52515
+    },
+    {
+      "text": " empty.",
+      "startMs": 52515,
+      "endMs": 52913
+    },
+    {
+      "text": " Check",
+      "startMs": 52913,
+      "endMs": 53267
+    },
+    {
+      "text": " that",
+      "startMs": 53267,
+      "endMs": 53577,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " your",
+      "startMs": 53577,
+      "endMs": 53886
+    },
+    {
+      "text": " content",
+      "startMs": 53886,
+      "endMs": 54329
+    },
+    {
+      "text": " is",
+      "startMs": 54329,
+      "endMs": 54550
+    },
+    {
+      "text": " inside",
+      "startMs": 54550,
+      "endMs": 54948,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " the",
+      "startMs": 54948,
+      "endMs": 55214
+    },
+    {
+      "text": " element",
+      "startMs": 55214,
+      "endMs": 55656
+    },
+    {
+      "text": " marked",
+      "startMs": 55656,
+      "endMs": 56054
+    },
+    {
+      "text": " with",
+      "startMs": 56054,
+      "endMs": 56364,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " data-post-content.",
+      "startMs": 56364,
+      "endMs": 57293
+    },
+    {
+      "text": " Then",
+      "startMs": 57293,
+      "endMs": 57603
+    },
+    {
+      "text": " confirm",
+      "startMs": 57603,
+      "endMs": 58045
+    },
+    {
+      "text": " that",
+      "startMs": 58045,
+      "endMs": 58355,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " the",
+      "startMs": 58355,
+      "endMs": 58620
+    },
+    {
+      "text": " article",
+      "startMs": 58620,
+      "endMs": 59063
+    },
+    {
+      "text": " uses",
+      "startMs": 59063,
+      "endMs": 59372
+    },
+    {
+      "text": " h2",
+      "startMs": 59372,
+      "endMs": 59593,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " or",
+      "startMs": 59593,
+      "endMs": 59815
+    },
+    {
+      "text": " h3",
+      "startMs": 59815,
+      "endMs": 60036
+    },
+    {
+      "text": " headings.",
+      "startMs": 60036,
+      "endMs": 61433,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " A",
+      "startMs": 61967,
+      "endMs": 62171
+    },
+    {
+      "text": " link",
+      "startMs": 62171,
+      "endMs": 62528
+    },
+    {
+      "text": " opens",
+      "startMs": 62528,
+      "endMs": 62936
+    },
+    {
+      "text": " the",
+      "startMs": 62936,
+      "endMs": 63242,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " wrong",
+      "startMs": 63242,
+      "endMs": 63650
+    },
+    {
+      "text": " section.",
+      "startMs": 63650,
+      "endMs": 64211
+    },
+    {
+      "text": " This",
+      "startMs": 64211,
+      "endMs": 64568
+    },
+    {
+      "text": " usually",
+      "startMs": 64568,
+      "endMs": 65078,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " happens",
+      "startMs": 65078,
+      "endMs": 65588
+    },
+    {
+      "text": " when",
+      "startMs": 65588,
+      "endMs": 65945
+    },
+    {
+      "text": " two",
+      "startMs": 65945,
+      "endMs": 66251
+    },
+    {
+      "text": " headings",
+      "startMs": 66251,
+      "endMs": 66812,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " get",
+      "startMs": 66812,
+      "endMs": 67118
+    },
+    {
+      "text": " the",
+      "startMs": 67118,
+      "endMs": 67424
+    },
+    {
+      "text": " same",
+      "startMs": 67424,
+      "endMs": 67781
+    },
+    {
+      "text": " ID.",
+      "startMs": 67781,
+      "endMs": 68087,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Keep",
+      "startMs": 68087,
+      "endMs": 68444
+    },
+    {
+      "text": " the",
+      "startMs": 68444,
+      "endMs": 68750
+    },
+    {
+      "text": " unique-ID",
+      "startMs": 68750,
+      "endMs": 69362
+    },
+    {
+      "text": " loop",
+      "startMs": 69362,
+      "endMs": 69719,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " in",
+      "startMs": 69719,
+      "endMs": 69974
+    },
+    {
+      "text": " place.",
+      "startMs": 69974,
+      "endMs": 71300,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " The",
+      "startMs": 71833,
+      "endMs": 72088
+    },
+    {
+      "text": " article",
+      "startMs": 72088,
+      "endMs": 72513
+    },
+    {
+      "text": " jumps",
+      "startMs": 72513,
+      "endMs": 72853
+    },
+    {
+      "text": " behind",
+      "startMs": 72853,
+      "endMs": 73235,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " the",
+      "startMs": 73235,
+      "endMs": 73490
+    },
+    {
+      "text": " header.",
+      "startMs": 73490,
+      "endMs": 73915
+    },
+    {
+      "text": " Add",
+      "startMs": 73915,
+      "endMs": 74170
+    },
+    {
+      "text": " scroll-margin-top",
+      "startMs": 74170,
+      "endMs": 75019,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " to",
+      "startMs": 75019,
+      "endMs": 75232
+    },
+    {
+      "text": " the",
+      "startMs": 75232,
+      "endMs": 75486
+    },
+    {
+      "text": " target",
+      "startMs": 75486,
+      "endMs": 75869
+    },
+    {
+      "text": " headings.",
+      "startMs": 75869,
+      "endMs": 76378,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Adjust",
+      "startMs": 76378,
+      "endMs": 76761
+    },
+    {
+      "text": " the",
+      "startMs": 76761,
+      "endMs": 77016
+    },
+    {
+      "text": " value",
+      "startMs": 77016,
+      "endMs": 77355
+    },
+    {
+      "text": " to",
+      "startMs": 77355,
+      "endMs": 77568,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " match",
+      "startMs": 77568,
+      "endMs": 77908
+    },
+    {
+      "text": " the",
+      "startMs": 77908,
+      "endMs": 78163
+    },
+    {
+      "text": " height",
+      "startMs": 78163,
+      "endMs": 78545
+    },
+    {
+      "text": " of",
+      "startMs": 78545,
+      "endMs": 78757,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " your",
+      "startMs": 78757,
+      "endMs": 79055
+    },
+    {
+      "text": " header",
+      "startMs": 79055,
+      "endMs": 79437
+    },
+    {
+      "text": " at",
+      "startMs": 79437,
+      "endMs": 79649
+    },
+    {
+      "text": " the",
+      "startMs": 79649,
+      "endMs": 79904,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " viewport",
+      "startMs": 79904,
+      "endMs": 80371
+    },
+    {
+      "text": " sizes",
+      "startMs": 80371,
+      "endMs": 80711
+    },
+    {
+      "text": " you",
+      "startMs": 80711,
+      "endMs": 80966
+    },
+    {
+      "text": " support.",
+      "startMs": 80966,
+      "endMs": 82300,
       "pageBreakAfter": true
     },
     {
       "text": " Read",
-      "startMs": 24167,
-      "endMs": 24452
+      "startMs": 82833,
+      "endMs": 83203
     },
     {
       "text": " the",
-      "startMs": 24452,
-      "endMs": 24697
+      "startMs": 83203,
+      "endMs": 83520
     },
     {
       "text": " full",
-      "startMs": 24697,
-      "endMs": 24982
+      "startMs": 83520,
+      "endMs": 83890
     },
     {
       "text": " article.",
-      "startMs": 24982,
-      "endMs": 25430,
+      "startMs": 83890,
+      "endMs": 84472,
       "pageBreakAfter": true
     },
     {
       "text": " New",
-      "startMs": 25430,
-      "endMs": 25675
+      "startMs": 84472,
+      "endMs": 84789
     },
     {
       "text": " posts",
-      "startMs": 25675,
-      "endMs": 26001
+      "startMs": 84789,
+      "endMs": 85211
     },
     {
       "text": " every",
-      "startMs": 26001,
-      "endMs": 26327
+      "startMs": 85211,
+      "endMs": 85634
     },
     {
       "text": " week",
-      "startMs": 26327,
-      "endMs": 26612,
+      "startMs": 85634,
+      "endMs": 86004,
       "pageBreakAfter": true
     },
     {
       "text": " on",
-      "startMs": 26612,
-      "endMs": 26816
+      "startMs": 86004,
+      "endMs": 86268
     },
     {
       "text": " the",
-      "startMs": 26816,
-      "endMs": 27061
+      "startMs": 86268,
+      "endMs": 86586
     },
     {
       "text": " blog.",
-      "startMs": 27061,
-      "endMs": 27387,
+      "startMs": 86586,
+      "endMs": 87800,
       "pageBreakAfter": true
     }
   ],

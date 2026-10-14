@@ -1,7 +1,7 @@
 {
   "slug": "local-ollama-windows11-low-spec-setup",
   "title": "How to Run Ollama Locally on a Low-Spec Windows 11 PC",
-  "description": "With a small model and a few tweaks, a 4 GB RAM laptop can serve text generation in under a second. This guide shows the minimum setup that works on weak hardware",
+  "description": "With a small model and a few tweaks, a 4 GB RAM laptop can generate text in under a second. Here is the minimum setup that works on weak hardware.",
   "category": "AI Tools",
   "tags": [
     "AI",
@@ -12,36 +12,39 @@
     "Deepseek"
   ],
   "url": "https://www.techtips.fun/blog/local-ollama-windows11-low-spec-setup/",
-  "theme": "github-dark",
-  "durationInFrames": 950,
   "scenes": [
     {
       "type": "title",
       "kicker": "AI Tools",
       "title": "How to Run Ollama Locally on a Low-Spec Windows 11 PC",
-      "subtitle": "With a small model and a few tweaks, a 4 GB RAM laptop can serve text generation in under…",
-      "durationInFrames": 105
+      "subtitle": "With a small model and a few tweaks, a 4 GB RAM laptop can generate text in under a…",
+      "image": {
+        "src": "post-media/local-ollama-windows11-low-spec-setup/01-ollama-windows-cover-option-2.webp",
+        "width": 1280,
+        "height": 720
+      },
+      "durationInFrames": 183
     },
     {
       "type": "point",
       "kicker": "AI Tools",
       "heading": "What You Need",
       "body": "Windows 10 or 11, 64-bit Minimum 4 GB of RAM Recommended 8 GB About 5 GB of free disk space",
-      "durationInFrames": 120
+      "durationInFrames": 307
     },
     {
       "type": "point",
       "kicker": "AI Tools",
       "heading": "Step 1: Install Ollama",
       "body": "Download the Windows installer from the Ollama website. Run the file. Accept the defaults.",
-      "durationInFrames": 120
+      "durationInFrames": 250
     },
     {
       "type": "point",
       "kicker": "AI Tools",
       "heading": "Step 2: Pick a Small Model",
       "body": "Large models need more RAM than a weak PC has. Pick a model that fits your memory.",
-      "durationInFrames": 120
+      "durationInFrames": 307
     },
     {
       "type": "code",
@@ -68,7 +71,10 @@
           }
         }
       ],
-      "durationInFrames": 95
+      "stepDurations": [
+        135
+      ],
+      "durationInFrames": 135
     },
     {
       "type": "code",
@@ -95,7 +101,10 @@
           }
         }
       ],
-      "durationInFrames": 95
+      "stepDurations": [
+        135
+      ],
+      "durationInFrames": 135
     },
     {
       "type": "code",
@@ -141,821 +150,1236 @@
           }
         }
       ],
-      "durationInFrames": 190
+      "stepDurations": [
+        135,
+        135
+      ],
+      "durationInFrames": 270
+    },
+    {
+      "type": "code",
+      "kicker": "Code",
+      "heading": "Step 3: Run the Model",
+      "steps": [
+        {
+          "lang": "text",
+          "meta": "",
+          "value": "ollama run tinyllama",
+          "code": "ollama run tinyllama",
+          "tokens": [
+            [
+              "ollama run tinyllama",
+              null
+            ]
+          ],
+          "annotations": [],
+          "themeName": "github-dark",
+          "style": {
+            "color": "#c9d1d9",
+            "background": "#0d1117",
+            "colorScheme": "dark"
+          }
+        }
+      ],
+      "stepDurations": [
+        135
+      ],
+      "durationInFrames": 135
+    },
+    {
+      "type": "point",
+      "kicker": "AI Tools",
+      "heading": "Step 4: Set The AI Lower Memory Use",
+      "body": "These settings reduce RAM usage on a low config pc. Open PowerShell as admin and run the commands before you start the model.",
+      "durationInFrames": 330
+    },
+    {
+      "type": "code",
+      "kicker": "Code",
+      "heading": "Set the number of layers the GPU can load. Zero means the CPU does all the work:",
+      "steps": [
+        {
+          "lang": "text",
+          "meta": "",
+          "value": "[System.Environment]::SetEnvironmentVariable(\"OLLAMA_NUM_GPU\", \"0\", \"User\")",
+          "code": "[System.Environment]::SetEnvironmentVariable(\"OLLAMA_NUM_GPU\", \"0\", \"User\")",
+          "tokens": [
+            [
+              "[System.Environment]::SetEnvironmentVariable(\"OLLAMA_NUM_GPU\", \"0\", \"User\")",
+              null
+            ]
+          ],
+          "annotations": [],
+          "themeName": "github-dark",
+          "style": {
+            "color": "#c9d1d9",
+            "background": "#0d1117",
+            "colorScheme": "dark"
+          }
+        }
+      ],
+      "stepDurations": [
+        135
+      ],
+      "durationInFrames": 135
     },
     {
       "type": "outro",
       "heading": "Read the full article",
       "body": "New posts every week on the blog.",
       "url": "techtips.fun",
-      "durationInFrames": 105
+      "durationInFrames": 165
     }
   ],
+  "theme": "github-dark",
+  "durationInFrames": 2352,
   "captions": [
     {
       "text": " With",
-      "startMs": 0,
-      "endMs": 176
+      "startMs": 500,
+      "endMs": 770
     },
     {
       "text": " a",
-      "startMs": 176,
-      "endMs": 277
+      "startMs": 770,
+      "endMs": 924
     },
     {
       "text": " small",
-      "startMs": 277,
-      "endMs": 478
+      "startMs": 924,
+      "endMs": 1232
     },
     {
       "text": " model",
-      "startMs": 478,
-      "endMs": 679,
+      "startMs": 1232,
+      "endMs": 1540,
       "pageBreakAfter": true
     },
     {
       "text": " and",
-      "startMs": 679,
-      "endMs": 830
+      "startMs": 1540,
+      "endMs": 1771
     },
     {
       "text": " a",
-      "startMs": 830,
-      "endMs": 931
+      "startMs": 1771,
+      "endMs": 1925
     },
     {
       "text": " few",
-      "startMs": 931,
-      "endMs": 1082
+      "startMs": 1925,
+      "endMs": 2157
     },
     {
       "text": " tweaks,",
-      "startMs": 1082,
-      "endMs": 1333,
+      "startMs": 2157,
+      "endMs": 2542,
       "pageBreakAfter": true
     },
     {
       "text": " a",
-      "startMs": 1333,
-      "endMs": 1434
+      "startMs": 2542,
+      "endMs": 2696
     },
     {
       "text": " 4",
-      "startMs": 1434,
-      "endMs": 1535
+      "startMs": 2696,
+      "endMs": 2850
     },
     {
       "text": " GB",
-      "startMs": 1535,
-      "endMs": 1660
+      "startMs": 2850,
+      "endMs": 3043
     },
     {
       "text": " RAM",
-      "startMs": 1660,
-      "endMs": 1811,
+      "startMs": 3043,
+      "endMs": 3274,
       "pageBreakAfter": true
     },
     {
       "text": " laptop",
-      "startMs": 1811,
-      "endMs": 2038
+      "startMs": 3274,
+      "endMs": 3620
     },
     {
       "text": " can",
-      "startMs": 2038,
-      "endMs": 2189
+      "startMs": 3620,
+      "endMs": 3852
     },
     {
-      "text": " serve",
-      "startMs": 2189,
-      "endMs": 2390
+      "text": " generate",
+      "startMs": 3852,
+      "endMs": 4275
     },
     {
       "text": " text",
-      "startMs": 2390,
-      "endMs": 2566,
+      "startMs": 4275,
+      "endMs": 4545,
       "pageBreakAfter": true
     },
     {
-      "text": " generation",
-      "startMs": 2566,
-      "endMs": 2893
-    },
-    {
       "text": " in",
-      "startMs": 2893,
-      "endMs": 3019
+      "startMs": 4545,
+      "endMs": 4738
     },
     {
       "text": " under",
-      "startMs": 3019,
-      "endMs": 3220,
+      "startMs": 4738,
+      "endMs": 5046
+    },
+    {
+      "text": " a",
+      "startMs": 5046,
+      "endMs": 6067,
       "pageBreakAfter": true
     },
     {
       "text": " What",
-      "startMs": 3500,
-      "endMs": 3668
+      "startMs": 6600,
+      "endMs": 7004
     },
     {
       "text": " You",
-      "startMs": 3668,
-      "endMs": 3813
+      "startMs": 7004,
+      "endMs": 7351
     },
     {
       "text": " Need.",
-      "startMs": 3813,
-      "endMs": 4005
+      "startMs": 7351,
+      "endMs": 7812
     },
     {
       "text": " Windows",
-      "startMs": 4005,
-      "endMs": 4246,
+      "startMs": 7812,
+      "endMs": 8390,
       "pageBreakAfter": true
     },
     {
       "text": " 10",
-      "startMs": 4246,
-      "endMs": 4366
+      "startMs": 8390,
+      "endMs": 8678
     },
     {
       "text": " or",
-      "startMs": 4366,
-      "endMs": 4486
+      "startMs": 8678,
+      "endMs": 8967
     },
     {
       "text": " 11,",
-      "startMs": 4486,
-      "endMs": 4630
+      "startMs": 8967,
+      "endMs": 9314
     },
     {
       "text": " 64-bit",
-      "startMs": 4630,
-      "endMs": 4847,
+      "startMs": 9314,
+      "endMs": 9833,
       "pageBreakAfter": true
     },
     {
       "text": " Minimum",
-      "startMs": 4847,
-      "endMs": 5087
+      "startMs": 9833,
+      "endMs": 10410
     },
     {
       "text": " 4",
-      "startMs": 5087,
-      "endMs": 5184
+      "startMs": 10410,
+      "endMs": 10641
     },
     {
       "text": " GB",
-      "startMs": 5184,
-      "endMs": 5304
+      "startMs": 10641,
+      "endMs": 10930
     },
     {
       "text": " of",
-      "startMs": 5304,
-      "endMs": 5424,
+      "startMs": 10930,
+      "endMs": 11219,
       "pageBreakAfter": true
     },
     {
       "text": " RAM",
-      "startMs": 5424,
-      "endMs": 5568
+      "startMs": 11219,
+      "endMs": 11565
     },
     {
       "text": " Recommended",
-      "startMs": 5568,
-      "endMs": 5905
+      "startMs": 11565,
+      "endMs": 12373
     },
     {
       "text": " 8",
-      "startMs": 5905,
-      "endMs": 6001
+      "startMs": 12373,
+      "endMs": 12604
     },
     {
       "text": " GB",
-      "startMs": 6001,
-      "endMs": 6122,
+      "startMs": 12604,
+      "endMs": 12893,
       "pageBreakAfter": true
     },
     {
       "text": " About",
-      "startMs": 6122,
-      "endMs": 6314
+      "startMs": 12893,
+      "endMs": 13355
     },
     {
       "text": " 5",
-      "startMs": 6314,
-      "endMs": 6410
+      "startMs": 13355,
+      "endMs": 13586
     },
     {
       "text": " GB",
-      "startMs": 6410,
-      "endMs": 6531
+      "startMs": 13586,
+      "endMs": 13875
     },
     {
       "text": " of",
-      "startMs": 6531,
-      "endMs": 6651,
+      "startMs": 13875,
+      "endMs": 14163,
       "pageBreakAfter": true
     },
     {
       "text": " free",
-      "startMs": 6651,
-      "endMs": 6819
+      "startMs": 14163,
+      "endMs": 14567
     },
     {
       "text": " disk",
-      "startMs": 6819,
-      "endMs": 6988
+      "startMs": 14567,
+      "endMs": 14971
     },
     {
       "text": " space",
-      "startMs": 6988,
-      "endMs": 7180,
+      "startMs": 14971,
+      "endMs": 16300,
       "pageBreakAfter": true
     },
     {
       "text": " Step",
-      "startMs": 7500,
-      "endMs": 7671
+      "startMs": 16833,
+      "endMs": 17155
     },
     {
       "text": " 1:",
-      "startMs": 7671,
-      "endMs": 7792
+      "startMs": 17155,
+      "endMs": 17384
     },
     {
       "text": " Install",
-      "startMs": 7792,
-      "endMs": 8036
+      "startMs": 17384,
+      "endMs": 17843
     },
     {
       "text": " Ollama.",
-      "startMs": 8036,
-      "endMs": 8280,
+      "startMs": 17843,
+      "endMs": 18303,
       "pageBreakAfter": true
     },
     {
       "text": " Download",
-      "startMs": 8280,
-      "endMs": 8548
+      "startMs": 18303,
+      "endMs": 18808
     },
     {
       "text": " the",
-      "startMs": 8548,
-      "endMs": 8694
+      "startMs": 18808,
+      "endMs": 19083
     },
     {
       "text": " Windows",
-      "startMs": 8694,
-      "endMs": 8938
+      "startMs": 19083,
+      "endMs": 19542
     },
     {
       "text": " installer",
-      "startMs": 8938,
-      "endMs": 9230,
+      "startMs": 19542,
+      "endMs": 20093,
       "pageBreakAfter": true
     },
     {
       "text": " from",
-      "startMs": 9230,
-      "endMs": 9401
+      "startMs": 20093,
+      "endMs": 20415
     },
     {
       "text": " the",
-      "startMs": 9401,
-      "endMs": 9547
+      "startMs": 20415,
+      "endMs": 20690
     },
     {
       "text": " Ollama",
-      "startMs": 9547,
-      "endMs": 9766
+      "startMs": 20690,
+      "endMs": 21104
     },
     {
       "text": " website.",
-      "startMs": 9766,
-      "endMs": 10035,
+      "startMs": 21104,
+      "endMs": 21609,
       "pageBreakAfter": true
     },
     {
       "text": " Run",
-      "startMs": 10035,
-      "endMs": 10181
+      "startMs": 21609,
+      "endMs": 21884
     },
     {
       "text": " the",
-      "startMs": 10181,
-      "endMs": 10327
+      "startMs": 21884,
+      "endMs": 22160
     },
     {
       "text": " file.",
-      "startMs": 10327,
-      "endMs": 10522
+      "startMs": 22160,
+      "endMs": 22527
     },
     {
       "text": " Accept",
-      "startMs": 10522,
-      "endMs": 10741,
+      "startMs": 22527,
+      "endMs": 22940,
       "pageBreakAfter": true
     },
     {
       "text": " the",
-      "startMs": 10741,
-      "endMs": 10888
+      "startMs": 22940,
+      "endMs": 23216
     },
     {
       "text": " defaults.",
-      "startMs": 10888,
-      "endMs": 11180,
+      "startMs": 23216,
+      "endMs": 24633,
       "pageBreakAfter": true
     },
     {
       "text": " Step",
-      "startMs": 11500,
-      "endMs": 11664
+      "startMs": 25167,
+      "endMs": 25561
     },
     {
       "text": " 2:",
-      "startMs": 11664,
-      "endMs": 11781
+      "startMs": 25561,
+      "endMs": 25842
     },
     {
       "text": " Pick",
-      "startMs": 11781,
-      "endMs": 11945
+      "startMs": 25842,
+      "endMs": 26236
     },
     {
       "text": " a",
-      "startMs": 11945,
-      "endMs": 12039,
+      "startMs": 26236,
+      "endMs": 26461,
       "pageBreakAfter": true
     },
     {
       "text": " Small",
-      "startMs": 12039,
-      "endMs": 12227
+      "startMs": 26461,
+      "endMs": 26911
     },
     {
       "text": " Model.",
-      "startMs": 12227,
-      "endMs": 12438
+      "startMs": 26911,
+      "endMs": 27417
     },
     {
       "text": " Large",
-      "startMs": 12438,
-      "endMs": 12625
+      "startMs": 27417,
+      "endMs": 27867
     },
     {
       "text": " models",
-      "startMs": 12625,
-      "endMs": 12836,
+      "startMs": 27867,
+      "endMs": 28374,
       "pageBreakAfter": true
     },
     {
       "text": " need",
-      "startMs": 12836,
-      "endMs": 13000
+      "startMs": 28374,
+      "endMs": 28768
     },
     {
       "text": " more",
-      "startMs": 13000,
-      "endMs": 13164
+      "startMs": 28768,
+      "endMs": 29161
     },
     {
       "text": " RAM",
-      "startMs": 13164,
-      "endMs": 13305
+      "startMs": 29161,
+      "endMs": 29499
     },
     {
       "text": " than",
-      "startMs": 13305,
-      "endMs": 13469,
+      "startMs": 29499,
+      "endMs": 29893,
       "pageBreakAfter": true
     },
     {
       "text": " a",
-      "startMs": 13469,
-      "endMs": 13563
+      "startMs": 29893,
+      "endMs": 30118
     },
     {
       "text": " weak",
-      "startMs": 13563,
-      "endMs": 13727
+      "startMs": 30118,
+      "endMs": 30512
     },
     {
       "text": " PC",
-      "startMs": 13727,
-      "endMs": 13844
+      "startMs": 30512,
+      "endMs": 30793
     },
     {
       "text": " has.",
-      "startMs": 13844,
-      "endMs": 14008,
+      "startMs": 30793,
+      "endMs": 31187,
       "pageBreakAfter": true
     },
     {
       "text": " Pick",
-      "startMs": 14008,
-      "endMs": 14172
+      "startMs": 31187,
+      "endMs": 31581
     },
     {
       "text": " a",
-      "startMs": 14172,
-      "endMs": 14266
+      "startMs": 31581,
+      "endMs": 31806
     },
     {
       "text": " model",
-      "startMs": 14266,
-      "endMs": 14453
+      "startMs": 31806,
+      "endMs": 32256
     },
     {
       "text": " that",
-      "startMs": 14453,
-      "endMs": 14617,
+      "startMs": 32256,
+      "endMs": 32650,
       "pageBreakAfter": true
     },
     {
       "text": " fits",
-      "startMs": 14617,
-      "endMs": 14782
+      "startMs": 32650,
+      "endMs": 33044
     },
     {
       "text": " your",
-      "startMs": 14782,
-      "endMs": 14946
+      "startMs": 33044,
+      "endMs": 33437
     },
     {
       "text": " memory.",
-      "startMs": 14946,
-      "endMs": 15180,
+      "startMs": 33437,
+      "endMs": 34867,
       "pageBreakAfter": true
     },
     {
       "text": " For",
-      "startMs": 15500,
-      "endMs": 15642
+      "startMs": 35400,
+      "endMs": 35562
     },
     {
       "text": " 4",
-      "startMs": 15642,
-      "endMs": 15737
+      "startMs": 35562,
+      "endMs": 35670
     },
     {
       "text": " GB",
-      "startMs": 15737,
-      "endMs": 15855
+      "startMs": 35670,
+      "endMs": 35805
     },
     {
       "text": " of",
-      "startMs": 15855,
-      "endMs": 15974,
+      "startMs": 35805,
+      "endMs": 35941,
       "pageBreakAfter": true
     },
     {
       "text": " free",
-      "startMs": 15974,
-      "endMs": 16140
+      "startMs": 35941,
+      "endMs": 36130
     },
     {
       "text": " RAM,",
-      "startMs": 16140,
-      "endMs": 16305
+      "startMs": 36130,
+      "endMs": 36319
     },
     {
       "text": " use",
-      "startMs": 16305,
-      "endMs": 16447
+      "startMs": 36319,
+      "endMs": 36481
     },
     {
       "text": " the",
-      "startMs": 16447,
-      "endMs": 16590,
+      "startMs": 36481,
+      "endMs": 36643,
       "pageBreakAfter": true
     },
     {
       "text": " smallest",
-      "startMs": 16590,
-      "endMs": 16850
+      "startMs": 36643,
+      "endMs": 36941
     },
     {
       "text": " tier",
-      "startMs": 16850,
-      "endMs": 17016
+      "startMs": 36941,
+      "endMs": 37130
     },
     {
       "text": " like",
-      "startMs": 17016,
-      "endMs": 17182
+      "startMs": 37130,
+      "endMs": 37319
     },
     {
       "text": " tinnyllama:.",
-      "startMs": 17182,
-      "endMs": 17537,
+      "startMs": 37319,
+      "endMs": 37725,
       "pageBreakAfter": true
     },
     {
       "text": " Let",
-      "startMs": 17537,
-      "endMs": 17679
+      "startMs": 37725,
+      "endMs": 37887
     },
     {
       "text": " us",
-      "startMs": 17679,
-      "endMs": 17798
+      "startMs": 37887,
+      "endMs": 38022
     },
     {
       "text": " look",
-      "startMs": 17798,
-      "endMs": 17963
+      "startMs": 38022,
+      "endMs": 38211
     },
     {
       "text": " at",
-      "startMs": 17963,
-      "endMs": 18082,
+      "startMs": 38211,
+      "endMs": 38347,
       "pageBreakAfter": true
     },
     {
       "text": " the",
-      "startMs": 18082,
-      "endMs": 18224
+      "startMs": 38347,
+      "endMs": 38509
     },
     {
       "text": " code.",
-      "startMs": 18224,
-      "endMs": 18413,
+      "startMs": 38509,
+      "endMs": 39367,
       "pageBreakAfter": true
     },
     {
       "text": " For",
-      "startMs": 18667,
-      "endMs": 18801
+      "startMs": 39900,
+      "endMs": 40053
     },
     {
       "text": " 6",
-      "startMs": 18801,
-      "endMs": 18891
+      "startMs": 40053,
+      "endMs": 40156
     },
     {
       "text": " to",
-      "startMs": 18891,
-      "endMs": 19003
+      "startMs": 40156,
+      "endMs": 40284
     },
     {
       "text": " 8",
-      "startMs": 19003,
-      "endMs": 19092,
+      "startMs": 40284,
+      "endMs": 40386,
       "pageBreakAfter": true
     },
     {
       "text": " GB",
-      "startMs": 19092,
-      "endMs": 19205
+      "startMs": 40386,
+      "endMs": 40514
     },
     {
       "text": " of",
-      "startMs": 19205,
-      "endMs": 19317
+      "startMs": 40514,
+      "endMs": 40642
     },
     {
       "text": " free",
-      "startMs": 19317,
-      "endMs": 19473
+      "startMs": 40642,
+      "endMs": 40821
     },
     {
       "text": " RAM,",
-      "startMs": 19473,
-      "endMs": 19630,
+      "startMs": 40821,
+      "endMs": 41000,
       "pageBreakAfter": true
     },
     {
       "text": " use",
-      "startMs": 19630,
-      "endMs": 19765
+      "startMs": 41000,
+      "endMs": 41153
     },
     {
       "text": " a",
-      "startMs": 19765,
-      "endMs": 19854
+      "startMs": 41153,
+      "endMs": 41256
     },
     {
       "text": " balanced",
-      "startMs": 19854,
-      "endMs": 20101
+      "startMs": 41256,
+      "endMs": 41537
     },
     {
       "text": " tier",
-      "startMs": 20101,
-      "endMs": 20258,
+      "startMs": 41537,
+      "endMs": 41716,
       "pageBreakAfter": true
     },
     {
       "text": " like",
-      "startMs": 20258,
-      "endMs": 20415
+      "startMs": 41716,
+      "endMs": 41895
     },
     {
       "text": " phi3",
-      "startMs": 20415,
-      "endMs": 20572
+      "startMs": 41895,
+      "endMs": 42074
     },
     {
       "text": " mini.",
-      "startMs": 20572,
-      "endMs": 20751
+      "startMs": 42074,
+      "endMs": 42279
     },
     {
       "text": " Let",
-      "startMs": 20751,
-      "endMs": 20885,
+      "startMs": 42279,
+      "endMs": 42432,
       "pageBreakAfter": true
     },
     {
       "text": " us",
-      "startMs": 20885,
-      "endMs": 20997
+      "startMs": 42432,
+      "endMs": 42560
     },
     {
       "text": " look",
-      "startMs": 20997,
-      "endMs": 21154
+      "startMs": 42560,
+      "endMs": 42739
     },
     {
       "text": " at",
-      "startMs": 21154,
-      "endMs": 21266
+      "startMs": 42739,
+      "endMs": 42867
     },
     {
       "text": " the",
-      "startMs": 21266,
-      "endMs": 21401,
+      "startMs": 42867,
+      "endMs": 43020,
       "pageBreakAfter": true
     },
     {
       "text": " code.",
-      "startMs": 21401,
-      "endMs": 21580,
+      "startMs": 43020,
+      "endMs": 43867,
       "pageBreakAfter": true
     },
     {
       "text": " For",
-      "startMs": 21833,
-      "endMs": 22106
+      "startMs": 44400,
+      "endMs": 44756
     },
     {
       "text": " 8",
-      "startMs": 22106,
-      "endMs": 22289
+      "startMs": 44756,
+      "endMs": 44994
     },
     {
       "text": " GB",
-      "startMs": 22289,
-      "endMs": 22516
+      "startMs": 44994,
+      "endMs": 45291
     },
     {
       "text": " or",
-      "startMs": 22516,
-      "endMs": 22744,
+      "startMs": 45291,
+      "endMs": 45588,
       "pageBreakAfter": true
     },
     {
       "text": " more",
-      "startMs": 22744,
-      "endMs": 23062
+      "startMs": 45588,
+      "endMs": 46003
     },
     {
       "text": " of",
-      "startMs": 23062,
-      "endMs": 23290
+      "startMs": 46003,
+      "endMs": 46300
     },
     {
       "text": " free",
-      "startMs": 23290,
-      "endMs": 23609
+      "startMs": 46300,
+      "endMs": 46716
     },
     {
       "text": " RAM,",
-      "startMs": 23609,
-      "endMs": 23927,
+      "startMs": 46716,
+      "endMs": 47131,
       "pageBreakAfter": true
     },
     {
       "text": " use",
-      "startMs": 23927,
-      "endMs": 24200
+      "startMs": 47131,
+      "endMs": 47488
     },
     {
       "text": " a",
-      "startMs": 24200,
-      "endMs": 24383
+      "startMs": 47488,
+      "endMs": 47725
     },
     {
       "text": " stronger",
-      "startMs": 24383,
-      "endMs": 24883
+      "startMs": 47725,
+      "endMs": 48378
     },
     {
       "text": " tier",
-      "startMs": 24883,
-      "endMs": 25202,
+      "startMs": 48378,
+      "endMs": 48794,
       "pageBreakAfter": true
     },
     {
       "text": " from",
-      "startMs": 25202,
-      "endMs": 25521
+      "startMs": 48794,
+      "endMs": 49209
     },
     {
       "text": " below:.",
-      "startMs": 25521,
-      "endMs": 25976
+      "startMs": 49209,
+      "endMs": 49803
     },
     {
       "text": " Let",
-      "startMs": 25976,
-      "endMs": 26249
+      "startMs": 49803,
+      "endMs": 50159
     },
     {
       "text": " us",
-      "startMs": 26249,
-      "endMs": 26476,
+      "startMs": 50159,
+      "endMs": 50456,
       "pageBreakAfter": true
     },
     {
       "text": " look",
-      "startMs": 26476,
-      "endMs": 26795
+      "startMs": 50456,
+      "endMs": 50872
     },
     {
       "text": " at",
-      "startMs": 26795,
-      "endMs": 27023
+      "startMs": 50872,
+      "endMs": 51169
     },
     {
       "text": " the",
-      "startMs": 27023,
-      "endMs": 27296
+      "startMs": 51169,
+      "endMs": 51525
     },
     {
       "text": " code.",
-      "startMs": 27296,
-      "endMs": 27660,
+      "startMs": 51525,
+      "endMs": 52867,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Step",
+      "startMs": 53400,
+      "endMs": 53733
+    },
+    {
+      "text": " 3:",
+      "startMs": 53733,
+      "endMs": 53970
+    },
+    {
+      "text": " Run",
+      "startMs": 53970,
+      "endMs": 54255
+    },
+    {
+      "text": " the",
+      "startMs": 54255,
+      "endMs": 54540,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Model.",
+      "startMs": 54540,
+      "endMs": 54968
+    },
+    {
+      "text": " Let",
+      "startMs": 54968,
+      "endMs": 55253
+    },
+    {
+      "text": " us",
+      "startMs": 55253,
+      "endMs": 55490
+    },
+    {
+      "text": " look",
+      "startMs": 55490,
+      "endMs": 55823,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " at",
+      "startMs": 55823,
+      "endMs": 56060
+    },
+    {
+      "text": " the",
+      "startMs": 56060,
+      "endMs": 56345
+    },
+    {
+      "text": " code.",
+      "startMs": 56345,
+      "endMs": 57367,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Step",
+      "startMs": 57900,
+      "endMs": 58199
+    },
+    {
+      "text": " 4:",
+      "startMs": 58199,
+      "endMs": 58412
+    },
+    {
+      "text": " Set",
+      "startMs": 58412,
+      "endMs": 58668
+    },
+    {
+      "text": " The",
+      "startMs": 58668,
+      "endMs": 58924,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " AI",
+      "startMs": 58924,
+      "endMs": 59137
+    },
+    {
+      "text": " Lower",
+      "startMs": 59137,
+      "endMs": 59479
+    },
+    {
+      "text": " Memory",
+      "startMs": 59479,
+      "endMs": 59863
+    },
+    {
+      "text": " Use.",
+      "startMs": 59863,
+      "endMs": 60161,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " These",
+      "startMs": 60161,
+      "endMs": 60503
+    },
+    {
+      "text": " settings",
+      "startMs": 60503,
+      "endMs": 60972
+    },
+    {
+      "text": " reduce",
+      "startMs": 60972,
+      "endMs": 61356
+    },
+    {
+      "text": " RAM",
+      "startMs": 61356,
+      "endMs": 61612,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " usage",
+      "startMs": 61612,
+      "endMs": 61953
+    },
+    {
+      "text": " on",
+      "startMs": 61953,
+      "endMs": 62167
+    },
+    {
+      "text": " a",
+      "startMs": 62167,
+      "endMs": 62337
+    },
+    {
+      "text": " low",
+      "startMs": 62337,
+      "endMs": 62593,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " config",
+      "startMs": 62593,
+      "endMs": 62977
+    },
+    {
+      "text": " pc.",
+      "startMs": 62977,
+      "endMs": 63233
+    },
+    {
+      "text": " Open",
+      "startMs": 63233,
+      "endMs": 63532
+    },
+    {
+      "text": " PowerShell",
+      "startMs": 63532,
+      "endMs": 64087,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " as",
+      "startMs": 64087,
+      "endMs": 64300
+    },
+    {
+      "text": " admin",
+      "startMs": 64300,
+      "endMs": 64641
+    },
+    {
+      "text": " and",
+      "startMs": 64641,
+      "endMs": 64897
+    },
+    {
+      "text": " run",
+      "startMs": 64897,
+      "endMs": 65153,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " the",
+      "startMs": 65153,
+      "endMs": 65409
+    },
+    {
+      "text": " commands",
+      "startMs": 65409,
+      "endMs": 65879
+    },
+    {
+      "text": " before",
+      "startMs": 65879,
+      "endMs": 66263
+    },
+    {
+      "text": " you",
+      "startMs": 66263,
+      "endMs": 66519,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " start",
+      "startMs": 66519,
+      "endMs": 66860
+    },
+    {
+      "text": " the",
+      "startMs": 66860,
+      "endMs": 67116
+    },
+    {
+      "text": " model.",
+      "startMs": 67116,
+      "endMs": 68367,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Set",
+      "startMs": 68900,
+      "endMs": 69030
+    },
+    {
+      "text": " the",
+      "startMs": 69030,
+      "endMs": 69161
+    },
+    {
+      "text": " number",
+      "startMs": 69161,
+      "endMs": 69356
+    },
+    {
+      "text": " of",
+      "startMs": 69356,
+      "endMs": 69465,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " layers",
+      "startMs": 69465,
+      "endMs": 69661
+    },
+    {
+      "text": " the",
+      "startMs": 69661,
+      "endMs": 69791
+    },
+    {
+      "text": " GPU",
+      "startMs": 69791,
+      "endMs": 69921
+    },
+    {
+      "text": " can",
+      "startMs": 69921,
+      "endMs": 70052,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " load.",
+      "startMs": 70052,
+      "endMs": 70226
+    },
+    {
+      "text": " Zero",
+      "startMs": 70226,
+      "endMs": 70378
+    },
+    {
+      "text": " means",
+      "startMs": 70378,
+      "endMs": 70552
+    },
+    {
+      "text": " the",
+      "startMs": 70552,
+      "endMs": 70682,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " CPU",
+      "startMs": 70682,
+      "endMs": 70812
+    },
+    {
+      "text": " does",
+      "startMs": 70812,
+      "endMs": 70965
+    },
+    {
+      "text": " all",
+      "startMs": 70965,
+      "endMs": 71095
+    },
+    {
+      "text": " the",
+      "startMs": 71095,
+      "endMs": 71225,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " work:.",
+      "startMs": 71225,
+      "endMs": 71421
+    },
+    {
+      "text": " Let",
+      "startMs": 71421,
+      "endMs": 71551
+    },
+    {
+      "text": " us",
+      "startMs": 71551,
+      "endMs": 71660
+    },
+    {
+      "text": " look",
+      "startMs": 71660,
+      "endMs": 71812,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " at",
+      "startMs": 71812,
+      "endMs": 71921
+    },
+    {
+      "text": " the",
+      "startMs": 71921,
+      "endMs": 72051
+    },
+    {
+      "text": " code.",
+      "startMs": 72051,
+      "endMs": 72867,
       "pageBreakAfter": true
     },
     {
       "text": " Read",
-      "startMs": 28167,
-      "endMs": 28452
+      "startMs": 73400,
+      "endMs": 73770
     },
     {
       "text": " the",
-      "startMs": 28452,
-      "endMs": 28697
+      "startMs": 73770,
+      "endMs": 74087
     },
     {
       "text": " full",
-      "startMs": 28697,
-      "endMs": 28982
+      "startMs": 74087,
+      "endMs": 74457
     },
     {
       "text": " article.",
-      "startMs": 28982,
-      "endMs": 29430,
+      "startMs": 74457,
+      "endMs": 75038,
       "pageBreakAfter": true
     },
     {
       "text": " New",
-      "startMs": 29430,
-      "endMs": 29675
+      "startMs": 75038,
+      "endMs": 75355
     },
     {
       "text": " posts",
-      "startMs": 29675,
-      "endMs": 30001
+      "startMs": 75355,
+      "endMs": 75778
     },
     {
       "text": " every",
-      "startMs": 30001,
-      "endMs": 30327
+      "startMs": 75778,
+      "endMs": 76201
     },
     {
       "text": " week",
-      "startMs": 30327,
-      "endMs": 30612,
+      "startMs": 76201,
+      "endMs": 76571,
       "pageBreakAfter": true
     },
     {
       "text": " on",
-      "startMs": 30612,
-      "endMs": 30816
+      "startMs": 76571,
+      "endMs": 76835
     },
     {
       "text": " the",
-      "startMs": 30816,
-      "endMs": 31061
+      "startMs": 76835,
+      "endMs": 77152
     },
     {
       "text": " blog.",
-      "startMs": 31061,
-      "endMs": 31387,
+      "startMs": 77152,
+      "endMs": 78367,
       "pageBreakAfter": true
     }
   ],

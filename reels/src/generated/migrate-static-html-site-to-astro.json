@@ -1,7 +1,7 @@
 {
   "slug": "migrate-static-html-site-to-astro",
-  "title": "How to Migrate a Static HTML Site to Astro Using Content Collections",
-  "description": "A step-by-step walkthrough of migrating a 35-page static HTML site to Astro content collections, layouts, and dynamic routes — including the verification checks run before cutover.",
+  "title": "Migrate a Static HTML Site to Astro with Content Collections",
+  "description": "A step-by-step walkthrough of migrating a 35-page static HTML site to Astro content collections, layouts, and dynamic routes, plus the checks to run before cutover.",
   "category": "Web Development",
   "tags": [
     "Astro",
@@ -10,29 +10,37 @@
     "Migration"
   ],
   "url": "https://www.techtips.fun/blog/migrate-static-html-site-to-astro/",
-  "theme": "github-dark",
-  "durationInFrames": 950,
   "scenes": [
     {
       "type": "title",
       "kicker": "Web Development",
-      "title": "How to Migrate a Static HTML Site to Astro Using Content Collections",
+      "title": "Migrate a Static HTML Site to Astro with Content Collections",
       "subtitle": "A step-by-step walkthrough of migrating a 35-page static HTML site to Astro content…",
-      "durationInFrames": 105
+      "image": {
+        "src": "post-media/migrate-static-html-site-to-astro/01-migrate-static-html-site-to-astro-hero.webp",
+        "width": 1600,
+        "height": 900
+      },
+      "durationInFrames": 183
     },
     {
       "type": "point",
       "kicker": "Web Development",
       "heading": "What we migrated",
-      "body": "The site (Couple in Bond) shipped as plain files: two hand-maintained index pages, 17 poll detail pages, and 16 companion articles.",
-      "durationInFrames": 120
+      "body": "The site (Couple in Bond) shipped as plain files: two hand-maintained index pages, 17 poll detail pages, and…",
+      "image": {
+        "src": "post-media/migrate-static-html-site-to-astro/02-migration-source-tree.webp",
+        "width": 514,
+        "height": 1600
+      },
+      "durationInFrames": 320
     },
     {
       "type": "point",
       "kicker": "Web Development",
       "heading": "Before you start",
       "body": "This guide assumes a static site (no framework), a build step you control, and content that repeats a page template.",
-      "durationInFrames": 120
+      "durationInFrames": 307
     },
     {
       "type": "code",
@@ -129,7 +137,10 @@
           }
         }
       ],
-      "durationInFrames": 95
+      "stepDurations": [
+        155
+      ],
+      "durationInFrames": 155
     },
     {
       "type": "code",
@@ -439,14 +450,18 @@
           }
         }
       ],
-      "durationInFrames": 190
+      "stepDurations": [
+        182,
+        182
+      ],
+      "durationInFrames": 364
     },
     {
       "type": "point",
       "kicker": "Web Development",
       "heading": "Give every collection a schema that fails the build",
       "body": "The zod schema is not decoration. On the old site, a missing meta description silently shipped an empty tag.",
-      "durationInFrames": 120
+      "durationInFrames": 330
     },
     {
       "type": "code",
@@ -641,748 +656,1517 @@
           }
         }
       ],
-      "durationInFrames": 95
+      "stepDurations": [
+        182
+      ],
+      "durationInFrames": 182
+    },
+    {
+      "type": "code",
+      "kicker": "Code",
+      "heading": "Step 4: Generate detail pages from the collection",
+      "steps": [
+        {
+          "lang": "astro",
+          "meta": "astro",
+          "value": "---\nimport { getCollection } from 'astro:content';\nimport PollDetail from '../../layouts/PollDetail.astro';\n\n// Emits polls/<id>.html because astro.config.mjs sets build.format: 'file'\nexport async function getStaticPaths() {\n  const polls = await getCollection('polls');\n  return polls.map((poll) => ({\n    params: { slug: poll.id },",
+          "code": "---\nimport { getCollection } from 'astro:content';\nimport PollDetail from '../../layouts/PollDetail.astro';\n\n// Emits polls/<id>.html because astro.config.mjs sets build.format: 'file'\nexport async function getStaticPaths() {\n  const polls = await getCollection('polls');\n  return polls.map((poll) => ({\n    params: { slug: poll.id },",
+          "tokens": [
+            [
+              "---",
+              "#8B949E"
+            ],
+            "\n",
+            [
+              "import",
+              "#FF7B72"
+            ],
+            " ",
+            [
+              "{ getCollection }",
+              "#C9D1D9"
+            ],
+            " ",
+            [
+              "from",
+              "#FF7B72"
+            ],
+            " ",
+            [
+              "'astro:content'",
+              "#A5D6FF"
+            ],
+            [
+              ";",
+              "#C9D1D9"
+            ],
+            "\n",
+            [
+              "import",
+              "#FF7B72"
+            ],
+            " ",
+            [
+              "PollDetail",
+              "#C9D1D9"
+            ],
+            " ",
+            [
+              "from",
+              "#FF7B72"
+            ],
+            " ",
+            [
+              "'../../layouts/PollDetail.astro'",
+              "#A5D6FF"
+            ],
+            [
+              ";",
+              "#C9D1D9"
+            ],
+            "\n\n",
+            [
+              "// Emits polls/<id>.html because astro.config.mjs sets build.format: 'file'",
+              "#8B949E"
+            ],
+            "\n",
+            [
+              "export async function",
+              "#FF7B72"
+            ],
+            " ",
+            [
+              "getStaticPaths",
+              "#D2A8FF"
+            ],
+            [
+              "() {",
+              "#C9D1D9"
+            ],
+            "\n  ",
+            [
+              "const",
+              "#FF7B72"
+            ],
+            " ",
+            [
+              "polls",
+              "#79C0FF"
+            ],
+            " ",
+            [
+              "= await",
+              "#FF7B72"
+            ],
+            " ",
+            [
+              "getCollection",
+              "#D2A8FF"
+            ],
+            [
+              "(",
+              "#C9D1D9"
+            ],
+            [
+              "'polls'",
+              "#A5D6FF"
+            ],
+            [
+              ");",
+              "#C9D1D9"
+            ],
+            "\n  ",
+            [
+              "return",
+              "#FF7B72"
+            ],
+            " ",
+            [
+              "polls.",
+              "#C9D1D9"
+            ],
+            [
+              "map",
+              "#D2A8FF"
+            ],
+            [
+              "((",
+              "#C9D1D9"
+            ],
+            [
+              "poll",
+              "#FFA657"
+            ],
+            [
+              ")",
+              "#C9D1D9"
+            ],
+            " ",
+            [
+              "=>",
+              "#FF7B72"
+            ],
+            " ",
+            [
+              "({",
+              "#C9D1D9"
+            ],
+            "\n    ",
+            [
+              "params: { slug: poll.id },",
+              "#C9D1D9"
+            ]
+          ],
+          "annotations": [],
+          "themeName": "github-dark",
+          "style": {
+            "color": "#c9d1d9",
+            "background": "#0d1117",
+            "colorScheme": "dark"
+          }
+        }
+      ],
+      "stepDurations": [
+        182
+      ],
+      "durationInFrames": 182
+    },
+    {
+      "type": "code",
+      "kicker": "Code",
+      "heading": "Step 5: Regenerate index pages from the same data",
+      "steps": [
+        {
+          "lang": "astro",
+          "meta": "astro",
+          "value": "---\nconst polls = (await getCollection('polls'))\n  .filter((p) => !p.data.draft)\n  .sort((a, b) => a.data.listOrder - b.data.listOrder);\n\nconst ld = {\n  '@context': 'https://schema.org',\n  '@graph': [\n    // CollectionPage and ImageObject entries…",
+          "code": "---\nconst polls = (await getCollection('polls'))\n  .filter((p) => !p.data.draft)\n  .sort((a, b) => a.data.listOrder - b.data.listOrder);\n\nconst ld = {\n  '@context': 'https://schema.org',\n  '@graph': [\n    // CollectionPage and ImageObject entries…",
+          "tokens": [
+            [
+              "---",
+              "#8B949E"
+            ],
+            "\n",
+            [
+              "const",
+              "#FF7B72"
+            ],
+            " ",
+            [
+              "polls",
+              "#79C0FF"
+            ],
+            " ",
+            [
+              "=",
+              "#FF7B72"
+            ],
+            " ",
+            [
+              "(",
+              "#C9D1D9"
+            ],
+            [
+              "await",
+              "#FF7B72"
+            ],
+            " ",
+            [
+              "getCollection",
+              "#D2A8FF"
+            ],
+            [
+              "(",
+              "#C9D1D9"
+            ],
+            [
+              "'polls'",
+              "#A5D6FF"
+            ],
+            [
+              "))",
+              "#C9D1D9"
+            ],
+            "\n  ",
+            [
+              ".",
+              "#C9D1D9"
+            ],
+            [
+              "filter",
+              "#D2A8FF"
+            ],
+            [
+              "((",
+              "#C9D1D9"
+            ],
+            [
+              "p",
+              "#FFA657"
+            ],
+            [
+              ")",
+              "#C9D1D9"
+            ],
+            " ",
+            [
+              "=> !",
+              "#FF7B72"
+            ],
+            [
+              "p.data.draft)",
+              "#C9D1D9"
+            ],
+            "\n  ",
+            [
+              ".",
+              "#C9D1D9"
+            ],
+            [
+              "sort",
+              "#D2A8FF"
+            ],
+            [
+              "((",
+              "#C9D1D9"
+            ],
+            [
+              "a",
+              "#FFA657"
+            ],
+            [
+              ",",
+              "#C9D1D9"
+            ],
+            " ",
+            [
+              "b",
+              "#FFA657"
+            ],
+            [
+              ")",
+              "#C9D1D9"
+            ],
+            " ",
+            [
+              "=>",
+              "#FF7B72"
+            ],
+            " ",
+            [
+              "a.data.listOrder",
+              "#C9D1D9"
+            ],
+            " ",
+            [
+              "-",
+              "#FF7B72"
+            ],
+            " ",
+            [
+              "b.data.listOrder);",
+              "#C9D1D9"
+            ],
+            "\n\n",
+            [
+              "const",
+              "#FF7B72"
+            ],
+            " ",
+            [
+              "ld",
+              "#79C0FF"
+            ],
+            " ",
+            [
+              "=",
+              "#FF7B72"
+            ],
+            " ",
+            [
+              "{",
+              "#C9D1D9"
+            ],
+            "\n  ",
+            [
+              "'@context'",
+              "#A5D6FF"
+            ],
+            [
+              ":",
+              "#C9D1D9"
+            ],
+            " ",
+            [
+              "'https://schema.org'",
+              "#A5D6FF"
+            ],
+            [
+              ",",
+              "#C9D1D9"
+            ],
+            "\n  ",
+            [
+              "'@graph'",
+              "#A5D6FF"
+            ],
+            [
+              ": [",
+              "#C9D1D9"
+            ],
+            "\n    ",
+            [
+              "// CollectionPage and ImageObject entries…",
+              "#8B949E"
+            ]
+          ],
+          "annotations": [],
+          "themeName": "github-dark",
+          "style": {
+            "color": "#c9d1d9",
+            "background": "#0d1117",
+            "colorScheme": "dark"
+          }
+        }
+      ],
+      "stepDurations": [
+        182
+      ],
+      "durationInFrames": 182
+    },
+    {
+      "type": "code",
+      "kicker": "Code",
+      "heading": "Step 6: Rewrite the tooling that patched HTML",
+      "steps": [
+        {
+          "lang": "python",
+          "meta": "python",
+          "value": "def yaml_value(val):\n    \"\"\"json.dumps output (double-quoted strings, flow lists)\n    is valid YAML, so quotes, colons and unicode in titles\n    cannot break frontmatter parsing.\"\"\"\n    if isinstance(val, bool):\n        return \"true\" if val else \"false\"\n    if isinstance(val, (int, float)):\n        return str(val)\n    return json.dumps(val, ensure_ascii=False)",
+          "code": "def yaml_value(val):\n    \"\"\"json.dumps output (double-quoted strings, flow lists)\n    is valid YAML, so quotes, colons and unicode in titles\n    cannot break frontmatter parsing.\"\"\"\n    if isinstance(val, bool):\n        return \"true\" if val else \"false\"\n    if isinstance(val, (int, float)):\n        return str(val)\n    return json.dumps(val, ensure_ascii=False)",
+          "tokens": [
+            [
+              "def",
+              "#FF7B72"
+            ],
+            " ",
+            [
+              "yaml_value",
+              "#D2A8FF"
+            ],
+            [
+              "(val):",
+              "#C9D1D9"
+            ],
+            "\n    ",
+            [
+              "\"\"\"json.dumps output (double-quoted strings, flow lists)",
+              "#A5D6FF"
+            ],
+            "\n    ",
+            [
+              "is valid YAML, so quotes, colons and unicode in titles",
+              "#A5D6FF"
+            ],
+            "\n    ",
+            [
+              "cannot break frontmatter parsing.\"\"\"",
+              "#A5D6FF"
+            ],
+            "\n    ",
+            [
+              "if",
+              "#FF7B72"
+            ],
+            " ",
+            [
+              "isinstance",
+              "#79C0FF"
+            ],
+            [
+              "(val,",
+              "#C9D1D9"
+            ],
+            " ",
+            [
+              "bool",
+              "#79C0FF"
+            ],
+            [
+              "):",
+              "#C9D1D9"
+            ],
+            "\n        ",
+            [
+              "return",
+              "#FF7B72"
+            ],
+            " ",
+            [
+              "\"true\"",
+              "#A5D6FF"
+            ],
+            " ",
+            [
+              "if",
+              "#FF7B72"
+            ],
+            " ",
+            [
+              "val",
+              "#C9D1D9"
+            ],
+            " ",
+            [
+              "else",
+              "#FF7B72"
+            ],
+            " ",
+            [
+              "\"false\"",
+              "#A5D6FF"
+            ],
+            "\n    ",
+            [
+              "if",
+              "#FF7B72"
+            ],
+            " ",
+            [
+              "isinstance",
+              "#79C0FF"
+            ],
+            [
+              "(val, (",
+              "#C9D1D9"
+            ],
+            [
+              "int",
+              "#79C0FF"
+            ],
+            [
+              ",",
+              "#C9D1D9"
+            ],
+            " ",
+            [
+              "float",
+              "#79C0FF"
+            ],
+            [
+              ")):",
+              "#C9D1D9"
+            ],
+            "\n        ",
+            [
+              "return",
+              "#FF7B72"
+            ],
+            " ",
+            [
+              "str",
+              "#79C0FF"
+            ],
+            [
+              "(val)",
+              "#C9D1D9"
+            ],
+            "\n    ",
+            [
+              "return",
+              "#FF7B72"
+            ],
+            " ",
+            [
+              "json.dumps(val,",
+              "#C9D1D9"
+            ],
+            " ",
+            [
+              "ensure_ascii",
+              "#FFA657"
+            ],
+            [
+              "=",
+              "#FF7B72"
+            ],
+            [
+              "False",
+              "#79C0FF"
+            ],
+            [
+              ")",
+              "#C9D1D9"
+            ]
+          ],
+          "annotations": [],
+          "themeName": "github-dark",
+          "style": {
+            "color": "#c9d1d9",
+            "background": "#0d1117",
+            "colorScheme": "dark"
+          }
+        }
+      ],
+      "stepDurations": [
+        182
+      ],
+      "durationInFrames": 182
     },
     {
       "type": "outro",
       "heading": "Read the full article",
       "body": "New posts every week on the blog.",
       "url": "techtips.fun",
-      "durationInFrames": 105
+      "durationInFrames": 165
     }
   ],
+  "theme": "github-dark",
+  "durationInFrames": 2552,
   "captions": [
     {
       "text": " A",
-      "startMs": 0,
-      "endMs": 117
+      "startMs": 500,
+      "endMs": 671
     },
     {
       "text": " step-by-step",
-      "startMs": 117,
-      "endMs": 556
+      "startMs": 671,
+      "endMs": 1312
     },
     {
       "text": " walkthrough",
-      "startMs": 556,
-      "endMs": 966
+      "startMs": 1312,
+      "endMs": 1910
     },
     {
       "text": " of",
-      "startMs": 966,
-      "endMs": 1112,
+      "startMs": 1910,
+      "endMs": 2124,
       "pageBreakAfter": true
     },
     {
       "text": " migrating",
-      "startMs": 1112,
-      "endMs": 1464
+      "startMs": 2124,
+      "endMs": 2636
     },
     {
       "text": " a",
-      "startMs": 1464,
-      "endMs": 1581
+      "startMs": 2636,
+      "endMs": 2807
     },
     {
       "text": " 35-page",
-      "startMs": 1581,
-      "endMs": 1873
+      "startMs": 2807,
+      "endMs": 3235
     },
     {
       "text": " static",
-      "startMs": 1873,
-      "endMs": 2137,
+      "startMs": 3235,
+      "endMs": 3619,
       "pageBreakAfter": true
     },
     {
       "text": " HTML",
-      "startMs": 2137,
-      "endMs": 2342
+      "startMs": 3619,
+      "endMs": 3918
     },
     {
       "text": " site",
-      "startMs": 2342,
-      "endMs": 2547
+      "startMs": 3918,
+      "endMs": 4217
     },
     {
       "text": " to",
-      "startMs": 2547,
-      "endMs": 2693
+      "startMs": 4217,
+      "endMs": 4431
     },
     {
       "text": " Astro",
-      "startMs": 2693,
-      "endMs": 2927,
+      "startMs": 4431,
+      "endMs": 4773,
       "pageBreakAfter": true
     },
     {
       "text": " content",
-      "startMs": 2927,
-      "endMs": 3220,
+      "startMs": 4773,
+      "endMs": 6067,
       "pageBreakAfter": true
     },
     {
       "text": " What",
-      "startMs": 3500,
-      "endMs": 3630
+      "startMs": 6600,
+      "endMs": 6982
     },
     {
       "text": " we",
-      "startMs": 3630,
-      "endMs": 3723
+      "startMs": 6982,
+      "endMs": 7254
     },
     {
       "text": " migrated.",
-      "startMs": 3723,
-      "endMs": 3946
+      "startMs": 7254,
+      "endMs": 7908
     },
     {
       "text": " The",
-      "startMs": 3946,
-      "endMs": 4058,
+      "startMs": 7908,
+      "endMs": 8235,
       "pageBreakAfter": true
     },
     {
       "text": " site",
-      "startMs": 4058,
-      "endMs": 4188
+      "startMs": 8235,
+      "endMs": 8617
     },
     {
       "text": " (Couple",
-      "startMs": 4188,
-      "endMs": 4374
+      "startMs": 8617,
+      "endMs": 9162
     },
     {
       "text": " in",
-      "startMs": 4374,
-      "endMs": 4466
+      "startMs": 9162,
+      "endMs": 9435
     },
     {
       "text": " Bond)",
-      "startMs": 4466,
-      "endMs": 4615,
+      "startMs": 9435,
+      "endMs": 9871,
       "pageBreakAfter": true
     },
     {
       "text": " shipped",
-      "startMs": 4615,
-      "endMs": 4801
+      "startMs": 9871,
+      "endMs": 10416
     },
     {
       "text": " as",
-      "startMs": 4801,
-      "endMs": 4894
+      "startMs": 10416,
+      "endMs": 10688
     },
     {
       "text": " plain",
-      "startMs": 4894,
-      "endMs": 5043
+      "startMs": 10688,
+      "endMs": 11124
     },
     {
       "text": " files:",
-      "startMs": 5043,
-      "endMs": 5210,
+      "startMs": 11124,
+      "endMs": 11615,
       "pageBreakAfter": true
     },
     {
       "text": " two",
-      "startMs": 5210,
-      "endMs": 5321
+      "startMs": 11615,
+      "endMs": 11942
     },
     {
       "text": " hand-maintained",
-      "startMs": 5321,
-      "endMs": 5656
+      "startMs": 11942,
+      "endMs": 12923
     },
     {
       "text": " index",
-      "startMs": 5656,
-      "endMs": 5805
+      "startMs": 12923,
+      "endMs": 13359
     },
     {
       "text": " pages,",
-      "startMs": 5805,
-      "endMs": 5972,
+      "startMs": 13359,
+      "endMs": 13850,
       "pageBreakAfter": true
     },
     {
       "text": " 17",
-      "startMs": 5972,
-      "endMs": 6065
+      "startMs": 13850,
+      "endMs": 14122
     },
     {
       "text": " poll",
-      "startMs": 6065,
-      "endMs": 6195
+      "startMs": 14122,
+      "endMs": 14504
     },
     {
       "text": " detail",
-      "startMs": 6195,
-      "endMs": 6362
+      "startMs": 14504,
+      "endMs": 14995
     },
     {
       "text": " pages,",
-      "startMs": 6362,
-      "endMs": 6529,
+      "startMs": 14995,
+      "endMs": 15485,
       "pageBreakAfter": true
     },
     {
-      "text": " and",
-      "startMs": 6529,
-      "endMs": 6641
-    },
-    {
-      "text": " 16",
-      "startMs": 6641,
-      "endMs": 6734
-    },
-    {
-      "text": " companion",
-      "startMs": 6734,
-      "endMs": 6957
-    },
-    {
-      "text": " articles.",
-      "startMs": 6957,
-      "endMs": 7180,
+      "text": " and…",
+      "startMs": 15485,
+      "endMs": 16733,
       "pageBreakAfter": true
     },
     {
       "text": " Before",
-      "startMs": 7500,
-      "endMs": 7683
+      "startMs": 17267,
+      "endMs": 17706
     },
     {
       "text": " you",
-      "startMs": 7683,
-      "endMs": 7805
+      "startMs": 17706,
+      "endMs": 17999
     },
     {
       "text": " start.",
-      "startMs": 7805,
-      "endMs": 7988
+      "startMs": 17999,
+      "endMs": 18438
     },
     {
       "text": " This",
-      "startMs": 7988,
-      "endMs": 8130,
+      "startMs": 18438,
+      "endMs": 18780,
       "pageBreakAfter": true
     },
     {
       "text": " guide",
-      "startMs": 8130,
-      "endMs": 8293
+      "startMs": 18780,
+      "endMs": 19170
     },
     {
       "text": " assumes",
-      "startMs": 8293,
-      "endMs": 8496
+      "startMs": 19170,
+      "endMs": 19658
     },
     {
       "text": " a",
-      "startMs": 8496,
-      "endMs": 8578
+      "startMs": 19658,
+      "endMs": 19853
     },
     {
       "text": " static",
-      "startMs": 8578,
-      "endMs": 8761,
+      "startMs": 19853,
+      "endMs": 20292,
       "pageBreakAfter": true
     },
     {
       "text": " site",
-      "startMs": 8761,
-      "endMs": 8903
+      "startMs": 20292,
+      "endMs": 20634
     },
     {
       "text": " (no",
-      "startMs": 8903,
-      "endMs": 9025
+      "startMs": 20634,
+      "endMs": 20927
     },
     {
       "text": " framework),",
-      "startMs": 9025,
-      "endMs": 9310
+      "startMs": 20927,
+      "endMs": 21610
     },
     {
       "text": " a",
-      "startMs": 9310,
-      "endMs": 9391,
+      "startMs": 21610,
+      "endMs": 21805,
       "pageBreakAfter": true
     },
     {
       "text": " build",
-      "startMs": 9391,
-      "endMs": 9553
+      "startMs": 21805,
+      "endMs": 22196
     },
     {
       "text": " step",
-      "startMs": 9553,
-      "endMs": 9696
+      "startMs": 22196,
+      "endMs": 22537
     },
     {
       "text": " you",
-      "startMs": 9696,
-      "endMs": 9818
+      "startMs": 22537,
+      "endMs": 22830
     },
     {
       "text": " control,",
-      "startMs": 9818,
-      "endMs": 10041,
+      "startMs": 22830,
+      "endMs": 23367,
       "pageBreakAfter": true
     },
     {
       "text": " and",
-      "startMs": 10041,
-      "endMs": 10163
+      "startMs": 23367,
+      "endMs": 23660
     },
     {
       "text": " content",
-      "startMs": 10163,
-      "endMs": 10367
+      "startMs": 23660,
+      "endMs": 24148
     },
     {
       "text": " that",
-      "startMs": 10367,
-      "endMs": 10509
+      "startMs": 24148,
+      "endMs": 24490
     },
     {
       "text": " repeats",
-      "startMs": 10509,
-      "endMs": 10712,
+      "startMs": 24490,
+      "endMs": 24978,
       "pageBreakAfter": true
     },
     {
       "text": " a",
-      "startMs": 10712,
-      "endMs": 10794
+      "startMs": 24978,
+      "endMs": 25173
     },
     {
       "text": " page",
-      "startMs": 10794,
-      "endMs": 10936
+      "startMs": 25173,
+      "endMs": 25514
     },
     {
       "text": " template.",
-      "startMs": 10936,
-      "endMs": 11180,
+      "startMs": 25514,
+      "endMs": 26967,
       "pageBreakAfter": true
     },
     {
       "text": " Step",
-      "startMs": 11500,
-      "endMs": 11719
+      "startMs": 27500,
+      "endMs": 27793
     },
     {
       "text": " 1:",
-      "startMs": 11719,
-      "endMs": 11876
+      "startMs": 27793,
+      "endMs": 28002
     },
     {
       "text": " Lock",
-      "startMs": 11876,
-      "endMs": 12095
+      "startMs": 28002,
+      "endMs": 28295
     },
     {
       "text": " in",
-      "startMs": 12095,
-      "endMs": 12252,
+      "startMs": 28295,
+      "endMs": 28504,
       "pageBreakAfter": true
     },
     {
       "text": " the",
-      "startMs": 12252,
-      "endMs": 12440
+      "startMs": 28504,
+      "endMs": 28755
     },
     {
       "text": " existing",
-      "startMs": 12440,
-      "endMs": 12784
+      "startMs": 28755,
+      "endMs": 29216
     },
     {
       "text": " URL",
-      "startMs": 12784,
-      "endMs": 12972
+      "startMs": 29216,
+      "endMs": 29467
     },
     {
       "text": " shape.",
-      "startMs": 12972,
-      "endMs": 13254,
+      "startMs": 29467,
+      "endMs": 29843,
       "pageBreakAfter": true
     },
     {
       "text": " Let",
-      "startMs": 13254,
-      "endMs": 13442
+      "startMs": 29843,
+      "endMs": 30094
     },
     {
       "text": " us",
-      "startMs": 13442,
-      "endMs": 13599
+      "startMs": 30094,
+      "endMs": 30304
     },
     {
       "text": " look",
-      "startMs": 13599,
-      "endMs": 13818
+      "startMs": 30304,
+      "endMs": 30597
     },
     {
       "text": " at",
-      "startMs": 13818,
-      "endMs": 13975,
+      "startMs": 30597,
+      "endMs": 30806,
       "pageBreakAfter": true
     },
     {
       "text": " the",
-      "startMs": 13975,
-      "endMs": 14163
+      "startMs": 30806,
+      "endMs": 31057
     },
     {
       "text": " code.",
-      "startMs": 14163,
-      "endMs": 14413,
+      "startMs": 31057,
+      "endMs": 32133,
       "pageBreakAfter": true
     },
     {
       "text": " Step",
-      "startMs": 14667,
-      "endMs": 15096
+      "startMs": 32667,
+      "endMs": 33146
     },
     {
       "text": " 2:",
-      "startMs": 15096,
-      "endMs": 15403
+      "startMs": 33146,
+      "endMs": 33488
     },
     {
       "text": " Move",
-      "startMs": 15403,
-      "endMs": 15832
+      "startMs": 33488,
+      "endMs": 33967
     },
     {
       "text": " page",
-      "startMs": 15832,
-      "endMs": 16261,
+      "startMs": 33967,
+      "endMs": 34446,
       "pageBreakAfter": true
     },
     {
       "text": " content",
-      "startMs": 16261,
-      "endMs": 16875
+      "startMs": 34446,
+      "endMs": 35130
     },
     {
       "text": " into",
-      "startMs": 16875,
-      "endMs": 17304
+      "startMs": 35130,
+      "endMs": 35609
     },
     {
       "text": " collections.",
-      "startMs": 17304,
-      "endMs": 18224
+      "startMs": 35609,
+      "endMs": 36635
     },
     {
       "text": " Let",
-      "startMs": 18224,
-      "endMs": 18592,
+      "startMs": 36635,
+      "endMs": 37046,
       "pageBreakAfter": true
     },
     {
       "text": " us",
-      "startMs": 18592,
-      "endMs": 18899
+      "startMs": 37046,
+      "endMs": 37388
     },
     {
       "text": " look",
-      "startMs": 18899,
-      "endMs": 19328
+      "startMs": 37388,
+      "endMs": 37867
     },
     {
       "text": " at",
-      "startMs": 19328,
-      "endMs": 19635
+      "startMs": 37867,
+      "endMs": 38209
     },
     {
       "text": " the",
-      "startMs": 19635,
-      "endMs": 20003,
+      "startMs": 38209,
+      "endMs": 38619,
       "pageBreakAfter": true
     },
     {
       "text": " code.",
-      "startMs": 20003,
-      "endMs": 20493,
+      "startMs": 38619,
+      "endMs": 44267,
       "pageBreakAfter": true
     },
     {
       "text": " Give",
-      "startMs": 21000,
-      "endMs": 21118
+      "startMs": 44800,
+      "endMs": 45108
     },
     {
       "text": " every",
-      "startMs": 21118,
-      "endMs": 21253
+      "startMs": 45108,
+      "endMs": 45461
     },
     {
       "text": " collection",
-      "startMs": 21253,
-      "endMs": 21473
+      "startMs": 45461,
+      "endMs": 46033
     },
     {
       "text": " a",
-      "startMs": 21473,
-      "endMs": 21540,
+      "startMs": 46033,
+      "endMs": 46209,
       "pageBreakAfter": true
     },
     {
       "text": " schema",
-      "startMs": 21540,
-      "endMs": 21692
+      "startMs": 46209,
+      "endMs": 46606
     },
     {
       "text": " that",
-      "startMs": 21692,
-      "endMs": 21810
+      "startMs": 46606,
+      "endMs": 46914
     },
     {
       "text": " fails",
-      "startMs": 21810,
-      "endMs": 21945
+      "startMs": 46914,
+      "endMs": 47266
     },
     {
       "text": " the",
-      "startMs": 21945,
-      "endMs": 22047,
+      "startMs": 47266,
+      "endMs": 47530,
       "pageBreakAfter": true
     },
     {
       "text": " build.",
-      "startMs": 22047,
-      "endMs": 22199
+      "startMs": 47530,
+      "endMs": 47927
     },
     {
       "text": " The",
-      "startMs": 22199,
-      "endMs": 22300
+      "startMs": 47927,
+      "endMs": 48191
     },
     {
       "text": " zod",
-      "startMs": 22300,
-      "endMs": 22401
+      "startMs": 48191,
+      "endMs": 48455
     },
     {
       "text": " schema",
-      "startMs": 22401,
-      "endMs": 22553,
+      "startMs": 48455,
+      "endMs": 48851,
       "pageBreakAfter": true
     },
     {
       "text": " is",
-      "startMs": 22553,
-      "endMs": 22637
+      "startMs": 48851,
+      "endMs": 49072
     },
     {
       "text": " not",
-      "startMs": 22637,
-      "endMs": 22739
+      "startMs": 49072,
+      "endMs": 49336
     },
     {
       "text": " decoration.",
-      "startMs": 22739,
-      "endMs": 22975
+      "startMs": 49336,
+      "endMs": 49952
     },
     {
       "text": " On",
-      "startMs": 22975,
-      "endMs": 23059,
+      "startMs": 49952,
+      "endMs": 50172,
       "pageBreakAfter": true
     },
     {
       "text": " the",
-      "startMs": 23059,
-      "endMs": 23161
+      "startMs": 50172,
+      "endMs": 50437
     },
     {
       "text": " old",
-      "startMs": 23161,
-      "endMs": 23262
+      "startMs": 50437,
+      "endMs": 50701
     },
     {
       "text": " site,",
-      "startMs": 23262,
-      "endMs": 23397
+      "startMs": 50701,
+      "endMs": 51053
     },
     {
       "text": " a",
-      "startMs": 23397,
-      "endMs": 23465,
+      "startMs": 51053,
+      "endMs": 51229,
       "pageBreakAfter": true
     },
     {
       "text": " missing",
-      "startMs": 23465,
-      "endMs": 23633
+      "startMs": 51229,
+      "endMs": 51670
     },
     {
       "text": " meta",
-      "startMs": 23633,
-      "endMs": 23752
+      "startMs": 51670,
+      "endMs": 51978
     },
     {
       "text": " description",
-      "startMs": 23752,
-      "endMs": 23988
+      "startMs": 51978,
+      "endMs": 52594
     },
     {
       "text": " silently",
-      "startMs": 23988,
-      "endMs": 24174,
+      "startMs": 52594,
+      "endMs": 53079,
       "pageBreakAfter": true
     },
     {
       "text": " shipped",
-      "startMs": 24174,
-      "endMs": 24342
+      "startMs": 53079,
+      "endMs": 53519
     },
     {
       "text": " an",
-      "startMs": 24342,
-      "endMs": 24427
+      "startMs": 53519,
+      "endMs": 53739
     },
     {
       "text": " empty",
-      "startMs": 24427,
-      "endMs": 24562
+      "startMs": 53739,
+      "endMs": 54092
     },
     {
       "text": " tag.",
-      "startMs": 24562,
-      "endMs": 24680,
+      "startMs": 54092,
+      "endMs": 55267,
       "pageBreakAfter": true
     },
     {
       "text": " Step",
-      "startMs": 25000,
-      "endMs": 25222
+      "startMs": 55800,
+      "endMs": 56155
     },
     {
       "text": " 3:",
-      "startMs": 25222,
-      "endMs": 25380
+      "startMs": 56155,
+      "endMs": 56409
     },
     {
       "text": " Move",
-      "startMs": 25380,
-      "endMs": 25602
+      "startMs": 56409,
+      "endMs": 56764
     },
     {
       "text": " shared",
-      "startMs": 25602,
-      "endMs": 25887,
+      "startMs": 56764,
+      "endMs": 57220,
       "pageBreakAfter": true
     },
     {
       "text": " chrome",
-      "startMs": 25887,
-      "endMs": 26172
+      "startMs": 57220,
+      "endMs": 57677
     },
     {
       "text": " into",
-      "startMs": 26172,
-      "endMs": 26393
+      "startMs": 57677,
+      "endMs": 58032
     },
     {
       "text": " layouts.",
-      "startMs": 26393,
-      "endMs": 26742
+      "startMs": 58032,
+      "endMs": 58590
     },
     {
       "text": " Let",
-      "startMs": 26742,
-      "endMs": 26932,
+      "startMs": 58590,
+      "endMs": 58894,
       "pageBreakAfter": true
     },
     {
       "text": " us",
-      "startMs": 26932,
-      "endMs": 27090
+      "startMs": 58894,
+      "endMs": 59148
     },
     {
       "text": " look",
-      "startMs": 27090,
-      "endMs": 27312
+      "startMs": 59148,
+      "endMs": 59503
     },
     {
       "text": " at",
-      "startMs": 27312,
-      "endMs": 27470
+      "startMs": 59503,
+      "endMs": 59757
     },
     {
       "text": " the",
-      "startMs": 27470,
-      "endMs": 27660,
+      "startMs": 59757,
+      "endMs": 60061,
       "pageBreakAfter": true
     },
     {
       "text": " code.",
-      "startMs": 27660,
-      "endMs": 27913,
+      "startMs": 60061,
+      "endMs": 61333,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Step",
+      "startMs": 61867,
+      "endMs": 62181
+    },
+    {
+      "text": " 4:",
+      "startMs": 62181,
+      "endMs": 62405
+    },
+    {
+      "text": " Generate",
+      "startMs": 62405,
+      "endMs": 62899
+    },
+    {
+      "text": " detail",
+      "startMs": 62899,
+      "endMs": 63303,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " pages",
+      "startMs": 63303,
+      "endMs": 63662
+    },
+    {
+      "text": " from",
+      "startMs": 63662,
+      "endMs": 63976
+    },
+    {
+      "text": " the",
+      "startMs": 63976,
+      "endMs": 64245
+    },
+    {
+      "text": " collection.",
+      "startMs": 64245,
+      "endMs": 64873,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Let",
+      "startMs": 64873,
+      "endMs": 65142
+    },
+    {
+      "text": " us",
+      "startMs": 65142,
+      "endMs": 65367
+    },
+    {
+      "text": " look",
+      "startMs": 65367,
+      "endMs": 65681
+    },
+    {
+      "text": " at",
+      "startMs": 65681,
+      "endMs": 65905,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " the",
+      "startMs": 65905,
+      "endMs": 66174
+    },
+    {
+      "text": " code.",
+      "startMs": 66174,
+      "endMs": 67400,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Step",
+      "startMs": 67933,
+      "endMs": 68242
+    },
+    {
+      "text": " 5:",
+      "startMs": 68242,
+      "endMs": 68462
+    },
+    {
+      "text": " Regenerate",
+      "startMs": 68462,
+      "endMs": 69034
+    },
+    {
+      "text": " index",
+      "startMs": 69034,
+      "endMs": 69386,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " pages",
+      "startMs": 69386,
+      "endMs": 69738
+    },
+    {
+      "text": " from",
+      "startMs": 69738,
+      "endMs": 70047
+    },
+    {
+      "text": " the",
+      "startMs": 70047,
+      "endMs": 70311
+    },
+    {
+      "text": " same",
+      "startMs": 70311,
+      "endMs": 70619,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " data.",
+      "startMs": 70619,
+      "endMs": 70971
+    },
+    {
+      "text": " Let",
+      "startMs": 70971,
+      "endMs": 71235
+    },
+    {
+      "text": " us",
+      "startMs": 71235,
+      "endMs": 71455
+    },
+    {
+      "text": " look",
+      "startMs": 71455,
+      "endMs": 71764,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " at",
+      "startMs": 71764,
+      "endMs": 71984
+    },
+    {
+      "text": " the",
+      "startMs": 71984,
+      "endMs": 72248
+    },
+    {
+      "text": " code.",
+      "startMs": 72248,
+      "endMs": 73467,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Step",
+      "startMs": 74000,
+      "endMs": 74327
+    },
+    {
+      "text": " 6:",
+      "startMs": 74327,
+      "endMs": 74560
+    },
+    {
+      "text": " Rewrite",
+      "startMs": 74560,
+      "endMs": 75027
+    },
+    {
+      "text": " the",
+      "startMs": 75027,
+      "endMs": 75307,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " tooling",
+      "startMs": 75307,
+      "endMs": 75773
+    },
+    {
+      "text": " that",
+      "startMs": 75773,
+      "endMs": 76100
+    },
+    {
+      "text": " patched",
+      "startMs": 76100,
+      "endMs": 76567
+    },
+    {
+      "text": " HTML.",
+      "startMs": 76567,
+      "endMs": 76940,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Let",
+      "startMs": 76940,
+      "endMs": 77220
+    },
+    {
+      "text": " us",
+      "startMs": 77220,
+      "endMs": 77453
+    },
+    {
+      "text": " look",
+      "startMs": 77453,
+      "endMs": 77780
+    },
+    {
+      "text": " at",
+      "startMs": 77780,
+      "endMs": 78013,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " the",
+      "startMs": 78013,
+      "endMs": 78293
+    },
+    {
+      "text": " code.",
+      "startMs": 78293,
+      "endMs": 79533,
       "pageBreakAfter": true
     },
     {
       "text": " Read",
-      "startMs": 28167,
-      "endMs": 28452
+      "startMs": 80067,
+      "endMs": 80437
     },
     {
       "text": " the",
-      "startMs": 28452,
-      "endMs": 28697
+      "startMs": 80437,
+      "endMs": 80754
     },
     {
       "text": " full",
-      "startMs": 28697,
-      "endMs": 28982
+      "startMs": 80754,
+      "endMs": 81124
     },
     {
       "text": " article.",
-      "startMs": 28982,
-      "endMs": 29430,
+      "startMs": 81124,
+      "endMs": 81705,
       "pageBreakAfter": true
     },
     {
       "text": " New",
-      "startMs": 29430,
-      "endMs": 29675
+      "startMs": 81705,
+      "endMs": 82022
     },
     {
       "text": " posts",
-      "startMs": 29675,
-      "endMs": 30001
+      "startMs": 82022,
+      "endMs": 82445
     },
     {
       "text": " every",
-      "startMs": 30001,
-      "endMs": 30327
+      "startMs": 82445,
+      "endMs": 82868
     },
     {
       "text": " week",
-      "startMs": 30327,
-      "endMs": 30612,
+      "startMs": 82868,
+      "endMs": 83238,
       "pageBreakAfter": true
     },
     {
       "text": " on",
-      "startMs": 30612,
-      "endMs": 30816
+      "startMs": 83238,
+      "endMs": 83502
     },
     {
       "text": " the",
-      "startMs": 30816,
-      "endMs": 31061
+      "startMs": 83502,
+      "endMs": 83819
     },
     {
       "text": " blog.",
-      "startMs": 31061,
-      "endMs": 31387,
+      "startMs": 83819,
+      "endMs": 85033,
       "pageBreakAfter": true
     }
   ],

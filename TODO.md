@@ -49,6 +49,7 @@
 - [ ] Note: the daily.dev public API is read-only for content — sharing your own articles there is done via the Share button in the daily.dev extension/web app, not the API
 
 ## Maintenance
+- [ ] Apply `patches/schedule-posts-og-card-slug.patch` (`git apply patches/schedule-posts-og-card-slug.patch`) — normalises the staged OG card name and the `slug=` output in `schedule-posts.yml`. An automated session could not push it: the App token has no `workflows` permission.
 - [ ] Update skills later via `cd C:\Users\saonb\daily && git pull`, then re-copy the skill folders
 
 

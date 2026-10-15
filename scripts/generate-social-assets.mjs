@@ -2,6 +2,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import sharp from 'sharp';
+import { postSlug } from '../src/utils/post-slug.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const publicDir = path.join(root, 'public');
@@ -202,7 +203,7 @@ async function readPosts() {
   for (const file of files) {
     const frontmatter = parseFrontmatter(await fs.readFile(file, 'utf8'));
     posts.push({
-      slug: path.basename(file).replace(/\.(md|mdx)$/i, ''),
+      slug: postSlug(path.basename(file)),
       title: frontmatter.title,
       heroImage: frontmatter.heroImage,
     });

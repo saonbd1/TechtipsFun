@@ -15,6 +15,9 @@
 - [ ] **Reels: `/dev/shm` under ~512 MB breaks Chrome mid-render.** Remotion keeps ~8 MB per concurrent tab; `reels/scripts/render-reel.mjs` auto-switches to `REMOTION_SHARED_MEMORY_BACKEND=file`. Do not remove that fallback, and don't raise `--concurrency` blindly on small-shm hosts.
 - [ ] **Reels GUI: never put a dot-directory in a `res.sendFile` path.** Express's `send` 404s any path containing a `.dir` segment — `server/.work/` silently broke every download until it was renamed to `server/work/`. The handler also passes `dotfiles: "allow"` as a guard.
 
+- [ ] **Astro middleware does NOT run at request time on this site.** The deployment is pure static assets (`wrangler.json` has no `main`), so `src/middleware.ts` only executes at BUILD time and only for real page routes. Redirects for paths that are not pages (`/sitemap.xml`, the legacy `/2026/07/*.html` Blogger URLs) therefore never fired — they answered 404 from launch until 2026-10-15. **Guard:** runtime redirects belong in `public/_redirects` (the asset server evaluates it per request); verified that `/blog` and `/categories/pc-troubleshoot` 301 from there while the middleware copies did nothing. Put new redirects in `_redirects`, not middleware.
+- [ ] **OG cards must be named after the post's entry id, never the file name.** Astro lowercases the file name, drops every character outside `[a-z0-9 _-]` and turns spaces into dashes; the page requests `/og/<id>.png`. Naming cards from the raw file name 404'd the social previews of the Ghostty and TPM posts (fixed 2026-10-15). **Guard:** `scripts/check-og-cards.mjs` runs at the end of `npm run build` and fails when any built post has no card; every script derives slugs through `src/utils/post-slug.mjs`. Never reintroduce `file.replace(/\.(md|mdx)$/i, '')` as a slug — it also silently breaks the LinkedIn teaser URL and the IndexNow submission.
+
 ## Automate LinkedIn cross-posting (short version + link)
 - [x] Manually shared today's article teaser via the connected LinkedIn session (2026-10-04)
 - [ ] Next scheduled post should go out automatically via the workflow chain below (target: next `pending-posts/` publish)
@@ -46,6 +49,7 @@
 - [ ] Note: the daily.dev public API is read-only for content — sharing your own articles there is done via the Share button in the daily.dev extension/web app, not the API
 
 ## Maintenance
+- [ ] Apply `patches/schedule-posts-og-card-slug.patch` (`git apply patches/schedule-posts-og-card-slug.patch`) — normalises the staged OG card name and the `slug=` output in `schedule-posts.yml`. An automated session could not push it: the App token has no `workflows` permission.
 - [ ] Update skills later via `cd C:\Users\saonb\daily && git pull`, then re-copy the skill folders
 
 

@@ -46,7 +46,7 @@ const THEMES = [
 ];
 
 const DEFAULT_THEME = "github-dark";
-const DEFAULT_MAX_SECONDS = 30;
+const DEFAULT_MAX_SECONDS = 90;
 
 /* ------------------------------------------------------------------- jobs */
 

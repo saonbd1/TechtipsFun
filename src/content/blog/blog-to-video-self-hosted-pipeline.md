@@ -1,7 +1,8 @@
 ---
-title: "Blog to video, self-hosted: render a reel for every post"
-description: "Every blog-to-video tool is a subscription. Here is the self-hosted alternative: Markdown becomes animated code and captions, rendered on publish."
+title: "Blog post to reel video, self-hosted: render a reel for every article"
+description: "Every blog-to-video tool asks for a subscription. Here is the self-hosted alternative: Markdown becomes animated code, real screenshots and captions, rendered on publish. And it is free"
 pubDate: "Oct 10 2026"
+updatedDate: "Oct 14 2026"
 heroImage: "/blog-to-video-pipeline.png"
 category: "Automation"
 tags: ["Remotion", "Video Automation", "GitHub Actions", "React", "Content Repurposing"]
@@ -15,6 +16,8 @@ That is a fine trade for a marketer. It is a bad trade if you write a technical 
 
 So I built the self-hosted version instead. My articles already live as Markdown in a git repo, which means a video can be *derived* from them the same way the HTML is. This post is the full pipeline, start to finish, with the numbers and the failures included, because the failures are the part nobody writes down. If you are new to running an app on your own server, start with our [self-hosting guide for a first web app](/blog/self-hosting-your-first-web-app-no/).
 
+> **Updated October 14, 2026.** Version 2 of the pipeline: scenes are now paced to reading speed instead of a fixed 4 seconds, reels reuse the article's own screenshots, and older reels are refreshed automatically, two a day. The new parts are [Step 2](/blog/blog-to-video-self-hosted-pipeline/#step-2---turn-an-article-into-props), [Step 6](/blog/blog-to-video-self-hosted-pipeline/#step-6---automate-it-on-publish) and three more entries in [what actually broke](/blog/blog-to-video-self-hosted-pipeline/#the-eight-things-that-actually-broke).
+
 ## What you end up with
 
 One MP4 per article, 1080x1920, rendered automatically when you publish:
@@ -22,15 +25,16 @@ One MP4 per article, 1080x1920, rendered automatically when you publish:
 ```text
 src/content/blog/<slug>.md
         |
-        |  1. article -> props        (Node, ~200ms)
-        |     - parse frontmatter, ## sections, fenced code
-        |     - plan scenes + durations
+        |  1. article -> props        (Node, under a second)
+        |     - parse frontmatter, ## sections, fenced code, images
+        |     - copy the post's screenshots into reels/public/
+        |     - plan scenes, sized to reading speed
         |     - syntax-highlight the code
         |     - synthesise a word-level caption track
         v
 src/generated/<slug>.json            (fully-baked props)
         |
-        |  2. props -> MP4            (Remotion, ~25-40s)
+        |  2. props -> MP4            (Remotion, ~1.5 min on GitHub)
         v
 article-reels/<slug>.mp4             (1080x1920, h264, 30fps)
 ```
@@ -42,9 +46,10 @@ The stack is smaller than it sounds:
 | [Remotion](https://www.remotion.dev/) | Turns React components into frames, and frames into an MP4 |
 | [Code Hike](https://codehike.org/) | Syntax highlighting with animated token transitions |
 | `@remotion/captions` | Groups a word-level transcript into TikTok-style pages |
-| GitHub Actions | Runs the render on publish |
+| [sharp](https://sharp.pixelplumbing.com/) | Resizes and trims the article's screenshots for the reel |
+| GitHub Actions | Runs the render on publish, and refreshes old reels daily |
 
-There is no SaaS, no queue service and no database: it is self-hosted end to end. The only moving parts are a Node script and a headless Chromium, and the expensive one - rendering - costs 25-40 seconds of CPU per reel.
+There is no SaaS, no queue service and no database: it is self-hosted end to end. The only moving parts are a Node script and a headless Chromium, and the expensive one - rendering - costs about a minute and a half per reel on a free GitHub runner.
 
 ## Prerequisites
 
@@ -93,16 +98,18 @@ One warning before you go further: **`calculateMetadata` is not where you should
 
 ## Step 2 - Turn an article into props
 
-This is the part with the actual intellectual work in it. A blog post is prose; a reel is a sequence of 3-5 second beats. Something has to decide what survives.
+This is the part with the actual intellectual work in it. A blog post is prose; a reel is a sequence of short beats. Something has to decide what survives, and how long each beat stays on screen.
 
 Define the contract first. Every scene carries its own duration so the total is just a sum, which keeps the composition dumb and the renderer deterministic:
 
 ```js
 // four scene types, that is the whole vocabulary
-{ type: "title", kicker, title, subtitle, durationInFrames }
-{ type: "point", kicker, heading, body,  durationInFrames }
-{ type: "code",  kicker, heading, steps, durationInFrames }
-{ type: "outro", heading, body, url,     durationInFrames }
+{ type: "title", kicker, title, subtitle, image?, durationInFrames }
+{ type: "point", kicker, heading, body,  image?, durationInFrames }
+{ type: "code",  kicker, heading, steps, stepDurations, durationInFrames }
+{ type: "outro", heading, body, url,             durationInFrames }
+
+// image = { src, width, height } - a screenshot copied from the article
 ```
 
 Then parse the Markdown into `##` sections, remembering which fenced code blocks belong to which heading. Headings that *have* code become code scenes; headings with only prose become point scenes:
@@ -119,11 +126,61 @@ for (const section of sections) {
 
 Three rules that took a few iterations to get right:
 
-**Cap the reel, not the article.** Six sections and ~58 seconds maximum. A reel that tries to cover a 3,000 word post is just a fast slideshow nobody finishes.
+**Cap the reel, not the article.** Nine sections and 90 seconds maximum. A reel that tries to cover a 3,000 word post is just a fast slideshow nobody finishes.
 
 **Trim the code.** A snippet of 40 lines is unreadable at phone size. Nine lines per step, two steps per section, and most posts end up with four or five code beats.
 
 **Cut prose to one sentence.** Headings plus a single sentence read fine at reel speed. Paragraphs do not.
+
+### Pace scenes by reading speed, not by the clock
+
+Version 1 gave every text scene exactly 4 seconds and every code step about 3. That looked tidy in the code and was too fast to read. A 25-word sentence in 4 seconds is more than 6 words per second, so the captions flashed past before you could finish them, and nine lines of code disappeared in 3 seconds.
+
+Now every scene is as long as its text takes to read:
+
+```js
+const PACE = {
+  WORDS_PER_SECOND: 2.6, // ~155 words per minute
+  LEAD_IN: 0.5,          // wait for the entrance animation
+  HOLD: 0.9,             // a beat after the last word, before the cut
+  IMAGE_BONUS: 1.2,      // extra time to look at a screenshot
+  point: { min: 4.5, max: 11 },
+  codeStep: { base: 2, perLine: 0.45, min: 4.5, max: 8 },
+};
+
+const seconds = LEAD_IN + words / WORDS_PER_SECOND + HOLD + (image ? IMAGE_BONUS : 0);
+```
+
+Code is paced per line instead of per word, because nobody reads code at prose speed. The caption track follows the same numbers: words start after the lead-in, and the last word stays up through the hold, so the screen never goes blank mid-scene.
+
+The result is longer reels: most now run 60 to 90 seconds, up from 13 to 36. That sounds like the wrong direction for a short, but a reel people can actually read beats a short reel people scroll past. `WORDS_PER_SECOND` is the one dial to turn if you want it faster.
+
+### Use the article's own screenshots
+
+A technical post usually already has the best visuals it will ever get: the screenshots that show each step. Version 1 threw them away (the parser skipped every line starting with `![`). Now the builder collects the cover image plus the first image in each `##` section, and the point scene shows it in a window-style card under the heading:
+
+```js
+// one screenshot per section, plus the heroImage for the title scene
+const markdown = /!\[([^\]]*)\]\(\s*(<[^>]+>|[^)\s]+)/g;  // also <img src="...">
+
+const staged = await sharp(file)
+  .trim({ threshold: 12 })            // drop flat margins (screenshots only)
+  .resize({ width: 1600, height: 1600, fit: "inside", withoutEnlargement: true })
+  .webp({ quality: 88 })
+  .toFile(`reels/public/post-media/${slug}/${name}.webp`);
+```
+
+![Before and after: the same reel scene with text only, and with the article's screenshot](/article-media/reel-before-after-screenshots.webp)
+
+A few rules keep this from going wrong:
+
+- **Copy, do not reference.** Remotion only serves local files from its own `public/` folder, so images are copied there at build time, resized, and given safe file names (spaces in `Screenshot 2026-09-29.png` are no fun in a URL).
+- **Never crop a screenshot to fill a box.** The card takes the image's real size from the props and fits around it. A screenshot with its edges cut off is useless.
+- **Scroll tall images.** A file tree or a full-page capture shrunk to fit is an unreadable sliver, so anything much taller than wide is shown wider and glides top to bottom during the scene.
+- **Trim screenshots, not covers.** `trim()` removes the empty borders around a screenshot. On designed cover art it cut a 1600x900 image down to 1600x524, so covers are left alone.
+- **A missing image is a warning, not a failure.** Posts without images still get the text-only reel.
+
+Sections with code still show the code. The animated code is the one thing this pipeline does better than any screenshot.
 
 ### Highlight once, in Node
 
@@ -141,12 +198,12 @@ Both of those work in plain Node, which was the assumption that made the whole a
 
 ### The caption track
 
-I did not record a voiceover, so there is no audio to transcribe. Instead the builder synthesises a **word-level** caption track: for each scene, the on-screen text is split into words, and each word gets a slice of that scene's duration, weighted by word length.
+I did not record a voiceover, so there is no audio to transcribe. Instead the builder synthesises a **word-level** caption track: for each scene, the on-screen text is split into words, and each word gets a slice of that scene's reading time, weighted by word length.
 
 ```js
 const weights = words.map((w) => w.length + 3);
 const totalWeight = weights.reduce((a, b) => a + b, 0);
-// each word gets (weight / totalWeight) * sceneDurationMs
+// each word gets (weight / totalWeight) * readingTimeMs, starting after LEAD_IN
 ```
 
 That is fake, of course. Nothing is being spoken. But it produces a caption track with real timing that the TikTok-style grouping can consume, and it means the reel works with zero audio infrastructure. Swapping in a real transcript later is a one-file change.
@@ -203,7 +260,7 @@ npx remotion still  Reel out/poster.png --props=... --frame=210
 
 Studio is the single most valuable thing in this whole stack. You get a real timeline, a real video element and instant feedback on animation curves, and it would have taken me five times as long to build any of this without it.
 
-`still` matters more than it looks. Rendering one frame is ~8 seconds versus ~30 for the full video, so it is the right way to check a layout tweak.
+`still` matters more than it looks. Rendering one frame takes a few seconds, while a full 90-second reel takes minutes, so it is the right way to check a layout tweak.
 
 ### Shell out to the CLI, do not use the SSR APIs
 
@@ -265,6 +322,9 @@ on:
       slug: { required: false }
       max:  { required: false, default: "5" }
       force: { required: false, type: boolean, default: false }
+      refresh: { required: false, default: "0" }  # outdated reels to redo
+  schedule:
+    - cron: "30 10 * * *"   # daily refresh of older reels, see below
 ```
 
 The `push` trigger catches normal commits. The `workflow_run` trigger catches everything the scheduler publishes, because "that workflow finished" is an event the `GITHUB_TOKEN` restriction does not apply to. Both paths then run the *same* job, which asks *list-missing-reels* what to do. One code path, three ways in.
@@ -288,6 +348,31 @@ A few details that matter in practice:
 - **Cache the browser.** The Chrome Headless Shell download is ~100 MB; `actions/cache` on `node_modules/.remotion` makes the second run minutes faster.
 - **Upload artifacts as well as committing.** Artifacts survive a rejected push, a protected branch, or a race with another workflow.
 - **Do not commit with `set -e` semantics you do not want.** The bot's commit is skipped cleanly when nothing changed, using `git diff --cached --quiet`.
+- **Rebase before pushing.** A render takes minutes, and a scheduled post can land on `main` in the meantime. `git pull --rebase` before `git push` stops the reel commit from being rejected.
+
+### Refresh old reels when the design changes
+
+Changing the pacing and adding screenshots raised a new problem: 30 reels already existed, and *list-missing-reels* only renders posts that have no reel at all. Re-rendering all 30 in one run is about 45 minutes of runner time and one giant commit.
+
+So each reel now records which version of the pipeline made it, in `article-reels/.reel-versions.json`:
+
+```json
+{
+  "blog-to-video-self-hosted-pipeline": 2,
+  "how-to-add-onedrive-to-windows-file-explorer": 2
+}
+```
+
+The builder exports a `REEL_VERSION` constant (now `2`). Any reel with a lower number, or not in the file at all, counts as outdated. The same planning script returns missing reels first, then a few outdated ones:
+
+```bash
+node scripts/list-missing-reels.mjs --limit 3 --refresh 2   # what to render
+node scripts/list-missing-reels.mjs --mark "$slug"          # after a good render
+node scripts/list-missing-reels.mjs --status
+# reel version 2: 0 missing, 28 outdated
+```
+
+A daily `schedule` trigger runs the workflow with `--refresh 2`, so the old reels catch up two a day, newest posts first, without ever delaying a new post's reel. When every reel is current, the daily run renders nothing. The next time I change the design, I bump `REEL_VERSION` to `3` and the same schedule does the rest.
 
 ## Step 7 - Optional: a paste-a-Markdown GUI
 
@@ -302,9 +387,9 @@ await spawnRemotion({
 
 Parse Remotion's own stdout for `Rendered 388/520` and you get a real progress bar for free. Queue the jobs and run them one at a time; two Chromes on one small machine is how you find out what an OOM kill looks like.
 
-## The five things that actually broke
+## The eight things that actually broke
 
-This is the section I wish every "here's my pipeline" post had. All five of these produced *silent* or *misleading* failures.
+This is the section I wish every "here's my pipeline" post had. All eight of these produced *silent* or *misleading* failures. The last three turned up in version 2.
 
 ### 1. One arrow character crashed the browser
 
@@ -364,19 +449,54 @@ style={{ color: themeColors.editor.foreground, background: "transparent" }}
 
 **Fix:** prefix every word with a space, and mark the last word of each scene with `pageBreakAfter: true` so a page can never bleed across a scene boundary.
 
+### 6. Two caption lines drawn on top of each other
+
+**Symptom:** once the pacing changed, a test frame showed two caption pages stacked over each other, each with its own highlighted word.
+
+**What was happening:** each caption page was placed with `Math.floor` for its start frame and `Math.round` for its length. Those two roundings could disagree by one frame, so a page sometimes ended one frame after the next one started. At 4-second scenes that frame was easy to miss; this bug had been in every version 1 reel.
+
+**Fix:** end every page at the next page's start frame at the latest:
+
+```tsx
+const next = pages[index + 1];
+if (next) endFrame = Math.min(endFrame, Math.floor((next.startMs / 1000) * fps));
+```
+
+The same check turned up a second problem. `combineTokensWithinMilliseconds` was set to 1100 ms. At reading speed, four words take about 1.5 seconds, so the timer split every 4-word page and left single words flashing up for a fifth of a second. The builder already forces a page break every four words, so the timer is now just a safety net at 2200 ms.
+
+### 7. An invisible character hid a post's title
+
+**Symptom:** one post came out of the builder with its file name as the title, the generic "Tech" category and no cover image, even though its frontmatter was correct.
+
+**What was happening:** that Markdown file started with a UTF-8 byte-order mark, an invisible character some Windows editors add. My frontmatter regex expects the file to start with `---`, so it found no frontmatter at all and fell back to the defaults.
+
+**Fix:** one line, before parsing:
+
+```js
+const source = rawSource.replace(/^\uFEFF/, "");
+```
+
+### 8. A trailing comma meant a post never got a reel
+
+**Symptom:** one post simply had no reel. The workflow logged a `ZodError` and moved on to the next post, exactly as designed, so nothing looked broken.
+
+**What was happening:** the post had `tags: [ "Web Apps", "Deployment", ]`. That trailing comma is valid YAML, so Astro built the page fine, but my small frontmatter parser used `JSON.parse`, which rejects it. The tags became one long string, and the props schema refused it.
+
+**Fix:** treat flow lists as YAML, not JSON: drop a trailing comma, and fall back to splitting on commas. The lesson is the same as the arrow in #1: a blog post that the site accepts can still break a stricter tool down the line, so test the renderer against every post you have, not just the newest one.
+
 ## What it costs and what it produces
 
-Measured on a machine with plenty of cores, rendering 1080x1920 H.264:
+Version 2 reels, rendered at 1080x1920 H.264 on a standard GitHub-hosted runner:
 
-| Article | Scenes | Reel | Frames | Output | Time |
-| --- | --- | --- | --- | --- | --- |
-| Linux terminal commands | 7 | 23.7s | 710 | 2.2 MB | ~28s |
-| Netlify vs Vercel | 8 | 31.0s | 930 | 2.6 MB | ~35s |
-| Docker quickstart (pasted) | 5 | 17.3s | 520 | 1.5 MB | 20.1s |
+| Article | Scenes | Screenshots | Reel | Frames | Output | Render |
+| --- | --- | --- | --- | --- | --- | --- |
+| Add OneDrive to File Explorer | 9 | 5 | 88.1s | 2,643 | 12 MB | ~1m 50s |
+| Google OAuth for Blogger | 10 | 1 | 89.2s | 2,676 | 7 MB | ~1m 35s |
+| This article | 11 | 1 | 67.8s | 2,035 | 4.7 MB | ~1m 15s |
 
-Across all 30 posts in the repo, props generation runs in about 8 seconds *total*; the render is the entire cost. On GitHub's runners a reel lands in 40-70 seconds including the checkout and browser cache restore.
+For comparison, version 1 reels were 13 to 36 seconds long and 1 to 3.5 MB each. Building props for all 31 posts, image staging included, still takes well under a minute; the render is the real cost.
 
-At roughly 2 MB per reel you are adding a couple of megabytes per post to the repo. That is fine for years; if you would rather not, skip the commit step and keep the artifacts.
+Reels are now 5 to 12 MB, and screenshot-heavy posts are at the top of that range because real images compress worse than flat colour. That is still fine in a repo for a long time; if you would rather not, skip the commit step and keep the artifacts.
 
 ## FAQ
 
@@ -389,18 +509,20 @@ exactly the cases where a generic tool falls over.
 
 **Do I need a voiceover?** No. The captions are synthesised from the on-screen script, which is why the pipeline works with no audio at all. If you *do* want narration, transcribe it with Whisper, feed the word-level result in as the caption track, and add an `<Audio>` tag.
 
-**Does it work for non-technical posts?** Yes, and better than you would expect, because point scenes and captions do not care what the subject is. You just lose the code scenes, which is the one thing this approach does better than a generic tool.
+**Does it work for non-technical posts?** Yes, and better than you would expect, because point scenes and captions do not care what the subject is. Step-by-step guides with screenshots work especially well now, because every step's screenshot becomes its own scene. You just lose the code scenes, which is the one thing this approach does better than a generic tool.
+
+**Can I make the reels shorter?** Yes. Pass `--max-seconds 30` for a shorter cut, or raise `WORDS_PER_SECOND` if you would rather keep every section and read faster.
 
 **Can I avoid committing the MP4s?** Yes. Drop the commit step and keep only `actions/upload-artifact`. You lose the convenience of `article-reels/<slug>.mp4` living in the repo, and you keep the repo small.
 
-**Is Remotion free?** [Remotion is free](https://www.remotion.dev/pricing) for individuals and companies of up to three people. Beyond that it needs a Company License, and cloud rendering has its own terms. If you are deploying this at work, read that page first. It is a real constraint, not a footnote.
+**Is Remotion free?** Remotion is free for individuals and companies of up to three people. Beyond that it needs a Company License, and cloud rendering has its own terms. If you are deploying this at work, read that page first. It is a real constraint, not a footnote.
 
 **Do I have to run it in CI?** No. `--latest` on a cron or a git hook does the same job. CI is attractive because the runner already has a clean Linux box with fonts and libraries, which - as the section above shows - is not a given in a container.
 
 ## Should you self-host your own blog-to-video pipeline?
 
-A generic blog-to-video tool will produce something passable in a minute. This pipeline produces something *better* for a technical post, because it can show your actual code, in your actual brand colours, with captions that read like the article. It also costs nothing per video and never sees a rate limit.
+A generic blog-to-video tool will produce something passable in a minute. This pipeline produces something *better* for a technical post, because it can show your actual code and your actual screenshots, in your actual brand colours, with captions you can read at a normal pace. It also costs nothing per video and never sees a rate limit.
 
 The trade is honest though: it is a weekend of work, and you own the failures. When a render dies at frame 604, nobody is going to fix it for you.
 
-Start smaller than I did. Clone the [Code Hike](https://www.remotion.dev/templates/code-hike) and [TikTok](https://www.remotion.dev/templates/tiktok) templates, get one article rendering locally with `npm run dev`, and only then add the automation. The GitHub Actions half is thirty lines, but it is thirty lines that will happily do nothing at all if you get the trigger wrong.
+Start smaller than I did. Clone the Code Hike and TikTok templates, get one article rendering locally with `npm run dev`, and only then add the automation. The GitHub Actions half is thirty lines, but it is thirty lines that will happily do nothing at all if you get the trigger wrong.

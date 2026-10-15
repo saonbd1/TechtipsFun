@@ -10,43 +10,46 @@
     "Developer Guide"
   ],
   "url": "https://www.techtips.fun/blog/how-to-set-up-linkedin-oauth-client/",
-  "theme": "github-dark",
-  "durationInFrames": 905,
   "scenes": [
     {
       "type": "title",
       "kicker": "Web Development",
       "title": "How to Set Up a LinkedIn OAuth Client for Posting",
       "subtitle": "I set up a LinkedIn OAuth client to post articles automatically. Here is the app, the…",
-      "durationInFrames": 105
+      "image": {
+        "src": "post-media/how-to-set-up-linkedin-oauth-client/01-linkedin-oauth-client-setup.webp",
+        "width": 1600,
+        "height": 900
+      },
+      "durationInFrames": 183
     },
     {
       "type": "point",
       "kicker": "Web Development",
       "heading": "Before you begin",
       "body": "A LinkedIn account (a personal account; Company Page admin access helps if you create the app under an organization).",
-      "durationInFrames": 120
+      "durationInFrames": 296
     },
     {
       "type": "point",
       "kicker": "Web Development",
       "heading": "Step 1: Create a LinkedIn developer app",
       "body": "Open the LinkedIn Developer Portal. Select Create App. Fill in the app name, description, and your application's logo.",
-      "durationInFrames": 120
+      "durationInFrames": 330
     },
     {
       "type": "point",
       "kicker": "Web Development",
       "heading": "Step 2: Add the products",
       "body": "On the app's Products page, request: Sign In with LinkedIn — provides the OpenID Connect identity, including the sub claim you need to build the…",
-      "durationInFrames": 120
+      "durationInFrames": 330
     },
     {
       "type": "point",
       "kicker": "Web Development",
       "heading": "Step 3: Configure the auth settings",
       "body": "Open the Auth page for your app. Add your redirect URL to the allowed redirect URLs list (for example http://localhost). Save the changes.",
-      "durationInFrames": 120
+      "durationInFrames": 330
     },
     {
       "type": "code",
@@ -73,928 +76,1254 @@
           }
         }
       ],
-      "durationInFrames": 95
+      "stepDurations": [
+        135
+      ],
+      "durationInFrames": 135
     },
     {
       "type": "point",
       "kicker": "Web Development",
       "heading": "Step 5: Run the OAuth flow once",
       "body": "Build the authorization URL with your client ID, redirect URI, state, and the scopes above. Sign in and consent on LinkedIn.",
-      "durationInFrames": 120
+      "durationInFrames": 330
+    },
+    {
+      "type": "point",
+      "kicker": "Web Development",
+      "heading": "Step 6: Store the token securely",
+      "body": "Do not commit the client secret or the access token to a repository. Store the access token as a GitHub Actions secret (I name mine LINKEDINTOKEN).",
+      "durationInFrames": 330
+    },
+    {
+      "type": "code",
+      "kicker": "Code",
+      "heading": "Step 7: Test the connection",
+      "steps": [
+        {
+          "lang": "http",
+          "meta": "http",
+          "value": "GET https://api.linkedin.com/v2/userinfo\nAuthorization: Bearer ACCESS_TOKEN",
+          "code": "GET https://api.linkedin.com/v2/userinfo\nAuthorization: Bearer ACCESS_TOKEN",
+          "tokens": [
+            [
+              "GET",
+              "#FF7B72"
+            ],
+            " ",
+            [
+              "https://api.linkedin.com/v2/userinfo",
+              "#C9D1D9"
+            ],
+            "\n",
+            [
+              "Authorization",
+              "#7EE787"
+            ],
+            [
+              ":",
+              "#FF7B72"
+            ],
+            " ",
+            [
+              "Bearer ACCESS_TOKEN",
+              "#A5D6FF"
+            ]
+          ],
+          "annotations": [],
+          "themeName": "github-dark",
+          "style": {
+            "color": "#c9d1d9",
+            "background": "#0d1117",
+            "colorScheme": "dark"
+          }
+        },
+        {
+          "lang": "http",
+          "meta": "http",
+          "value": "POST https://api.linkedin.com/v2/shares\nAuthorization: Bearer ACCESS_TOKEN",
+          "code": "POST https://api.linkedin.com/v2/shares\nAuthorization: Bearer ACCESS_TOKEN",
+          "tokens": [
+            [
+              "POST",
+              "#FF7B72"
+            ],
+            " ",
+            [
+              "https://api.linkedin.com/v2/shares",
+              "#C9D1D9"
+            ],
+            "\n",
+            [
+              "Authorization",
+              "#7EE787"
+            ],
+            [
+              ":",
+              "#FF7B72"
+            ],
+            " ",
+            [
+              "Bearer ACCESS_TOKEN",
+              "#A5D6FF"
+            ]
+          ],
+          "annotations": [],
+          "themeName": "github-dark",
+          "style": {
+            "color": "#c9d1d9",
+            "background": "#0d1117",
+            "colorScheme": "dark"
+          }
+        }
+      ],
+      "stepDurations": [
+        135,
+        135
+      ],
+      "durationInFrames": 270
     },
     {
       "type": "outro",
       "heading": "Read the full article",
       "body": "New posts every week on the blog.",
       "url": "techtips.fun",
-      "durationInFrames": 105
+      "durationInFrames": 165
     }
   ],
+  "theme": "github-dark",
+  "durationInFrames": 2699,
   "captions": [
     {
       "text": " I",
-      "startMs": 0,
-      "endMs": 109
+      "startMs": 500,
+      "endMs": 659
     },
     {
       "text": " set",
-      "startMs": 109,
-      "endMs": 273
+      "startMs": 659,
+      "endMs": 898
     },
     {
       "text": " up",
-      "startMs": 273,
-      "endMs": 409
+      "startMs": 898,
+      "endMs": 1097
     },
     {
       "text": " a",
-      "startMs": 409,
-      "endMs": 518,
+      "startMs": 1097,
+      "endMs": 1257,
       "pageBreakAfter": true
     },
     {
       "text": " LinkedIn",
-      "startMs": 518,
-      "endMs": 819
+      "startMs": 1257,
+      "endMs": 1695
     },
     {
       "text": " OAuth",
-      "startMs": 819,
-      "endMs": 1037
+      "startMs": 1695,
+      "endMs": 2014
     },
     {
       "text": " client",
-      "startMs": 1037,
-      "endMs": 1283
+      "startMs": 2014,
+      "endMs": 2372
     },
     {
       "text": " to",
-      "startMs": 1283,
-      "endMs": 1419,
+      "startMs": 2372,
+      "endMs": 2571,
       "pageBreakAfter": true
     },
     {
       "text": " post",
-      "startMs": 1419,
-      "endMs": 1610
+      "startMs": 2571,
+      "endMs": 2850
     },
     {
       "text": " articles",
-      "startMs": 1610,
-      "endMs": 1910
+      "startMs": 2850,
+      "endMs": 3288
     },
     {
       "text": " automatically.",
-      "startMs": 1910,
-      "endMs": 2374
+      "startMs": 3288,
+      "endMs": 3965
     },
     {
       "text": " Here",
-      "startMs": 2374,
-      "endMs": 2565,
+      "startMs": 3965,
+      "endMs": 4244,
       "pageBreakAfter": true
     },
     {
       "text": " is",
-      "startMs": 2565,
-      "endMs": 2702
+      "startMs": 4244,
+      "endMs": 4443
     },
     {
       "text": " the",
-      "startMs": 2702,
-      "endMs": 2865
+      "startMs": 4443,
+      "endMs": 4682
     },
     {
       "text": " app,",
-      "startMs": 2865,
-      "endMs": 3056
+      "startMs": 4682,
+      "endMs": 4961
     },
     {
       "text": " the",
-      "startMs": 3056,
-      "endMs": 3220,
+      "startMs": 4961,
+      "endMs": 6067,
       "pageBreakAfter": true
     },
     {
       "text": " Before",
-      "startMs": 3500,
-      "endMs": 3684
+      "startMs": 6600,
+      "endMs": 7023
     },
     {
       "text": " you",
-      "startMs": 3684,
-      "endMs": 3807
+      "startMs": 7023,
+      "endMs": 7306
     },
     {
       "text": " begin.",
-      "startMs": 3807,
-      "endMs": 3991
+      "startMs": 7306,
+      "endMs": 7729
     },
     {
       "text": " A",
-      "startMs": 3991,
-      "endMs": 4072,
+      "startMs": 7729,
+      "endMs": 7917,
       "pageBreakAfter": true
     },
     {
       "text": " LinkedIn",
-      "startMs": 4072,
-      "endMs": 4297
+      "startMs": 7917,
+      "endMs": 8434
     },
     {
       "text": " account",
-      "startMs": 4297,
-      "endMs": 4502
+      "startMs": 8434,
+      "endMs": 8905
     },
     {
       "text": " (a",
-      "startMs": 4502,
-      "endMs": 4604
+      "startMs": 8905,
+      "endMs": 9140
     },
     {
       "text": " personal",
-      "startMs": 4604,
-      "endMs": 4829,
+      "startMs": 9140,
+      "endMs": 9657,
       "pageBreakAfter": true
     },
     {
       "text": " account;",
-      "startMs": 4829,
-      "endMs": 5054
+      "startMs": 9657,
+      "endMs": 10175
     },
     {
       "text": " Company",
-      "startMs": 5054,
-      "endMs": 5258
+      "startMs": 10175,
+      "endMs": 10645
     },
     {
       "text": " Page",
-      "startMs": 5258,
-      "endMs": 5401
+      "startMs": 10645,
+      "endMs": 10974
     },
     {
       "text": " admin",
-      "startMs": 5401,
-      "endMs": 5565,
+      "startMs": 10974,
+      "endMs": 11351,
       "pageBreakAfter": true
     },
     {
       "text": " access",
-      "startMs": 5565,
-      "endMs": 5749
+      "startMs": 11351,
+      "endMs": 11774
     },
     {
       "text": " helps",
-      "startMs": 5749,
-      "endMs": 5912
+      "startMs": 11774,
+      "endMs": 12150
     },
     {
       "text": " if",
-      "startMs": 5912,
-      "endMs": 6015
+      "startMs": 12150,
+      "endMs": 12386
     },
     {
       "text": " you",
-      "startMs": 6015,
-      "endMs": 6137,
+      "startMs": 12386,
+      "endMs": 12668,
       "pageBreakAfter": true
     },
     {
       "text": " create",
-      "startMs": 6137,
-      "endMs": 6321
+      "startMs": 12668,
+      "endMs": 13091
     },
     {
       "text": " the",
-      "startMs": 6321,
-      "endMs": 6444
+      "startMs": 13091,
+      "endMs": 13373
     },
     {
       "text": " app",
-      "startMs": 6444,
-      "endMs": 6567
+      "startMs": 13373,
+      "endMs": 13656
     },
     {
       "text": " under",
-      "startMs": 6567,
-      "endMs": 6730,
+      "startMs": 13656,
+      "endMs": 14032,
       "pageBreakAfter": true
     },
     {
       "text": " an",
-      "startMs": 6730,
-      "endMs": 6832
+      "startMs": 14032,
+      "endMs": 14267
     },
     {
       "text": " organization).",
-      "startMs": 6832,
-      "endMs": 7180,
+      "startMs": 14267,
+      "endMs": 15933,
       "pageBreakAfter": true
     },
     {
       "text": " Step",
-      "startMs": 7500,
-      "endMs": 7623
+      "startMs": 16467,
+      "endMs": 16787
     },
     {
       "text": " 1:",
-      "startMs": 7623,
-      "endMs": 7710
+      "startMs": 16787,
+      "endMs": 17015
     },
     {
       "text": " Create",
-      "startMs": 7710,
-      "endMs": 7868
+      "startMs": 17015,
+      "endMs": 17427
     },
     {
       "text": " a",
-      "startMs": 7868,
-      "endMs": 7938,
+      "startMs": 17427,
+      "endMs": 17610,
       "pageBreakAfter": true
     },
     {
       "text": " LinkedIn",
-      "startMs": 7938,
-      "endMs": 8131
+      "startMs": 17610,
+      "endMs": 18112
     },
     {
       "text": " developer",
-      "startMs": 8131,
-      "endMs": 8341
+      "startMs": 18112,
+      "endMs": 18661
     },
     {
       "text": " app.",
-      "startMs": 8341,
-      "endMs": 8464
+      "startMs": 18661,
+      "endMs": 18981
     },
     {
       "text": " Open",
-      "startMs": 8464,
-      "endMs": 8586,
+      "startMs": 18981,
+      "endMs": 19301,
       "pageBreakAfter": true
     },
     {
       "text": " the",
-      "startMs": 8586,
-      "endMs": 8692
+      "startMs": 19301,
+      "endMs": 19575
     },
     {
       "text": " LinkedIn",
-      "startMs": 8692,
-      "endMs": 8884
+      "startMs": 19575,
+      "endMs": 20078
     },
     {
       "text": " Developer",
-      "startMs": 8884,
-      "endMs": 9095
+      "startMs": 20078,
+      "endMs": 20627
     },
     {
       "text": " Portal.",
-      "startMs": 9095,
-      "endMs": 9270,
+      "startMs": 20627,
+      "endMs": 21084,
       "pageBreakAfter": true
     },
     {
       "text": " Select",
-      "startMs": 9270,
-      "endMs": 9428
+      "startMs": 21084,
+      "endMs": 21495
     },
     {
       "text": " Create",
-      "startMs": 9428,
-      "endMs": 9585
+      "startMs": 21495,
+      "endMs": 21907
     },
     {
       "text": " App.",
-      "startMs": 9585,
-      "endMs": 9708
+      "startMs": 21907,
+      "endMs": 22227
     },
     {
       "text": " Fill",
-      "startMs": 9708,
-      "endMs": 9831,
+      "startMs": 22227,
+      "endMs": 22547,
       "pageBreakAfter": true
     },
     {
       "text": " in",
-      "startMs": 9831,
-      "endMs": 9918
+      "startMs": 22547,
+      "endMs": 22775
     },
     {
       "text": " the",
-      "startMs": 9918,
-      "endMs": 10023
+      "startMs": 22775,
+      "endMs": 23050
     },
     {
       "text": " app",
-      "startMs": 10023,
-      "endMs": 10129
+      "startMs": 23050,
+      "endMs": 23324
     },
     {
       "text": " name,",
-      "startMs": 10129,
-      "endMs": 10269,
+      "startMs": 23324,
+      "endMs": 23690,
       "pageBreakAfter": true
     },
     {
       "text": " description,",
-      "startMs": 10269,
-      "endMs": 10532
+      "startMs": 23690,
+      "endMs": 24375
     },
     {
       "text": " and",
-      "startMs": 10532,
-      "endMs": 10637
+      "startMs": 24375,
+      "endMs": 24650
     },
     {
       "text": " your",
-      "startMs": 10637,
-      "endMs": 10759
+      "startMs": 24650,
+      "endMs": 24970
     },
     {
       "text": " application's",
-      "startMs": 10759,
-      "endMs": 11040,
+      "startMs": 24970,
+      "endMs": 25701,
       "pageBreakAfter": true
     },
     {
       "text": " logo.",
-      "startMs": 11040,
-      "endMs": 11180,
+      "startMs": 25701,
+      "endMs": 26933,
       "pageBreakAfter": true
     },
     {
       "text": " Step",
-      "startMs": 11500,
-      "endMs": 11611
+      "startMs": 27467,
+      "endMs": 27756
     },
     {
       "text": " 2:",
-      "startMs": 11611,
-      "endMs": 11690
+      "startMs": 27756,
+      "endMs": 27963
     },
     {
       "text": " Add",
-      "startMs": 11690,
-      "endMs": 11786
+      "startMs": 27963,
+      "endMs": 28211
     },
     {
       "text": " the",
-      "startMs": 11786,
-      "endMs": 11881,
+      "startMs": 28211,
+      "endMs": 28460,
       "pageBreakAfter": true
     },
     {
       "text": " products.",
-      "startMs": 11881,
-      "endMs": 12071
+      "startMs": 28460,
+      "endMs": 28956
     },
     {
       "text": " On",
-      "startMs": 12071,
-      "endMs": 12150
+      "startMs": 28956,
+      "endMs": 29163
     },
     {
       "text": " the",
-      "startMs": 12150,
-      "endMs": 12246
+      "startMs": 29163,
+      "endMs": 29411
     },
     {
       "text": " app's",
-      "startMs": 12246,
-      "endMs": 12372,
+      "startMs": 29411,
+      "endMs": 29743,
       "pageBreakAfter": true
     },
     {
       "text": " Products",
-      "startMs": 12372,
-      "endMs": 12547
+      "startMs": 29743,
+      "endMs": 30198
     },
     {
       "text": " page,",
-      "startMs": 12547,
-      "endMs": 12674
+      "startMs": 30198,
+      "endMs": 30529
     },
     {
       "text": " request:",
-      "startMs": 12674,
-      "endMs": 12848
+      "startMs": 30529,
+      "endMs": 30984
     },
     {
       "text": " Sign",
-      "startMs": 12848,
-      "endMs": 12959,
+      "startMs": 30984,
+      "endMs": 31274,
       "pageBreakAfter": true
     },
     {
       "text": " In",
-      "startMs": 12959,
-      "endMs": 13039
+      "startMs": 31274,
+      "endMs": 31480
     },
     {
       "text": " with",
-      "startMs": 13039,
-      "endMs": 13150
+      "startMs": 31480,
+      "endMs": 31770
     },
     {
       "text": " LinkedIn",
-      "startMs": 13150,
-      "endMs": 13324
+      "startMs": 31770,
+      "endMs": 32225
     },
     {
       "text": " —",
-      "startMs": 13324,
-      "endMs": 13388,
+      "startMs": 32225,
+      "endMs": 32391,
       "pageBreakAfter": true
     },
     {
       "text": " provides",
-      "startMs": 13388,
-      "endMs": 13562
+      "startMs": 32391,
+      "endMs": 32846
     },
     {
       "text": " the",
-      "startMs": 13562,
-      "endMs": 13657
+      "startMs": 32846,
+      "endMs": 33094
     },
     {
       "text": " OpenID",
-      "startMs": 13657,
-      "endMs": 13800
+      "startMs": 33094,
+      "endMs": 33467
     },
     {
       "text": " Connect",
-      "startMs": 13800,
-      "endMs": 13959,
+      "startMs": 33467,
+      "endMs": 33880,
       "pageBreakAfter": true
     },
     {
       "text": " identity,",
-      "startMs": 13959,
-      "endMs": 14149
+      "startMs": 33880,
+      "endMs": 34377
     },
     {
       "text": " including",
-      "startMs": 14149,
-      "endMs": 14339
+      "startMs": 34377,
+      "endMs": 34874
     },
     {
       "text": " the",
-      "startMs": 14339,
-      "endMs": 14434
+      "startMs": 34874,
+      "endMs": 35122
     },
     {
       "text": " sub",
-      "startMs": 14434,
-      "endMs": 14530,
+      "startMs": 35122,
+      "endMs": 35370,
       "pageBreakAfter": true
     },
     {
       "text": " claim",
-      "startMs": 14530,
-      "endMs": 14657
+      "startMs": 35370,
+      "endMs": 35701
     },
     {
       "text": " you",
-      "startMs": 14657,
-      "endMs": 14752
+      "startMs": 35701,
+      "endMs": 35949
     },
     {
       "text": " need",
-      "startMs": 14752,
-      "endMs": 14863
+      "startMs": 35949,
+      "endMs": 36239
     },
     {
       "text": " to",
-      "startMs": 14863,
-      "endMs": 14942,
+      "startMs": 36239,
+      "endMs": 36446,
       "pageBreakAfter": true
     },
     {
       "text": " build",
-      "startMs": 14942,
-      "endMs": 15069
+      "startMs": 36446,
+      "endMs": 36777
     },
     {
       "text": " the…",
-      "startMs": 15069,
-      "endMs": 15180,
+      "startMs": 36777,
+      "endMs": 37933,
       "pageBreakAfter": true
     },
     {
       "text": " Step",
-      "startMs": 15500,
-      "endMs": 15610
+      "startMs": 38467,
+      "endMs": 38754
     },
     {
       "text": " 3:",
-      "startMs": 15610,
-      "endMs": 15689
+      "startMs": 38754,
+      "endMs": 38959
     },
     {
       "text": " Configure",
-      "startMs": 15689,
-      "endMs": 15877
+      "startMs": 38959,
+      "endMs": 39451
     },
     {
       "text": " the",
-      "startMs": 15877,
-      "endMs": 15972,
+      "startMs": 39451,
+      "endMs": 39697,
       "pageBreakAfter": true
     },
     {
       "text": " auth",
-      "startMs": 15972,
-      "endMs": 16082
+      "startMs": 39697,
+      "endMs": 39985
     },
     {
       "text": " settings.",
-      "startMs": 16082,
-      "endMs": 16271
+      "startMs": 39985,
+      "endMs": 40477
     },
     {
       "text": " Open",
-      "startMs": 16271,
-      "endMs": 16381
+      "startMs": 40477,
+      "endMs": 40764
     },
     {
       "text": " the",
-      "startMs": 16381,
-      "endMs": 16475,
+      "startMs": 40764,
+      "endMs": 41010,
       "pageBreakAfter": true
     },
     {
       "text": " Auth",
-      "startMs": 16475,
-      "endMs": 16585
+      "startMs": 41010,
+      "endMs": 41297
     },
     {
       "text": " page",
-      "startMs": 16585,
-      "endMs": 16695
+      "startMs": 41297,
+      "endMs": 41585
     },
     {
       "text": " for",
-      "startMs": 16695,
-      "endMs": 16790
+      "startMs": 41585,
+      "endMs": 41831
     },
     {
       "text": " your",
-      "startMs": 16790,
-      "endMs": 16900,
+      "startMs": 41831,
+      "endMs": 42118,
       "pageBreakAfter": true
     },
     {
       "text": " app.",
-      "startMs": 16900,
-      "endMs": 17010
+      "startMs": 42118,
+      "endMs": 42405
     },
     {
       "text": " Add",
-      "startMs": 17010,
-      "endMs": 17104
+      "startMs": 42405,
+      "endMs": 42651
     },
     {
       "text": " your",
-      "startMs": 17104,
-      "endMs": 17214
+      "startMs": 42651,
+      "endMs": 42938
     },
     {
       "text": " redirect",
-      "startMs": 17214,
-      "endMs": 17387,
+      "startMs": 42938,
+      "endMs": 43390,
       "pageBreakAfter": true
     },
     {
       "text": " URL",
-      "startMs": 17387,
-      "endMs": 17482
+      "startMs": 43390,
+      "endMs": 43636
     },
     {
       "text": " to",
-      "startMs": 17482,
-      "endMs": 17560
+      "startMs": 43636,
+      "endMs": 43841
     },
     {
       "text": " the",
-      "startMs": 17560,
-      "endMs": 17655
+      "startMs": 43841,
+      "endMs": 44087
     },
     {
       "text": " allowed",
-      "startMs": 17655,
-      "endMs": 17812,
+      "startMs": 44087,
+      "endMs": 44497,
       "pageBreakAfter": true
     },
     {
       "text": " redirect",
-      "startMs": 17812,
-      "endMs": 17985
+      "startMs": 44497,
+      "endMs": 44949
     },
     {
       "text": " URLs",
-      "startMs": 17985,
-      "endMs": 18095
+      "startMs": 44949,
+      "endMs": 45236
     },
     {
       "text": " list",
-      "startMs": 18095,
-      "endMs": 18205
+      "startMs": 45236,
+      "endMs": 45523
     },
     {
       "text": " (for",
-      "startMs": 18205,
-      "endMs": 18315,
+      "startMs": 45523,
+      "endMs": 45810,
       "pageBreakAfter": true
     },
     {
       "text": " example",
-      "startMs": 18315,
-      "endMs": 18472
+      "startMs": 45810,
+      "endMs": 46221
     },
     {
       "text": " http://localhost).",
-      "startMs": 18472,
-      "endMs": 18803
+      "startMs": 46221,
+      "endMs": 47082
     },
     {
       "text": " Save",
-      "startMs": 18803,
-      "endMs": 18913
+      "startMs": 47082,
+      "endMs": 47369
     },
     {
       "text": " the",
-      "startMs": 18913,
-      "endMs": 19007,
+      "startMs": 47369,
+      "endMs": 47615,
       "pageBreakAfter": true
     },
     {
       "text": " changes.",
-      "startMs": 19007,
-      "endMs": 19180,
+      "startMs": 47615,
+      "endMs": 48933,
       "pageBreakAfter": true
     },
     {
       "text": " Step",
-      "startMs": 19500,
-      "endMs": 19776
+      "startMs": 49467,
+      "endMs": 49781
     },
     {
       "text": " 4:",
-      "startMs": 19776,
-      "endMs": 19972
+      "startMs": 49781,
+      "endMs": 50006
     },
     {
       "text": " Choose",
-      "startMs": 19972,
-      "endMs": 20327
+      "startMs": 50006,
+      "endMs": 50410
     },
     {
       "text": " the",
-      "startMs": 20327,
-      "endMs": 20563,
+      "startMs": 50410,
+      "endMs": 50680,
       "pageBreakAfter": true
     },
     {
       "text": " scopes.",
-      "startMs": 20563,
-      "endMs": 20957
+      "startMs": 50680,
+      "endMs": 51129
     },
     {
       "text": " Let",
-      "startMs": 20957,
-      "endMs": 21193
+      "startMs": 51129,
+      "endMs": 51399
     },
     {
       "text": " us",
-      "startMs": 21193,
-      "endMs": 21390
+      "startMs": 51399,
+      "endMs": 51623
     },
     {
       "text": " look",
-      "startMs": 21390,
-      "endMs": 21665,
+      "startMs": 51623,
+      "endMs": 51938,
       "pageBreakAfter": true
     },
     {
       "text": " at",
-      "startMs": 21665,
-      "endMs": 21862
+      "startMs": 51938,
+      "endMs": 52163
     },
     {
       "text": " the",
-      "startMs": 21862,
-      "endMs": 22098
+      "startMs": 52163,
+      "endMs": 52432
     },
     {
       "text": " code.",
-      "startMs": 22098,
-      "endMs": 22413,
+      "startMs": 52432,
+      "endMs": 53433,
       "pageBreakAfter": true
     },
     {
       "text": " Step",
-      "startMs": 22667,
-      "endMs": 22787
+      "startMs": 53967,
+      "endMs": 54281
     },
     {
       "text": " 5:",
-      "startMs": 22787,
-      "endMs": 22873
+      "startMs": 54281,
+      "endMs": 54505
     },
     {
       "text": " Run",
-      "startMs": 22873,
-      "endMs": 22976
+      "startMs": 54505,
+      "endMs": 54774
     },
     {
       "text": " the",
-      "startMs": 22976,
-      "endMs": 23079,
+      "startMs": 54774,
+      "endMs": 55043,
       "pageBreakAfter": true
     },
     {
       "text": " OAuth",
-      "startMs": 23079,
-      "endMs": 23217
+      "startMs": 55043,
+      "endMs": 55402
     },
     {
       "text": " flow",
-      "startMs": 23217,
-      "endMs": 23337
+      "startMs": 55402,
+      "endMs": 55716
     },
     {
       "text": " once.",
-      "startMs": 23337,
-      "endMs": 23475
+      "startMs": 55716,
+      "endMs": 56075
     },
     {
       "text": " Build",
-      "startMs": 23475,
-      "endMs": 23612,
+      "startMs": 56075,
+      "endMs": 56434,
       "pageBreakAfter": true
     },
     {
       "text": " the",
-      "startMs": 23612,
-      "endMs": 23716
+      "startMs": 56434,
+      "endMs": 56703
     },
     {
       "text": " authorization",
-      "startMs": 23716,
-      "endMs": 23991
+      "startMs": 56703,
+      "endMs": 57421
     },
     {
       "text": " URL",
-      "startMs": 23991,
-      "endMs": 24094
+      "startMs": 57421,
+      "endMs": 57690
     },
     {
       "text": " with",
-      "startMs": 24094,
-      "endMs": 24214,
+      "startMs": 57690,
+      "endMs": 58004,
       "pageBreakAfter": true
     },
     {
       "text": " your",
-      "startMs": 24214,
-      "endMs": 24335
+      "startMs": 58004,
+      "endMs": 58318
     },
     {
       "text": " client",
-      "startMs": 24335,
-      "endMs": 24489
+      "startMs": 58318,
+      "endMs": 58722
     },
     {
       "text": " ID,",
-      "startMs": 24489,
-      "endMs": 24593
+      "startMs": 58722,
+      "endMs": 58991
     },
     {
       "text": " redirect",
-      "startMs": 24593,
-      "endMs": 24782,
+      "startMs": 58991,
+      "endMs": 59484,
       "pageBreakAfter": true
     },
     {
       "text": " URI,",
-      "startMs": 24782,
-      "endMs": 24902
+      "startMs": 59484,
+      "endMs": 59798
     },
     {
       "text": " state,",
-      "startMs": 24902,
-      "endMs": 25057
+      "startMs": 59798,
+      "endMs": 60202
     },
     {
       "text": " and",
-      "startMs": 25057,
-      "endMs": 25160
+      "startMs": 60202,
+      "endMs": 60471
     },
     {
       "text": " the",
-      "startMs": 25160,
-      "endMs": 25263,
+      "startMs": 60471,
+      "endMs": 60740,
       "pageBreakAfter": true
     },
     {
       "text": " scopes",
-      "startMs": 25263,
-      "endMs": 25418
+      "startMs": 60740,
+      "endMs": 61144
     },
     {
       "text": " above.",
-      "startMs": 25418,
-      "endMs": 25573
+      "startMs": 61144,
+      "endMs": 61548
     },
     {
       "text": " Sign",
-      "startMs": 25573,
-      "endMs": 25693
+      "startMs": 61548,
+      "endMs": 61862
     },
     {
       "text": " in",
-      "startMs": 25693,
-      "endMs": 25779,
+      "startMs": 61862,
+      "endMs": 62086,
       "pageBreakAfter": true
     },
     {
       "text": " and",
-      "startMs": 25779,
-      "endMs": 25882
+      "startMs": 62086,
+      "endMs": 62355
     },
     {
       "text": " consent",
-      "startMs": 25882,
-      "endMs": 26054
+      "startMs": 62355,
+      "endMs": 62804
     },
     {
       "text": " on",
-      "startMs": 26054,
-      "endMs": 26140
+      "startMs": 62804,
+      "endMs": 63028
     },
     {
       "text": " LinkedIn.",
-      "startMs": 26140,
-      "endMs": 26347,
+      "startMs": 63028,
+      "endMs": 64433,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Step",
+      "startMs": 64967,
+      "endMs": 65240
+    },
+    {
+      "text": " 6:",
+      "startMs": 65240,
+      "endMs": 65435
+    },
+    {
+      "text": " Store",
+      "startMs": 65435,
+      "endMs": 65747
+    },
+    {
+      "text": " the",
+      "startMs": 65747,
+      "endMs": 65981,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " token",
+      "startMs": 65981,
+      "endMs": 66293
+    },
+    {
+      "text": " securely.",
+      "startMs": 66293,
+      "endMs": 66762
+    },
+    {
+      "text": " Do",
+      "startMs": 66762,
+      "endMs": 66957
+    },
+    {
+      "text": " not",
+      "startMs": 66957,
+      "endMs": 67191,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " commit",
+      "startMs": 67191,
+      "endMs": 67542
+    },
+    {
+      "text": " the",
+      "startMs": 67542,
+      "endMs": 67776
+    },
+    {
+      "text": " client",
+      "startMs": 67776,
+      "endMs": 68128
+    },
+    {
+      "text": " secret",
+      "startMs": 68128,
+      "endMs": 68479,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " or",
+      "startMs": 68479,
+      "endMs": 68674
+    },
+    {
+      "text": " the",
+      "startMs": 68674,
+      "endMs": 68908
+    },
+    {
+      "text": " access",
+      "startMs": 68908,
+      "endMs": 69259
+    },
+    {
+      "text": " token",
+      "startMs": 69259,
+      "endMs": 69572,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " to",
+      "startMs": 69572,
+      "endMs": 69767
+    },
+    {
+      "text": " a",
+      "startMs": 69767,
+      "endMs": 69923
+    },
+    {
+      "text": " repository.",
+      "startMs": 69923,
+      "endMs": 70469
+    },
+    {
+      "text": " Store",
+      "startMs": 70469,
+      "endMs": 70781,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " the",
+      "startMs": 70781,
+      "endMs": 71015
+    },
+    {
+      "text": " access",
+      "startMs": 71015,
+      "endMs": 71367
+    },
+    {
+      "text": " token",
+      "startMs": 71367,
+      "endMs": 71679
+    },
+    {
+      "text": " as",
+      "startMs": 71679,
+      "endMs": 71874,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " a",
+      "startMs": 71874,
+      "endMs": 72030
+    },
+    {
+      "text": " GitHub",
+      "startMs": 72030,
+      "endMs": 72381
+    },
+    {
+      "text": " Actions",
+      "startMs": 72381,
+      "endMs": 72772
+    },
+    {
+      "text": " secret",
+      "startMs": 72772,
+      "endMs": 73123,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " (I",
+      "startMs": 73123,
+      "endMs": 73318
+    },
+    {
+      "text": " name",
+      "startMs": 73318,
+      "endMs": 73591
+    },
+    {
+      "text": " mine",
+      "startMs": 73591,
+      "endMs": 73864
+    },
+    {
+      "text": " LINKEDINTOKEN).",
+      "startMs": 73864,
+      "endMs": 75433,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Step",
+      "startMs": 75967,
+      "endMs": 76473
+    },
+    {
+      "text": " 7:",
+      "startMs": 76473,
+      "endMs": 76835
+    },
+    {
+      "text": " Test",
+      "startMs": 76835,
+      "endMs": 77342
+    },
+    {
+      "text": " the",
+      "startMs": 77342,
+      "endMs": 77776,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " connection.",
+      "startMs": 77776,
+      "endMs": 78789
+    },
+    {
+      "text": " Let",
+      "startMs": 78789,
+      "endMs": 79223
+    },
+    {
+      "text": " us",
+      "startMs": 79223,
+      "endMs": 79585
+    },
+    {
+      "text": " look",
+      "startMs": 79585,
+      "endMs": 80092,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " at",
+      "startMs": 80092,
+      "endMs": 80454
+    },
+    {
+      "text": " the",
+      "startMs": 80454,
+      "endMs": 80888
+    },
+    {
+      "text": " code.",
+      "startMs": 80888,
+      "endMs": 84433,
       "pageBreakAfter": true
     },
     {
       "text": " Read",
-      "startMs": 26667,
-      "endMs": 26952
+      "startMs": 84967,
+      "endMs": 85337
     },
     {
       "text": " the",
-      "startMs": 26952,
-      "endMs": 27197
+      "startMs": 85337,
+      "endMs": 85654
     },
     {
       "text": " full",
-      "startMs": 27197,
-      "endMs": 27482
+      "startMs": 85654,
+      "endMs": 86024
     },
     {
       "text": " article.",
-      "startMs": 27482,
-      "endMs": 27930,
+      "startMs": 86024,
+      "endMs": 86605,
       "pageBreakAfter": true
     },
     {
       "text": " New",
-      "startMs": 27930,
-      "endMs": 28175
+      "startMs": 86605,
+      "endMs": 86922
     },
     {
       "text": " posts",
-      "startMs": 28175,
-      "endMs": 28501
+      "startMs": 86922,
+      "endMs": 87345
     },
     {
       "text": " every",
-      "startMs": 28501,
-      "endMs": 28827
+      "startMs": 87345,
+      "endMs": 87768
     },
     {
       "text": " week",
-      "startMs": 28827,
-      "endMs": 29112,
+      "startMs": 87768,
+      "endMs": 88138,
       "pageBreakAfter": true
     },
     {
       "text": " on",
-      "startMs": 29112,
-      "endMs": 29316
+      "startMs": 88138,
+      "endMs": 88402
     },
     {
       "text": " the",
-      "startMs": 29316,
-      "endMs": 29561
+      "startMs": 88402,
+      "endMs": 88719
     },
     {
       "text": " blog.",
-      "startMs": 29561,
-      "endMs": 29887,
+      "startMs": 88719,
+      "endMs": 89933,
       "pageBreakAfter": true
     }
   ],

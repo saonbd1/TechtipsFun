@@ -10,15 +10,18 @@
     "Self-Hosting"
   ],
   "url": "https://www.techtips.fun/blog/setting-up-privacy-first-home-network/",
-  "theme": "github-dark",
-  "durationInFrames": 400,
   "scenes": [
     {
       "type": "title",
       "kicker": "Networking & Privacy",
       "title": "Setting up a privacy-first home network with Pi-hole + WireGuard",
       "subtitle": "My home network used to be a factory-default router with no thought given to privacy.",
-      "durationInFrames": 105
+      "image": {
+        "src": "post-media/setting-up-privacy-first-home-network/01-home-network.webp",
+        "width": 960,
+        "height": 480
+      },
+      "durationInFrames": 183
     },
     {
       "type": "code",
@@ -45,7 +48,10 @@
           }
         }
       ],
-      "durationInFrames": 95
+      "stepDurations": [
+        135
+      ],
+      "durationInFrames": 135
     },
     {
       "type": "code",
@@ -102,274 +108,279 @@
           }
         }
       ],
-      "durationInFrames": 95
+      "stepDurations": [
+        168
+      ],
+      "durationInFrames": 168
     },
     {
       "type": "outro",
       "heading": "Read the full article",
       "body": "New posts every week on the blog.",
       "url": "techtips.fun",
-      "durationInFrames": 105
+      "durationInFrames": 165
     }
   ],
+  "theme": "github-dark",
+  "durationInFrames": 651,
   "captions": [
     {
       "text": " My",
-      "startMs": 0,
-      "endMs": 139
+      "startMs": 500,
+      "endMs": 703
     },
     {
       "text": " home",
-      "startMs": 139,
-      "endMs": 333
+      "startMs": 703,
+      "endMs": 986
     },
     {
       "text": " network",
-      "startMs": 333,
-      "endMs": 611
+      "startMs": 986,
+      "endMs": 1391
     },
     {
       "text": " used",
-      "startMs": 611,
-      "endMs": 805,
+      "startMs": 1391,
+      "endMs": 1675,
       "pageBreakAfter": true
     },
     {
       "text": " to",
-      "startMs": 805,
-      "endMs": 944
+      "startMs": 1675,
+      "endMs": 1878
     },
     {
       "text": " be",
-      "startMs": 944,
-      "endMs": 1083
+      "startMs": 1878,
+      "endMs": 2080
     },
     {
       "text": " a",
-      "startMs": 1083,
-      "endMs": 1194
+      "startMs": 2080,
+      "endMs": 2242
     },
     {
       "text": " factory-default",
-      "startMs": 1194,
-      "endMs": 1693,
+      "startMs": 2242,
+      "endMs": 2972,
       "pageBreakAfter": true
     },
     {
       "text": " router",
-      "startMs": 1693,
-      "endMs": 1943
+      "startMs": 2972,
+      "endMs": 3336
     },
     {
       "text": " with",
-      "startMs": 1943,
-      "endMs": 2137
+      "startMs": 3336,
+      "endMs": 3620
     },
     {
       "text": " no",
-      "startMs": 2137,
-      "endMs": 2276
+      "startMs": 3620,
+      "endMs": 3822
     },
     {
       "text": " thought",
-      "startMs": 2276,
-      "endMs": 2554,
+      "startMs": 3822,
+      "endMs": 4228,
       "pageBreakAfter": true
     },
     {
       "text": " given",
-      "startMs": 2554,
-      "endMs": 2776
+      "startMs": 4228,
+      "endMs": 4552
     },
     {
       "text": " to",
-      "startMs": 2776,
-      "endMs": 2915
+      "startMs": 4552,
+      "endMs": 4754
     },
     {
       "text": " privacy.",
-      "startMs": 2915,
-      "endMs": 3220,
+      "startMs": 4754,
+      "endMs": 6067,
       "pageBreakAfter": true
     },
     {
       "text": " Part",
-      "startMs": 3500,
-      "endMs": 3737
+      "startMs": 6600,
+      "endMs": 6871
     },
     {
       "text": " 1:",
-      "startMs": 3737,
-      "endMs": 3907
+      "startMs": 6871,
+      "endMs": 7064
     },
     {
       "text": " Pi-hole",
-      "startMs": 3907,
-      "endMs": 4245
+      "startMs": 7064,
+      "endMs": 7451
     },
     {
       "text": " on",
-      "startMs": 4245,
-      "endMs": 4415,
+      "startMs": 7451,
+      "endMs": 7644,
       "pageBreakAfter": true
     },
     {
       "text": " a",
-      "startMs": 4415,
-      "endMs": 4550
+      "startMs": 7644,
+      "endMs": 7799
     },
     {
       "text": " Raspberry",
-      "startMs": 4550,
-      "endMs": 4957
+      "startMs": 7799,
+      "endMs": 8263
     },
     {
       "text": " Pi.",
-      "startMs": 4957,
-      "endMs": 5160
+      "startMs": 8263,
+      "endMs": 8494
     },
     {
       "text": " Let",
-      "startMs": 5160,
-      "endMs": 5363,
+      "startMs": 8494,
+      "endMs": 8726,
       "pageBreakAfter": true
     },
     {
       "text": " us",
-      "startMs": 5363,
-      "endMs": 5533
+      "startMs": 8726,
+      "endMs": 8920
     },
     {
       "text": " look",
-      "startMs": 5533,
-      "endMs": 5770
+      "startMs": 8920,
+      "endMs": 9190
     },
     {
       "text": " at",
-      "startMs": 5770,
-      "endMs": 5939
+      "startMs": 9190,
+      "endMs": 9384
     },
     {
       "text": " the",
-      "startMs": 5939,
-      "endMs": 6142,
+      "startMs": 9384,
+      "endMs": 9616,
       "pageBreakAfter": true
     },
     {
       "text": " code.",
-      "startMs": 6142,
-      "endMs": 6413,
+      "startMs": 9616,
+      "endMs": 10567,
       "pageBreakAfter": true
     },
     {
       "text": " Part",
-      "startMs": 6667,
-      "endMs": 6967
+      "startMs": 11100,
+      "endMs": 11539
     },
     {
       "text": " 2:",
-      "startMs": 6967,
-      "endMs": 7181
+      "startMs": 11539,
+      "endMs": 11852
     },
     {
       "text": " WireGuard",
-      "startMs": 7181,
-      "endMs": 7695
+      "startMs": 11852,
+      "endMs": 12604
     },
     {
       "text": " VPN.",
-      "startMs": 7695,
-      "endMs": 7995,
+      "startMs": 12604,
+      "endMs": 13042,
       "pageBreakAfter": true
     },
     {
       "text": " Let",
-      "startMs": 7995,
-      "endMs": 8252
+      "startMs": 13042,
+      "endMs": 13418
     },
     {
       "text": " us",
-      "startMs": 8252,
-      "endMs": 8466
+      "startMs": 13418,
+      "endMs": 13731
     },
     {
       "text": " look",
-      "startMs": 8466,
-      "endMs": 8766
+      "startMs": 13731,
+      "endMs": 14170
     },
     {
       "text": " at",
-      "startMs": 8766,
-      "endMs": 8980,
+      "startMs": 14170,
+      "endMs": 14483,
       "pageBreakAfter": true
     },
     {
       "text": " the",
-      "startMs": 8980,
-      "endMs": 9237
+      "startMs": 14483,
+      "endMs": 14859
     },
     {
       "text": " code.",
-      "startMs": 9237,
-      "endMs": 9580,
+      "startMs": 14859,
+      "endMs": 16167,
       "pageBreakAfter": true
     },
     {
       "text": " Read",
-      "startMs": 9833,
-      "endMs": 10119
+      "startMs": 16700,
+      "endMs": 17070
     },
     {
       "text": " the",
-      "startMs": 10119,
-      "endMs": 10363
+      "startMs": 17070,
+      "endMs": 17387
     },
     {
       "text": " full",
-      "startMs": 10363,
-      "endMs": 10649
+      "startMs": 17387,
+      "endMs": 17757
     },
     {
       "text": " article.",
-      "startMs": 10649,
-      "endMs": 11097,
+      "startMs": 17757,
+      "endMs": 18338,
       "pageBreakAfter": true
     },
     {
       "text": " New",
-      "startMs": 11097,
-      "endMs": 11341
+      "startMs": 18338,
+      "endMs": 18655
     },
     {
       "text": " posts",
-      "startMs": 11341,
-      "endMs": 11668
+      "startMs": 18655,
+      "endMs": 19078
     },
     {
       "text": " every",
-      "startMs": 11668,
-      "endMs": 11994
+      "startMs": 19078,
+      "endMs": 19501
     },
     {
       "text": " week",
-      "startMs": 11994,
-      "endMs": 12279,
+      "startMs": 19501,
+      "endMs": 19871,
       "pageBreakAfter": true
     },
     {
       "text": " on",
-      "startMs": 12279,
-      "endMs": 12483
+      "startMs": 19871,
+      "endMs": 20135
     },
     {
       "text": " the",
-      "startMs": 12483,
-      "endMs": 12727
+      "startMs": 20135,
+      "endMs": 20452
     },
     {
       "text": " blog.",
-      "startMs": 12727,
-      "endMs": 13053,
+      "startMs": 20452,
+      "endMs": 21667,
       "pageBreakAfter": true
     }
   ],

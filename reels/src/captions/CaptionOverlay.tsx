@@ -18,10 +18,11 @@ import { BRAND } from "../brand";
 import { uiFontFamily } from "../fonts";
 import { ReelCaption } from "../schema";
 
-// A caption page is flushed once it has been on screen this long. Together with
-// the leading space on every word (see scripts/build-reel-props.mjs) this yields
-// the classic "3-4 words at a time" TikTok cadence.
-const COMBINE_TOKENS_WITHIN_MS = 1100;
+// A caption page is flushed once it has been on screen this long. The props
+// builder already forces a page break every 4 words (pageBreakAfter), so this
+// is only a safety net: at reading speed 4 words take ~1.5s, and a lower value
+// would split them and flash a lone leftover word.
+const COMBINE_TOKENS_WITHIN_MS = 2200;
 
 const DESIRED_FONT_SIZE = 96;
 const CAPTION_BOTTOM_PADDING = 300;
@@ -133,10 +134,14 @@ export const CaptionOverlay: React.FC<{
     <>
       {pages.map((page, index) => {
         const startFrame = Math.floor((page.startMs / 1000) * fps);
-        const durationInFrames = Math.max(
-          1,
-          Math.round((page.durationMs / 1000) * fps),
-        );
+        let endFrame = Math.round(((page.startMs + page.durationMs) / 1000) * fps);
+        // Never overlap the next page (rounding used to leave a 1-frame overlap
+        // where two caption lines were drawn on top of each other).
+        const next = pages[index + 1];
+        if (next) {
+          endFrame = Math.min(endFrame, Math.floor((next.startMs / 1000) * fps));
+        }
+        const durationInFrames = Math.max(1, endFrame - startFrame);
 
         return (
           <Sequence

@@ -17,1006 +17,1070 @@
       "kicker": "Web Development",
       "title": "Netlify vs Vercel: What My Emails Revealed After Using Both",
       "subtitle": "I used both Netlify and Vercel for similar projects. Here is what I observed about free…",
-      "durationInFrames": 105
+      "image": {
+        "src": "post-media/netlify-vs-vercel-what-my-emails-revealed-after-using-both/01-netlify-vs-vercel-cover.webp",
+        "width": 1600,
+        "height": 900
+      },
+      "durationInFrames": 183
     },
     {
       "type": "point",
       "kicker": "Web Development",
       "heading": "Netlify vs Vercel at a glance",
-      "body": "Important: The email row is personal evidence, not a controlled test. Your messages may be different because usage, plan, team settings, project…",
-      "durationInFrames": 120
+      "body": "Entry plan Netlify: Free plan at $0 forever. Vercel: Hobby plan is free for personal, non-commercial use.",
+      "durationInFrames": 307
     },
     {
       "type": "point",
       "kicker": "Web Development",
       "heading": "What I actually tested",
       "body": "I did not run a formal load test. I used both services as places to deploy and continue web projects.",
-      "durationInFrames": 120
+      "durationInFrames": 319
     },
     {
       "type": "point",
       "kicker": "Web Development",
       "heading": "Netlify: warnings about credits and project status",
       "body": "I had barely logged in to Netlify for approximately six months after I stopped using the relevant projects.",
-      "durationInFrames": 120
+      "image": {
+        "src": "post-media/netlify-vs-vercel-what-my-emails-revealed-after-using-both/02-netlify-vs-vercel-netlify-credit-warnings.webp",
+        "width": 1310,
+        "height": 652
+      },
+      "durationInFrames": 366
     },
     {
       "type": "point",
       "kicker": "Web Development",
       "heading": "Vercel: more operational updates in my inbox",
-      "body": "I have continued running projects on Vercel for a similar period. The emails I received were mostly operational: deployment status, failed…",
-      "durationInFrames": 120
+      "body": "I have continued running projects on Vercel for a similar period. The emails I received were mostly…",
+      "image": {
+        "src": "post-media/netlify-vs-vercel-what-my-emails-revealed-after-using-both/03-netlify-vs-vercel-vercel-messages.webp",
+        "width": 1298,
+        "height": 621
+      },
+      "durationInFrames": 355
     },
     {
       "type": "point",
       "kicker": "Web Development",
       "heading": "Free does not mean unlimited",
-      "body": "The official pricing pages make an important distinction that is easy to miss in a simple “both are free” comparison.",
-      "durationInFrames": 120
+      "body": "The official pricing pages make an important distinction that is easy to miss in a simple “both are free”…",
+      "image": {
+        "src": "post-media/netlify-vs-vercel-what-my-emails-revealed-after-using-both/04-netlify-vs-vercel-email-comparison-chart.webp",
+        "width": 1568,
+        "height": 872
+      },
+      "durationInFrames": 355
     },
     {
       "type": "point",
       "kicker": "Web Development",
       "heading": "Where the platforms overlap",
       "body": "The two services are not opposites. Both can provide a modern Git-based deployment workflow, managed HTTPS, preview environments, templates,…",
-      "durationInFrames": 120
+      "durationInFrames": 307
+    },
+    {
+      "type": "point",
+      "kicker": "Web Development",
+      "heading": "Vercel’s emphasis",
+      "body": "Vercel is closely associated with Next.js and documents support for multiple frontend and backend runtimes.",
+      "durationInFrames": 238
     },
     {
       "type": "outro",
       "heading": "Read the full article",
       "body": "New posts every week on the blog.",
       "url": "techtips.fun",
-      "durationInFrames": 105
+      "durationInFrames": 165
     }
   ],
   "theme": "github-dark",
-  "durationInFrames": 930,
+  "durationInFrames": 2595,
   "captions": [
     {
       "text": " I",
-      "startMs": 0,
-      "endMs": 107
+      "startMs": 500,
+      "endMs": 657
     },
     {
       "text": " used",
-      "startMs": 107,
-      "endMs": 295
+      "startMs": 657,
+      "endMs": 931
     },
     {
       "text": " both",
-      "startMs": 295,
-      "endMs": 483
+      "startMs": 931,
+      "endMs": 1205
     },
     {
       "text": " Netlify",
-      "startMs": 483,
-      "endMs": 751,
+      "startMs": 1205,
+      "endMs": 1597,
       "pageBreakAfter": true
     },
     {
       "text": " and",
-      "startMs": 751,
-      "endMs": 912
+      "startMs": 1597,
+      "endMs": 1832
     },
     {
       "text": " Vercel",
-      "startMs": 912,
-      "endMs": 1154
+      "startMs": 1832,
+      "endMs": 2184
     },
     {
       "text": " for",
-      "startMs": 1154,
-      "endMs": 1315
+      "startMs": 2184,
+      "endMs": 2419
     },
     {
       "text": " similar",
-      "startMs": 1315,
-      "endMs": 1583,
+      "startMs": 2419,
+      "endMs": 2811,
       "pageBreakAfter": true
     },
     {
       "text": " projects.",
-      "startMs": 1583,
-      "endMs": 1905
+      "startMs": 2811,
+      "endMs": 3281
     },
     {
       "text": " Here",
-      "startMs": 1905,
-      "endMs": 2093
+      "startMs": 3281,
+      "endMs": 3555
     },
     {
       "text": " is",
-      "startMs": 2093,
-      "endMs": 2227
+      "startMs": 3555,
+      "endMs": 3751
     },
     {
       "text": " what",
-      "startMs": 2227,
-      "endMs": 2415,
+      "startMs": 3751,
+      "endMs": 4025,
       "pageBreakAfter": true
     },
     {
       "text": " I",
-      "startMs": 2415,
-      "endMs": 2522
+      "startMs": 4025,
+      "endMs": 4182
     },
     {
       "text": " observed",
-      "startMs": 2522,
-      "endMs": 2818
+      "startMs": 4182,
+      "endMs": 4612
     },
     {
       "text": " about",
-      "startMs": 2818,
-      "endMs": 3032
+      "startMs": 4612,
+      "endMs": 4926
     },
     {
       "text": " free",
-      "startMs": 3032,
-      "endMs": 3220,
+      "startMs": 4926,
+      "endMs": 6067,
       "pageBreakAfter": true
     },
     {
       "text": " Netlify",
-      "startMs": 3500,
-      "endMs": 3658
+      "startMs": 6600,
+      "endMs": 7083
     },
     {
       "text": " vs",
-      "startMs": 3658,
-      "endMs": 3737
+      "startMs": 7083,
+      "endMs": 7324
     },
     {
       "text": " Vercel",
-      "startMs": 3737,
-      "endMs": 3879
+      "startMs": 7324,
+      "endMs": 7758
     },
     {
       "text": " at",
-      "startMs": 3879,
-      "endMs": 3958,
+      "startMs": 7758,
+      "endMs": 8000,
       "pageBreakAfter": true
     },
     {
       "text": " a",
-      "startMs": 3958,
-      "endMs": 4021
+      "startMs": 8000,
+      "endMs": 8193
     },
     {
       "text": " glance.",
-      "startMs": 4021,
-      "endMs": 4179
+      "startMs": 8193,
+      "endMs": 8676
     },
     {
-      "text": " Important:",
-      "startMs": 4179,
-      "endMs": 4384
+      "text": " Entry",
+      "startMs": 8676,
+      "endMs": 9062
     },
     {
-      "text": " The",
-      "startMs": 4384,
-      "endMs": 4479,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " email",
-      "startMs": 4479,
-      "endMs": 4606
-    },
-    {
-      "text": " row",
-      "startMs": 4606,
-      "endMs": 4700
-    },
-    {
-      "text": " is",
-      "startMs": 4700,
-      "endMs": 4779
-    },
-    {
-      "text": " personal",
-      "startMs": 4779,
-      "endMs": 4953,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " evidence,",
-      "startMs": 4953,
-      "endMs": 5143
-    },
-    {
-      "text": " not",
-      "startMs": 5143,
-      "endMs": 5237
-    },
-    {
-      "text": " a",
-      "startMs": 5237,
-      "endMs": 5301
-    },
-    {
-      "text": " controlled",
-      "startMs": 5301,
-      "endMs": 5506,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " test.",
-      "startMs": 5506,
-      "endMs": 5632
-    },
-    {
-      "text": " Your",
-      "startMs": 5632,
-      "endMs": 5743
-    },
-    {
-      "text": " messages",
-      "startMs": 5743,
-      "endMs": 5916
-    },
-    {
-      "text": " may",
-      "startMs": 5916,
-      "endMs": 6011,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " be",
-      "startMs": 6011,
-      "endMs": 6090
-    },
-    {
-      "text": " different",
-      "startMs": 6090,
-      "endMs": 6280
-    },
-    {
-      "text": " because",
-      "startMs": 6280,
-      "endMs": 6438
-    },
-    {
-      "text": " usage,",
-      "startMs": 6438,
-      "endMs": 6580,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " plan,",
-      "startMs": 6580,
-      "endMs": 6706
-    },
-    {
-      "text": " team",
-      "startMs": 6706,
-      "endMs": 6817
-    },
-    {
-      "text": " settings,",
-      "startMs": 6817,
-      "endMs": 7006
-    },
-    {
-      "text": " project…",
-      "startMs": 7006,
-      "endMs": 7180,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " What",
-      "startMs": 7500,
-      "endMs": 7648
-    },
-    {
-      "text": " I",
-      "startMs": 7648,
-      "endMs": 7733
-    },
-    {
-      "text": " actually",
-      "startMs": 7733,
-      "endMs": 7965
-    },
-    {
-      "text": " tested.",
-      "startMs": 7965,
-      "endMs": 8177,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " I",
-      "startMs": 8177,
-      "endMs": 8261
-    },
-    {
-      "text": " did",
-      "startMs": 8261,
-      "endMs": 8388
-    },
-    {
-      "text": " not",
-      "startMs": 8388,
-      "endMs": 8515
-    },
-    {
-      "text": " run",
-      "startMs": 8515,
-      "endMs": 8642,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " a",
-      "startMs": 8642,
-      "endMs": 8727
-    },
-    {
-      "text": " formal",
-      "startMs": 8727,
-      "endMs": 8917
-    },
-    {
-      "text": " load",
-      "startMs": 8917,
-      "endMs": 9065
-    },
-    {
-      "text": " test.",
-      "startMs": 9065,
-      "endMs": 9234,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " I",
-      "startMs": 9234,
-      "endMs": 9319
-    },
-    {
-      "text": " used",
-      "startMs": 9319,
-      "endMs": 9467
-    },
-    {
-      "text": " both",
-      "startMs": 9467,
-      "endMs": 9615
-    },
-    {
-      "text": " services",
-      "startMs": 9615,
-      "endMs": 9848,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " as",
-      "startMs": 9848,
-      "endMs": 9953
-    },
-    {
-      "text": " places",
-      "startMs": 9953,
-      "endMs": 10144
-    },
-    {
-      "text": " to",
-      "startMs": 10144,
-      "endMs": 10249
-    },
-    {
-      "text": " deploy",
-      "startMs": 10249,
-      "endMs": 10440,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " and",
-      "startMs": 10440,
-      "endMs": 10567
-    },
-    {
-      "text": " continue",
-      "startMs": 10567,
-      "endMs": 10799
-    },
-    {
-      "text": " web",
-      "startMs": 10799,
-      "endMs": 10926
-    },
-    {
-      "text": " projects.",
-      "startMs": 10926,
-      "endMs": 11180,
+      "text": " plan",
+      "startMs": 9062,
+      "endMs": 9400,
       "pageBreakAfter": true
     },
     {
       "text": " Netlify:",
-      "startMs": 11500,
-      "endMs": 11693
+      "startMs": 9400,
+      "endMs": 9931
     },
     {
-      "text": " warnings",
-      "startMs": 11693,
-      "endMs": 11886
+      "text": " Free",
+      "startMs": 9931,
+      "endMs": 10268
     },
     {
-      "text": " about",
-      "startMs": 11886,
-      "endMs": 12026
+      "text": " plan",
+      "startMs": 10268,
+      "endMs": 10606
     },
     {
-      "text": " credits",
-      "startMs": 12026,
-      "endMs": 12201,
+      "text": " at",
+      "startMs": 10606,
+      "endMs": 10848,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " $0",
+      "startMs": 10848,
+      "endMs": 11089
+    },
+    {
+      "text": " forever.",
+      "startMs": 11089,
+      "endMs": 11620
+    },
+    {
+      "text": " Vercel:",
+      "startMs": 11620,
+      "endMs": 12103
+    },
+    {
+      "text": " Hobby",
+      "startMs": 12103,
+      "endMs": 12489,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " plan",
+      "startMs": 12489,
+      "endMs": 12827
+    },
+    {
+      "text": " is",
+      "startMs": 12827,
+      "endMs": 13068
+    },
+    {
+      "text": " free",
+      "startMs": 13068,
+      "endMs": 13406
+    },
+    {
+      "text": " for",
+      "startMs": 13406,
+      "endMs": 13696,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " personal,",
+      "startMs": 13696,
+      "endMs": 14275
+    },
+    {
+      "text": " non-commercial",
+      "startMs": 14275,
+      "endMs": 15095
+    },
+    {
+      "text": " use.",
+      "startMs": 15095,
+      "endMs": 16300,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " What",
+      "startMs": 16833,
+      "endMs": 17205
+    },
+    {
+      "text": " I",
+      "startMs": 17205,
+      "endMs": 17417
+    },
+    {
+      "text": " actually",
+      "startMs": 17417,
+      "endMs": 18001
+    },
+    {
+      "text": " tested.",
+      "startMs": 18001,
+      "endMs": 18531,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " I",
+      "startMs": 18531,
+      "endMs": 18744
+    },
+    {
+      "text": " did",
+      "startMs": 18744,
+      "endMs": 19062
+    },
+    {
+      "text": " not",
+      "startMs": 19062,
+      "endMs": 19380
+    },
+    {
+      "text": " run",
+      "startMs": 19380,
+      "endMs": 19699,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " a",
+      "startMs": 19699,
+      "endMs": 19911
+    },
+    {
+      "text": " formal",
+      "startMs": 19911,
+      "endMs": 20389
+    },
+    {
+      "text": " load",
+      "startMs": 20389,
+      "endMs": 20760
+    },
+    {
+      "text": " test.",
+      "startMs": 20760,
+      "endMs": 21185,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " I",
+      "startMs": 21185,
+      "endMs": 21397
+    },
+    {
+      "text": " used",
+      "startMs": 21397,
+      "endMs": 21768
+    },
+    {
+      "text": " both",
+      "startMs": 21768,
+      "endMs": 22140
+    },
+    {
+      "text": " services",
+      "startMs": 22140,
+      "endMs": 22724,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " as",
+      "startMs": 22724,
+      "endMs": 22989
+    },
+    {
+      "text": " places",
+      "startMs": 22989,
+      "endMs": 23466
+    },
+    {
+      "text": " to",
+      "startMs": 23466,
+      "endMs": 23732
+    },
+    {
+      "text": " deploy",
+      "startMs": 23732,
+      "endMs": 24209,
       "pageBreakAfter": true
     },
     {
       "text": " and",
-      "startMs": 12201,
-      "endMs": 12306
+      "startMs": 24209,
+      "endMs": 24528
+    },
+    {
+      "text": " continue",
+      "startMs": 24528,
+      "endMs": 25111
+    },
+    {
+      "text": " web",
+      "startMs": 25111,
+      "endMs": 25430
+    },
+    {
+      "text": " projects.",
+      "startMs": 25430,
+      "endMs": 26933,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Netlify:",
+      "startMs": 27467,
+      "endMs": 28032
+    },
+    {
+      "text": " warnings",
+      "startMs": 28032,
+      "endMs": 28598
+    },
+    {
+      "text": " about",
+      "startMs": 28598,
+      "endMs": 29010
+    },
+    {
+      "text": " credits",
+      "startMs": 29010,
+      "endMs": 29524,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " and",
+      "startMs": 29524,
+      "endMs": 29832
     },
     {
       "text": " project",
-      "startMs": 12306,
-      "endMs": 12481
+      "startMs": 29832,
+      "endMs": 30347
     },
     {
       "text": " status.",
-      "startMs": 12481,
-      "endMs": 12657
+      "startMs": 30347,
+      "endMs": 30861
     },
     {
       "text": " I",
-      "startMs": 12657,
-      "endMs": 12727,
+      "startMs": 30861,
+      "endMs": 31067,
       "pageBreakAfter": true
     },
     {
       "text": " had",
-      "startMs": 12727,
-      "endMs": 12832
+      "startMs": 31067,
+      "endMs": 31375
     },
     {
       "text": " barely",
-      "startMs": 12832,
-      "endMs": 12990
+      "startMs": 31375,
+      "endMs": 31838
     },
     {
       "text": " logged",
-      "startMs": 12990,
-      "endMs": 13147
+      "startMs": 31838,
+      "endMs": 32301
     },
     {
       "text": " in",
-      "startMs": 13147,
-      "endMs": 13235,
+      "startMs": 32301,
+      "endMs": 32558,
       "pageBreakAfter": true
     },
     {
       "text": " to",
-      "startMs": 13235,
-      "endMs": 13322
+      "startMs": 32558,
+      "endMs": 32815
     },
     {
       "text": " Netlify",
-      "startMs": 13322,
-      "endMs": 13498
+      "startMs": 32815,
+      "endMs": 33330
     },
     {
       "text": " for",
-      "startMs": 13498,
-      "endMs": 13603
+      "startMs": 33330,
+      "endMs": 33638
     },
     {
       "text": " approximately",
-      "startMs": 13603,
-      "endMs": 13883,
+      "startMs": 33638,
+      "endMs": 34461,
       "pageBreakAfter": true
     },
     {
       "text": " six",
-      "startMs": 13883,
-      "endMs": 13988
+      "startMs": 34461,
+      "endMs": 34770
     },
     {
       "text": " months",
-      "startMs": 13988,
-      "endMs": 14146
+      "startMs": 34770,
+      "endMs": 35232
     },
     {
       "text": " after",
-      "startMs": 14146,
-      "endMs": 14286
+      "startMs": 35232,
+      "endMs": 35644
     },
     {
       "text": " I",
-      "startMs": 14286,
-      "endMs": 14356,
+      "startMs": 35644,
+      "endMs": 35850,
       "pageBreakAfter": true
     },
     {
       "text": " stopped",
-      "startMs": 14356,
-      "endMs": 14532
+      "startMs": 35850,
+      "endMs": 36364
     },
     {
       "text": " using",
-      "startMs": 14532,
-      "endMs": 14672
+      "startMs": 36364,
+      "endMs": 36775
     },
     {
       "text": " the",
-      "startMs": 14672,
-      "endMs": 14777
+      "startMs": 36775,
+      "endMs": 37084
     },
     {
       "text": " relevant",
-      "startMs": 14777,
-      "endMs": 14970,
+      "startMs": 37084,
+      "endMs": 37650,
       "pageBreakAfter": true
     },
     {
       "text": " projects.",
-      "startMs": 14970,
-      "endMs": 15180,
+      "startMs": 37650,
+      "endMs": 39133,
       "pageBreakAfter": true
     },
     {
       "text": " Vercel:",
-      "startMs": 15500,
-      "endMs": 15652
+      "startMs": 39667,
+      "endMs": 40202
     },
     {
       "text": " more",
-      "startMs": 15652,
-      "endMs": 15759
+      "startMs": 40202,
+      "endMs": 40576
     },
     {
       "text": " operational",
-      "startMs": 15759,
-      "endMs": 15971
+      "startMs": 40576,
+      "endMs": 41325
     },
     {
       "text": " updates",
-      "startMs": 15971,
-      "endMs": 16123,
+      "startMs": 41325,
+      "endMs": 41860,
       "pageBreakAfter": true
     },
     {
       "text": " in",
-      "startMs": 16123,
-      "endMs": 16200
+      "startMs": 41860,
+      "endMs": 42128
     },
     {
       "text": " my",
-      "startMs": 16200,
-      "endMs": 16276
+      "startMs": 42128,
+      "endMs": 42395
     },
     {
       "text": " inbox.",
-      "startMs": 16276,
-      "endMs": 16412
+      "startMs": 42395,
+      "endMs": 42877
     },
     {
       "text": " I",
-      "startMs": 16412,
-      "endMs": 16473,
+      "startMs": 42877,
+      "endMs": 43091,
       "pageBreakAfter": true
     },
     {
       "text": " have",
-      "startMs": 16473,
-      "endMs": 16580
+      "startMs": 43091,
+      "endMs": 43465
     },
     {
       "text": " continued",
-      "startMs": 16580,
-      "endMs": 16762
+      "startMs": 43465,
+      "endMs": 44108
     },
     {
       "text": " running",
-      "startMs": 16762,
-      "endMs": 16914
+      "startMs": 44108,
+      "endMs": 44643
     },
     {
       "text": " projects",
-      "startMs": 16914,
-      "endMs": 17081,
+      "startMs": 44643,
+      "endMs": 45231,
       "pageBreakAfter": true
     },
     {
       "text": " on",
-      "startMs": 17081,
-      "endMs": 17158
+      "startMs": 45231,
+      "endMs": 45499
     },
     {
       "text": " Vercel",
-      "startMs": 17158,
-      "endMs": 17294
+      "startMs": 45499,
+      "endMs": 45980
     },
     {
       "text": " for",
-      "startMs": 17294,
-      "endMs": 17386
+      "startMs": 45980,
+      "endMs": 46301
     },
     {
       "text": " a",
-      "startMs": 17386,
-      "endMs": 17446,
+      "startMs": 46301,
+      "endMs": 46515,
       "pageBreakAfter": true
     },
     {
       "text": " similar",
-      "startMs": 17446,
-      "endMs": 17599
+      "startMs": 46515,
+      "endMs": 47050
     },
     {
       "text": " period.",
-      "startMs": 17599,
-      "endMs": 17751
+      "startMs": 47050,
+      "endMs": 47585
     },
     {
       "text": " The",
-      "startMs": 17751,
-      "endMs": 17842
+      "startMs": 47585,
+      "endMs": 47906
     },
     {
       "text": " emails",
-      "startMs": 17842,
-      "endMs": 17979,
+      "startMs": 47906,
+      "endMs": 48388,
       "pageBreakAfter": true
     },
     {
       "text": " I",
-      "startMs": 17979,
-      "endMs": 18040
+      "startMs": 48388,
+      "endMs": 48602
     },
     {
       "text": " received",
-      "startMs": 18040,
-      "endMs": 18207
+      "startMs": 48602,
+      "endMs": 49190
     },
     {
       "text": " were",
-      "startMs": 18207,
-      "endMs": 18313
+      "startMs": 49190,
+      "endMs": 49565
     },
     {
-      "text": " mostly",
-      "startMs": 18313,
-      "endMs": 18450,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " operational:",
-      "startMs": 18450,
-      "endMs": 18678
-    },
-    {
-      "text": " deployment",
-      "startMs": 18678,
-      "endMs": 18876
-    },
-    {
-      "text": " status,",
-      "startMs": 18876,
-      "endMs": 19028
-    },
-    {
-      "text": " failed…",
-      "startMs": 19028,
-      "endMs": 19180,
+      "text": " mostly…",
+      "startMs": 49565,
+      "endMs": 50967,
       "pageBreakAfter": true
     },
     {
       "text": " Free",
-      "startMs": 19500,
-      "endMs": 19630
+      "startMs": 51500,
+      "endMs": 51895
     },
     {
       "text": " does",
-      "startMs": 19630,
-      "endMs": 19760
+      "startMs": 51895,
+      "endMs": 52290
     },
     {
       "text": " not",
-      "startMs": 19760,
-      "endMs": 19872
+      "startMs": 52290,
+      "endMs": 52628
     },
     {
       "text": " mean",
-      "startMs": 19872,
-      "endMs": 20002,
+      "startMs": 52628,
+      "endMs": 53023,
       "pageBreakAfter": true
     },
     {
       "text": " unlimited.",
-      "startMs": 20002,
-      "endMs": 20243
+      "startMs": 53023,
+      "endMs": 53756
     },
     {
       "text": " The",
-      "startMs": 20243,
-      "endMs": 20355
+      "startMs": 53756,
+      "endMs": 54094
     },
     {
       "text": " official",
-      "startMs": 20355,
-      "endMs": 20559
+      "startMs": 54094,
+      "endMs": 54715
     },
     {
       "text": " pricing",
-      "startMs": 20559,
-      "endMs": 20745,
+      "startMs": 54715,
+      "endMs": 55279,
       "pageBreakAfter": true
     },
     {
       "text": " pages",
-      "startMs": 20745,
-      "endMs": 20894
+      "startMs": 55279,
+      "endMs": 55730
     },
     {
       "text": " make",
-      "startMs": 20894,
-      "endMs": 21024
+      "startMs": 55730,
+      "endMs": 56125
     },
     {
       "text": " an",
-      "startMs": 21024,
-      "endMs": 21117
+      "startMs": 56125,
+      "endMs": 56406
     },
     {
       "text": " important",
-      "startMs": 21117,
-      "endMs": 21340,
+      "startMs": 56406,
+      "endMs": 57083,
       "pageBreakAfter": true
     },
     {
       "text": " distinction",
-      "startMs": 21340,
-      "endMs": 21600
+      "startMs": 57083,
+      "endMs": 57873
     },
     {
       "text": " that",
-      "startMs": 21600,
-      "endMs": 21730
+      "startMs": 57873,
+      "endMs": 58268
     },
     {
       "text": " is",
-      "startMs": 21730,
-      "endMs": 21823
+      "startMs": 58268,
+      "endMs": 58550
     },
     {
       "text": " easy",
-      "startMs": 21823,
-      "endMs": 21953,
+      "startMs": 58550,
+      "endMs": 58944,
       "pageBreakAfter": true
     },
     {
       "text": " to",
-      "startMs": 21953,
-      "endMs": 22046
+      "startMs": 58944,
+      "endMs": 59226
     },
     {
       "text": " miss",
-      "startMs": 22046,
-      "endMs": 22176
+      "startMs": 59226,
+      "endMs": 59621
     },
     {
       "text": " in",
-      "startMs": 22176,
-      "endMs": 22269
+      "startMs": 59621,
+      "endMs": 59903
     },
     {
       "text": " a",
-      "startMs": 22269,
-      "endMs": 22344,
+      "startMs": 59903,
+      "endMs": 60129,
       "pageBreakAfter": true
     },
     {
       "text": " simple",
-      "startMs": 22344,
-      "endMs": 22511
+      "startMs": 60129,
+      "endMs": 60636
     },
     {
       "text": " “both",
-      "startMs": 22511,
-      "endMs": 22660
+      "startMs": 60636,
+      "endMs": 61087
     },
     {
       "text": " are",
-      "startMs": 22660,
-      "endMs": 22771
+      "startMs": 61087,
+      "endMs": 61426
     },
     {
-      "text": " free”",
-      "startMs": 22771,
-      "endMs": 22920,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " comparison.",
-      "startMs": 22920,
-      "endMs": 23180,
+      "text": " free”…",
+      "startMs": 61426,
+      "endMs": 62800,
       "pageBreakAfter": true
     },
     {
       "text": " Where",
-      "startMs": 23500,
-      "endMs": 23636
+      "startMs": 63333,
+      "endMs": 63659
     },
     {
       "text": " the",
-      "startMs": 23636,
-      "endMs": 23737
+      "startMs": 63659,
+      "endMs": 63903
     },
     {
       "text": " platforms",
-      "startMs": 23737,
-      "endMs": 23941
+      "startMs": 63903,
+      "endMs": 64392
     },
     {
       "text": " overlap.",
-      "startMs": 23941,
-      "endMs": 24127,
+      "startMs": 64392,
+      "endMs": 64839,
       "pageBreakAfter": true
     },
     {
       "text": " The",
-      "startMs": 24127,
-      "endMs": 24229
+      "startMs": 64839,
+      "endMs": 65084
     },
     {
       "text": " two",
-      "startMs": 24229,
-      "endMs": 24331
+      "startMs": 65084,
+      "endMs": 65328
     },
     {
       "text": " services",
-      "startMs": 24331,
-      "endMs": 24518
+      "startMs": 65328,
+      "endMs": 65776
     },
     {
       "text": " are",
-      "startMs": 24518,
-      "endMs": 24619,
+      "startMs": 65776,
+      "endMs": 66020,
       "pageBreakAfter": true
     },
     {
       "text": " not",
-      "startMs": 24619,
-      "endMs": 24721
+      "startMs": 66020,
+      "endMs": 66264
     },
     {
       "text": " opposites.",
-      "startMs": 24721,
-      "endMs": 24941
+      "startMs": 66264,
+      "endMs": 66793
     },
     {
       "text": " Both",
-      "startMs": 24941,
-      "endMs": 25060
+      "startMs": 66793,
+      "endMs": 67078
     },
     {
       "text": " can",
-      "startMs": 25060,
-      "endMs": 25162,
+      "startMs": 67078,
+      "endMs": 67323,
       "pageBreakAfter": true
     },
     {
       "text": " provide",
-      "startMs": 25162,
-      "endMs": 25332
+      "startMs": 67323,
+      "endMs": 67730
     },
     {
       "text": " a",
-      "startMs": 25332,
-      "endMs": 25399
+      "startMs": 67730,
+      "endMs": 67892
     },
     {
       "text": " modern",
-      "startMs": 25399,
-      "endMs": 25552
+      "startMs": 67892,
+      "endMs": 68259
     },
     {
       "text": " Git-based",
-      "startMs": 25552,
-      "endMs": 25755,
+      "startMs": 68259,
+      "endMs": 68747,
       "pageBreakAfter": true
     },
     {
       "text": " deployment",
-      "startMs": 25755,
-      "endMs": 25976
+      "startMs": 68747,
+      "endMs": 69276
     },
     {
       "text": " workflow,",
-      "startMs": 25976,
-      "endMs": 26179
+      "startMs": 69276,
+      "endMs": 69765
     },
     {
       "text": " managed",
-      "startMs": 26179,
-      "endMs": 26349
+      "startMs": 69765,
+      "endMs": 70172
     },
     {
       "text": " HTTPS,",
-      "startMs": 26349,
-      "endMs": 26502,
+      "startMs": 70172,
+      "endMs": 70538,
       "pageBreakAfter": true
     },
     {
       "text": " preview",
-      "startMs": 26502,
-      "endMs": 26671
+      "startMs": 70538,
+      "endMs": 70945
     },
     {
       "text": " environments,",
-      "startMs": 26671,
-      "endMs": 26943
+      "startMs": 70945,
+      "endMs": 71597
     },
     {
       "text": " templates,…",
-      "startMs": 26943,
-      "endMs": 27180,
+      "startMs": 71597,
+      "endMs": 73033,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Vercel’s",
+      "startMs": 73567,
+      "endMs": 74013
+    },
+    {
+      "text": " emphasis.",
+      "startMs": 74013,
+      "endMs": 74500
+    },
+    {
+      "text": " Vercel",
+      "startMs": 74500,
+      "endMs": 74865
+    },
+    {
+      "text": " is",
+      "startMs": 74865,
+      "endMs": 75068,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " closely",
+      "startMs": 75068,
+      "endMs": 75474
+    },
+    {
+      "text": " associated",
+      "startMs": 75474,
+      "endMs": 76001
+    },
+    {
+      "text": " with",
+      "startMs": 76001,
+      "endMs": 76286
+    },
+    {
+      "text": " Next.js",
+      "startMs": 76286,
+      "endMs": 76691,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " and",
+      "startMs": 76691,
+      "endMs": 76935
+    },
+    {
+      "text": " documents",
+      "startMs": 76935,
+      "endMs": 77422
+    },
+    {
+      "text": " support",
+      "startMs": 77422,
+      "endMs": 77828
+    },
+    {
+      "text": " for",
+      "startMs": 77828,
+      "endMs": 78071,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " multiple",
+      "startMs": 78071,
+      "endMs": 78517
+    },
+    {
+      "text": " frontend",
+      "startMs": 78517,
+      "endMs": 78964
+    },
+    {
+      "text": " and",
+      "startMs": 78964,
+      "endMs": 79207
+    },
+    {
+      "text": " backend",
+      "startMs": 79207,
+      "endMs": 79613,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " runtimes.",
+      "startMs": 79613,
+      "endMs": 80967,
       "pageBreakAfter": true
     },
     {
       "text": " Read",
-      "startMs": 27500,
-      "endMs": 27785
+      "startMs": 81500,
+      "endMs": 81870
     },
     {
       "text": " the",
-      "startMs": 27785,
-      "endMs": 28030
+      "startMs": 81870,
+      "endMs": 82187
     },
     {
       "text": " full",
-      "startMs": 28030,
-      "endMs": 28315
+      "startMs": 82187,
+      "endMs": 82557
     },
     {
       "text": " article.",
-      "startMs": 28315,
-      "endMs": 28764,
+      "startMs": 82557,
+      "endMs": 83138,
       "pageBreakAfter": true
     },
     {
       "text": " New",
-      "startMs": 28764,
-      "endMs": 29008
+      "startMs": 83138,
+      "endMs": 83455
     },
     {
       "text": " posts",
-      "startMs": 29008,
-      "endMs": 29334
+      "startMs": 83455,
+      "endMs": 83878
     },
     {
       "text": " every",
-      "startMs": 29334,
-      "endMs": 29660
+      "startMs": 83878,
+      "endMs": 84301
     },
     {
       "text": " week",
-      "startMs": 29660,
-      "endMs": 29946,
+      "startMs": 84301,
+      "endMs": 84671,
       "pageBreakAfter": true
     },
     {
       "text": " on",
-      "startMs": 29946,
-      "endMs": 30149
+      "startMs": 84671,
+      "endMs": 84935
     },
     {
       "text": " the",
-      "startMs": 30149,
-      "endMs": 30394
+      "startMs": 84935,
+      "endMs": 85252
     },
     {
       "text": " blog.",
-      "startMs": 30394,
-      "endMs": 30720,
+      "startMs": 85252,
+      "endMs": 86467,
       "pageBreakAfter": true
     }
   ],

@@ -35,11 +35,19 @@ export const reelPropsSchema = z.object({
 export type ReelCaption = z.infer<typeof captionSchema>;
 export type ReelTheme = z.infer<typeof themeSchema>;
 
+/** An article image staged in reels/public by scripts/lib/post-media.mjs. */
+export type ReelImage = {
+  src: string;
+  width: number;
+  height: number;
+};
+
 export type TitleScene = {
   type: "title";
   kicker: string;
   title: string;
   subtitle: string;
+  image?: ReelImage;
   durationInFrames: number;
 };
 
@@ -48,6 +56,7 @@ export type PointScene = {
   kicker: string;
   heading: string;
   body: string;
+  image?: ReelImage;
   durationInFrames: number;
 };
 
@@ -56,6 +65,8 @@ export type CodeSceneData = {
   kicker: string;
   heading: string;
   steps: HighlightedCode[];
+  /** Per-step frames (sums to durationInFrames); older props split evenly. */
+  stepDurations?: number[];
   durationInFrames: number;
 };
 

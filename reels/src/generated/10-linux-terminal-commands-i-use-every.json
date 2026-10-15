@@ -16,7 +16,12 @@
       "kicker": "Linux & Terminal",
       "title": "10 Linux terminal commands I use every single day",
       "subtitle": "I’ve been using Linux as my daily driver for over five years. In that time, I’ve…",
-      "durationInFrames": 105
+      "image": {
+        "src": "post-media/10-linux-terminal-commands-i-use-every/01-linux-server.webp",
+        "width": 960,
+        "height": 480
+      },
+      "durationInFrames": 183
     },
     {
       "type": "code",
@@ -63,7 +68,10 @@
           }
         }
       ],
-      "durationInFrames": 95
+      "stepDurations": [
+        141
+      ],
+      "durationInFrames": 141
     },
     {
       "type": "code",
@@ -105,7 +113,10 @@
           }
         }
       ],
-      "durationInFrames": 95
+      "stepDurations": [
+        135
+      ],
+      "durationInFrames": 135
     },
     {
       "type": "code",
@@ -132,7 +143,10 @@
           }
         }
       ],
-      "durationInFrames": 95
+      "stepDurations": [
+        135
+      ],
+      "durationInFrames": 135
     },
     {
       "type": "code",
@@ -159,588 +173,591 @@
           }
         }
       ],
-      "durationInFrames": 95
+      "stepDurations": [
+        135
+      ],
+      "durationInFrames": 135
     },
     {
       "type": "point",
       "kicker": "Linux & Terminal",
       "heading": "htop / btop — actually readable process viewer",
       "body": "Plain top works, but btop is a visual upgrade that shows CPU, memory, and network in a clean TUI. Worth the install.",
-      "durationInFrames": 120
+      "durationInFrames": 330
     },
     {
       "type": "outro",
       "heading": "Read the full article",
       "body": "New posts every week on the blog.",
       "url": "techtips.fun",
-      "durationInFrames": 105
+      "durationInFrames": 165
     }
   ],
   "theme": "github-dark",
-  "durationInFrames": 710,
+  "durationInFrames": 1224,
   "captions": [
     {
       "text": " I’ve",
-      "startMs": 0,
-      "endMs": 199
+      "startMs": 500,
+      "endMs": 791
     },
     {
       "text": " been",
-      "startMs": 199,
-      "endMs": 399
+      "startMs": 791,
+      "endMs": 1082
     },
     {
       "text": " using",
-      "startMs": 399,
-      "endMs": 627
+      "startMs": 1082,
+      "endMs": 1415
     },
     {
       "text": " Linux",
-      "startMs": 627,
-      "endMs": 855,
+      "startMs": 1415,
+      "endMs": 1748,
       "pageBreakAfter": true
     },
     {
       "text": " as",
-      "startMs": 855,
-      "endMs": 997
+      "startMs": 1748,
+      "endMs": 1956
     },
     {
       "text": " my",
-      "startMs": 997,
-      "endMs": 1140
+      "startMs": 1956,
+      "endMs": 2164
     },
     {
       "text": " daily",
-      "startMs": 1140,
-      "endMs": 1368
+      "startMs": 2164,
+      "endMs": 2496
     },
     {
       "text": " driver",
-      "startMs": 1368,
-      "endMs": 1624,
+      "startMs": 2496,
+      "endMs": 2871,
       "pageBreakAfter": true
     },
     {
       "text": " for",
-      "startMs": 1624,
-      "endMs": 1795
+      "startMs": 2871,
+      "endMs": 3120
     },
     {
       "text": " over",
-      "startMs": 1795,
-      "endMs": 1995
+      "startMs": 3120,
+      "endMs": 3412
     },
     {
       "text": " five",
-      "startMs": 1995,
-      "endMs": 2194
+      "startMs": 3412,
+      "endMs": 3703
     },
     {
       "text": " years.",
-      "startMs": 2194,
-      "endMs": 2451,
+      "startMs": 3703,
+      "endMs": 4077,
       "pageBreakAfter": true
     },
     {
       "text": " In",
-      "startMs": 2451,
-      "endMs": 2593
+      "startMs": 4077,
+      "endMs": 4285
     },
     {
       "text": " that",
-      "startMs": 2593,
-      "endMs": 2793
+      "startMs": 4285,
+      "endMs": 4576
     },
     {
       "text": " time,",
-      "startMs": 2793,
-      "endMs": 3021
+      "startMs": 4576,
+      "endMs": 4909
     },
     {
       "text": " I’ve",
-      "startMs": 3021,
-      "endMs": 3220,
+      "startMs": 4909,
+      "endMs": 6067,
       "pageBreakAfter": true
     },
     {
       "text": " tldr",
-      "startMs": 3500,
-      "endMs": 3761
+      "startMs": 6600,
+      "endMs": 6914
     },
     {
       "text": " —",
-      "startMs": 3761,
-      "endMs": 3911
+      "startMs": 6914,
+      "endMs": 7093
     },
     {
       "text": " man",
-      "startMs": 3911,
-      "endMs": 4135
+      "startMs": 7093,
+      "endMs": 7362
     },
     {
       "text": " pages",
-      "startMs": 4135,
-      "endMs": 4434,
+      "startMs": 7362,
+      "endMs": 7720,
       "pageBreakAfter": true
     },
     {
       "text": " for",
-      "startMs": 4434,
-      "endMs": 4658
+      "startMs": 7720,
+      "endMs": 7989
     },
     {
       "text": " humans.",
-      "startMs": 4658,
-      "endMs": 5031
+      "startMs": 7989,
+      "endMs": 8437
     },
     {
       "text": " Let",
-      "startMs": 5031,
-      "endMs": 5255
+      "startMs": 8437,
+      "endMs": 8706
     },
     {
       "text": " us",
-      "startMs": 5255,
-      "endMs": 5442,
+      "startMs": 8706,
+      "endMs": 8930,
       "pageBreakAfter": true
     },
     {
       "text": " look",
-      "startMs": 5442,
-      "endMs": 5704
+      "startMs": 8930,
+      "endMs": 9244
     },
     {
       "text": " at",
-      "startMs": 5704,
-      "endMs": 5890
+      "startMs": 9244,
+      "endMs": 9468
     },
     {
       "text": " the",
-      "startMs": 5890,
-      "endMs": 6115
+      "startMs": 9468,
+      "endMs": 9737
     },
     {
       "text": " code.",
-      "startMs": 6115,
-      "endMs": 6413,
+      "startMs": 9737,
+      "endMs": 10767,
       "pageBreakAfter": true
     },
     {
       "text": " fzf",
-      "startMs": 6667,
-      "endMs": 6851
+      "startMs": 11300,
+      "endMs": 11510
     },
     {
       "text": " —",
-      "startMs": 6851,
-      "endMs": 6973
+      "startMs": 11510,
+      "endMs": 11650
     },
     {
       "text": " fuzzy",
-      "startMs": 6973,
-      "endMs": 7219
+      "startMs": 11650,
+      "endMs": 11930
     },
     {
       "text": " finder",
-      "startMs": 7219,
-      "endMs": 7495,
+      "startMs": 11930,
+      "endMs": 12245,
       "pageBreakAfter": true
     },
     {
       "text": " that",
-      "startMs": 7495,
-      "endMs": 7709
+      "startMs": 12245,
+      "endMs": 12490
     },
     {
       "text": " changes",
-      "startMs": 7709,
-      "endMs": 8016
+      "startMs": 12490,
+      "endMs": 12840
     },
     {
       "text": " everything.",
-      "startMs": 8016,
-      "endMs": 8445
+      "startMs": 12840,
+      "endMs": 13330
     },
     {
       "text": " Let",
-      "startMs": 8445,
-      "endMs": 8629,
+      "startMs": 13330,
+      "endMs": 13540,
       "pageBreakAfter": true
     },
     {
       "text": " us",
-      "startMs": 8629,
-      "endMs": 8783
+      "startMs": 13540,
+      "endMs": 13715
     },
     {
       "text": " look",
-      "startMs": 8783,
-      "endMs": 8997
+      "startMs": 13715,
+      "endMs": 13960
     },
     {
       "text": " at",
-      "startMs": 8997,
-      "endMs": 9151
+      "startMs": 13960,
+      "endMs": 14135
     },
     {
       "text": " the",
-      "startMs": 9151,
-      "endMs": 9335,
+      "startMs": 14135,
+      "endMs": 14345,
       "pageBreakAfter": true
     },
     {
       "text": " code.",
-      "startMs": 9335,
-      "endMs": 9580,
+      "startMs": 14345,
+      "endMs": 15267,
       "pageBreakAfter": true
     },
     {
       "text": " rg",
-      "startMs": 9833,
-      "endMs": 9993
+      "startMs": 15800,
+      "endMs": 15983
     },
     {
       "text": " (ripgrep)",
-      "startMs": 9993,
-      "endMs": 10378
+      "startMs": 15983,
+      "endMs": 16421
     },
     {
       "text": " —",
-      "startMs": 10378,
-      "endMs": 10506
+      "startMs": 16421,
+      "endMs": 16567
     },
     {
       "text": " search",
-      "startMs": 10506,
-      "endMs": 10794,
+      "startMs": 16567,
+      "endMs": 16896,
       "pageBreakAfter": true
     },
     {
       "text": " faster",
-      "startMs": 10794,
-      "endMs": 11082
+      "startMs": 16896,
+      "endMs": 17225
     },
     {
       "text": " than",
-      "startMs": 11082,
-      "endMs": 11306
+      "startMs": 17225,
+      "endMs": 17481
     },
     {
       "text": " grep.",
-      "startMs": 11306,
-      "endMs": 11562
+      "startMs": 17481,
+      "endMs": 17773
     },
     {
       "text": " Let",
-      "startMs": 11562,
-      "endMs": 11754,
+      "startMs": 17773,
+      "endMs": 17992,
       "pageBreakAfter": true
     },
     {
       "text": " us",
-      "startMs": 11754,
-      "endMs": 11914
+      "startMs": 17992,
+      "endMs": 18175
     },
     {
       "text": " look",
-      "startMs": 11914,
-      "endMs": 12138
+      "startMs": 18175,
+      "endMs": 18431
     },
     {
       "text": " at",
-      "startMs": 12138,
-      "endMs": 12298
+      "startMs": 18431,
+      "endMs": 18613
     },
     {
       "text": " the",
-      "startMs": 12298,
-      "endMs": 12491,
+      "startMs": 18613,
+      "endMs": 18833,
       "pageBreakAfter": true
     },
     {
       "text": " code.",
-      "startMs": 12491,
-      "endMs": 12747,
+      "startMs": 18833,
+      "endMs": 19767,
       "pageBreakAfter": true
     },
     {
       "text": " watch",
-      "startMs": 13000,
-      "endMs": 13262
+      "startMs": 20300,
+      "endMs": 20599
     },
     {
       "text": " —",
-      "startMs": 13262,
-      "endMs": 13393
+      "startMs": 20599,
+      "endMs": 20748
     },
     {
       "text": " repeat",
-      "startMs": 13393,
-      "endMs": 13687
+      "startMs": 20748,
+      "endMs": 21085
     },
     {
       "text": " a",
-      "startMs": 13687,
-      "endMs": 13818,
+      "startMs": 21085,
+      "endMs": 21234,
       "pageBreakAfter": true
     },
     {
       "text": " command",
-      "startMs": 13818,
-      "endMs": 14146
+      "startMs": 21234,
+      "endMs": 21608
     },
     {
       "text": " automatically.",
-      "startMs": 14146,
-      "endMs": 14702
+      "startMs": 21608,
+      "endMs": 22243
     },
     {
       "text": " Let",
-      "startMs": 14702,
-      "endMs": 14899
+      "startMs": 22243,
+      "endMs": 22467
     },
     {
       "text": " us",
-      "startMs": 14899,
-      "endMs": 15062,
+      "startMs": 22467,
+      "endMs": 22654,
       "pageBreakAfter": true
     },
     {
       "text": " look",
-      "startMs": 15062,
-      "endMs": 15291
+      "startMs": 22654,
+      "endMs": 22915
     },
     {
       "text": " at",
-      "startMs": 15291,
-      "endMs": 15455
+      "startMs": 22915,
+      "endMs": 23102
     },
     {
       "text": " the",
-      "startMs": 15455,
-      "endMs": 15651
+      "startMs": 23102,
+      "endMs": 23326
     },
     {
       "text": " code.",
-      "startMs": 15651,
-      "endMs": 15913,
+      "startMs": 23326,
+      "endMs": 24267,
       "pageBreakAfter": true
     },
     {
       "text": " htop",
-      "startMs": 16167,
-      "endMs": 16281
+      "startMs": 24800,
+      "endMs": 25099
     },
     {
       "text": " /",
-      "startMs": 16281,
-      "endMs": 16347
+      "startMs": 25099,
+      "endMs": 25269
     },
     {
       "text": " btop",
-      "startMs": 16347,
-      "endMs": 16461
+      "startMs": 25269,
+      "endMs": 25568
     },
     {
       "text": " —",
-      "startMs": 16461,
-      "endMs": 16526,
+      "startMs": 25568,
+      "endMs": 25739,
       "pageBreakAfter": true
     },
     {
       "text": " actually",
-      "startMs": 16526,
-      "endMs": 16706
+      "startMs": 25739,
+      "endMs": 26208
     },
     {
       "text": " readable",
-      "startMs": 16706,
-      "endMs": 16886
+      "startMs": 26208,
+      "endMs": 26677
     },
     {
       "text": " process",
-      "startMs": 16886,
-      "endMs": 17050
+      "startMs": 26677,
+      "endMs": 27104
     },
     {
       "text": " viewer.",
-      "startMs": 17050,
-      "endMs": 17213,
+      "startMs": 27104,
+      "endMs": 27531,
       "pageBreakAfter": true
     },
     {
       "text": " Plain",
-      "startMs": 17213,
-      "endMs": 17344
+      "startMs": 27531,
+      "endMs": 27872
     },
     {
       "text": " top",
-      "startMs": 17344,
-      "endMs": 17442
+      "startMs": 27872,
+      "endMs": 28128
     },
     {
       "text": " works,",
-      "startMs": 17442,
-      "endMs": 17590
+      "startMs": 28128,
+      "endMs": 28512
     },
     {
       "text": " but",
-      "startMs": 17590,
-      "endMs": 17688,
+      "startMs": 28512,
+      "endMs": 28768,
       "pageBreakAfter": true
     },
     {
       "text": " btop",
-      "startMs": 17688,
-      "endMs": 17802
+      "startMs": 28768,
+      "endMs": 29067
     },
     {
       "text": " is",
-      "startMs": 17802,
-      "endMs": 17884
+      "startMs": 29067,
+      "endMs": 29280
     },
     {
       "text": " a",
-      "startMs": 17884,
-      "endMs": 17949
+      "startMs": 29280,
+      "endMs": 29451
     },
     {
       "text": " visual",
-      "startMs": 17949,
-      "endMs": 18097,
+      "startMs": 29451,
+      "endMs": 29835,
       "pageBreakAfter": true
     },
     {
       "text": " upgrade",
-      "startMs": 18097,
-      "endMs": 18260
+      "startMs": 29835,
+      "endMs": 30261
     },
     {
       "text": " that",
-      "startMs": 18260,
-      "endMs": 18375
+      "startMs": 30261,
+      "endMs": 30560
     },
     {
       "text": " shows",
-      "startMs": 18375,
-      "endMs": 18506
+      "startMs": 30560,
+      "endMs": 30901
     },
     {
       "text": " CPU,",
-      "startMs": 18506,
-      "endMs": 18620,
+      "startMs": 30901,
+      "endMs": 31200,
       "pageBreakAfter": true
     },
     {
       "text": " memory,",
-      "startMs": 18620,
-      "endMs": 18784
+      "startMs": 31200,
+      "endMs": 31627
     },
     {
       "text": " and",
-      "startMs": 18784,
-      "endMs": 18882
+      "startMs": 31627,
+      "endMs": 31883
     },
     {
       "text": " network",
-      "startMs": 18882,
-      "endMs": 19045
+      "startMs": 31883,
+      "endMs": 32309
     },
     {
       "text": " in",
-      "startMs": 19045,
-      "endMs": 19127,
+      "startMs": 32309,
+      "endMs": 32523,
       "pageBreakAfter": true
     },
     {
       "text": " a",
-      "startMs": 19127,
-      "endMs": 19192
+      "startMs": 32523,
+      "endMs": 32693
     },
     {
       "text": " clean",
-      "startMs": 19192,
-      "endMs": 19323
+      "startMs": 32693,
+      "endMs": 33035
     },
     {
       "text": " TUI.",
-      "startMs": 19323,
-      "endMs": 19438
+      "startMs": 33035,
+      "endMs": 33333
     },
     {
       "text": " Worth",
-      "startMs": 19438,
-      "endMs": 19569,
+      "startMs": 33333,
+      "endMs": 33675,
       "pageBreakAfter": true
     },
     {
       "text": " the",
-      "startMs": 19569,
-      "endMs": 19667
+      "startMs": 33675,
+      "endMs": 33931
     },
     {
       "text": " install.",
-      "startMs": 19667,
-      "endMs": 19847,
+      "startMs": 33931,
+      "endMs": 35267,
       "pageBreakAfter": true
     },
     {
       "text": " Read",
-      "startMs": 20167,
-      "endMs": 20452
+      "startMs": 35800,
+      "endMs": 36170
     },
     {
       "text": " the",
-      "startMs": 20452,
-      "endMs": 20697
+      "startMs": 36170,
+      "endMs": 36487
     },
     {
       "text": " full",
-      "startMs": 20697,
-      "endMs": 20982
+      "startMs": 36487,
+      "endMs": 36857
     },
     {
       "text": " article.",
-      "startMs": 20982,
-      "endMs": 21430,
+      "startMs": 36857,
+      "endMs": 37438,
       "pageBreakAfter": true
     },
     {
       "text": " New",
-      "startMs": 21430,
-      "endMs": 21675
+      "startMs": 37438,
+      "endMs": 37755
     },
     {
       "text": " posts",
-      "startMs": 21675,
-      "endMs": 22001
+      "startMs": 37755,
+      "endMs": 38178
     },
     {
       "text": " every",
-      "startMs": 22001,
-      "endMs": 22327
+      "startMs": 38178,
+      "endMs": 38601
     },
     {
       "text": " week",
-      "startMs": 22327,
-      "endMs": 22612,
+      "startMs": 38601,
+      "endMs": 38971,
       "pageBreakAfter": true
     },
     {
       "text": " on",
-      "startMs": 22612,
-      "endMs": 22816
+      "startMs": 38971,
+      "endMs": 39235
     },
     {
       "text": " the",
-      "startMs": 22816,
-      "endMs": 23061
+      "startMs": 39235,
+      "endMs": 39552
     },
     {
       "text": " blog.",
-      "startMs": 23061,
-      "endMs": 23387,
+      "startMs": 39552,
+      "endMs": 40767,
       "pageBreakAfter": true
     }
   ],

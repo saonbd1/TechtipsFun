@@ -7,17 +7,15 @@ import Header from '../components/Header.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 import { getCollection } from 'astro:content';
 import { toTaxonomySlug } from '../utils/taxonomy';
+import popularPostIds from '../data/popular.json';
 
 const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 const [featuredPost, ...remainingPosts] = posts;
 const recentPosts = remainingPosts.slice(0, 4);
-const popularPostIds = [
-	'best-ai-tools-for-researchers-students',
-	'css-grid-vs-flexbox-when-to-actually',
-	'simple-tips-to-solve-your-pc-startup-and-shutdown-problems',
-];
+// "Most popular posts" is a hand-picked list (not analytics-driven). To change
+// which posts appear or their order, edit src/data/popular.json — first = shown first.
 const popularPosts = popularPostIds
 	.map((id) => posts.find((post) => post.id === id))
 	.filter((post): post is (typeof posts)[number] => Boolean(post));

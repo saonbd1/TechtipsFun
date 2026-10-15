@@ -10,1124 +10,1011 @@
     "Networking"
   ],
   "url": "https://www.techtips.fun/blog/windows-11-wifi-keeps-disconnecting/",
-  "theme": "github-dark",
-  "durationInFrames": 930,
   "scenes": [
     {
       "type": "title",
       "kicker": "PC Troubleshooting",
       "title": "Why Windows 11 Keeps Disconnecting Wi-Fi, and How to Fix It",
       "subtitle": "Windows 11 Wi-Fi keeps disconnecting every few minutes? Try these 9 fixes, from a driver…",
-      "durationInFrames": 105
+      "image": {
+        "src": "post-media/windows-11-wifi-keeps-disconnecting/01-windows11-wifi-fix-diagram.webp",
+        "width": 1376,
+        "height": 768
+      },
+      "durationInFrames": 183
     },
     {
       "type": "point",
       "kicker": "PC Troubleshooting",
       "heading": "Before You Start",
       "body": "Save your open work. Save the name and the password of your Wi-Fi network. Connect a phone to the same network.",
-      "durationInFrames": 120
+      "durationInFrames": 319
     },
     {
       "type": "point",
       "kicker": "PC Troubleshooting",
       "heading": "Fix 1: Run the Network Troubleshooter",
-      "body": "Windows 11 has a troubleshooter that repairs common network errors. The Get Help app contains a second troubleshooter. Open Settings.",
-      "durationInFrames": 120
+      "body": "Windows 11 has a troubleshooter that repairs common network errors. The Get Help app contains a second…",
+      "image": {
+        "src": "post-media/windows-11-wifi-keeps-disconnecting/02-other-troubleshoot-windows-11.webp",
+        "width": 1347,
+        "height": 756
+      },
+      "durationInFrames": 343
     },
     {
       "type": "point",
       "kicker": "PC Troubleshooting",
       "heading": "Fix 2: Restart the Router and the Computer",
-      "body": "A router that runs for weeks can stop a stable connection. A restart clears its memory. Disconnect the power from the router. Wait 30 seconds.",
-      "durationInFrames": 120
+      "body": "A router that runs for weeks can stop a stable connection. A restart clears its memory.",
+      "image": {
+        "src": "post-media/windows-11-wifi-keeps-disconnecting/03-router-restart-screen.webp",
+        "width": 1239,
+        "height": 600
+      },
+      "durationInFrames": 355
     },
     {
       "type": "point",
       "kicker": "PC Troubleshooting",
       "heading": "Fix 3: Forget the Network and Connect Again",
-      "body": "Windows stores the password and the security type of every network. A wrong stored password stops the connection.",
-      "durationInFrames": 120
+      "body": "Windows stores the password and the security type of every network. A wrong stored password stops the…",
+      "image": {
+        "src": "post-media/windows-11-wifi-keeps-disconnecting/04-wifi-network-forget.webp",
+        "width": 1318,
+        "height": 554
+      },
+      "durationInFrames": 366
     },
     {
       "type": "point",
       "kicker": "PC Troubleshooting",
       "heading": "Fix 4: Stop the Adapter Power Saving",
-      "body": "Windows turns off the wireless adapter to save power. This turn off breaks the connection after a few minutes. This fault causes most of the drops.",
-      "durationInFrames": 120
+      "body": "Windows turns off the wireless adapter to save power. This turn off breaks the connection after a few…",
+      "image": {
+        "src": "post-media/windows-11-wifi-keeps-disconnecting/05-wifi-power-management.webp",
+        "width": 995,
+        "height": 502
+      },
+      "durationInFrames": 366
     },
     {
       "type": "point",
       "kicker": "PC Troubleshooting",
       "heading": "Fix 5: Set One Wireless Band",
-      "body": "Some routers use the same name for the 2.4 GHz band and the 5 GHz band. An adapter with automatic band selection can then lose the connection.",
-      "durationInFrames": 120
+      "body": "Some routers use the same name for the 2.4 GHz band and the 5 GHz band. An adapter with automatic band…",
+      "image": {
+        "src": "post-media/windows-11-wifi-keeps-disconnecting/06-wireless-network-band.webp",
+        "width": 1206,
+        "height": 470
+      },
+      "durationInFrames": 366
     },
     {
       "type": "outro",
       "heading": "Read the full article",
       "body": "New posts every week on the blog.",
       "url": "techtips.fun",
-      "durationInFrames": 105
+      "durationInFrames": 165
     }
   ],
+  "theme": "github-dark",
+  "durationInFrames": 2463,
   "captions": [
     {
       "text": " Windows",
-      "startMs": 0,
-      "endMs": 271
+      "startMs": 500,
+      "endMs": 895
     },
     {
       "text": " 11",
-      "startMs": 271,
-      "endMs": 406
+      "startMs": 895,
+      "endMs": 1092
     },
     {
       "text": " Wi-Fi",
-      "startMs": 406,
-      "endMs": 622
+      "startMs": 1092,
+      "endMs": 1408
     },
     {
       "text": " keeps",
-      "startMs": 622,
-      "endMs": 839,
+      "startMs": 1408,
+      "endMs": 1724,
       "pageBreakAfter": true
     },
     {
       "text": " disconnecting",
-      "startMs": 839,
-      "endMs": 1272
+      "startMs": 1724,
+      "endMs": 2356
     },
     {
       "text": " every",
-      "startMs": 1272,
-      "endMs": 1488
+      "startMs": 2356,
+      "endMs": 2672
     },
     {
       "text": " few",
-      "startMs": 1488,
-      "endMs": 1651
+      "startMs": 2672,
+      "endMs": 2909
     },
     {
       "text": " minutes?",
-      "startMs": 1651,
-      "endMs": 1948,
+      "startMs": 2909,
+      "endMs": 3344,
       "pageBreakAfter": true
     },
     {
       "text": " Try",
-      "startMs": 1948,
-      "endMs": 2111
+      "startMs": 3344,
+      "endMs": 3581
     },
     {
       "text": " these",
-      "startMs": 2111,
-      "endMs": 2327
+      "startMs": 3581,
+      "endMs": 3897
     },
     {
       "text": " 9",
-      "startMs": 2327,
-      "endMs": 2435
+      "startMs": 3897,
+      "endMs": 4055
     },
     {
       "text": " fixes,",
-      "startMs": 2435,
-      "endMs": 2679,
+      "startMs": 4055,
+      "endMs": 4410,
       "pageBreakAfter": true
     },
     {
       "text": " from",
-      "startMs": 2679,
-      "endMs": 2868
+      "startMs": 4410,
+      "endMs": 4687
     },
     {
       "text": " a",
-      "startMs": 2868,
-      "endMs": 2976
+      "startMs": 4687,
+      "endMs": 4845
     },
     {
       "text": " driver",
-      "startMs": 2976,
-      "endMs": 3220,
+      "startMs": 4845,
+      "endMs": 6067,
       "pageBreakAfter": true
     },
     {
       "text": " Before",
-      "startMs": 3500,
-      "endMs": 3686
+      "startMs": 6600,
+      "endMs": 7067
     },
     {
       "text": " You",
-      "startMs": 3686,
-      "endMs": 3810
+      "startMs": 7067,
+      "endMs": 7378
     },
     {
       "text": " Start.",
-      "startMs": 3810,
-      "endMs": 3996
+      "startMs": 7378,
+      "endMs": 7845
     },
     {
       "text": " Save",
-      "startMs": 3996,
-      "endMs": 4141,
+      "startMs": 7845,
+      "endMs": 8208,
       "pageBreakAfter": true
     },
     {
       "text": " your",
-      "startMs": 4141,
-      "endMs": 4286
+      "startMs": 8208,
+      "endMs": 8571
     },
     {
       "text": " open",
-      "startMs": 4286,
-      "endMs": 4430
+      "startMs": 8571,
+      "endMs": 8934
     },
     {
       "text": " work.",
-      "startMs": 4430,
-      "endMs": 4596
+      "startMs": 8934,
+      "endMs": 9349
     },
     {
       "text": " Save",
-      "startMs": 4596,
-      "endMs": 4740,
+      "startMs": 9349,
+      "endMs": 9712,
       "pageBreakAfter": true
     },
     {
       "text": " the",
-      "startMs": 4740,
-      "endMs": 4864
+      "startMs": 9712,
+      "endMs": 10024
     },
     {
       "text": " name",
-      "startMs": 4864,
-      "endMs": 5009
+      "startMs": 10024,
+      "endMs": 10387
     },
     {
       "text": " and",
-      "startMs": 5009,
-      "endMs": 5133
+      "startMs": 10387,
+      "endMs": 10698
     },
     {
       "text": " the",
-      "startMs": 5133,
-      "endMs": 5257,
+      "startMs": 10698,
+      "endMs": 11009,
       "pageBreakAfter": true
     },
     {
       "text": " password",
-      "startMs": 5257,
-      "endMs": 5485
+      "startMs": 11009,
+      "endMs": 11580
     },
     {
       "text": " of",
-      "startMs": 5485,
-      "endMs": 5588
+      "startMs": 11580,
+      "endMs": 11839
     },
     {
       "text": " your",
-      "startMs": 5588,
-      "endMs": 5733
+      "startMs": 11839,
+      "endMs": 12202
     },
     {
       "text": " Wi-Fi",
-      "startMs": 5733,
-      "endMs": 5898,
+      "startMs": 12202,
+      "endMs": 12617,
       "pageBreakAfter": true
     },
     {
       "text": " network.",
-      "startMs": 5898,
-      "endMs": 6126
+      "startMs": 12617,
+      "endMs": 13188
     },
     {
       "text": " Connect",
-      "startMs": 6126,
-      "endMs": 6332
+      "startMs": 13188,
+      "endMs": 13707
     },
     {
       "text": " a",
-      "startMs": 6332,
-      "endMs": 6415
+      "startMs": 13707,
+      "endMs": 13914
     },
     {
       "text": " phone",
-      "startMs": 6415,
-      "endMs": 6580,
+      "startMs": 13914,
+      "endMs": 14329,
       "pageBreakAfter": true
     },
     {
       "text": " to",
-      "startMs": 6580,
-      "endMs": 6684
+      "startMs": 14329,
+      "endMs": 14588
     },
     {
       "text": " the",
-      "startMs": 6684,
-      "endMs": 6808
+      "startMs": 14588,
+      "endMs": 14900
     },
     {
       "text": " same",
-      "startMs": 6808,
-      "endMs": 6953
+      "startMs": 14900,
+      "endMs": 15263
     },
     {
       "text": " network.",
-      "startMs": 6953,
-      "endMs": 7180,
+      "startMs": 15263,
+      "endMs": 16700,
       "pageBreakAfter": true
     },
     {
       "text": " Fix",
-      "startMs": 7500,
-      "endMs": 7598
+      "startMs": 17233,
+      "endMs": 17552
     },
     {
       "text": " 1:",
-      "startMs": 7598,
-      "endMs": 7680
+      "startMs": 17552,
+      "endMs": 17817
     },
     {
       "text": " Run",
-      "startMs": 7680,
-      "endMs": 7778
+      "startMs": 17817,
+      "endMs": 18136
     },
     {
       "text": " the",
-      "startMs": 7778,
-      "endMs": 7876,
+      "startMs": 18136,
+      "endMs": 18454,
       "pageBreakAfter": true
     },
     {
       "text": " Network",
-      "startMs": 7876,
-      "endMs": 8040
+      "startMs": 18454,
+      "endMs": 18985
     },
     {
       "text": " Troubleshooter.",
-      "startMs": 8040,
-      "endMs": 8334
+      "startMs": 18985,
+      "endMs": 19941
     },
     {
       "text": " Windows",
-      "startMs": 8334,
-      "endMs": 8498
+      "startMs": 19941,
+      "endMs": 20472
     },
     {
       "text": " 11",
-      "startMs": 8498,
-      "endMs": 8579,
+      "startMs": 20472,
+      "endMs": 20737,
       "pageBreakAfter": true
     },
     {
       "text": " has",
-      "startMs": 8579,
-      "endMs": 8678
+      "startMs": 20737,
+      "endMs": 21056
     },
     {
       "text": " a",
-      "startMs": 8678,
-      "endMs": 8743
+      "startMs": 21056,
+      "endMs": 21268
     },
     {
       "text": " troubleshooter",
-      "startMs": 8743,
-      "endMs": 9021
+      "startMs": 21268,
+      "endMs": 22170
     },
     {
       "text": " that",
-      "startMs": 9021,
-      "endMs": 9136,
+      "startMs": 22170,
+      "endMs": 22542,
       "pageBreakAfter": true
     },
     {
       "text": " repairs",
-      "startMs": 9136,
-      "endMs": 9299
+      "startMs": 22542,
+      "endMs": 23073
     },
     {
       "text": " common",
-      "startMs": 9299,
-      "endMs": 9446
+      "startMs": 23073,
+      "endMs": 23551
     },
     {
       "text": " network",
-      "startMs": 9446,
-      "endMs": 9610
+      "startMs": 23551,
+      "endMs": 24081
     },
     {
       "text": " errors.",
-      "startMs": 9610,
-      "endMs": 9773,
+      "startMs": 24081,
+      "endMs": 24612,
       "pageBreakAfter": true
     },
     {
       "text": " The",
-      "startMs": 9773,
-      "endMs": 9872
+      "startMs": 24612,
+      "endMs": 24931
     },
     {
       "text": " Get",
-      "startMs": 9872,
-      "endMs": 9970
+      "startMs": 24931,
+      "endMs": 25249
     },
     {
       "text": " Help",
-      "startMs": 9970,
-      "endMs": 10084
+      "startMs": 25249,
+      "endMs": 25621
     },
     {
       "text": " app",
-      "startMs": 10084,
-      "endMs": 10182,
+      "startMs": 25621,
+      "endMs": 25940,
       "pageBreakAfter": true
     },
     {
       "text": " contains",
-      "startMs": 10182,
-      "endMs": 10362
+      "startMs": 25940,
+      "endMs": 26523
     },
     {
       "text": " a",
-      "startMs": 10362,
-      "endMs": 10428
+      "startMs": 26523,
+      "endMs": 26736
     },
     {
-      "text": " second",
-      "startMs": 10428,
-      "endMs": 10575
-    },
-    {
-      "text": " troubleshooter.",
-      "startMs": 10575,
-      "endMs": 10869,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " Open",
-      "startMs": 10869,
-      "endMs": 10984
-    },
-    {
-      "text": " Settings.",
-      "startMs": 10984,
-      "endMs": 11180,
+      "text": " second…",
+      "startMs": 26736,
+      "endMs": 28133,
       "pageBreakAfter": true
     },
     {
       "text": " Fix",
-      "startMs": 11500,
-      "endMs": 11587
+      "startMs": 28667,
+      "endMs": 29014
     },
     {
       "text": " 2:",
-      "startMs": 11587,
-      "endMs": 11660
+      "startMs": 29014,
+      "endMs": 29304
     },
     {
       "text": " Restart",
-      "startMs": 11660,
-      "endMs": 11805
+      "startMs": 29304,
+      "endMs": 29884
     },
     {
       "text": " the",
-      "startMs": 11805,
-      "endMs": 11893,
+      "startMs": 29884,
+      "endMs": 30232,
       "pageBreakAfter": true
     },
     {
       "text": " Router",
-      "startMs": 11893,
-      "endMs": 12024
+      "startMs": 30232,
+      "endMs": 30753
     },
     {
       "text": " and",
-      "startMs": 12024,
-      "endMs": 12111
+      "startMs": 30753,
+      "endMs": 31101
     },
     {
       "text": " the",
-      "startMs": 12111,
-      "endMs": 12198
+      "startMs": 31101,
+      "endMs": 31449
     },
     {
       "text": " Computer.",
-      "startMs": 12198,
-      "endMs": 12373,
+      "startMs": 31449,
+      "endMs": 32144,
       "pageBreakAfter": true
     },
     {
       "text": " A",
-      "startMs": 12373,
-      "endMs": 12431
+      "startMs": 32144,
+      "endMs": 32376
     },
     {
       "text": " router",
-      "startMs": 12431,
-      "endMs": 12562
+      "startMs": 32376,
+      "endMs": 32898
     },
     {
       "text": " that",
-      "startMs": 12562,
-      "endMs": 12664
+      "startMs": 32898,
+      "endMs": 33304
     },
     {
       "text": " runs",
-      "startMs": 12664,
-      "endMs": 12765,
+      "startMs": 33304,
+      "endMs": 33709,
       "pageBreakAfter": true
     },
     {
       "text": " for",
-      "startMs": 12765,
-      "endMs": 12853
+      "startMs": 33709,
+      "endMs": 34057
     },
     {
       "text": " weeks",
-      "startMs": 12853,
-      "endMs": 12969
+      "startMs": 34057,
+      "endMs": 34521
     },
     {
       "text": " can",
-      "startMs": 12969,
-      "endMs": 13056
+      "startMs": 34521,
+      "endMs": 34869
     },
     {
       "text": " stop",
-      "startMs": 13056,
-      "endMs": 13158,
+      "startMs": 34869,
+      "endMs": 35274,
       "pageBreakAfter": true
     },
     {
       "text": " a",
-      "startMs": 13158,
-      "endMs": 13216
+      "startMs": 35274,
+      "endMs": 35506
     },
     {
       "text": " stable",
-      "startMs": 13216,
-      "endMs": 13347
+      "startMs": 35506,
+      "endMs": 36028
     },
     {
       "text": " connection.",
-      "startMs": 13347,
-      "endMs": 13551
+      "startMs": 36028,
+      "endMs": 36839
     },
     {
       "text": " A",
-      "startMs": 13551,
-      "endMs": 13609,
+      "startMs": 36839,
+      "endMs": 37071,
       "pageBreakAfter": true
     },
     {
       "text": " restart",
-      "startMs": 13609,
-      "endMs": 13755
+      "startMs": 37071,
+      "endMs": 37651
     },
     {
       "text": " clears",
-      "startMs": 13755,
-      "endMs": 13885
+      "startMs": 37651,
+      "endMs": 38173
     },
     {
       "text": " its",
-      "startMs": 13885,
-      "endMs": 13973
+      "startMs": 38173,
+      "endMs": 38520
     },
     {
       "text": " memory.",
-      "startMs": 13973,
-      "endMs": 14118,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " Disconnect",
-      "startMs": 14118,
-      "endMs": 14307
-    },
-    {
-      "text": " the",
-      "startMs": 14307,
-      "endMs": 14395
-    },
-    {
-      "text": " power",
-      "startMs": 14395,
-      "endMs": 14511
-    },
-    {
-      "text": " from",
-      "startMs": 14511,
-      "endMs": 14613,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " the",
-      "startMs": 14613,
-      "endMs": 14700
-    },
-    {
-      "text": " router.",
-      "startMs": 14700,
-      "endMs": 14845
-    },
-    {
-      "text": " Wait",
-      "startMs": 14845,
-      "endMs": 14947
-    },
-    {
-      "text": " 30",
-      "startMs": 14947,
-      "endMs": 15020,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " seconds.",
-      "startMs": 15020,
-      "endMs": 15180,
+      "startMs": 38520,
+      "endMs": 39967,
       "pageBreakAfter": true
     },
     {
       "text": " Fix",
-      "startMs": 15500,
-      "endMs": 15605
+      "startMs": 40500,
+      "endMs": 40827
     },
     {
       "text": " 3:",
-      "startMs": 15605,
-      "endMs": 15692
+      "startMs": 40827,
+      "endMs": 41100
     },
     {
       "text": " Forget",
-      "startMs": 15692,
-      "endMs": 15849
+      "startMs": 41100,
+      "endMs": 41591
     },
     {
       "text": " the",
-      "startMs": 15849,
-      "endMs": 15953,
+      "startMs": 41591,
+      "endMs": 41918,
       "pageBreakAfter": true
     },
     {
       "text": " Network",
-      "startMs": 15953,
-      "endMs": 16128
+      "startMs": 41918,
+      "endMs": 42464
     },
     {
       "text": " and",
-      "startMs": 16128,
-      "endMs": 16233
+      "startMs": 42464,
+      "endMs": 42791
     },
     {
       "text": " Connect",
-      "startMs": 16233,
-      "endMs": 16407
+      "startMs": 42791,
+      "endMs": 43336
     },
     {
       "text": " Again.",
-      "startMs": 16407,
-      "endMs": 16564,
+      "startMs": 43336,
+      "endMs": 43827,
       "pageBreakAfter": true
     },
     {
       "text": " Windows",
-      "startMs": 16564,
-      "endMs": 16738
+      "startMs": 43827,
+      "endMs": 44373
     },
     {
       "text": " stores",
-      "startMs": 16738,
-      "endMs": 16895
+      "startMs": 44373,
+      "endMs": 44864
     },
     {
       "text": " the",
-      "startMs": 16895,
-      "endMs": 17000
+      "startMs": 44864,
+      "endMs": 45191
     },
     {
       "text": " password",
-      "startMs": 17000,
-      "endMs": 17192,
+      "startMs": 45191,
+      "endMs": 45791,
       "pageBreakAfter": true
     },
     {
       "text": " and",
-      "startMs": 17192,
-      "endMs": 17296
+      "startMs": 45791,
+      "endMs": 46118
     },
     {
       "text": " the",
-      "startMs": 17296,
-      "endMs": 17401
+      "startMs": 46118,
+      "endMs": 46445
     },
     {
       "text": " security",
-      "startMs": 17401,
-      "endMs": 17593
+      "startMs": 46445,
+      "endMs": 47045
     },
     {
       "text": " type",
-      "startMs": 17593,
-      "endMs": 17715,
+      "startMs": 47045,
+      "endMs": 47427,
       "pageBreakAfter": true
     },
     {
       "text": " of",
-      "startMs": 17715,
-      "endMs": 17802
+      "startMs": 47427,
+      "endMs": 47700
     },
     {
       "text": " every",
-      "startMs": 17802,
-      "endMs": 17942
+      "startMs": 47700,
+      "endMs": 48136
     },
     {
       "text": " network.",
-      "startMs": 17942,
-      "endMs": 18134
+      "startMs": 48136,
+      "endMs": 48736
     },
     {
       "text": " A",
-      "startMs": 18134,
-      "endMs": 18203,
+      "startMs": 48736,
+      "endMs": 48955,
       "pageBreakAfter": true
     },
     {
       "text": " wrong",
-      "startMs": 18203,
-      "endMs": 18343
+      "startMs": 48955,
+      "endMs": 49391
     },
     {
       "text": " stored",
-      "startMs": 18343,
-      "endMs": 18500
+      "startMs": 49391,
+      "endMs": 49882
     },
     {
       "text": " password",
-      "startMs": 18500,
-      "endMs": 18692
+      "startMs": 49882,
+      "endMs": 50482
     },
     {
       "text": " stops",
-      "startMs": 18692,
-      "endMs": 18831,
+      "startMs": 50482,
+      "endMs": 50918,
       "pageBreakAfter": true
     },
     {
-      "text": " the",
-      "startMs": 18831,
-      "endMs": 18936
-    },
-    {
-      "text": " connection.",
-      "startMs": 18936,
-      "endMs": 19180,
+      "text": " the…",
+      "startMs": 50918,
+      "endMs": 52167,
       "pageBreakAfter": true
     },
     {
       "text": " Fix",
-      "startMs": 19500,
-      "endMs": 19588
+      "startMs": 52700,
+      "endMs": 53039
     },
     {
       "text": " 4:",
-      "startMs": 19588,
-      "endMs": 19661
+      "startMs": 53039,
+      "endMs": 53322
     },
     {
       "text": " Stop",
-      "startMs": 19661,
-      "endMs": 19763
+      "startMs": 53322,
+      "endMs": 53718
     },
     {
       "text": " the",
-      "startMs": 19763,
-      "endMs": 19850,
+      "startMs": 53718,
+      "endMs": 54057,
       "pageBreakAfter": true
     },
     {
       "text": " Adapter",
-      "startMs": 19850,
-      "endMs": 19997
+      "startMs": 54057,
+      "endMs": 54623
     },
     {
       "text": " Power",
-      "startMs": 19997,
-      "endMs": 20113
+      "startMs": 54623,
+      "endMs": 55075
     },
     {
       "text": " Saving.",
-      "startMs": 20113,
-      "endMs": 20259
+      "startMs": 55075,
+      "endMs": 55640
     },
     {
       "text": " Windows",
-      "startMs": 20259,
-      "endMs": 20405,
+      "startMs": 55640,
+      "endMs": 56206,
       "pageBreakAfter": true
     },
     {
       "text": " turns",
-      "startMs": 20405,
-      "endMs": 20522
+      "startMs": 56206,
+      "endMs": 56658
     },
     {
       "text": " off",
-      "startMs": 20522,
-      "endMs": 20610
+      "startMs": 56658,
+      "endMs": 56997
     },
     {
       "text": " the",
-      "startMs": 20610,
-      "endMs": 20697
+      "startMs": 56997,
+      "endMs": 57337
     },
     {
       "text": " wireless",
-      "startMs": 20697,
-      "endMs": 20858,
+      "startMs": 57337,
+      "endMs": 57959,
       "pageBreakAfter": true
     },
     {
       "text": " adapter",
-      "startMs": 20858,
-      "endMs": 21004
+      "startMs": 57959,
+      "endMs": 58524
     },
     {
       "text": " to",
-      "startMs": 21004,
-      "endMs": 21077
+      "startMs": 58524,
+      "endMs": 58807
     },
     {
       "text": " save",
-      "startMs": 21077,
-      "endMs": 21179
+      "startMs": 58807,
+      "endMs": 59203
     },
     {
       "text": " power.",
-      "startMs": 21179,
-      "endMs": 21311,
+      "startMs": 59203,
+      "endMs": 59712,
       "pageBreakAfter": true
     },
     {
       "text": " This",
-      "startMs": 21311,
-      "endMs": 21413
+      "startMs": 59712,
+      "endMs": 60107
     },
     {
       "text": " turn",
-      "startMs": 21413,
-      "endMs": 21515
+      "startMs": 60107,
+      "endMs": 60503
     },
     {
       "text": " off",
-      "startMs": 21515,
-      "endMs": 21603
+      "startMs": 60503,
+      "endMs": 60842
     },
     {
       "text": " breaks",
-      "startMs": 21603,
-      "endMs": 21734,
+      "startMs": 60842,
+      "endMs": 61351,
       "pageBreakAfter": true
     },
     {
       "text": " the",
-      "startMs": 21734,
-      "endMs": 21822
+      "startMs": 61351,
+      "endMs": 61691
     },
     {
       "text": " connection",
-      "startMs": 21822,
-      "endMs": 22012
+      "startMs": 61691,
+      "endMs": 62426
     },
     {
       "text": " after",
-      "startMs": 22012,
-      "endMs": 22129
+      "startMs": 62426,
+      "endMs": 62878
     },
     {
       "text": " a",
-      "startMs": 22129,
-      "endMs": 22187,
+      "startMs": 62878,
+      "endMs": 63104,
       "pageBreakAfter": true
     },
     {
-      "text": " few",
-      "startMs": 22187,
-      "endMs": 22275
-    },
-    {
-      "text": " minutes.",
-      "startMs": 22275,
-      "endMs": 22435
-    },
-    {
-      "text": " This",
-      "startMs": 22435,
-      "endMs": 22537
-    },
-    {
-      "text": " fault",
-      "startMs": 22537,
-      "endMs": 22654,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " causes",
-      "startMs": 22654,
-      "endMs": 22786
-    },
-    {
-      "text": " most",
-      "startMs": 22786,
-      "endMs": 22888
-    },
-    {
-      "text": " of",
-      "startMs": 22888,
-      "endMs": 22961
-    },
-    {
-      "text": " the",
-      "startMs": 22961,
-      "endMs": 23049,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " drops.",
-      "startMs": 23049,
-      "endMs": 23180,
+      "text": " few…",
+      "startMs": 63104,
+      "endMs": 64367,
       "pageBreakAfter": true
     },
     {
       "text": " Fix",
-      "startMs": 23500,
-      "endMs": 23592
+      "startMs": 64900,
+      "endMs": 65245
     },
     {
       "text": " 5:",
-      "startMs": 23592,
-      "endMs": 23669
+      "startMs": 65245,
+      "endMs": 65532
     },
     {
       "text": " Set",
-      "startMs": 23669,
-      "endMs": 23762
+      "startMs": 65532,
+      "endMs": 65877
     },
     {
       "text": " One",
-      "startMs": 23762,
-      "endMs": 23854,
+      "startMs": 65877,
+      "endMs": 66221,
       "pageBreakAfter": true
     },
     {
       "text": " Wireless",
-      "startMs": 23854,
-      "endMs": 24024
+      "startMs": 66221,
+      "endMs": 66853
     },
     {
       "text": " Band.",
-      "startMs": 24024,
-      "endMs": 24147
+      "startMs": 66853,
+      "endMs": 67313
     },
     {
       "text": " Some",
-      "startMs": 24147,
-      "endMs": 24254
+      "startMs": 67313,
+      "endMs": 67715
     },
     {
       "text": " routers",
-      "startMs": 24254,
-      "endMs": 24408,
+      "startMs": 67715,
+      "endMs": 68289,
       "pageBreakAfter": true
     },
     {
       "text": " use",
-      "startMs": 24408,
-      "endMs": 24501
+      "startMs": 68289,
+      "endMs": 68634
     },
     {
       "text": " the",
-      "startMs": 24501,
-      "endMs": 24593
+      "startMs": 68634,
+      "endMs": 68979
     },
     {
       "text": " same",
-      "startMs": 24593,
-      "endMs": 24701
+      "startMs": 68979,
+      "endMs": 69381
     },
     {
       "text": " name",
-      "startMs": 24701,
-      "endMs": 24809,
+      "startMs": 69381,
+      "endMs": 69783,
       "pageBreakAfter": true
     },
     {
       "text": " for",
-      "startMs": 24809,
-      "endMs": 24901
+      "startMs": 69783,
+      "endMs": 70128
     },
     {
       "text": " the",
-      "startMs": 24901,
-      "endMs": 24994
+      "startMs": 70128,
+      "endMs": 70472
     },
     {
       "text": " 2.4",
-      "startMs": 24994,
-      "endMs": 25086
+      "startMs": 70472,
+      "endMs": 70817
     },
     {
       "text": " GHz",
-      "startMs": 25086,
-      "endMs": 25178,
+      "startMs": 70817,
+      "endMs": 71162,
       "pageBreakAfter": true
     },
     {
       "text": " band",
-      "startMs": 25178,
-      "endMs": 25286
+      "startMs": 71162,
+      "endMs": 71564
     },
     {
       "text": " and",
-      "startMs": 25286,
-      "endMs": 25378
+      "startMs": 71564,
+      "endMs": 71909
     },
     {
       "text": " the",
-      "startMs": 25378,
-      "endMs": 25471
+      "startMs": 71909,
+      "endMs": 72253
     },
     {
       "text": " 5",
-      "startMs": 25471,
-      "endMs": 25532,
+      "startMs": 72253,
+      "endMs": 72483,
       "pageBreakAfter": true
     },
     {
       "text": " GHz",
-      "startMs": 25532,
-      "endMs": 25625
+      "startMs": 72483,
+      "endMs": 72828
     },
     {
       "text": " band.",
-      "startMs": 25625,
-      "endMs": 25748
+      "startMs": 72828,
+      "endMs": 73287
     },
     {
       "text": " An",
-      "startMs": 25748,
-      "endMs": 25825
+      "startMs": 73287,
+      "endMs": 73574
     },
     {
       "text": " adapter",
-      "startMs": 25825,
-      "endMs": 25979,
+      "startMs": 73574,
+      "endMs": 74149,
       "pageBreakAfter": true
     },
     {
       "text": " with",
-      "startMs": 25979,
-      "endMs": 26087
+      "startMs": 74149,
+      "endMs": 74551
     },
     {
       "text": " automatic",
-      "startMs": 26087,
-      "endMs": 26272
+      "startMs": 74551,
+      "endMs": 75240
     },
     {
-      "text": " band",
-      "startMs": 26272,
-      "endMs": 26379
-    },
-    {
-      "text": " selection",
-      "startMs": 26379,
-      "endMs": 26564,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " can",
-      "startMs": 26564,
-      "endMs": 26656
-    },
-    {
-      "text": " then",
-      "startMs": 26656,
-      "endMs": 26764
-    },
-    {
-      "text": " lose",
-      "startMs": 26764,
-      "endMs": 26872
-    },
-    {
-      "text": " the",
-      "startMs": 26872,
-      "endMs": 26964,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " connection.",
-      "startMs": 26964,
-      "endMs": 27180,
+      "text": " band…",
+      "startMs": 75240,
+      "endMs": 76567,
       "pageBreakAfter": true
     },
     {
       "text": " Read",
-      "startMs": 27500,
-      "endMs": 27785
+      "startMs": 77100,
+      "endMs": 77470
     },
     {
       "text": " the",
-      "startMs": 27785,
-      "endMs": 28030
+      "startMs": 77470,
+      "endMs": 77787
     },
     {
       "text": " full",
-      "startMs": 28030,
-      "endMs": 28315
+      "startMs": 77787,
+      "endMs": 78157
     },
     {
       "text": " article.",
-      "startMs": 28315,
-      "endMs": 28764,
+      "startMs": 78157,
+      "endMs": 78738,
       "pageBreakAfter": true
     },
     {
       "text": " New",
-      "startMs": 28764,
-      "endMs": 29008
+      "startMs": 78738,
+      "endMs": 79055
     },
     {
       "text": " posts",
-      "startMs": 29008,
-      "endMs": 29334
+      "startMs": 79055,
+      "endMs": 79478
     },
     {
       "text": " every",
-      "startMs": 29334,
-      "endMs": 29660
+      "startMs": 79478,
+      "endMs": 79901
     },
     {
       "text": " week",
-      "startMs": 29660,
-      "endMs": 29946,
+      "startMs": 79901,
+      "endMs": 80271,
       "pageBreakAfter": true
     },
     {
       "text": " on",
-      "startMs": 29946,
-      "endMs": 30149
+      "startMs": 80271,
+      "endMs": 80535
     },
     {
       "text": " the",
-      "startMs": 30149,
-      "endMs": 30394
+      "startMs": 80535,
+      "endMs": 80852
     },
     {
       "text": " blog.",
-      "startMs": 30394,
-      "endMs": 30720,
+      "startMs": 80852,
+      "endMs": 82067,
       "pageBreakAfter": true
     }
   ],

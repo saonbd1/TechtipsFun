@@ -1,0 +1,76 @@
+name: Post reels to YouTube
+
+# Uploads article-reels/*.mp4 to YouTube as Shorts.
+# IMPORTANT PITFALL (same as LinkedIn job): pushes made with GITHUB_TOKEN
+# do NOT trigger other workflows, so the reels-generator commit above never
+# fires a `push` event here. We listen for its workflow_run instead.
+
+on:
+  workflow_run: # reels committed by "Generate article reels" (GITHUB_TOKEN push)
+    workflows: ["Generate article reels"]
+    types: [completed]
+  schedule: # daily 12:00 UTC (18:00 Dhaka) - drains the backlog 3/day (quota: ~6/day max)
+    - cron: "0 12 * * *"
+  workflow_dispatch: # manual run
+    inputs:
+      limit:
+        description: "Max reels to upload (quota guard, ~1600 units each of 10k/day)"
+        default: "3"
+      privacy:
+        description: "Visibility for manual runs"
+        type: choice
+        options: [public, unlisted, private]
+        default: public
+      force:
+        description: "Re-upload even if already in the manifest"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write # needed to commit the upload manifest back
+
+concurrency:
+  group: youtube-reels
+  cancel-in-progress: false # never interrupt a mid-flight upload
+
+jobs:
+  upload:
+    # only run after a *successful* reels build
+    if: github.event_name != 'workflow_run'
+      || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # full history so the manifest commit can push cleanly
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Upload new reels to YouTube
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          YT_PLAYLIST_ID: ${{ secrets.YT_PLAYLIST_ID }}
+        run: |
+          python scripts/upload-reels-to-youtube.py \
+            --reels-dir article-reels \
+            --category-id 28 \
+            --limit "${{ inputs.limit || '3' }}" \
+            --privacy "${{ inputs.privacy || 'public' }}" \
+            ${{ inputs.force && '--force' || '' }}
+
+      - name: Commit upload manifest
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          # manifest only exists after at least one successful upload
+          [ -f article-reels/.youtube-upload-manifest.json ] || \
+            { echo "Nothing new uploaded."; exit 0; }
+          git add article-reels/.youtube-upload-manifest.json
+          git diff --cached --quiet && echo "Nothing new uploaded." || \
+            (git commit -m "chore: record YouTube uploads [skip ci]" && git push)

@@ -104,6 +104,24 @@ jobs:
           set -euo pipefail
           node scripts/share-to-linkedin.mjs "${{ steps.publish.outputs.slug }}"
 
+      # The publish commit above is pushed with GITHUB_TOKEN, which does not
+      # trigger the Submit-URLs-to-IndexNow workflow — so submit here directly.
+      - name: Submit the new post to IndexNow
+        if: steps.publish.outputs.slug != ''
+        env:
+          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+        run: |
+          set -euo pipefail
+          node scripts/submit-indexnow.mjs "${{ steps.publish.outputs.slug }}"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          [ -f .indexnow-submitted.json ] || exit 0
+          git add .indexnow-submitted.json
+          git diff --cached --quiet || git commit -m "chore: record IndexNow submission [skip ci]"
+          # main may have moved while sharing; rebase before pushing the manifest.
+          git pull --rebase origin main || true
+          git push origin HEAD:main || echo "::warning::IndexNow manifest push failed; next run will retry."
+
       # Optional: deploy from this workflow instead of Cloudflare Git integration.
       # Requires the CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID repository secrets.
       # - name: Deploy to Cloudflare

@@ -10,22 +10,25 @@
     "Layouts"
   ],
   "url": "https://www.techtips.fun/blog/css-grid-vs-flexbox-when-to-actually/",
-  "theme": "github-dark",
-  "durationInFrames": 855,
   "scenes": [
     {
       "type": "title",
       "kicker": "Web Development",
       "title": "CSS Grid vs Flexbox when to actually use each one",
       "subtitle": "This debate has been running since Grid shipped. Most explanations are either too vague…",
-      "durationInFrames": 105
+      "image": {
+        "src": "post-media/css-grid-vs-flexbox-when-to-actually/01-css-grid-vs-flexbox.webp",
+        "width": 960,
+        "height": 480
+      },
+      "durationInFrames": 183
     },
     {
       "type": "point",
       "kicker": "Web Development",
       "heading": "The one rule that decides everything",
       "body": "Does the layout drive the content, or does the content drive the layout? If you have a defined grid and you’re placing items into it — use CSS Grid.",
-      "durationInFrames": 120
+      "durationInFrames": 330
     },
     {
       "type": "code",
@@ -87,7 +90,10 @@
           }
         }
       ],
-      "durationInFrames": 95
+      "stepDurations": [
+        182
+      ],
+      "durationInFrames": 182
     },
     {
       "type": "code",
@@ -149,21 +155,24 @@
           }
         }
       ],
-      "durationInFrames": 95
+      "stepDurations": [
+        182
+      ],
+      "durationInFrames": 182
     },
     {
       "type": "point",
       "kicker": "Web Development",
       "heading": "Bonus Tips Markup Guide",
       "body": "The following HTML <h1>—<h6> elements represent six levels of section headings. <h1> is the highest section level while <h6> is the lowest.",
-      "durationInFrames": 120
+      "durationInFrames": 330
     },
     {
       "type": "point",
       "kicker": "Web Development",
       "heading": "Paragraph",
       "body": "Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma…",
-      "durationInFrames": 120
+      "durationInFrames": 330
     },
     {
       "type": "code",
@@ -212,721 +221,1062 @@
           }
         }
       ],
-      "durationInFrames": 95
+      "stepDurations": [
+        135
+      ],
+      "durationInFrames": 135
+    },
+    {
+      "type": "point",
+      "kicker": "Web Development",
+      "heading": "Blockquotes",
+      "body": "The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a footer or cite…",
+      "durationInFrames": 319
+    },
+    {
+      "type": "code",
+      "kicker": "Code",
+      "heading": "Blockquote without attribution",
+      "steps": [
+        {
+          "lang": "markdown",
+          "meta": "markdown",
+          "value": "> Tiam, ad mint andaepu dandae nostion secatur sequo quae.  \n> **Note** that you can use _Markdown syntax_ within a blockquote.",
+          "code": "> Tiam, ad mint andaepu dandae nostion secatur sequo quae.  \n> **Note** that you can use _Markdown syntax_ within a blockquote.",
+          "tokens": [
+            [
+              "> Tiam, ad mint andaepu dandae nostion secatur sequo quae.",
+              "#7EE787"
+            ],
+            "  \n",
+            [
+              ">",
+              "#7EE787"
+            ],
+            " ",
+            [
+              "**Note**",
+              "#C9D1D9",
+              {
+                "fontWeight": "bold"
+              }
+            ],
+            " ",
+            [
+              "that you can use",
+              "#7EE787"
+            ],
+            " ",
+            [
+              "_Markdown syntax_",
+              "#C9D1D9",
+              {
+                "fontStyle": "italic"
+              }
+            ],
+            " ",
+            [
+              "within a blockquote.",
+              "#7EE787"
+            ]
+          ],
+          "annotations": [],
+          "themeName": "github-dark",
+          "style": {
+            "color": "#c9d1d9",
+            "background": "#0d1117",
+            "colorScheme": "dark"
+          }
+        }
+      ],
+      "stepDurations": [
+        135
+      ],
+      "durationInFrames": 135
+    },
+    {
+      "type": "code",
+      "kicker": "Code",
+      "heading": "Blockquote with attribution",
+      "steps": [
+        {
+          "lang": "markdown",
+          "meta": "markdown",
+          "value": "> Don't communicate by sharing memory, share memory by communicating.<br>\n> — <cite>Rob Pike[^1]</cite>",
+          "code": "> Don't communicate by sharing memory, share memory by communicating.<br>\n> — <cite>Rob Pike[^1]</cite>",
+          "tokens": [
+            [
+              "> Don't communicate by sharing memory, share memory by communicating.<br>",
+              "#7EE787"
+            ],
+            "\n",
+            [
+              "> — <cite>Rob Pike[",
+              "#7EE787"
+            ],
+            [
+              "^1",
+              "#A5D6FF",
+              {
+                "textDecoration": "underline"
+              }
+            ],
+            [
+              "]</cite>",
+              "#7EE787"
+            ]
+          ],
+          "annotations": [],
+          "themeName": "github-dark",
+          "style": {
+            "color": "#c9d1d9",
+            "background": "#0d1117",
+            "colorScheme": "dark"
+          }
+        }
+      ],
+      "stepDurations": [
+        135
+      ],
+      "durationInFrames": 135
     },
     {
       "type": "outro",
       "heading": "Read the full article",
       "body": "New posts every week on the blog.",
       "url": "techtips.fun",
-      "durationInFrames": 105
+      "durationInFrames": 165
     }
   ],
+  "theme": "github-dark",
+  "durationInFrames": 2426,
   "captions": [
     {
       "text": " This",
-      "startMs": 0,
-      "endMs": 194
+      "startMs": 500,
+      "endMs": 784
     },
     {
       "text": " debate",
-      "startMs": 194,
-      "endMs": 444
+      "startMs": 784,
+      "endMs": 1148
     },
     {
       "text": " has",
-      "startMs": 444,
-      "endMs": 611
+      "startMs": 1148,
+      "endMs": 1391
     },
     {
       "text": " been",
-      "startMs": 611,
-      "endMs": 805,
+      "startMs": 1391,
+      "endMs": 1675,
       "pageBreakAfter": true
     },
     {
       "text": " running",
-      "startMs": 805,
-      "endMs": 1083
+      "startMs": 1675,
+      "endMs": 2080
     },
     {
       "text": " since",
-      "startMs": 1083,
-      "endMs": 1305
+      "startMs": 2080,
+      "endMs": 2404
     },
     {
       "text": " Grid",
-      "startMs": 1305,
-      "endMs": 1499
+      "startMs": 2404,
+      "endMs": 2688
     },
     {
       "text": " shipped.",
-      "startMs": 1499,
-      "endMs": 1804,
+      "startMs": 2688,
+      "endMs": 3134,
       "pageBreakAfter": true
     },
     {
       "text": " Most",
-      "startMs": 1804,
-      "endMs": 1999
+      "startMs": 3134,
+      "endMs": 3417
     },
     {
       "text": " explanations",
-      "startMs": 1999,
-      "endMs": 2415
+      "startMs": 3417,
+      "endMs": 4025
     },
     {
       "text": " are",
-      "startMs": 2415,
-      "endMs": 2582
+      "startMs": 4025,
+      "endMs": 4268
     },
     {
       "text": " either",
-      "startMs": 2582,
-      "endMs": 2831,
+      "startMs": 4268,
+      "endMs": 4633,
       "pageBreakAfter": true
     },
     {
       "text": " too",
-      "startMs": 2831,
-      "endMs": 2998
+      "startMs": 4633,
+      "endMs": 4876
     },
     {
       "text": " vague",
-      "startMs": 2998,
-      "endMs": 3220,
+      "startMs": 4876,
+      "endMs": 6067,
       "pageBreakAfter": true
     },
     {
       "text": " The",
-      "startMs": 3500,
-      "endMs": 3586
+      "startMs": 6600,
+      "endMs": 6824
     },
     {
       "text": " one",
-      "startMs": 3586,
-      "endMs": 3672
+      "startMs": 6824,
+      "endMs": 7048
     },
     {
       "text": " rule",
-      "startMs": 3672,
-      "endMs": 3772
+      "startMs": 7048,
+      "endMs": 7310
     },
     {
       "text": " that",
-      "startMs": 3772,
-      "endMs": 3872,
+      "startMs": 7310,
+      "endMs": 7571,
       "pageBreakAfter": true
     },
     {
       "text": " decides",
-      "startMs": 3872,
-      "endMs": 4015
+      "startMs": 7571,
+      "endMs": 7945
     },
     {
       "text": " everything.",
-      "startMs": 4015,
-      "endMs": 4216
+      "startMs": 7945,
+      "endMs": 8468
     },
     {
       "text": " Does",
-      "startMs": 4216,
-      "endMs": 4316
+      "startMs": 8468,
+      "endMs": 8729
     },
     {
       "text": " the",
-      "startMs": 4316,
-      "endMs": 4402,
+      "startMs": 8729,
+      "endMs": 8953,
       "pageBreakAfter": true
     },
     {
       "text": " layout",
-      "startMs": 4402,
-      "endMs": 4531
+      "startMs": 8953,
+      "endMs": 9289
     },
     {
       "text": " drive",
-      "startMs": 4531,
-      "endMs": 4646
+      "startMs": 9289,
+      "endMs": 9588
     },
     {
       "text": " the",
-      "startMs": 4646,
-      "endMs": 4731
+      "startMs": 9588,
+      "endMs": 9812
     },
     {
       "text": " content,",
-      "startMs": 4731,
-      "endMs": 4889,
+      "startMs": 9812,
+      "endMs": 10223,
       "pageBreakAfter": true
     },
     {
       "text": " or",
-      "startMs": 4889,
-      "endMs": 4961
+      "startMs": 10223,
+      "endMs": 10410
     },
     {
       "text": " does",
-      "startMs": 4961,
-      "endMs": 5061
+      "startMs": 10410,
+      "endMs": 10672
     },
     {
       "text": " the",
-      "startMs": 5061,
-      "endMs": 5147
+      "startMs": 10672,
+      "endMs": 10896
     },
     {
       "text": " content",
-      "startMs": 5147,
-      "endMs": 5290,
+      "startMs": 10896,
+      "endMs": 11269,
       "pageBreakAfter": true
     },
     {
       "text": " drive",
-      "startMs": 5290,
-      "endMs": 5404
+      "startMs": 11269,
+      "endMs": 11568
     },
     {
       "text": " the",
-      "startMs": 5404,
-      "endMs": 5490
+      "startMs": 11568,
+      "endMs": 11792
     },
     {
       "text": " layout?",
-      "startMs": 5490,
-      "endMs": 5634
+      "startMs": 11792,
+      "endMs": 12166
     },
     {
       "text": " If",
-      "startMs": 5634,
-      "endMs": 5705,
+      "startMs": 12166,
+      "endMs": 12353,
       "pageBreakAfter": true
     },
     {
       "text": " you",
-      "startMs": 5705,
-      "endMs": 5791
+      "startMs": 12353,
+      "endMs": 12577
     },
     {
       "text": " have",
-      "startMs": 5791,
-      "endMs": 5891
+      "startMs": 12577,
+      "endMs": 12838
     },
     {
       "text": " a",
-      "startMs": 5891,
-      "endMs": 5949
+      "startMs": 12838,
+      "endMs": 12988
     },
     {
       "text": " defined",
-      "startMs": 5949,
-      "endMs": 6092,
+      "startMs": 12988,
+      "endMs": 13361,
       "pageBreakAfter": true
     },
     {
       "text": " grid",
-      "startMs": 6092,
-      "endMs": 6192
+      "startMs": 13361,
+      "endMs": 13623
     },
     {
       "text": " and",
-      "startMs": 6192,
-      "endMs": 6278
+      "startMs": 13623,
+      "endMs": 13847
     },
     {
       "text": " you’re",
-      "startMs": 6278,
-      "endMs": 6407
+      "startMs": 13847,
+      "endMs": 14183
     },
     {
       "text": " placing",
-      "startMs": 6407,
-      "endMs": 6550,
+      "startMs": 14183,
+      "endMs": 14556,
       "pageBreakAfter": true
     },
     {
       "text": " items",
-      "startMs": 6550,
-      "endMs": 6665
+      "startMs": 14556,
+      "endMs": 14855
     },
     {
       "text": " into",
-      "startMs": 6665,
-      "endMs": 6765
+      "startMs": 14855,
+      "endMs": 15117
     },
     {
       "text": " it",
-      "startMs": 6765,
-      "endMs": 6836
+      "startMs": 15117,
+      "endMs": 15304
     },
     {
       "text": " —",
-      "startMs": 6836,
-      "endMs": 6894,
+      "startMs": 15304,
+      "endMs": 15453,
       "pageBreakAfter": true
     },
     {
       "text": " use",
-      "startMs": 6894,
-      "endMs": 6980
+      "startMs": 15453,
+      "endMs": 15677
     },
     {
       "text": " CSS",
-      "startMs": 6980,
-      "endMs": 7065
+      "startMs": 15677,
+      "endMs": 15901
     },
     {
       "text": " Grid.",
-      "startMs": 7065,
-      "endMs": 7180,
+      "startMs": 15901,
+      "endMs": 17067,
       "pageBreakAfter": true
     },
     {
       "text": " Grid",
-      "startMs": 7500,
-      "endMs": 7864
+      "startMs": 17600,
+      "endMs": 18100
     },
     {
       "text": " examples.",
-      "startMs": 7864,
-      "endMs": 8488
+      "startMs": 18100,
+      "endMs": 18957
     },
     {
       "text": " Let",
-      "startMs": 8488,
-      "endMs": 8801
+      "startMs": 18957,
+      "endMs": 19386
     },
     {
       "text": " us",
-      "startMs": 8801,
-      "endMs": 9061,
+      "startMs": 19386,
+      "endMs": 19743,
       "pageBreakAfter": true
     },
     {
       "text": " look",
-      "startMs": 9061,
-      "endMs": 9425
+      "startMs": 19743,
+      "endMs": 20243
     },
     {
       "text": " at",
-      "startMs": 9425,
-      "endMs": 9685
+      "startMs": 20243,
+      "endMs": 20600
     },
     {
       "text": " the",
-      "startMs": 9685,
-      "endMs": 9997
+      "startMs": 20600,
+      "endMs": 21029
     },
     {
       "text": " code.",
-      "startMs": 9997,
-      "endMs": 10413,
+      "startMs": 21029,
+      "endMs": 23133,
       "pageBreakAfter": true
     },
     {
       "text": " Flexbox",
-      "startMs": 10667,
-      "endMs": 11160
+      "startMs": 23667,
+      "endMs": 24345
     },
     {
       "text": " examples.",
-      "startMs": 11160,
-      "endMs": 11753
+      "startMs": 24345,
+      "endMs": 25158
     },
     {
       "text": " Let",
-      "startMs": 11753,
-      "endMs": 12049
+      "startMs": 25158,
+      "endMs": 25565
     },
     {
       "text": " us",
-      "startMs": 12049,
-      "endMs": 12296,
+      "startMs": 25565,
+      "endMs": 25904,
       "pageBreakAfter": true
     },
     {
       "text": " look",
-      "startMs": 12296,
-      "endMs": 12642
+      "startMs": 25904,
+      "endMs": 26379
     },
     {
       "text": " at",
-      "startMs": 12642,
-      "endMs": 12889
+      "startMs": 26379,
+      "endMs": 26718
     },
     {
       "text": " the",
-      "startMs": 12889,
-      "endMs": 13185
+      "startMs": 26718,
+      "endMs": 27124
     },
     {
       "text": " code.",
-      "startMs": 13185,
-      "endMs": 13580,
+      "startMs": 27124,
+      "endMs": 29200,
       "pageBreakAfter": true
     },
     {
       "text": " Bonus",
-      "startMs": 13833,
-      "endMs": 13969
+      "startMs": 29733,
+      "endMs": 30087
     },
     {
       "text": " Tips",
-      "startMs": 13969,
-      "endMs": 14088
+      "startMs": 30087,
+      "endMs": 30397
     },
     {
       "text": " Markup",
-      "startMs": 14088,
-      "endMs": 14240
+      "startMs": 30397,
+      "endMs": 30795
     },
     {
       "text": " Guide.",
-      "startMs": 14240,
-      "endMs": 14393,
+      "startMs": 30795,
+      "endMs": 31193,
       "pageBreakAfter": true
     },
     {
       "text": " The",
-      "startMs": 14393,
-      "endMs": 14495
+      "startMs": 31193,
+      "endMs": 31459
     },
     {
       "text": " following",
-      "startMs": 14495,
-      "endMs": 14698
+      "startMs": 31459,
+      "endMs": 31990
     },
     {
       "text": " HTML",
-      "startMs": 14698,
-      "endMs": 14817
+      "startMs": 31990,
+      "endMs": 32299
     },
     {
       "text": " <h1>—<h6>",
-      "startMs": 14817,
-      "endMs": 15020,
+      "startMs": 32299,
+      "endMs": 32830,
       "pageBreakAfter": true
     },
     {
       "text": " elements",
-      "startMs": 15020,
-      "endMs": 15207
+      "startMs": 32830,
+      "endMs": 33317
     },
     {
       "text": " represent",
-      "startMs": 15207,
-      "endMs": 15410
+      "startMs": 33317,
+      "endMs": 33848
     },
     {
       "text": " six",
-      "startMs": 15410,
-      "endMs": 15512
+      "startMs": 33848,
+      "endMs": 34113
     },
     {
       "text": " levels",
-      "startMs": 15512,
-      "endMs": 15665,
+      "startMs": 34113,
+      "endMs": 34511,
       "pageBreakAfter": true
     },
     {
       "text": " of",
-      "startMs": 15665,
-      "endMs": 15750
+      "startMs": 34511,
+      "endMs": 34732
     },
     {
       "text": " section",
-      "startMs": 15750,
-      "endMs": 15919
+      "startMs": 34732,
+      "endMs": 35175
     },
     {
       "text": " headings.",
-      "startMs": 15919,
-      "endMs": 16123
+      "startMs": 35175,
+      "endMs": 35706
     },
     {
       "text": " <h1>",
-      "startMs": 16123,
-      "endMs": 16241,
+      "startMs": 35706,
+      "endMs": 36015,
       "pageBreakAfter": true
     },
     {
       "text": " is",
-      "startMs": 16241,
-      "endMs": 16326
+      "startMs": 36015,
+      "endMs": 36237
     },
     {
       "text": " the",
-      "startMs": 16326,
-      "endMs": 16428
+      "startMs": 36237,
+      "endMs": 36502
     },
     {
       "text": " highest",
-      "startMs": 16428,
-      "endMs": 16598
+      "startMs": 36502,
+      "endMs": 36944
     },
     {
       "text": " section",
-      "startMs": 16598,
-      "endMs": 16767,
+      "startMs": 36944,
+      "endMs": 37387,
       "pageBreakAfter": true
     },
     {
       "text": " level",
-      "startMs": 16767,
-      "endMs": 16903
+      "startMs": 37387,
+      "endMs": 37741
     },
     {
       "text": " while",
-      "startMs": 16903,
-      "endMs": 17038
+      "startMs": 37741,
+      "endMs": 38095
     },
     {
       "text": " <h6>",
-      "startMs": 17038,
-      "endMs": 17157
+      "startMs": 38095,
+      "endMs": 38404
     },
     {
       "text": " is",
-      "startMs": 17157,
-      "endMs": 17242,
+      "startMs": 38404,
+      "endMs": 38625,
       "pageBreakAfter": true
     },
     {
       "text": " the",
-      "startMs": 17242,
-      "endMs": 17344
+      "startMs": 38625,
+      "endMs": 38891
     },
     {
       "text": " lowest.",
-      "startMs": 17344,
-      "endMs": 17513,
+      "startMs": 38891,
+      "endMs": 40200,
       "pageBreakAfter": true
     },
     {
       "text": " Paragraph.",
-      "startMs": 17833,
-      "endMs": 18061
+      "startMs": 40733,
+      "endMs": 41328
     },
     {
       "text": " Xerum,",
-      "startMs": 18061,
-      "endMs": 18219
+      "startMs": 41328,
+      "endMs": 41739
     },
     {
       "text": " quo",
-      "startMs": 18219,
-      "endMs": 18324
+      "startMs": 41739,
+      "endMs": 42013
     },
     {
       "text": " qui",
-      "startMs": 18324,
-      "endMs": 18429,
+      "startMs": 42013,
+      "endMs": 42288,
       "pageBreakAfter": true
     },
     {
       "text": " aut",
-      "startMs": 18429,
-      "endMs": 18534
+      "startMs": 42288,
+      "endMs": 42562
     },
     {
       "text": " unt",
-      "startMs": 18534,
-      "endMs": 18639
+      "startMs": 42562,
+      "endMs": 42836
     },
     {
       "text": " expliquam",
-      "startMs": 18639,
-      "endMs": 18850
+      "startMs": 42836,
+      "endMs": 43385
     },
     {
       "text": " qui",
-      "startMs": 18850,
-      "endMs": 18955,
+      "startMs": 43385,
+      "endMs": 43659,
       "pageBreakAfter": true
     },
     {
       "text": " dolut",
-      "startMs": 18955,
-      "endMs": 19095
+      "startMs": 43659,
+      "endMs": 44025
     },
     {
       "text": " labo.",
-      "startMs": 19095,
-      "endMs": 19235
+      "startMs": 44025,
+      "endMs": 44390
     },
     {
       "text": " Aque",
-      "startMs": 19235,
-      "endMs": 19358
+      "startMs": 44390,
+      "endMs": 44710
     },
     {
       "text": " venitatiusda",
-      "startMs": 19358,
-      "endMs": 19621,
+      "startMs": 44710,
+      "endMs": 45396,
       "pageBreakAfter": true
     },
     {
       "text": " cum,",
-      "startMs": 19621,
-      "endMs": 19743
+      "startMs": 45396,
+      "endMs": 45716
     },
     {
       "text": " voluptionse",
-      "startMs": 19743,
-      "endMs": 19989
+      "startMs": 45716,
+      "endMs": 46356
     },
     {
       "text": " latur",
-      "startMs": 19989,
-      "endMs": 20129
+      "startMs": 46356,
+      "endMs": 46722
     },
     {
       "text": " sitiae",
-      "startMs": 20129,
-      "endMs": 20287,
+      "startMs": 46722,
+      "endMs": 47133,
       "pageBreakAfter": true
     },
     {
       "text": " dolessi",
-      "startMs": 20287,
-      "endMs": 20462
+      "startMs": 47133,
+      "endMs": 47590
     },
     {
       "text": " aut",
-      "startMs": 20462,
-      "endMs": 20567
+      "startMs": 47590,
+      "endMs": 47865
     },
     {
       "text": " parist",
-      "startMs": 20567,
-      "endMs": 20725
+      "startMs": 47865,
+      "endMs": 48276
     },
     {
       "text": " aut",
-      "startMs": 20725,
-      "endMs": 20830,
+      "startMs": 48276,
+      "endMs": 48550,
       "pageBreakAfter": true
     },
     {
       "text": " dollo",
-      "startMs": 20830,
-      "endMs": 20970
+      "startMs": 48550,
+      "endMs": 48916
     },
     {
       "text": " enim",
-      "startMs": 20970,
-      "endMs": 21093
+      "startMs": 48916,
+      "endMs": 49236
     },
     {
       "text": " qui",
-      "startMs": 21093,
-      "endMs": 21198
+      "startMs": 49236,
+      "endMs": 49510
     },
     {
       "text": " voluptate",
-      "startMs": 21198,
-      "endMs": 21408,
+      "startMs": 49510,
+      "endMs": 50059,
       "pageBreakAfter": true
     },
     {
       "text": " ma…",
-      "startMs": 21408,
-      "endMs": 21513,
+      "startMs": 50059,
+      "endMs": 51200,
       "pageBreakAfter": true
     },
     {
       "text": " Syntax.",
-      "startMs": 21833,
-      "endMs": 22453
+      "startMs": 51733,
+      "endMs": 52441
     },
     {
       "text": " Let",
-      "startMs": 22453,
-      "endMs": 22825
+      "startMs": 52441,
+      "endMs": 52865
     },
     {
       "text": " us",
-      "startMs": 22825,
-      "endMs": 23135
+      "startMs": 52865,
+      "endMs": 53219
     },
     {
       "text": " look",
-      "startMs": 23135,
-      "endMs": 23569,
+      "startMs": 53219,
+      "endMs": 53714,
       "pageBreakAfter": true
     },
     {
       "text": " at",
-      "startMs": 23569,
-      "endMs": 23879
+      "startMs": 53714,
+      "endMs": 54068
     },
     {
       "text": " the",
-      "startMs": 23879,
-      "endMs": 24251
+      "startMs": 54068,
+      "endMs": 54492
     },
     {
       "text": " code.",
-      "startMs": 24251,
-      "endMs": 24747,
+      "startMs": 54492,
+      "endMs": 55700,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Blockquotes.",
+      "startMs": 56233,
+      "endMs": 56909
+    },
+    {
+      "text": " The",
+      "startMs": 56909,
+      "endMs": 57179
+    },
+    {
+      "text": " blockquote",
+      "startMs": 57179,
+      "endMs": 57765
+    },
+    {
+      "text": " element",
+      "startMs": 57765,
+      "endMs": 58215,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " represents",
+      "startMs": 58215,
+      "endMs": 58801
+    },
+    {
+      "text": " content",
+      "startMs": 58801,
+      "endMs": 59251
+    },
+    {
+      "text": " that",
+      "startMs": 59251,
+      "endMs": 59566
+    },
+    {
+      "text": " is",
+      "startMs": 59566,
+      "endMs": 59792,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " quoted",
+      "startMs": 59792,
+      "endMs": 60197
+    },
+    {
+      "text": " from",
+      "startMs": 60197,
+      "endMs": 60512
+    },
+    {
+      "text": " another",
+      "startMs": 60512,
+      "endMs": 60963
+    },
+    {
+      "text": " source,",
+      "startMs": 60963,
+      "endMs": 61413,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " optionally",
+      "startMs": 61413,
+      "endMs": 61999
+    },
+    {
+      "text": " with",
+      "startMs": 61999,
+      "endMs": 62314
+    },
+    {
+      "text": " a",
+      "startMs": 62314,
+      "endMs": 62494
+    },
+    {
+      "text": " citation",
+      "startMs": 62494,
+      "endMs": 62989,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " which",
+      "startMs": 62989,
+      "endMs": 63350
+    },
+    {
+      "text": " must",
+      "startMs": 63350,
+      "endMs": 63665
+    },
+    {
+      "text": " be",
+      "startMs": 63665,
+      "endMs": 63890
+    },
+    {
+      "text": " within",
+      "startMs": 63890,
+      "endMs": 64296,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " a",
+      "startMs": 64296,
+      "endMs": 64476
+    },
+    {
+      "text": " footer",
+      "startMs": 64476,
+      "endMs": 64881
+    },
+    {
+      "text": " or",
+      "startMs": 64881,
+      "endMs": 65106
+    },
+    {
+      "text": " cite…",
+      "startMs": 65106,
+      "endMs": 66333,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Blockquote",
+      "startMs": 66867,
+      "endMs": 67443
+    },
+    {
+      "text": " without",
+      "startMs": 67443,
+      "endMs": 67886
+    },
+    {
+      "text": " attribution.",
+      "startMs": 67886,
+      "endMs": 68551
+    },
+    {
+      "text": " Let",
+      "startMs": 68551,
+      "endMs": 68817,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " us",
+      "startMs": 68817,
+      "endMs": 69039
+    },
+    {
+      "text": " look",
+      "startMs": 69039,
+      "endMs": 69349
+    },
+    {
+      "text": " at",
+      "startMs": 69349,
+      "endMs": 69571
+    },
+    {
+      "text": " the",
+      "startMs": 69571,
+      "endMs": 69837,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " code.",
+      "startMs": 69837,
+      "endMs": 70833,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Blockquote",
+      "startMs": 71367,
+      "endMs": 71967
+    },
+    {
+      "text": " with",
+      "startMs": 71967,
+      "endMs": 72290
+    },
+    {
+      "text": " attribution.",
+      "startMs": 72290,
+      "endMs": 72983
+    },
+    {
+      "text": " Let",
+      "startMs": 72983,
+      "endMs": 73260,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " us",
+      "startMs": 73260,
+      "endMs": 73491
+    },
+    {
+      "text": " look",
+      "startMs": 73491,
+      "endMs": 73814
+    },
+    {
+      "text": " at",
+      "startMs": 73814,
+      "endMs": 74045
+    },
+    {
+      "text": " the",
+      "startMs": 74045,
+      "endMs": 74322,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " code.",
+      "startMs": 74322,
+      "endMs": 75333,
       "pageBreakAfter": true
     },
     {
       "text": " Read",
-      "startMs": 25000,
-      "endMs": 25285
+      "startMs": 75867,
+      "endMs": 76237
     },
     {
       "text": " the",
-      "startMs": 25285,
-      "endMs": 25530
+      "startMs": 76237,
+      "endMs": 76554
     },
     {
       "text": " full",
-      "startMs": 25530,
-      "endMs": 25815
+      "startMs": 76554,
+      "endMs": 76924
     },
     {
       "text": " article.",
-      "startMs": 25815,
-      "endMs": 26264,
+      "startMs": 76924,
+      "endMs": 77505,
       "pageBreakAfter": true
     },
     {
       "text": " New",
-      "startMs": 26264,
-      "endMs": 26508
+      "startMs": 77505,
+      "endMs": 77822
     },
     {
       "text": " posts",
-      "startMs": 26508,
-      "endMs": 26834
+      "startMs": 77822,
+      "endMs": 78245
     },
     {
       "text": " every",
-      "startMs": 26834,
-      "endMs": 27160
+      "startMs": 78245,
+      "endMs": 78668
     },
     {
       "text": " week",
-      "startMs": 27160,
-      "endMs": 27446,
+      "startMs": 78668,
+      "endMs": 79038,
       "pageBreakAfter": true
     },
     {
       "text": " on",
-      "startMs": 27446,
-      "endMs": 27649
+      "startMs": 79038,
+      "endMs": 79302
     },
     {
       "text": " the",
-      "startMs": 27649,
-      "endMs": 27894
+      "startMs": 79302,
+      "endMs": 79619
     },
     {
       "text": " blog.",
-      "startMs": 27894,
-      "endMs": 28220,
+      "startMs": 79619,
+      "endMs": 80833,
       "pageBreakAfter": true
     }
   ],

@@ -1,0 +1,53 @@
+From 42dce59c4f337b5cee657556cc7edbd8fd5a9a44 Mon Sep 17 00:00:00 2001
+From: Cline <cline@users.noreply.github.com>
+Date: Thu, 15 Oct 2026 21:24:42 +0000
+Subject: [PATCH] ci(schedule-posts): move the staged OG card to the post's
+ entry id
+
+Astro lowercases the entry id, so a card staged as 'My Post (draft).png' would
+land at /og/My Post (draft).png while the page requests /og/my-post-draft.png
+(404). Normalise the card name on publish and report the normalised slug to the
+LinkedIn/IndexNow steps so they build the URL the site actually serves.
+
+scripts/check-og-cards.mjs (previous commit) guards the invariant at build time.
+---
+ .github/workflows/schedule-posts.yml | 14 +++++++++++---
+ 1 file changed, 11 insertions(+), 3 deletions(-)
+
+diff --git a/.github/workflows/schedule-posts.yml b/.github/workflows/schedule-posts.yml
+index 795d54d..b08a079 100644
+--- a/.github/workflows/schedule-posts.yml
++++ b/.github/workflows/schedule-posts.yml
+@@ -71,10 +71,16 @@ jobs:
+           # 2. Stamp pubDate with the actual publish day
+           sed -i "s/^pubDate: .*/pubDate: \"$TODAY\"/" "src/content/blog/$FILE"
+ 
+-          # 3. Move the social card if one was staged for this post
++          # 3. Move the social card if one was staged for this post. The card
++          # must be stored under the post's entry id — Astro lowercases the file
++          # name, drops punctuation and turns spaces into dashes — because the
++          # page requests /og/<id>.png. A card left under the raw file name
++          # 404s on LinkedIn/X (guarded by scripts/check-og-cards.mjs).
++          SLUG=$(printf '%s' "${FILE%.md}" | tr '[:upper:]' '[:lower:]' | sed -E 's/[^a-z0-9 _-]//g; s/ /-/g')
+           CARD="pending-posts/og/${FILE%.md}.png"
++          [ -f "$CARD" ] || CARD="pending-posts/og/${SLUG}.png"
+           if [ -f "$CARD" ]; then
+-            mv "$CARD" "public/og/"
++            mv "$CARD" "public/og/${SLUG}.png"
+           fi
+ 
+           # 4. Commit and push
+@@ -85,7 +91,9 @@ jobs:
+           git push
+ 
+           echo "Published $FILE on $TODAY"
+-          echo "slug=${FILE%.md}" >> "$GITHUB_OUTPUT"
++          # Normalised so the LinkedIn/IndexNow steps build the URL the site
++          # actually serves (/blog/<entry-id>/), not the raw file name.
++          echo "slug=${SLUG}" >> "$GITHUB_OUTPUT"
+ 
+       # The publish commit above is pushed with the automatic GITHUB_TOKEN,
+       # which does not trigger other workflows — so the LinkedIn teaser is
+-- 
+2.39.5
+

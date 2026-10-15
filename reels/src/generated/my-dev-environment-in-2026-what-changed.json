@@ -10,571 +10,576 @@
     "Software Development"
   ],
   "url": "https://www.techtips.fun/blog/my-dev-environment-in-2026-what-changed/",
-  "theme": "github-dark",
-  "durationInFrames": 570,
   "scenes": [
     {
       "type": "title",
       "kicker": "Developer Productivity",
       "title": "My dev environment in 2026 — what changed, what stayed",
       "subtitle": "I do this annual audit of my dev setup. What tools did I keep? What did I finally ditch?",
-      "durationInFrames": 105
+      "image": {
+        "src": "post-media/my-dev-environment-in-2026-what-changed/01-dev-environment.webp",
+        "width": 960,
+        "height": 480
+      },
+      "durationInFrames": 183
     },
     {
       "type": "point",
       "kicker": "Developer Productivity",
       "heading": "What stayed",
       "body": "Neovim — still my primary editor. LazyVim makes config maintenance bearable. Tmux — session management. I live in it.",
-      "durationInFrames": 120
+      "durationInFrames": 284
     },
     {
       "type": "point",
       "kicker": "Developer Productivity",
       "heading": "What’s new",
       "body": "Zellij — I’m testing it as a tmux replacement. The UI is friendlier. Ghostty — fastest terminal I’ve used. GPU-rendered, minimal.",
-      "durationInFrames": 120
+      "durationInFrames": 307
     },
     {
       "type": "point",
       "kicker": "Developer Productivity",
       "heading": "What I dropped",
       "body": "VS Code is gone from my daily rotation. I used it for 4 years, but Neovim + Cursor cover everything it did, better.",
-      "durationInFrames": 120
+      "durationInFrames": 330
     },
     {
       "type": "outro",
       "heading": "Read the full article",
       "body": "New posts every week on the blog.",
       "url": "techtips.fun",
-      "durationInFrames": 105
+      "durationInFrames": 165
     }
   ],
+  "theme": "github-dark",
+  "durationInFrames": 1269,
   "captions": [
     {
       "text": " I",
-      "startMs": 0,
-      "endMs": 101
+      "startMs": 500,
+      "endMs": 648
     },
     {
       "text": " do",
-      "startMs": 101,
-      "endMs": 228
+      "startMs": 648,
+      "endMs": 833
     },
     {
       "text": " this",
-      "startMs": 228,
-      "endMs": 406
+      "startMs": 833,
+      "endMs": 1092
     },
     {
       "text": " annual",
-      "startMs": 406,
-      "endMs": 634,
+      "startMs": 1092,
+      "endMs": 1425,
       "pageBreakAfter": true
     },
     {
       "text": " audit",
-      "startMs": 634,
-      "endMs": 837
+      "startMs": 1425,
+      "endMs": 1721
     },
     {
       "text": " of",
-      "startMs": 837,
-      "endMs": 963
+      "startMs": 1721,
+      "endMs": 1906
     },
     {
       "text": " my",
-      "startMs": 963,
-      "endMs": 1090
+      "startMs": 1906,
+      "endMs": 2091
     },
     {
       "text": " dev",
-      "startMs": 1090,
-      "endMs": 1242,
+      "startMs": 2091,
+      "endMs": 2313,
       "pageBreakAfter": true
     },
     {
       "text": " setup.",
-      "startMs": 1242,
-      "endMs": 1471
+      "startMs": 2313,
+      "endMs": 2646
     },
     {
       "text": " What",
-      "startMs": 1471,
-      "endMs": 1648
+      "startMs": 2646,
+      "endMs": 2906
     },
     {
       "text": " tools",
-      "startMs": 1648,
-      "endMs": 1851
+      "startMs": 2906,
+      "endMs": 3202
     },
     {
       "text": " did",
-      "startMs": 1851,
-      "endMs": 2003,
+      "startMs": 3202,
+      "endMs": 3424,
       "pageBreakAfter": true
     },
     {
       "text": " I",
-      "startMs": 2003,
-      "endMs": 2104
+      "startMs": 3424,
+      "endMs": 3572
     },
     {
       "text": " keep?",
-      "startMs": 2104,
-      "endMs": 2307
+      "startMs": 3572,
+      "endMs": 3868
     },
     {
       "text": " What",
-      "startMs": 2307,
-      "endMs": 2485
+      "startMs": 3868,
+      "endMs": 4127
     },
     {
       "text": " did",
-      "startMs": 2485,
-      "endMs": 2637,
+      "startMs": 4127,
+      "endMs": 4349,
       "pageBreakAfter": true
     },
     {
       "text": " I",
-      "startMs": 2637,
-      "endMs": 2738
+      "startMs": 4349,
+      "endMs": 4497
     },
     {
       "text": " finally",
-      "startMs": 2738,
-      "endMs": 2992
+      "startMs": 4497,
+      "endMs": 4867
     },
     {
       "text": " ditch?",
-      "startMs": 2992,
-      "endMs": 3220,
+      "startMs": 4867,
+      "endMs": 6067,
       "pageBreakAfter": true
     },
     {
       "text": " What",
-      "startMs": 3500,
-      "endMs": 3649
+      "startMs": 6600,
+      "endMs": 6926
     },
     {
       "text": " stayed.",
-      "startMs": 3649,
-      "endMs": 3862
+      "startMs": 6926,
+      "endMs": 7393
     },
     {
       "text": " Neovim",
-      "startMs": 3862,
-      "endMs": 4053
+      "startMs": 7393,
+      "endMs": 7812
     },
     {
       "text": " —",
-      "startMs": 4053,
-      "endMs": 4138,
+      "startMs": 7812,
+      "endMs": 7999,
       "pageBreakAfter": true
     },
     {
       "text": " still",
-      "startMs": 4138,
-      "endMs": 4308
+      "startMs": 7999,
+      "endMs": 8372
     },
     {
       "text": " my",
-      "startMs": 4308,
-      "endMs": 4415
+      "startMs": 8372,
+      "endMs": 8605
     },
     {
       "text": " primary",
-      "startMs": 4415,
-      "endMs": 4627
+      "startMs": 8605,
+      "endMs": 9071
     },
     {
       "text": " editor.",
-      "startMs": 4627,
-      "endMs": 4840,
+      "startMs": 9071,
+      "endMs": 9538,
       "pageBreakAfter": true
     },
     {
       "text": " LazyVim",
-      "startMs": 4840,
-      "endMs": 5053
+      "startMs": 9538,
+      "endMs": 10004
     },
     {
       "text": " makes",
-      "startMs": 5053,
-      "endMs": 5223
+      "startMs": 10004,
+      "endMs": 10377
     },
     {
       "text": " config",
-      "startMs": 5223,
-      "endMs": 5414
+      "startMs": 10377,
+      "endMs": 10797
     },
     {
       "text": " maintenance",
-      "startMs": 5414,
-      "endMs": 5712,
+      "startMs": 10797,
+      "endMs": 11449,
       "pageBreakAfter": true
     },
     {
       "text": " bearable.",
-      "startMs": 5712,
-      "endMs": 5968
+      "startMs": 11449,
+      "endMs": 12009
     },
     {
       "text": " Tmux",
-      "startMs": 5968,
-      "endMs": 6116
+      "startMs": 12009,
+      "endMs": 12335
     },
     {
       "text": " —",
-      "startMs": 6116,
-      "endMs": 6202
+      "startMs": 12335,
+      "endMs": 12522
     },
     {
       "text": " session",
-      "startMs": 6202,
-      "endMs": 6414,
+      "startMs": 12522,
+      "endMs": 12988,
       "pageBreakAfter": true
     },
     {
       "text": " management.",
-      "startMs": 6414,
-      "endMs": 6712
+      "startMs": 12988,
+      "endMs": 13641
     },
     {
       "text": " I",
-      "startMs": 6712,
-      "endMs": 6797
+      "startMs": 13641,
+      "endMs": 13827
     },
     {
       "text": " live",
-      "startMs": 6797,
-      "endMs": 6946
+      "startMs": 13827,
+      "endMs": 14154
     },
     {
       "text": " in",
-      "startMs": 6946,
-      "endMs": 7052,
+      "startMs": 14154,
+      "endMs": 14387,
       "pageBreakAfter": true
     },
     {
       "text": " it.",
-      "startMs": 7052,
-      "endMs": 7180,
+      "startMs": 14387,
+      "endMs": 15533,
       "pageBreakAfter": true
     },
     {
       "text": " What’s",
-      "startMs": 7500,
-      "endMs": 7676
+      "startMs": 16067,
+      "endMs": 16490
     },
     {
       "text": " new.",
-      "startMs": 7676,
-      "endMs": 7813
+      "startMs": 16490,
+      "endMs": 16818
     },
     {
       "text": " Zellij",
-      "startMs": 7813,
-      "endMs": 7989
+      "startMs": 16818,
+      "endMs": 17241
     },
     {
       "text": " —",
-      "startMs": 7989,
-      "endMs": 8068,
+      "startMs": 17241,
+      "endMs": 17429,
       "pageBreakAfter": true
     },
     {
       "text": " I’m",
-      "startMs": 8068,
-      "endMs": 8185
+      "startMs": 17429,
+      "endMs": 17711
     },
     {
       "text": " testing",
-      "startMs": 8185,
-      "endMs": 8381
+      "startMs": 17711,
+      "endMs": 18181
     },
     {
       "text": " it",
-      "startMs": 8381,
-      "endMs": 8479
+      "startMs": 18181,
+      "endMs": 18416
     },
     {
       "text": " as",
-      "startMs": 8479,
-      "endMs": 8577,
+      "startMs": 18416,
+      "endMs": 18651,
       "pageBreakAfter": true
     },
     {
       "text": " a",
-      "startMs": 8577,
-      "endMs": 8655
+      "startMs": 18651,
+      "endMs": 18839
     },
     {
       "text": " tmux",
-      "startMs": 8655,
-      "endMs": 8792
+      "startMs": 18839,
+      "endMs": 19168
     },
     {
       "text": " replacement.",
-      "startMs": 8792,
-      "endMs": 9086
+      "startMs": 19168,
+      "endMs": 19873
     },
     {
       "text": " The",
-      "startMs": 9086,
-      "endMs": 9203,
+      "startMs": 19873,
+      "endMs": 20154,
       "pageBreakAfter": true
     },
     {
       "text": " UI",
-      "startMs": 9203,
-      "endMs": 9301
+      "startMs": 20154,
+      "endMs": 20389
     },
     {
       "text": " is",
-      "startMs": 9301,
-      "endMs": 9399
+      "startMs": 20389,
+      "endMs": 20624
     },
     {
       "text": " friendlier.",
-      "startMs": 9399,
-      "endMs": 9673
+      "startMs": 20624,
+      "endMs": 21282
     },
     {
       "text": " Ghostty",
-      "startMs": 9673,
-      "endMs": 9869,
+      "startMs": 21282,
+      "endMs": 21752,
       "pageBreakAfter": true
     },
     {
       "text": " —",
-      "startMs": 9869,
-      "endMs": 9947
+      "startMs": 21752,
+      "endMs": 21940
     },
     {
       "text": " fastest",
-      "startMs": 9947,
-      "endMs": 10143
+      "startMs": 21940,
+      "endMs": 22410
     },
     {
       "text": " terminal",
-      "startMs": 10143,
-      "endMs": 10358
+      "startMs": 22410,
+      "endMs": 22927
     },
     {
       "text": " I’ve",
-      "startMs": 10358,
-      "endMs": 10495,
+      "startMs": 22927,
+      "endMs": 23255,
       "pageBreakAfter": true
     },
     {
       "text": " used.",
-      "startMs": 10495,
-      "endMs": 10651
+      "startMs": 23255,
+      "endMs": 23631
     },
     {
       "text": " GPU-rendered,",
-      "startMs": 10651,
-      "endMs": 10965
+      "startMs": 23631,
+      "endMs": 24383
     },
     {
       "text": " minimal.",
-      "startMs": 10965,
-      "endMs": 11180,
+      "startMs": 24383,
+      "endMs": 25767,
       "pageBreakAfter": true
     },
     {
       "text": " What",
-      "startMs": 11500,
-      "endMs": 11640
+      "startMs": 26300,
+      "endMs": 26665
     },
     {
       "text": " I",
-      "startMs": 11640,
-      "endMs": 11720
+      "startMs": 26665,
+      "endMs": 26874
     },
     {
       "text": " dropped.",
-      "startMs": 11720,
-      "endMs": 11940
+      "startMs": 26874,
+      "endMs": 27448
     },
     {
       "text": " VS",
-      "startMs": 11940,
-      "endMs": 12040,
+      "startMs": 27448,
+      "endMs": 27709,
       "pageBreakAfter": true
     },
     {
       "text": " Code",
-      "startMs": 12040,
-      "endMs": 12180
+      "startMs": 27709,
+      "endMs": 28074
     },
     {
       "text": " is",
-      "startMs": 12180,
-      "endMs": 12280
+      "startMs": 28074,
+      "endMs": 28335
     },
     {
       "text": " gone",
-      "startMs": 12280,
-      "endMs": 12420
+      "startMs": 28335,
+      "endMs": 28700
     },
     {
       "text": " from",
-      "startMs": 12420,
-      "endMs": 12560,
+      "startMs": 28700,
+      "endMs": 29065,
       "pageBreakAfter": true
     },
     {
       "text": " my",
-      "startMs": 12560,
-      "endMs": 12660
+      "startMs": 29065,
+      "endMs": 29326
     },
     {
       "text": " daily",
-      "startMs": 12660,
-      "endMs": 12820
+      "startMs": 29326,
+      "endMs": 29743
     },
     {
       "text": " rotation.",
-      "startMs": 12820,
-      "endMs": 13060
+      "startMs": 29743,
+      "endMs": 30370
     },
     {
       "text": " I",
-      "startMs": 13060,
-      "endMs": 13140,
+      "startMs": 30370,
+      "endMs": 30578,
       "pageBreakAfter": true
     },
     {
       "text": " used",
-      "startMs": 13140,
-      "endMs": 13280
+      "startMs": 30578,
+      "endMs": 30943
     },
     {
       "text": " it",
-      "startMs": 13280,
-      "endMs": 13380
+      "startMs": 30943,
+      "endMs": 31204
     },
     {
       "text": " for",
-      "startMs": 13380,
-      "endMs": 13500
+      "startMs": 31204,
+      "endMs": 31517
     },
     {
       "text": " 4",
-      "startMs": 13500,
-      "endMs": 13580,
+      "startMs": 31517,
+      "endMs": 31726,
       "pageBreakAfter": true
     },
     {
       "text": " years,",
-      "startMs": 13580,
-      "endMs": 13760
+      "startMs": 31726,
+      "endMs": 32196
     },
     {
       "text": " but",
-      "startMs": 13760,
-      "endMs": 13880
+      "startMs": 32196,
+      "endMs": 32509
     },
     {
       "text": " Neovim",
-      "startMs": 13880,
-      "endMs": 14060
+      "startMs": 32509,
+      "endMs": 32978
     },
     {
       "text": " +",
-      "startMs": 14060,
-      "endMs": 14140,
+      "startMs": 32978,
+      "endMs": 33187,
       "pageBreakAfter": true
     },
     {
       "text": " Cursor",
-      "startMs": 14140,
-      "endMs": 14320
+      "startMs": 33187,
+      "endMs": 33657
     },
     {
       "text": " cover",
-      "startMs": 14320,
-      "endMs": 14480
+      "startMs": 33657,
+      "endMs": 34074
     },
     {
       "text": " everything",
-      "startMs": 14480,
-      "endMs": 14740
+      "startMs": 34074,
+      "endMs": 34752
     },
     {
       "text": " it",
-      "startMs": 14740,
-      "endMs": 14840,
+      "startMs": 34752,
+      "endMs": 35013,
       "pageBreakAfter": true
     },
     {
       "text": " did,",
-      "startMs": 14840,
-      "endMs": 14980
+      "startMs": 35013,
+      "endMs": 35378
     },
     {
       "text": " better.",
-      "startMs": 14980,
-      "endMs": 15180,
+      "startMs": 35378,
+      "endMs": 36767,
       "pageBreakAfter": true
     },
     {
       "text": " Read",
-      "startMs": 15500,
-      "endMs": 15785
+      "startMs": 37300,
+      "endMs": 37670
     },
     {
       "text": " the",
-      "startMs": 15785,
-      "endMs": 16030
+      "startMs": 37670,
+      "endMs": 37987
     },
     {
       "text": " full",
-      "startMs": 16030,
-      "endMs": 16315
+      "startMs": 37987,
+      "endMs": 38357
     },
     {
       "text": " article.",
-      "startMs": 16315,
-      "endMs": 16764,
+      "startMs": 38357,
+      "endMs": 38938,
       "pageBreakAfter": true
     },
     {
       "text": " New",
-      "startMs": 16764,
-      "endMs": 17008
+      "startMs": 38938,
+      "endMs": 39255
     },
     {
       "text": " posts",
-      "startMs": 17008,
-      "endMs": 17334
+      "startMs": 39255,
+      "endMs": 39678
     },
     {
       "text": " every",
-      "startMs": 17334,
-      "endMs": 17660
+      "startMs": 39678,
+      "endMs": 40101
     },
     {
       "text": " week",
-      "startMs": 17660,
-      "endMs": 17946,
+      "startMs": 40101,
+      "endMs": 40471,
       "pageBreakAfter": true
     },
     {
       "text": " on",
-      "startMs": 17946,
-      "endMs": 18149
+      "startMs": 40471,
+      "endMs": 40735
     },
     {
       "text": " the",
-      "startMs": 18149,
-      "endMs": 18394
+      "startMs": 40735,
+      "endMs": 41052
     },
     {
       "text": " blog.",
-      "startMs": 18394,
-      "endMs": 18720,
+      "startMs": 41052,
+      "endMs": 42267,
       "pageBreakAfter": true
     }
   ],

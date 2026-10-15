@@ -28,6 +28,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { postSlug } from '../src/utils/post-slug.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const contentDir = path.join(root, 'src', 'content', 'blog');
@@ -80,7 +81,7 @@ async function readPosts() {
   for (const file of files) {
     const frontmatter = parseFrontmatter(await fs.readFile(path.join(contentDir, file), 'utf8'));
     posts.push({
-      slug: file.replace(/\.(md|mdx)$/i, ''),
+      slug: postSlug(file),
       title: frontmatter.title,
       description: frontmatter.description,
       pubDate: frontmatter.pubDate ? new Date(frontmatter.pubDate) : new Date(0),

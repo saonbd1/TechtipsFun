@@ -1,6 +1,6 @@
 {
   "slug": "how-to-add-onedrive-to-windows-file-explorer",
-  "title": "Missing OneDrive on Windows 11 PC, How to Add It to File Explorer?",
+  "title": "OneDrive Missing in Windows 11? How to Add It to File Explorer",
   "description": "Learn how to add OneDrive to File Explorer on Windows 10 and Windows 11. Follow setup steps and fix a OneDrive folder that is not showing in File Explorer.",
   "category": "PC Troubleshooting",
   "tags": [
@@ -10,954 +10,1117 @@
     "Developer Tools"
   ],
   "url": "https://www.techtips.fun/blog/how-to-add-onedrive-to-windows-file-explorer/",
-  "theme": "github-dark",
-  "durationInFrames": 930,
   "scenes": [
     {
       "type": "title",
       "kicker": "PC Troubleshooting",
-      "title": "Missing OneDrive on Windows 11 PC, How to Add It to File Explorer?",
+      "title": "OneDrive Missing in Windows 11? How to Add It to File Explorer",
       "subtitle": "Learn how to add OneDrive to File Explorer on Windows 10 and Windows 11.",
-      "durationInFrames": 105
+      "image": {
+        "src": "post-media/how-to-add-onedrive-to-windows-file-explorer/01-onedrive-windows11-cover.webp",
+        "width": 1600,
+        "height": 1280
+      },
+      "durationInFrames": 183
     },
     {
       "type": "point",
       "kicker": "PC Troubleshooting",
       "heading": "Quick answer",
       "body": "To add OneDrive to File Explorer, install or open the OneDrive app, sign in with your Microsoft account, and complete OneDrive Setup.",
-      "durationInFrames": 120
+      "durationInFrames": 319
     },
     {
       "type": "point",
       "kicker": "PC Troubleshooting",
       "heading": "What you need to check before you start",
-      "body": "You need a Windows 10 or Windows 11 PC with an internet connection. You also need a Microsoft personal account, work account, or school account.",
-      "durationInFrames": 120
+      "body": "You need a Windows 10 or Windows 11 PC with an internet connection. You also need a Microsoft personal…",
+      "image": {
+        "src": "post-media/how-to-add-onedrive-to-windows-file-explorer/02-search-onedrive-start-menu.webp",
+        "width": 791,
+        "height": 355
+      },
+      "durationInFrames": 366
     },
     {
       "type": "point",
       "kicker": "PC Troubleshooting",
       "heading": "Step 1: Download and install OneDrive manually",
       "body": "Download OneDrive from the official OneDrive download page, then install the app.",
-      "durationInFrames": 120
+      "image": {
+        "src": "post-media/how-to-add-onedrive-to-windows-file-explorer/03-download-onedrive-manually.webp",
+        "width": 878,
+        "height": 324
+      },
+      "durationInFrames": 297
     },
     {
       "type": "point",
       "kicker": "PC Troubleshooting",
       "heading": "Step 2: Sign in to OneDrive",
       "body": "When OneDrive Setup opens, enter your Microsoft account email address and select Sign in.",
-      "durationInFrames": 120
+      "image": {
+        "src": "post-media/how-to-add-onedrive-to-windows-file-explorer/04-onedrive-signin-page-login.webp",
+        "width": 586,
+        "height": 546
+      },
+      "durationInFrames": 309
     },
     {
       "type": "point",
       "kicker": "PC Troubleshooting",
       "heading": "Step 3: Select your preferred OneDrive folder location",
       "body": "OneDrive Setup shows the location for your OneDrive folder. Select Next to use the default location.",
-      "durationInFrames": 120
+      "image": {
+        "src": "post-media/how-to-add-onedrive-to-windows-file-explorer/05-select-onedrive-sync-folder.webp",
+        "width": 575,
+        "height": 524
+      },
+      "durationInFrames": 355
     },
     {
       "type": "point",
       "kicker": "PC Troubleshooting",
       "heading": "Step 4: Review Files On-Demand",
       "body": "OneDrive Setup explains Files On-Demand. This feature lets you see OneDrive files without downloading every file to your PC.",
-      "durationInFrames": 120
+      "durationInFrames": 319
+    },
+    {
+      "type": "point",
+      "kicker": "PC Troubleshooting",
+      "heading": "Step 5: Open OneDrive in File Explorer",
+      "body": "Open File Explorer. Select the File Explorer icon on the taskbar or press Windows key + E. Look in the left panel for OneDrive.",
+      "durationInFrames": 330
     },
     {
       "type": "outro",
       "heading": "Read the full article",
       "body": "New posts every week on the blog.",
       "url": "techtips.fun",
-      "durationInFrames": 105
+      "durationInFrames": 165
     }
   ],
+  "theme": "github-dark",
+  "durationInFrames": 2643,
   "captions": [
     {
       "text": " Learn",
-      "startMs": 0,
-      "endMs": 255
+      "startMs": 500,
+      "endMs": 872
     },
     {
       "text": " how",
-      "startMs": 255,
-      "endMs": 446
+      "startMs": 872,
+      "endMs": 1151
     },
     {
       "text": " to",
-      "startMs": 446,
-      "endMs": 606
+      "startMs": 1151,
+      "endMs": 1384
     },
     {
       "text": " add",
-      "startMs": 606,
-      "endMs": 797,
+      "startMs": 1384,
+      "endMs": 1663,
       "pageBreakAfter": true
     },
     {
       "text": " OneDrive",
-      "startMs": 797,
-      "endMs": 1148
+      "startMs": 1663,
+      "endMs": 2175
     },
     {
       "text": " to",
-      "startMs": 1148,
-      "endMs": 1307
+      "startMs": 2175,
+      "endMs": 2408
     },
     {
       "text": " File",
-      "startMs": 1307,
-      "endMs": 1530
+      "startMs": 2408,
+      "endMs": 2734
     },
     {
       "text": " Explorer",
-      "startMs": 1530,
-      "endMs": 1881,
+      "startMs": 2734,
+      "endMs": 3246,
       "pageBreakAfter": true
     },
     {
       "text": " on",
-      "startMs": 1881,
-      "endMs": 2040
+      "startMs": 3246,
+      "endMs": 3478
     },
     {
       "text": " Windows",
-      "startMs": 2040,
-      "endMs": 2359
+      "startMs": 3478,
+      "endMs": 3944
     },
     {
       "text": " 10",
-      "startMs": 2359,
-      "endMs": 2519
+      "startMs": 3944,
+      "endMs": 4176
     },
     {
       "text": " and",
-      "startMs": 2519,
-      "endMs": 2710,
+      "startMs": 4176,
+      "endMs": 4455,
       "pageBreakAfter": true
     },
     {
       "text": " Windows",
-      "startMs": 2710,
-      "endMs": 3029
+      "startMs": 4455,
+      "endMs": 4921
     },
     {
       "text": " 11.",
-      "startMs": 3029,
-      "endMs": 3220,
+      "startMs": 4921,
+      "endMs": 6067,
       "pageBreakAfter": true
     },
     {
       "text": " Quick",
-      "startMs": 3500,
-      "endMs": 3650
+      "startMs": 6600,
+      "endMs": 6977
     },
     {
       "text": " answer.",
-      "startMs": 3650,
-      "endMs": 3838
+      "startMs": 6977,
+      "endMs": 7448
     },
     {
       "text": " To",
-      "startMs": 3838,
-      "endMs": 3932
+      "startMs": 7448,
+      "endMs": 7684
     },
     {
       "text": " add",
-      "startMs": 3932,
-      "endMs": 4044,
+      "startMs": 7684,
+      "endMs": 7966,
       "pageBreakAfter": true
     },
     {
       "text": " OneDrive",
-      "startMs": 4044,
-      "endMs": 4251
+      "startMs": 7966,
+      "endMs": 8484
     },
     {
       "text": " to",
-      "startMs": 4251,
-      "endMs": 4345
+      "startMs": 8484,
+      "endMs": 8720
     },
     {
       "text": " File",
-      "startMs": 4345,
-      "endMs": 4476
+      "startMs": 8720,
+      "endMs": 9050
     },
     {
       "text": " Explorer,",
-      "startMs": 4476,
-      "endMs": 4702,
+      "startMs": 9050,
+      "endMs": 9615,
       "pageBreakAfter": true
     },
     {
       "text": " install",
-      "startMs": 4702,
-      "endMs": 4889
+      "startMs": 9615,
+      "endMs": 10086
     },
     {
       "text": " or",
-      "startMs": 4889,
-      "endMs": 4983
+      "startMs": 10086,
+      "endMs": 10322
     },
     {
       "text": " open",
-      "startMs": 4983,
-      "endMs": 5115
+      "startMs": 10322,
+      "endMs": 10651
     },
     {
       "text": " the",
-      "startMs": 5115,
-      "endMs": 5227,
+      "startMs": 10651,
+      "endMs": 10934,
       "pageBreakAfter": true
     },
     {
       "text": " OneDrive",
-      "startMs": 5227,
-      "endMs": 5434
+      "startMs": 10934,
+      "endMs": 11452
     },
     {
       "text": " app,",
-      "startMs": 5434,
-      "endMs": 5565
+      "startMs": 11452,
+      "endMs": 11782
     },
     {
       "text": " sign",
-      "startMs": 5565,
-      "endMs": 5697
+      "startMs": 11782,
+      "endMs": 12112
     },
     {
       "text": " in",
-      "startMs": 5697,
-      "endMs": 5791,
+      "startMs": 12112,
+      "endMs": 12347,
       "pageBreakAfter": true
     },
     {
       "text": " with",
-      "startMs": 5791,
-      "endMs": 5922
+      "startMs": 12347,
+      "endMs": 12677
     },
     {
       "text": " your",
-      "startMs": 5922,
-      "endMs": 6053
+      "startMs": 12677,
+      "endMs": 13007
     },
     {
       "text": " Microsoft",
-      "startMs": 6053,
-      "endMs": 6279
+      "startMs": 13007,
+      "endMs": 13572
     },
     {
       "text": " account,",
-      "startMs": 6279,
-      "endMs": 6485,
+      "startMs": 13572,
+      "endMs": 14090,
       "pageBreakAfter": true
     },
     {
       "text": " and",
-      "startMs": 6485,
-      "endMs": 6598
+      "startMs": 14090,
+      "endMs": 14373
     },
     {
       "text": " complete",
-      "startMs": 6598,
-      "endMs": 6804
+      "startMs": 14373,
+      "endMs": 14891
     },
     {
       "text": " OneDrive",
-      "startMs": 6804,
-      "endMs": 7011
+      "startMs": 14891,
+      "endMs": 15409
     },
     {
       "text": " Setup.",
-      "startMs": 7011,
-      "endMs": 7180,
+      "startMs": 15409,
+      "endMs": 16700,
       "pageBreakAfter": true
     },
     {
       "text": " What",
-      "startMs": 7500,
-      "endMs": 7602
+      "startMs": 17233,
+      "endMs": 17613
     },
     {
       "text": " you",
-      "startMs": 7602,
-      "endMs": 7690
+      "startMs": 17613,
+      "endMs": 17939
     },
     {
       "text": " need",
-      "startMs": 7690,
-      "endMs": 7792
+      "startMs": 17939,
+      "endMs": 18319
     },
     {
       "text": " to",
-      "startMs": 7792,
-      "endMs": 7865,
+      "startMs": 18319,
+      "endMs": 18590,
       "pageBreakAfter": true
     },
     {
       "text": " check",
-      "startMs": 7865,
-      "endMs": 7982
+      "startMs": 18590,
+      "endMs": 19024
     },
     {
       "text": " before",
-      "startMs": 7982,
-      "endMs": 8113
+      "startMs": 19024,
+      "endMs": 19513
     },
     {
       "text": " you",
-      "startMs": 8113,
-      "endMs": 8201
+      "startMs": 19513,
+      "endMs": 19838
     },
     {
       "text": " start.",
-      "startMs": 8201,
-      "endMs": 8332,
+      "startMs": 19838,
+      "endMs": 20327,
       "pageBreakAfter": true
     },
     {
       "text": " You",
-      "startMs": 8332,
-      "endMs": 8420
+      "startMs": 20327,
+      "endMs": 20652
     },
     {
       "text": " need",
-      "startMs": 8420,
-      "endMs": 8522
+      "startMs": 20652,
+      "endMs": 21032
     },
     {
       "text": " a",
-      "startMs": 8522,
-      "endMs": 8581
+      "startMs": 21032,
+      "endMs": 21249
     },
     {
       "text": " Windows",
-      "startMs": 8581,
-      "endMs": 8727,
+      "startMs": 21249,
+      "endMs": 21792,
       "pageBreakAfter": true
     },
     {
       "text": " 10",
-      "startMs": 8727,
-      "endMs": 8800
+      "startMs": 21792,
+      "endMs": 22063
     },
     {
       "text": " or",
-      "startMs": 8800,
-      "endMs": 8873
+      "startMs": 22063,
+      "endMs": 22335
     },
     {
       "text": " Windows",
-      "startMs": 8873,
-      "endMs": 9019
+      "startMs": 22335,
+      "endMs": 22878
     },
     {
       "text": " 11",
-      "startMs": 9019,
-      "endMs": 9092,
+      "startMs": 22878,
+      "endMs": 23149,
       "pageBreakAfter": true
     },
     {
       "text": " PC",
-      "startMs": 9092,
-      "endMs": 9165
+      "startMs": 23149,
+      "endMs": 23420
     },
     {
       "text": " with",
-      "startMs": 9165,
-      "endMs": 9267
+      "startMs": 23420,
+      "endMs": 23800
     },
     {
       "text": " an",
-      "startMs": 9267,
-      "endMs": 9340
+      "startMs": 23800,
+      "endMs": 24072
     },
     {
       "text": " internet",
-      "startMs": 9340,
-      "endMs": 9501,
+      "startMs": 24072,
+      "endMs": 24669,
       "pageBreakAfter": true
     },
     {
       "text": " connection.",
-      "startMs": 9501,
-      "endMs": 9705
+      "startMs": 24669,
+      "endMs": 25428
     },
     {
       "text": " You",
-      "startMs": 9705,
-      "endMs": 9793
+      "startMs": 25428,
+      "endMs": 25754
     },
     {
       "text": " also",
-      "startMs": 9793,
-      "endMs": 9895
+      "startMs": 25754,
+      "endMs": 26134
     },
     {
       "text": " need",
-      "startMs": 9895,
-      "endMs": 9997,
+      "startMs": 26134,
+      "endMs": 26514,
       "pageBreakAfter": true
     },
     {
       "text": " a",
-      "startMs": 9997,
-      "endMs": 10056
+      "startMs": 26514,
+      "endMs": 26731
     },
     {
       "text": " Microsoft",
-      "startMs": 10056,
-      "endMs": 10231
+      "startMs": 26731,
+      "endMs": 27382
     },
     {
-      "text": " personal",
-      "startMs": 10231,
-      "endMs": 10391
-    },
-    {
-      "text": " account,",
-      "startMs": 10391,
-      "endMs": 10552,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " work",
-      "startMs": 10552,
-      "endMs": 10654
-    },
-    {
-      "text": " account,",
-      "startMs": 10654,
-      "endMs": 10815
-    },
-    {
-      "text": " or",
-      "startMs": 10815,
-      "endMs": 10888
-    },
-    {
-      "text": " school",
-      "startMs": 10888,
-      "endMs": 11019,
-      "pageBreakAfter": true
-    },
-    {
-      "text": " account.",
-      "startMs": 11019,
-      "endMs": 11180,
+      "text": " personal…",
+      "startMs": 27382,
+      "endMs": 28900,
       "pageBreakAfter": true
     },
     {
       "text": " Step",
-      "startMs": 11500,
-      "endMs": 11653
+      "startMs": 29433,
+      "endMs": 29788
     },
     {
       "text": " 1:",
-      "startMs": 11653,
-      "endMs": 11763
+      "startMs": 29788,
+      "endMs": 30040
     },
     {
       "text": " Download",
-      "startMs": 11763,
-      "endMs": 12004
+      "startMs": 30040,
+      "endMs": 30597
     },
     {
       "text": " and",
-      "startMs": 12004,
-      "endMs": 12135,
+      "startMs": 30597,
+      "endMs": 30901,
       "pageBreakAfter": true
     },
     {
       "text": " install",
-      "startMs": 12135,
-      "endMs": 12354
+      "startMs": 30901,
+      "endMs": 31407
     },
     {
       "text": " OneDrive",
-      "startMs": 12354,
-      "endMs": 12595
+      "startMs": 31407,
+      "endMs": 31963
     },
     {
       "text": " manually.",
-      "startMs": 12595,
-      "endMs": 12858
+      "startMs": 31963,
+      "endMs": 32570
     },
     {
       "text": " Download",
-      "startMs": 12858,
-      "endMs": 13099,
+      "startMs": 32570,
+      "endMs": 33127,
       "pageBreakAfter": true
     },
     {
       "text": " OneDrive",
-      "startMs": 13099,
-      "endMs": 13340
+      "startMs": 33127,
+      "endMs": 33683
     },
     {
       "text": " from",
-      "startMs": 13340,
-      "endMs": 13493
+      "startMs": 33683,
+      "endMs": 34038
     },
     {
       "text": " the",
-      "startMs": 13493,
-      "endMs": 13625
+      "startMs": 34038,
+      "endMs": 34341
     },
     {
       "text": " official",
-      "startMs": 13625,
-      "endMs": 13866,
+      "startMs": 34341,
+      "endMs": 34898,
       "pageBreakAfter": true
     },
     {
       "text": " OneDrive",
-      "startMs": 13866,
-      "endMs": 14107
+      "startMs": 34898,
+      "endMs": 35454
     },
     {
       "text": " download",
-      "startMs": 14107,
-      "endMs": 14348
+      "startMs": 35454,
+      "endMs": 36011
     },
     {
       "text": " page,",
-      "startMs": 14348,
-      "endMs": 14523
+      "startMs": 36011,
+      "endMs": 36415
     },
     {
       "text": " then",
-      "startMs": 14523,
-      "endMs": 14676,
+      "startMs": 36415,
+      "endMs": 36770,
       "pageBreakAfter": true
     },
     {
       "text": " install",
-      "startMs": 14676,
-      "endMs": 14895
+      "startMs": 36770,
+      "endMs": 37276
     },
     {
       "text": " the",
-      "startMs": 14895,
-      "endMs": 15027
+      "startMs": 37276,
+      "endMs": 37579
     },
     {
       "text": " app.",
-      "startMs": 15027,
-      "endMs": 15180,
+      "startMs": 37579,
+      "endMs": 38800,
       "pageBreakAfter": true
     },
     {
       "text": " Step",
-      "startMs": 15500,
-      "endMs": 15662
+      "startMs": 39333,
+      "endMs": 39725
     },
     {
       "text": " 2:",
-      "startMs": 15662,
-      "endMs": 15778
+      "startMs": 39725,
+      "endMs": 40005
     },
     {
       "text": " Sign",
-      "startMs": 15778,
-      "endMs": 15940
+      "startMs": 40005,
+      "endMs": 40397
     },
     {
       "text": " in",
-      "startMs": 15940,
-      "endMs": 16055,
+      "startMs": 40397,
+      "endMs": 40677,
       "pageBreakAfter": true
     },
     {
       "text": " to",
-      "startMs": 16055,
-      "endMs": 16171
+      "startMs": 40677,
+      "endMs": 40957
     },
     {
       "text": " OneDrive.",
-      "startMs": 16171,
-      "endMs": 16449
+      "startMs": 40957,
+      "endMs": 41628
     },
     {
       "text": " When",
-      "startMs": 16449,
-      "endMs": 16611
+      "startMs": 41628,
+      "endMs": 42020
     },
     {
       "text": " OneDrive",
-      "startMs": 16611,
-      "endMs": 16866,
+      "startMs": 42020,
+      "endMs": 42636,
       "pageBreakAfter": true
     },
     {
       "text": " Setup",
-      "startMs": 16866,
-      "endMs": 17051
+      "startMs": 42636,
+      "endMs": 43084
     },
     {
       "text": " opens,",
-      "startMs": 17051,
-      "endMs": 17259
+      "startMs": 43084,
+      "endMs": 43587
     },
     {
       "text": " enter",
-      "startMs": 17259,
-      "endMs": 17444
+      "startMs": 43587,
+      "endMs": 44035
     },
     {
       "text": " your",
-      "startMs": 17444,
-      "endMs": 17606,
+      "startMs": 44035,
+      "endMs": 44427,
       "pageBreakAfter": true
     },
     {
       "text": " Microsoft",
-      "startMs": 17606,
-      "endMs": 17884
+      "startMs": 44427,
+      "endMs": 45099
     },
     {
       "text": " account",
-      "startMs": 17884,
-      "endMs": 18115
+      "startMs": 45099,
+      "endMs": 45658
     },
     {
       "text": " email",
-      "startMs": 18115,
-      "endMs": 18301
+      "startMs": 45658,
+      "endMs": 46106
     },
     {
       "text": " address",
-      "startMs": 18301,
-      "endMs": 18532,
+      "startMs": 46106,
+      "endMs": 46666,
       "pageBreakAfter": true
     },
     {
       "text": " and",
-      "startMs": 18532,
-      "endMs": 18671
+      "startMs": 46666,
+      "endMs": 47002
     },
     {
       "text": " select",
-      "startMs": 18671,
-      "endMs": 18879
+      "startMs": 47002,
+      "endMs": 47506
     },
     {
       "text": " Sign",
-      "startMs": 18879,
-      "endMs": 19041
+      "startMs": 47506,
+      "endMs": 47897
     },
     {
       "text": " in.",
-      "startMs": 19041,
-      "endMs": 19180,
+      "startMs": 47897,
+      "endMs": 49100,
       "pageBreakAfter": true
     },
     {
       "text": " Step",
-      "startMs": 19500,
-      "endMs": 19626
+      "startMs": 49633,
+      "endMs": 49990
     },
     {
       "text": " 3:",
-      "startMs": 19626,
-      "endMs": 19715
+      "startMs": 49990,
+      "endMs": 50244
     },
     {
       "text": " Select",
-      "startMs": 19715,
-      "endMs": 19877
+      "startMs": 50244,
+      "endMs": 50702
     },
     {
       "text": " your",
-      "startMs": 19877,
-      "endMs": 20003,
+      "startMs": 50702,
+      "endMs": 51058,
       "pageBreakAfter": true
     },
     {
       "text": " preferred",
-      "startMs": 20003,
-      "endMs": 20218
+      "startMs": 51058,
+      "endMs": 51669
     },
     {
       "text": " OneDrive",
-      "startMs": 20218,
-      "endMs": 20416
+      "startMs": 51669,
+      "endMs": 52229
     },
     {
       "text": " folder",
-      "startMs": 20416,
-      "endMs": 20577
+      "startMs": 52229,
+      "endMs": 52687
     },
     {
       "text": " location.",
-      "startMs": 20577,
-      "endMs": 20792,
+      "startMs": 52687,
+      "endMs": 53298,
       "pageBreakAfter": true
     },
     {
       "text": " OneDrive",
-      "startMs": 20792,
-      "endMs": 20990
+      "startMs": 53298,
+      "endMs": 53858
     },
     {
       "text": " Setup",
-      "startMs": 20990,
-      "endMs": 21134
+      "startMs": 53858,
+      "endMs": 54265
     },
     {
       "text": " shows",
-      "startMs": 21134,
-      "endMs": 21277
+      "startMs": 54265,
+      "endMs": 54672
     },
     {
       "text": " the",
-      "startMs": 21277,
-      "endMs": 21385,
+      "startMs": 54672,
+      "endMs": 54977,
       "pageBreakAfter": true
     },
     {
       "text": " location",
-      "startMs": 21385,
-      "endMs": 21582
+      "startMs": 54977,
+      "endMs": 55537
     },
     {
       "text": " for",
-      "startMs": 21582,
-      "endMs": 21690
+      "startMs": 55537,
+      "endMs": 55842
     },
     {
       "text": " your",
-      "startMs": 21690,
-      "endMs": 21816
+      "startMs": 55842,
+      "endMs": 56199
     },
     {
       "text": " OneDrive",
-      "startMs": 21816,
-      "endMs": 22013,
+      "startMs": 56199,
+      "endMs": 56759,
       "pageBreakAfter": true
     },
     {
       "text": " folder.",
-      "startMs": 22013,
-      "endMs": 22193
+      "startMs": 56759,
+      "endMs": 57267
     },
     {
       "text": " Select",
-      "startMs": 22193,
-      "endMs": 22354
+      "startMs": 57267,
+      "endMs": 57726
     },
     {
       "text": " Next",
-      "startMs": 22354,
-      "endMs": 22480
+      "startMs": 57726,
+      "endMs": 58082
     },
     {
       "text": " to",
-      "startMs": 22480,
-      "endMs": 22570,
+      "startMs": 58082,
+      "endMs": 58336,
       "pageBreakAfter": true
     },
     {
       "text": " use",
-      "startMs": 22570,
-      "endMs": 22677
+      "startMs": 58336,
+      "endMs": 58642
     },
     {
       "text": " the",
-      "startMs": 22677,
-      "endMs": 22785
+      "startMs": 58642,
+      "endMs": 58947
     },
     {
       "text": " default",
-      "startMs": 22785,
-      "endMs": 22965
+      "startMs": 58947,
+      "endMs": 59456
     },
     {
       "text": " location.",
-      "startMs": 22965,
-      "endMs": 23180,
+      "startMs": 59456,
+      "endMs": 60933,
       "pageBreakAfter": true
     },
     {
       "text": " Step",
-      "startMs": 23500,
-      "endMs": 23626
+      "startMs": 61467,
+      "endMs": 61782
     },
     {
       "text": " 4:",
-      "startMs": 23626,
-      "endMs": 23715
+      "startMs": 61782,
+      "endMs": 62007
     },
     {
       "text": " Review",
-      "startMs": 23715,
-      "endMs": 23877
+      "startMs": 62007,
+      "endMs": 62413
     },
     {
       "text": " Files",
-      "startMs": 23877,
-      "endMs": 24021,
+      "startMs": 62413,
+      "endMs": 62773,
       "pageBreakAfter": true
     },
     {
       "text": " On-Demand.",
-      "startMs": 24021,
-      "endMs": 24254
+      "startMs": 62773,
+      "endMs": 63358
     },
     {
       "text": " OneDrive",
-      "startMs": 24254,
-      "endMs": 24451
+      "startMs": 63358,
+      "endMs": 63854
     },
     {
       "text": " Setup",
-      "startMs": 24451,
-      "endMs": 24595
+      "startMs": 63854,
+      "endMs": 64214
     },
     {
       "text": " explains",
-      "startMs": 24595,
-      "endMs": 24792,
+      "startMs": 64214,
+      "endMs": 64710,
       "pageBreakAfter": true
     },
     {
       "text": " Files",
-      "startMs": 24792,
-      "endMs": 24936
+      "startMs": 64710,
+      "endMs": 65070
     },
     {
       "text": " On-Demand.",
-      "startMs": 24936,
-      "endMs": 25169
+      "startMs": 65070,
+      "endMs": 65655
     },
     {
       "text": " This",
-      "startMs": 25169,
-      "endMs": 25295
+      "startMs": 65655,
+      "endMs": 65971
     },
     {
       "text": " feature",
-      "startMs": 25295,
-      "endMs": 25475,
+      "startMs": 65971,
+      "endMs": 66421,
       "pageBreakAfter": true
     },
     {
       "text": " lets",
-      "startMs": 25475,
-      "endMs": 25600
+      "startMs": 66421,
+      "endMs": 66736
     },
     {
       "text": " you",
-      "startMs": 25600,
-      "endMs": 25708
+      "startMs": 66736,
+      "endMs": 67007
     },
     {
       "text": " see",
-      "startMs": 25708,
-      "endMs": 25816
+      "startMs": 67007,
+      "endMs": 67277
     },
     {
       "text": " OneDrive",
-      "startMs": 25816,
-      "endMs": 26013,
+      "startMs": 67277,
+      "endMs": 67772,
       "pageBreakAfter": true
     },
     {
       "text": " files",
-      "startMs": 26013,
-      "endMs": 26157
+      "startMs": 67772,
+      "endMs": 68133
     },
     {
       "text": " without",
-      "startMs": 26157,
-      "endMs": 26336
+      "startMs": 68133,
+      "endMs": 68583
     },
     {
       "text": " downloading",
-      "startMs": 26336,
-      "endMs": 26588
+      "startMs": 68583,
+      "endMs": 69214
     },
     {
       "text": " every",
-      "startMs": 26588,
-      "endMs": 26731,
+      "startMs": 69214,
+      "endMs": 69574,
       "pageBreakAfter": true
     },
     {
       "text": " file",
-      "startMs": 26731,
-      "endMs": 26857
+      "startMs": 69574,
+      "endMs": 69889
     },
     {
       "text": " to",
-      "startMs": 26857,
-      "endMs": 26947
+      "startMs": 69889,
+      "endMs": 70114
     },
     {
       "text": " your",
-      "startMs": 26947,
-      "endMs": 27072
+      "startMs": 70114,
+      "endMs": 70430
     },
     {
       "text": " PC.",
-      "startMs": 27072,
-      "endMs": 27180,
+      "startMs": 70430,
+      "endMs": 71567,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Step",
+      "startMs": 72100,
+      "endMs": 72392
+    },
+    {
+      "text": " 5:",
+      "startMs": 72392,
+      "endMs": 72601
+    },
+    {
+      "text": " Open",
+      "startMs": 72601,
+      "endMs": 72893
+    },
+    {
+      "text": " OneDrive",
+      "startMs": 72893,
+      "endMs": 73352,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " in",
+      "startMs": 73352,
+      "endMs": 73561
+    },
+    {
+      "text": " File",
+      "startMs": 73561,
+      "endMs": 73853
+    },
+    {
+      "text": " Explorer.",
+      "startMs": 73853,
+      "endMs": 74354
+    },
+    {
+      "text": " Open",
+      "startMs": 74354,
+      "endMs": 74646,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " File",
+      "startMs": 74646,
+      "endMs": 74938
+    },
+    {
+      "text": " Explorer.",
+      "startMs": 74938,
+      "endMs": 75439
+    },
+    {
+      "text": " Select",
+      "startMs": 75439,
+      "endMs": 75815
+    },
+    {
+      "text": " the",
+      "startMs": 75815,
+      "endMs": 76065,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " File",
+      "startMs": 76065,
+      "endMs": 76357
+    },
+    {
+      "text": " Explorer",
+      "startMs": 76357,
+      "endMs": 76817
+    },
+    {
+      "text": " icon",
+      "startMs": 76817,
+      "endMs": 77109
+    },
+    {
+      "text": " on",
+      "startMs": 77109,
+      "endMs": 77317,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " the",
+      "startMs": 77317,
+      "endMs": 77568
+    },
+    {
+      "text": " taskbar",
+      "startMs": 77568,
+      "endMs": 77985
+    },
+    {
+      "text": " or",
+      "startMs": 77985,
+      "endMs": 78194
+    },
+    {
+      "text": " press",
+      "startMs": 78194,
+      "endMs": 78528,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Windows",
+      "startMs": 78528,
+      "endMs": 78945
+    },
+    {
+      "text": " key",
+      "startMs": 78945,
+      "endMs": 79196
+    },
+    {
+      "text": " +",
+      "startMs": 79196,
+      "endMs": 79363
+    },
+    {
+      "text": " E.",
+      "startMs": 79363,
+      "endMs": 79571,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Look",
+      "startMs": 79571,
+      "endMs": 79863
+    },
+    {
+      "text": " in",
+      "startMs": 79863,
+      "endMs": 80072
+    },
+    {
+      "text": " the",
+      "startMs": 80072,
+      "endMs": 80323
+    },
+    {
+      "text": " left",
+      "startMs": 80323,
+      "endMs": 80615,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " panel",
+      "startMs": 80615,
+      "endMs": 80949
+    },
+    {
+      "text": " for",
+      "startMs": 80949,
+      "endMs": 81199
+    },
+    {
+      "text": " OneDrive.",
+      "startMs": 81199,
+      "endMs": 82567,
       "pageBreakAfter": true
     },
     {
       "text": " Read",
-      "startMs": 27500,
-      "endMs": 27785
+      "startMs": 83100,
+      "endMs": 83470
     },
     {
       "text": " the",
-      "startMs": 27785,
-      "endMs": 28030
+      "startMs": 83470,
+      "endMs": 83787
     },
     {
       "text": " full",
-      "startMs": 28030,
-      "endMs": 28315
+      "startMs": 83787,
+      "endMs": 84157
     },
     {
       "text": " article.",
-      "startMs": 28315,
-      "endMs": 28764,
+      "startMs": 84157,
+      "endMs": 84738,
       "pageBreakAfter": true
     },
     {
       "text": " New",
-      "startMs": 28764,
-      "endMs": 29008
+      "startMs": 84738,
+      "endMs": 85055
     },
     {
       "text": " posts",
-      "startMs": 29008,
-      "endMs": 29334
+      "startMs": 85055,
+      "endMs": 85478
     },
     {
       "text": " every",
-      "startMs": 29334,
-      "endMs": 29660
+      "startMs": 85478,
+      "endMs": 85901
     },
     {
       "text": " week",
-      "startMs": 29660,
-      "endMs": 29946,
+      "startMs": 85901,
+      "endMs": 86271,
       "pageBreakAfter": true
     },
     {
       "text": " on",
-      "startMs": 29946,
-      "endMs": 30149
+      "startMs": 86271,
+      "endMs": 86535
     },
     {
       "text": " the",
-      "startMs": 30149,
-      "endMs": 30394
+      "startMs": 86535,
+      "endMs": 86852
     },
     {
       "text": " blog.",
-      "startMs": 30394,
-      "endMs": 30720,
+      "startMs": 86852,
+      "endMs": 88067,
       "pageBreakAfter": true
     }
   ],

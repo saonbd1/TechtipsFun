@@ -28,6 +28,22 @@ Manual runs (Actions -> Generate article reels -> Run workflow):
 | `slug` | Render just that one article |
 | `max` | How many missing reels to render in this run (default 5) |
 | `force` | Re-render even if a reel already exists |
+| `refresh` | How many outdated reels (older design) to re-render in this run |
+
+## Daily refresh of older reels
+
+The workflow also runs every day at 10:30 UTC (16:30 Dhaka). Besides any
+missing reels, it re-renders **2 outdated reels** per day, newest posts first,
+until every reel matches the current design. After that the daily run renders
+nothing.
+
+- `.reel-versions.json` records which design version each reel was rendered
+  with (reels not listed count as version 1). The workflow updates it.
+- To push a future redesign to all reels, bump `REEL_VERSION` in
+  `reels/scripts/build-reel-props.mjs`; the daily refresh does the rest.
+- Change the pace with `REFRESH_PER_DAY` in the workflow, or run it manually with
+  a bigger `refresh` value to catch up faster.
+- Check progress locally: `cd reels && node scripts/list-missing-reels.mjs --status`.
 
 To backfill everything at once, run it manually with `max: 100`.
 

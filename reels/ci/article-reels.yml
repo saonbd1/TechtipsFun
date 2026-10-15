@@ -19,6 +19,14 @@ name: Generate article reels
 # render failed, and covers manual pushes and backfills with the same code.
 # Automatic runs are capped (MAX below) so a big backfill cannot run for hours -
 # trigger it manually with a higher `max` to catch up.
+#
+# DAILY REFRESH OF OLDER REELS
+# ----------------------------
+# When the reel design changes, REEL_VERSION in reels/scripts/build-reel-props.mjs
+# is bumped. Every reel rendered with an older version (tracked in
+# article-reels/.reel-versions.json) is then "outdated", and the daily schedule
+# re-renders REFRESH_PER_DAY of them, newest posts first, until all are current.
+# Once everything is current the scheduled run renders nothing.
 
 on:
   push:
@@ -29,6 +37,9 @@ on:
     workflows: ["Schedule post publishing"]
     types: [completed]
     branches: [main]
+  # Daily at 10:30 UTC (16:30 Dhaka) - after the 09:00 UTC post publish.
+  schedule:
+    - cron: "30 10 * * *"
   workflow_dispatch:
     inputs:
       slug:
@@ -43,6 +54,10 @@ on:
         required: false
         type: boolean
         default: false
+      refresh:
+        description: How many outdated reels (older design) to re-render
+        required: false
+        default: "0"
 
 permissions:
   contents: write
@@ -65,6 +80,8 @@ jobs:
       # step falls back to 3 when this is empty).
       MAX_REELS: ${{ github.event.inputs.max }}
       OUTPUT_DIR: article-reels
+      # Outdated reels re-rendered by each scheduled run (1 or 2 is gentle).
+      REFRESH_PER_DAY: "2"
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -101,6 +118,8 @@ jobs:
         env:
           SLUG: ${{ github.event.inputs.slug }}
           FORCE: ${{ github.event.inputs.force }}
+          REFRESH_INPUT: ${{ github.event.inputs.refresh }}
+          EVENT: ${{ github.event_name }}
         run: |
           set -euo pipefail
           args=()
@@ -108,6 +127,11 @@ jobs:
             args+=(--slug "$SLUG")
           else
             args+=(--limit "${MAX_REELS:-3}")
+            if [ "$EVENT" = "schedule" ]; then
+              args+=(--refresh "$REFRESH_PER_DAY")
+            elif [ -n "${REFRESH_INPUT:-}" ]; then
+              args+=(--refresh "$REFRESH_INPUT")
+            fi
           fi
           if [ "${FORCE:-false}" = "true" ]; then
             args+=(--force)
@@ -121,10 +145,12 @@ jobs:
             echo "### Article reels: $count to render"
             echo
             sed 's/^/- /' "$RUNNER_TEMP/slugs.txt"
+            echo
+            node scripts/list-missing-reels.mjs --status
           } >> "$GITHUB_STEP_SUMMARY"
 
           if [ "$count" = "0" ]; then
-            echo "Every article already has a reel."
+            echo "Every article has an up-to-date reel."
           fi
 
       - name: Render reels
@@ -144,6 +170,7 @@ jobs:
                  --slug "$slug" \
                  --out "$GITHUB_WORKSPACE/$OUTPUT_DIR/$slug.mp4"; then
               rendered=$((rendered + 1))
+              node scripts/list-missing-reels.mjs --mark "$slug"
               echo "rendered $slug"
             else
               failed=$((failed + 1))
@@ -182,7 +209,10 @@ jobs:
             exit 0
           fi
 
-          list=$(git diff --cached --name-only -- "$OUTPUT_DIR" | sed -E 's#.*/##; s/\.mp4$//' | paste -sd, -)
+          list=$(git diff --cached --name-only -- "$OUTPUT_DIR/*.mp4" | sed -E 's#.*/##; s/\.mp4$//' | paste -sd, -)
           git commit -m "Add article reel(s): $list"
+          # main may have moved while rendering (e.g. a post was published).
+          # --autostash: rendering leaves regenerated props in the working tree.
+          git pull --rebase --autostash origin main
           git push origin HEAD:main
           echo "Committed: $list"

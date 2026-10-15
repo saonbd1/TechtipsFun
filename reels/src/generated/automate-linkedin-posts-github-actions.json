@@ -10,15 +10,18 @@
     "API"
   ],
   "url": "https://www.techtips.fun/blog/automate-linkedin-posts-github-actions/",
-  "theme": "github-dark",
-  "durationInFrames": 905,
   "scenes": [
     {
       "type": "title",
       "kicker": "Automation",
       "title": "Automate LinkedIn Posts from Your Blog with GitHub Actions",
       "subtitle": "I cross-post every blog article to LinkedIn automatically with GitHub Actions and the…",
-      "durationInFrames": 105
+      "image": {
+        "src": "post-media/automate-linkedin-posts-github-actions/01-coder-desk.webp",
+        "width": 960,
+        "height": 480
+      },
+      "durationInFrames": 183
     },
     {
       "type": "code",
@@ -75,835 +78,1086 @@
           }
         }
       ],
-      "durationInFrames": 95
+      "stepDurations": [
+        155
+      ],
+      "durationInFrames": 155
     },
     {
       "type": "point",
       "kicker": "Automation",
       "heading": "What it costs",
       "body": "Nothing. The wmembersocial scope is free, and GitHub Actions minutes are free for public repos.",
-      "durationInFrames": 120
+      "durationInFrames": 250
     },
     {
       "type": "point",
       "kicker": "Automation",
       "heading": "Setting up the LinkedIn side",
       "body": "Create an app in the LinkedIn Developer Portal and enable the Sign In with LinkedIn product (see my LinkedIn OAuth client setup guide for the full…",
-      "durationInFrames": 120
+      "durationInFrames": 330
     },
     {
       "type": "point",
       "kicker": "Automation",
       "heading": "The 422 trap",
       "body": "The modern posting endpoint, POST /v2/ugcPosts, rejected every request I sent from this app with a 422 error whenever I used a urn:li:person URN.",
-      "durationInFrames": 120
+      "durationInFrames": 330
     },
     {
       "type": "point",
       "kicker": "Automation",
       "heading": "Why teasers from frontmatter, not AI",
       "body": "\"Content repurposing AI\" tools promise to rewrite everything. My posts are technical.",
-      "durationInFrames": 120
+      "durationInFrames": 250
     },
     {
       "type": "point",
       "kicker": "Automation",
       "heading": "The thumbnail problem",
       "body": "Each article has an OG card at /og/{slug}.png (1200×630), which the share script attaches as the thumbnail.",
-      "durationInFrames": 120
+      "durationInFrames": 273
+    },
+    {
+      "type": "point",
+      "kicker": "Automation",
+      "heading": "The tools",
+      "body": "Astro (63k+ GitHub stars) — the blog framework. Content collections validate the frontmatter the script reads.",
+      "durationInFrames": 250
+    },
+    {
+      "type": "point",
+      "kicker": "Automation",
+      "heading": "What I will not automate",
+      "body": "Engagement bait, auto-replies, and scraping. LinkedIn's automation rules allow posting your own content through the API; they do not allow fake…",
+      "durationInFrames": 330
     },
     {
       "type": "outro",
       "heading": "Read the full article",
       "body": "New posts every week on the blog.",
       "url": "techtips.fun",
-      "durationInFrames": 105
+      "durationInFrames": 165
     }
   ],
+  "theme": "github-dark",
+  "durationInFrames": 2516,
   "captions": [
     {
       "text": " I",
-      "startMs": 0,
-      "endMs": 115
+      "startMs": 500,
+      "endMs": 668
     },
     {
       "text": " cross-post",
-      "startMs": 115,
-      "endMs": 489
+      "startMs": 668,
+      "endMs": 1213
     },
     {
       "text": " every",
-      "startMs": 489,
-      "endMs": 719
+      "startMs": 1213,
+      "endMs": 1549
     },
     {
       "text": " blog",
-      "startMs": 719,
-      "endMs": 920,
+      "startMs": 1549,
+      "endMs": 1843,
       "pageBreakAfter": true
     },
     {
       "text": " article",
-      "startMs": 920,
-      "endMs": 1208
+      "startMs": 1843,
+      "endMs": 2263
     },
     {
       "text": " to",
-      "startMs": 1208,
-      "endMs": 1351
+      "startMs": 2263,
+      "endMs": 2472
     },
     {
       "text": " LinkedIn",
-      "startMs": 1351,
-      "endMs": 1668
+      "startMs": 2472,
+      "endMs": 2934
     },
     {
       "text": " automatically",
-      "startMs": 1668,
-      "endMs": 2128,
+      "startMs": 2934,
+      "endMs": 3605,
       "pageBreakAfter": true
     },
     {
       "text": " with",
-      "startMs": 2128,
-      "endMs": 2329
+      "startMs": 3605,
+      "endMs": 3899
     },
     {
       "text": " GitHub",
-      "startMs": 2329,
-      "endMs": 2588
+      "startMs": 3899,
+      "endMs": 4277
     },
     {
       "text": " Actions",
-      "startMs": 2588,
-      "endMs": 2875
+      "startMs": 4277,
+      "endMs": 4696
     },
     {
       "text": " and",
-      "startMs": 2875,
-      "endMs": 3048,
+      "startMs": 4696,
+      "endMs": 4948,
       "pageBreakAfter": true
     },
     {
       "text": " the",
-      "startMs": 3048,
-      "endMs": 3220,
+      "startMs": 4948,
+      "endMs": 6067,
       "pageBreakAfter": true
     },
     {
       "text": " What",
-      "startMs": 3500,
-      "endMs": 3749
+      "startMs": 6600,
+      "endMs": 6932
     },
     {
       "text": " the",
-      "startMs": 3749,
-      "endMs": 3962
+      "startMs": 6932,
+      "endMs": 7217
     },
     {
       "text": " automation",
-      "startMs": 3962,
-      "endMs": 4424
+      "startMs": 7217,
+      "endMs": 7834
     },
     {
       "text": " actually",
-      "startMs": 4424,
-      "endMs": 4815,
+      "startMs": 7834,
+      "endMs": 8356,
       "pageBreakAfter": true
     },
     {
       "text": " does.",
-      "startMs": 4815,
-      "endMs": 5099
+      "startMs": 8356,
+      "endMs": 8736
     },
     {
       "text": " Let",
-      "startMs": 5099,
-      "endMs": 5312
+      "startMs": 8736,
+      "endMs": 9020
     },
     {
       "text": " us",
-      "startMs": 5312,
-      "endMs": 5490
+      "startMs": 9020,
+      "endMs": 9258
     },
     {
       "text": " look",
-      "startMs": 5490,
-      "endMs": 5738,
+      "startMs": 9258,
+      "endMs": 9590,
       "pageBreakAfter": true
     },
     {
       "text": " at",
-      "startMs": 5738,
-      "endMs": 5916
+      "startMs": 9590,
+      "endMs": 9827
     },
     {
       "text": " the",
-      "startMs": 5916,
-      "endMs": 6129
+      "startMs": 9827,
+      "endMs": 10112
     },
     {
       "text": " code.",
-      "startMs": 6129,
-      "endMs": 6413,
+      "startMs": 10112,
+      "endMs": 11233,
       "pageBreakAfter": true
     },
     {
       "text": " What",
-      "startMs": 6667,
-      "endMs": 6842
+      "startMs": 11767,
+      "endMs": 12097
     },
     {
       "text": " it",
-      "startMs": 6842,
-      "endMs": 6967
+      "startMs": 12097,
+      "endMs": 12333
     },
     {
       "text": " costs.",
-      "startMs": 6967,
-      "endMs": 7192
+      "startMs": 12333,
+      "endMs": 12757
     },
     {
       "text": " Nothing.",
-      "startMs": 7192,
-      "endMs": 7468,
+      "startMs": 12757,
+      "endMs": 13276,
       "pageBreakAfter": true
     },
     {
       "text": " The",
-      "startMs": 7468,
-      "endMs": 7618
+      "startMs": 13276,
+      "endMs": 13559
     },
     {
       "text": " wmembersocial",
-      "startMs": 7618,
-      "endMs": 8019
+      "startMs": 13559,
+      "endMs": 14314
     },
     {
       "text": " scope",
-      "startMs": 8019,
-      "endMs": 8219
+      "startMs": 14314,
+      "endMs": 14691
     },
     {
       "text": " is",
-      "startMs": 8219,
-      "endMs": 8344,
+      "startMs": 14691,
+      "endMs": 14927,
       "pageBreakAfter": true
     },
     {
       "text": " free,",
-      "startMs": 8344,
-      "endMs": 8544
+      "startMs": 14927,
+      "endMs": 15304
     },
     {
       "text": " and",
-      "startMs": 8544,
-      "endMs": 8694
+      "startMs": 15304,
+      "endMs": 15587
     },
     {
       "text": " GitHub",
-      "startMs": 8694,
-      "endMs": 8920
+      "startMs": 15587,
+      "endMs": 16012
     },
     {
       "text": " Actions",
-      "startMs": 8920,
-      "endMs": 9170,
+      "startMs": 16012,
+      "endMs": 16483,
       "pageBreakAfter": true
     },
     {
       "text": " minutes",
-      "startMs": 9170,
-      "endMs": 9420
+      "startMs": 16483,
+      "endMs": 16955
     },
     {
       "text": " are",
-      "startMs": 9420,
-      "endMs": 9571
+      "startMs": 16955,
+      "endMs": 17238
     },
     {
       "text": " free",
-      "startMs": 9571,
-      "endMs": 9746
+      "startMs": 17238,
+      "endMs": 17568
     },
     {
       "text": " for",
-      "startMs": 9746,
-      "endMs": 9896,
+      "startMs": 17568,
+      "endMs": 17851,
       "pageBreakAfter": true
     },
     {
       "text": " public",
-      "startMs": 9896,
-      "endMs": 10121
+      "startMs": 17851,
+      "endMs": 18276
     },
     {
       "text": " repos.",
-      "startMs": 10121,
-      "endMs": 10347,
+      "startMs": 18276,
+      "endMs": 19567,
       "pageBreakAfter": true
     },
     {
       "text": " Setting",
-      "startMs": 10667,
-      "endMs": 10820
+      "startMs": 20100,
+      "endMs": 20500
     },
     {
       "text": " up",
-      "startMs": 10820,
-      "endMs": 10897
+      "startMs": 20500,
+      "endMs": 20700
     },
     {
       "text": " the",
-      "startMs": 10897,
-      "endMs": 10989
+      "startMs": 20700,
+      "endMs": 20940
     },
     {
       "text": " LinkedIn",
-      "startMs": 10989,
-      "endMs": 11157,
+      "startMs": 20940,
+      "endMs": 21380,
       "pageBreakAfter": true
     },
     {
       "text": " side.",
-      "startMs": 11157,
-      "endMs": 11280
+      "startMs": 21380,
+      "endMs": 21700
     },
     {
       "text": " Create",
-      "startMs": 11280,
-      "endMs": 11418
+      "startMs": 21700,
+      "endMs": 22060
     },
     {
       "text": " an",
-      "startMs": 11418,
-      "endMs": 11495
+      "startMs": 22060,
+      "endMs": 22260
     },
     {
       "text": " app",
-      "startMs": 11495,
-      "endMs": 11587,
+      "startMs": 22260,
+      "endMs": 22500,
       "pageBreakAfter": true
     },
     {
       "text": " in",
-      "startMs": 11587,
-      "endMs": 11663
+      "startMs": 22500,
+      "endMs": 22700
     },
     {
       "text": " the",
-      "startMs": 11663,
-      "endMs": 11755
+      "startMs": 22700,
+      "endMs": 22940
     },
     {
       "text": " LinkedIn",
-      "startMs": 11755,
-      "endMs": 11924
+      "startMs": 22940,
+      "endMs": 23380
     },
     {
       "text": " Developer",
-      "startMs": 11924,
-      "endMs": 12108,
+      "startMs": 23380,
+      "endMs": 23860,
       "pageBreakAfter": true
     },
     {
       "text": " Portal",
-      "startMs": 12108,
-      "endMs": 12246
+      "startMs": 23860,
+      "endMs": 24220
     },
     {
       "text": " and",
-      "startMs": 12246,
-      "endMs": 12338
+      "startMs": 24220,
+      "endMs": 24460
     },
     {
       "text": " enable",
-      "startMs": 12338,
-      "endMs": 12476
+      "startMs": 24460,
+      "endMs": 24820
     },
     {
       "text": " the",
-      "startMs": 12476,
-      "endMs": 12568,
+      "startMs": 24820,
+      "endMs": 25060,
       "pageBreakAfter": true
     },
     {
       "text": " Sign",
-      "startMs": 12568,
-      "endMs": 12675
+      "startMs": 25060,
+      "endMs": 25340
     },
     {
       "text": " In",
-      "startMs": 12675,
-      "endMs": 12752
+      "startMs": 25340,
+      "endMs": 25540
     },
     {
       "text": " with",
-      "startMs": 12752,
-      "endMs": 12859
+      "startMs": 25540,
+      "endMs": 25820
     },
     {
       "text": " LinkedIn",
-      "startMs": 12859,
-      "endMs": 13028,
+      "startMs": 25820,
+      "endMs": 26260,
       "pageBreakAfter": true
     },
     {
       "text": " product",
-      "startMs": 13028,
-      "endMs": 13181
+      "startMs": 26260,
+      "endMs": 26660
     },
     {
       "text": " (see",
-      "startMs": 13181,
-      "endMs": 13289
+      "startMs": 26660,
+      "endMs": 26940
     },
     {
       "text": " my",
-      "startMs": 13289,
-      "endMs": 13365
+      "startMs": 26940,
+      "endMs": 27140
     },
     {
       "text": " LinkedIn",
-      "startMs": 13365,
-      "endMs": 13534,
+      "startMs": 27140,
+      "endMs": 27580,
       "pageBreakAfter": true
     },
     {
       "text": " OAuth",
-      "startMs": 13534,
-      "endMs": 13657
+      "startMs": 27580,
+      "endMs": 27900
     },
     {
       "text": " client",
-      "startMs": 13657,
-      "endMs": 13795
+      "startMs": 27900,
+      "endMs": 28260
     },
     {
       "text": " setup",
-      "startMs": 13795,
-      "endMs": 13917
+      "startMs": 28260,
+      "endMs": 28580
     },
     {
       "text": " guide",
-      "startMs": 13917,
-      "endMs": 14040,
+      "startMs": 28580,
+      "endMs": 28900,
       "pageBreakAfter": true
     },
     {
       "text": " for",
-      "startMs": 14040,
-      "endMs": 14132
+      "startMs": 28900,
+      "endMs": 29140
     },
     {
       "text": " the",
-      "startMs": 14132,
-      "endMs": 14224
+      "startMs": 29140,
+      "endMs": 29380
     },
     {
       "text": " full…",
-      "startMs": 14224,
-      "endMs": 14347,
+      "startMs": 29380,
+      "endMs": 30567,
       "pageBreakAfter": true
     },
     {
       "text": " The",
-      "startMs": 14667,
-      "endMs": 14770
+      "startMs": 31100,
+      "endMs": 31369
     },
     {
       "text": " 422",
-      "startMs": 14770,
-      "endMs": 14873
+      "startMs": 31369,
+      "endMs": 31638
     },
     {
       "text": " trap.",
-      "startMs": 14873,
-      "endMs": 15011
+      "startMs": 31638,
+      "endMs": 31997
     },
     {
       "text": " The",
-      "startMs": 15011,
-      "endMs": 15114,
+      "startMs": 31997,
+      "endMs": 32266,
       "pageBreakAfter": true
     },
     {
       "text": " modern",
-      "startMs": 15114,
-      "endMs": 15269
+      "startMs": 32266,
+      "endMs": 32670
     },
     {
       "text": " posting",
-      "startMs": 15269,
-      "endMs": 15440
+      "startMs": 32670,
+      "endMs": 33119
     },
     {
       "text": " endpoint,",
-      "startMs": 15440,
-      "endMs": 15647
+      "startMs": 33119,
+      "endMs": 33657
     },
     {
       "text": " POST",
-      "startMs": 15647,
-      "endMs": 15767,
+      "startMs": 33657,
+      "endMs": 33971,
       "pageBreakAfter": true
     },
     {
       "text": " /v2/ugcPosts,",
-      "startMs": 15767,
-      "endMs": 16042
+      "startMs": 33971,
+      "endMs": 34689
     },
     {
       "text": " rejected",
-      "startMs": 16042,
-      "endMs": 16232
+      "startMs": 34689,
+      "endMs": 35182
     },
     {
       "text": " every",
-      "startMs": 16232,
-      "endMs": 16369
+      "startMs": 35182,
+      "endMs": 35541
     },
     {
       "text": " request",
-      "startMs": 16369,
-      "endMs": 16541,
+      "startMs": 35541,
+      "endMs": 35990,
       "pageBreakAfter": true
     },
     {
       "text": " I",
-      "startMs": 16541,
-      "endMs": 16610
+      "startMs": 35990,
+      "endMs": 36169
     },
     {
       "text": " sent",
-      "startMs": 16610,
-      "endMs": 16730
+      "startMs": 36169,
+      "endMs": 36483
     },
     {
       "text": " from",
-      "startMs": 16730,
-      "endMs": 16851
+      "startMs": 36483,
+      "endMs": 36797
     },
     {
       "text": " this",
-      "startMs": 16851,
-      "endMs": 16971,
+      "startMs": 36797,
+      "endMs": 37111,
       "pageBreakAfter": true
     },
     {
       "text": " app",
-      "startMs": 16971,
-      "endMs": 17074
+      "startMs": 37111,
+      "endMs": 37380
     },
     {
       "text": " with",
-      "startMs": 17074,
-      "endMs": 17195
+      "startMs": 37380,
+      "endMs": 37694
     },
     {
       "text": " a",
-      "startMs": 17195,
-      "endMs": 17263
+      "startMs": 37694,
+      "endMs": 37874
     },
     {
       "text": " 422",
-      "startMs": 17263,
-      "endMs": 17366,
+      "startMs": 37874,
+      "endMs": 38143,
       "pageBreakAfter": true
     },
     {
       "text": " error",
-      "startMs": 17366,
-      "endMs": 17504
+      "startMs": 38143,
+      "endMs": 38502
     },
     {
       "text": " whenever",
-      "startMs": 17504,
-      "endMs": 17693
+      "startMs": 38502,
+      "endMs": 38995
     },
     {
       "text": " I",
-      "startMs": 17693,
-      "endMs": 17762
+      "startMs": 38995,
+      "endMs": 39175
     },
     {
       "text": " used",
-      "startMs": 17762,
-      "endMs": 17882,
+      "startMs": 39175,
+      "endMs": 39489,
       "pageBreakAfter": true
     },
     {
       "text": " a",
-      "startMs": 17882,
-      "endMs": 17951
+      "startMs": 39489,
+      "endMs": 39668
     },
     {
       "text": " urn:li:person",
-      "startMs": 17951,
-      "endMs": 18226
+      "startMs": 39668,
+      "endMs": 40386
     },
     {
       "text": " URN.",
-      "startMs": 18226,
-      "endMs": 18347,
+      "startMs": 40386,
+      "endMs": 41567,
       "pageBreakAfter": true
     },
     {
       "text": " Why",
-      "startMs": 18667,
-      "endMs": 18805
+      "startMs": 42100,
+      "endMs": 42360
     },
     {
       "text": " teasers",
-      "startMs": 18805,
-      "endMs": 19035
+      "startMs": 42360,
+      "endMs": 42793
     },
     {
       "text": " from",
-      "startMs": 19035,
-      "endMs": 19196
+      "startMs": 42793,
+      "endMs": 43097
     },
     {
       "text": " frontmatter,",
-      "startMs": 19196,
-      "endMs": 19541,
+      "startMs": 43097,
+      "endMs": 43747,
       "pageBreakAfter": true
     },
     {
       "text": " not",
-      "startMs": 19541,
-      "endMs": 19679
+      "startMs": 43747,
+      "endMs": 44007
     },
     {
       "text": " AI.",
-      "startMs": 19679,
-      "endMs": 19817
+      "startMs": 44007,
+      "endMs": 44267
     },
     {
       "text": " \"Content",
-      "startMs": 19817,
-      "endMs": 20070
+      "startMs": 44267,
+      "endMs": 44743
     },
     {
       "text": " repurposing",
-      "startMs": 20070,
-      "endMs": 20392,
+      "startMs": 44743,
+      "endMs": 45350,
       "pageBreakAfter": true
     },
     {
       "text": " AI\"",
-      "startMs": 20392,
-      "endMs": 20530
+      "startMs": 45350,
+      "endMs": 45610
     },
     {
       "text": " tools",
-      "startMs": 20530,
-      "endMs": 20714
+      "startMs": 45610,
+      "endMs": 45957
     },
     {
       "text": " promise",
-      "startMs": 20714,
-      "endMs": 20944
+      "startMs": 45957,
+      "endMs": 46390
     },
     {
       "text": " to",
-      "startMs": 20944,
-      "endMs": 21059,
+      "startMs": 46390,
+      "endMs": 46607,
       "pageBreakAfter": true
     },
     {
       "text": " rewrite",
-      "startMs": 21059,
-      "endMs": 21289
+      "startMs": 46607,
+      "endMs": 47040
     },
     {
       "text": " everything.",
-      "startMs": 21289,
-      "endMs": 21611
+      "startMs": 47040,
+      "endMs": 47647
     },
     {
       "text": " My",
-      "startMs": 21611,
-      "endMs": 21726
+      "startMs": 47647,
+      "endMs": 47863
     },
     {
       "text": " posts",
-      "startMs": 21726,
-      "endMs": 21910,
+      "startMs": 47863,
+      "endMs": 48210,
       "pageBreakAfter": true
     },
     {
       "text": " are",
-      "startMs": 21910,
-      "endMs": 22048
+      "startMs": 48210,
+      "endMs": 48470
     },
     {
       "text": " technical.",
-      "startMs": 22048,
-      "endMs": 22347,
+      "startMs": 48470,
+      "endMs": 49900,
       "pageBreakAfter": true
     },
     {
       "text": " The",
-      "startMs": 22667,
-      "endMs": 22796
+      "startMs": 50433,
+      "endMs": 50704
     },
     {
       "text": " thumbnail",
-      "startMs": 22796,
-      "endMs": 23054
+      "startMs": 50704,
+      "endMs": 51244
     },
     {
       "text": " problem.",
-      "startMs": 23054,
-      "endMs": 23291
+      "startMs": 51244,
+      "endMs": 51739
     },
     {
       "text": " Each",
-      "startMs": 23291,
-      "endMs": 23441,
+      "startMs": 51739,
+      "endMs": 52054,
       "pageBreakAfter": true
     },
     {
       "text": " article",
-      "startMs": 23441,
-      "endMs": 23657
+      "startMs": 52054,
+      "endMs": 52505
     },
     {
       "text": " has",
-      "startMs": 23657,
-      "endMs": 23786
+      "startMs": 52505,
+      "endMs": 52775
     },
     {
       "text": " an",
-      "startMs": 23786,
-      "endMs": 23893
+      "startMs": 52775,
+      "endMs": 53000
     },
     {
       "text": " OG",
-      "startMs": 23893,
-      "endMs": 24001,
+      "startMs": 53000,
+      "endMs": 53225,
       "pageBreakAfter": true
     },
     {
       "text": " card",
-      "startMs": 24001,
-      "endMs": 24152
+      "startMs": 53225,
+      "endMs": 53540
     },
     {
       "text": " at",
-      "startMs": 24152,
-      "endMs": 24259
+      "startMs": 53540,
+      "endMs": 53765
     },
     {
       "text": " /og/{slug}.png",
-      "startMs": 24259,
-      "endMs": 24625
+      "startMs": 53765,
+      "endMs": 54531
     },
     {
       "text": " (1200×630),",
-      "startMs": 24625,
-      "endMs": 24926,
+      "startMs": 54531,
+      "endMs": 55161,
       "pageBreakAfter": true
     },
     {
       "text": " which",
-      "startMs": 24926,
-      "endMs": 25098
+      "startMs": 55161,
+      "endMs": 55522
     },
     {
       "text": " the",
-      "startMs": 25098,
-      "endMs": 25228
+      "startMs": 55522,
+      "endMs": 55792
     },
     {
       "text": " share",
-      "startMs": 25228,
-      "endMs": 25400
+      "startMs": 55792,
+      "endMs": 56152
     },
     {
       "text": " script",
-      "startMs": 25400,
-      "endMs": 25593,
+      "startMs": 56152,
+      "endMs": 56557,
       "pageBreakAfter": true
     },
     {
       "text": " attaches",
-      "startMs": 25593,
-      "endMs": 25830
+      "startMs": 56557,
+      "endMs": 57053
     },
     {
       "text": " as",
-      "startMs": 25830,
-      "endMs": 25938
+      "startMs": 57053,
+      "endMs": 57278
     },
     {
       "text": " the",
-      "startMs": 25938,
-      "endMs": 26067
+      "startMs": 57278,
+      "endMs": 57548
     },
     {
       "text": " thumbnail.",
-      "startMs": 26067,
-      "endMs": 26347,
+      "startMs": 57548,
+      "endMs": 59000,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " The",
+      "startMs": 59533,
+      "endMs": 59797
+    },
+    {
+      "text": " tools.",
+      "startMs": 59797,
+      "endMs": 60192
+    },
+    {
+      "text": " Astro",
+      "startMs": 60192,
+      "endMs": 60543
+    },
+    {
+      "text": " (63k+",
+      "startMs": 60543,
+      "endMs": 60894,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " GitHub",
+      "startMs": 60894,
+      "endMs": 61289
+    },
+    {
+      "text": " stars)",
+      "startMs": 61289,
+      "endMs": 61684
+    },
+    {
+      "text": " —",
+      "startMs": 61684,
+      "endMs": 61859
+    },
+    {
+      "text": " the",
+      "startMs": 61859,
+      "endMs": 62122,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " blog",
+      "startMs": 62122,
+      "endMs": 62430
+    },
+    {
+      "text": " framework.",
+      "startMs": 62430,
+      "endMs": 63000
+    },
+    {
+      "text": " Content",
+      "startMs": 63000,
+      "endMs": 63439
+    },
+    {
+      "text": " collections",
+      "startMs": 63439,
+      "endMs": 64053,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " validate",
+      "startMs": 64053,
+      "endMs": 64536
+    },
+    {
+      "text": " the",
+      "startMs": 64536,
+      "endMs": 64799
+    },
+    {
+      "text": " frontmatter",
+      "startMs": 64799,
+      "endMs": 65414
+    },
+    {
+      "text": " the",
+      "startMs": 65414,
+      "endMs": 65677,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " script",
+      "startMs": 65677,
+      "endMs": 66072
+    },
+    {
+      "text": " reads.",
+      "startMs": 66072,
+      "endMs": 67333,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " What",
+      "startMs": 67867,
+      "endMs": 68168
+    },
+    {
+      "text": " I",
+      "startMs": 68168,
+      "endMs": 68340
+    },
+    {
+      "text": " will",
+      "startMs": 68340,
+      "endMs": 68642
+    },
+    {
+      "text": " not",
+      "startMs": 68642,
+      "endMs": 68900,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " automate.",
+      "startMs": 68900,
+      "endMs": 69416
+    },
+    {
+      "text": " Engagement",
+      "startMs": 69416,
+      "endMs": 69976
+    },
+    {
+      "text": " bait,",
+      "startMs": 69976,
+      "endMs": 70320
+    },
+    {
+      "text": " auto-replies,",
+      "startMs": 70320,
+      "endMs": 71009,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " and",
+      "startMs": 71009,
+      "endMs": 71268
+    },
+    {
+      "text": " scraping.",
+      "startMs": 71268,
+      "endMs": 71784
+    },
+    {
+      "text": " LinkedIn's",
+      "startMs": 71784,
+      "endMs": 72344
+    },
+    {
+      "text": " automation",
+      "startMs": 72344,
+      "endMs": 72903,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " rules",
+      "startMs": 72903,
+      "endMs": 73248
+    },
+    {
+      "text": " allow",
+      "startMs": 73248,
+      "endMs": 73592
+    },
+    {
+      "text": " posting",
+      "startMs": 73592,
+      "endMs": 74023
+    },
+    {
+      "text": " your",
+      "startMs": 74023,
+      "endMs": 74324,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " own",
+      "startMs": 74324,
+      "endMs": 74582
+    },
+    {
+      "text": " content",
+      "startMs": 74582,
+      "endMs": 75013
+    },
+    {
+      "text": " through",
+      "startMs": 75013,
+      "endMs": 75443
+    },
+    {
+      "text": " the",
+      "startMs": 75443,
+      "endMs": 75702,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " API;",
+      "startMs": 75702,
+      "endMs": 76003
+    },
+    {
+      "text": " they",
+      "startMs": 76003,
+      "endMs": 76304
+    },
+    {
+      "text": " do",
+      "startMs": 76304,
+      "endMs": 76520
+    },
+    {
+      "text": " not",
+      "startMs": 76520,
+      "endMs": 76778,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " allow",
+      "startMs": 76778,
+      "endMs": 77122
+    },
+    {
+      "text": " fake…",
+      "startMs": 77122,
+      "endMs": 78333,
       "pageBreakAfter": true
     },
     {
       "text": " Read",
-      "startMs": 26667,
-      "endMs": 26952
+      "startMs": 78867,
+      "endMs": 79237
     },
     {
       "text": " the",
-      "startMs": 26952,
-      "endMs": 27197
+      "startMs": 79237,
+      "endMs": 79554
     },
     {
       "text": " full",
-      "startMs": 27197,
-      "endMs": 27482
+      "startMs": 79554,
+      "endMs": 79924
     },
     {
       "text": " article.",
-      "startMs": 27482,
-      "endMs": 27930,
+      "startMs": 79924,
+      "endMs": 80505,
       "pageBreakAfter": true
     },
     {
       "text": " New",
-      "startMs": 27930,
-      "endMs": 28175
+      "startMs": 80505,
+      "endMs": 80822
     },
     {
       "text": " posts",
-      "startMs": 28175,
-      "endMs": 28501
+      "startMs": 80822,
+      "endMs": 81245
     },
     {
       "text": " every",
-      "startMs": 28501,
-      "endMs": 28827
+      "startMs": 81245,
+      "endMs": 81668
     },
     {
       "text": " week",
-      "startMs": 28827,
-      "endMs": 29112,
+      "startMs": 81668,
+      "endMs": 82038,
       "pageBreakAfter": true
     },
     {
       "text": " on",
-      "startMs": 29112,
-      "endMs": 29316
+      "startMs": 82038,
+      "endMs": 82302
     },
     {
       "text": " the",
-      "startMs": 29316,
-      "endMs": 29561
+      "startMs": 82302,
+      "endMs": 82619
     },
     {
       "text": " blog.",
-      "startMs": 29561,
-      "endMs": 29887,
+      "startMs": 82619,
+      "endMs": 83833,
       "pageBreakAfter": true
     }
   ],

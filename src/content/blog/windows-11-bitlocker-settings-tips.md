@@ -2,7 +2,7 @@
 title: "Windows 11 BitLocker: The Complete Guide to Recovery Keys, Settings, and Fixes"
 description: "Learn how Windows 11 BitLocker works, why it's on by default, how to find and back up your recovery key, disable encryption safely, and fix the most common BitLocker issues."
 heroImage: "/windows-11-bitlocker-guide.jpg"
-pubDate: "Oct 15 2026"
+pubDate: "Oct 16 2026"
 category: "Networking & Privacy"
 tags: ["windows", "security", "bitlocker"]
 

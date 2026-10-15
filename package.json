@@ -34,6 +34,7 @@
 		"optimize:images": "node scripts/optimize-images.mjs",
 		"check:links": "node scripts/check-links.mjs",
 		"share:linkedin": "node scripts/share-to-linkedin.mjs",
+		"submit:indexnow": "node scripts/submit-indexnow.mjs",
 		"build": "npm run generate:assets && npm run optimize:images && astro build",
 		"cf-typegen": "wrangler types",
 		"check": "astro build && tsc && wrangler deploy --dry-run",

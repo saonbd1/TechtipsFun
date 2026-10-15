@@ -5,6 +5,7 @@ import sitemap from "@astrojs/sitemap";
 import fs from "node:fs";
 import path from "node:path";
 import rehypeResponsiveImages from "./src/utils/rehype-responsive-images.mjs";
+import { postSlug } from "./src/utils/post-slug.mjs";
 
 const blogDir = "./src/content/blog";
 
@@ -17,8 +18,9 @@ function readPostDates() {
 		const field = (key) => frontmatter.match(new RegExp(`^${key}:\\s*["']?([^"'\\n]+)`, "m"))?.[1];
 		const date = new Date(field("updatedDate") ?? field("pubDate") ?? "");
 		if (Number.isNaN(date.valueOf())) continue;
-		const slug = file.replace(/\.mdx?$/, "").toLowerCase().replace(/[^a-z0-9 _-]/g, "").replace(/ /g, "-");
-		dates.set(slug, date);
+		// postSlug mirrors the entry id Astro gives the post, so the lastmod
+		// lookup matches the /blog/<id>/ URL in the sitemap.
+		dates.set(postSlug(file), date);
 	}
 	return dates;
 }

@@ -46,6 +46,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { postSlug } from '../src/utils/post-slug.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
@@ -110,6 +111,20 @@ function extractLinks(file) {
   }
   return { external, internal };
 }
+
+/**
+ * Every post slug the site actually serves. Astro derives the entry id from the
+ * file name (lowercased, spaces -> dashes), so comparing a URL slug against the
+ * raw file name produced false "post file missing" reports for
+ * `Simple-Ghostty-terminal-configuration-guide.md` and the like. Normalise both
+ * sides through the same helper the build scripts use.
+ */
+const postSlugs = new Set(
+  fs
+    .readdirSync(path.join(ROOT, 'src/content/blog'))
+    .filter((file) => /\.(md|mdx)$/i.test(file))
+    .map((file) => postSlug(file)),
+);
 
 const externalAll = new Map();
 const internalAll = [];
@@ -222,9 +237,7 @@ function checkInternal(link) {
   const p = target.split('#')[0];
   const blogMatch = p.match(/^\/blog\/([^/]+)\/?$/);
   if (blogMatch) {
-    const slug = blogMatch[1];
-    const post = path.join(ROOT, 'src/content/blog', `${slug}.md`);
-    if (!fs.existsSync(post)) problems.push('post file missing');
+    if (!postSlugs.has(postSlug(blogMatch[1]))) problems.push('post file missing');
     if (!link.raw.endsWith('/')) problems.push('missing trailing slash (Worker answers with 307)');
     return { ...link, problems };
   }

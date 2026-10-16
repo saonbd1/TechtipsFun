@@ -5,9 +5,15 @@
  * Recreated as a vector so it stays crisp at any size and can be recoloured.
  * The mark is drawn with `currentColor`, so it inherits whatever colour the
  * surrounding context sets (see `.brand-mark` in Header.astro). The original
- * artwork is brand navy (#1b3a6e) — on the dark header it is recoloured to the
- * site's light lavender so it stays legible, and the light-mode favicon keeps
- * the navy.
+ * artwork is brand navy (#1b3a6e) — on the dark header it is recoloured to
+ * white so it reads clearly next to the wordmark, and the light-mode favicon
+ * keeps the navy.
+ *
+ * The default size lives in this component's own scoped style on purpose: the
+ * `svg` is the component root, so a parent component cannot size it with a
+ * plain descendant selector (Astro scopes that selector to the parent and the
+ * mark would keep its default size instead). Parents override the size with
+ * `:global(svg)`.
  */
 interface Props {
 	class?: string;
@@ -16,7 +22,15 @@ interface Props {
 const { class: className } = Astro.props;
 ---
 
-<svg class={className} viewBox="0 0 100 124" role="img" aria-hidden="true" focusable="false">
+<svg
+	class={className}
+	viewBox="0 0 100 124"
+	width="100"
+	height="124"
+	role="img"
+	aria-hidden="true"
+	focusable="false"
+>
 	<g fill="currentColor">
 		<!-- sail / nose blade -->
 		<path d="M41 0 L70 70 L2 80 Z" />
@@ -30,3 +44,13 @@ const { class: className } = Astro.props;
 		<path d="M46 90 L53 102 L60 90 L66 95 L53 120 L40 95 Z" />
 	</g>
 </svg>
+
+<style>
+	/* Aspect ratio is 100 x 124, so the width is derived from the height. */
+	svg {
+		display: block;
+		height: 1.85rem;
+		width: calc(1.85rem * 100 / 124);
+	}
+</style>
+

@@ -1,0 +1,32 @@
+---
+/**
+ * BrandMark — the TechTips.fun logo mark (rocket/arrow "A").
+ *
+ * Recreated as a vector so it stays crisp at any size and can be recoloured.
+ * The mark is drawn with `currentColor`, so it inherits whatever colour the
+ * surrounding context sets (see `.brand-mark` in Header.astro). The original
+ * artwork is brand navy (#1b3a6e) — on the dark header it is recoloured to the
+ * site's light lavender so it stays legible, and the light-mode favicon keeps
+ * the navy.
+ */
+interface Props {
+	class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+<svg class={className} viewBox="0 0 100 124" role="img" aria-hidden="true" focusable="false">
+	<g fill="currentColor">
+		<!-- sail / nose blade -->
+		<path d="M41 0 L70 70 L2 80 Z" />
+		<!-- right fin -->
+		<path d="M56 50 L68 42 L99 104 L86 114 Z" />
+		<!-- swoosh ribbon -->
+		<path d="M4 94 C 26 80 50 58 88 38 L 92 50 C 60 70 34 88 4 94 Z" />
+		<!-- arrow head -->
+		<path d="M99 22 L95 50 L84 38 L72 26 Z" />
+		<!-- exhaust chevron -->
+		<path d="M46 90 L53 102 L60 90 L66 95 L53 120 L40 95 Z" />
+	</g>
+</svg>

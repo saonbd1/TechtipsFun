@@ -1,5 +1,6 @@
 ---
 import HeaderLink from './HeaderLink.astro';
+import BrandMark from './BrandMark.astro';
 import { getCollection } from 'astro:content';
 import { SITE_TITLE } from '../consts';
 import { toTaxonomySlug } from '../utils/taxonomy';
@@ -16,12 +17,7 @@ const isBlogActive =
 			<div class="brand-wrapper">
 				<a class="brand" href="/">
 				<span class="brand-mark" aria-hidden="true">
-					<svg viewBox="0 0 32 32" role="img">
-						<path d="M8 9.5h8.5a5 5 0 0 1 0 10H15" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.6" />
-						<path d="M24 22.5h-8.5a5 5 0 0 1 0-10H17" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.6" />
-						<circle cx="8" cy="9.5" r="1.7" fill="currentColor" />
-						<circle cx="24" cy="22.5" r="1.7" fill="currentColor" />
-					</svg>
+					<BrandMark />
 				</span>
 				<span class="brand-name"><span class="brand-name__tech">Tech</span><span class="brand-name__tips">tips</span><span class="brand-name__dot">.fun</span></span>
 			</a>
@@ -100,12 +96,14 @@ const isBlogActive =
 		display: inline-flex;
 		flex: 0 0 auto;
 		line-height: 0;
+		/* The logo is brand navy in the source artwork; on the dark header it is
+		   recoloured to this lavender so the mark stays legible. */
 		color: #d9dcff;
 	}
 	.brand-mark svg {
 		display: block;
-		height: 1.65rem;
-		width: 1.65rem;
+		height: 1.85rem;
+		width: auto;
 	}
 	.brand-name {
 		display: inline-block;
@@ -232,8 +230,8 @@ const isBlogActive =
 			padding: 0.35rem 0;
 		}
 		.brand-mark svg {
-			height: 1.25rem;
-			width: 1.25rem;
+			height: 1.5rem;
+			width: auto;
 		}
 		.brand-name {
 			font-size: 1.08rem;

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 124" width="100" height="124" role="img" aria-labelledby="techtips-logo-title">
+    <title id="techtips-logo-title">Tech Tips in Fun</title>
+    <g fill="#1b3a6e">
+        <path d="M41 0 L70 70 L2 80 Z" />
+        <path d="M56 50 L68 42 L99 104 L86 114 Z" />
+        <path d="M4 94 C 26 80 50 58 88 38 L 92 50 C 60 70 34 88 4 94 Z" />
+        <path d="M99 22 L95 50 L84 38 L72 26 Z" />
+        <path d="M46 90 L53 102 L60 90 L66 95 L53 120 L40 95 Z" />
+    </g>
+</svg>

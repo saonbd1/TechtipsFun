@@ -22,28 +22,36 @@ Normalises the OG card name when `schedule-posts.yml` publishes a staged post,
 and reports the normalised slug to the LinkedIn / IndexNow steps. Pairs with
 `scripts/check-og-cards.mjs` and `src/utils/post-slug.mjs` (committed separately).
 
-## squad-share-daily-dev-fix.patch
+## Removed: `.github/workflows/squad-share.yml`
 
-Makes `squad-share.yml` — "Post new article to Squad via Slack", which announces
-each new post to the Slack channel behind the daily.dev Squad — actually work.
-It currently fails on every real post with `curl: (3) URL rejected: Malformed
-input to a URL function`, and passes silently on pushes that only *update* a
-post, which is why the failure was easy to miss.
+The "Post new article to Squad via Slack" workflow was deleted on 2026-10-16
+along with `squad-share-daily-dev-fix.patch` (which had been applied as
+`51cd8fc`). It could never do its job, so keeping it only produced failing runs.
 
-The patch:
+It assumed that posting to a Slack channel connected to a daily.dev Squad would
+publish that post to the Squad. **daily.dev's Slack integration is one-way —
+Squad → Slack.** It sends a notification *into* Slack when a new post is
+published *in* the Squad:
 
-- fails fast with an explicit `::error::` naming the missing secret;
-- derives the post slug the way `src/utils/post-slug.mjs` does, instead of from
-  the raw filename (which produced 404 links for `Simple-Ghostty-…` and
-  `update-tpm- …(1).md`);
-- fixes the double-encoded 🚀 / — in the message (`c3b0 c5b8 c5a1 e282ac`);
-- builds the payload with `jq --arg`, so a title containing quotes cannot break
-  the JSON;
-- trims CRLF frontmatter, so the one CRLF post keeps a clean title;
-- passes the changed-file list through the environment instead of interpolating
-  it into the shell, and uses LF line endings like every other workflow.
+> "Real-time Updates: Receive instant notifications in Slack whenever new posts
+> are published in your Squad."
+> — daily.dev docs, *Slack integration for Squads* (updated 2026-09-28)
 
-**The secret still has to be set by hand**: Settings → Secrets and variables →
-Actions → New repository secret, named `SLACK_WEBHOOK_URL`, with the Slack
-incoming-webhook URL for the Squad channel. Without it the step cannot post.
+Nothing posted into that Slack channel ever becomes a Squad post. The Public API
+is no alternative either: all 54 documented endpoints were checked against
+`https://api.daily.dev/public/v1/docs/yaml` and none of them touch Squads — the
+only write operations are bookmarks, custom-feed filters, notifications,
+profile / stack / experiences, plugins and signup.
+
+**So there is no supported way to publish to a Squad from CI.** New articles have
+to go to the Squad by hand — Squad page → composer → **Share a link** — which is
+what daily.dev itself recommends for personal blogs, since personal blogs are
+explicitly not eligible as daily.dev *sources* ("Corporate and personal blogs are
+not eligible. Consider starting a Squad instead.").
+
+If a Slack notification is ever wanted again for a *different* reason (e.g. "ping
+me when a new post goes live"), it needs its own workflow, a fresh
+`SLACK_WEBHOOK_URL` secret, and a message that does not claim to publish to
+daily.dev.
+
 

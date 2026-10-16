@@ -537,26 +537,6 @@
         "ci"
       ],
       "docs": ".github/workflows/schedule-posts.yml"
-    },
-    {
-      "name": "squad-share.yml",
-      "repo": "blog",
-      "path": ".github/workflows/squad-share.yml",
-      "category": "Automation (CI)",
-      "language": "YAML",
-      "status": "ci",
-      "summary": "Posts new articles to Squad via Slack.",
-      "capabilities": [
-        "Announces a new post in a Slack channel",
-        "Triggered by new posts in src/content/blog/"
-      ],
-      "run": "gh workflow run squad-share.yml",
-      "tags": [
-        "actions",
-        "slack",
-        "ci"
-      ],
-      "docs": ".github/workflows/squad-share.yml"
     }
   ]
 }

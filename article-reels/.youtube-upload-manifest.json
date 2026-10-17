@@ -82,5 +82,23 @@
     "url": "https://youtu.be/t9yPJoYqgHo",
     "title": "I Tested 6 AI Coding Assistants so You",
     "uploaded_at_utc": "2026-10-17T13:55:50.913535+00:00"
+  },
+  "local-ollama-windows11-low-spec-setup.mp4": {
+    "video_id": "opWh6zhk0_4",
+    "url": "https://youtu.be/opWh6zhk0_4",
+    "title": "Local Ollama Windows 11 Low Spec Setup",
+    "uploaded_at_utc": "2026-10-17T15:20:04.825634+00:00"
+  },
+  "migrate-static-html-site-to-astro.mp4": {
+    "video_id": "E9Ka_OvGxeg",
+    "url": "https://youtu.be/E9Ka_OvGxeg",
+    "title": "Migrate Static HTML Site to Astro",
+    "uploaded_at_utc": "2026-10-17T15:20:08.660616+00:00"
+  },
+  "muse-glimmer-ai-local-guide.mp4": {
+    "video_id": "GmmVVZRWnT0",
+    "url": "https://youtu.be/GmmVVZRWnT0",
+    "title": "Muse Glimmer AI Local Guide",
+    "uploaded_at_utc": "2026-10-17T15:20:12.121006+00:00"
   }
 }

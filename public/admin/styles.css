@@ -1,0 +1,239 @@
+/* Tech Tips Admin — thin layer on top of AdminLTE v4 (Bootstrap 5).
+   AdminLTE/Bootstrap ship everything structural; this file only adds the
+   handful of pieces that are specific to this tool. */
+
+/* ── Sign-in gate ─────────────────────────────────────────────────────── */
+.admin-gate {
+  position: fixed;
+  inset: 0;
+  z-index: 1080;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: var(--bs-body-bg);
+  overflow-y: auto;
+}
+
+.admin-gate-card {
+  width: 100%;
+  max-width: 26rem;
+}
+
+.admin-gate-card code {
+  font-size: 0.8em;
+}
+
+/* ── Toasts ───────────────────────────────────────────────────────────── */
+.admin-toasts {
+  position: fixed;
+  top: 4.5rem;
+  right: 1rem;
+  z-index: 1070;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: min(24rem, calc(100vw - 2rem));
+}
+
+/* ── Stat tiles ───────────────────────────────────────────────────────── */
+.stat-card .stat-icon {
+  font-size: 2.5rem;
+  opacity: 0.25;
+}
+
+/* ── Tables ───────────────────────────────────────────────────────────── */
+.table-actions {
+  white-space: nowrap;
+  width: 1%;
+}
+
+.row-clickable {
+  cursor: pointer;
+}
+
+/* ── Editor ───────────────────────────────────────────────────────────── */
+.editor-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 991.98px) {
+  .editor-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.editor-pane {
+  display: flex;
+  flex-direction: column;
+  min-height: 32rem;
+}
+
+.editor-textarea {
+  flex: 1 1 auto;
+  min-height: 30rem;
+  resize: vertical;
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  tab-size: 2;
+}
+
+.md-preview {
+  flex: 1 1 auto;
+  min-height: 30rem;
+  max-height: 46rem;
+  overflow-y: auto;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--bs-border-color);
+  border-radius: var(--bs-border-radius);
+  background: var(--bs-body-bg);
+  font-size: 0.9375rem;
+  line-height: 1.7;
+}
+
+.md-preview > :first-child {
+  margin-top: 0;
+}
+
+.md-preview h1,
+.md-preview h2,
+.md-preview h3,
+.md-preview h4 {
+  margin-top: 1.5em;
+  margin-bottom: 0.6em;
+}
+
+.md-preview h1 {
+  font-size: 1.5rem;
+}
+.md-preview h2 {
+  font-size: 1.25rem;
+}
+.md-preview h3 {
+  font-size: 1.1rem;
+}
+.md-preview h4 {
+  font-size: 1rem;
+}
+
+.md-preview pre {
+  padding: 0.75rem 1rem;
+  border-radius: var(--bs-border-radius);
+  background: var(--bs-tertiary-bg);
+  overflow-x: auto;
+  font-size: 0.8125rem;
+}
+
+.md-preview code {
+  font-size: 0.85em;
+}
+
+.md-preview :not(pre) > code {
+  padding: 0.15em 0.35em;
+  border-radius: 0.25rem;
+  background: var(--bs-tertiary-bg);
+}
+
+.md-preview blockquote {
+  margin: 1rem 0;
+  padding: 0.25rem 0 0.25rem 1rem;
+  border-left: 0.25rem solid var(--bs-border-color);
+  color: var(--bs-secondary-color);
+}
+
+.md-preview img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--bs-border-radius);
+}
+
+.md-preview hr {
+  margin: 1.5rem 0;
+  border-color: var(--bs-border-color);
+}
+
+.md-preview table {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.md-preview table th,
+.md-preview table td {
+  padding: 0.4rem 0.6rem;
+  border: 1px solid var(--bs-border-color);
+}
+
+/* ── Media library ────────────────────────────────────────────────────── */
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+  gap: 1rem;
+}
+
+.media-tile {
+  border: 1px solid var(--bs-border-color);
+  border-radius: var(--bs-border-radius);
+  overflow: hidden;
+  background: var(--bs-tertiary-bg);
+}
+
+.media-tile img {
+  width: 100%;
+  height: 8rem;
+  object-fit: cover;
+  display: block;
+}
+
+.media-tile-body {
+  padding: 0.5rem 0.6rem;
+  font-size: 0.75rem;
+}
+
+.media-tile-name {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ── Queue ────────────────────────────────────────────────────────────── */
+.queue-next {
+  border-left: 0.25rem solid var(--bs-warning);
+}
+
+.drag-handle {
+  cursor: grab;
+  color: var(--bs-secondary-color);
+}
+
+.queue-row.dragging {
+  opacity: 0.5;
+}
+
+.queue-row.drop-target {
+  outline: 2px dashed var(--bs-primary);
+  outline-offset: -2px;
+}
+
+/* ── Misc ─────────────────────────────────────────────────────────────── */
+.mono {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.8125rem;
+}
+
+.spin {
+  animation: admin-spin 1s linear infinite;
+}
+
+@keyframes admin-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+[hidden] {
+  display: none !important;
+}

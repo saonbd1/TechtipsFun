@@ -9,6 +9,19 @@
 /_astro/*
   Cache-Control: public, max-age=31536000, immutable
 
+# The content admin is a private tool: never index it, never leak the URL as a
+# referrer, and lock it down to its own assets plus api.github.com.
+/admin/*
+  X-Robots-Tag: noindex, nofollow, noarchive, nosnippet
+  Referrer-Policy: no-referrer
+  Cache-Control: no-store
+  Content-Security-Policy: default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.techtips.fun https://avatars.githubusercontent.com; font-src 'self'; connect-src 'self' https://api.github.com; base-uri 'none'; form-action 'none'; frame-ancestors 'none'
+
+# …but its vendored AdminLTE/Bootstrap/icons assets are immutable, like the rest
+# of the build output.
+/admin/vendor/*
+  Cache-Control: public, max-age=31536000, immutable
+
 /_img/*
   Cache-Control: public, max-age=2592000
 

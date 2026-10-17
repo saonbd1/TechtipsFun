@@ -982,7 +982,7 @@
     setActiveNav('dashboard');
     view(spinner('Loading the repository…'));
 
-    Promise.all([loadPosts(), loadQueue()])
+    Promise.all([loadPosts(), loadQueue(), loadMedia()])
       .then(function () {
         var words = state.posts.reduce(function (total, post) {
           return total + (post.words || 0);
@@ -993,7 +993,7 @@
         html += statCard('Published posts', state.posts.length, 'file-earmark-text', 'primary', '~' + words.toLocaleString() + ' words');
         html += statCard('In queue', state.order.length, 'list-ol', 'warning', next ? 'next: ' + next.name : 'queue empty');
         html += statCard('Categories', state.categories.length, 'tags', 'info');
-        html += statCard('Media files', state.loaded.media ? state.media.length : '—', 'images', 'success', 'article-media + og');
+        html += statCard('Media files', state.media.length, 'images', 'success', 'article-media + og');
         html += '</div>';
 
         html += '<div class="row g-3">';

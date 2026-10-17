@@ -6,6 +6,12 @@
 User-agent: *
 Allow: /
 
+# The content admin at /admin/ is a private tool that talks to the GitHub API
+# with a token the operator supplies. It is not secret (the code is public) and
+# the token — not this file — is what protects it, so this is only defence in
+# depth. It also carries X-Robots-Tag: noindex via public/_headers.
+Disallow: /admin/
+
 # OpenAI search and user-request retrieval.
 User-agent: OAI-SearchBot
 Allow: /

@@ -40,6 +40,15 @@ The `src/content/` directory contains "collections" of related Markdown and MDX 
 
 Any static assets, like images, can be placed in the `public/` directory.
 
+## Content admin
+
+`public/admin/` is a private AdminLTE dashboard served at `/admin/`. It writes
+posts and manages the publish queue by committing to `main` through the GitHub
+Contents API with a fine-grained token you paste in — there is no server, so the
+static deploy and every GitHub Actions pipeline keep working as-is. See
+[`public/admin/README.md`](public/admin/README.md) for the token setup and
+`npm run test:admin` for its tests.
+
 ## 🧞 Commands
 
 All commands are run from the root of the project, from a terminal:

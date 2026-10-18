@@ -381,6 +381,7 @@ A copy of `article-reels.yml` and `check-links.yml` (with weekly schedule) is st
 | `reels/` | Remotion video pipeline | [`README.md`](reels/README.md) |
 | `reels/ci/` | Staged GitHub Actions workflows | [`README.md`](reels/ci/README.md) |
 | `standalone/` | Projects to lift into their own repos | [`README.md`](standalone/README.md) |
+| `docs/` | Evergreen documentation (published to GitBook) | [`README.md`](docs/README.md) |
 | `pending-posts/` | Scheduled post queue | — |
 | `scripts/` | Build & automation scripts | — |
 

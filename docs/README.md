@@ -1,44 +1,48 @@
-# TechTips.fun Docs
+# TechTips.fun Docs — Project Documentation Only
 
-Documentation and reference guides for TechTips.fun.
+This folder contains **project documentation only** for GitBook.
 
-## Purpose
+## 🔒 Strict rule: No blog posts on GitBook
 
-This folder contains **evergreen documentation only** — tutorials, reference guides, and troubleshooting docs that don't expire.
+| ✅ Allowed in `docs/` (→ GitBook) | ❌ Blocked from `docs/` (stays on Astro blog) |
+| :--- | :--- |
+| Project setup guides | Dated blog posts |
+| API / tool reference | News and link roundups |
+| Tutorials & SOPs | Opinion pieces |
+| Troubleshooting docs | "How I fixed X" stories |
+| Changelogs | Time-sensitive announcements |
 
-Blog posts (time-based, opinion, news) live in `src/content/blog/` instead.
+**A topic lives in exactly one place.**  
+If you write a blog post, it goes in `src/content/blog/` only.  
+If you write a project doc, it goes in `docs/` only.  
+Never publish the same Markdown to both.
 
-## Separation rule (never break this)
+## Adding a new project doc
 
-| Location | Content type | Example |
-| :--- | :--- | :--- |
-| `src/content/blog/` | Dated posts, news, link roundups, opinions | `how-to-fix-windows-11-sound.md` |
-| `docs/` | Timeless reference, tutorials, SOPs | `windows-sound-troubleshooting.md` |
+```powershell
+New-Item "docs/my-project-guide.md" -ItemType File
+```
 
-**A topic must exist in exactly one place.** If you move a blog post into docs, delete or canonicalize the blog version. Never publish the same Markdown to both.
+Add frontmatter:
 
-## Adding a new doc
+```md
+---
+title: My Project Guide
+description: One-line summary
+category: Documentation
+---
+```
 
-1. Create a Markdown file in `docs/`:
-   ```powershell
-   New-Item "docs/my-guide.md" -ItemType File
-   ```
-2. Add frontmatter:
-   ```md
-   ---
-   title: My Guide Title
-   description: One-line summary
-   category: Reference
-   ---
-   ```
-3. Push to GitHub and sync to GitBook (see [`PUBLISHING.md`](PUBLISHING.md)).
+## Before publishing to GitBook
 
-## Checking for duplication
-
-Run the guard script before publishing:
+Run the guard script — it will **fail** if any file in `docs/` looks like a blog post:
 
 ```powershell
 node scripts/check-docs-duplication.mjs
 ```
 
-It will fail if any doc title or slug overlaps with a published blog post.
+Only push `docs/` to GitBook once the script passes.
+
+## Publishing
+
+See [`PUBLISHING.md`](PUBLISHING.md) for GitBook sync steps.

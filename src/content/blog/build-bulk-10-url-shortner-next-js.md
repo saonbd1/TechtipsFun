@@ -1,12 +1,11 @@
 ---
 title: "Build a Bulk 10 URL Shortener Platform Using Next.JS"
-description: " Follow Easy Steps on Next.js for URL redirect route; Learn more about URL shortener API validation; dynamic short URL route."
+description: "Follow Easy Steps on Next.js for URL redirect route; Learn more about URL shortener API validation; dynamic short URL route."
 heroImage: "/article-media/bulk-url-shortner.png"
-pubDate: "Aug 17 2026"
+pubDate: "Aug 16 2026"
 category: "Web Development"
 tags: ["Next JS", "Tools", "Frontend"]
 ---
-
 
 ## Introduction
 
@@ -122,6 +121,8 @@ Next.js states that HTTP 307 keeps the request method. HTTP 302 has different me
 
 For a normal short-link GET request, the result is a direct redirect to the destination.
 
+New update for advance analytics system. 
+
 ## Step 5: Connect the form to the API
 
 The client form sends the submitted value to the API. It reads the returned `shortUrl` and displays it to the user.
@@ -175,4 +176,5 @@ The main pattern has five parts. Validate the destination on the server. Create 
 This pattern gives the project a clear path from local JSON storage to a durable database.
 
 The next features can include authentication, analytics, rate limits, and durable storage. Add these features after the create-and-redirect flow has automated tests.
+
 

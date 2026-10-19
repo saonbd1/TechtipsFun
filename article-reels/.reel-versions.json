@@ -2,6 +2,7 @@
   "automate-linkedin-posts-github-actions": 2,
   "blog-to-video-self-hosted-pipeline": 2,
   "how-to-add-onedrive-to-windows-file-explorer": 2,
+  "how-to-fix-windows-11-stuck-on-getting-updates-loop": 2,
   "how-to-set-up-linkedin-oauth-client": 2,
   "migrate-static-html-site-to-astro": 2,
   "my-dev-environment-in-2026-what-changed": 2,
@@ -11,5 +12,6 @@
   "windows-11-battery-drains-fast": 2,
   "windows-11-bitlocker-settings-tips": 2,
   "windows-11-no-sound-after-update": 2,
-  "windows-11-taskbar-start-menu-not-showing": 2
+  "windows-11-taskbar-start-menu-not-showing": 2,
+  "windows-11-wifi-keeps-disconnecting": 2
 }

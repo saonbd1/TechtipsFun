@@ -1,0 +1,11 @@
+$schema: https://api.gitbook.com/gitbook-docs.yaml
+site:
+  title: TechTips.fun Docs
+  structure:
+    - type: space
+      key: docs
+      title: Docs
+      path: .
+      default: true
+      content:
+        directory: .

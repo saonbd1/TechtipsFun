@@ -29,6 +29,7 @@ A personal tech blog and knowledge base built with [Astro](https://astro.build),
 
 - ✍️ **Markdown & MDX blog posts** — write in `src/content/blog/`, frontmatter validated with Zod
 - ⚡ **Static output** — built with Astro, deployed to Cloudflare Workers static assets (no server)
+- 📄 **Paginated blog** — eight posts per page, newest first, with numbered and Previous/Next navigation
 - 🔍 **SEO-ready** — canonical URLs, OpenGraph data, sitemap, RSS feed, per-post `og:image` cards
 - 🎬 **Article reels** — automatic vertical 1080×1920 MP4 videos generated from each post (Remotion)
 - 📱 **Social cards** — branded 1200×630 PNG preview images for every post
@@ -413,6 +414,7 @@ git push bitbucket --tags
 
 ```powershell
 npm run test:admin   # admin dashboard unit + smoke tests
+npm run test:blog    # blog pagination tests
 npm run check        # full build + TypeScript + wrangler dry-run
 ```
 

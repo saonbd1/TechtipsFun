@@ -1,0 +1,21 @@
+---
+import { getCollection } from 'astro:content';
+import BlogIndex from '../../../layouts/BlogIndex.astro';
+import { paginateBlogPosts } from '../../../utils/blog-pagination.mjs';
+
+export async function getStaticPaths() {
+	const posts = await getCollection('blog');
+	const { totalPages } = paginateBlogPosts(posts);
+	return Array.from({ length: totalPages - 1 }, (_, index) => {
+		const page = index + 2;
+		return {
+			params: { page: String(page) },
+			props: paginateBlogPosts(posts, page),
+		};
+	});
+}
+
+type Props = import('../../../layouts/BlogIndex.astro').Props;
+---
+
+<BlogIndex {...Astro.props} />

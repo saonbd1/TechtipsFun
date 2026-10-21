@@ -35,10 +35,10 @@ if (!fs.existsSync(DIST_BLOG)) {
   process.exit(1);
 }
 
-/** Post slugs = the directory names Astro actually emitted under dist/blog/. */
+/** Only directories with their own page are posts, not the pagination container. */
 const slugs = fs
   .readdirSync(DIST_BLOG, { withFileTypes: true })
-  .filter((entry) => entry.isDirectory())
+  .filter((entry) => entry.isDirectory() && fs.existsSync(path.join(DIST_BLOG, entry.name, 'index.html')))
   .map((entry) => entry.name);
 
 const missing = slugs.filter((slug) => !fs.existsSync(path.join(OG_DIR, `${slug}.png`)));

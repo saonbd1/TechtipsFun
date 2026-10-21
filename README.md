@@ -244,7 +244,7 @@ There is a private, serverless AdminLTE dashboard at `https://www.techtips.fun/a
 ### Signing in
 
 1. Create a **fine-grained personal access token**: https://github.com/settings/personal-access-tokens/new
-2. **Repository access** → only this repo (`saonbd1/astro-blog-starter-template`)
+2. **Repository access** → only this repo (`saonbd1/TechtipsFun`)
 3. **Permissions → Repository permissions → Contents** → Read and write
 4. Set a short expiry, then paste the token into the sign-in gate
 

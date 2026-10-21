@@ -31,7 +31,7 @@ stays in GitHub Actions. The dashboard only links to those.
 
 1. Create a **fine-grained personal access token**:
    <https://github.com/settings/personal-access-tokens/new>
-2. **Repository access** → only `saonbd1/astro-blog-starter-template`.
+2. **Repository access** → only `saonbd1/TechtipsFun`.
 3. **Permissions → Repository permissions → Contents** → *Read and write*.
    Nothing else is required (the dashboard never dispatches workflows, so it
    does not need `Actions` or `Workflows`).

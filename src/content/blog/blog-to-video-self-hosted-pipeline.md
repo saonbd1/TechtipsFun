@@ -1,9 +1,9 @@
 ---
-title: "Blog post to reel video, self-hosted: render a reel for every article"
+title: "From your Blog post to reel video, self-hosted: render a reel for every article"
 description: "Every blog-to-video tool asks for a subscription. Here is the self-hosted alternative: Markdown becomes animated code, real screenshots and captions, rendered on publish. And it is free"
-pubDate: "Oct 10 2026"
-updatedDate: "Oct 14 2026"
 heroImage: "/blog-to-video-pipeline.png"
+pubDate: "Oct 09 2026"
+updatedDate: "Oct 13 2026"
 category: "Automation"
 tags: ["Remotion", "Video Automation", "GitHub Actions", "React", "Content Repurposing"]
 ---
@@ -526,3 +526,4 @@ A generic blog-to-video tool will produce something passable in a minute. This p
 The trade is honest though: it is a weekend of work, and you own the failures. When a render dies at frame 604, nobody is going to fix it for you.
 
 Start smaller than I did. Clone the Code Hike and TikTok templates, get one article rendering locally with `npm run dev`, and only then add the automation. The GitHub Actions half is thirty lines, but it is thirty lines that will happily do nothing at all if you get the trigger wrong.
+

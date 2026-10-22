@@ -2,7 +2,7 @@
 title: "REA (Reverse Engineer Anything): A Complete Tutorial From Installation to Analysis"
 description: "REA combines practical reverse-engineering methods with tools for AI coding agents. It supports static analysis, runtime observation, feature tracing, artifact inspection, and evidence-based reports."
 heroImage: "/article-media/rea-reverse-engineer-anything-cover-2.png"
-pubDate: "Oct 16 2026"
+pubDate: "Oct 15 2026"
 category: "Developer Productivity"
 tags: ["REA", "ai", "tools"]
 ---
@@ -157,9 +157,9 @@ Define the following items:
 
 Record new questions as follow-up work. Do not expand the project without recording the change.
 
-## Install REA
+## How Install and Configure REA? 
 
-### Requirements
+### Pre Requirements
 
 You need the following items:
 
@@ -171,7 +171,7 @@ Supported agents include Claude Code, Cursor, Codex, Gemini CLI, Grok Build, Dev
 
 Hopper, Ghidra, or IDA can help with native binary analysis. JavaScript analysis does not require these tools.
 
-### Use the official sources
+### Always use official sources
 
 Download REA only from the official sources:
 
@@ -181,9 +181,9 @@ Download REA only from the official sources:
 
 A similar repository name does not prove that the source is genuine.
 
-### Run setup
+### Run the setup using command line
 
-Open a terminal and run:
+Open a terminal from start menu (Win + R) and run:
 
 ```bash
 npx rea-agents setup
@@ -1242,6 +1242,7 @@ REA combines practical reverse-engineering methods with tools for AI coding agen
 Start with a clear question. Use an authorized target. Record each observation. Test each important hypothesis. Separate facts from inferences. Preserve the evidence IDs. Document the limits of the analysis.
 
 This process lets you understand an Electron application, a native binary, a web application, a database, a protocol, or another technical system one verified piece at a time.
+
 
 
 

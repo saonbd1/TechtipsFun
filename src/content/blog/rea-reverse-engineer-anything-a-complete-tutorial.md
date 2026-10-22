@@ -2,7 +2,8 @@
 title: "REA (Reverse Engineer Anything): A Complete Tutorial From Installation to Analysis"
 description: "REA combines practical reverse-engineering methods with tools for AI coding agents. It supports static analysis, runtime observation, feature tracing, artifact inspection, and evidence-based reports."
 heroImage: "/article-media/rea-reverse-engineer-anything-cover-2.png"
-pubDate: "Oct 15 2026"
+pubDate: "Oct 19 2026"
+updatedDate: "Oct 22 2026"
 category: "Developer Productivity"
 tags: ["REA", "ai", "tools"]
 ---
@@ -1242,6 +1243,7 @@ REA combines practical reverse-engineering methods with tools for AI coding agen
 Start with a clear question. Use an authorized target. Record each observation. Test each important hypothesis. Separate facts from inferences. Preserve the evidence IDs. Document the limits of the analysis.
 
 This process lets you understand an Electron application, a native binary, a web application, a database, a protocol, or another technical system one verified piece at a time.
+
 
 
 

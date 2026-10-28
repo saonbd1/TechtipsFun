@@ -23,7 +23,7 @@ Use a separate Google Cloud project for each application when possible. This cho
 
 ## Step 1: Create or select a Google Cloud project
 
-1. Open the [Google Cloud Console](https://console.cloud.google.com/).
+1. Open the Google Cloud Console from https://console.cloud.google.com
 2. Select the project menu at the top of the page.
 3. Select an existing project.
 4. Select **New Project** if you need a new project.
@@ -33,7 +33,7 @@ Use a separate Google Cloud project for each application when possible. This cho
 
 ## Step 2: Enable the Blogger API
 
-1. Open the [API Library](https://console.cloud.google.com/apis/library).
+1. Open the API Library https://console.cloud.google.com/apis/library
 2. Search for **Blogger API v3**.
 3. Select **Blogger API v3** from the search results.
 4. Select **Enable**.

@@ -13,7 +13,7 @@ This guide is based on the RSS implementation completed for TechTips.fun. The pr
 
 The goal is a practical pattern you can adapt to another Astro blog, not a claim that every RSS reader renders the same way.
 
-![Architecture of the Astro RSS feed implementation](public/article-media/astro-rss-feed-architecture.png)
+![Architecture of the Astro RSS feed implementation](article-media/astro-rss-feed-architecture.png)
 
 *Architecture diagram for the implementation described in this article. It shows the project structure and the metadata paths added for RSS readers.*
 

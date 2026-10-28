@@ -65,7 +65,24 @@ gh secret set YT_REFRESH_TOKEN --body "<token>"
 python scripts/upload-reels-to-youtube.py --check-auth
 ```
 
-**Before minting, publish the OAuth app** (Google Auth Platform → Audience →
+### Which OAuth client type?
+
+`YT_CLIENT_ID`/`YT_CLIENT_SECRET` are **any** OAuth client in that project; the
+client *type* only changes redirect-URI bookkeeping, not how long the refresh
+token lives.
+
+| Client type | What you must do | Run the helper with |
+| --- | --- | --- |
+| **Desktop app** | nothing — no redirect URIs to register | plain `python scripts/get-youtube-refresh-token.py` (random free port) |
+| **Web application** (if you already have one) | add a fixed loopback URI, e.g. `http://127.0.0.1:8080`, under *Credentials → client → Authorized redirect URIs* | `--port 8080` (port must match exactly; wildcards are rejected) |
+
+Google's redirect-URI rules exempt localhost from the HTTPS-only and
+no-raw-IP rules, so `http://127.0.0.1:8080` is legal on a web client. A separate
+Desktop client is only *nicer*: no registration, and revoking it later does not
+touch the OAuth grant your other integrations (e.g. Blogger) use from the same
+client + account.
+
+**Either way, publish the OAuth app** (Google Auth Platform → Audience →
 Publish app). While the publishing status stays `Testing`, Google expires every
 refresh token **7 days** after it is issued, so the daily job starts failing
 with:

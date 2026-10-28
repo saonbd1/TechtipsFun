@@ -21,6 +21,7 @@ refresh token, then store the three values as repo Secrets.
 
 Usage:
     python upload-reels-to-youtube.py --dry-run
+    python upload-reels-to-youtube.py --check-auth      # verify the secrets
     python upload-reels-to-youtube.py --limit 2 --privacy unlisted
     python upload-reels-to-youtube.py --playlist-id PLxxxx --schedule "+24h"
 
@@ -43,9 +44,38 @@ TOKEN_URL = "https://oauth2.googleapis.com/token"
 UPLOAD_URL = ("https://www.googleapis.com/upload/youtube/v3/videos"
               "?uploadType=resumable&part=snippet,status")
 PLAYLIST_ITEMS_URL = "https://www.googleapis.com/youtube/v3/playlistItems"
+CHANNELS_URL = "https://www.googleapis.com/youtube/v3/channels"
 CHUNK_SIZE = 8 * 1024 * 1024  # 8 MiB (multiple of 256 KiB, per API spec)
 VIDEO_EXTENSIONS = {".mp4", ".mov", ".webm"}
 MANIFEST_NAME = ".youtube-upload-manifest.json"
+
+AUTH_HELP = """\
+What invalid_grant means here (the refresh token is dead, not the code):
+  * The OAuth consent screen is in "Testing" -> Google expires every refresh
+    token 7 days after it is minted. This is the usual cause. Fix: Google Auth
+    Platform -> Audience -> "Publish app" (status "In production"), then mint a
+    new token.
+  * The grant was revoked at https://myaccount.google.com/permissions, or the
+    Google account password changed.
+  * 50+ newer refresh tokens exist for this client+user pair (every re-mint
+    pushes the oldest out), or the token sat unused for 6 months.
+
+Re-mint and update the secret:
+  python scripts/get-youtube-refresh-token.py
+  gh secret set YT_REFRESH_TOKEN --body "<new token>"
+Then verify without uploading:
+  python scripts/upload-reels-to-youtube.py --check-auth
+"""
+
+ERROR_HINTS = {
+    "uploadLimitExceeded": (
+        "YouTube's per-channel upload limit was hit. Newer/unverified channels "
+        "have a hard daily cap - verify at https://www.youtube.com/verify or "
+        "wait for the limit to reset."),
+    "quotaExceeded": (
+        "The 10,000 unit/day YouTube Data API quota is spent (~6 uploads). It "
+        "resets at midnight Pacific, and the manifested uploads resume then."),
+}
 
 ACRONYMS = {
     "tpm": "TPM", "oauth": "OAuth", "html": "HTML", "css": "CSS",
@@ -237,6 +267,45 @@ def add_to_playlist(access_token, video_id, playlist_id):
                        "Content-Type": "application/json"})
 
 
+def whoami(access_token) -> str:
+    """Return the title of the channel the token can upload to."""
+    _, payload = http_json(
+        CHANNELS_URL + "?part=snippet&mine=true",
+        headers={"Authorization": f"Bearer {access_token}"})
+    items = payload.get("items") or []
+    if not items:
+        return "(no YouTube channel on this Google account)"
+    return items[0]["snippet"]["title"]
+
+
+def check_auth(client_id, client_secret, refresh_token) -> int:
+    """Verify the three secrets without uploading. 0 = usable."""
+    for name, value in (("YT_CLIENT_ID", client_id),
+                        ("YT_CLIENT_SECRET", client_secret),
+                        ("YT_REFRESH_TOKEN", refresh_token)):
+        if not value:
+            print(f"FAIL {name} is not set", file=sys.stderr)
+            return 2
+    print("OK   client id/secret/refresh token are all set")
+    try:
+        access_token = mint_access_token(client_id, client_secret,
+                                         refresh_token)
+    except RuntimeError as e:
+        msg = str(e)
+        print(f"FAIL token refresh\n  {msg}", file=sys.stderr)
+        if "invalid_grant" in msg:
+            print("\n" + AUTH_HELP, file=sys.stderr)
+        return 2
+    print("OK   token refresh")
+    try:
+        print(f"OK   channel: {whoami(access_token)}")
+    except RuntimeError as e:
+        print(f"FAIL channel lookup\n  {e}", file=sys.stderr)
+        return 2
+    print("\nSecrets work. Uploads can run.")
+    return 0
+
+
 def parse_schedule(spec: str):
     """Parse '+24h' / '+90m' / '2026-10-20T18:00' into an aware UTC datetime."""
     if m := re.fullmatch(r"\+(\d+)([mh])", (spec or "").strip()):
@@ -283,10 +352,19 @@ def parse_args():
                    help="re-upload even if the manifest has the file")
     p.add_argument("--dry-run", action="store_true",
                    help="print the plan, upload nothing")
+    p.add_argument("--check-auth", action="store_true",
+                   help="verify the three secrets (and print the target "
+                        "channel) without uploading")
     return p.parse_args()
 
 def main() -> int:
     args = parse_args()
+
+    if args.check_auth:
+        print("Checking YouTube credentials ...")
+        return check_auth(args.client_id, args.client_secret,
+                          args.refresh_token)
+
     folder = args.folder
     if os.path.isdir(os.path.join(folder, args.reels_dir)):
         folder = os.path.join(folder, args.reels_dir)
@@ -343,8 +421,15 @@ def main() -> int:
               "YT_REFRESH_TOKEN.", file=sys.stderr)
         return 1
 
-    access_token = mint_access_token(args.client_id, args.client_secret,
-                                     args.refresh_token)
+    try:
+        access_token = mint_access_token(args.client_id, args.client_secret,
+                                         args.refresh_token)
+    except RuntimeError as e:
+        print(f"ERROR: {e}", file=sys.stderr)
+        if "invalid_grant" in str(e):
+            print("\n" + AUTH_HELP, file=sys.stderr)
+            return 2
+        return 1
     failures = 0
     for item in plan:
         name = os.path.basename(item["path"])
@@ -377,7 +462,12 @@ def main() -> int:
                 "uploaded_at_utc": datetime.now(timezone.utc).isoformat()}
         except Exception as e:  # keep going; report at the end
             failures += 1
-            print(f"  FAILED: {e}", flush=True)
+            msg = str(e)
+            print(f"  FAILED: {msg}", flush=True)
+            for reason, hint in ERROR_HINTS.items():
+                if reason in msg:
+                    print(f"  HINT: {hint}", flush=True)
+                    break
         save_manifest(folder, manifest)
         time_module.sleep(2)
 

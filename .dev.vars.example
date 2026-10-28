@@ -1,6 +1,11 @@
 # Local development secrets for `wrangler dev` (npm run preview) and
 # `wrangler secret put` in production. Copy to `.dev.vars` — it is gitignored.
 #
+# The same file is dotenv format, so it can be pushed to production in one go:
+#   cp .dev.vars.example .dev.vars   # fill in the values
+#   npx wrangler secret bulk .dev.vars && rm .dev.vars
+# `wrangler secret put NAME` on its own prompts for the value (hidden input).
+#
 # GitHub OAuth App (https://github.com/settings/developers -> New OAuth App):
 #   Homepage URL              https://www.techtips.fun
 #   Authorization callback    https://www.techtips.fun/admin/auth/callback

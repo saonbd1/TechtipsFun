@@ -58,17 +58,40 @@ browser ──GET /admin/──▶ Worker: no session cookie? ──302──▶
 2. **Fine-grained PAT** — <https://github.com/settings/personal-access-tokens/new>,
    repository access only `saonbd1/TechtipsFun`, **Contents: Read and write**.
    Nothing else (the dashboard never dispatches workflows).
-3. **Worker secrets** (production):
+3. **Worker secrets** (production). `wrangler secret put` never takes the value
+   as an argument — it either prompts (input hidden) or reads stdin:
+
    ```bash
+   # a) prompt: paste the value, press Enter (nothing is echoed)
    npx wrangler secret put GITHUB_OAUTH_CLIENT_ID
-   npx wrangler secret put GITHUB_OAUTH_CLIENT_SECRET
-   npx wrangler secret put SESSION_SECRET        # 32+ random bytes
-   npx wrangler secret put GITHUB_TOKEN          # the PAT from step 2
-   npx wrangler secret put ADMIN_GITHUB_LOGINS   # e.g. saonbd1
-   # optional: ADMIN_GITHUB_IDS, and ADMIN_REPO is a plain var in wrangler.json
+
+   # b) pipe, e.g. from an existing env var
+   printf '%s' "$SESSION_SECRET" | npx wrangler secret put SESSION_SECRET
+
+   # c) all of them at once — .dev.vars is exactly the format `bulk` accepts
+   cp .dev.vars.example .dev.vars   # fill in the values
+   npx wrangler secret bulk .dev.vars && rm .dev.vars
    ```
+
+   Secrets live encrypted on Cloudflare, not in the repo; `npx wrangler secret
+   list` shows the names only. Every `secret put` publishes a new Worker
+   version immediately. The dashboard (Workers & Pages → your Worker →
+   Settings → Variables and Secrets → *Add* → type *Secret*) does the same thing
+   if you prefer clicking.
+
+   The values themselves come from:
+
+   | Secret | Where the value comes from |
+   | --- | --- |
+   | `GITHUB_OAUTH_CLIENT_ID` | OAuth App page → **Client ID** |
+   | `GITHUB_OAUTH_CLIENT_SECRET` | OAuth App page → *Generate a new client secret* (shown once) |
+   | `SESSION_SECRET` | any random string: `node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"` |
+   | `GITHUB_TOKEN` | the fine-grained PAT from step 2 |
+   | `ADMIN_GITHUB_LOGINS` | your GitHub username, e.g. `saonbd1` |
+
    `ADMIN_GITHUB_LOGINS` is required — with no allowlist the Worker refuses to
-   sign anyone in rather than defaulting to open.
+   sign anyone in rather than defaulting to open. `ADMIN_REPO` is a plain
+   (non-secret) `vars` entry in `wrangler.json`.
 4. **Deploy** — `npm run deploy`. Local: copy `.dev.vars.example` to `.dev.vars`
    and run `npm run preview` (`astro dev` has no Worker, so it uses the token
    gate).

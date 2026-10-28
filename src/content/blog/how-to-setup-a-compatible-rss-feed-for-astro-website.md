@@ -13,10 +13,6 @@ This guide is based on the RSS implementation completed for TechTips.fun. The pr
 
 The goal is a practical pattern you can adapt to another Astro blog, not a claim that every RSS reader renders the same way.
 
-![Architecture of the Astro RSS feed implementation](article-media/astro-rss-feed-architecture.png)
-
-*Architecture diagram for the implementation described in this article. It shows the project structure and the metadata paths added for RSS readers.*
-
 ## What the finished feed should do
 
 A useful feed should give a reader enough information to identify, display, and open each post. In this implementation, every item includes a title, canonical link, permalink-style GUID, description, publication date, author, categories, and image data.

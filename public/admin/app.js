@@ -1,11 +1,17 @@
 /*!
  * Tech Tips Admin — a small AdminLTE 4 front-end over the GitHub Contents API.
  *
- * There is no server: this page is served as a static asset from the same
- * Astro build that publishes the blog, and it talks straight to api.github.com
- * with a fine-grained personal access token that the operator pastes in.
- * Every write is a normal commit on the configured branch, so the existing
- * Cloudflare auto-deploy and GitHub Actions pipelines keep working untouched.
+ * Two auth modes, both committing through the same GitHub Contents API so every
+ * save is an ordinary commit that the existing pipelines already handle:
+ *
+ *   OAuth (production)  The `ttadmin_mode=oauth` cookie is set by
+ *                       worker/index.js after a GitHub sign-in. app.js then talks
+ *                       to /admin/api/github on this origin — the Worker holds
+ *                       the fine-grained PAT and returns an HttpOnly session
+ *                       cookie. No credential ever reaches the browser.
+ *   token (fallback)    Served without the Worker (astro dev, static preview):
+ *                       the operator pastes a fine-grained token and the page
+ *                       calls api.github.com directly, exactly as before.
  *
  * Scope: writing/editing posts + managing the publish queue. Reels, LinkedIn
  * and IndexNow stay in .github/workflows — this page only links to them.
@@ -15,6 +21,7 @@
 
   /* ── Configuration ──────────────────────────────────────────────────── */
   var API = 'https://api.github.com';
+  var PROXY = '/admin/api/github';
   var SITE_ORIGIN = 'https://www.techtips.fun';
   var DEFAULT_REPO = 'saonbd1/astro-blog-starter-template';
   var DEFAULT_BRANCH = 'main';
@@ -28,6 +35,8 @@
   var LS_CONFIG = 'ttadmin.config';
   var SS_TOKEN = 'ttadmin.token';
   var LS_TOKEN = 'ttadmin.token.remember';
+  var SESSION_URL = '/admin/api/session';
+  var LOGOUT_URL = '/admin/auth/logout';
 
   /* The blog collection schema — src/content.config.ts. Keep in sync.
      The order here is the order fields are written back to disk, chosen to
@@ -45,6 +54,7 @@
   /* ── State ──────────────────────────────────────────────────────────── */
   var state = {
     token: null,
+    session: null,
     user: null,
     repo: DEFAULT_REPO,
     repoInfo: null,
@@ -178,12 +188,19 @@
       'X-GitHub-Api-Version': '2022-11-28'
     };
     if (state.token) headers.Authorization = 'Bearer ' + state.token;
-    var init = { method: options.method || 'GET', headers: headers, cache: 'no-store' };
+    var init = {
+      method: options.method || 'GET',
+      headers: headers,
+      cache: 'no-store',
+      credentials: 'same-origin'
+    };
     if (options.body !== undefined) {
       headers['Content-Type'] = 'application/json';
       init.body = JSON.stringify(options.body);
     }
-    return fetch(API + path, init).then(function (res) {
+    /* OAuth mode: same-origin proxy, the session cookie authenticates it. */
+    var url = (state.session ? PROXY : API) + path;
+    return fetch(url, init).then(function (res) {
       if (res.status === 204) return null;
       return res.text().then(function (text) {
         var data = null;
@@ -196,12 +213,20 @@
         }
         if (!res.ok) {
           if (res.status === 401) {
-            throw new GhError(401, { message: 'Token rejected or expired. Sign in again.' });
+            throw new GhError(
+              401,
+              {
+                message: state.session
+                  ? 'Your admin session expired. Reload the page to sign in again.'
+                  : 'Token rejected or expired. Sign in again.'
+              }
+            );
           }
           if (res.status === 403) {
             throw new GhError(403, {
-              message:
-                'GitHub refused the request (403). The token may lack "Contents: Read and write", or the API rate limit was hit.'
+              message: state.session
+                ? 'GitHub refused the request (403). The Worker token may lack "Contents: Read and write", or this repository is not the one the Worker allows.'
+                : 'GitHub refused the request (403). The token may lack "Contents: Read and write", or the API rate limit was hit.'
             });
           }
           throw new GhError(res.status, data || {});
@@ -721,7 +746,23 @@
       });
   }
 
+  /* True when the Worker signed this browser in and set the readable mode
+     cookie. Without the Worker (astro dev, a bare static server) it is absent
+     and the pasted-token path is used instead. */
+  function oauthMode() {
+    try {
+      return String(document.cookie || '').indexOf('ttadmin_mode=oauth') !== -1;
+    } catch (e) {
+      return false;
+    }
+  }
+
   function signOut() {
+    if (state.session) {
+      /* Clearing the HttpOnly cookie has to happen server-side. */
+      location.assign(LOGOUT_URL);
+      return;
+    }
     clearToken();
     state.token = null;
     state.user = null;
@@ -2633,7 +2674,7 @@
 
   /* ── Router ─────────────────────────────────────────────────────────── */
   function route() {
-    if (!state.token) return; /* the gate is showing */
+    if (!state.token && !state.session) return; /* the gate is showing */
     var hash = location.hash.replace(/^#\/?/, '');
     if (!hash) {
       location.replace('#/dashboard');
@@ -2677,7 +2718,23 @@
   }
 
   /* ── Sign-in gate ───────────────────────────────────────────────────── */
-  function showGate() {
+  /* The gate has two faces: the OAuth button (Worker deployed) and the pasted
+     token form (no Worker). `expired` adds the "session expired" banner. */
+  function applyGateMode(expired) {
+    var oauth = oauthMode();
+    var oauthBlock = $('#gate-oauth');
+    var tokenBlock = $('#gate-token-block');
+    var subtitle = $('#gate-subtitle');
+    var sessionError = $('#gate-session-error');
+    if (oauthBlock) oauthBlock.hidden = !oauth;
+    if (tokenBlock) tokenBlock.hidden = oauth;
+    if (subtitle && oauth) {
+      subtitle.textContent = 'Sign in with your GitHub account to write posts and manage the queue.';
+    }
+    if (sessionError) sessionError.hidden = !(oauth && expired);
+  }
+
+  function showGate(expired) {
     var gate = $('#gate');
     if (gate) gate.hidden = false;
     var wrapper = $('.app-wrapper');
@@ -2688,6 +2745,7 @@
     if (error) error.hidden = true;
     var repoLabel = $('#gate-repo');
     if (repoLabel) repoLabel.textContent = state.repo;
+    applyGateMode(!!expired);
   }
 
   function hideGate() {
@@ -2738,6 +2796,52 @@
     }
   }
 
+  /* OAuth mode: ask the Worker who we are, then verify the repo is reachable
+     through the proxy. Anything but a clean 200 drops back to the gate. */
+  function restoreSession() {
+    return fetch(SESSION_URL, {
+      headers: { Accept: 'application/json' },
+      credentials: 'same-origin',
+      cache: 'no-store'
+    })
+      .then(function (res) {
+        if (res.status === 401) return null;
+        if (!res.ok) throw new Error('Session check failed (' + res.status + ')');
+        return res.json();
+      })
+      .then(function (session) {
+        if (!session) {
+          showGate(true);
+          return null;
+        }
+        state.session = session;
+        if (session.repo && state.repo === DEFAULT_REPO) state.repo = session.repo;
+        return gh('/user')
+          .then(function () {
+            return gh(repoPath());
+          })
+          .then(function (repo) {
+            state.user = { login: session.login, name: session.name, avatar_url: session.avatar };
+            if (!state.branchFromConfig && repo && repo.default_branch) {
+              state.branch = repo.default_branch;
+            }
+            hideGate();
+            if (!location.hash) location.replace('#/dashboard');
+            route();
+            toast('Signed in as ' + session.login, 'success');
+          });
+      })
+      .catch(function (err) {
+        state.session = null;
+        showGate(false);
+        var banner = $('#gate-session-error');
+        if (banner) {
+          banner.hidden = false;
+          banner.textContent = err.message;
+        }
+      });
+  }
+
   function boot() {
     var cfg = readConfig();
     state.repo = cfg.repo;
@@ -2758,6 +2862,11 @@
         }
       }
     });
+
+    if (oauthMode()) {
+      restoreSession();
+      return;
+    }
 
     var token = storedToken();
     if (!token) {

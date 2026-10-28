@@ -230,7 +230,7 @@ npm run dev                           # Remotion Studio at http://localhost:4317
 
 ## Content Admin Dashboard
 
-There is a private, serverless AdminLTE dashboard at `https://www.techtips.fun/admin/` (static files in `public/admin/`). Because the site is static with no backend, the dashboard writes posts directly to the **GitHub Contents API** using a fine-grained personal access token. Every save is an ordinary commit on `main`, so all existing CI/CD pipelines keep working untouched.
+There is a private AdminLTE dashboard at `https://www.techtips.fun/admin/` (static files in `public/admin/`, plus `worker/index.js` in front of `/admin/*`). Sign-in is **GitHub OAuth**: the browser only receives an `HttpOnly` session cookie and the fine-grained personal access token stays in a Worker secret. Every save is still an ordinary commit on `main` through the GitHub Contents API, so all existing CI/CD pipelines keep working untouched. Without the Worker (`astro dev`), the dashboard falls back to the pasted-token gate.
 
 ### What it does
 
@@ -244,12 +244,15 @@ There is a private, serverless AdminLTE dashboard at `https://www.techtips.fun/a
 
 ### Signing in
 
-1. Create a **fine-grained personal access token**: https://github.com/settings/personal-access-tokens/new
-2. **Repository access** → only this repo (`saonbd1/TechtipsFun`)
-3. **Permissions → Repository permissions → Contents** → Read and write
-4. Set a short expiry, then paste the token into the sign-in gate
+Production uses a GitHub OAuth App (`/admin/auth/login`). Configure it once:
 
-> A token in a browser is a real credential. Use the narrowest scope, a short expiry, and leave *remember* off on shared machines.
+1. Create an OAuth App (https://github.com/settings/developers) with callback `https://www.techtips.fun/admin/auth/callback`
+2. Create a **fine-grained personal access token**: https://github.com/settings/personal-access-tokens/new — repository access only `saonbd1/TechtipsFun`, **Contents: Read and write**
+3. Store the Worker secrets (`GITHUB_OAUTH_CLIENT_ID`, `GITHUB_OAUTH_CLIENT_SECRET`, `SESSION_SECRET`, `GITHUB_TOKEN`, `ADMIN_GITHUB_LOGINS`) — see [`public/admin/README.md`](public/admin/README.md) for the commands
+
+The pasted-token gate still exists for local development with no Worker.
+
+> In OAuth mode no credential reaches the browser: the session cookie is `HttpOnly`, HMAC-signed, and expires after 8 hours.
 
 ### Full docs
 
@@ -261,10 +264,11 @@ See [`public/admin/README.md`](public/admin/README.md) for token setup, file str
 npm run test:admin
 ```
 
-Runs two test files with Node's built-in test runner (no dependencies, no browser):
+Runs three test files with Node's built-in test runner (no dependencies, no browser):
 
 - `scripts/tests/test-admin-app.mjs` — frontmatter parse/build, date helpers, slugify, validation, Markdown preview
-- `scripts/tests/test-admin-smoke.mjs` — boots `app.js` in a stub DOM and signs in to exercise every page
+- `scripts/tests/test-admin-smoke.mjs` — boots `app.js` in a stub DOM and signs in to exercise every page, plus the OAuth session mode
+- `scripts/tests/test-admin-worker.mjs` — the OAuth gate, session signing/tamper checks, allowlist and the repo-scoped GitHub proxy
 
 ---
 

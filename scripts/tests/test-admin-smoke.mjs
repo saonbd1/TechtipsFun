@@ -78,6 +78,7 @@ function createDom() {
   const documentHandlers = {};
   const document = {
     readyState: 'complete',
+    cookie: '',
     body: makeElement('body'),
     addEventListener(type, handler) {
       (documentHandlers[type] = documentHandlers[type] || []).push(handler);
@@ -108,7 +109,14 @@ function createStorage() {
 
 function createApi() {
   const calls = [];
-  const state = { postText: POST_TEXT, orderText: 'queued.md\n', saved: null, rejectAuth: false };
+  const state = {
+    postText: POST_TEXT,
+    orderText: 'queued.md\n',
+    saved: null,
+    rejectAuth: false,
+    rejectSession: false,
+    session: { login: 'tester', name: 'Test Person', repo: 'saonbd1/TechtipsFun' }
+  };
 
   const files = {
     'src/content/blog/existing-post.md': { text: () => state.postText, sha: 'sha-post' },
@@ -140,15 +148,29 @@ function createApi() {
     return Promise.resolve({
       ok: status >= 200 && status < 300,
       status,
-      text: () => Promise.resolve(JSON.stringify(body))
+      text: () => Promise.resolve(JSON.stringify(body)),
+      json: () => Promise.resolve(body)
     });
   }
 
   function handle(url, init) {
     const method = (init && init.method) || 'GET';
-    const path = String(url).replace('https://api.github.com', '').split('?')[0];
+    const requested = String(url);
+
+    /* OAuth mode talks to this origin: the session endpoint and the proxy. */
+    if (requested.startsWith('/admin/api/session')) {
+      calls.push({ method, path: '/admin/api/session', body: null });
+      return state.rejectSession
+        ? json({ error: 'not_signed_in' }, 401)
+        : json(state.session);
+    }
+
+    let path = requested.startsWith('/admin/api/github')
+      ? requested.slice('/admin/api/github'.length)
+      : requested;
+    path = path.replace('https://api.github.com', '').split('?')[0];
     const body = init && init.body ? JSON.parse(init.body) : null;
-    calls.push({ method, path, body });
+    calls.push({ method, path, body, proxied: requested.startsWith('/admin/api/github') });
 
     if (path === '/user') {
       return state.rejectAuth
@@ -193,16 +215,22 @@ function createApi() {
 
 /* ── Boot the app in a sandbox ───────────────────────────────────────── */
 
-function boot() {
+function boot(options = {}) {
   const dom = createDom();
   const api = createApi();
+  if (options.oauth) dom.document.cookie = 'ttadmin_mode=oauth';
+  if (options.rejectSession) api.state.rejectSession = true;
   const localStorage = createStorage();
   const sessionStorage = createStorage();
   const windowHandlers = {};
   const location = {
     hash: '',
+    assigned: null,
     replace(next) {
       this.hash = next.startsWith('#') ? next : '#' + next;
+    },
+    assign(next) {
+      this.assigned = next;
     }
   };
 
@@ -435,3 +463,57 @@ test('a new queued draft is written and appended to .order', async () => {
   assert.match(draft, /pubDate: "Jul 17 2026"/);
 });
 
+/* ── OAuth mode ─────────────────────────────────────────────────────── */
+
+test('OAuth mode boots from the session cookie and talks to the proxy', async () => {
+  const app = boot({ oauth: true });
+  await settle();
+
+  assert.equal(app.api.calls[0].path, '/admin/api/session', 'the session is checked first');
+  assert.equal(app.dom.lookup('#gate').hidden, true, 'no gate: the Worker already signed us in');
+  assert.equal(app.dom.lookup('.app-wrapper').style.display, '');
+  assert.match(viewHtml(app), /Published posts/, 'the dashboard renders');
+
+  const github = app.api.calls.filter((call) => call.path !== '/admin/api/session');
+  assert.ok(github.length > 0, 'the repo is read');
+  assert.ok(
+    github.every((call) => call.proxied),
+    'every GitHub call goes through /admin/api/github, never api.github.com'
+  );
+  assert.equal(
+    app.sessionStorage.getItem('ttadmin.token'),
+    null,
+    'no credential is stored in the browser'
+  );
+  assert.equal(app.localStorage.getItem('ttadmin.token.remember'), null);
+});
+
+test('OAuth mode with an expired session shows the reconnect gate', async () => {
+  const app = boot({ oauth: true, rejectSession: true });
+  await settle();
+
+  assert.equal(app.dom.lookup('#gate').hidden, false, 'the gate is up');
+  assert.equal(app.dom.lookup('#gate-oauth').hidden, false, 'the GitHub button is offered');
+  assert.equal(app.dom.lookup('#gate-token-block').hidden, true, 'the token form is hidden');
+  assert.equal(app.dom.lookup('#gate-session-error').hidden, false, 'the expiry banner is shown');
+  assert.equal(viewHtml(app), '', 'no view renders without a session');
+});
+
+test('token mode is unchanged when no mode cookie is present', async () => {
+  const app = boot();
+  assert.equal(app.api.calls.length, 0, 'no session probe in token mode');
+  assert.equal(app.dom.lookup('#gate').hidden, false);
+  assert.equal(app.dom.lookup('#gate-token-block').hidden, false, 'the token form is the fallback');
+  assert.equal(app.dom.lookup('#gate-oauth').hidden, true);
+});
+
+test('signing out in OAuth mode asks the Worker to clear the cookie', async () => {
+  const app = boot({ oauth: true });
+  await settle();
+  await navigate(app, '#/settings');
+
+  for (const handler of app.dom.lookup('#settings-signout').handlers.click || []) handler({});
+  await settle();
+
+  assert.equal(app.location.assigned, '/admin/auth/logout');
+});

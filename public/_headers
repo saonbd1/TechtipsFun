@@ -10,7 +10,8 @@
   Cache-Control: public, max-age=31536000, immutable
 
 # The content admin is a private tool: never index it, never leak the URL as a
-# referrer, and lock it down to its own assets plus api.github.com.
+# referrer, and lock it down to its own assets plus api.github.com (the OAuth
+# mode talks to /admin/api/github on this origin instead, so 'self' is enough).
 /admin/*
   X-Robots-Tag: noindex, nofollow, noarchive, nosnippet
   Referrer-Policy: no-referrer

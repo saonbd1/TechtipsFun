@@ -34,7 +34,7 @@
 		"optimize:images": "node scripts/optimize-images.mjs",
 		"check:links": "node scripts/check-links.mjs",
 		"check:og-cards": "node scripts/check-og-cards.mjs",
-		"test:admin": "node --test scripts/tests/test-admin-app.mjs scripts/tests/test-admin-smoke.mjs",
+		"test:admin": "node --test scripts/tests/test-admin-app.mjs scripts/tests/test-admin-smoke.mjs scripts/tests/test-admin-worker.mjs",
 		"test:blog": "node --test scripts/tests/test-blog-pagination.mjs scripts/tests/test-og-cards.mjs",
 		"share:linkedin": "node scripts/share-to-linkedin.mjs",
 		"submit:indexnow": "node scripts/submit-indexnow.mjs",

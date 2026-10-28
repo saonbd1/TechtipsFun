@@ -184,11 +184,27 @@
           <div class="text-center mb-3">
             <img src="/techtips-logo.svg" alt="" width="56" height="56" />
             <h1 class="h4 mt-3 mb-1">Tech Tips Admin</h1>
-            <p class="text-body-secondary small mb-0">
+            <p class="text-body-secondary small mb-0" id="gate-subtitle">
               Sign in with a fine-grained GitHub token to write posts and manage the queue.
             </p>
           </div>
-          <div class="alert alert-warning small mb-3" role="alert">
+
+          <!-- OAuth mode: shown when the Worker issued a session (or it expired). -->
+          <div id="gate-oauth" hidden>
+            <div class="alert alert-danger small mb-3" role="alert" id="gate-session-error" hidden>
+              <i class="bi bi-clock-history me-1"></i>Your admin session expired. Sign in again.
+            </div>
+            <a class="btn btn-dark w-100" href="/admin/auth/login?next=/admin/" id="gate-oauth-link">
+              <i class="bi bi-github me-1"></i>Sign in with GitHub
+            </a>
+            <p class="form-text text-center mt-3 mb-0">
+              No token to paste — the Worker holds the credential and the session is an
+              <code>HttpOnly</code> cookie.
+            </p>
+          </div>
+
+          <div id="gate-token-block">
+            <div class="alert alert-warning small mb-3" role="alert">
             <i class="bi bi-shield-lock me-1"></i>
             Create a <strong>fine-grained personal access token</strong> for
             <code id="gate-repo">the repository</code> with
@@ -233,6 +249,8 @@
             </div>
           </form>
           <div id="gate-error" class="alert alert-danger small mt-3 mb-0" hidden></div>
+          </div>
+          <!-- /#gate-token-block -->
         </div>
       </div>
     </div>

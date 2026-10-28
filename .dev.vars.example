@@ -1,0 +1,31 @@
+# Local development secrets for `wrangler dev` (npm run preview) and
+# `wrangler secret put` in production. Copy to `.dev.vars` — it is gitignored.
+#
+# The same file is dotenv format, so it can be pushed to production in one go:
+#   cp .dev.vars.example .dev.vars   # fill in the values
+#   npx wrangler secret bulk .dev.vars && rm .dev.vars
+# `wrangler secret put NAME` on its own prompts for the value (hidden input).
+#
+# GitHub OAuth App (https://github.com/settings/developers -> New OAuth App):
+#   Homepage URL              https://www.techtips.fun
+#   Authorization callback    https://www.techtips.fun/admin/auth/callback
+#                             http://localhost:8787/admin/auth/callback  (dev)
+GITHUB_OAUTH_CLIENT_ID=
+GITHUB_OAUTH_CLIENT_SECRET=
+
+# Any long random string (32+ bytes), signs the session cookie.
+#   node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
+SESSION_SECRET=
+
+# Fine-grained PAT the Worker uses for writes: Contents: Read and write on
+# saonbd1/TechtipsFun only. This never reaches the browser.
+GITHUB_TOKEN=
+
+# Who may sign in. Logins are case-insensitive; ids are the numeric GitHub ids
+# (stable if the account is renamed). Set at least one.
+ADMIN_GITHUB_LOGINS=saonbd1
+ADMIN_GITHUB_IDS=
+
+# Optional: the only repository the write proxy will talk to (defaults to
+# saonbd1/TechtipsFun). Keep it in sync with the dashboard's Settings page.
+ADMIN_REPO=saonbd1/TechtipsFun

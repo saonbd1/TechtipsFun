@@ -24,10 +24,21 @@ Usage:
     # verify the three secrets without uploading anything
     python scripts/upload-reels-to-youtube.py --check-auth
 
-Flow: loopback redirect (RFC 8252) on 127.0.0.1 with an ephemeral port, which
-Google still supports for "Desktop app" clients. The old
-"urn:ietf:wg:oauth:2.0:oob" out-of-band flow is dead (removed in 2022), so
---manual is offered for headless boxes: paste the final redirect URL back.
+Flow: loopback redirect (RFC 8252) on 127.0.0.1, which Google still supports
+for both client types. The old "urn:ietf:wg:oauth:2.0:oob" out-of-band flow is
+dead (removed in 2022), so --manual is offered for headless boxes: paste the
+final redirect URL back.
+
+Client type: either works, they differ only in redirect-URI bookkeeping.
+  * Desktop app client - no redirect URI to register, so the helper can pick a
+    random free port (default). Easiest.
+  * Web application client (the one you may already have) - Google's redirect
+    URI rules exempt localhost from the HTTPS/raw-IP rules, so register
+    http://127.0.0.1:8080 under "Authorized redirect URIs" and run
+    `--port 8080`. Wildcard ports are rejected, so the port must be fixed and
+    must match character for character.
+Neither type changes how long the refresh token lives - publish the OAuth app
+for that.
 """
 
 import argparse
@@ -93,14 +104,30 @@ def exchange_code(client_id, client_secret, code, redirect_uri) -> dict:
         "client_secret": client_secret,
         "redirect_uri": redirect_uri,
     }).encode()
-    _, payload = http_json(
-        TOKEN_URL, method="POST", data=data,
-        headers={"Content-Type": "application/x-www-form-urlencoded"})
+    try:
+        _, payload = http_json(
+            TOKEN_URL, method="POST", data=data,
+            headers={"Content-Type": "application/x-www-form-urlencoded"})
+    except RuntimeError as e:
+        msg = str(e)
+        if "redirect_uri_mismatch" in msg:
+            raise RuntimeError(
+                f"{msg}\n\nGoogle rejected {redirect_uri}. For a 'Web "
+                "application' client that exact string must be listed under "
+                "Credentials -> your client -> Authorized redirect URIs "
+                "(localhost is exempt from the HTTPS-only rule, wildcard ports "
+                "are not). For a 'Desktop app' client nothing needs "
+                "registering.") from e
+        if "invalid_client" in msg:
+            raise RuntimeError(
+                f"{msg}\n\nClient id/secret do not belong to the same OAuth "
+                "client (or the wrong Google Cloud project is selected).") from e
+        raise
     if "refresh_token" not in payload:
         raise RuntimeError(
-            "Google did not return a refresh_token. Re-run and make sure the "
-            "OAuth client is type 'Desktop app' (prompt=consent is already "
-            f"set). Raw response: {payload}")
+            "Google did not return a refresh_token. Re-run with prompt=consent "
+            "(already set) and check that the client type is 'Desktop app' or "
+            f"'Web application'. Raw response: {payload}")
     return payload
 
 
@@ -111,7 +138,13 @@ def main() -> int:
     p.add_argument("--client-secret",
                    default=os.environ.get("YT_CLIENT_SECRET", ""))
     p.add_argument("--port", type=int, default=0,
-                   help="loopback port (default: pick a free one)")
+                   help="loopback port (default: pick a free one; a 'Web "
+                        "application' client needs a fixed, registered port, "
+                        "e.g. --port 8080)")
+    p.add_argument("--redirect-uri",
+                   help="full redirect URI to use, e.g. "
+                        "http://127.0.0.1:8080/ - must match a registered "
+                        "'Web application' client redirect URI exactly")
     p.add_argument("--manual", action="store_true",
                    help="headless: print the URL, paste the redirect back")
     p.add_argument("--no-browser", action="store_true",
@@ -123,13 +156,23 @@ def main() -> int:
               "--client-id/--client-secret).", file=sys.stderr)
         return 2
 
+    port = args.port
+    if args.redirect_uri:
+        parsed = urllib.parse.urlparse(args.redirect_uri)
+        if parsed.hostname not in ("127.0.0.1", "localhost", "::1"):
+            print(f"ERROR: {args.redirect_uri} is not a loopback URI",
+                  file=sys.stderr)
+            return 2
+        port = parsed.port or (443 if parsed.scheme == "https" else 80)
+
     state = secrets.token_urlsafe(24)
     server = thread = result = None
     if not args.manual:
-        server, thread, result = wait_for_code(args.port, state)
-        redirect_uri = f"http://127.0.0.1:{server.server_address[1]}"
+        server, thread, result = wait_for_code(port, state)
+        redirect_uri = (args.redirect_uri or
+                        f"http://127.0.0.1:{server.server_address[1]}")
     else:
-        redirect_uri = f"http://127.0.0.1:{args.port or 8080}"
+        redirect_uri = args.redirect_uri or f"http://127.0.0.1:{port or 8080}"
 
     auth_url = build_auth_url(args.client_id, redirect_uri, state)
     print("Scopes requested:\n  " + "\n  ".join(SCOPES) + "\n")

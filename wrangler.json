@@ -1,10 +1,13 @@
 {
   "name": "astro-blog-starter-template",
+  "main": "worker/index.js",
   "compatibility_date": "2025-10-08",
   "compatibility_flags": ["nodejs_compat"],
   "assets": {
     "directory": "./dist",
-    "not_found_handling": "404-page"
+    "binding": "ASSETS",
+    "not_found_handling": "404-page",
+    "run_worker_first": ["/admin", "/admin/*"]
   },
   "routes": [
     {
@@ -19,5 +22,8 @@
   "observability": {
     "enabled": true
   },
-  "upload_source_maps": false
+  "upload_source_maps": false,
+  "vars": {
+    "ADMIN_REPO": "saonbd1/TechtipsFun"
+  }
 }

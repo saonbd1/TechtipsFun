@@ -11,13 +11,7 @@ tags: ["Astro", "RSS", "Javascript", "Seo"]
 
 An Astro blog can publish a valid RSS feed with little code. The harder task is to make the feed useful for different readers. Some readers find images in the HTML content. Others read Media RSS or a standard RSS enclosure. Author and tag fields also differ between readers.
 
-This guide uses the RSS implementation for TechTips.fun as an example. The project uses Astro 5 and Cloudflare Workers with static assets. The live feed is available at [`https://www.techtips.fun/rss.xml`](https://www.techtips.fun/rss.xml). The project workflow passed the W3C Feed Validation Service. A live inspection also found image data, author data, categories, subjects, and an Atom self link.
-
-This guide gives you a pattern for another Astro blog. It does not claim that every RSS reader displays the feed in the same way.
-
-![Architecture of the Astro RSS feed implementation](public/article-media/astro-rss-feed-architecture.png)
-
-*Architecture diagram for the implementation in this guide. It shows the project structure and the metadata paths that RSS readers use.*
+This guide uses the RSS implementation for TechTips.fun as an example. The project uses Astro 5 and Cloudflare Workers with static assets. The live feed is available at [`https://www.techtips.fun/rss.xml`](https://www.techtips.fun/rss.xml). The project workflow passed the W3C Feed Validation Service. A live inspection also found image data, author data, categories, subjects, and an Atom self link. This guide gives you a pattern for another Astro blog. It does not claim that every RSS reader displays the feed in the same way.
 
 ## What the finished feed must do
 

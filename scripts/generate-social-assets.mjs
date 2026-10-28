@@ -86,6 +86,29 @@ async function walk(directory) {
   return files;
 }
 
+/* Windows refuses `rename` over a file another process holds open (antivirus
+   scanning, OneDrive sync, an image preview left open in an editor) with
+   EPERM/EBUSY. Retry briefly and then keep the original: an unoptimised image
+   must never break a deploy. */
+async function moveIntoPlace(fromPath, toPath) {
+  const delays = [0, 50, 150, 400, 1000];
+  let lastError = null;
+  for (const wait of delays) {
+    if (wait) await new Promise((resolve) => setTimeout(resolve, wait));
+    try {
+      await fs.rename(fromPath, toPath);
+      return true;
+    } catch (error) {
+      lastError = error;
+      if (!['EPERM', 'EBUSY', 'EACCES', 'EEXIST'].includes(error.code)) throw error;
+    }
+  }
+  console.warn(
+    `  ! kept the original ${path.basename(toPath)} (${lastError?.code}: locked by another process)`,
+  );
+  return false;
+}
+
 async function optimizeRaster(filePath) {
   const extension = path.extname(filePath).toLowerCase();
   if (!rasterExtensions.has(extension)) return null;
@@ -104,8 +127,7 @@ async function optimizeRaster(filePath) {
   const tempPath = `${filePath}.optimized`;
   await pipeline.toFile(tempPath);
   const optimized = await fs.stat(tempPath);
-  if (optimized.size < original.size) {
-    await fs.rename(tempPath, filePath);
+  if (optimized.size < original.size && (await moveIntoPlace(tempPath, filePath))) {
     return { filePath, before: original.size, after: optimized.size };
   }
   await fs.rm(tempPath, { force: true });

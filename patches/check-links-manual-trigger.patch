@@ -1,0 +1,50 @@
+diff --git a/.github/workflows/check-links.yml b/.github/workflows/check-links.yml
+index 79ee5b0..1bed4cb 100644
+--- a/.github/workflows/check-links.yml
++++ b/.github/workflows/check-links.yml
+@@ -1,18 +1,32 @@
+ # Link checker
+ 
+-# Runs `scripts/check-links.mjs` on every push and PR to `main` so no post
+-# ships with an unreachable reference. Fails the build on dead/broken links
++# Manual-only workflow: it never runs on push, pull_request or a schedule.
++# Start it from Actions → Check links → Run workflow, or:
++#   gh workflow run check-links.yml                      # default: --fail-on=dead
++#   gh workflow run check-links.yml -f fail_on=redirect  # stricter sweep
++#
++# It runs `scripts/check-links.mjs` and fails the run on dead/broken links
+ # (DNS/timeout/TLS failures and 404/410). Benign redirects, WAF blocks
+ # (401/403 — often datacenter false positives) and login-walled links
+-# (e.g. Google Console) are reported but do not fail the build.
++# (e.g. Google Console) are reported but do not fail the run.
+ 
+ name: Check links
+ 
+ on:
+-  push:
+-    branches: [main]
+-  pull_request:
+-    branches: [main]
++  workflow_dispatch:
++    inputs:
++      fail_on:
++        description: Severity that fails the run
++        type: choice
++        options:
++          - dead
++          - redirect
++          - all
++          - none
++        default: dead
++
++permissions:
++  contents: read
+ 
+ jobs:
+   check-links:
+@@ -23,4 +37,4 @@ jobs:
+         with:
+           node-version: 22
+       - name: Check all blog links
+-        run: node scripts/check-links.mjs --fail-on=dead
++        run: node scripts/check-links.mjs --fail-on=${{ inputs.fail_on || 'dead' }}

@@ -1,12 +1,13 @@
 # reels/ci
 
-Two GitHub Actions workflows live here because the tool that generated them
-could not write into `.github/workflows/` — that path requires a token with the
-`workflows` permission, and the available credential only has `contents`.
+Two staged copies of GitHub Actions workflows live here because the tool that
+generated them could not write into `.github/workflows/` — that path requires a
+token with the `workflows` permission, and the available credential only has
+`contents`.
 
-Each file is a drop-in replacement for the one already in `.github/workflows/`.
-You can either `git mv` it into place, or copy the few changed lines across by
-hand.
+`article-reels.yml` still needs installing (see below). `check-links.yml` is a
+mirror of the manual-only version of the live workflow, staged here because a
+workflow file cannot be pushed by this token.
 
 ---
 
@@ -33,36 +34,45 @@ locally instead are all documented at the top of the workflow file and in
 
 ## `check-links.yml`
 
-A copy of **Check links** with a weekly schedule added.
+A copy of **Check links** with the trigger changed to `workflow_dispatch` only.
+Its real home is `.github/workflows/check-links.yml`.
 
-The version live in `.github/workflows/` only runs on `push` and `pull_request`
-— and because scheduled publishes are pushed with `GITHUB_TOKEN`, which triggers
-nothing, posts published by the scheduler were never link-checked. Link rot is a
-time-based problem, so it belongs on a timer rather than on every commit.
-
-```yaml
-on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
-  schedule:
-    - cron: "0 6 * * 1"   # Mondays 06:00 UTC - weekly link-rot sweep
-```
-
-Only those two `schedule:` lines differ from the file already on `main`.
+The live file **still runs on `push` and `pull_request`** — the session that made
+this change could not push a workflow file (no `workflows` permission; see
+[`../../patches/README.md`](../../patches/README.md)), so it ships as
+[`../../patches/check-links-manual-trigger.patch`](../../patches/check-links-manual-trigger.patch).
+Apply either the patch or this copy:
 
 ```bash
-git mv reels/ci/check-links.yml .github/workflows/check-links.yml
-git commit -m "ci: run the link checker weekly"
+git apply patches/check-links-manual-trigger.patch
+git commit -am "ci: make the link checker manual-only"
 git push
+
+# or, without git:
+cp reels/ci/check-links.yml .github/workflows/check-links.yml
 ```
 
-Or, if you would rather not move the file, paste the two `schedule:` lines into
-`.github/workflows/check-links.yml` directly after the `pull_request:` block.
+Once applied, the workflow is **manual-only**: it fires on no push, no pull
+request and no schedule. Start it from **Actions → Check links → Run workflow**,
+or:
 
-Note: the checker currently fails on `429` responses (Google rate-limits
-GitHub's runner IPs, so a live link can be reported as `broken`), and its
-internal link check compares the slug to the filename — which flags Astro's
-lowercased slugs as missing. Neither means the content is broken. See
+```bash
+gh workflow run check-links.yml                      # default: --fail-on=dead
+gh workflow run check-links.yml -f fail_on=redirect  # also fail on redirect chains
+```
+
+The `fail_on` input (`dead` | `redirect` | `all` | `none`) is passed straight to
+`scripts/check-links.mjs --fail-on=…`, so the same workflow covers a quick
+"did I break a link?" check and a full link-rot audit. The weekly cron sweep
+this file used to carry was dropped when the trigger was made manual.
+
+Once the change is in the tree, delete both
+`patches/check-links-manual-trigger.patch` and this copy, as
+[`../../patches/README.md`](../../patches/README.md) asks.
+
+Note: `429`/`408` answers are classified as `rate_limited` (never fatal — Google
+rate-limits GitHub's runner IPs), `401`/`403` as `blocked` (a datacenter
+fingerprint, worth opening in a browser before deleting a link), and internal
+`/blog/<slug>/` links are normalised through `postSlug()` so lowercased Astro
+slugs are not reported as missing. See
 [`../../scripts/check-links.mjs`](../../scripts/check-links.mjs).

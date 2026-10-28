@@ -319,7 +319,7 @@
         "Classifies ok / redirect / login_wall / blocked / dead / broken",
         "--fail-on=dead|redirect|all|none and --json for machine-readable output",
         "Mimics a browser User-Agent so WAF blocks do not false-positive",
-        "Wired into .github/workflows/check-links.yml on every push/PR"
+        "Wired into .github/workflows/check-links.yml (manual runs)"
       ],
       "run": "npm run check:links",
       "tags": [
@@ -483,10 +483,12 @@
       "path": ".github/workflows/check-links.yml",
       "category": "Automation (CI)",
       "language": "YAML",
-      "status": "ci",
-      "summary": "Fails the build when a link is dead or broken.",
+      "status": "manual",
+      "summary": "Flags dead or broken links on demand.",
       "capabilities": [
-        "Runs on every push/PR to main",
+        "Manual trigger only (workflow_dispatch) - no push, PR or schedule runs",
+        "Trigger change staged in patches/check-links-manual-trigger.patch",
+        "fail_on input picks the failing severity: dead / redirect / all / none",
         "Uses check-links.mjs under the hood"
       ],
       "run": "gh workflow run check-links.yml",

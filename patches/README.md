@@ -16,6 +16,24 @@ git apply patches/<name>.patch
 
 Delete the patch once its change is in the tree.
 
+## check-links-manual-trigger.patch
+
+Makes `.github/workflows/check-links.yml` a manual-only workflow: `push` and
+`pull_request` go away in favour of `workflow_dispatch`, and a `fail_on` choice
+input (`dead` | `redirect` | `all` | `none`, default `dead`) is passed to
+`scripts/check-links.mjs --fail-on=…`. The run also narrows to
+`permissions: contents: read`.
+
+```bash
+git apply patches/check-links-manual-trigger.patch
+git commit -am "ci: make the link checker manual-only"
+git push
+```
+
+`reels/ci/check-links.yml` holds the same file, so
+`cp reels/ci/check-links.yml .github/workflows/check-links.yml` is an equivalent
+route. Delete the patch and that copy once the change is in the tree.
+
 ## schedule-posts-og-card-slug.patch
 
 Normalises the OG card name when `schedule-posts.yml` publishes a staged post,

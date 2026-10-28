@@ -347,13 +347,13 @@ After deploying, use the [Facebook Sharing Debugger](https://developers.facebook
 | Workflow | Purpose |
 | :--- | :--- |
 | `article-reels.yml` | Generate article reels on new/scheduled posts |
-| `check-links.yml` | Weekly link-rot sweep (Mondays 06:00 UTC) |
+| `check-links.yml` | On-demand link check — `workflow_dispatch` only (change pending in `patches/`) |
 | `linkedin-share.yml` | Cross-publish new posts to LinkedIn |
 | `post-reels-to-youtube.yml` | Upload finished reels to YouTube |
 | `schedule-posts.yml` | Promote queued drafts from `pending-posts/` on publish date |
 | `submit-indexnow.yml` | Submit URLs to IndexNow |
 
-A copy of `article-reels.yml` and `check-links.yml` (with weekly schedule) is staged in [`reels/ci/`](reels/ci/README.md) pending install into `.github/workflows/`.
+A copy of `article-reels.yml` and the manual-only `check-links.yml` are staged in [`reels/ci/`](reels/ci/README.md) pending install into `.github/workflows/`; the link-checker switch to `workflow_dispatch` also ships as [`patches/check-links-manual-trigger.patch`](patches/README.md).
 
 ---
 

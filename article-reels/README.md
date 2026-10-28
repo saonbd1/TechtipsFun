@@ -47,6 +47,47 @@ nothing.
 
 To backfill everything at once, run it manually with `max: 100`.
 
+## YouTube uploads (and the 7-day token trap)
+
+**Post reels to YouTube** uploads up to 3 new MP4s per run (`.mp4` → Shorts,
+title derived from the file name) and records each success in
+`.youtube-upload-manifest.json` so a re-run never double-posts. It needs three
+repo Secrets: `YT_CLIENT_ID`, `YT_CLIENT_SECRET`, `YT_REFRESH_TOKEN`
+(optional `YT_PLAYLIST_ID`).
+
+Mint the refresh token once, on your own machine:
+
+```bash
+export YT_CLIENT_ID=...apps.googleusercontent.com
+export YT_CLIENT_SECRET=...
+python scripts/get-youtube-refresh-token.py        # prints the token
+gh secret set YT_REFRESH_TOKEN --body "<token>"
+python scripts/upload-reels-to-youtube.py --check-auth
+```
+
+**Before minting, publish the OAuth app** (Google Auth Platform → Audience →
+Publish app). While the publishing status stays `Testing`, Google expires every
+refresh token **7 days** after it is issued, so the daily job starts failing
+with:
+
+```
+{"error": "invalid_grant", "error_description": "Token has been expired or revoked."}
+```
+
+Publishing the app ("In production") removes that timer; the token then only
+dies if it is revoked, unused for 6 months, or pushed out by 50+ newer tokens
+for the same client + user pair. The helper prints
+`refresh_token_expires_in` when Google still considers the token temporary, so
+a 7-day token is obvious at mint time.
+
+Other failures you may see in the log:
+
+| Error | Meaning |
+| --- | --- |
+| `invalid_grant` | refresh token dead — re-mint (see above) |
+| `uploadLimitExceeded` | per-channel daily upload cap; verify the channel |
+| `quotaExceeded` | 10,000 unit/day API quota spent (~6 uploads), resets midnight PT |
+
 ## Rendering locally instead
 
 ```bash

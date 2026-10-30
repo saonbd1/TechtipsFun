@@ -1,14 +1,17 @@
+---
+title: "How to Set Up a Compatible RSS Feed for an Astro Website"
+description: "A practical, evidence-based guide to building an Astro RSS feed with images, authors, tags, auto discovery, and validation."
+heroImage: "/article-media/astro-rss-feed-cover.webp"
+pubDate: "Oct 24 2026"
+category: "Web Development"
+tags: ["Astro", "RSS", "Javascript", "Seo"]
+---
+
 # Build a Compatible RSS Feed for an Astro Blog
 
 An Astro blog can publish a valid RSS feed with little code. The harder task is to make the feed useful for different readers. Some readers find images in the HTML content. Others read Media RSS or a standard RSS enclosure. Author and tag fields also differ between readers.
 
-This guide uses the RSS implementation for TechTips.fun as an example. The project uses Astro 5 and Cloudflare Workers with static assets. The live feed is available at [`https://www.techtips.fun/rss.xml`](https://www.techtips.fun/rss.xml). The project workflow passed the W3C Feed Validation Service. A live inspection also found image data, author data, categories, subjects, and an Atom self link.
-
-This guide gives you a pattern for another Astro blog. It does not claim that every RSS reader displays the feed in the same way.
-
-![Architecture of the Astro RSS feed implementation](public/article-media/astro-rss-feed-architecture.png)
-
-*Architecture diagram for the implementation in this guide. It shows the project structure and the metadata paths that RSS readers use.*
+This guide uses the RSS implementation for TechTips.fun as an example. The project uses Astro 5 and Cloudflare Workers with static assets. The live feed is available at [`https://www.techtips.fun/rss.xml`](https://www.techtips.fun/rss.xml). The project workflow passed the W3C Feed Validation Service. A live inspection also found image data, author data, categories, subjects, and an Atom self link. This guide gives you a pattern for another Astro blog. It does not claim that every RSS reader displays the feed in the same way.
 
 ## What the finished feed must do
 
@@ -317,3 +320,4 @@ Before you publish an Astro RSS feed, make sure that:
 An Astro RSS feed becomes dependable when it supports different readers instead of relying on one XML form. Start with Astro’s `@astrojs/rss` helper. Sort the posts yourself. Use absolute URLs. Publish each image in full HTML, Media RSS, and a standard enclosure. Add RSS and Dublin Core metadata when it improves parser compatibility. Then inspect the generated feed with a validator and a real parser.
 
 The TechTips.fun implementation uses this pattern. Its live XML contains the image, author, category, tag, and self-reference metadata that common readers need. The remaining improvement is to replace zero-length image enclosures with their actual byte sizes when strict enclosure handling matters.
+

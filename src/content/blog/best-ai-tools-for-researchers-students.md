@@ -31,7 +31,6 @@ To conduct credible research without getting bogged down by steep learning curve
 **Consensus** is an AI-powered academic search engine built on top of a peer-reviewed research database containing over 220 million papers. Instead of returning generic web links, Consensus analyzes scholarly literature to answer specific research questions.
 
 ### Why Primary-Level Users Love It
-
 When you type a question into Consensus, it evaluates the underlying studies and provides the **Consensus Meter**, which visually indicates whether the scientific literature leans yes, no, or mixed on your topic. For students and new researchers, this removes the guesswork of weighing conflicting studies.
 
 ### Limitations to Keep in Mind
@@ -46,7 +45,6 @@ The free tier is helpful for exploratory searches, but it is capped at 3 Deep Se
 **Elicit** is designed to streamline literature reviews by extracting key data points—such as methodologies, sample sizes, and study outcomes—across dozens of papers simultaneously. It indexes over 138 million papers and compiles your search findings into structured comparison tables.
 
 ### Why Primary-Level Users Love It
-
 Manually creating a matrix in Excel to compare 20 research papers is exhausting. Elicit automates this extraction process, allowing beginners to see how different authors measured variables or what sample sizes were used at a single glance.
 
 ### Limitations to Keep in Mind

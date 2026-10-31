@@ -110,8 +110,14 @@ export class InstapaperClient {
     }
 
     // All request body params are included in the signature base.
+    // Decode values first so encodeURIComponent in signatureBase only
+    // encodes once (prevents double-encoding of % and other chars).
     for (const [key, value] of params) {
-      oauthParams[key] = value;
+      try {
+        oauthParams[key] = decodeURIComponent(value);
+      } catch {
+        oauthParams[key] = value;
+      }
     }
 
     const signatureBase = this.signatureBase(method, path, oauthParams);

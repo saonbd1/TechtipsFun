@@ -1,0 +1,51 @@
+name: Daily read link
+
+# Every day at 09:00 UTC, pick the next unposted link from data/read-queue.json,
+# add it to your Instapaper reading list, then sync all Instapaper bookmarks into
+# data/instapaper-bookmarks.json so the /read page on techtips.fun refreshes.
+
+on:
+  schedule:
+    - cron: "0 9 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  daily-link:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Add next link from read queue to Instapaper
+        env:
+          INSTAPAPER_CONSUMER_KEY: ${{ secrets.INSTAPAPER_CONSUMER_KEY }}
+          INSTAPAPER_CONSUMER_SECRET: ${{ secrets.INSTAPAPER_CONSUMER_SECRET }}
+          INSTAPAPER_EMAIL: ${{ secrets.INSTAPAPER_EMAIL }}
+          INSTAPAPER_PASSWORD: ${{ secrets.INSTAPAPER_PASSWORD }}
+        run: node scripts/daily-read-link.mjs
+
+      - name: Sync Instapaper bookmarks to local JSON
+        env:
+          INSTAPAPER_CONSUMER_KEY: ${{ secrets.INSTAPAPER_CONSUMER_KEY }}
+          INSTAPAPER_CONSUMER_SECRET: ${{ secrets.INSTAPAPER_CONSUMER_SECRET }}
+          INSTAPAPER_EMAIL: ${{ secrets.INSTAPAPER_EMAIL }}
+          INSTAPAPER_PASSWORD: ${{ secrets.INSTAPAPER_PASSWORD }}
+        run: node scripts/sync-instapaper-bookmarks.mjs
+
+      - name: Commit and push updated bookmarks
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/instapaper-bookmarks.json data/read-queue-state.json
+          git diff --cached --quiet && exit 0
+          git commit -m "chore: sync Instapaper bookmarks [skip ci]"
+          git push

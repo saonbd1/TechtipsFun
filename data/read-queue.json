@@ -1,0 +1,167 @@
+[
+  {
+    "url": "https://www.techtips.fun/blog/10-linux-terminal-commands-i-use-every/",
+    "title": "10 Linux terminal commands I use every single day",
+    "description": "I’ve been using Linux as my daily driver for over five years. In that time, I’ve collected dozens of commands — but the ones below are the ones that"
+  },
+  {
+    "url": "https://www.techtips.fun/blog/astro-table-of-contents-component-guide/",
+    "title": "How to Add an Accessible Table of Contents to an Astro Blog",
+    "description": "Build a reusable Astro table of contents component that creates stable heading links, works on mobile, and stays accessible without an extra package."
+  },
+  {
+    "url": "https://www.techtips.fun/blog/automate-linkedin-posts-github-actions/",
+    "title": "Automate LinkedIn Posts from Your Blog with GitHub Actions",
+    "description": "I cross-post every blog article to LinkedIn automatically with GitHub Actions and the LinkedIn API. Here is the free setup, plus the 422 error that broke it."
+  },
+  {
+    "url": "https://www.techtips.fun/blog/best-ai-tools-for-researchers-students/",
+    "title": "Best AI Tools for Researchers and Students in 2026",
+    "description": "Discover the best AI tools for researchers and students in 2026. Compare top discovery, literature review, and synthesis platforms tailored for beginners."
+  },
+  {
+    "url": "https://www.techtips.fun/blog/best-windows-11-privacy-tools/",
+    "title": "Best Windows 11 Privacy Tools in 2026: Beginner-Friendly Picks That Actually Help",
+    "description": "Compare the best Windows 11 privacy tools for beginners, including O&O ShutUp10++, Portmaster, Win11Debloat, simplewall, and Winaero Tweaker."
+  },
+  {
+    "url": "https://www.techtips.fun/blog/blog-to-video-self-hosted-pipeline/",
+    "title": "From your Blog post to reel video, self-hosted: render a reel for every article",
+    "description": "Every blog-to-video tool asks for a subscription. Here is the self-hosted alternative: Markdown becomes animated code, real screenshots and captions, rendered on publish. And it is free"
+  },
+  {
+    "url": "https://www.techtips.fun/blog/build-bulk-10-url-shortner-next-js/",
+    "title": "Build a Bulk 10 URL Shortener Platform Using Next.JS",
+    "description": "Follow Easy Steps on Next.js for URL redirect route; Learn more about URL shortener API validation; dynamic short URL route."
+  },
+  {
+    "url": "https://www.techtips.fun/blog/create-astro-site-responsive-layout/",
+    "title": "Create an Astro Site Layout Responsive & Mobile Friendly",
+    "description": "Build an Astro blog/site template fully responsive. Implement the header, footer and navigation components using shared layout system, see example."
+  },
+  {
+    "url": "https://www.techtips.fun/blog/css-grid-vs-flexbox-when-to-actually/",
+    "title": "CSS Grid vs Flexbox when to actually use each one",
+    "description": "This debate has been running since Grid shipped. Most explanations are either too vague (“Grid is 2D, Flexbox is 1D”) or too prescriptive. Here’s the"
+  },
+  {
+    "url": "https://www.techtips.fun/blog/how-to-add-onedrive-to-windows-file-explorer/",
+    "title": "OneDrive Missing in Windows 11? How to Add It to File Explorer",
+    "description": "Learn how to add OneDrive to File Explorer on Windows 10 and Windows 11. Follow setup steps and fix a OneDrive folder that is not showing in File Explorer."
+  },
+  {
+    "url": "https://www.techtips.fun/blog/how-to-create-categories-and-tags-in-an-astro-blog/",
+    "title": "How to Create Categories and Tags in an Astro Blog",
+    "description": "Create clear categories and useful tags in an Astro blog, generate archive pages at build time, and choose the right navigation option for readers."
+  },
+  {
+    "url": "https://www.techtips.fun/blog/how-to-fix-windows-11-stuck-on-getting-updates-loop/",
+    "title": "Fix Windows 11 Stuck on Getting Updates Loop in 5 Steps",
+    "description": "Windows 11 stuck on the Getting updates loop? Run 5 fixes in order, from a simple restart to a full update cache reset. Most take under 30 minutes."
+  },
+  {
+    "url": "https://www.techtips.fun/blog/how-to-repair-corrupted-windows-11-system-files-sfc-dism/",
+    "title": "How to Repair Corrupted Windows 11 System Files with SFC and DISM",
+    "description": "Learn how to run SFC and DISM in Windows 11, why DISM RestoreHealth should come first, and what to do when SFC cannot fix corrupted files."
+  },
+  {
+    "url": "https://www.techtips.fun/blog/how-to-set-up-linkedin-oauth-client/",
+    "title": "How to Set Up a LinkedIn OAuth Client for Posting",
+    "description": "I set up a LinkedIn OAuth client to post articles automatically. Here is the app, the scopes, the token, and the 422 trap I hit."
+  },
+  {
+    "url": "https://www.techtips.fun/blog/how-to-setup-a-compatible-rss-feed-for-astro-website/",
+    "title": "How to Set Up a Compatible RSS Feed for an Astro Website",
+    "description": "A practical, evidence-based guide to building an Astro RSS feed with images, authors, tags, auto discovery, and validation."
+  },
+  {
+    "url": "https://www.techtips.fun/blog/i-tested-6-ai-coding-assistants-so-you/",
+    "title": "[Updated] I tested the best AI coding assistants in 2026",
+    "description": "A practical 2026 comparison of GitHub Copilot, Cursor, Claude Code, Manus, v0, Aider, Continue, and more, with clear picks for everyday coding, terminal work, GitHub workflows, and fast app prototypes."
+  },
+  {
+    "url": "https://www.techtips.fun/blog/local-ollama-windows11-low-spec-setup/",
+    "title": "How to Run Ollama Locally on a Low-Spec Windows 11 PC",
+    "description": "With a small model and a few tweaks, a 4 GB RAM laptop can generate text in under a second. Here is the minimum setup that works on weak hardware."
+  },
+  {
+    "url": "https://www.techtips.fun/blog/migrate-static-html-site-to-astro/",
+    "title": "Migrate a Static HTML Site to Astro with Content Collections",
+    "description": "A step-by-step walkthrough of migrating a 35-page static HTML site to Astro content collections, layouts, and dynamic routes, plus the checks to run before cutover."
+  },
+  {
+    "url": "https://www.techtips.fun/blog/my-dev-environment-in-2026-what-changed/",
+    "title": "My dev environment in 2026 — what changed, what stayed",
+    "description": "I do this annual audit of my dev setup. What tools did I keep? What did I finally ditch? What snuck in and became irreplaceable?"
+  },
+  {
+    "url": "https://www.techtips.fun/blog/netlify-vs-vercel-what-my-emails-revealed-after-using-both/",
+    "title": "Netlify vs Vercel: Which Platform Let Me Keep Improving My Project?",
+    "description": "I used Netlify and Vercel for similar projects. The biggest difference was how easily I could continue improving my project, not the emails I received."
+  },
+  {
+    "url": "https://www.techtips.fun/blog/rea-reverse-engineer-anything-a-complete-tutorial/",
+    "title": "REA (Reverse Engineer Anything): A Complete Tutorial From Installation to Analysis",
+    "description": "REA combines practical reverse-engineering methods with tools for AI coding agents. It supports static analysis, runtime observation, feature tracing, artifact inspection, and evidence-based reports."
+  },
+  {
+    "url": "https://www.techtips.fun/blog/schema-vs-microformats-markup-guide/",
+    "title": "Schema Markup vs Microformats: Differences and Which to Use",
+    "description": "Learn how Schema.org markup and microformats differ, how JSON-LD and HTML classes work, and which approach is best for SEO, rich results, and IndieWeb projects."
+  },
+  {
+    "url": "https://www.techtips.fun/blog/self-hosting-your-first-web-app-no/",
+    "title": "Self-hosting your first web app — the no-nonsense guide",
+    "description": "I spent way too long being intimidated by self-hosting. It seemed like something only sysadmin wizards did. Then I actually tried it — and it took on"
+  },
+  {
+    "url": "https://www.techtips.fun/blog/setting-up-google-oauth-credentials-for-blogger/",
+    "title": "Setting Up Google OAuth Credentials for Blogger Automation",
+    "description": "In this post I explained how to create a secure admin dashboard by Google OAuth credentials for an application."
+  },
+  {
+    "url": "https://www.techtips.fun/blog/setting-up-privacy-first-home-network/",
+    "title": "Setting up a privacy-first home network with Pi-hole + WireGuard",
+    "description": "My home network used to be a factory-default router with no thought given to privacy. Now every device on it has DNS-level ad blocking, and I can tunn..."
+  },
+  {
+    "url": "https://www.techtips.fun/blog/Simple-Ghostty-terminal-configuration-guide/",
+    "title": "Ghostty Terminal Configuration Guide",
+    "description": "A practical guide to configuring Ghostty for a cleaner, faster, and more comfortable terminal workflow."
+  },
+  {
+    "url": "https://www.techtips.fun/blog/top-free-ai-models-you-can-use-right/",
+    "title": "Top Free AI Tools and Models You Can Use in 2026",
+    "description": "Explore free AI tools and open models in 2026, including Manus, GitHub Copilot, Llama, DeepSeek, Qwen, Gemma, Mistral, and Phi-4."
+  },
+  {
+    "url": "https://www.techtips.fun/blog/update-tpm- firmware-in-windows-11-guide (1)/",
+    "title": "Update TPM firmware in Windows 11: A safe step-by-step guide",
+    "description": "Learn how to update TPM firmware in Windows 11, clear TPM safely, protect BitLocker data, and fix TPM detection and initialization errors."
+  },
+  {
+    "url": "https://www.techtips.fun/blog/windows-11-battery-drains-fast/",
+    "title": "Windows 11 Battery Drains Fast? 7 Fixes to Try",
+    "description": "Is your Windows 11 battery draining fast? Try these 7 fixes, from lowering screen brightness to checking battery health with a Windows battery report."
+  },
+  {
+    "url": "https://www.techtips.fun/blog/windows-11-bitlocker-settings-tips/",
+    "title": "Windows 11 BitLocker: The Complete Guide to Recovery Keys, Settings, and Fixes",
+    "description": "Learn how Windows 11 BitLocker works, why it's on by default, how to find and back up your recovery key, disable encryption safely, and fix the most common BitLocker issues."
+  },
+  {
+    "url": "https://www.techtips.fun/blog/windows-11-no-sound-after-update/",
+    "title": "Windows 11 No Sound After Update? 7 Ways to Get It Back",
+    "description": "Windows 11 has no sound after an update? Run 7 fixes, from the output device to a driver rollback and a Windows update removal."
+  },
+  {
+    "url": "https://www.techtips.fun/blog/windows-11-taskbar-start-menu-not-showing/",
+    "title": "7 Fixes for a Windows 11 Taskbar and Start Menu Missing",
+    "description": "Windows 11 taskbar or Start menu not showing? Restart Explorer, repair system files, and re-register the shell with 7 fixes."
+  },
+  {
+    "url": "https://www.techtips.fun/blog/windows-11-wifi-keeps-disconnecting/",
+    "title": "Why Windows 11 Keeps Disconnecting Wi-Fi, and How to Fix It",
+    "description": "Windows 11 Wi-Fi keeps disconnecting every few minutes? Try these 9 fixes, from a driver setting to a full network reset."
+  }
+]

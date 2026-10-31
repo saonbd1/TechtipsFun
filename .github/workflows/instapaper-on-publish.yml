@@ -1,0 +1,97 @@
+name: Add new posts to Instapaper
+
+# When a new blog post is published (pushed to src/content/blog/), add it to
+# your Instapaper reading list and sync bookmarks to data/instapaper-bookmarks.json
+# so the /read page refreshes on the next build.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/content/blog/**'
+  workflow_dispatch:
+    inputs:
+      slug:
+        description: Post slug to add (filename without .md/.mdx)
+        required: false
+
+permissions:
+  contents: write
+
+jobs:
+  add-to-instapaper:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Detect newly added posts
+        id: posts
+        run: |
+          set -euo pipefail
+          if [ -n "${{ github.event.inputs.slug }}" ]; then
+            echo "slugs=${{ github.event.inputs.slug }}" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          BEFORE="${{ github.event.before }}"
+          ALL_ZERO="0000000000000000000000000000000000000000"
+          if [ "$BEFORE" = "$ALL_ZERO" ]; then
+            echo "Initial push; skipping automatic add."
+            echo "slugs=" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          FILES=$(git diff --name-only --diff-filter=A "$BEFORE" "${{ github.event.sha }}" -- src/content/blog/ | grep -E '\.(md|mdx)$' || true)
+          if [ -z "$FILES" ]; then
+            echo "No newly added posts."
+            echo "slugs=" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          SLUGS=$(echo "$FILES" | sed -E 's#.*/##; s/\.(md|mdx)$//' | paste -sd,)
+          echo "New posts: $SLUGS"
+          echo "slugs=$SLUGS" >> "$GITHUB_OUTPUT"
+
+      - name: Add each new post to Instapaper
+        if: steps.posts.outputs.slugs != ''
+        env:
+          INSTAPAPER_CONSUMER_KEY: ${{ secrets.INSTAPAPER_CONSUMER_KEY }}
+          INSTAPAPER_CONSUMER_SECRET: ${{ secrets.INSTAPAPER_CONSUMER_SECRET }}
+          INSTAPAPER_EMAIL: ${{ secrets.INSTAPAPER_EMAIL }}
+          INSTAPAPER_PASSWORD: ${{ secrets.INSTAPAPER_PASSWORD }}
+          SITE_URL: https://www.techtips.fun
+        run: |
+          set -euo pipefail
+          IFS=',' read -ra SLUGS <<< "${{ steps.posts.outputs.slugs }}"
+          for slug in "${SLUGS[@]}"; do
+            echo "Adding $slug to Instapaper..."
+            # Read title from the post's frontmatter
+            FILE="src/content/blog/${slug}.md"
+            if [ ! -f "$FILE" ]; then FILE="src/content/blog/${slug}.mdx"; fi
+            TITLE=$(sed -n 's/^title: *["'"'"']\(.*\)["'"'"'] *$/\1/p' "$FILE" | head -1)
+            URL="${SITE_URL}/blog/${slug}/"
+            node scripts/add-instapaper-bookmark.mjs "$URL" "$TITLE" "New post from techtips.fun"
+          done
+
+      - name: Sync Instapaper bookmarks to local JSON
+        env:
+          INSTAPAPER_CONSUMER_KEY: ${{ secrets.INSTAPAPER_CONSUMER_KEY }}
+          INSTAPAPER_CONSUMER_SECRET: ${{ secrets.INSTAPAPER_CONSUMER_SECRET }}
+          INSTAPAPER_EMAIL: ${{ secrets.INSTAPAPER_EMAIL }}
+          INSTAPAPER_PASSWORD: ${{ secrets.INSTAPAPER_PASSWORD }}
+        run: node scripts/sync-instapaper-bookmarks.mjs
+
+      - name: Commit and push updated bookmarks
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/instapaper-bookmarks.json
+          git diff --cached --quiet && exit 0
+          git commit -m "chore: sync Instapaper bookmarks after new post [skip ci]"
+          git push

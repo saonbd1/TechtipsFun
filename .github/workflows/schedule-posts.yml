@@ -87,6 +87,46 @@ jobs:
           echo "Published $FILE on $TODAY"
           echo "slug=${FILE%.md}" >> "$GITHUB_OUTPUT"
 
+      # Add the new post to Instapaper (push uses GITHUB_TOKEN so this
+      # cannot rely on instapaper-on-publish.yml being triggered).
+      - name: Add new post to Instapaper
+        if: steps.publish.outputs.slug != ''
+        env:
+          INSTAPAPER_CONSUMER_KEY: ${{ secrets.INSTAPAPER_CONSUMER_KEY }}
+          INSTAPAPER_CONSUMER_SECRET: ${{ secrets.INSTAPAPER_CONSUMER_SECRET }}
+          INSTAPAPER_EMAIL: ${{ secrets.INSTAPAPER_EMAIL }}
+          INSTAPAPER_PASSWORD: ${{ secrets.INSTAPAPER_PASSWORD }}
+        run: |
+          set -euo pipefail
+          SLUG="${{ steps.publish.outputs.slug }}"
+          FILE="src/content/blog/${SLUG}.md"
+          if [ ! -f "$FILE" ]; then FILE="src/content/blog/${SLUG}.mdx"; fi
+          TITLE=$(sed -n 's/^title: *"\(.*\)" *$/\1/p' "$FILE" | head -1)
+          URL="https://www.techtips.fun/blog/${SLUG}/"
+          node scripts/add-instapaper-bookmark.mjs "$URL" "$TITLE" "New post from techtips.fun"
+
+      # Sync Instapaper bookmarks to local JSON so /read page refreshes
+      - name: Sync Instapaper bookmarks
+        if: steps.publish.outputs.slug != ''
+        env:
+          INSTAPAPER_CONSUMER_KEY: ${{ secrets.INSTAPAPER_CONSUMER_KEY }}
+          INSTAPAPER_CONSUMER_SECRET: ${{ secrets.INSTAPAPER_CONSUMER_SECRET }}
+          INSTAPAPER_EMAIL: ${{ secrets.INSTAPAPER_EMAIL }}
+          INSTAPAPER_PASSWORD: ${{ secrets.INSTAPAPER_PASSWORD }}
+        run: node scripts/sync-instapaper-bookmarks.mjs
+
+      - name: Commit updated bookmarks
+        if: steps.publish.outputs.slug != ''
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/instapaper-bookmarks.json data/read-queue-state.json
+          git diff --cached --quiet && exit 0
+          git commit -m "chore: sync Instapaper bookmarks after publish [skip ci]"
+          git pull --rebase origin main || true
+          git push origin HEAD:main
+
       # The publish commit above is pushed with the automatic GITHUB_TOKEN,
       # which does not trigger other workflows — so the LinkedIn teaser is
       # posted here directly instead of relying on the push event.

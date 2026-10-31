@@ -29,3 +29,14 @@ ADMIN_GITHUB_IDS=
 # Optional: the only repository the write proxy will talk to (defaults to
 # saonbd1/TechtipsFun). Keep it in sync with the dashboard's Settings page.
 ADMIN_REPO=saonbd1/TechtipsFun
+
+# Instapaper Public API (https://instapaper.com/developers/)
+# Register an API consumer to get a consumer key + secret.
+# Auth is OAuth 1.0a with x_auth (username/password) for a user token.
+INSTAPAPER_CONSUMER_KEY=
+INSTAPAPER_CONSUMER_SECRET=
+# The Instapaper account email / password used with x_auth.
+# Provide INSTAPAPER_EMAIL and INSTAPAPER_PASSWORD for server-side sync,
+# or enter the password interactively in CLI scripts.
+INSTAPAPER_EMAIL=
+INSTAPAPER_PASSWORD=

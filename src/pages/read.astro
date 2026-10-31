@@ -1,0 +1,211 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { readFileSync, existsSync } from 'node:fs';
+import { join } from 'node:path';
+
+const ROOT = process.cwd();
+const BOOKMARKS_PATH = join(ROOT, 'data', 'instapaper-bookmarks.json');
+
+let bookmarks = [];
+if (existsSync(BOOKMARKS_PATH)) {
+  try {
+    bookmarks = JSON.parse(readFileSync(BOOKMARKS_PATH, 'utf8'));
+  } catch {
+    bookmarks = [];
+  }
+}
+
+// Sort newest first by timestamp
+bookmarks.sort((a, b) => (b.time || 0) - (a.time || 0));
+
+const formattedDate = (ts) => {
+  if (!ts) return '';
+  const d = new Date(ts * 1000); // Instapaper time is Unix seconds
+  return d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+};
+---
+
+<BaseHead
+  title="Read | Tech Tips in Fun"
+  description="Links and articles saved for later reading — synced from Instapaper."
+  noindex={false}
+/>
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --muted: #6b6b6b;
+    --line: #e5e5e5;
+    --accent: #4f46e5;
+    --accent-soft: #eef2ff;
+    --box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    font-family: Inter, system-ui, -apple-system, sans-serif;
+    color: var(--ink);
+    background: #fff;
+    line-height: 1.6;
+  }
+
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  header.page-header {
+    padding: 3rem 0 2rem;
+    text-align: center;
+  }
+
+  header.page-header h1 {
+    margin: 0 0 0.5rem;
+    font-size: clamp(2rem, 5vw, 3rem);
+    letter-spacing: -0.04em;
+  }
+
+  header.page-header p {
+    color: var(--muted);
+    font-size: 1.1rem;
+    max-width: 48rem;
+    margin: 0 auto;
+  }
+
+  .empty-state {
+    text-align: center;
+    padding: 4rem 0;
+    color: var(--muted);
+  }
+
+  .empty-state p {
+    font-size: 1.1rem;
+  }
+
+  .empty-state code {
+    background: #f5f5f5;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+  }
+
+  .bookmarks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem 0 4rem;
+  }
+
+  .bookmark-card {
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 1.5rem;
+    background: #fff;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    display: block;
+  }
+
+  .bookmark-card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 8px 24px rgba(79, 70, 229, 0.1);
+    transform: translateY(-2px);
+  }
+
+  .bookmark-card h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--ink);
+  }
+
+  .bookmark-card p {
+    margin: 0 0 1rem;
+    color: var(--muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .bookmark-card .url {
+    font-size: 0.8rem;
+    color: var(--accent);
+    word-break: break-all;
+    margin-bottom: 0.75rem;
+    display: block;
+  }
+
+  .bookmark-card .meta {
+    font-size: 0.75rem;
+    color: var(--muted);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+  }
+
+  .starred {
+    color: #f59e0b;
+  }
+
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 2rem 0;
+    margin-top: 2rem;
+    color: var(--muted);
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  @media (max-width: 640px) {
+    .bookmarks-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<Header />
+
+<main class="container">
+  <header class="page-header">
+    <h1>Read</h1>
+    <p>Articles and links saved for later — synced from your Instapaper reading list.</p>
+  </header>
+
+  {bookmarks.length === 0 ? (
+    <div class="empty-state">
+      <p>No bookmarks yet.</p>
+      <p>Daily automation adds one link to your Instapaper list each day, and every new post on techtips.fun is added automatically. Set up your Instapaper API credentials to get started.</p>
+      <code>See scripts/daily-read-link.mjs and .github/workflows/daily-read-link.yml</code>
+    </div>
+  ) : (
+    <div class="bookmarks-grid">
+      {bookmarks.map((b) => (
+        <a href={b.url} target="_blank" rel="noopener noreferrer" class="bookmark-card" aria-label={b.title}>
+          <h3>{b.title}</h3>
+          {b.description && <p>{b.description}</p>}
+          <span class="url">{b.url}</span>
+          <div class="meta">
+            <span>{formattedDate(b.time)}</span>
+            {b.is_starred && <span class="starred" aria-label="Starred">★</span>}
+          </div>
+        </a>
+      ))}
+    </div>
+  )}
+
+  <footer>
+    <p>
+      Built with <a href="https://instapaper.com/developers/">Instapaper Public API</a> ·{' '}
+      <a href="/">← Back to Tech Tips in Fun</a>
+    </p>
+  </footer>
+</main>
+
+<Footer />

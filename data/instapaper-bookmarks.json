@@ -1,5 +1,14 @@
 [
   {
+    "bookmark_id": 2035809945,
+    "title": "How to Add an Accessible Table of Contents to an Astro Blog",
+    "url": "https://www.techtips.fun/blog/astro-table-of-contents-component-guide/",
+    "description": "Build a reusable Astro table of contents component that creates stable heading links, works on mobile, and stays accessible without an extra package.",
+    "time": 1793645668,
+    "is_starred": 0,
+    "type": "bookmark"
+  },
+  {
     "bookmark_id": 2054081177,
     "title": "10 Linux terminal commands I use every single day",
     "url": "https://www.techtips.fun/blog/10-linux-terminal-commands-i-use-every/",
@@ -59,15 +68,6 @@
     "url": "https://www.techtips.fun/blog/muse-glimmer-ai-local-guide/",
     "description": "",
     "time": 1787351411,
-    "is_starred": 0,
-    "type": "bookmark"
-  },
-  {
-    "bookmark_id": 2035809945,
-    "title": "How to Add an Accessible Table of Contents to an Astro Blog",
-    "url": "https://www.techtips.fun/blog/astro-table-of-contents-component-guide/",
-    "description": "",
-    "time": 1787351369,
     "is_starred": 0,
     "type": "bookmark"
   },

@@ -18,7 +18,7 @@ export class InstapaperClient {
       x_auth_password: password,
     });
 
-    const { header } = this.oauthSign("POST", "/oauth/access_token", params);
+    const { header } = this.oauthSign("POST", `${this.baseUrl}/oauth/access_token`, params);
     const response = await fetch(`${this.baseUrl}/oauth/access_token`, {
       method: "POST",
       headers: {
@@ -47,7 +47,7 @@ export class InstapaperClient {
       oauthTokenSecret,
       /** Pre-built OAuth1 Authorization header for subsequent user-scoped calls. */
       authFor: (method, path, extraParams) =>
-        this.oauthSign(method, path, extraParams, {
+        this.oauthSign(method, `${this.baseUrl}${path}`, extraParams, {
           token: oauthToken,
           tokenSecret: oauthTokenSecret,
         }).header,

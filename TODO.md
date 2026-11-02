@@ -63,6 +63,16 @@
 - [x] Installed `daily.dev` + `daily-dev-ask` agent skills and stored the API token (2026-10-04)
 - [ ] Note: the daily.dev public API is read-only for content — sharing your own articles there is done via the Share button in the daily.dev extension/web app, not the API
 
+## Instapaper reading list
+- [x] Register API consumer at https://instapaper.com/developers/ — get `consumer_key` + `consumer_secret`
+- [x] Add GitHub repo secrets: `INSTAPAPER_CONSUMER_KEY`, `INSTAPAPER_CONSUMER_SECRET`, `INSTAPAPER_EMAIL`, `INSTAPAPER_PASSWORD`
+- [x] Populate `data/read-queue.json` with 33 blog post links (titles + descriptions from frontmatter)
+- [x] `data/read-queue-state.json` tracks daily rotation cursor (committed so it persists between runs)
+- [ ] Verify daily 09:00 UTC workflow adds one link per day to Instapaper
+- [ ] Verify new-post publish workflow adds each new post to Instapaper automatically
+- [ ] Visit `https://www.techtips.fun/read/` to confirm bookmarks render
+- [ ] Optionally add more links to `data/read-queue.json` — they rotate in order, looping when exhausted
+
 ## Maintenance
 - [ ] Apply `patches/schedule-posts-og-card-slug.patch` (`git apply patches/schedule-posts-og-card-slug.patch`) — normalises the staged OG card name and the `slug=` output in `schedule-posts.yml`. An automated session could not push it: the App token has no `workflows` permission.
 - [ ] Update skills later via `cd C:\Users\saonb\daily && git pull`, then re-copy the skill folders

@@ -33,6 +33,7 @@ A personal tech blog and knowledge base built with [Astro](https://astro.build),
 - 🎬 **Article reels** — automatic vertical 1080×1920 MP4 videos generated from each post (Remotion)
 - 📱 **Social cards** — branded 1200×630 PNG preview images for every post
 - 🤖 **Automated publishing** — scheduled posts, LinkedIn cross-posting, IndexNow submission
+- 📚 **Instapaper reading list** — daily link rotation + auto-add new posts to Instapaper via Public API; synced to `/read` page
 - 🛡️ **Private admin dashboard** — write/edit posts and manage the publish queue via a browser (no backend)
 - 🧪 **Tested** — admin app unit + smoke tests with Node's built-in test runner
 
@@ -351,6 +352,8 @@ After deploying, use the [Facebook Sharing Debugger](https://developers.facebook
 | `post-reels-to-youtube.yml` | Upload finished reels to YouTube |
 | `schedule-posts.yml` | Promote queued drafts from `pending-posts/` on publish date |
 | `submit-indexnow.yml` | Submit URLs to IndexNow |
+| `daily-read-link.yml` | Daily: adds next link from `data/read-queue.json` to Instapaper, syncs bookmarks to `data/instapaper-bookmarks.json` |
+| `instapaper-on-publish.yml` | On new post push: adds the new post to Instapaper and syncs bookmarks |
 
 A copy of `article-reels.yml` and `check-links.yml` (with weekly schedule) is staged in [`reels/ci/`](reels/ci/README.md) pending install into `.github/workflows/`.
 
@@ -368,6 +371,11 @@ A copy of `article-reels.yml` and `check-links.yml` (with weekly schedule) is st
 | `scripts/generate-tip-cards.mjs` | Generate Bengali tip cards |
 | `scripts/migrate-images-to-webp.mjs` | Convert images to WebP |
 | `scripts/tests/` | Admin dashboard test suite |
+| `scripts/instapaper.mjs` | Dependency-free OAuth 1.0a client for Instapaper Public API |
+| `scripts/add-instapaper-bookmark.mjs` | CLI: add a single link to Instapaper |
+| `scripts/daily-read-link.mjs` | Daily rotation: pick next link from `data/read-queue.json`, add to Instapaper |
+| `scripts/sync-instapaper-bookmarks.mjs` | Sync Instapaper bookmarks to `data/instapaper-bookmarks.json` |
+| `scripts/generate-read-queue.mjs` | Build `data/read-queue.json` from all blog posts in `src/content/blog/` |
 
 ---
 

@@ -18,11 +18,12 @@ export class InstapaperClient {
       x_auth_password: password,
     });
 
+    const { header } = this.oauthSign("POST", "/oauth/access_token", params);
     const response = await fetch(`${this.baseUrl}/oauth/access_token`, {
       method: "POST",
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
-        Authorization: this.oauthHeader("POST", "/oauth/access_token", params),
+        Authorization: header,
       },
       body: params.toString(),
     });
@@ -46,10 +47,10 @@ export class InstapaperClient {
       oauthTokenSecret,
       /** Pre-built OAuth1 Authorization header for subsequent user-scoped calls. */
       authFor: (method, path, extraParams) =>
-        this.oauthHeader(method, path, extraParams, {
+        this.oauthSign(method, path, extraParams, {
           token: oauthToken,
           tokenSecret: oauthTokenSecret,
-        }),
+        }).header,
     };
   }
 
@@ -96,8 +97,16 @@ export class InstapaperClient {
 
   /* ---------------- OAuth 1.0a signing ---------------- */
 
-  oauthHeader(method, path, params, token) {
-    const oauthParams = {
+  /**
+   * Build the OAuth 1.0a Authorization header and sign the request.
+   * Only oauth_* parameters go in the Authorization header; all body params
+   * (including x_auth_*) are included in the signature base but NOT in the header.
+   *
+   * @returns {{ header: string, signatureBase: string }}
+   */
+  oauthSign(method, path, params, token) {
+    // --- Signature base: ALL params (oauth + body/x_auth) ---
+    const signatureParams = {
       oauth_consumer_key: this.consumerKey,
       oauth_signature_method: "HMAC-SHA1",
       oauth_timestamp: Math.floor(Date.now() / 1000).toString(),
@@ -106,21 +115,21 @@ export class InstapaperClient {
     };
 
     if (token) {
-      oauthParams.oauth_token = token.token;
+      signatureParams.oauth_token = token.token;
     }
 
-    // All request body params are included in the signature base.
-    // Decode values first so encodeURIComponent in signatureBase only
-    // encodes once (prevents double-encoding of % and other chars).
+    // Decode body param values first so encodeURIComponent only encodes once.
     for (const [key, value] of params) {
       try {
-        oauthParams[key] = decodeURIComponent(value);
+        signatureParams[key] = decodeURIComponent(value);
       } catch {
-        oauthParams[key] = value;
+        signatureParams[key] = value;
       }
     }
 
-    const signatureBase = this.signatureBase(method, path, oauthParams);
+    const signatureBase = this.signatureBase(method, path, signatureParams);
+
+    // --- Sign ---
     const signingKey =
       encodeURIComponent(this.consumerSecret) +
       "&" +
@@ -129,13 +138,31 @@ export class InstapaperClient {
       .update(signatureBase)
       .digest("base64");
 
-    oauthParams.oauth_signature = signature;
+    // --- Authorization header: oauth_* params ONLY ---
+    const headerParams = {
+      oauth_consumer_key: this.consumerKey,
+      oauth_signature_method: "HMAC-SHA1",
+      oauth_timestamp: signatureParams.oauth_timestamp,
+      oauth_nonce: signatureParams.oauth_nonce,
+      oauth_version: "1.0",
+      oauth_signature: signature,
+    };
 
-    const headerParts = Object.entries(oauthParams)
+    if (token) {
+      headerParams.oauth_token = token.token;
+    }
+
+    const headerParts = Object.entries(headerParams)
       .sort(([a], [b]) => a.localeCompare(b))
-      .map(([key, value]) => `${encodeURIComponent(key)}="${encodeURIComponent(value)}"`);
+      .map(
+        ([key, value]) =>
+          `${encodeURIComponent(key)}="${encodeURIComponent(value)}"`,
+      );
 
-    return `OAuth ${headerParts.join(", ")}`;
+    return {
+      header: `OAuth ${headerParts.join(", ")}`,
+      signatureBase,
+    };
   }
 
   signatureBase(method, path, params) {

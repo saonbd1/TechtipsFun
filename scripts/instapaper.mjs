@@ -75,13 +75,14 @@ export class InstapaperClient {
 
   /** Add a single bookmark to the authenticated user's Instapaper list. */
   async addBookmark(user, { url, title, description }) {
-    const params = new URLSearchParams({ url });
+    const params = new URLSearchParams({ url, format: "json" });
     if (title) params.set("title", title);
     if (description) params.set("description", description);
 
     const response = await fetch(`${this.baseUrl}/bookmarks/add`, {
       method: "POST",
       headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
         Authorization: user.authFor("POST", "/bookmarks/add", params),
       },
       body: params.toString(),

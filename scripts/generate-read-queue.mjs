@@ -23,7 +23,7 @@ for (const file of files) {
   const slug = file.replace(/\.mdx?$/, "");
   if (title && desc) {
     results.push({
-      url: "https://www.techtips.fun/blog/" + slug + "/",
+      url: "https://www.techtips.fun/blog/" + slug,
       title: title,
       description: desc,
     });

@@ -91,7 +91,7 @@ jobs:
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/instapaper-bookmarks.json
+          git add -f data/instapaper-bookmarks.json
           git diff --cached --quiet && exit 0
           git commit -m "chore: sync Instapaper bookmarks after new post [skip ci]"
           git push

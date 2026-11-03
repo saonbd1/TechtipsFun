@@ -24,23 +24,25 @@ and reports the normalised slug to the LinkedIn / IndexNow steps. Pairs with
 
 ## instapaper-folder-env.patch
 
-Adds `INSTAPAPER_FOLDER` to the **add** steps of `daily-read-link.yml` and
-`instapaper-on-publish.yml`. Their **sync** steps already have it (committed via
-the GitHub web UI), but without the add steps the daily link and new posts are
-still filed under the API default (`unread`) and never reach `/read`.
+Adds `INSTAPAPER_FOLDER` to the **add** step of `daily-read-link.yml` — the last
+of the four add/sync steps without it (the other three are already in `main`).
+Today the scripts fall back to their built-in `Tech News` default, so nothing is
+broken; the line only matters once `vars.INSTAPAPER_FOLDER` is set to a different
+folder, where the sync would move but the daily add would not. The patch also
+drops two stray blank lines inside the `env:` blocks.
 
-Two lines total — either apply the patch:
+One line — either apply the patch:
 
 ```bash
 git pull
 git apply patches/instapaper-folder-env.patch
-git commit -am "ci(instapaper): pass INSTAPAPER_FOLDER to the add steps too"
+git commit -am "ci(instapaper): pass INSTAPAPER_FOLDER to the daily add step"
 git push
 ```
 
 or paste `          INSTAPAPER_FOLDER: ${{ vars.INSTAPAPER_FOLDER || 'Tech News' }}`
-into both `env:` blocks in the GitHub web editor, directly after
-`INSTAPAPER_PASSWORD`. Delete this file once the change is in the tree.
+into the **“Add next link from read queue to Instapaper”** step in the GitHub web
+editor, directly after `INSTAPAPER_PASSWORD`. Delete this file once applied.
 
 ## Removed: `.github/workflows/squad-share.yml`
 

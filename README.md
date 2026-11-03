@@ -356,6 +356,11 @@ Instapaper account, so the reading list you actually read from stays current.
 That is a private write to your own account — nothing from Instapaper is
 rendered on this site.
 
+`scripts/sync-instapaper-bookmarks.mjs` is kept too: it writes
+`data/instapaper-bookmarks.json`, a snapshot of the folder that the workflows
+commit. **No page reads that file any more** — it is a backup of the reading
+list in git, not published content. Drop the sync steps if you do not want it.
+
 > The former `/read` page was removed on 2026-11-03. It presented saved links as
 a public tech-news feed, which meant republishing other publishers'
 headlines/excerpts — a copyright and thin-content risk, on a page that in
@@ -396,6 +401,7 @@ A copy of `article-reels.yml` and `check-links.yml` (with weekly schedule) is st
 | `scripts/share-to-linkedin.mjs` | Share new posts to LinkedIn |
 | `scripts/instapaper.mjs` | Dependency-free OAuth 1.0a client for the Instapaper Public API |
 | `scripts/add-instapaper-bookmark.mjs` | CLI: save one link into your Instapaper folder |
+| `scripts/sync-instapaper-bookmarks.mjs` | Snapshot one Instapaper folder to `data/instapaper-bookmarks.json` (no page reads it) |
 | `scripts/generate-tip-cards.mjs` | Generate Bengali tip cards |
 | `scripts/migrate-images-to-webp.mjs` | Convert images to WebP |
 | `scripts/tests/` | Admin dashboard test suite |

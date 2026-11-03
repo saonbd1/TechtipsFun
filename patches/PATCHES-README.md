@@ -16,29 +16,24 @@ git apply patches/<name>.patch
 
 Delete the patch once its change is in the tree.
 
-## instapaper-posting-only.patch
+## instapaper-queue-cleanup.patch
 
-The Instapaper *page* was removed in `79fdaa5`, but saving your own posts into your
-own Instapaper account carries none of that risk, so the posting automation stays.
-This patch makes the workflows match that decision:
+Leftovers from removing the `/read` page. The bookmark **sync** is kept and still
+works; these two workflow edits just stop the dead bits from erroring:
 
-- `instapaper-on-publish.yml` — drops the “Sync Instapaper bookmarks” and “Commit and
-  push updated bookmarks” steps (they only fed the deleted page).
-- `schedule-posts.yml` — drops the same two steps, keeps “Add new post to Instapaper”,
-  and removes a stray comment fragment from its last line.
-- deletes `daily-read-link.yml` — the daily rotation only existed to stock `/read`.
-  Skip that hunk if you would rather keep rotating your own posts into Instapaper.
-
-The App token here cannot push anything under `.github/workflows/`, hence a patch:
+- deletes `daily-read-link.yml` — its first step calls `scripts/daily-read-link.mjs`,
+  which no longer exists, so the 09:00 UTC cron would fail every day.
+- `schedule-posts.yml` — the bookmark commit no longer stages
+  `data/read-queue-state.json` (file deleted; `git add -f` fails on a missing path).
 
 ```bash
 git pull
-git apply patches/instapaper-posting-only.patch
-git commit -am "ci(instapaper): keep posting, drop the /read plumbing"
+git apply patches/instapaper-queue-cleanup.patch
+git commit -am "ci(instapaper): drop the dead daily cron, fix schedule-posts staging"
 git push
 ```
 
-Then delete this file.
+Then delete this file. Needs the App `workflows` permission, hence a patch.
 
 ## Dormant: `schedule-posts.yml` patch
 

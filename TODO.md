@@ -69,13 +69,17 @@
   `TechPulse` is already CNET Group / Ziff Davis's tech-news app (US trademark filing).
   `/read` and `/read/` 301 to `/blog/` via `public/_redirects`.
 - [x] Kept the posting automation — `scripts/instapaper.mjs`,
-  `scripts/add-instapaper-bookmark.mjs` and `instapaper-on-publish.yml`. Writing to your
+  `scripts/add-instapaper-bookmark.mjs`, `instapaper-on-publish.yml`. Writing to your
   own Instapaper account is private and publishes nothing on the site, so it is safe.
-- [ ] Apply `patches/instapaper-posting-only.patch` — drops the two now-pointless sync
-  steps from `instapaper-on-publish.yml`, the two from `schedule-posts.yml`, and deletes
-  `daily-read-link.yml`. The App token cannot push workflow files, hence a patch.
-- [ ] Decide on the daily rotation (`daily-read-link.yml`): it pushed one of our own blog
-  posts into Instapaper each morning — harmless, but it only existed to stock `/read`.
+- [x] `scripts/sync-instapaper-bookmarks.mjs` restored and running — it commits
+  `data/instapaper-bookmarks.json`. Nothing renders that file now (the page is gone),
+  so it is a snapshot/backup of the folder, not site content.
+- [ ] Apply `patches/instapaper-queue-cleanup.patch` — deletes `daily-read-link.yml`
+  (its first step calls a script that no longer exists, so the 09:00 UTC cron would fail
+  every day) and fixes `schedule-posts.yml` staging a deleted file. App token cannot
+  push workflows, hence a patch.
+- [ ] Decide whether the JSON snapshot is still wanted; if not, drop the two "Sync
+  Instapaper bookmarks" steps and delete `data/instapaper-bookmarks.json`.
 
 ## Maintenance
 - [ ] Apply `patches/schedule-posts-og-card-slug.patch` only if `schedule-posts.yml` is re-enabled — it normalises the staged OG card name and the `slug=` output. Also dormant.

@@ -16,39 +16,35 @@ git apply patches/<name>.patch
 
 Delete the patch once its change is in the tree.
 
-## Dormant: `schedule-posts.yml` patches
+## remove-instapaper-workflows.patch
 
-`schedule-posts.yml` is **disabled** (see CHANGELOG) — it only existed for a
-one-off backlog and the queue is empty. Both patches below target that workflow,
-so they are kept for reference and only matter if scheduled publishing is
-re-enabled.
+The workflow half of the Instapaper removal (commit `79fdaa5` deleted the page and
+scripts). Deletes `daily-read-link.yml` and `instapaper-on-publish.yml`, and strips
+the three Instapaper steps from `schedule-posts.yml` — they call scripts that no
+longer exist. The App token cannot push anything under `.github/workflows/`, hence
+a patch.
+
+```bash
+git pull
+git apply patches/remove-instapaper-workflows.patch
+git commit -am "ci!: delete the Instapaper workflows"
+git push
+```
+
+Then delete this file. (Or delete the two workflow files from the GitHub web UI —
+same effect, and the `schedule-posts.yml` hunk only matters if you keep that
+workflow.)
+
+## Dormant: `schedule-posts.yml` patch
+
+`schedule-posts.yml` is **disabled** (see CHANGELOG). This patch only matters if
+scheduled publishing is re-enabled.
 
 ### schedule-posts-og-card-slug.patch
 
 Normalises the OG card name when `schedule-posts.yml` publishes a staged post,
 and reports the normalised slug to the LinkedIn / IndexNow steps. Pairs with
 `scripts/check-og-cards.mjs` and `src/utils/post-slug.mjs` (committed separately).
-
-### schedule-posts-sync-rebuild.patch
-
-The last remaining `[skip ci]` on an Instapaper bookmark-sync commit
-(`schedule-posts.yml`). Cloudflare Workers Builds skips any commit whose message
-contains `[skip ci]`, so that sync never rebuilt `/read` — the same bug already
-fixed in `daily-read-link.yml` and `instapaper-on-publish.yml`. It also adds
-`INSTAPAPER_FOLDER` to the “Add new post to Instapaper” step and removes a stray
-comment fragment pasted onto the last line of the file.
-
-The `record IndexNow submission` / `record YouTube uploads` commits keep their
-`[skip ci]` tag on purpose — they do not change anything the site renders.
-
-```bash
-git pull
-git apply patches/schedule-posts-sync-rebuild.patch
-git commit -am "ci(schedule-posts): drop [skip ci] from the bookmark sync commit"
-git push
-```
-
-Apply only if `schedule-posts.yml` is re-enabled; delete this file once applied.
 
 ## Removed: `.github/workflows/squad-share.yml`
 

@@ -24,15 +24,23 @@ and reports the normalised slug to the LinkedIn / IndexNow steps. Pairs with
 
 ## instapaper-folder-env.patch
 
-Passes `INSTAPAPER_FOLDER` (from the repository variable of the same name) to the
-`daily-read-link.yml` and `instapaper-on-publish.yml` steps, so the Instapaper
-folder the `/read` page syncs can be renamed without a code change. Pairs with
-`scripts/instapaper.mjs` / `scripts/sync-instapaper-bookmarks.mjs`, which already
-default to `Tech News` — the patch is optional but recommended. Apply with:
+Adds `INSTAPAPER_FOLDER` to the **add** steps of `daily-read-link.yml` and
+`instapaper-on-publish.yml`. Their **sync** steps already have it (committed via
+the GitHub web UI), but without the add steps the daily link and new posts are
+still filed under the API default (`unread`) and never reach `/read`.
+
+Two lines total — either apply the patch:
 
 ```bash
+git pull
 git apply patches/instapaper-folder-env.patch
+git commit -am "ci(instapaper): pass INSTAPAPER_FOLDER to the add steps too"
+git push
 ```
+
+or paste `          INSTAPAPER_FOLDER: ${{ vars.INSTAPAPER_FOLDER || 'Tech News' }}`
+into both `env:` blocks in the GitHub web editor, directly after
+`INSTAPAPER_PASSWORD`. Delete this file once the change is in the tree.
 
 ## Removed: `.github/workflows/squad-share.yml`
 

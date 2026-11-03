@@ -8,6 +8,9 @@ import { join } from 'node:path';
 const ROOT = process.cwd();
 const BOOKMARKS_PATH = join(ROOT, 'data', 'instapaper-bookmarks.json');
 
+// Bookmark sync reads one Instapaper folder; keep the page copy in sync with it.
+const FOLDER_NAME = process.env.INSTAPAPER_FOLDER || 'Tech News';
+
 let bookmarks = [];
 if (existsSync(BOOKMARKS_PATH)) {
   try {
@@ -28,8 +31,8 @@ const formattedDate = (ts) => {
 ---
 
 <BaseHead
-  title="Read | Tech Tips in Fun"
-  description="Links and articles saved for later reading — synced from Instapaper."
+  title="TechPulse — Today’s Hottest Tech News"
+  description="Stay ahead with TechPulse, your real-time feed of the latest technology news from trusted sources worldwide. Discover breaking stories on AI, startups, gadgets, cybersecurity, software, and the future of tech — all in one place."
   noindex={false}
 />
 <style>
@@ -175,13 +178,13 @@ const formattedDate = (ts) => {
 <main class="container">
   <header class="page-header">
     <h1>Read</h1>
-    <p>Articles and links saved for later — synced from your Instapaper reading list.</p>
+    <p>Articles and links saved for later — synced from the “{FOLDER_NAME}” folder in Instapaper.</p>
   </header>
 
   {bookmarks.length === 0 ? (
     <div class="empty-state">
-      <p>No bookmarks yet.</p>
-      <p>Daily automation adds one link to your Instapaper list each day, and every new post on techtips.fun is added automatically. Set up your Instapaper API credentials to get started.</p>
+      <p>No bookmarks yet in “{FOLDER_NAME}”.</p>
+      <p>Daily automation adds one link to that Instapaper folder each day, and every new post on techtips.fun is added automatically. Set up your Instapaper API credentials to get started.</p>
       <code>See scripts/daily-read-link.mjs and .github/workflows/daily-read-link.yml</code>
     </div>
   ) : (

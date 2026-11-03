@@ -64,6 +64,8 @@ jobs:
           INSTAPAPER_CONSUMER_SECRET: ${{ secrets.INSTAPAPER_CONSUMER_SECRET }}
           INSTAPAPER_EMAIL: ${{ secrets.INSTAPAPER_EMAIL }}
           INSTAPAPER_PASSWORD: ${{ secrets.INSTAPAPER_PASSWORD }}
+          INSTAPAPER_FOLDER: ${{ vars.INSTAPAPER_FOLDER || 'Tech News' }}
+
           SITE_URL: https://www.techtips.fun
         run: |
           set -euo pipefail

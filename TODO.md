@@ -72,12 +72,13 @@
 - [x] Verify daily workflow writes to the right folder — run 41605355668 (2026-11-03): `Adding to folder "Tech News" (folder_id=5430668)`, sync read the same folder and wrote 6 bookmarks
 - [ ] Verify new-post publish workflow adds each new post to Instapaper automatically (run 41605564423 was clean, but no new post to add that day)
 - [ ] Visit `https://www.techtips.fun/read/` to confirm bookmarks render
-- [ ] Apply `patches/instapaper-folder-env.patch` — last `INSTAPAPER_FOLDER` line (daily add step), only matters if the folder is ever renamed
-- [ ] Apply `patches/read-page-rebuild.patch` — **bookmark-sync commits end with `[skip ci]`, and Cloudflare Workers Builds skips those commits, so `/read` never rebuilt after a sync.** Drop the tag and the page refreshes on every sync
+- [x] Drop `[skip ci]` from the bookmark-sync commits (Cloudflare skipped those builds, so `/read` never refreshed) and pass `INSTAPAPER_FOLDER` to every add/sync step
 - [ ] Optionally add more links to `data/read-queue.json` — they rotate in order, looping when exhausted
 
 ## Maintenance
-- [ ] Apply `patches/schedule-posts-og-card-slug.patch` (`git apply patches/schedule-posts-og-card-slug.patch`) — normalises the staged OG card name and the `slug=` output in `schedule-posts.yml`. An automated session could not push it: the App token has no `workflows` permission.
+- [x] Apply both Instapaper workflow fixes (folder env on every add/sync step, `[skip ci]` dropped from the sync commit) — done through the GitHub web editor
+- [ ] `schedule-posts.yml` still tags its bookmark sync `[skip ci]` (`patches/schedule-posts-sync-rebuild.patch`) — moot while the workflow is disabled; apply it only if scheduled publishing is re-enabled
+- [ ] Apply `patches/schedule-posts-og-card-slug.patch` only if `schedule-posts.yml` is re-enabled — it normalises the staged OG card name and the `slug=` output. Also dormant.
 - [ ] Update skills later via `cd C:\Users\saonb\daily && git pull`, then re-copy the skill folders
 
 

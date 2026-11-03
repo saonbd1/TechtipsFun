@@ -176,6 +176,8 @@ Everything after the frontmatter `---` is the Markdown/MDX body. Images should l
 
 Drafts scheduled for future publishing live in `pending-posts/`. The `schedule-posts.yml` workflow promotes them to `src/content/blog/` on their publish date.
 
+> **Currently disabled.** The queue is empty and posts are published by pushing them to `src/content/blog/` directly, so the daily 09:00 UTC job only woke up to do nothing. Re-enable it from **Actions → Schedule post publishing → ⋯ → Enable workflow** if a backlog ever comes back (the admin dashboard's queue view writes to `pending-posts/`, which only this workflow publishes).
+
 ---
 
 ## Article Reels (Auto Video Generation)
@@ -356,7 +358,7 @@ After deploying, use the [Facebook Sharing Debugger](https://developers.facebook
 | `check-links.yml` | Weekly link-rot sweep (Mondays 06:00 UTC) |
 | `linkedin-share.yml` | Cross-publish new posts to LinkedIn |
 | `post-reels-to-youtube.yml` | Upload finished reels to YouTube |
-| `schedule-posts.yml` | Promote queued drafts from `pending-posts/` on publish date |
+| `schedule-posts.yml` | Promote queued drafts from `pending-posts/` on publish date — **currently disabled** (queue empty, no backlog) |
 | `submit-indexnow.yml` | Submit URLs to IndexNow |
 | `daily-read-link.yml` | Daily: adds next link from `data/read-queue.json` to your Instapaper folder, syncs that folder's bookmarks to `data/instapaper-bookmarks.json` |
 | `instapaper-on-publish.yml` | On new post push: adds the new post to Instapaper and syncs the folder's bookmarks |

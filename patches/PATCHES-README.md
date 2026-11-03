@@ -16,13 +16,20 @@ git apply patches/<name>.patch
 
 Delete the patch once its change is in the tree.
 
-## schedule-posts-og-card-slug.patch
+## Dormant: `schedule-posts.yml` patches
+
+`schedule-posts.yml` is **disabled** (see CHANGELOG) — it only existed for a
+one-off backlog and the queue is empty. Both patches below target that workflow,
+so they are kept for reference and only matter if scheduled publishing is
+re-enabled.
+
+### schedule-posts-og-card-slug.patch
 
 Normalises the OG card name when `schedule-posts.yml` publishes a staged post,
 and reports the normalised slug to the LinkedIn / IndexNow steps. Pairs with
 `scripts/check-og-cards.mjs` and `src/utils/post-slug.mjs` (committed separately).
 
-## schedule-posts-sync-rebuild.patch
+### schedule-posts-sync-rebuild.patch
 
 The last remaining `[skip ci]` on an Instapaper bookmark-sync commit
 (`schedule-posts.yml`). Cloudflare Workers Builds skips any commit whose message
@@ -41,7 +48,7 @@ git commit -am "ci(schedule-posts): drop [skip ci] from the bookmark sync commit
 git push
 ```
 
-Delete this file once applied.
+Apply only if `schedule-posts.yml` is re-enabled; delete this file once applied.
 
 ## Removed: `.github/workflows/squad-share.yml`
 

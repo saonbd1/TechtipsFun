@@ -1,0 +1,46 @@
+From 0000000000000000000000000000000000000002 Mon Sep 17 00:00:00 2001
+From: Saon Islam <saonbd33@gmail.com>
+Date: Tue, 3 Nov 2026 09:20:00 +0000
+Subject: [PATCH] ci(schedule-posts): drop [skip ci] from the bookmark sync commit
+
+Cloudflare Workers Builds skips commits whose message contains "[skip ci]",
+so this workflow's bookmark sync never rebuilt /read — the same bug that
+was already fixed in daily-read-link.yml and instapaper-on-publish.yml.
+The IndexNow/YouTube record commits keep their [skip ci] tag on purpose:
+they do not change anything the site renders.
+
+Also adds INSTAPAPER_FOLDER to the "Add new post to Instapaper" step (the
+last add step without it) and removes a stray comment fragment that a web
+edit pasted onto the last line of the file.
+---
+ .github/workflows/schedule-posts.yml | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/.github/workflows/schedule-posts.yml b/.github/workflows/schedule-posts.yml
+index 1f1c52f..2d618c0 100644
+--- a/.github/workflows/schedule-posts.yml
++++ b/.github/workflows/schedule-posts.yml
+@@ -96,6 +96,7 @@ jobs:
+           INSTAPAPER_CONSUMER_SECRET: ${{ secrets.INSTAPAPER_CONSUMER_SECRET }}
+           INSTAPAPER_EMAIL: ${{ secrets.INSTAPAPER_EMAIL }}
+           INSTAPAPER_PASSWORD: ${{ secrets.INSTAPAPER_PASSWORD }}
++          INSTAPAPER_FOLDER: ${{ vars.INSTAPAPER_FOLDER || 'Tech News' }}
+         run: |
+           set -euo pipefail
+           SLUG="${{ steps.publish.outputs.slug }}"
+@@ -124,7 +125,7 @@ jobs:
+           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+           git add -f data/instapaper-bookmarks.json data/read-queue-state.json
+           git diff --cached --quiet && exit 0
+-          git commit -m "chore: sync Instapaper bookmarks after publish [skip ci]"
++          git commit -m "chore: sync Instapaper bookmarks after publish"
+           git pull --rebase origin main || true
+           git push origin HEAD:main
+ 
+@@ -170,5 +171,4 @@ jobs:
+       #   run: npx wrangler deploy
+       #   env:
+       #     CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+-      #     CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}      # Sync Instapaper bookmarks to local JSON so /read page refreshes
+- 
++      #     CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}

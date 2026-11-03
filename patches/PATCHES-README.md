@@ -22,49 +22,26 @@ Normalises the OG card name when `schedule-posts.yml` publishes a staged post,
 and reports the normalised slug to the LinkedIn / IndexNow steps. Pairs with
 `scripts/check-og-cards.mjs` and `src/utils/post-slug.mjs` (committed separately).
 
-## instapaper-folder-env.patch
+## schedule-posts-sync-rebuild.patch
 
-Adds `INSTAPAPER_FOLDER` to the **add** step of `daily-read-link.yml` — the last
-of the four add/sync steps without it (the other three are already in `main`).
-Today the scripts fall back to their built-in `Tech News` default, so nothing is
-broken; the line only matters once `vars.INSTAPAPER_FOLDER` is set to a different
-folder, where the sync would move but the daily add would not. The patch also
-drops two stray blank lines inside the `env:` blocks.
+The last remaining `[skip ci]` on an Instapaper bookmark-sync commit
+(`schedule-posts.yml`). Cloudflare Workers Builds skips any commit whose message
+contains `[skip ci]`, so that sync never rebuilt `/read` — the same bug already
+fixed in `daily-read-link.yml` and `instapaper-on-publish.yml`. It also adds
+`INSTAPAPER_FOLDER` to the “Add new post to Instapaper” step and removes a stray
+comment fragment pasted onto the last line of the file.
 
-One line — either apply the patch:
+The `record IndexNow submission` / `record YouTube uploads` commits keep their
+`[skip ci]` tag on purpose — they do not change anything the site renders.
 
 ```bash
 git pull
-git apply patches/instapaper-folder-env.patch
-git commit -am "ci(instapaper): pass INSTAPAPER_FOLDER to the daily add step"
+git apply patches/schedule-posts-sync-rebuild.patch
+git commit -am "ci(schedule-posts): drop [skip ci] from the bookmark sync commit"
 git push
 ```
 
-or paste `          INSTAPAPER_FOLDER: ${{ vars.INSTAPAPER_FOLDER || 'Tech News' }}`
-into the **“Add next link from read queue to Instapaper”** step in the GitHub web
-editor, directly after `INSTAPAPER_PASSWORD`. Delete this file once applied.
-
-## read-page-rebuild.patch
-
-Drops the `[skip ci]` tag from the three bookmark-sync commits
-(`daily-read-link.yml`, `instapaper-on-publish.yml`, `schedule-posts.yml`).
-
-Cloudflare Workers Builds **skips any commit whose message contains `[skip ci]`**,
-so every sync commit — the one whose only purpose is to refresh `/read` — was
-silently never deployed. Proof: the 08:20 commit (`feat(read): retitle…`) is live
-on https://www.techtips.fun/read/ while the 08:43 `chore: sync Instapaper
-bookmarks [skip ci]` commit never rebuilt the site, leaving the old bookmark list
-on the page even though `data/instapaper-bookmarks.json` in `main` was correct.
-
-GitHub does not re-run workflows for pushes made with the automatic
-`GITHUB_TOKEN`, so removing the tag cannot cause a loop — it only lets the site
-rebuild (~one build per day for the daily sync).
-
-```bash
-git apply patches/read-page-rebuild.patch
-git commit -am "ci(instapaper): drop [skip ci] from bookmark-sync commits"
-git push
-```
+Delete this file once applied.
 
 ## Removed: `.github/workflows/squad-share.yml`
 

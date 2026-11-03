@@ -1,8 +1,11 @@
 name: Add new posts to Instapaper
 
-# When a new blog post is published (pushed to src/content/blog/), add it to
-# your Instapaper reading list and sync bookmarks to data/instapaper-bookmarks.json
+# When a new blog post is published (pushed to src/content/blog/), add it to your
+# Instapaper folder and sync that folder's bookmarks to data/instapaper-bookmarks.json
 # so the /read page refreshes on the next build.
+#
+# Important: never put "[skip ci]" in the sync commit message below. Cloudflare
+# Workers Builds skips those commits, so /read would never rebuild.
 
 on:
   push:
@@ -65,7 +68,6 @@ jobs:
           INSTAPAPER_EMAIL: ${{ secrets.INSTAPAPER_EMAIL }}
           INSTAPAPER_PASSWORD: ${{ secrets.INSTAPAPER_PASSWORD }}
           INSTAPAPER_FOLDER: ${{ vars.INSTAPAPER_FOLDER || 'Tech News' }}
-
           SITE_URL: https://www.techtips.fun
         run: |
           set -euo pipefail
@@ -87,7 +89,6 @@ jobs:
           INSTAPAPER_EMAIL: ${{ secrets.INSTAPAPER_EMAIL }}
           INSTAPAPER_PASSWORD: ${{ secrets.INSTAPAPER_PASSWORD }}
           INSTAPAPER_FOLDER: ${{ vars.INSTAPAPER_FOLDER || 'Tech News' }}
-
         run: node scripts/sync-instapaper-bookmarks.mjs
 
       - name: Commit and push updated bookmarks
@@ -97,5 +98,5 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -f data/instapaper-bookmarks.json
           git diff --cached --quiet && exit 0
-          git commit -m "chore: sync Instapaper bookmarks after new post [skip ci]"
+          git commit -m "chore: sync Instapaper bookmarks after new post"
           git push

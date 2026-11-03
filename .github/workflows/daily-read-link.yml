@@ -1,8 +1,14 @@
 name: Daily read link
 
 # Every day at 09:00 UTC, pick the next unposted link from data/read-queue.json,
-# add it to your Instapaper reading list, then sync all Instapaper bookmarks into
-# data/instapaper-bookmarks.json so the /read page on techtips.fun refreshes.
+# add it to your Instapaper "Tech News" folder, then sync that folder's bookmarks
+# into data/instapaper-bookmarks.json so the /read page on techtips.fun refreshes.
+#
+# The folder is configurable with the repository variable INSTAPAPER_FOLDER
+# (Settings → Secrets and variables → Actions → Variables). Default: "Tech News".
+#
+# Important: never put "[skip ci]" in the sync commit message below. Cloudflare
+# Workers Builds skips those commits, so /read would never rebuild.
 
 on:
   schedule:
@@ -30,6 +36,7 @@ jobs:
           INSTAPAPER_CONSUMER_SECRET: ${{ secrets.INSTAPAPER_CONSUMER_SECRET }}
           INSTAPAPER_EMAIL: ${{ secrets.INSTAPAPER_EMAIL }}
           INSTAPAPER_PASSWORD: ${{ secrets.INSTAPAPER_PASSWORD }}
+          INSTAPAPER_FOLDER: ${{ vars.INSTAPAPER_FOLDER || 'Tech News' }}
         run: node scripts/daily-read-link.mjs
 
       - name: Sync Instapaper bookmarks to local JSON
@@ -39,7 +46,6 @@ jobs:
           INSTAPAPER_EMAIL: ${{ secrets.INSTAPAPER_EMAIL }}
           INSTAPAPER_PASSWORD: ${{ secrets.INSTAPAPER_PASSWORD }}
           INSTAPAPER_FOLDER: ${{ vars.INSTAPAPER_FOLDER || 'Tech News' }}
-
         run: node scripts/sync-instapaper-bookmarks.mjs
 
       - name: Commit and push updated bookmarks
@@ -49,5 +55,5 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -f data/instapaper-bookmarks.json data/read-queue-state.json
           git diff --cached --quiet && exit 0
-          git commit -m "chore: sync Instapaper bookmarks [skip ci]"
+          git commit -m "chore: sync Instapaper bookmarks"
           git push

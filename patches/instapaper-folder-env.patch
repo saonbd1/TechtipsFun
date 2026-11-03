@@ -1,0 +1,74 @@
+From e9767147546df46c821e388fadfac2dbcbae94e8 Mon Sep 17 00:00:00 2001
+From: Saon Islam <saonbd33@gmail.com>
+Date: Tue, 3 Nov 2026 08:19:58 +0000
+Subject: [PATCH] ci(instapaper): pass INSTAPAPER_FOLDER to the sync/add steps
+
+The Instapaper scripts now read and write a single folder (default
+"Tech News"). Pass it through as INSTAPAPER_FOLDER, sourced from the
+repository variable of the same name (Settings -> Secrets and variables ->
+Actions -> Variables), so the folder can be renamed without a code change.
+
+Without these lines the scripts still use their built-in "Tech News"
+default, so this patch is optional but recommended.
+---
+ .github/workflows/daily-read-link.yml       | 9 +++++++--
+ .github/workflows/instapaper-on-publish.yml | 2 ++
+ 2 files changed, 9 insertions(+), 2 deletions(-)
+
+diff --git a/.github/workflows/daily-read-link.yml b/.github/workflows/daily-read-link.yml
+index 6212cf1..059070d 100644
+--- a/.github/workflows/daily-read-link.yml
++++ b/.github/workflows/daily-read-link.yml
+@@ -1,8 +1,11 @@
+ name: Daily read link
+ 
+ # Every day at 09:00 UTC, pick the next unposted link from data/read-queue.json,
+-# add it to your Instapaper reading list, then sync all Instapaper bookmarks into
+-# data/instapaper-bookmarks.json so the /read page on techtips.fun refreshes.
++# add it to your Instapaper "Tech News" folder, then sync that folder's bookmarks
++# into data/instapaper-bookmarks.json so the /read page on techtips.fun refreshes.
++#
++# The folder is configurable with a repository variable: Settings → Secrets and
++# variables → Actions → Variables → INSTAPAPER_FOLDER (defaults to "Tech News").
+ 
+ on:
+   schedule:
+@@ -30,6 +33,7 @@ jobs:
+           INSTAPAPER_CONSUMER_SECRET: ${{ secrets.INSTAPAPER_CONSUMER_SECRET }}
+           INSTAPAPER_EMAIL: ${{ secrets.INSTAPAPER_EMAIL }}
+           INSTAPAPER_PASSWORD: ${{ secrets.INSTAPAPER_PASSWORD }}
++          INSTAPAPER_FOLDER: ${{ vars.INSTAPAPER_FOLDER || 'Tech News' }}
+         run: node scripts/daily-read-link.mjs
+ 
+       - name: Sync Instapaper bookmarks to local JSON
+@@ -38,6 +42,7 @@ jobs:
+           INSTAPAPER_CONSUMER_SECRET: ${{ secrets.INSTAPAPER_CONSUMER_SECRET }}
+           INSTAPAPER_EMAIL: ${{ secrets.INSTAPAPER_EMAIL }}
+           INSTAPAPER_PASSWORD: ${{ secrets.INSTAPAPER_PASSWORD }}
++          INSTAPAPER_FOLDER: ${{ vars.INSTAPAPER_FOLDER || 'Tech News' }}
+         run: node scripts/sync-instapaper-bookmarks.mjs
+ 
+       - name: Commit and push updated bookmarks
+diff --git a/.github/workflows/instapaper-on-publish.yml b/.github/workflows/instapaper-on-publish.yml
+index 6cfd2ac..c9d3ea8 100644
+--- a/.github/workflows/instapaper-on-publish.yml
++++ b/.github/workflows/instapaper-on-publish.yml
+@@ -64,6 +64,7 @@ jobs:
+           INSTAPAPER_CONSUMER_SECRET: ${{ secrets.INSTAPAPER_CONSUMER_SECRET }}
+           INSTAPAPER_EMAIL: ${{ secrets.INSTAPAPER_EMAIL }}
+           INSTAPAPER_PASSWORD: ${{ secrets.INSTAPAPER_PASSWORD }}
++          INSTAPAPER_FOLDER: ${{ vars.INSTAPAPER_FOLDER || 'Tech News' }}
+           SITE_URL: https://www.techtips.fun
+         run: |
+           set -euo pipefail
+@@ -84,6 +85,7 @@ jobs:
+           INSTAPAPER_CONSUMER_SECRET: ${{ secrets.INSTAPAPER_CONSUMER_SECRET }}
+           INSTAPAPER_EMAIL: ${{ secrets.INSTAPAPER_EMAIL }}
+           INSTAPAPER_PASSWORD: ${{ secrets.INSTAPAPER_PASSWORD }}
++          INSTAPAPER_FOLDER: ${{ vars.INSTAPAPER_FOLDER || 'Tech News' }}
+         run: node scripts/sync-instapaper-bookmarks.mjs
+ 
+       - name: Commit and push updated bookmarks
+-- 
+2.39.5
+

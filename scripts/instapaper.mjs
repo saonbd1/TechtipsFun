@@ -1,5 +1,47 @@
 import { createHmac, randomBytes } from "node:crypto";
 
+/** Folder ids that the API understands in place of a numeric folder_id. */
+export const SPECIAL_FOLDERS = ["unread", "starred", "archive"];
+
+/**
+ * Find a folder by title in the array returned by `folders/list`.
+ * Matches `title` or `display_title`, case-insensitively.
+ *
+ * @returns {object|null} the folder (with a normalised `folder_id`), or null.
+ */
+export function findFolder(folders, name) {
+  const target = String(name ?? "").trim().toLowerCase();
+  if (!target) return null;
+
+  for (const folder of folders ?? []) {
+    const id = folder.folder_id ?? folder.id;
+    if (id === undefined || id === null || id === "") continue;
+
+    const titles = [folder.title, folder.display_title].filter(Boolean);
+    if (titles.some((title) => String(title).trim().toLowerCase() === target)) {
+      return { ...folder, folder_id: id };
+    }
+  }
+
+  return null;
+}
+
+/** Normalise the several shapes the API can return for a list of folders. */
+export function normaliseFolders(payload) {
+  const list = Array.isArray(payload) ? payload : (payload?.folders ?? []);
+  return list.filter((folder) => {
+    const id = folder?.folder_id ?? folder?.id;
+    return id !== undefined && id !== null && id !== "" && folder.type !== "meta";
+  });
+}
+
+/** Normalise the several shapes the API can return for a list of bookmarks. */
+export function normaliseBookmarks(payload) {
+  const list = Array.isArray(payload) ? payload : (payload?.bookmarks ?? []);
+  // `bookmarks/list` also returns a leading `{ type: "meta", ... }` row.
+  return list.filter((item) => item && (item.type === "bookmark" || item.bookmark_id));
+}
+
 /**
  * Instapaper Public API (v1.1) OAuth 1.0a client, dependency-free.
  * Runs in Node and Cloudflare Workers (nodejs_compat).
@@ -54,12 +96,23 @@ export class InstapaperClient {
     };
   }
 
-  /** List the authenticated user's bookmarks. Returns parsed JSON. */
-  async listBookmarks(user) {
-    const params = new URLSearchParams({ format: "json" });
+  /**
+   * List the authenticated user's bookmarks.
+   *
+   * `folderId` accepts `unread` (the API default), `starred`, `archive`, or a
+   * numeric folder id from `folders/list`. Results are paged with `have`.
+   *
+   * @returns {Promise<object[]|object>} parsed JSON (array of bookmarks, incl. a `meta` row)
+   */
+  async listBookmarks(user, { folderId = "unread", limit = 500, have } = {}) {
+    const params = new URLSearchParams({ format: "json", folder_id: String(folderId) });
+    if (limit) params.set("limit", String(limit));
+    if (have) params.set("have", have);
+
     const response = await fetch(`${this.baseUrl}/bookmarks/list`, {
       method: "POST",
       headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
         Authorization: user.authFor("POST", "/bookmarks/list", params),
       },
       body: params.toString(),
@@ -73,11 +126,103 @@ export class InstapaperClient {
     return response.json();
   }
 
+  /**
+   * Fetch every bookmark in a folder, following the API's `have` pagination.
+   *
+   * @returns {Promise<object[]>} bookmark rows only (no `meta` row)
+   */
+  async listAllBookmarks(user, { folderId = "unread", pageSize = 500, maxPages = 40 } = {}) {
+    const collected = [];
+    const seen = new Set();
+
+    for (let page = 0; page < maxPages; page += 1) {
+      const payload = await this.listBookmarks(user, {
+        folderId,
+        limit: pageSize,
+        have: collected.map((b) => b.bookmark_id).join(","),
+      });
+      const items = normaliseBookmarks(payload);
+
+      let added = 0;
+      for (const item of items) {
+        if (seen.has(item.bookmark_id)) continue;
+        seen.add(item.bookmark_id);
+        collected.push(item);
+        added += 1;
+      }
+
+      // Stop when a short page or no new rows come back.
+      if (added === 0 || items.length < pageSize) break;
+    }
+
+    return collected;
+  }
+
+  /** List the authenticated user's folders (custom folders, no special ones). */
+  async listFolders(user) {
+    const params = new URLSearchParams({ format: "json" });
+    const response = await fetch(`${this.baseUrl}/folders/list`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+        Authorization: user.authFor("POST", "/folders/list", params),
+      },
+      body: params.toString(),
+    });
+
+    if (!response.ok) {
+      const text = await response.text();
+      throw new Error(`Instapaper folders/list failed (${response.status}): ${text}`);
+    }
+
+    return normaliseFolders(await response.json());
+  }
+
+  /**
+   * Resolve a folder name (`Tech News`) or special name (`unread`/`starred`/
+   * `archive`) to a folder descriptor.
+   *
+   * @returns {Promise<{folder_id: string|number, title: string, special: boolean}|null>}
+   *   null when the folder does not exist.
+   */
+  async resolveFolder(user, name) {
+    const folderName = String(name ?? "").trim();
+    if (!folderName) return null;
+
+    const lowered = folderName.toLowerCase();
+    if (SPECIAL_FOLDERS.includes(lowered)) {
+      return { folder_id: lowered, title: lowered, special: true };
+    }
+
+    const folder = findFolder(await this.listFolders(user), folderName);
+    if (!folder) return null;
+
+    return {
+      ...folder,
+      title: folder.display_title || folder.title || folderName,
+      special: false,
+    };
+  }
+
+  /**
+   * Resolve a folder name (`Tech News`) or special name (`unread`/`starred`/
+   * `archive`) to a value usable as `folder_id`.
+   *
+   * @returns {Promise<string|number|null>} null when the folder does not exist.
+   */
+  async resolveFolderId(user, name) {
+    const folder = await this.resolveFolder(user, name);
+    return folder ? folder.folder_id : null;
+  }
+
   /** Add a single bookmark to the authenticated user's Instapaper list. */
-  async addBookmark(user, { url, title, description }) {
+  async addBookmark(user, { url, title, description, folderId }) {
     const params = new URLSearchParams({ url, format: "json" });
     if (title) params.set("title", title);
     if (description) params.set("description", description);
+    if (folderId !== undefined && folderId !== null && folderId !== "") {
+      params.set("folder_id", String(folderId));
+    }
 
     const response = await fetch(`${this.baseUrl}/bookmarks/add`, {
       method: "POST",

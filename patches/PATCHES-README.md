@@ -22,6 +22,18 @@ Normalises the OG card name when `schedule-posts.yml` publishes a staged post,
 and reports the normalised slug to the LinkedIn / IndexNow steps. Pairs with
 `scripts/check-og-cards.mjs` and `src/utils/post-slug.mjs` (committed separately).
 
+## instapaper-folder-env.patch
+
+Passes `INSTAPAPER_FOLDER` (from the repository variable of the same name) to the
+`daily-read-link.yml` and `instapaper-on-publish.yml` steps, so the Instapaper
+folder the `/read` page syncs can be renamed without a code change. Pairs with
+`scripts/instapaper.mjs` / `scripts/sync-instapaper-bookmarks.mjs`, which already
+default to `Tech News` — the patch is optional but recommended. Apply with:
+
+```bash
+git apply patches/instapaper-folder-env.patch
+```
+
 ## Removed: `.github/workflows/squad-share.yml`
 
 The "Post new article to Squad via Slack" workflow was deleted on 2026-10-16

@@ -40,3 +40,7 @@ INSTAPAPER_CONSUMER_SECRET=
 # or enter the password interactively in CLI scripts.
 INSTAPAPER_EMAIL=
 INSTAPAPER_PASSWORD=
+# Folder the /read page reads from, and where daily links / new posts are saved.
+# Must match an existing Instapaper folder name (case-insensitive).
+# Defaults to "Tech News"; use unread/starred/archive for the built-in lists.
+INSTAPAPER_FOLDER=Tech News

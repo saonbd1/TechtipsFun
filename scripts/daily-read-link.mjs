@@ -3,12 +3,16 @@
  * Daily automation: pick the next unposted link from the read queue and
  * add it to your Instapaper reading list.
  *
+ * Links are added to the same folder the /read page syncs from
+ * (INSTAPAPER_FOLDER, default "Tech News") so they show up on the site.
+ *
  * Reads:   data/read-queue.json   (array of { url, title, description? })
  * State:   data/read-queue-state.json  ({ lastIndex: number })
  *
  * Prerequisites (env vars or .dev.vars):
  *   INSTAPAPER_CONSUMER_KEY, INSTAPAPER_CONSUMER_SECRET,
  *   INSTAPAPER_EMAIL, INSTAPAPER_PASSWORD
+ *   INSTAPAPER_FOLDER (optional, defaults to "Tech News")
  *
  * Run:
  *   node scripts/daily-read-link.mjs
@@ -19,6 +23,7 @@ import { readFileSync, writeFileSync, existsSync } from "node:fs";
 const ROOT = process.cwd();
 const QUEUE_PATH = `${ROOT}/data/read-queue.json`;
 const STATE_PATH = `${ROOT}/data/read-queue-state.json`;
+const DEFAULT_FOLDER = "Tech News";
 
 function loadQueue() {
   if (!existsSync(QUEUE_PATH)) {
@@ -66,10 +71,24 @@ async function main() {
   const client = new InstapaperClient({ consumerKey, consumerSecret });
   const user = await client.authenticateUser(email, password);
 
+  const folderName = process.env.INSTAPAPER_FOLDER || DEFAULT_FOLDER;
+  const folder = await client.resolveFolder(user, folderName);
+  if (!folder) {
+    console.warn(
+      `Instapaper folder "${folderName}" was not found — adding to the default (unread) list instead.`,
+    );
+    console.warn(
+      `It will not appear on /read until it is in "${folderName}". Check INSTAPAPER_FOLDER or rename the folder.`,
+    );
+  } else {
+    console.log(`Adding to folder "${folder.title}" (folder_id=${folder.folder_id}).`);
+  }
+
   await client.addBookmark(user, {
     url: link.url,
     title: link.title,
     description: link.description,
+    folderId: folder?.folder_id,
   });
 
   // Advance the queue cursor

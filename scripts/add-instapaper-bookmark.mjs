@@ -10,19 +10,32 @@
  *    export INSTAPAPER_CONSUMER_SECRET=...
  *    export INSTAPAPER_EMAIL=...        (your Instapaper login email)
  *    export INSTAPAPER_PASSWORD=...     (your Instapaper password)
+ *    export INSTAPAPER_FOLDER="Tech News"  (optional; defaults to "Tech News")
  * 3. Run:
- *    node scripts/add-instapaper-bookmark.mjs <url> [title] [description]
+ *    node scripts/add-instapaper-bookmark.mjs <url> [title] [description] [--folder="Tech News"]
  */
 import { InstapaperClient } from "./instapaper.mjs";
 
+const DEFAULT_FOLDER = "Tech News";
+
 async function main() {
-  const url = process.argv[2];
+  const args = process.argv.slice(2);
+  const folderFlag = args.find((arg) => arg.startsWith("--folder="));
+  const positional = args.filter((arg) => !arg.startsWith("--"));
+  const folderName =
+    (folderFlag ? folderFlag.slice("--folder=".length) : "") ||
+    process.env.INSTAPAPER_FOLDER ||
+    DEFAULT_FOLDER;
+
+  const url = positional[0];
   if (!url) {
-    console.error("Usage: node scripts/add-instapaper-bookmark.mjs <url> [title] [description]");
+    console.error(
+      'Usage: node scripts/add-instapaper-bookmark.mjs <url> [title] [description] [--folder="Tech News"]',
+    );
     process.exit(1);
   }
-  const title = process.argv[3];
-  const description = process.argv[4];
+  const title = positional[1];
+  const description = positional[2];
 
   const consumerKey = process.env.INSTAPAPER_CONSUMER_KEY;
   const consumerSecret = process.env.INSTAPAPER_CONSUMER_SECRET;
@@ -41,8 +54,17 @@ async function main() {
   console.log("Authenticating to Instapaper...");
   const user = await client.authenticateUser(email, password);
 
+  const folder = await client.resolveFolder(user, folderName);
+  if (!folder) {
+    console.warn(
+      `Instapaper folder "${folderName}" was not found — adding to the default (unread) list instead.`,
+    );
+  } else {
+    console.log(`Adding to folder "${folder.title}" (folder_id=${folder.folder_id}).`);
+  }
+
   console.log(`Adding: ${url}${title ? ` (${title})` : ""}...`);
-  await client.addBookmark(user, { url, title, description });
+  await client.addBookmark(user, { url, title, description, folderId: folder?.folder_id });
 
   console.log("Added to Instapaper.");
 }

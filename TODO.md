@@ -70,6 +70,8 @@
 - [x] `data/read-queue-state.json` tracks daily rotation cursor (committed so it persists between runs)
 - [ ] Verify daily 09:00 UTC workflow adds one link per day to Instapaper
 - [ ] Verify new-post publish workflow adds each new post to Instapaper automatically
+- [x] Sync the `/read` page from the `Tech News` folder (not the unread home list) — `INSTAPAPER_FOLDER` defaults to `Tech News`
+- [ ] Optional: set the repo variable `INSTAPAPER_FOLDER` (Settings → Secrets and variables → Actions → Variables) if the folder is ever renamed
 - [ ] Visit `https://www.techtips.fun/read/` to confirm bookmarks render
 - [ ] Optionally add more links to `data/read-queue.json` — they rotate in order, looping when exhausted
 

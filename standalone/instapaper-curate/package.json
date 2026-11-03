@@ -1,0 +1,17 @@
+{
+  "name": "instapaper-curate",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Save links into your own Instapaper account: a rotating daily read queue, ad-hoc bookmarks, and a folder snapshot — all via the Instapaper Public API.",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test scripts/tests/test-instapaper-folders.mjs",
+    "rotate": "node scripts/daily-read-link.mjs",
+    "add": "node scripts/add-instapaper-bookmark.mjs",
+    "sync": "node scripts/sync-instapaper-bookmarks.mjs",
+    "queue": "node scripts/generate-read-queue.mjs"
+  }
+}

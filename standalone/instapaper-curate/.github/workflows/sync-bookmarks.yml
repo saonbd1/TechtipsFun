@@ -1,0 +1,48 @@
+name: Sync bookmarks snapshot
+
+# Write the contents of your Instapaper folder to data/instapaper-bookmarks.json
+# and commit it — a readable/recoverable snapshot of the list inside git.
+# Nothing is published anywhere; it is just a backup.
+#
+# Manual: Actions → Sync bookmarks snapshot → Run workflow.
+# Weekly: Mondays 08:00 UTC.
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 8 * * 1"
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Fetch the folder into data/instapaper-bookmarks.json
+        env:
+          INSTAPAPER_CONSUMER_KEY: ${{ secrets.INSTAPAPER_CONSUMER_KEY }}
+          INSTAPAPER_CONSUMER_SECRET: ${{ secrets.INSTAPAPER_CONSUMER_SECRET }}
+          INSTAPAPER_EMAIL: ${{ secrets.INSTAPAPER_EMAIL }}
+          INSTAPAPER_PASSWORD: ${{ secrets.INSTAPAPER_PASSWORD }}
+          INSTAPAPER_FOLDER: ${{ vars.INSTAPAPER_FOLDER || 'Tech News' }}
+        run: node scripts/sync-instapaper-bookmarks.mjs
+
+      - name: Commit the snapshot
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # The file is git-ignored (it is generated), so force-add it.
+          git add -f data/instapaper-bookmarks.json
+          git diff --cached --quiet && exit 0
+          git commit -m "chore: sync Instapaper bookmarks snapshot [skip ci]"
+          git push

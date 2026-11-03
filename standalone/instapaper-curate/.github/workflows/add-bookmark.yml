@@ -1,0 +1,58 @@
+name: Add bookmark to Instapaper
+
+# Save any URL into your Instapaper folder from the Actions UI:
+# Actions → Add bookmark to Instapaper → Run workflow.
+#
+# This replaces the old "add on publish" workflow from the blog repo, which
+# could only fire on pushes to src/content/blog/. If you want that behaviour
+# again, copy this file into the blog repo and change its `on:` block to
+#   push:
+#     branches: [main]
+#     paths: ['src/content/blog/**']
+# plus the "detect newly added posts" step from that repo.
+
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        description: URL to save
+        required: true
+      title:
+        description: Title (left out = Instapaper crawls the page)
+        required: false
+      description:
+        description: Description or excerpt
+        required: false
+      folder:
+        description: Folder name (defaults to the repo variable, then "Tech News")
+        required: false
+
+permissions:
+  contents: read
+
+jobs:
+  add:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Save the bookmark
+        env:
+          INSTAPAPER_CONSUMER_KEY: ${{ secrets.INSTAPAPER_CONSUMER_KEY }}
+          INSTAPAPER_CONSUMER_SECRET: ${{ secrets.INSTAPAPER_CONSUMER_SECRET }}
+          INSTAPAPER_EMAIL: ${{ secrets.INSTAPAPER_EMAIL }}
+          INSTAPAPER_PASSWORD: ${{ secrets.INSTAPAPER_PASSWORD }}
+          INSTAPAPER_FOLDER: ${{ inputs.folder || vars.INSTAPAPER_FOLDER || 'Tech News' }}
+          BOOKMARK_URL: ${{ inputs.url }}
+          BOOKMARK_TITLE: ${{ inputs.title }}
+          BOOKMARK_DESCRIPTION: ${{ inputs.description }}
+        run: |
+          set -euo pipefail
+          node scripts/add-instapaper-bookmark.mjs \
+            "$BOOKMARK_URL" "$BOOKMARK_TITLE" "$BOOKMARK_DESCRIPTION"

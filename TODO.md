@@ -68,11 +68,12 @@
 - [x] Add GitHub repo secrets: `INSTAPAPER_CONSUMER_KEY`, `INSTAPAPER_CONSUMER_SECRET`, `INSTAPAPER_EMAIL`, `INSTAPAPER_PASSWORD`
 - [x] Populate `data/read-queue.json` with 33 blog post links (titles + descriptions from frontmatter)
 - [x] `data/read-queue-state.json` tracks daily rotation cursor (committed so it persists between runs)
-- [ ] Verify daily 09:00 UTC workflow adds one link per day to Instapaper
-- [ ] Verify new-post publish workflow adds each new post to Instapaper automatically
 - [x] Sync the `/read` page from the `Tech News` folder (not the unread home list) — `INSTAPAPER_FOLDER` defaults to `Tech News`
-- [ ] Optional: set the repo variable `INSTAPAPER_FOLDER` (Settings → Secrets and variables → Actions → Variables) if the folder is ever renamed
+- [x] Verify daily workflow writes to the right folder — run 41605355668 (2026-11-03): `Adding to folder "Tech News" (folder_id=5430668)`, sync read the same folder and wrote 6 bookmarks
+- [ ] Verify new-post publish workflow adds each new post to Instapaper automatically (run 41605564423 was clean, but no new post to add that day)
 - [ ] Visit `https://www.techtips.fun/read/` to confirm bookmarks render
+- [ ] Apply `patches/instapaper-folder-env.patch` — last `INSTAPAPER_FOLDER` line (daily add step), only matters if the folder is ever renamed
+- [ ] Apply `patches/read-page-rebuild.patch` — **bookmark-sync commits end with `[skip ci]`, and Cloudflare Workers Builds skips those commits, so `/read` never rebuilt after a sync.** Drop the tag and the page refreshes on every sync
 - [ ] Optionally add more links to `data/read-queue.json` — they rotate in order, looping when exhausted
 
 ## Maintenance

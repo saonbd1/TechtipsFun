@@ -16,24 +16,29 @@ git apply patches/<name>.patch
 
 Delete the patch once its change is in the tree.
 
-## remove-instapaper-workflows.patch
+## instapaper-posting-only.patch
 
-The workflow half of the Instapaper removal (commit `79fdaa5` deleted the page and
-scripts). Deletes `daily-read-link.yml` and `instapaper-on-publish.yml`, and strips
-the three Instapaper steps from `schedule-posts.yml` — they call scripts that no
-longer exist. The App token cannot push anything under `.github/workflows/`, hence
-a patch.
+The Instapaper *page* was removed in `79fdaa5`, but saving your own posts into your
+own Instapaper account carries none of that risk, so the posting automation stays.
+This patch makes the workflows match that decision:
+
+- `instapaper-on-publish.yml` — drops the “Sync Instapaper bookmarks” and “Commit and
+  push updated bookmarks” steps (they only fed the deleted page).
+- `schedule-posts.yml` — drops the same two steps, keeps “Add new post to Instapaper”,
+  and removes a stray comment fragment from its last line.
+- deletes `daily-read-link.yml` — the daily rotation only existed to stock `/read`.
+  Skip that hunk if you would rather keep rotating your own posts into Instapaper.
+
+The App token here cannot push anything under `.github/workflows/`, hence a patch:
 
 ```bash
 git pull
-git apply patches/remove-instapaper-workflows.patch
-git commit -am "ci!: delete the Instapaper workflows"
+git apply patches/instapaper-posting-only.patch
+git commit -am "ci(instapaper): keep posting, drop the /read plumbing"
 git push
 ```
 
-Then delete this file. (Or delete the two workflow files from the GitHub web UI —
-same effect, and the `schedule-posts.yml` hunk only matters if you keep that
-workflow.)
+Then delete this file.
 
 ## Dormant: `schedule-posts.yml` patch
 

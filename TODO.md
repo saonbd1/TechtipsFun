@@ -63,25 +63,21 @@
 - [x] Installed `daily.dev` + `daily-dev-ask` agent skills and stored the API token (2026-10-04)
 - [ ] Note: the daily.dev public API is read-only for content — sharing your own articles there is done via the Share button in the daily.dev extension/web app, not the API
 
-## Instapaper reading list (removed 2026-11-03)
-- [x] Feature dropped: `/read` + the Instapaper Public API integration
-- Reason: a curated "tech news feed" built from saved links carried copyright
-  risk (surfacing other publishers' headlines/excerpts) for a page that mostly
-  listed our own posts, and the working name `TechPulse` is already a Ziff Davis
-  / CNET Group tech-news app (plus a US trademark filing) — see CHANGELOG.
-- Removed: `src/pages/read.astro`, the nav link, `scripts/instapaper.mjs`,
-  `add-instapaper-bookmark.mjs`, `daily-read-link.mjs`,
-  `sync-instapaper-bookmarks.mjs`, `fetch-instapaper-bookmarks.mjs`,
-  `generate-read-queue.mjs`, `data/read-queue*.json`,
-  `data/instapaper-bookmarks.json`, and both Instapaper workflows.
-- [ ] Delete the now-unused repo secrets if you want a clean dashboard:
-  `INSTAPAPER_CONSUMER_KEY`, `INSTAPAPER_CONSUMER_SECRET`,
-  `INSTAPAPER_EMAIL`, `INSTAPAPER_PASSWORD` (Settings → Secrets and variables →
-  Actions). No workflow references them any more.
-- [ ] `/read` now 301s to `/blog/` via `public/_redirects`.
+## Instapaper (page removed 2026-11-03, posting kept)
+- [x] Removed the public `/read` page: a curated feed of saved links republished other
+  publishers' headlines/excerpts (copyright + thin-content risk), and the name
+  `TechPulse` is already CNET Group / Ziff Davis's tech-news app (US trademark filing).
+  `/read` and `/read/` 301 to `/blog/` via `public/_redirects`.
+- [x] Kept the posting automation — `scripts/instapaper.mjs`,
+  `scripts/add-instapaper-bookmark.mjs` and `instapaper-on-publish.yml`. Writing to your
+  own Instapaper account is private and publishes nothing on the site, so it is safe.
+- [ ] Apply `patches/instapaper-posting-only.patch` — drops the two now-pointless sync
+  steps from `instapaper-on-publish.yml`, the two from `schedule-posts.yml`, and deletes
+  `daily-read-link.yml`. The App token cannot push workflow files, hence a patch.
+- [ ] Decide on the daily rotation (`daily-read-link.yml`): it pushed one of our own blog
+  posts into Instapaper each morning — harmless, but it only existed to stock `/read`.
 
 ## Maintenance
-- [ ] Apply `patches/remove-instapaper-workflows.patch` — deletes `daily-read-link.yml` and `instapaper-on-publish.yml` and strips the three Instapaper steps from `schedule-posts.yml` (they call scripts that no longer exist). The App token cannot push workflow files, hence a patch
 - [ ] Apply `patches/schedule-posts-og-card-slug.patch` only if `schedule-posts.yml` is re-enabled — it normalises the staged OG card name and the `slug=` output. Also dormant.
 - [ ] Update skills later via `cd C:\Users\saonb\daily && git pull`, then re-copy the skill folders
 

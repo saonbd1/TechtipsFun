@@ -348,6 +348,27 @@ After deploying, use the [Facebook Sharing Debugger](https://developers.facebook
 
 ---
 
+
+### Instapaper automation (posting only)
+
+`instapaper-on-publish.yml` saves every newly published post into your own
+Instapaper account, so the reading list you actually read from stays current.
+That is a private write to your own account — nothing from Instapaper is
+rendered on this site.
+
+> The former `/read` page was removed on 2026-11-03. It presented saved links as
+a public tech-news feed, which meant republishing other publishers'
+headlines/excerpts — a copyright and thin-content risk, on a page that in
+practice listed mostly our own posts. `/read` now 301s to `/blog/`.
+
+Set `INSTAPAPER_CONSUMER_KEY`, `INSTAPAPER_CONSUMER_SECRET`, `INSTAPAPER_EMAIL`
+and `INSTAPAPER_PASSWORD` as repo secrets (optional `INSTAPAPER_FOLDER`, default
+`Tech News`) to enable it. Test locally with:
+
+```bash
+node scripts/add-instapaper-bookmark.mjs https://www.techtips.fun/blog/<slug>/ "Title"
+```
+
 ## CI/CD Workflows
 
 | Workflow | Purpose |
@@ -358,6 +379,7 @@ After deploying, use the [Facebook Sharing Debugger](https://developers.facebook
 | `post-reels-to-youtube.yml` | Upload finished reels to YouTube |
 | `schedule-posts.yml` | Promote queued drafts from `pending-posts/` on publish date — **currently disabled** (queue empty, no backlog) |
 | `submit-indexnow.yml` | Submit URLs to IndexNow |
+| `instapaper-on-publish.yml` | Reading-list automation: saves each new post into your own Instapaper folder (nothing is republished on the site) |
 
 A copy of `article-reels.yml` and `check-links.yml` (with weekly schedule) is staged in [`reels/ci/`](reels/ci/README.md) pending install into `.github/workflows/`.
 
@@ -372,6 +394,8 @@ A copy of `article-reels.yml` and `check-links.yml` (with weekly schedule) is st
 | `scripts/check-links.mjs` | Detect broken links |
 | `scripts/submit-indexnow.mjs` | Push URLs to IndexNow |
 | `scripts/share-to-linkedin.mjs` | Share new posts to LinkedIn |
+| `scripts/instapaper.mjs` | Dependency-free OAuth 1.0a client for the Instapaper Public API |
+| `scripts/add-instapaper-bookmark.mjs` | CLI: save one link into your Instapaper folder |
 | `scripts/generate-tip-cards.mjs` | Generate Bengali tip cards |
 | `scripts/migrate-images-to-webp.mjs` | Convert images to WebP |
 | `scripts/tests/` | Admin dashboard test suite |

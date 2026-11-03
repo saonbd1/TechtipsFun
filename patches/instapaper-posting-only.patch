@@ -1,19 +1,19 @@
-From 0000000000000000000000000000000000000003 Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000004 Mon Sep 17 00:00:00 2001
 From: Saon Islam <saonbd33@gmail.com>
-Date: Tue, 3 Nov 2026 09:35:00 +0000
-Subject: [PATCH] ci!: delete the Instapaper workflows and their schedule-posts steps
+Date: Tue, 3 Nov 2026 09:45:00 +0000
+Subject: [PATCH] ci(instapaper): keep the posting automation, drop the /read plumbing
 
-The /read page and the Instapaper integration were removed in 79fdaa5. This
-is the workflow half, which the App token here cannot push:
+The /read page is gone (79fdaa5) but saving your own posts into your own
+Instapaper account is private and harmless, so the posting side stays:
 
-- deletes .github/workflows/daily-read-link.yml
-- deletes .github/workflows/instapaper-on-publish.yml
-- strips the three Instapaper steps from schedule-posts.yml (add bookmark,
-  sync bookmarks, commit bookmarks) — they call scripts that no longer
-  exist, and drops a stray comment fragment from its last line
+- instapaper-on-publish.yml: drops the "Sync Instapaper bookmarks" and
+  "Commit and push updated bookmarks" steps (both only fed the removed page)
+- schedule-posts.yml: drops the same two steps, keeps "Add new post to
+  Instapaper", and removes a stray comment fragment from its last line
+- deletes daily-read-link.yml (the daily rotation only existed to stock
+  /read; skip that hunk if you want to keep it anyway)
 
-Apply, commit, push, then delete this file. If you would rather not keep
-schedule-posts.yml at all, delete that file instead of applying its hunk.
+Apply, commit, push, then delete this file.
 ---
 diff --git a/.github/workflows/daily-read-link.yml b/.github/workflows/daily-read-link.yml
 deleted file mode 100644
@@ -81,94 +81,13 @@ index 1373719..0000000
 -          git commit -m "chore: sync Instapaper bookmarks"
 -          git push
 diff --git a/.github/workflows/instapaper-on-publish.yml b/.github/workflows/instapaper-on-publish.yml
-deleted file mode 100644
-index d4271fc..0000000
+index d4271fc..11cb00a 100644
 --- a/.github/workflows/instapaper-on-publish.yml
-+++ /dev/null
-@@ -1,102 +0,0 @@
--name: Add new posts to Instapaper
--
--# When a new blog post is published (pushed to src/content/blog/), add it to your
--# Instapaper folder and sync that folder's bookmarks to data/instapaper-bookmarks.json
--# so the /read page refreshes on the next build.
--#
--# Important: never put "[skip ci]" in the sync commit message below. Cloudflare
--# Workers Builds skips those commits, so /read would never rebuild.
--
--on:
--  push:
--    branches: [main]
--    paths:
--      - 'src/content/blog/**'
--  workflow_dispatch:
--    inputs:
--      slug:
--        description: Post slug to add (filename without .md/.mdx)
--        required: false
--
--permissions:
--  contents: write
--
--jobs:
--  add-to-instapaper:
--    runs-on: ubuntu-latest
--    steps:
--      - name: Check out repository
--        uses: actions/checkout@v4
--        with:
--          fetch-depth: 2
--
--      - name: Set up Node.js
--        uses: actions/setup-node@v4
--        with:
--          node-version: 22
--
--      - name: Detect newly added posts
--        id: posts
--        run: |
--          set -euo pipefail
--          if [ -n "${{ github.event.inputs.slug }}" ]; then
--            echo "slugs=${{ github.event.inputs.slug }}" >> "$GITHUB_OUTPUT"
--            exit 0
--          fi
--          BEFORE="${{ github.event.before }}"
--          ALL_ZERO="0000000000000000000000000000000000000000"
--          if [ "$BEFORE" = "$ALL_ZERO" ]; then
--            echo "Initial push; skipping automatic add."
--            echo "slugs=" >> "$GITHUB_OUTPUT"
--            exit 0
--          fi
--          FILES=$(git diff --name-only --diff-filter=A "$BEFORE" "${{ github.event.sha }}" -- src/content/blog/ | grep -E '\.(md|mdx)$' || true)
--          if [ -z "$FILES" ]; then
--            echo "No newly added posts."
--            echo "slugs=" >> "$GITHUB_OUTPUT"
--            exit 0
--          fi
--          SLUGS=$(echo "$FILES" | sed -E 's#.*/##; s/\.(md|mdx)$//' | paste -sd,)
--          echo "New posts: $SLUGS"
--          echo "slugs=$SLUGS" >> "$GITHUB_OUTPUT"
--
--      - name: Add each new post to Instapaper
--        if: steps.posts.outputs.slugs != ''
--        env:
--          INSTAPAPER_CONSUMER_KEY: ${{ secrets.INSTAPAPER_CONSUMER_KEY }}
--          INSTAPAPER_CONSUMER_SECRET: ${{ secrets.INSTAPAPER_CONSUMER_SECRET }}
--          INSTAPAPER_EMAIL: ${{ secrets.INSTAPAPER_EMAIL }}
--          INSTAPAPER_PASSWORD: ${{ secrets.INSTAPAPER_PASSWORD }}
--          INSTAPAPER_FOLDER: ${{ vars.INSTAPAPER_FOLDER || 'Tech News' }}
--          SITE_URL: https://www.techtips.fun
--        run: |
--          set -euo pipefail
--          IFS=',' read -ra SLUGS <<< "${{ steps.posts.outputs.slugs }}"
--          for slug in "${SLUGS[@]}"; do
--            echo "Adding $slug to Instapaper..."
--            # Read title from the post's frontmatter
--            FILE="src/content/blog/${slug}.md"
--            if [ ! -f "$FILE" ]; then FILE="src/content/blog/${slug}.mdx"; fi
--            TITLE=$(sed -n 's/^title: *["'"'"']\(.*\)["'"'"'] *$/\1/p' "$FILE" | head -1)
--            URL="${SITE_URL}/blog/${slug}/"
--            node scripts/add-instapaper-bookmark.mjs "$URL" "$TITLE" "New post from techtips.fun"
--          done
++++ b/.github/workflows/instapaper-on-publish.yml
+@@ -81,22 +81,3 @@ jobs:
+             URL="${SITE_URL}/blog/${slug}/"
+             node scripts/add-instapaper-bookmark.mjs "$URL" "$TITLE" "New post from techtips.fun"
+           done
 -
 -      - name: Sync Instapaper bookmarks to local JSON
 -        env:
@@ -189,31 +108,13 @@ index d4271fc..0000000
 -          git commit -m "chore: sync Instapaper bookmarks after new post"
 -          git push
 diff --git a/.github/workflows/schedule-posts.yml b/.github/workflows/schedule-posts.yml
-index 1f1c52f..795d54d 100644
+index 1f1c52f..0490a88 100644
 --- a/.github/workflows/schedule-posts.yml
 +++ b/.github/workflows/schedule-posts.yml
-@@ -87,47 +87,6 @@ jobs:
-           echo "Published $FILE on $TODAY"
-           echo "slug=${FILE%.md}" >> "$GITHUB_OUTPUT"
+@@ -105,29 +105,6 @@ jobs:
+           URL="https://www.techtips.fun/blog/${SLUG}/"
+           node scripts/add-instapaper-bookmark.mjs "$URL" "$TITLE" "New post from techtips.fun"
  
--      # Add the new post to Instapaper (push uses GITHUB_TOKEN so this
--      # cannot rely on instapaper-on-publish.yml being triggered).
--      - name: Add new post to Instapaper
--        if: steps.publish.outputs.slug != ''
--        env:
--          INSTAPAPER_CONSUMER_KEY: ${{ secrets.INSTAPAPER_CONSUMER_KEY }}
--          INSTAPAPER_CONSUMER_SECRET: ${{ secrets.INSTAPAPER_CONSUMER_SECRET }}
--          INSTAPAPER_EMAIL: ${{ secrets.INSTAPAPER_EMAIL }}
--          INSTAPAPER_PASSWORD: ${{ secrets.INSTAPAPER_PASSWORD }}
--        run: |
--          set -euo pipefail
--          SLUG="${{ steps.publish.outputs.slug }}"
--          FILE="src/content/blog/${SLUG}.md"
--          if [ ! -f "$FILE" ]; then FILE="src/content/blog/${SLUG}.mdx"; fi
--          TITLE=$(sed -n 's/^title: *"\(.*\)" *$/\1/p' "$FILE" | head -1)
--          URL="https://www.techtips.fun/blog/${SLUG}/"
--          node scripts/add-instapaper-bookmark.mjs "$URL" "$TITLE" "New post from techtips.fun"
--
 -      # Sync Instapaper bookmarks to local JSON so /read page refreshes
 -      - name: Sync Instapaper bookmarks
 -        if: steps.publish.outputs.slug != ''
@@ -240,7 +141,7 @@ index 1f1c52f..795d54d 100644
        # The publish commit above is pushed with the automatic GITHUB_TOKEN,
        # which does not trigger other workflows — so the LinkedIn teaser is
        # posted here directly instead of relying on the push event.
-@@ -170,5 +129,4 @@ jobs:
+@@ -170,5 +147,4 @@ jobs:
        #   run: npx wrangler deploy
        #   env:
        #     CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}

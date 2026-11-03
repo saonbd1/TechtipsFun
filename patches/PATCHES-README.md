@@ -44,6 +44,28 @@ or paste `          INSTAPAPER_FOLDER: ${{ vars.INSTAPAPER_FOLDER || 'Tech News'
 into the **“Add next link from read queue to Instapaper”** step in the GitHub web
 editor, directly after `INSTAPAPER_PASSWORD`. Delete this file once applied.
 
+## read-page-rebuild.patch
+
+Drops the `[skip ci]` tag from the three bookmark-sync commits
+(`daily-read-link.yml`, `instapaper-on-publish.yml`, `schedule-posts.yml`).
+
+Cloudflare Workers Builds **skips any commit whose message contains `[skip ci]`**,
+so every sync commit — the one whose only purpose is to refresh `/read` — was
+silently never deployed. Proof: the 08:20 commit (`feat(read): retitle…`) is live
+on https://www.techtips.fun/read/ while the 08:43 `chore: sync Instapaper
+bookmarks [skip ci]` commit never rebuilt the site, leaving the old bookmark list
+on the page even though `data/instapaper-bookmarks.json` in `main` was correct.
+
+GitHub does not re-run workflows for pushes made with the automatic
+`GITHUB_TOKEN`, so removing the tag cannot cause a loop — it only lets the site
+rebuild (~one build per day for the daily sync).
+
+```bash
+git apply patches/read-page-rebuild.patch
+git commit -am "ci(instapaper): drop [skip ci] from bookmark-sync commits"
+git push
+```
+
 ## Removed: `.github/workflows/squad-share.yml`
 
 The "Post new article to Squad via Slack" workflow was deleted on 2026-10-16

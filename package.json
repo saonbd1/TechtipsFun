@@ -37,7 +37,6 @@
 		"check:og-cards": "node scripts/check-og-cards.mjs",
 		"test:admin": "node --test scripts/tests/test-admin-app.mjs scripts/tests/test-admin-smoke.mjs scripts/tests/test-admin-worker.mjs",
 		"test:blog": "node --test scripts/tests/test-blog-pagination.mjs scripts/tests/test-og-cards.mjs",
-		"test:instapaper": "node --test scripts/tests/test-instapaper-folders.mjs",
 		"share:linkedin": "node scripts/share-to-linkedin.mjs",
 		"submit:indexnow": "node scripts/submit-indexnow.mjs",
 		"build": "npm run generate:assets && npm run optimize:images && astro build && node scripts/check-og-cards.mjs",

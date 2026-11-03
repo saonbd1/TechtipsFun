@@ -63,21 +63,25 @@
 - [x] Installed `daily.dev` + `daily-dev-ask` agent skills and stored the API token (2026-10-04)
 - [ ] Note: the daily.dev public API is read-only for content — sharing your own articles there is done via the Share button in the daily.dev extension/web app, not the API
 
-## Instapaper reading list
-- [x] Register API consumer at https://instapaper.com/developers/ — get `consumer_key` + `consumer_secret`
-- [x] Add GitHub repo secrets: `INSTAPAPER_CONSUMER_KEY`, `INSTAPAPER_CONSUMER_SECRET`, `INSTAPAPER_EMAIL`, `INSTAPAPER_PASSWORD`
-- [x] Populate `data/read-queue.json` with 33 blog post links (titles + descriptions from frontmatter)
-- [x] `data/read-queue-state.json` tracks daily rotation cursor (committed so it persists between runs)
-- [x] Sync the `/read` page from the `Tech News` folder (not the unread home list) — `INSTAPAPER_FOLDER` defaults to `Tech News`
-- [x] Verify daily workflow writes to the right folder — run 41605355668 (2026-11-03): `Adding to folder "Tech News" (folder_id=5430668)`, sync read the same folder and wrote 6 bookmarks
-- [ ] Verify new-post publish workflow adds each new post to Instapaper automatically (run 41605564423 was clean, but no new post to add that day)
-- [ ] Visit `https://www.techtips.fun/read/` to confirm bookmarks render
-- [x] Drop `[skip ci]` from the bookmark-sync commits (Cloudflare skipped those builds, so `/read` never refreshed) and pass `INSTAPAPER_FOLDER` to every add/sync step
-- [ ] Optionally add more links to `data/read-queue.json` — they rotate in order, looping when exhausted
+## Instapaper reading list (removed 2026-11-03)
+- [x] Feature dropped: `/read` + the Instapaper Public API integration
+- Reason: a curated "tech news feed" built from saved links carried copyright
+  risk (surfacing other publishers' headlines/excerpts) for a page that mostly
+  listed our own posts, and the working name `TechPulse` is already a Ziff Davis
+  / CNET Group tech-news app (plus a US trademark filing) — see CHANGELOG.
+- Removed: `src/pages/read.astro`, the nav link, `scripts/instapaper.mjs`,
+  `add-instapaper-bookmark.mjs`, `daily-read-link.mjs`,
+  `sync-instapaper-bookmarks.mjs`, `fetch-instapaper-bookmarks.mjs`,
+  `generate-read-queue.mjs`, `data/read-queue*.json`,
+  `data/instapaper-bookmarks.json`, and both Instapaper workflows.
+- [ ] Delete the now-unused repo secrets if you want a clean dashboard:
+  `INSTAPAPER_CONSUMER_KEY`, `INSTAPAPER_CONSUMER_SECRET`,
+  `INSTAPAPER_EMAIL`, `INSTAPAPER_PASSWORD` (Settings → Secrets and variables →
+  Actions). No workflow references them any more.
+- [ ] `/read` now 301s to `/blog/` via `public/_redirects`.
 
 ## Maintenance
-- [x] Apply both Instapaper workflow fixes (folder env on every add/sync step, `[skip ci]` dropped from the sync commit) — done through the GitHub web editor
-- [ ] `schedule-posts.yml` still tags its bookmark sync `[skip ci]` (`patches/schedule-posts-sync-rebuild.patch`) — moot while the workflow is disabled; apply it only if scheduled publishing is re-enabled
+- [ ] Apply `patches/remove-instapaper-workflows.patch` — deletes `daily-read-link.yml` and `instapaper-on-publish.yml` and strips the three Instapaper steps from `schedule-posts.yml` (they call scripts that no longer exist). The App token cannot push workflow files, hence a patch
 - [ ] Apply `patches/schedule-posts-og-card-slug.patch` only if `schedule-posts.yml` is re-enabled — it normalises the staged OG card name and the `slug=` output. Also dormant.
 - [ ] Update skills later via `cd C:\Users\saonb\daily && git pull`, then re-copy the skill folders
 

@@ -18,7 +18,6 @@ A personal tech blog and knowledge base built with [Astro](https://astro.build),
 - [Social Sharing Cards (OG Images)](#social-sharing-cards-og-images)
 - [CI/CD Workflows](#cicd-workflows)
 - [Scripts & Automation](#scripts--automation)
-- [Instapaper Folder](#instapaper-folder)
 - [Folder Reference](#folder-reference)
 - [Deployment](#deployment)
 - [Testing](#testing)
@@ -35,7 +34,6 @@ A personal tech blog and knowledge base built with [Astro](https://astro.build),
 - 🎬 **Article reels** — automatic vertical 1080×1920 MP4 videos generated from each post (Remotion)
 - 📱 **Social cards** — branded 1200×630 PNG preview images for every post
 - 🤖 **Automated publishing** — scheduled posts, LinkedIn cross-posting, IndexNow submission
-- 📚 **Instapaper reading list** — daily link rotation + auto-add new posts into your Instapaper `Tech News` folder via Public API; that folder is synced to the `/read` page
 - 🛡️ **Private admin dashboard** — write/edit posts and manage the publish queue via a browser (no backend)
 - 🧪 **Tested** — admin app unit + smoke tests with Node's built-in test runner
 
@@ -360,8 +358,6 @@ After deploying, use the [Facebook Sharing Debugger](https://developers.facebook
 | `post-reels-to-youtube.yml` | Upload finished reels to YouTube |
 | `schedule-posts.yml` | Promote queued drafts from `pending-posts/` on publish date — **currently disabled** (queue empty, no backlog) |
 | `submit-indexnow.yml` | Submit URLs to IndexNow |
-| `daily-read-link.yml` | Daily: adds next link from `data/read-queue.json` to your Instapaper folder, syncs that folder's bookmarks to `data/instapaper-bookmarks.json` |
-| `instapaper-on-publish.yml` | On new post push: adds the new post to Instapaper and syncs the folder's bookmarks |
 
 A copy of `article-reels.yml` and `check-links.yml` (with weekly schedule) is staged in [`reels/ci/`](reels/ci/README.md) pending install into `.github/workflows/`.
 
@@ -379,32 +375,6 @@ A copy of `article-reels.yml` and `check-links.yml` (with weekly schedule) is st
 | `scripts/generate-tip-cards.mjs` | Generate Bengali tip cards |
 | `scripts/migrate-images-to-webp.mjs` | Convert images to WebP |
 | `scripts/tests/` | Admin dashboard test suite |
-| `scripts/instapaper.mjs` | Dependency-free OAuth 1.0a client for Instapaper Public API (folders, paged bookmark lists, add) |
-| `scripts/add-instapaper-bookmark.mjs` | CLI: add a single link to an Instapaper folder |
-| `scripts/daily-read-link.mjs` | Daily rotation: pick next link from `data/read-queue.json`, add it to the folder |
-| `scripts/sync-instapaper-bookmarks.mjs` | Sync one Instapaper folder's bookmarks to `data/instapaper-bookmarks.json` |
-| `scripts/generate-read-queue.mjs` | Build `data/read-queue.json` from all blog posts in `src/content/blog/` |
-
----
-
-## Instapaper Folder
-
-The `/read` page renders the bookmarks of **one Instapaper folder**, `Tech News` by
-default. `bookmarks/list` falls back to the *unread* home list when no `folder_id`
-is sent, so the sync always resolves the folder name first via `folders/list`.
-
-| Setting | Where | Default |
-| :--- | :--- | :--- |
-| Folder name | `INSTAPAPER_FOLDER` env var, or repo variable `vars.INSTAPAPER_FOLDER` in Actions (wired up by [`patches/instapaper-folder-env.patch`](patches/PATCHES-README.md)) | `Tech News` |
-| Folder name (one-off) | `node scripts/sync-instapaper-bookmarks.mjs "Tech News"` / `--folder="Tech News"` | — |
-
-Daily links and new posts are saved **into that same folder**, so everything the
-automation adds is also what the page shows. If the folder is renamed or missing:
-
-- `sync-instapaper-bookmarks.mjs` exits with the list of available folders (the workflow fails loudly instead of silently publishing the wrong list).
-- `daily-read-link.mjs` / `add-instapaper-bookmark.mjs` warn and fall back to the default unread list.
-
-Run the folder/pagination tests with `npm run test:instapaper`.
 
 ---
 

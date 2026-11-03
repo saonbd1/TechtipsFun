@@ -1,3 +1,6 @@
 /categories/pc-troubleshoot/ /categories/pc-troubleshooting/ 301
 /categories/pc-troubleshoot /categories/pc-troubleshooting/ 301
 /blog /blog/ 301
+# The Instapaper-backed /read page was removed (2026-11-03); keep old links working.
+/read/ /blog/ 301
+/read /blog/ 301

@@ -1,28 +1,37 @@
 [
   {
-    "bookmark_id": 2035809945,
-    "title": "How to Add an Accessible Table of Contents to an Astro Blog",
-    "url": "https://www.techtips.fun/blog/astro-table-of-contents-component-guide/",
-    "description": "Build a reusable Astro table of contents component that creates stable heading links, works on mobile, and stays accessible without an extra package.",
-    "time": 1793645668,
+    "bookmark_id": 2054231620,
+    "title": "Automate LinkedIn Posts from Your Blog with GitHub Actions",
+    "url": "https://www.techtips.fun/blog/automate-linkedin-posts-github-actions/",
+    "description": "I cross-post every blog article to LinkedIn automatically with GitHub Actions and the LinkedIn API. Here is the free setup, plus the 422 error that broke it.",
+    "time": 1793695414,
     "is_starred": 0,
     "type": "bookmark"
   },
   {
-    "bookmark_id": 2054081177,
-    "title": "10 Linux terminal commands I use every single day",
-    "url": "https://www.techtips.fun/blog/10-linux-terminal-commands-i-use-every/",
-    "description": "I’ve been using Linux as my daily driver for over five years. In that time, I’ve collected dozens of commands — but the ones below are the ones that",
-    "time": 1793639839,
-    "is_starred": 0,
-    "type": "bookmark"
-  },
-  {
-    "bookmark_id": 2054070119,
-    "title": "REA (Reverse Engineer Anything): A Complete Tutorial From Installation to Analysis",
-    "url": "https://www.techtips.fun/blog/rea-reverse-engineer-anything-a-complete-tutorial/",
+    "bookmark_id": 2054226264,
+    "title": "Hardening Linux Servers with UFW and Fail2ban: A Practical Setup Guide - SaonBD | Paragraph",
+    "url": "https://paragraph.com/@saonbd/hardening-linux-servers-with-ufw-and-fail2ban-a-practical-setup-guide",
     "description": "",
-    "time": 1793636909,
+    "time": 1793693094,
+    "is_starred": 0,
+    "type": "bookmark"
+  },
+  {
+    "bookmark_id": 2054226049,
+    "title": "AI models may be capable of self-replicating without access to a datacenter",
+    "url": "https://www.anthropic.com/research/self-replicating-ai",
+    "description": "",
+    "time": 1793693084,
+    "is_starred": 0,
+    "type": "bookmark"
+  },
+  {
+    "bookmark_id": 2054225730,
+    "title": "I Built an AI Skill That Screenshots and Records My PC for Tutorials",
+    "url": "https://coderlegion.com/30994/i-built-an-ai-skill-that-screenshots-and-records-my-pc-for-tutorials",
+    "description": "",
+    "time": 1793692923,
     "is_starred": 0,
     "type": "bookmark"
   },
@@ -31,61 +40,16 @@
     "title": "How big industries adopting AI for fastest growth of business",
     "url": "https://saonbd.hashnode.dev/top-industries-adopting-ai-for-rapid-growth",
     "description": "",
-    "time": 1789500252,
+    "time": 1793692794,
     "is_starred": 0,
     "type": "bookmark"
   },
   {
-    "bookmark_id": 2036222537,
-    "title": "saonbd",
-    "url": "https://zora.co/[user]",
+    "bookmark_id": 2054225199,
+    "title": "See who has access to your Gmail inbox in 2 minutes.",
+    "url": "https://blog.google/innovation-and-ai/technology/safety-security/google-security-checkup/",
     "description": "",
-    "time": 1787521592,
-    "is_starred": 0,
-    "type": "bookmark"
-  },
-  {
-    "bookmark_id": 2036222398,
-    "title": "SaonBD | Paragraph",
-    "url": "https://paragraph.com/@saonbd/",
-    "description": "",
-    "time": 1787521515,
-    "is_starred": 0,
-    "type": "bookmark"
-  },
-  {
-    "bookmark_id": 2035810232,
-    "title": "Self-hosting your first web app — the no-nonsense guide",
-    "url": "https://www.techtips.fun/blog/self-hosting-your-first-web-app-no/",
-    "description": "",
-    "time": 1787351483,
-    "is_starred": 0,
-    "type": "bookmark"
-  },
-  {
-    "bookmark_id": 2035810048,
-    "title": "Facebook's Meta Reveals Muse Glimmer AI: What's it and How to Run It Locally",
-    "url": "https://www.techtips.fun/blog/muse-glimmer-ai-local-guide/",
-    "description": "",
-    "time": 1787351411,
-    "is_starred": 0,
-    "type": "bookmark"
-  },
-  {
-    "bookmark_id": 2035809848,
-    "title": "Build a Bulk 10 URL Shortener Platform Using Next.JS",
-    "url": "https://www.techtips.fun/blog/build-bulk-10-url-shortner-next-js/",
-    "description": "",
-    "time": 1787351316,
-    "is_starred": 0,
-    "type": "bookmark"
-  },
-  {
-    "bookmark_id": 2035809449,
-    "title": "Welcome to Instapaper!",
-    "url": "https://blog.instapaper.com/private/85060389946/tumblr_1SoQ9nIijUeDUpFrF",
-    "description": "Instapaper is the best way to save and read web content. There are a number of convenient ways to save articles to Instapaper. Let's walkthrough your options...",
-    "time": 1787351141,
+    "time": 1793692739,
     "is_starred": 0,
     "type": "bookmark"
   }

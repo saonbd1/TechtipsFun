@@ -1,3 +1,110 @@
+name: Schedule post publishing
+
+# Publishes one pending post from pending-posts/ per run.
+# - Daily cron: every day at 09:00 UTC -> 5 posts go out 1 day apart (edit the cron line to change time).
+# - Manual: use the "Run workflow" button to publish the next post immediately.
+# - Order: pending-posts/.order (one filename per line, first line publishes first).
+#
+# The job moves the next article into src/content/blog/, stamps today's date as
+# pubDate, normalises internal links to directory-style URLs (/blog/slug/),
+# moves its social card if one exists, commits and pushes — then posts the
+# LinkedIn teaser itself. (The push uses the automatic GITHUB_TOKEN, which
+# does not trigger other workflows, so the teaser cannot rely on the push
+# event in linkedin-share.yml.)
+# If your Cloudflare project auto-deploys on push, the post goes live automatically.
+# If you deploy manually with `npx wrangler deploy`, uncomment the deploy step below.
+
+on:
+  schedule:
+    - cron: "0 9 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: schedule-posts
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Pick the next pending post
+        id: pick
+        run: |
+          set -euo pipefail
+          while IFS= read -r file || [ -n "$file" ]; do
+            file="$(echo "$file" | tr -d '\r')"
+            [ -n "$file" ] || continue
+            if [ -f "pending-posts/$file" ]; then
+              echo "file=$file" >> "$GITHUB_OUTPUT"
+              echo "found=true" >> "$GITHUB_OUTPUT"
+              echo "Next post: $file"
+              exit 0
+            fi
+          done < pending-posts/.order
+          echo "found=false" >> "$GITHUB_OUTPUT"
+          echo "No pending posts left. Nothing to publish."
+
+      - name: Publish the post
+        id: publish
+        if: steps.pick.outputs.found == 'true'
+        env:
+          FILE: ${{ steps.pick.outputs.file }}
+        run: |
+          set -euo pipefail
+          TODAY=$(date +"%b %d %Y")
+
+          # 1. Move the article into the content collection
+          mv "pending-posts/$FILE" "src/content/blog/$FILE"
+
+          # 1b. Normalise internal links. The site serves directory-style
+          # URLs (/blog/slug/); a link without the trailing slash gets a
+          # 307 redirect from the Worker, so patch any /blog/<slug> link
+          # that is missing the slash before the commit goes out.
+          sed -i -E 's#\]\(/blog/([a-z0-9-]+)\)#](/blog/\1/)#g' "src/content/blog/$FILE"
+
+          # 2. Stamp pubDate with the actual publish day
+          sed -i "s/^pubDate: .*/pubDate: \"$TODAY\"/" "src/content/blog/$FILE"
+
+          # 3. Move the social card if one was staged for this post
+          CARD="pending-posts/og/${FILE%.md}.png"
+          if [ -f "$CARD" ]; then
+            mv "$CARD" "public/og/"
+          fi
+
+          # 4. Commit and push
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add pending-posts src/content/blog public/og
+          git commit -m "Publish: $FILE"
+          git push
+
+          echo "Published $FILE on $TODAY"
+          echo "slug=${FILE%.md}" >> "$GITHUB_OUTPUT"
+
+      # Add the new post to Instapaper (push uses GITHUB_TOKEN so this
+      # cannot rely on instapaper-on-publish.yml being triggered).
+      - name: Add new post to Instapaper
+        if: steps.publish.outputs.slug != ''
+        env:
+          INSTAPAPER_CONSUMER_KEY: ${{ secrets.INSTAPAPER_CONSUMER_KEY }}
+          INSTAPAPER_CONSUMER_SECRET: ${{ secrets.INSTAPAPER_CONSUMER_SECRET }}
+          INSTAPAPER_EMAIL: ${{ secrets.INSTAPAPER_EMAIL }}
+          INSTAPAPER_PASSWORD: ${{ secrets.INSTAPAPER_PASSWORD }}
+        run: |
+          set -euo pipefail
+          SLUG="${{ steps.publish.outputs.slug }}"
+          FILE="src/content/blog/${SLUG}.md"
+          if [ ! -f "$FILE" ]; then FILE="src/content/blog/${SLUG}.mdx"; fi
+          TITLE=$(sed -n 's/^title: *"\(.*\)" *$/\1/p' "$FILE" | head -1)
+          URL="https://www.techtips.fun/blog/${SLUG}/"
+          node scripts/add-instapaper-bookmark.mjs "$URL" "$TITLE" "New post from techtips.fun"
+
       # Sync Instapaper bookmarks to local JSON so /read page refreshes
       - name: Sync Instapaper bookmarks
         if: steps.publish.outputs.slug != ''
@@ -8,3 +115,60 @@
           INSTAPAPER_PASSWORD: ${{ secrets.INSTAPAPER_PASSWORD }}
           INSTAPAPER_FOLDER: ${{ vars.INSTAPAPER_FOLDER || 'Tech News' }}
         run: node scripts/sync-instapaper-bookmarks.mjs
+
+      - name: Commit updated bookmarks
+        if: steps.publish.outputs.slug != ''
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f data/instapaper-bookmarks.json data/read-queue-state.json
+          git diff --cached --quiet && exit 0
+          git commit -m "chore: sync Instapaper bookmarks after publish [skip ci]"
+          git pull --rebase origin main || true
+          git push origin HEAD:main
+
+      # The publish commit above is pushed with the automatic GITHUB_TOKEN,
+      # which does not trigger other workflows — so the LinkedIn teaser is
+      # posted here directly instead of relying on the push event.
+      # Short wait first: gives the Cloudflare Git deploy a head start so
+      # the teaser's link is (usually) live by the time it goes out.
+      - name: Wait for the Cloudflare deploy
+        if: steps.publish.outputs.slug != ''
+        run: sleep 60
+
+      - name: Share the new post to LinkedIn
+        if: steps.publish.outputs.slug != ''
+        env:
+          LINKEDIN_TOKEN: ${{ secrets.LINKEDIN_TOKEN }}
+        run: |
+          set -euo pipefail
+          node scripts/share-to-linkedin.mjs "${{ steps.publish.outputs.slug }}"
+
+      # The publish commit above is pushed with GITHUB_TOKEN, which does not
+      # trigger the Submit-URLs-to-IndexNow workflow — so submit here directly.
+      - name: Submit the new post to IndexNow
+        if: steps.publish.outputs.slug != ''
+        env:
+          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+        run: |
+          set -euo pipefail
+          node scripts/submit-indexnow.mjs "${{ steps.publish.outputs.slug }}"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          [ -f .indexnow-submitted.json ] || exit 0
+          git add .indexnow-submitted.json
+          git diff --cached --quiet || git commit -m "chore: record IndexNow submission [skip ci]"
+          # main may have moved while sharing; rebase before pushing the manifest.
+          git pull --rebase origin main || true
+          git push origin HEAD:main || echo "::warning::IndexNow manifest push failed; next run will retry."
+
+      # Optional: deploy from this workflow instead of Cloudflare Git integration.
+      # Requires the CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID repository secrets.
+      # - name: Deploy to Cloudflare
+      #   if: steps.pick.outputs.found == 'true'
+      #   run: npx wrangler deploy
+      #   env:
+      #     CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      #     CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}      # Sync Instapaper bookmarks to local JSON so /read page refreshes
+ 
